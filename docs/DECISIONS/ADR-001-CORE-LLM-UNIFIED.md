@@ -52,3 +52,11 @@ un DTO, une branche mergée dans son propre dépôt ou un projet ChatGPT partag�
 L’intégration effective exige liaison + chemin d’exécution + tests adaptés ; la
 qualification physique exige des essais supplémentaires. Les migrations seront
 courtes, réversibles et explicitement approuvées après ce diagnostic.
+
+## Revue de clôture 001F — décision toujours en attente
+
+[Comparaison des trois options et page de décision utilisateur](REVUE-ADR-001F.md).
+La revue précise NEXUS comme cible documents/mémoire (stockage), CORE gardant
+session, permissions et confirmation. L’objectif initial APK unique et la variante
+IPC restent à arbitrer ; aucun transport ni changement de propriétaire physique
+des données n’est adopté. Les cinq contrats restent proposés et inchangés.

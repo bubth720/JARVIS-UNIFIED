@@ -1,0 +1,32 @@
+{
+  "probes": [
+    {
+      "name": "bubth720/JARVIS-CORE",
+      "command": [
+        "git",
+        "ls-remote",
+        "https://github.com/bubth720/JARVIS-CORE.git",
+        "HEAD"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "remote: Repository not found.\nfatal: repository 'https://github.com/bubth720/JARVIS-CORE.git/' not found\n",
+      "observed_at": "2026-10-15T17:46:17+00:00",
+      "absence_proven": false
+    },
+    {
+      "name": "bubth720/JARVIS-EVOLUTION",
+      "command": [
+        "git",
+        "ls-remote",
+        "https://github.com/bubth720/JARVIS-EVOLUTION.git",
+        "HEAD"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "remote: Repository not found.\nfatal: repository 'https://github.com/bubth720/JARVIS-EVOLUTION.git/' not found\n",
+      "observed_at": "2026-10-15T17:46:17+00:00",
+      "absence_proven": false
+    }
+  ]
+}

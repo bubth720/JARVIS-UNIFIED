@@ -1,0 +1,1835 @@
+{
+  "captured_at": "2026-10-15T15:35:37+00:00",
+  "naming_probes": [
+    {
+      "absence_proven": false,
+      "method": "prior_manual_git_ls_remote_in_this_session",
+      "name": "bubth720/JARVIS-CORE",
+      "observation": "git_repository_not_found_exit_128",
+      "proof_type": "source",
+      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "relationship": "unknown",
+      "status": "inaccessible",
+      "url": "https://github.com/bubth720/JARVIS-CORE"
+    },
+    {
+      "absence_proven": false,
+      "method": "prior_manual_git_ls_remote_in_this_session",
+      "name": "bubth720/JARVIS-EVOLUTION",
+      "observation": "git_repository_not_found_exit_128",
+      "proof_type": "source",
+      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "relationship": "unknown",
+      "status": "inaccessible",
+      "url": "https://github.com/bubth720/JARVIS-EVOLUTION"
+    }
+  ],
+  "repositories": [
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-13T16:31:16+00:00",
+          "main_only_commits": 5,
+          "merged_into_main": true,
+          "name": "docs/mission-002-project-knowledge",
+          "sha": "e0417e1609b478073e7cd019a25f8146a25a0fb8",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/e0417e1609b478073e7cd019a25f8146a25a0fb8"
+        },
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-13T16:49:39+00:00",
+          "main_only_commits": 3,
+          "merged_into_main": true,
+          "name": "fix/api-24-25-time-reply",
+          "sha": "d7e51b4ac55b0726e5289b7f062478903fb7aa67",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/d7e51b4ac55b0726e5289b7f062478903fb7aa67"
+        },
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T09:58:35+00:00",
+          "main_only_commits": 1,
+          "merged_into_main": true,
+          "name": "fix/sqlite-data-preservation",
+          "sha": "7a5b53e3247dc7132eb9e5648ecf4169a4054d62",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/7a5b53e3247dc7132eb9e5648ecf4169a4054d62"
+        },
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T10:13:50+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/226e2e8cc3eebd479805b89d035eb5c1cbcad540"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        ".github/workflows/build-apk.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "app/build.gradle.kts",
+        "app/proguard-rules.pro",
+        "app/src/main/AndroidManifest.xml",
+        "app/src/main/assets/models/README.txt",
+        "app/src/main/java/com/stark/jarvislocal/AppGraph.kt",
+        "app/src/main/java/com/stark/jarvislocal/JarvisApplication.kt",
+        "app/src/main/java/com/stark/jarvislocal/JarvisCore.kt",
+        "app/src/main/java/com/stark/jarvislocal/LlamaLocalEngine.kt",
+        "app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt",
+        "app/src/main/java/com/stark/jarvislocal/LocalTts.kt",
+        "app/src/main/java/com/stark/jarvislocal/MainActivity.kt",
+        "app/src/main/java/com/stark/jarvislocal/MessageAdapter.kt",
+        "app/src/main/java/com/stark/jarvislocal/ModelManager.kt",
+        "app/src/main/java/com/stark/jarvislocal/Models.kt",
+        "app/src/main/java/com/stark/jarvislocal/PdfImporter.kt",
+        "app/src/main/java/com/stark/jarvislocal/PromptBuilder.kt",
+        "app/src/main/java/com/stark/jarvislocal/RagEngine.kt",
+        "app/src/main/java/com/stark/jarvislocal/SettingsStore.kt",
+        "app/src/main/java/com/stark/jarvislocal/TextChunker.kt",
+        "app/src/main/java/com/stark/jarvislocal/WavRecorder.kt",
+        "app/src/main/java/com/stark/jarvislocal/WhisperLocalEngine.kt",
+        "app/src/main/res/layout/activity_main.xml",
+        "app/src/main/res/layout/row_message.xml",
+        "app/src/main/res/values/colors.xml",
+        "app/src/main/res/values/strings.xml",
+        "app/src/main/res/values/themes.xml",
+        "app/src/test/java/com/stark/jarvislocal/LocalDatabaseTest.kt",
+        "app/src/test/java/com/stark/jarvislocal/LocalTimeReplyTest.kt",
+        "app/src/test/resources/sqlite/schema-v1-v2.sql",
+        "build.gradle.kts",
+        "docs/ARCHITECTURE.md",
+        "docs/PROJECT_KNOWLEDGE.md",
+        "gradle.properties",
+        "settings.gradle.kts",
+        "tools/prepare_models.sh"
+      ],
+      "gradle": [
+        {
+          "application_id": [
+            "com.stark.jarvislocal"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "24"
+          ],
+          "path": "app/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "build.gradle.kts"
+        }
+      ],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "core",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [
+        ".kt"
+      ],
+      "main_commit": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "main_files": [
+        ".github/workflows/build-apk.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "app/build.gradle.kts",
+        "app/proguard-rules.pro",
+        "app/src/main/AndroidManifest.xml",
+        "app/src/main/assets/models/README.txt",
+        "app/src/main/java/com/stark/jarvislocal/AppGraph.kt",
+        "app/src/main/java/com/stark/jarvislocal/JarvisApplication.kt",
+        "app/src/main/java/com/stark/jarvislocal/JarvisCore.kt",
+        "app/src/main/java/com/stark/jarvislocal/LlamaLocalEngine.kt",
+        "app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt",
+        "app/src/main/java/com/stark/jarvislocal/LocalTts.kt",
+        "app/src/main/java/com/stark/jarvislocal/MainActivity.kt",
+        "app/src/main/java/com/stark/jarvislocal/MessageAdapter.kt",
+        "app/src/main/java/com/stark/jarvislocal/ModelManager.kt",
+        "app/src/main/java/com/stark/jarvislocal/Models.kt",
+        "app/src/main/java/com/stark/jarvislocal/PdfImporter.kt",
+        "app/src/main/java/com/stark/jarvislocal/PromptBuilder.kt",
+        "app/src/main/java/com/stark/jarvislocal/RagEngine.kt",
+        "app/src/main/java/com/stark/jarvislocal/SettingsStore.kt",
+        "app/src/main/java/com/stark/jarvislocal/TextChunker.kt",
+        "app/src/main/java/com/stark/jarvislocal/WavRecorder.kt",
+        "app/src/main/java/com/stark/jarvislocal/WhisperLocalEngine.kt",
+        "app/src/main/res/layout/activity_main.xml",
+        "app/src/main/res/layout/row_message.xml",
+        "app/src/main/res/values/colors.xml",
+        "app/src/main/res/values/strings.xml",
+        "app/src/main/res/values/themes.xml",
+        "app/src/test/java/com/stark/jarvislocal/LocalDatabaseTest.kt",
+        "app/src/test/java/com/stark/jarvislocal/LocalTimeReplyTest.kt",
+        "app/src/test/resources/sqlite/schema-v1-v2.sql",
+        "build.gradle.kts",
+        "docs/ARCHITECTURE.md",
+        "docs/PROJECT_KNOWLEDGE.md",
+        "gradle.properties",
+        "settings.gradle.kts",
+        "tools/prepare_models.sh"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-14T10:13:50+00:00",
+          "parents": [
+            "a610382229ccaeffc7cc76ac390b60f0ee2771d7",
+            "7a5b53e3247dc7132eb9e5648ecf4169a4054d62"
+          ],
+          "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+          "subject": "Merge pull request #3 from bubth720/fix/sqlite-data-preservation"
+        },
+        {
+          "date_utc": "2026-10-13T19:31:31+00:00",
+          "parents": [
+            "57c87e953f4a6e36b8068a4d3b4c4c510df14d91",
+            "d7e51b4ac55b0726e5289b7f062478903fb7aa67"
+          ],
+          "sha": "a610382229ccaeffc7cc76ac390b60f0ee2771d7",
+          "subject": "Merge pull request #2 from bubth720/fix/api-24-25-time-reply"
+        },
+        {
+          "date_utc": "2026-10-13T16:42:42+00:00",
+          "parents": [
+            "39c6c2207b30b0278bdb8188e44e772eb3fc46be",
+            "e0417e1609b478073e7cd019a25f8146a25a0fb8"
+          ],
+          "sha": "57c87e953f4a6e36b8068a4d3b4c4c510df14d91",
+          "subject": "Merge pull request #1 from bubth720/docs/mission-002-project-knowledge"
+        },
+        {
+          "date_utc": "2026-10-05T18:48:55+00:00",
+          "parents": [
+            "e1541151a8ff7a4f2f499b95a2926286e0d083c7"
+          ],
+          "sha": "39c6c2207b30b0278bdb8188e44e772eb3fc46be",
+          "subject": "Bump JARVIS to 3.1.0"
+        },
+        {
+          "date_utc": "2026-10-05T18:48:39+00:00",
+          "parents": [
+            "4b1434361653467eb9c43de4fdf3e8669f30997e"
+          ],
+          "sha": "e1541151a8ff7a4f2f499b95a2926286e0d083c7",
+          "subject": "Reindex PDFs with improved extraction"
+        },
+        {
+          "date_utc": "2026-10-05T18:47:41+00:00",
+          "parents": [
+            "1a8825f62fcdc33682f512734fa3f369e4ca5ce0"
+          ],
+          "sha": "4b1434361653467eb9c43de4fdf3e8669f30997e",
+          "subject": "Use chat bubbles and improved PDF interaction"
+        },
+        {
+          "date_utc": "2026-10-05T18:47:01+00:00",
+          "parents": [
+            "f455ec24a706656eb4c64e2adddd802b88229ec0"
+          ],
+          "sha": "1a8825f62fcdc33682f512734fa3f369e4ca5ce0",
+          "subject": "Switch chat screen to conversation bubbles"
+        },
+        {
+          "date_utc": "2026-10-05T18:46:33+00:00",
+          "parents": [
+            "d735bc08cbf22d12446d11494ff639258ab7190f"
+          ],
+          "sha": "f455ec24a706656eb4c64e2adddd802b88229ec0",
+          "subject": "Preserve PDF page and table structure"
+        },
+        {
+          "date_utc": "2026-10-05T18:46:30+00:00",
+          "parents": [
+            "4bc82719b96ef37ebaa2494dc9b412a5ab14bb5f"
+          ],
+          "sha": "d735bc08cbf22d12446d11494ff639258ab7190f",
+          "subject": "Preserve PDF page and table structure"
+        },
+        {
+          "date_utc": "2026-10-05T18:45:55+00:00",
+          "parents": [
+            "0883d61b221f7626f8e12ac918772aed79df15ff"
+          ],
+          "sha": "4bc82719b96ef37ebaa2494dc9b412a5ab14bb5f",
+          "subject": "Improve PDF evidence search and chat UI"
+        },
+        {
+          "date_utc": "2026-10-05T18:45:53+00:00",
+          "parents": [
+            "02ae854c4ce954b07533258914eeb134af605991"
+          ],
+          "sha": "0883d61b221f7626f8e12ac918772aed79df15ff",
+          "subject": "Improve PDF evidence search and chat UI"
+        },
+        {
+          "date_utc": "2026-10-05T18:45:50+00:00",
+          "parents": [
+            "989665b81ae0e6e0ab7da1aabc4c12578d9373aa"
+          ],
+          "sha": "02ae854c4ce954b07533258914eeb134af605991",
+          "subject": "Improve PDF evidence search and chat UI"
+        }
+      ],
+      "manifests": [
+        {
+          "internet_declared": true,
+          "network_removal_directive": true,
+          "packages": [
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.RECORD_AUDIO",
+            ".JarvisApplication",
+            ".MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "app/src/main/AndroidManifest.xml",
+          "services": []
+        }
+      ],
+      "name": "bubth720/JAVIS-Local-v2",
+      "observed_commit": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {
+        "app/build.gradle.kts": "8f9baccff2e0b9c35d144e3bbf74b90bc279dbf54c2f9eda8012e156e5ccd369",
+        "app/src/main/AndroidManifest.xml": "13311e2ed2d072bd7528ad42815430a09e32b4a6f478f7e0218aecfdd95a4006",
+        "app/src/main/java/com/stark/jarvislocal/AppGraph.kt": "c33015bebc08db742a12f965908c7b2b9319e601524a42cfff437998cb5fd138",
+        "app/src/main/java/com/stark/jarvislocal/JarvisApplication.kt": "24e6dfd89835b2b829378f70db62686c9a69c105ef303e92cbb6d87801a50df2",
+        "app/src/main/java/com/stark/jarvislocal/JarvisCore.kt": "e03359975e35a8c82cb1a80bce0ab159a51f44e7838c898891a34793686a719a",
+        "app/src/main/java/com/stark/jarvislocal/LlamaLocalEngine.kt": "f74fd1ddfd9222b98fd0366b1c53eebcfb1d21c60b0a09be7ea5a059d338747a",
+        "app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt": "2e8fa2c8eea6b793081bf47b0f9c86b78266df980e4435e2e7381f5561768804",
+        "app/src/main/java/com/stark/jarvislocal/LocalTts.kt": "45119425e9f79e78195e87e84fc704154bef7895b3baecefca890f25cd93d14e",
+        "app/src/main/java/com/stark/jarvislocal/MainActivity.kt": "b020831c82b62f652c37ee86a06e4e411052c78ad21805300c4a2da6bfc39bb8",
+        "app/src/main/java/com/stark/jarvislocal/MessageAdapter.kt": "5b124567cb879a4ef015455aae0a2caf088aede2b2504750a1bbe8518621fc77",
+        "app/src/main/java/com/stark/jarvislocal/ModelManager.kt": "f7628703030e13d98c66377e773d8516c44bc1e4999bf201df2273a4da17f8b9",
+        "app/src/main/java/com/stark/jarvislocal/Models.kt": "b4a66d20e55ed94d0acbe68bb1afcaf17548adb80427fcbd7a9777c408e4a6d5",
+        "app/src/main/java/com/stark/jarvislocal/PdfImporter.kt": "c6cf6fb960ed6e51eecd1c1414ab5d0c6e275a271611134f49c9bea262f6558f",
+        "app/src/main/java/com/stark/jarvislocal/PromptBuilder.kt": "4e932d9d2e7a606e25339c53ca1f686d008920d5fc45127f4aeea8e8bd83e92e",
+        "app/src/main/java/com/stark/jarvislocal/RagEngine.kt": "804853236dccad338fe31769697e546a465e4a02435847a6a30d4adb05df119e",
+        "app/src/main/java/com/stark/jarvislocal/SettingsStore.kt": "5806c3452037eec303d37f6ed34b12ae5352ac6e39eab857e72dc45e14233f6d",
+        "app/src/main/java/com/stark/jarvislocal/TextChunker.kt": "6d76f6d094fa215f0628672ac443b19172c21c435b4f39ad48f476c26f56f0f1",
+        "app/src/main/java/com/stark/jarvislocal/WavRecorder.kt": "511c84a5387118fd8b9190811e8189e482ffe018ba308b3d166183ae57ea2835",
+        "app/src/main/java/com/stark/jarvislocal/WhisperLocalEngine.kt": "85830d3779362d1e7cc14854db7dc779ce638baf4ded7302fa8f12d27f29944e",
+        "build.gradle.kts": "50425357e4449207a6e3098fa4f4dc66864a870859025051fc809589ddb858df",
+        "settings.gradle.kts": "1c62754deb03e601b3dc0041fa7471cb37338e127f22cbcc93a42b60506d2c68"
+      },
+      "tests": [
+        "app/src/test/java/com/stark/jarvislocal/LocalDatabaseTest.kt",
+        "app/src/test/java/com/stark/jarvislocal/LocalTimeReplyTest.kt",
+        "app/src/test/resources/sqlite/schema-v1-v2.sql"
+      ],
+      "workflows": [
+        ".github/workflows/build-apk.yml"
+      ]
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-13T19:11:45+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/917e3351f9b525857b6aa019e98d07872d8f6e76"
+        },
+        {
+          "branch_only_commits": 4,
+          "commit_date_utc": "2026-10-13T20:51:41+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "mission-002-prototype",
+          "sha": "aa6b3d37c9109dc3da1296bc00214839bb218e39",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/aa6b3d37c9109dc3da1296bc00214839bb218e39"
+        },
+        {
+          "branch_only_commits": 6,
+          "commit_date_utc": "2026-10-14T09:17:19+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "mission-002b-memory",
+          "sha": "204c6c9a117501286aac54202c6e7dd1365c48b5",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/204c6c9a117501286aac54202c6e7dd1365c48b5"
+        },
+        {
+          "branch_only_commits": 10,
+          "commit_date_utc": "2026-10-14T11:09:42+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "mission-002c-tablet",
+          "sha": "fbda51f3ed762d8e63d5397618daf052567002d6",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/fbda51f3ed762d8e63d5397618daf052567002d6"
+        },
+        {
+          "branch_only_commits": 12,
+          "commit_date_utc": "2026-10-14T14:57:55+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "mission-003-catalogue",
+          "sha": "0b5eba7a37d9304e2a33e66ab6e84a0f70e02a2a",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/0b5eba7a37d9304e2a33e66ab6e84a0f70e02a2a"
+        },
+        {
+          "branch_only_commits": 14,
+          "commit_date_utc": "2026-10-14T21:01:18+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "mission-003b-resources",
+          "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+          "url": "https://github.com/bubth720/JARVIS-LLM/tree/1756e29557287550b5cfdffdd911cada2a302db6"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        ".github/workflows/android.yml",
+        ".gitignore",
+        "JARVIS_LLM_MISSION_001.md",
+        "README.md",
+        "app/build.gradle.kts",
+        "app/src/main/AndroidManifest.xml",
+        "app/src/main/assets/catalogue-demo.json",
+        "app/src/main/cpp/CMakeLists.txt",
+        "app/src/main/cpp/bridge.cpp",
+        "app/src/main/cpp/cancellation.h",
+        "app/src/main/cpp/model_check.h",
+        "app/src/main/cpp/native_configuration.h",
+        "app/src/main/cpp/tests/model_memory_probe.cpp",
+        "app/src/main/cpp/tests/native_safety_test.cpp",
+        "app/src/main/java/fr/jarvis/llm/ChatViewModel.kt",
+        "app/src/main/java/fr/jarvis/llm/DeviceMonitor.kt",
+        "app/src/main/java/fr/jarvis/llm/MainActivity.kt",
+        "app/src/main/java/fr/jarvis/llm/ModelStore.kt",
+        "app/src/main/java/fr/jarvis/llm/ProcessResources.kt",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueActivity.kt",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueJson.kt",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueStore.kt",
+        "app/src/main/java/fr/jarvis/llm/diagnostic/DiagnosticJson.kt",
+        "app/src/main/java/fr/jarvis/llm/engine/LlamaBackend.kt",
+        "app/src/main/res/xml/data_extraction_rules.xml",
+        "app/src/test/java/fr/jarvis/llm/CatalogueStoreTest.kt",
+        "app/src/test/java/fr/jarvis/llm/OfflineStartupTest.kt",
+        "app/src/test/java/fr/jarvis/llm/ResourceLifecycleTest.kt",
+        "build.gradle.kts",
+        "docs/ARCHITECTURE.md",
+        "docs/CATALOGUE_003.md",
+        "docs/DEVICE_QUALIFICATION.md",
+        "docs/DEVICE_SAFETY.md",
+        "docs/ESSAIS_MEMOIRE_003B.md",
+        "docs/FIRST_DIAGNOSTIC.md",
+        "docs/INSTALLATION.md",
+        "docs/MEMORY_002B.md",
+        "docs/MISSION_003B.md",
+        "docs/TABLET_002C.md",
+        "docs/TEST_CATALOGUE_003.md",
+        "docs/THIRD_PARTY.md",
+        "docs/VALIDATION.md",
+        "docs/VALIDATION_003B.md",
+        "docs/evidence/mission002c-cloud-11984dd.json",
+        "docs/evidence/mission003-catalogue-16f4936.json",
+        "docs/evidence/mission003b-e9d408e.json",
+        "domain/build.gradle.kts",
+        "domain/src/main/kotlin/fr/jarvis/domain/Conversation.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/DiagnosticCapture.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/MemoryTelemetry.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/SafetyPolicy.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/VerifiedCopy.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/resources/ResourceCoordinator.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/ConversationTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/DiagnosticCaptureTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/IntentRouterTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/MemoryTelemetryTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/ResourceCoordinatorTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/SafetyPolicyTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/VerifiedCopyTest.kt",
+        "gradle.properties",
+        "gradle/wrapper/gradle-wrapper.jar",
+        "gradle/wrapper/gradle-wrapper.properties",
+        "gradlew",
+        "gradlew.bat",
+        "settings.gradle.kts",
+        "tools/check-apk.py",
+        "tools/cloud-env.sh",
+        "tools/compare-model-memory.py",
+        "tools/generate-catalogue-fixtures.py",
+        "tools/package-debug.sh",
+        "tools/prepare-native.sh",
+        "tools/publish-catalogue-evidence.py",
+        "tools/publish-validation-003b.py",
+        "tools/setup-cloud.sh",
+        "tools/test-native.sh"
+      ],
+      "gradle": [
+        {
+          "application_id": [
+            "fr.jarvis.llm"
+          ],
+          "compile_sdk": [
+            "36"
+          ],
+          "min_sdk": [
+            "29"
+          ],
+          "path": "app/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "domain/build.gradle.kts"
+        }
+      ],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "llm",
+      "inspection_branch": "mission-003b-resources",
+      "interfaces": [
+        {
+          "name": "LanguageModel",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/Conversation.kt"
+        },
+        {
+          "name": "KnowledgeSource",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+        },
+        {
+          "name": "RetrievalIndex",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+        },
+        {
+          "name": "SemanticRetriever",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+        },
+        {
+          "name": "CatalogueRoute",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+        },
+        {
+          "name": "ResourceGrant",
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/resources/ResourceCoordinator.kt"
+        }
+      ],
+      "ipc_pattern_hits": [],
+      "languages": [
+        ".cpp",
+        ".h",
+        ".kt",
+        ".py"
+      ],
+      "main_commit": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "main_files": [
+        "JARVIS_LLM_MISSION_001.md",
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-13T19:11:45+00:00",
+          "parents": [
+            "c9bf3a0c9047097a8542ec3e0590113284374a4b"
+          ],
+          "sha": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+          "subject": "docs: ajouter le cahier des charges de la mission 001"
+        },
+        {
+          "date_utc": "2026-10-13T19:07:02+00:00",
+          "parents": [],
+          "sha": "c9bf3a0c9047097a8542ec3e0590113284374a4b",
+          "subject": "docs: initialiser JARVIS LLM pour l'étude de faisabilité"
+        }
+      ],
+      "manifests": [
+        {
+          "internet_declared": true,
+          "network_removal_directive": true,
+          "packages": [
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            ".catalogue.CatalogueActivity",
+            ".MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "app/src/main/AndroidManifest.xml",
+          "services": []
+        }
+      ],
+      "name": "bubth720/JARVIS-LLM",
+      "observed_commit": "1756e29557287550b5cfdffdd911cada2a302db6",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {
+        "app/build.gradle.kts": "7d0a2cb3bf904eb17b2aad81c6ac13a77ca3d5ec646920ea9e674110e0af45b4",
+        "app/src/main/AndroidManifest.xml": "9b293356b3d7d40d6fa2d8d3478725226bafad5e546f6c1c1727dc3d102864c9",
+        "app/src/main/cpp/bridge.cpp": "6d3d8ee338e5cee2ddad35376dc3218624ec418dfd6fed5304b002787ef73b07",
+        "app/src/main/cpp/cancellation.h": "78b6a43b84a08cf11d3c61e53dc2322c4c769998e7dc0817637cb61acdd6ef88",
+        "app/src/main/cpp/model_check.h": "b976d165a69be6840ff7cc5708345a5f90bcd569ade5f7cbbc9156b5dfa54b2d",
+        "app/src/main/cpp/native_configuration.h": "1ebc6680cd3fb30c105fe9df0fead7416af288e7b40d08a54278cfd612d2ca75",
+        "app/src/main/cpp/tests/model_memory_probe.cpp": "41b16f06e55aeb9fa7d6df90c784aa0fa617a09bcd0341a32621e06b5e2154b3",
+        "app/src/main/cpp/tests/native_safety_test.cpp": "76f0a3b9847333632abae193e1333caa777c0762fd075ca6649c0f25c1f10b49",
+        "app/src/main/java/fr/jarvis/llm/ChatViewModel.kt": "450d26f3b84187562e2229dc10e780bb47b1b6a5c76cb777e28b0de3a6707132",
+        "app/src/main/java/fr/jarvis/llm/DeviceMonitor.kt": "85f6993cc701564c65e93fa6fefc431d9034529690eda63f901e5cc921fafe86",
+        "app/src/main/java/fr/jarvis/llm/MainActivity.kt": "ec8285009d2eeb4d416383b86fa5dd0652002c17a2f5b7777fc6124ca0b2f548",
+        "app/src/main/java/fr/jarvis/llm/ModelStore.kt": "64109c362d90c19bc69d56ae41e1bcf7cee63f5dd7c0b474b535016d8cd6f656",
+        "app/src/main/java/fr/jarvis/llm/ProcessResources.kt": "cf1a2959c20ebfac5a0ba176cc9581ac28ee52f71cd6f3645680d1ca11451968",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueActivity.kt": "7ac7e8b19758f17f0e82be02764aebdee84b9dcdbfa84fc8a121d63f1e56c534",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueJson.kt": "5fa8ff186a83dbc0bdcdd79e0ea622ee6b435e0312ed62d496cc43a4da11de24",
+        "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueStore.kt": "31e6e4ee5e999206f32e9a24be5860ba6a5347a3607c99d37054aee4f0645de8",
+        "app/src/main/java/fr/jarvis/llm/diagnostic/DiagnosticJson.kt": "b540cd05f500228b4ebd4ed3854b377dc262907cab514ca4e411dd51d1314b9c",
+        "app/src/main/java/fr/jarvis/llm/engine/LlamaBackend.kt": "f37f10d54ff0589e8980f11aec76037126d3b07bed2570397584aca273c77bed",
+        "build.gradle.kts": "213858e5cb784af2fb18368a78c652c880c28d3fccc8a2ef08c0e8e2fef5fe40",
+        "domain/build.gradle.kts": "ddf1debf802a10dbe9178ad597268b39f938deb89c67b6e1ba6a9f5d7a27932c",
+        "domain/src/main/kotlin/fr/jarvis/domain/Conversation.kt": "4d058a81cce536691e184253e66069e537f9ae9ffe3c4dd0c6eb9fc6b7e4868a",
+        "domain/src/main/kotlin/fr/jarvis/domain/DiagnosticCapture.kt": "2a2877a6690921e8e6ccaad7a278d6656af73668666701024e26f83b05d6fb39",
+        "domain/src/main/kotlin/fr/jarvis/domain/MemoryTelemetry.kt": "c12553cccb2423634ffcfe331bd7521474e96149ffd939092cd8d6fc582c8fa4",
+        "domain/src/main/kotlin/fr/jarvis/domain/SafetyPolicy.kt": "7fefc8ce65f80375666eefb8ea05d44ab5edee940d49c2d53183e675818f3999",
+        "domain/src/main/kotlin/fr/jarvis/domain/VerifiedCopy.kt": "b3fffdeb98c60bea5c297def1172c0cc7af347467b2e88a2ff3d9bed434eb55b",
+        "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt": "0f083b8c093503e7b0446e51d850db2242fa586bc89300643dd56e475a459c6d",
+        "domain/src/main/kotlin/fr/jarvis/domain/resources/ResourceCoordinator.kt": "78a9d0362c0ce5e3bcfc043a97d5f198fa2d470a01b952ee7dddab78cdc59bb1",
+        "settings.gradle.kts": "226f2b6c30478d19c3557b9c49dfcaedc25e15e85725a5e91d176e8156c7e7db"
+      },
+      "tests": [
+        "app/src/main/cpp/tests/model_memory_probe.cpp",
+        "app/src/main/cpp/tests/native_safety_test.cpp",
+        "app/src/test/java/fr/jarvis/llm/CatalogueStoreTest.kt",
+        "app/src/test/java/fr/jarvis/llm/OfflineStartupTest.kt",
+        "app/src/test/java/fr/jarvis/llm/ResourceLifecycleTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/ConversationTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/DiagnosticCaptureTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/IntentRouterTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/MemoryTelemetryTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/ResourceCoordinatorTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/SafetyPolicyTest.kt",
+        "domain/src/test/kotlin/fr/jarvis/domain/VerifiedCopyTest.kt"
+      ],
+      "workflows": [
+        ".github/workflows/android.yml"
+      ]
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 8,
+          "commit_date_utc": "2026-10-14T11:28:47+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/android-pocket-cloning",
+          "sha": "a5e2c056a3e98bee7132aa8e50dcf0d5ec18d387",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/a5e2c056a3e98bee7132aa8e50dcf0d5ec18d387"
+        },
+        {
+          "branch_only_commits": 30,
+          "commit_date_utc": "2026-10-15T10:15:24+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/android-pocket-cloning-005d",
+          "sha": "9429a9ebf0f21909ac6c59a07491fa2bca027493",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/9429a9ebf0f21909ac6c59a07491fa2bca027493"
+        },
+        {
+          "branch_only_commits": 5,
+          "commit_date_utc": "2026-10-14T10:10:19+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/android-pocket-probe",
+          "sha": "de38598faf7a3a09c2d0f53d86a150725c953f01",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/de38598faf7a3a09c2d0f53d86a150725c953f01"
+        },
+        {
+          "branch_only_commits": 2,
+          "commit_date_utc": "2026-10-13T20:32:25+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/android-tts-foundation",
+          "sha": "2aad62625121fa436e5af84bbd9d01f00aafceed",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/2aad62625121fa436e5af84bbd9d01f00aafceed"
+        },
+        {
+          "branch_only_commits": 4,
+          "commit_date_utc": "2026-10-13T20:32:26+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/pocket-tts-cpu-prototype",
+          "sha": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4"
+        },
+        {
+          "branch_only_commits": 43,
+          "commit_date_utc": "2026-10-15T15:29:37+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/voice-expression-005i",
+          "sha": "56ffebc5b514d683f977ea177a26e2b6a91b4930",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/56ffebc5b514d683f977ea177a26e2b6a91b4930"
+        },
+        {
+          "branch_only_commits": 37,
+          "commit_date_utc": "2026-10-15T12:52:16+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": false,
+          "name": "feat/voice-identity-005h",
+          "sha": "1d0285ea19fa84c052ab5ce3b2f08146bcf30976",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/1d0285ea19fa84c052ab5ce3b2f08146bcf30976"
+        },
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-13T16:27:50+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/b80b1728c481200b3b0e11c0843f1a268a184fa1"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "feat/pocket-tts-cpu-prototype",
+      "files": [
+        ".github/workflows/android.yml",
+        ".github/workflows/pocket-probe.yml",
+        ".github/workflows/voice-expression.yml",
+        ".github/workflows/voice-identity.yml",
+        ".github/workflows/voice-prototype.yml",
+        ".github/workflows/voice-quality.yml",
+        ".gitignore",
+        "README.md",
+        "app/build.gradle.kts",
+        "app/src/main/AndroidManifest.xml",
+        "app/src/main/java/com/jarvis/voice/MainActivity.kt",
+        "app/src/main/java/com/jarvis/voice/speech/AndroidSpeechEngine.kt",
+        "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt",
+        "app/src/main/java/com/jarvis/voice/speech/SpeechRouter.kt",
+        "app/src/main/res/drawable/ic_voice.xml",
+        "app/src/main/res/values/ids.xml",
+        "app/src/main/res/values/strings.xml",
+        "app/src/main/res/xml/data_extraction_rules.xml",
+        "app/src/test/java/com/jarvis/voice/speech/SpeechRouterTest.kt",
+        "build.gradle.kts",
+        "deliveries/mission005f/005f-stable-apk.zip",
+        "deliveries/mission005f/delivery.json",
+        "deliveries/mission005g/005g-experimental-apk.zip",
+        "deliveries/mission005g/delivery.json",
+        "deliveries/mission005h/005h-experimental-apk.zip",
+        "deliveries/mission005h/delivery.json",
+        "deliveries/mission005i/005i-experimental-apk.zip",
+        "deliveries/mission005i/delivery.json",
+        "docs/mission005/INSTALLATION-TESTS.md",
+        "docs/mission005/LOT-A.md",
+        "docs/mission005/LOT-B.md",
+        "docs/mission005/encoder-candidate-report.json",
+        "docs/mission005d/ALBA-INT8-CACHE-COMPARISON.json",
+        "docs/mission005d/APK-CI-REPRISE-VERIFICATION.json",
+        "docs/mission005d/APK-FINALE-VERIFICATION.json",
+        "docs/mission005d/APK-REPRISE-VERIFICATION.json",
+        "docs/mission005d/APK-VERIFICATION.json",
+        "docs/mission005d/CANDIDAT-FP32-COMPATIBILITE.json",
+        "docs/mission005d/CHECKPOINT-TELECHARGE.json",
+        "docs/mission005d/CI-REPRISE.json",
+        "docs/mission005d/DECODER-FP32-PARITY.json",
+        "docs/mission005d/DIAGNOSTIC-MP3.md",
+        "docs/mission005d/ENCODER-PARITY-REPRISE.json",
+        "docs/mission005d/FLOW-FP32-PARITY.json",
+        "docs/mission005d/GENERATION-ENTREES-IDENTIQUES.json",
+        "docs/mission005d/GENERATION-INDEPENDANTE.json",
+        "docs/mission005d/HF-ACCESS-REPRISE.json",
+        "docs/mission005d/HF-ACCESS.json",
+        "docs/mission005d/INSTALLATION-ANDROID.md",
+        "docs/mission005d/OFFICIAL-CHECKPOINT-METADATA.json",
+        "docs/mission005d/RESULTATS-REPRISE.md",
+        "docs/mission005d/RESULTATS.md",
+        "docs/mission005d/SECURITE-LICENCES.md",
+        "docs/mission005d/TESTS-REPRISE.json",
+        "docs/mission005d/TESTS-TELEPHONE.md",
+        "docs/mission005d/TOKENIZER-CHECK.json",
+        "docs/mission005d/VALIDATION-ENCODEUR.md",
+        "docs/mission005e/APK-CI-VERIFICATION.json",
+        "docs/mission005e/APK-VERIFICATION.json",
+        "docs/mission005e/CI-RESULTATS.json",
+        "docs/mission005e/EVALUATION-FP32.json",
+        "docs/mission005e/IMPORT-ZIP-DIAGNOSTICS.md",
+        "docs/mission005e/IMPORT-ZIP-RESULTATS.json",
+        "docs/mission005e/INTELLIGIBILITE-SMALL.json",
+        "docs/mission005e/INTELLIGIBILITE-TINY.json",
+        "docs/mission005e/MESURES-JVM.json",
+        "docs/mission005e/PACK-PRIVE-PROVENANCE.json",
+        "docs/mission005e/REFERENCES-PUBLIQUES.json",
+        "docs/mission005e/RESULTATS.md",
+        "docs/mission005e/TEST-XIAOMI.md",
+        "docs/mission005e/TESTS-LOCAUX.json",
+        "docs/mission005f/AUDIO-EMULATEUR.txt",
+        "docs/mission005f/RESULTATS.json",
+        "docs/mission005f/RESULTATS.md",
+        "docs/mission005f/TEST-XIAOMI.md",
+        "docs/mission005g/GENERATIONS.json",
+        "docs/mission005g/INTELLIGIBILITE-ASR.json",
+        "docs/mission005g/MOTEURS-SUPERIEURS.md",
+        "docs/mission005g/REFERENCE-LONGUE.json",
+        "docs/mission005g/RESULTATS.md",
+        "docs/mission005g/SAMPLER-PARITE.json",
+        "docs/mission005g/SYNTHESE.json",
+        "docs/mission005g/TEST-XIAOMI.md",
+        "docs/mission005g/VALIDATION-CI.json",
+        "docs/mission005g/VALIDATION-LOCALE.json",
+        "docs/mission005g/VERIFICATION-TELECHARGEMENT.json",
+        "docs/mission005h/ARCHITECTURE.md",
+        "docs/mission005h/CI-RESULTATS.json",
+        "docs/mission005h/CONFIDENTIALITE-MENACES.md",
+        "docs/mission005h/IDENTITE-SCHEMA.md",
+        "docs/mission005h/LOCAL-RESULTATS.json",
+        "docs/mission005h/MIGRATION-EXPORT.md",
+        "docs/mission005h/MISSION.md",
+        "docs/mission005h/PUBLIC-CYCLE.json",
+        "docs/mission005h/RESULTATS.md",
+        "docs/mission005h/TEST-XIAOMI.md",
+        "docs/mission005h/VERIFICATION-TELECHARGEMENT.json",
+        "docs/mission005i/ARCHITECTURE.md",
+        "docs/mission005i/CI-RESULTATS.json",
+        "docs/mission005i/CONTRAT-CORE-VOICE.md",
+        "docs/mission005i/EXPRESSION-CAPABILITIES.md",
+        "docs/mission005i/LOCAL-RESULTATS.json",
+        "docs/mission005i/MISSION.md",
+        "docs/mission005i/PRESERVATION.json",
+        "docs/mission005i/PUBLIC-NEUTRAL-PARITY.json",
+        "docs/mission005i/RESULTATS.md",
+        "docs/mission005i/TEST-XIAOMI.md",
+        "docs/pocket-probe/INSTALLATION.md",
+        "docs/pocket-probe/LICENSES.md",
+        "docs/pocket-probe/README.md",
+        "docs/pocket-probe/RESULTS.md",
+        "docs/pocket-probe/TEST-PHONE.md",
+        "docs/pocket-probe/model-parity.json",
+        "expressionRuntime/build.gradle.kts",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionComparisonStore.kt",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionContract.kt",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/LocalProsodyPlanner.kt",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/StrictContractJson.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ExpressionContractTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ExpressionStoreTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ProsodyTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/PublicNeutralParityTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/SyntheticVault.kt",
+        "gradle.properties",
+        "gradle/wrapper/gradle-wrapper.jar",
+        "gradle/wrapper/gradle-wrapper.properties",
+        "gradlew",
+        "gradlew.bat",
+        "identityRuntime/build.gradle.kts",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityComparisonStore.kt",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityOperations.kt",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityTypes.kt",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityWav.kt",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/VoiceIdentityArchive.kt",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/VoiceIdentityVault.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/IdentityWavTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/RealPublicIdentityTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/SyntheticVault.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/VoiceIdentityArchiveTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/VoiceIdentityVaultTests.kt",
+        "pocketProbe/build.gradle.kts",
+        "pocketProbe/src/androidTest/java/com/jarvis/voice/pocketprobe/DeviceAudioTests.kt",
+        "pocketProbe/src/main/AndroidManifest.xml",
+        "pocketProbe/src/main/assets/APACHE-2.0.txt",
+        "pocketProbe/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+        "pocketProbe/src/main/assets/THIRD_PARTY_NOTICES.txt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/AndroidFallback.kt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/DeviceMetrics.kt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/LocalMp3.kt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/MainActivity.kt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/PcmPlayer.kt",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/ReferenceFailure.kt",
+        "pocketProbe/src/main/res/drawable/ic_probe.xml",
+        "pocketProbe/src/main/res/xml/data_extraction_rules.xml",
+        "pocketRuntime/build.gradle.kts",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/CandidateVoiceEncoder.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalEngine.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalModelPack.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalSpeechBackend.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/FrenchFrontend.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/LsdSampler.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ModelPack.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PcmDelivery.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PersonalVoiceProfile.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PlaybackEvidence.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PocketEngine.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PrivatePcmStore.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PrivateWav.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/QualityABStore.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/QualityEngine.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceAudio.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceSelection.kt",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/VoiceState.kt",
+        "pocketRuntime/src/main/resources/cloning-candidate-lock.json",
+        "pocketRuntime/src/main/resources/experimental-fp32-lock.json",
+        "pocketRuntime/src/main/resources/model-lock.json",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/CandidateVoiceEncoderTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ExperimentalImportTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ExperimentalProfileTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PcmDeliveryTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PerformanceTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PlaybackEvidenceTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PocketTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/QualitySamplerTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ReferenceAudioTests.kt",
+        "pocketRuntime/src/test/resources/french-corpus.json",
+        "pocketRuntime/src/test/resources/frontend-fixtures.json",
+        "pocketRuntime/src/test/resources/mission005g/official-lsd-fixture.json",
+        "scripts/pocket/EXPERIMENTAL_MODEL_LICENSE.txt",
+        "scripts/pocket/MODEL_LICENSE.txt",
+        "scripts/pocket/NETAI-LICENSE.txt",
+        "scripts/pocket/assess_experimental_intelligibility.py",
+        "scripts/pocket/assess_quality_intelligibility.py",
+        "scripts/pocket/check_decoder_continuity.py",
+        "scripts/pocket/check_official_access.py",
+        "scripts/pocket/compare_official.py",
+        "scripts/pocket/download_official_checkpoint.py",
+        "scripts/pocket/evaluate_experimental_fp32.py",
+        "scripts/pocket/evaluate_quality_sampler.py",
+        "scripts/pocket/export_matched_decoder.py",
+        "scripts/pocket/export_matched_encoder.py",
+        "scripts/pocket/export_matched_flow.py",
+        "scripts/pocket/matched_model.py",
+        "scripts/pocket/prepare_conditioning_fixture.py",
+        "scripts/pocket/prepare_experimental_pack.py",
+        "scripts/pocket/prepare_expression_test_audio.py",
+        "scripts/pocket/prepare_identity_test_audio.py",
+        "scripts/pocket/prepare_model.py",
+        "scripts/pocket/prepare_test_audio.py",
+        "scripts/pocket/setup_cloud.sh",
+        "scripts/pocket/source-lock.json",
+        "scripts/pocket/study_long_reference.py",
+        "scripts/pocket/tests/test_protected_download.py",
+        "scripts/pocket/validate_cloning_pack.py",
+        "scripts/pocket/validate_matched_generation.py",
+        "scripts/pocket/validate_multistep_sampler.py",
+        "scripts/pocket/validation_tests/test_matched_flow.py",
+        "scripts/pocket/validation_tests/test_matched_model.py",
+        "scripts/pocket/verify_apk.py",
+        "scripts/pocket/verify_experimental_apk.py",
+        "scripts/pocket/verify_expression_delivery.py",
+        "scripts/pocket/verify_identity_delivery.py",
+        "scripts/pocket/verify_quality_delivery.py",
+        "scripts/pocket/verify_stable_delivery.py",
+        "settings.gradle.kts",
+        "voiceExpression/build.gradle.kts",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionContractTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionStoreTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionUiTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/IdentityLibraryTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/PlaybackTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ProsodyTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/SyntheticVault.kt",
+        "voiceExpression/src/main/AndroidManifest.xml",
+        "voiceExpression/src/main/assets/APACHE-2.0.txt",
+        "voiceExpression/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+        "voiceExpression/src/main/assets/THIRD_PARTY_NOTICES.txt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/DeviceMetrics.kt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/LocalMp3.kt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/MainActivity.kt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/OperationMetrics.kt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/PcmPlayer.kt",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/ReferenceFailure.kt",
+        "voiceExpression/src/main/res/drawable/ic_probe.xml",
+        "voiceExpression/src/main/res/xml/data_extraction_rules.xml",
+        "voiceIdentity/build.gradle.kts",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/IdentityLibraryTests.kt",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/PlaybackTests.kt",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/SyntheticVault.kt",
+        "voiceIdentity/src/main/AndroidManifest.xml",
+        "voiceIdentity/src/main/assets/APACHE-2.0.txt",
+        "voiceIdentity/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+        "voiceIdentity/src/main/assets/THIRD_PARTY_NOTICES.txt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/DeviceMetrics.kt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/LocalMp3.kt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/MainActivity.kt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/OperationMetrics.kt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/PcmPlayer.kt",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/ReferenceFailure.kt",
+        "voiceIdentity/src/main/res/drawable/ic_probe.xml",
+        "voiceIdentity/src/main/res/xml/data_extraction_rules.xml",
+        "voicePrototype/build.gradle.kts",
+        "voicePrototype/src/androidTest/java/com/jarvis/voice/voiceprototype/PlaybackTests.kt",
+        "voicePrototype/src/androidTest/java/com/jarvis/voice/voiceprototype/PrototypePrivacyTests.kt",
+        "voicePrototype/src/main/AndroidManifest.xml",
+        "voicePrototype/src/main/assets/APACHE-2.0.txt",
+        "voicePrototype/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+        "voicePrototype/src/main/assets/THIRD_PARTY_NOTICES.txt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/DeviceMetrics.kt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/LocalMp3.kt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/MainActivity.kt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/OperationMetrics.kt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/PcmPlayer.kt",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/ReferenceFailure.kt",
+        "voicePrototype/src/main/res/drawable/ic_probe.xml",
+        "voicePrototype/src/main/res/xml/data_extraction_rules.xml",
+        "voiceQuality/build.gradle.kts",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/PlaybackTests.kt",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/PrototypePrivacyTests.kt",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/QualityABTests.kt",
+        "voiceQuality/src/main/AndroidManifest.xml",
+        "voiceQuality/src/main/assets/APACHE-2.0.txt",
+        "voiceQuality/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+        "voiceQuality/src/main/assets/THIRD_PARTY_NOTICES.txt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/DeviceMetrics.kt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/LocalMp3.kt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/MainActivity.kt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/OperationMetrics.kt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/PcmPlayer.kt",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/ReferenceFailure.kt",
+        "voiceQuality/src/main/res/drawable/ic_probe.xml",
+        "voiceQuality/src/main/res/xml/data_extraction_rules.xml"
+      ],
+      "gradle": [
+        {
+          "application_id": [
+            "com.jarvis.voice"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "app/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "expressionRuntime/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "identityRuntime/build.gradle.kts"
+        },
+        {
+          "application_id": [
+            "com.jarvis.voice.pocketprobe"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "pocketProbe/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "pocketRuntime/build.gradle.kts"
+        },
+        {
+          "application_id": [
+            "com.jarvis.voice.voiceexpression005i"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "voiceExpression/build.gradle.kts"
+        },
+        {
+          "application_id": [
+            "com.jarvis.voice.voiceidentity005h"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "voiceIdentity/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "voicePrototype/build.gradle.kts"
+        },
+        {
+          "application_id": [
+            "com.jarvis.voice.voicequality005g"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "voiceQuality/build.gradle.kts"
+        }
+      ],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "voice",
+      "inspection_branch": "feat/voice-expression-005i",
+      "interfaces": [
+        {
+          "name": "SpeechEngine",
+          "path": "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt"
+        },
+        {
+          "name": "SpeechResult",
+          "path": "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt"
+        },
+        {
+          "name": "VoiceBackendIdentityBinding",
+          "path": "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityTypes.kt"
+        },
+        {
+          "name": "ExperimentalSpeechBackend",
+          "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalSpeechBackend.kt"
+        },
+        {
+          "name": "ReferenceImporter",
+          "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+        },
+        {
+          "name": "ReferenceDecoder",
+          "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+        },
+        {
+          "name": "LocalProfileEncoder",
+          "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+        },
+        {
+          "name": "VoiceProfile",
+          "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+        }
+      ],
+      "ipc_pattern_hits": [],
+      "languages": [
+        ".kt",
+        ".py"
+      ],
+      "main_commit": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-13T16:27:50+00:00",
+          "parents": [],
+          "sha": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+          "subject": "chore: initialize JARVIS VOICE repository"
+        }
+      ],
+      "manifests": [
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "android.intent.action.TTS_SERVICE",
+            ".MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "app/src/main/AndroidManifest.xml",
+          "services": []
+        },
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "android.intent.action.TTS_SERVICE",
+            ".MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "pocketProbe/src/main/AndroidManifest.xml",
+          "services": []
+        },
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "com.jarvis.voice.voiceexpression.MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "voiceExpression/src/main/AndroidManifest.xml",
+          "services": []
+        },
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "com.jarvis.voice.voiceidentity.MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "voiceIdentity/src/main/AndroidManifest.xml",
+          "services": []
+        },
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "com.jarvis.voice.voiceprototype.MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "voicePrototype/src/main/AndroidManifest.xml",
+          "services": []
+        },
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            "com.jarvis.voice.voicequality.MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "voiceQuality/src/main/AndroidManifest.xml",
+          "services": []
+        }
+      ],
+      "name": "bubth720/JARVIS-VOICE",
+      "observed_commit": "56ffebc5b514d683f977ea177a26e2b6a91b4930",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {
+        "app/build.gradle.kts": "d14dc2a93aced9bea3e07a005e359796a7e2002ab3345be32f1015a820a5e03d",
+        "app/src/main/AndroidManifest.xml": "947205e74f729de0334b3f7dc89e2f4fa3d4d8a77d56f0b0bfec2aa47ad2a254",
+        "app/src/main/java/com/jarvis/voice/MainActivity.kt": "6877c12db4f2b81f309a7b662dde4435a7f7915b51b1c9b56854e307c25b743e",
+        "app/src/main/java/com/jarvis/voice/speech/AndroidSpeechEngine.kt": "66e87ab7c283a53b10f1286187833936ba7ab42445ce86d1e0d2f1fa2286a305",
+        "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt": "fccbeea310d784ce214650bbcbf709954be296fd004b7a6550e71af0d3dff059",
+        "app/src/main/java/com/jarvis/voice/speech/SpeechRouter.kt": "f33743ea0fd98408805fc6f6a7b54226e930e8f12191b797895a6659a6e856a3",
+        "build.gradle.kts": "41ea3c3fdceb3f06c39a0375efec91327f0d4888790c7bb1064f4bd3d36f8e38",
+        "expressionRuntime/build.gradle.kts": "8eef07970e959b4fbbacd09df2832c4dd9d12951bce1a788ba025d267d4fee3e",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionComparisonStore.kt": "3f8556cafe978712e2718145372046b62e113686866382511e82f585f368d443",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionContract.kt": "672d140f140bf9648b91bb3d69589df2c199fc782ae4d0c5a0018ee6e196bcf4",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/LocalProsodyPlanner.kt": "7eebf5fdc9a7d8d987599877bcd9c6744ecce8a80ac1166bf902c77676359bc7",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/StrictContractJson.kt": "161ec0cd576e910d2d511aac8e637873d48d9957be0c20ee38db5ac913947896",
+        "identityRuntime/build.gradle.kts": "4b9e6e0d3cea36e019cd53ff7c045823f896168a8843b9c16a3f7608b2afe8a0",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityComparisonStore.kt": "564d3d4bb465eec9d83258b8e5f37c199ddd2a7961b15a7a7244846fa733e31a",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityOperations.kt": "2c994d1879736affbc47fe14af04e2d37494189d79faa5adb40ca35ed5b7e312",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityTypes.kt": "76416ba39c2a8941d256f731992041564206bb74d90f58747292135de8a16904",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityWav.kt": "d489a801182ce6110c8ea173f16d69f9196ac4f6daa31a6949b6c8ff86bed59a",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/VoiceIdentityArchive.kt": "20ae527ca9a7ef62257c84832433a1b6a6a784d5230c6aabaa69117f2dd90703",
+        "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/VoiceIdentityVault.kt": "21ff4786fb78d3f3bbc44d3c8e5bb702e26b66d5c851938fcd4ba64fe8ee17fb",
+        "pocketProbe/build.gradle.kts": "b7bfaea2bee13f81d2af343afa221b7fb350c0ddfc9338724a7cb6f6f513f7fc",
+        "pocketProbe/src/main/AndroidManifest.xml": "05f92815ba0f44d23dd17f0bfa2ff83bc91b715655a1605b6758d0fc7ee4459e",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/AndroidFallback.kt": "13d558ccf4676a0620e864c5413540c5692c72405509608725a016817edea53f",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/DeviceMetrics.kt": "90e238328bbbc46a3296fb4753046af9635c437c200d8636fbfcc783243f17b4",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/LocalMp3.kt": "93f3726c71e596c5d87296caaa15eaa128ad288df3ec2457b5c0f61c1af35b05",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/MainActivity.kt": "b6b0bf8cd9e691114fbe7a0f132b6bddbe0e55a37104232d4571d19f1949749e",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/PcmPlayer.kt": "23bc4be8298acb5a1bb3705bd5be5f505eb53b5124c1bd691a0f3a1521460101",
+        "pocketProbe/src/main/java/com/jarvis/voice/pocketprobe/ReferenceFailure.kt": "19458cca82884c891c912299a8141c7456258dd297f35d6ce2ea30e2f1ac28ec",
+        "pocketRuntime/build.gradle.kts": "5094d0a056beb58002e8b78f5fa58d4a37ee5c5b2a7af0918c83e489a428cb1d",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/CandidateVoiceEncoder.kt": "bb7c024aa11098e80fcd2d994cc2ebd57e7335537d0043ac21d70e4469f0d0bd",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalEngine.kt": "a438dc9ac98fed331c0a15df591f8f095cfe6a24c3dbb2a6ce3fb903dfba6a3a",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalModelPack.kt": "e4d879ddf960095e13cdce6930da76806e87323498699ce62fcbda2c69d385a4",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalSpeechBackend.kt": "f7873ca97a8d881405268d231bfdf16b81a1929c9ace453f88ee51537ace8630",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/FrenchFrontend.kt": "52112f1d29a4396f7e87f20ca7dba015be3e571bec8b133b72ce66ba43ad4501",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/LsdSampler.kt": "e409ad59ce618d13c10c418b9854b471d140e61c8ab8d293f27ec186478c0dae",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ModelPack.kt": "59ff719e9fac76a4ba4327635ec9c25bcc046ba116b0b865e6cae9c20067d7a5",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PcmDelivery.kt": "43251f0df8cacc941b36d445aad409e63bb4f51972abab5e734924e6118501c2",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PersonalVoiceProfile.kt": "0cc267a192deada9b2624ea8e8f3f92e9d1e123ed5fbae40467c05503ba05744",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PlaybackEvidence.kt": "3ec167c60d938a0798a4f055fdebd5c00fca018aee27c40678d775dec2f4dc45",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PocketEngine.kt": "4532b94de859a67b63528f4e9899f6ab72818c655f03609afb1be7623345e481",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PrivatePcmStore.kt": "5658627b956bb56def927437bf8ffe2bdcc3a6336faea6e664190a334f6f7514",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/PrivateWav.kt": "f541a92bf4dda2afbf7cb3e01ea563d0fb6a84fd32426725d6ba2658c2f2738f",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/QualityABStore.kt": "6e2432566ca5dc856d469f4bcb891dffb5de831f23cc44bcb5dc7c48e4366031",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/QualityEngine.kt": "2e73295a87cc9c1f67ae34e7ff4d7d8f76cd58442b40235b747f9f8fee6b2b6a",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceAudio.kt": "4b4af12032dee257aa9930d8b7162d725fb2eb589aae63f1394c9e4e5abdd95e",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt": "4e45fa63727de93402cf223b78fd886e1e0af68e225307f0bf09cc5023ac61b8",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceSelection.kt": "56d7bfa87f5ffe489f23e9e16518a0a84da35d7d5435ecab2871c11f5b388c59",
+        "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/VoiceState.kt": "1fedcb1b2742e2d997bb23775f75d51b6f3465cf48b10e51b235cd8b45da4be3",
+        "settings.gradle.kts": "512c21518e26805da71344355293d6ac3dfd63e50ef640ce68687e1db510216c",
+        "voiceExpression/build.gradle.kts": "01cffe415aa64bf684e02a2cd69ff92fb42625066ca4110a5fdee809b7d6f6bb",
+        "voiceExpression/src/main/AndroidManifest.xml": "c750ce67a04d2d0615739d168d5498835210ca251a32dd8cc33c9acc45a84ff7",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/DeviceMetrics.kt": "8e13ac0b44fe0c1dfa0ea1fc022b688e87ab367719facec4a2c6cbe86dd71b17",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/LocalMp3.kt": "88ed64419ec6a77660f44d19ec7cf8fc45d477a2aa1d7fb28344c1283ea67823",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/MainActivity.kt": "f46d85b1844cdc3952b8b7b5c6aed72677e664d0e4d9ceffd246baf75ede053e",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/OperationMetrics.kt": "c5d6c4fdcfe2f176d0084a32af9225d2d3550a7b749c356dd89fc3c84c4e4ed1",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/PcmPlayer.kt": "c4d471aba1e04e2fd5db651d8226dc32955ccfac892b7eed17f20e0211292bf6",
+        "voiceExpression/src/main/java/com/jarvis/voice/voiceexpression/ReferenceFailure.kt": "688691adc8b7478d3dc525060577edca225d63fd106189c9ed78fcf2f4593332",
+        "voiceIdentity/build.gradle.kts": "b467302877cffb18a85d39b3bc0fb5722f323610f3b7f7a455e1b0d86074b882",
+        "voiceIdentity/src/main/AndroidManifest.xml": "ef5786dfe8418d10a298328b56c6054f546cc461904a2e6006e7dc3c991ad410",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/DeviceMetrics.kt": "e37684106dfda2594d46a4e4b200b4432d5bcf3d1d4d869e0d5707ab755541bf",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/LocalMp3.kt": "73c5c80aaa9389dce0248967002084385837fdd018a5630e7157d7920e251fa6",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/MainActivity.kt": "07c994224f5c3c902fa991e85a335fe0ab38711bcb4c0df0b26a166194baeb83",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/OperationMetrics.kt": "b626021fe2af36aac7f9bdacf3784615e3a180fc74fd565a2cb93e244f79c02c",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/PcmPlayer.kt": "9ba12a8f153474644461d58ea433fc9b1cc0c6cc20e46a727e8a76a8687af70f",
+        "voiceIdentity/src/main/java/com/jarvis/voice/voiceidentity/ReferenceFailure.kt": "ea135e8a9320ad82b90414177318d209bbf75b0610fe53f42655fb82492565bb",
+        "voicePrototype/build.gradle.kts": "0723e002208c9344414d946aa1c50edacddbe6016abaeb60cd79ba46a09b48d7",
+        "voicePrototype/src/main/AndroidManifest.xml": "9e2461e0b39aa4f93295923f24669a5b78fac8264da6377fe153e3dcb39cdd5a",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/DeviceMetrics.kt": "c96cfef03f664f4a47840e165b201cd5b4109993f5c6bf8c76a6b6518ff399e7",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/LocalMp3.kt": "dae5f203ae9069e07f599bf67bd7c747c0d8ca4b64439e5c5f63aa2701776d29",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/MainActivity.kt": "9fe1e627c1ab5f7247138d42a68c8e69f14472727e670c134b2b892a2ff89183",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/OperationMetrics.kt": "bd22d7161a3ee02d0d3646d29fff0757daa1f99bee6fff63cc05185eeecd8f82",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/PcmPlayer.kt": "c11a1468a0f18556a9e9f9c888f1dcdea95ca49dd2d3eecd5b78b9fc1b1b0319",
+        "voicePrototype/src/main/java/com/jarvis/voice/voiceprototype/ReferenceFailure.kt": "1e4e3244d0704f7b74375fbb5a9e27ef1df4153ae2de28dd58f9cfaf06e2306a",
+        "voiceQuality/build.gradle.kts": "b342af4e1a372360c7b87598f4232093bf35c574d1667a7d6fbbd76cdcda1a9a",
+        "voiceQuality/src/main/AndroidManifest.xml": "05d4f039e89a485866af33b5105e57b2ff179e8d954aaaff9e1b11940dd6ee0e",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/DeviceMetrics.kt": "51b0fcd0844fdb3466265f05778797f96ee9f034f6ce91707fece252c3869927",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/LocalMp3.kt": "d7cb7eef8cba9e4e4275771a9a3d34d640b22e5046f4039e129bdf5a10ebf06c",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/MainActivity.kt": "9a26505d748e8f3198d749f20869fd429beaf5936901437b236c5eb6c00c7a53",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/OperationMetrics.kt": "755563ce95ebe2f6146b1c698610bbf53e78f5b8becdd9c976ff1163aab8d952",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/PcmPlayer.kt": "87c5ade075b20784692768503cd498dc7d58105d05c0c256b7584ca4438eb980",
+        "voiceQuality/src/main/java/com/jarvis/voice/voicequality/ReferenceFailure.kt": "fe8d8f25c66fc2f6515b0315bf9b360f82076c269181f63b4a63358a5aa373ea"
+      },
+      "tests": [
+        "app/src/test/java/com/jarvis/voice/speech/SpeechRouterTest.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ExpressionContractTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ExpressionStoreTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/ProsodyTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/PublicNeutralParityTests.kt",
+        "expressionRuntime/src/test/kotlin/com/jarvis/voice/expression/SyntheticVault.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/IdentityWavTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/RealPublicIdentityTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/SyntheticVault.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/VoiceIdentityArchiveTests.kt",
+        "identityRuntime/src/test/kotlin/com/jarvis/voice/identity/VoiceIdentityVaultTests.kt",
+        "pocketProbe/src/androidTest/java/com/jarvis/voice/pocketprobe/DeviceAudioTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/CandidateVoiceEncoderTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ExperimentalImportTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ExperimentalProfileTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PcmDeliveryTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PerformanceTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PlaybackEvidenceTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/PocketTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/QualitySamplerTests.kt",
+        "pocketRuntime/src/test/kotlin/com/jarvis/voice/pocket/ReferenceAudioTests.kt",
+        "pocketRuntime/src/test/resources/french-corpus.json",
+        "pocketRuntime/src/test/resources/frontend-fixtures.json",
+        "pocketRuntime/src/test/resources/mission005g/official-lsd-fixture.json",
+        "scripts/pocket/tests/test_protected_download.py",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionContractTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionStoreTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ExpressionUiTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/IdentityLibraryTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/PlaybackTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/ProsodyTests.kt",
+        "voiceExpression/src/androidTest/java/com/jarvis/voice/voiceexpression/SyntheticVault.kt",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/IdentityLibraryTests.kt",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/PlaybackTests.kt",
+        "voiceIdentity/src/androidTest/java/com/jarvis/voice/voiceidentity/SyntheticVault.kt",
+        "voicePrototype/src/androidTest/java/com/jarvis/voice/voiceprototype/PlaybackTests.kt",
+        "voicePrototype/src/androidTest/java/com/jarvis/voice/voiceprototype/PrototypePrivacyTests.kt",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/PlaybackTests.kt",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/PrototypePrivacyTests.kt",
+        "voiceQuality/src/androidTest/java/com/jarvis/voice/voicequality/QualityABTests.kt"
+      ],
+      "workflows": [
+        ".github/workflows/android.yml",
+        ".github/workflows/pocket-probe.yml",
+        ".github/workflows/voice-expression.yml",
+        ".github/workflows/voice-identity.yml",
+        ".github/workflows/voice-prototype.yml",
+        ".github/workflows/voice-quality.yml"
+      ]
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": null,
+          "commit_date_utc": "2026-10-14T14:39:48+00:00",
+          "main_only_commits": null,
+          "merged_into_main": null,
+          "name": "development/mission-002",
+          "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/tree/d1c0931c4507e9af8f1aa60951947c23f4394b56"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "development/mission-002",
+      "files": [
+        ".gitattributes",
+        ".github/workflows/android.yml",
+        ".gitignore",
+        "README.md",
+        "app/build.gradle.kts",
+        "app/src/androidTest/java/com/jarvis/interfaceapp/StandaloneStartupTest.kt",
+        "app/src/main/AndroidManifest.xml",
+        "app/src/main/java/com/jarvis/interfaceapp/MainActivity.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/domain/HomeState.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/HomeViewModel.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/JarvisApp.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/JarvisTheme.kt",
+        "app/src/main/res/drawable/ic_launcher.xml",
+        "app/src/main/res/values/themes.xml",
+        "app/src/main/res/xml/data_extraction_rules.xml",
+        "app/src/test/java/com/jarvis/interfaceapp/domain/HomeStateTest.kt",
+        "build.gradle.kts",
+        "docs/decisions.md",
+        "docs/mission-002.md",
+        "gradle.properties",
+        "gradle/libs.versions.toml",
+        "gradle/wrapper/gradle-wrapper.jar",
+        "gradle/wrapper/gradle-wrapper.properties",
+        "gradlew",
+        "gradlew.bat",
+        "scripts/check.sh",
+        "settings.gradle.kts"
+      ],
+      "gradle": [
+        {
+          "application_id": [
+            "com.jarvis.interfaceapp"
+          ],
+          "compile_sdk": [
+            "35"
+          ],
+          "min_sdk": [
+            "26"
+          ],
+          "path": "app/build.gradle.kts"
+        },
+        {
+          "application_id": [],
+          "compile_sdk": [],
+          "min_sdk": [],
+          "path": "build.gradle.kts"
+        }
+      ],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "interface",
+      "inspection_branch": "development/mission-002",
+      "interfaces": [
+        {
+          "name": "AvatarSession",
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt"
+        },
+        {
+          "name": "HomeAction",
+          "path": "app/src/main/java/com/jarvis/interfaceapp/domain/HomeState.kt"
+        }
+      ],
+      "ipc_pattern_hits": [],
+      "languages": [
+        ".kt"
+      ],
+      "main_commit": null,
+      "main_files": null,
+      "main_first_parent_history": [],
+      "manifests": [
+        {
+          "internet_declared": false,
+          "network_removal_directive": false,
+          "packages": [
+            ".MainActivity",
+            "android.intent.action.MAIN",
+            "android.intent.category.LAUNCHER"
+          ],
+          "path": "app/src/main/AndroidManifest.xml",
+          "services": []
+        }
+      ],
+      "name": "bubth720/JARVIS-INTERFACE",
+      "observed_commit": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {
+        "app/build.gradle.kts": "72982907ec949b68702bf251f3bc8d85b2ae66a36cf15e089182fa847535b9f8",
+        "app/src/main/AndroidManifest.xml": "d747b274ab56641c6abf5d7b309c8fb6838f06f13de7291406ea18bb4f82b5d6",
+        "app/src/main/java/com/jarvis/interfaceapp/MainActivity.kt": "54798fdaf10765aa95cf597a8bf92c935772526d2575ecb410f10e53c6ccb404",
+        "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+        "app/src/main/java/com/jarvis/interfaceapp/domain/HomeState.kt": "c732a85ad764bb12a82ae959dd0454be462df56c6fc6f434e5964ecbcac25a4b",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/HomeViewModel.kt": "d3afbcb648d4b68eced66c79ad3b1394b1ad91bddaae18125c247afccfa62b4b",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/JarvisApp.kt": "bd37088c9cf6a5e445cd984962e7cd47a46ceb986832f6cd9198ee6a236a3a67",
+        "app/src/main/java/com/jarvis/interfaceapp/ui/JarvisTheme.kt": "86c5a9996532baa04dfef8afbfc8e7933c3f885c70497ef591f0bdf3b8da9d48",
+        "build.gradle.kts": "7af865aea3e2dde810363caa1c3f9eed33324aa47f1c7e281034d4bd69129b3d",
+        "settings.gradle.kts": "0be8db4611e68305288440bfc19b2e822a2ad956aac851b7e22e51c082bdc051"
+      },
+      "tests": [
+        "app/src/androidTest/java/com/jarvis/interfaceapp/StandaloneStartupTest.kt",
+        "app/src/test/java/com/jarvis/interfaceapp/domain/HomeStateTest.kt"
+      ],
+      "workflows": [
+        ".github/workflows/android.yml"
+      ]
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T14:07:35+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE-/tree/a857f5019354ea1c912e6f66bebdcc053c0cb700"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        "README.md"
+      ],
+      "gradle": [],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "interface-placeholder",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [],
+      "main_commit": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-14T14:07:35+00:00",
+          "parents": [],
+          "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+          "subject": "Initial commit"
+        }
+      ],
+      "manifests": [],
+      "name": "bubth720/JARVIS-INTERFACE-",
+      "observed_commit": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {},
+      "tests": [],
+      "workflows": []
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T14:08:55+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/tree/b27df0b84d8f0082d17ca6278549298aaaf97926"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        "README.md"
+      ],
+      "gradle": [],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "nexus",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [],
+      "main_commit": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-14T14:08:55+00:00",
+          "parents": [],
+          "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+          "subject": "Initial commit"
+        }
+      ],
+      "manifests": [],
+      "name": "bubth720/JARVIS-NEXUS",
+      "observed_commit": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {},
+      "tests": [],
+      "workflows": []
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T14:06:33+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/tree/a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        "README.md"
+      ],
+      "gradle": [],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "evolution-candidate",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [],
+      "main_commit": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-14T14:06:33+00:00",
+          "parents": [],
+          "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+          "subject": "Initial commit"
+        }
+      ],
+      "manifests": [],
+      "name": "bubth720/JARVIS-VOLUTION-",
+      "observed_commit": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {},
+      "tests": [],
+      "workflows": []
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-14T14:07:05+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/tree/c9f94ad2fa219a5e09cda92fb451aca606ee1646"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        "README.md"
+      ],
+      "gradle": [],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "services",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [],
+      "main_commit": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-14T14:07:05+00:00",
+          "parents": [],
+          "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+          "subject": "Initial commit"
+        }
+      ],
+      "manifests": [],
+      "name": "bubth720/JARVIS-SERVICES",
+      "observed_commit": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {},
+      "tests": [],
+      "workflows": []
+    },
+    {
+      "access": {
+        "method": "https_git_bare_snapshot",
+        "status": "success",
+        "visibility": "unknown"
+      },
+      "branches": [
+        {
+          "branch_only_commits": 0,
+          "commit_date_utc": "2026-10-15T11:34:06+00:00",
+          "main_only_commits": 0,
+          "merged_into_main": true,
+          "name": "main",
+          "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/tree/e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
+        }
+      ],
+      "captured_at": "2026-10-15T15:35:37+00:00",
+      "ci": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "default_branch": "main",
+      "files": [
+        "README.md"
+      ],
+      "gradle": [],
+      "hardware": {
+        "status": "not_checked"
+      },
+      "id": "unified",
+      "inspection_branch": "main",
+      "interfaces": [],
+      "ipc_pattern_hits": [],
+      "languages": [],
+      "main_commit": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "main_files": [
+        "README.md"
+      ],
+      "main_first_parent_history": [
+        {
+          "date_utc": "2026-10-15T11:34:06+00:00",
+          "parents": [],
+          "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+          "subject": "Initial commit"
+        }
+      ],
+      "manifests": [],
+      "name": "bubth720/JARVIS-UNIFIED",
+      "observed_commit": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "proof_type": "source",
+      "prs": {
+        "reason": "api_unavailable",
+        "status": "unknown"
+      },
+      "scope": "files_and_git_graph_only",
+      "source_sha256": {},
+      "tests": [],
+      "workflows": []
+    }
+  ],
+  "schema_version": 1
+}

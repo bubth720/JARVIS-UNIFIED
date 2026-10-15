@@ -709,6 +709,31 @@
       "repository": "bubth720/JARVIS-UNIFIED",
       "state": "failure",
       "verified_at": null
+    },
+    {
+      "branch": "mission-001f-closure",
+      "checked_at": null,
+      "id": "UNIFIED-001F",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Publication bloquée HTTP 403 ; API PR/CI bloquée par politique réseau.",
+          "ADR en attente d’approbation humaine distincte."
+        ],
+        "decisions": [
+          "Aucun merge, raccordement produit ou changement des dépôts externes."
+        ],
+        "local_base_commit": "d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8",
+        "local_branch": "mission-001f-closure",
+        "local_evidence": "JARVIS_CENTRAL_BILAN_GENERAL.md",
+        "next_action": "Rétablir les accès et publier la branche de reprise sans forçage ; soumettre ADR et missions P0 séparément.",
+        "phase": "completed",
+        "validation_note": "Clôture locale ; résultats dans reports/001f/validation.json. Aucun SHA distant revendiqué."
+      },
+      "observation": null,
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "not_checked",
+      "verified_at": null
     }
   ],
   "schema_version": 1

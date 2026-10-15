@@ -1,0 +1,42 @@
+{
+  "git_read": {
+    "command": [
+      "git",
+      "ls-remote",
+      "--symref",
+      "origin",
+      "HEAD",
+      "refs/heads/*"
+    ],
+    "exit_code": 0,
+    "stdout": "ref: refs/heads/main\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\trefs/heads/main\n",
+    "stderr": "",
+    "observed_at": "2026-10-15T17:46:12+00:00"
+  },
+  "write_probe": {
+    "command": [
+      "git",
+      "push",
+      "--dry-run",
+      "--porcelain",
+      "origin",
+      "refs/heads/mission-001f-closure:refs/heads/mission-001f-closure"
+    ],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "remote: Permission to bubth720/JARVIS-UNIFIED.git denied to bubth720.\nfatal: unable to access 'https://github.com/bubth720/JARVIS-UNIFIED.git/': The requested URL returned error: 403\n",
+    "observed_at": "2026-10-15T17:46:12+00:00"
+  },
+  "actual_push_attempted": false,
+  "pr_created": false,
+  "credential_variables_present": [
+    "GH_TOKEN"
+  ],
+  "network_policy": {
+    "state": "enforced",
+    "github_com": true,
+    "api_github_com": false
+  },
+  "installation_permissions": "not_observable",
+  "cause": "write_refused; exact authorization cause unconfirmed"
+}

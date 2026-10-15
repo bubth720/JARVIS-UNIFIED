@@ -170,3 +170,12 @@ pas une implémentation. Ses notes éditoriales ne réécrivent pas l’ancien s
 Les `proofs.json` portent type/portée/URL/SHA ; les `integrations.json` séparent
 contrat, liaison, intégration testée, appareil et présence main. Les scripts
 existants conservent ces champs supplémentaires lors de leurs actualisations.
+
+## Relevé de clôture001F
+
+Le snapshot source pré-001F est conservé dans evidence/consolidation-before-001f/.
+Les captures Mission003 restent immuables. repositories.json et consolidation
+pointent maintenant vers les sources fraîchement acquises ; la date de ces champs
+ne redéfinit pas la date des anciennes observations API/Git. UNIFIED-001F décrit
+une mission locale terminée, publication bloquée : état de suivi distant
+not_checked, last_verified_commit null, preuve locale dans manual.

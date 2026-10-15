@@ -1,24 +1,24 @@
 {
-  "captured_at": "2026-10-15T15:35:37+00:00",
+  "captured_at": "2026-10-15T17:46:31+00:00",
   "naming_probes": [
     {
       "absence_proven": false,
-      "method": "prior_manual_git_ls_remote_in_this_session",
+      "method": "git_ls_remote",
       "name": "bubth720/JARVIS-CORE",
       "observation": "git_repository_not_found_exit_128",
       "proof_type": "source",
-      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "recorded_at": "2026-10-15T17:46:17+00:00",
       "relationship": "unknown",
       "status": "inaccessible",
       "url": "https://github.com/bubth720/JARVIS-CORE"
     },
     {
       "absence_proven": false,
-      "method": "prior_manual_git_ls_remote_in_this_session",
+      "method": "git_ls_remote",
       "name": "bubth720/JARVIS-EVOLUTION",
       "observation": "git_repository_not_found_exit_128",
       "proof_type": "source",
-      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "recorded_at": "2026-10-15T17:46:17+00:00",
       "relationship": "unknown",
       "status": "inaccessible",
       "url": "https://github.com/bubth720/JARVIS-EVOLUTION"
@@ -69,7 +69,7 @@
           "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/226e2e8cc3eebd479805b89d035eb5c1cbcad540"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -408,7 +408,7 @@
           "url": "https://github.com/bubth720/JARVIS-LLM/tree/1756e29557287550b5cfdffdd911cada2a302db6"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -703,13 +703,13 @@
           "url": "https://github.com/bubth720/JARVIS-VOICE/tree/6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4"
         },
         {
-          "branch_only_commits": 43,
-          "commit_date_utc": "2026-10-15T15:29:37+00:00",
+          "branch_only_commits": 45,
+          "commit_date_utc": "2026-10-15T15:45:20+00:00",
           "main_only_commits": 0,
           "merged_into_main": false,
           "name": "feat/voice-expression-005i",
-          "sha": "56ffebc5b514d683f977ea177a26e2b6a91b4930",
-          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/56ffebc5b514d683f977ea177a26e2b6a91b4930"
+          "sha": "f917ef15ce74a045564ddabdc407ccde4b595ba6",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/tree/f917ef15ce74a045564ddabdc407ccde4b595ba6"
         },
         {
           "branch_only_commits": 37,
@@ -730,7 +730,7 @@
           "url": "https://github.com/bubth720/JARVIS-VOICE/tree/b80b1728c481200b3b0e11c0843f1a268a184fa1"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -844,6 +844,7 @@
         "docs/mission005i/PUBLIC-NEUTRAL-PARITY.json",
         "docs/mission005i/RESULTATS.md",
         "docs/mission005i/TEST-XIAOMI.md",
+        "docs/mission005i/VERIFICATION-TELECHARGEMENT.json",
         "docs/pocket-probe/INSTALLATION.md",
         "docs/pocket-probe/LICENSES.md",
         "docs/pocket-probe/README.md",
@@ -1254,7 +1255,7 @@
         }
       ],
       "name": "bubth720/JARVIS-VOICE",
-      "observed_commit": "56ffebc5b514d683f977ea177a26e2b6a91b4930",
+      "observed_commit": "f917ef15ce74a045564ddabdc407ccde4b595ba6",
       "proof_type": "source",
       "prs": {
         "reason": "api_unavailable",
@@ -1411,7 +1412,7 @@
           "url": "https://github.com/bubth720/JARVIS-INTERFACE/tree/d1c0931c4507e9af8f1aa60951947c23f4394b56"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -1547,7 +1548,7 @@
           "url": "https://github.com/bubth720/JARVIS-INTERFACE-/tree/a857f5019354ea1c912e6f66bebdcc053c0cb700"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -1607,7 +1608,7 @@
           "url": "https://github.com/bubth720/JARVIS-NEXUS/tree/b27df0b84d8f0082d17ca6278549298aaaf97926"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -1667,7 +1668,7 @@
           "url": "https://github.com/bubth720/JARVIS-VOLUTION-/tree/a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -1727,7 +1728,7 @@
           "url": "https://github.com/bubth720/JARVIS-SERVICES/tree/c9f94ad2fa219a5e09cda92fb451aca606ee1646"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"
@@ -1787,7 +1788,7 @@
           "url": "https://github.com/bubth720/JARVIS-UNIFIED/tree/e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
         }
       ],
-      "captured_at": "2026-10-15T15:35:37+00:00",
+      "captured_at": "2026-10-15T17:46:31+00:00",
       "ci": {
         "reason": "api_unavailable",
         "status": "unknown"

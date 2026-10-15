@@ -41,3 +41,24 @@ flowchart LR
   CORE -. cible future .-> INTERFACE[INTERFACE UI autonome]
   EVOLUTION[VOLUTION- candidat] -. correctifs isolés futurs .-> CORE
 ```
+
+## Recontrôle 001F — classifications demandées
+
+Sources fraîches dans [registry/repositories.json](../registry/repositories.json),
+comparaison dans [reports/001f/comparison.json](../reports/001f/comparison.json).
+CORE/LLM/INTERFACE inchangés ; VOICE005I nouveau SHA f917ef1 mais code applicatif
+et manifestes inchangés. Les constats runtime ci-dessus sont maintenus.
+
+| Liaison | Classe actuelle | Preuve / limite |
+|---|---|---|
+| CORE↔LLM | contrat seul | Contrats proposés UNIFIED ; AppGraph appelle toujours son wrapper ; LLM sans service IPC |
+| CORE↔VOICE | contrat seul | Enveloppes proposées + DTO VOICE local ; aucune réception CORE via transport |
+| CORE↔NEXUS | contrat seul générique | Enveloppes UNIFIED, opérations métier non spécifiées ; NEXUS README |
+| CORE↔SERVICES | contrat seul générique | Enveloppes UNIFIED, outils non spécifiés ; SERVICES README |
+| CORE↔INTERFACE | contrat seul générique | UI autonome, AvatarSession local ; aucun appel CORE |
+| Arbitrage lourd/résidence entre processus | contrat seul | resource-lease proposé ; ResourceCoordinator LLM est process-local, aucun broker |
+
+Aucune ligne « intégration testée » ni « essai physique ». Pour la colonne code,
+**aucun pont trouvé dans les refs inspectées** ; pour un fonctionnement réel,
+**non prouvé**. La coinstallation H/I sur émulateur rapportée par VOICE ne démontre
+ni communication inter-APK ni arbitration globale des ressources.

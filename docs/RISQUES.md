@@ -20,3 +20,22 @@ Ces contrôles réduisent les risques ; ils ne constituent ni audit cryptographi
 indépendant, ni preuve de ressemblance vocale, ni protection absolue contre root,
 attaquant du même compte ou panne physique de stockage. La validation applicative
 et matérielle reste dans les missions autorisées des propriétaires de runtime.
+
+## Sévérité de clôture 001F
+
+- **Critique avant migration :** perte de données/voix, changement de signature ou
+  double résidence de modèles. Bloquer transfert/désinstallation sans sauvegarde,
+  restauration et qualification. Aucun de ces changements n’est effectué ici.
+- **Élevée avant IPC :** client usurpé, autorisation textuelle, réponse tardive,
+  mort native non confirmée, contrôle interprocessus absent ; tester UID/certificat,
+  refus fermé, sessions/générations, arrêt effectif avant admission suivante.
+- **Élevée appareil :** RAM/LMK, thermique et batterie non mesurés ici, API24/29
+  incompatibles ; conserver protections et refuser essais non admissibles.
+- **Élevée gouvernance :** publication403 et preuves CI inaccessibles ; bundle
+  vérifié et rapport distinguent local/distant. Ne pas appeler un rapport CI vert
+  une observation Actions de cette mission.
+- **Modérée maintenance :** multiples APK/contrats fermés/noms ambigus/snapshots
+  périmés ; ADR toujours proposée, fraîcheur et mises à jour après PR approuvée.
+
+Aucun nouveau résultat ne valide clonage, expression acoustique, migration privée
+H→I, avatar rendu ou parcours inter-applications. Préserver les échecs historiques.

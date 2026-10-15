@@ -1,3 +1,18 @@
+# Actualisation 001F
+
+Le registre source courant a été relu au 2026-10-15T17:46:31+00:00. Les anciennes preuves
+sont conservées dans [l’archive](../registry/evidence/consolidation-before-001f/proofs.json).
+Le tableau ci-dessous reste la photographie historique de consolidation ; les
+preuves source courantes sont [proofs.json](../registry/proofs.json).
+Le nouveau rapport VOICE au SHA f917ef15ce74a045564ddabdc407ccde4b595ba6
+([source](https://github.com/bubth720/JARVIS-VOICE/blob/f917ef15ce74a045564ddabdc407ccde4b595ba6/docs/mission005i/CI-RESULTATS.json))
+rapporte 31/31 et coinstallation émulateur au workflow1cf87c4, code532c658.
+Date du run non vérifiée par API ; date de consultation ci-dessus, date du
+commit dans repositories.json. Ne pas confondre ces dates.
+Aucune nouvelle CI distante directement attestée. Les neuf accès API ont été
+[retentés](../reports/001f/online/SUMMARY.md) : proxy_forbidden ; aucune PR
+ou liste de runs vide n’est inférée.
+
 # Preuves et limites — Phase A
 
 Le registre [proofs.json](../registry/proofs.json) sépare type, statut, SHA, branche,

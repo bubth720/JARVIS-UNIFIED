@@ -1,4 +1,9 @@
-# Inventaire de consolidation — Phase A
+# Inventaire de consolidation — actualisation 001F
+
+Observation Git fraîche : 2026-10-15T17:46:31+00:00. [Acquisition](../reports/001f/acquisition.json),
+[comparaison](../reports/001f/comparison.json), [snapshot antérieur conservé](../registry/evidence/consolidation-before-001f/repositories.json).
+Les dates ci-dessous ne valent pas vérification directe de CI.
+
 
 Capture de neuf dépôts Git accessibles, lecture des branches et des sources aux
 SHA ci-dessous. Visibilité public/privé inconnue : l’authentification du proxy
@@ -13,7 +18,7 @@ comptent des **fichiers**, parfois fixtures, pas des tests exécutés.
 |---|---|---|---|
 | bubth720/JAVIS-Local-v2 | `main` | `226e2e8cc3eebd479805b89d035eb5c1cbcad540` | 39 / 3 |
 | bubth720/JARVIS-LLM | `mission-003b-resources` | `1756e29557287550b5cfdffdd911cada2a302db6` | 77 / 12 |
-| bubth720/JARVIS-VOICE | `feat/voice-expression-005i` | `56ffebc5b514d683f977ea177a26e2b6a91b4930` | 293 / 40 |
+| bubth720/JARVIS-VOICE | `feat/voice-expression-005i` | `f917ef15ce74a045564ddabdc407ccde4b595ba6` | 294 / 40 |
 | bubth720/JARVIS-INTERFACE | `development/mission-002` | `d1c0931c4507e9af8f1aa60951947c23f4394b56` | 28 / 2 |
 | bubth720/JARVIS-INTERFACE- | `main` | `a857f5019354ea1c912e6f66bebdcc053c0cb700` | 1 / 0 |
 | bubth720/JARVIS-NEXUS | `main` | `b27df0b84d8f0082d17ca6278549298aaaf97926` | 1 / 0 |
@@ -71,7 +76,7 @@ Git datés, pas à une synchronisation en temps réel.
 |---|---|---|
 | Routage et historique | CORE JarvisCore/SQLite | CORE, séparé de l’inférence |
 | Inférence | CORE LlamaLocalEngine ; autre APK LLM LlamaBackend | LLM seul après adaptateur testé, pas deux résidences |
-| Mémoire personnelle | CORE memories et dialogue Ajouter /remember | CORE, confirmation explicite commune encore à réaliser |
+| Mémoire personnelle | CORE memories et dialogue Ajouter /remember | CORE décide/confirmation ; NEXUS stockage cible, aucune migration réalisée |
 | Catalogue éditorial | LLM catalogue SQLite | Couche connaissance distincte du moteur, exposition sous orchestration CORE |
 | Documents/index | CORE PdfImporter/TextChunker/RagEngine | NEXUS cible, dépôt encore vide de code ; migration future |
 | Capture/STT | CORE WavRecorder/WhisperLocalEngine | Capacité VOICE cible, orchestrée par CORE ; pas déplacée ici |
@@ -86,3 +91,17 @@ GGUF ; VOICE profils liés au pack exact. Ces incompatibilités interdisent une
 substitution non testée. SQLite CORE corrigée V1→V2 conserve les données, sans
 export global Android ; backup UNIFIED reste fictif. Archives vocales JVIENC01
 sont un autre format et ne rendent pas JVBK interopérable.
+
+## Changement 001F réellement observé
+
+VOICE005I passe de56ffebc àf917ef1. Les six fichiers modifiés concernent
+workflow/docs ; les empreintes des sources applicatives sont identiques.
+1cf87c4 réinstalle l’APK uniquement sur émulateur après le nettoyage Gradle,
+avant vérification de coinstallation H/I. Le rapport versionné cite
+[run38762084531](https://github.com/bubth720/JARVIS-VOICE/actions/runs/38762084531),
+31 tests réussis sans saut et sentinelle privée **synthétique** H conservée.
+Ce run n’a pas été consulté via API ici. Pas de preuve nouvelle sur Xiaomi
+ou profil personnel, ni de communication CORE↔VOICE. Les huit autres têtes
+sélectionnées, branches, fichiers et empreintes sont inchangés depuis l’audit.
+Les sondes CORE/EVOLUTION ont été répétées : erreur Git128 « Repository not found »,
+sans code HTTP fiable ni preuve d’inexistence (reports/001f/naming-probes.json).

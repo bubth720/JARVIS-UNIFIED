@@ -139,6 +139,27 @@
       "present_in_main": "no",
       "risk": "Contract types and successful unit tests do not implement IPC or prove client identity.",
       "to": "core"
+    },
+    {
+      "code_link": "absent_in_inspected_sources",
+      "contract": "defined_versioned_proposal",
+      "device_test": "not_executed",
+      "evidence": [
+        "registry/repositories.json",
+        "docs/DECISIONS/REVUE-ADR-001F.md"
+      ],
+      "evidence_repository_ids": [
+        "core",
+        "llm",
+        "voice"
+      ],
+      "from": "core",
+      "id": "resources-interprocess",
+      "integration_test": "not_executed",
+      "next_action": "Specify a single runtime arbiter in a separately authorized mission; current LLM coordinator is process-local.",
+      "present_in_main": "no",
+      "risk": "No interprocess admission, death recovery or global single-resident-model invariant implemented; proposed lease is not a RAM reservation.",
+      "to": "llm"
     }
   ],
   "schema_version": 1,

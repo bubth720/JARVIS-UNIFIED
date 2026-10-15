@@ -6,6 +6,17 @@ L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-U
 **proposée — en attente de validation utilisateur**. Aucun raccordement applicatif
 n’est développé pendant cette consolidation.
 
+## Clôture 001F
+
+**Terminée localement, publication bloquée HTTP403.** Branche de reprise
+`mission-001f-closure`, issue de d74730a ; anciennes branches inchangées.
+[Bilan général CENTRAL](JARVIS_CENTRAL_BILAN_GENERAL.md),
+[décision utilisateur non approuvée](docs/DECISIONS/REVUE-ADR-001F.md),
+[preuves et tests frais](reports/001f/README.md),
+[reprise publication et récupération](docs/RUNBOOK.md).
+VOICE005I observée à f917ef1 ; code applicatif inchangé, nouveaux rapports CI
+versionnés de coinstallation émulateur. Pas de qualification Xiaomi nouvelle.
+
 ## Qui fait quoi — actuel et cible
 
 | Module / dépôt exact | Code actuel inspecté | Responsabilité cible proposée |
@@ -15,7 +26,7 @@ n’est développé pendant cette consolidation.
 | VOICE — bubth720/JARVIS-VOICE | Prototypes neuronaux autonomes, profils/identités/archives, DTO expression005I | Capacités vocales démontrées, profil/pack exact et consentement ; capture/STT à migrer explicitement depuis CORE |
 | INTERFACE — bubth720/JARVIS-INTERFACE | UI Compose autonome ; contrat avatar sans rendu | UI/événements et avatar à qualifier, pas un moteur ni CORE |
 | bubth720/JARVIS-INTERFACE- | README seul, dépôt distinct | Rôle/relation avec INTERFACE inconnus, conservé |
-| NEXUS — bubth720/JARVIS-NEXUS | README seul ; documents actuellement dans CORE | Documents/index/recherche futurs, sans déplacement ici |
+| NEXUS — bubth720/JARVIS-NEXUS | README seul ; documents actuellement dans CORE | Documents, Wikipedia/Kiwix, index et stockage mémoire futurs ; CORE garde les décisions, aucune migration ici |
 | EVOLUTION candidat — bubth720/JARVIS-VOLUTION- | README seul ; alias non confirmé | Diagnostic et correctifs isolés après revue ; aucun auto-déploiement |
 | SERVICES — bubth720/JARVIS-SERVICES | README seul | Outils supplémentaires sous permissions |
 | UNIFIED — bubth720/JARVIS-UNIFIED | Registre, backup fictif et consolidation locaux ; main distant README initial | Source de vérité technique sans dépendance runtime pour les applications |

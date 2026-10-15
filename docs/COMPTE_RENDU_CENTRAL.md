@@ -1,3 +1,6 @@
+> Rapport historique de consolidation61b30fc/d74730a, conservé. Pour la clôture
+> et les preuves fraîches, consulter [bilan général001F](../JARVIS_CENTRAL_BILAN_GENERAL.md).
+
 # Compte rendu central — Consolidation JARVIS
 
 Module : JARVIS-UNIFIED. Mission :001 — Consolidation (nouveau cahier daté15/10/2026).

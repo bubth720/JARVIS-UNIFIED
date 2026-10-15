@@ -1,0 +1,35 @@
+test_abrupt_process_exit_after_activation (test_backup.BackupTests.test_abrupt_process_exit_after_activation) ... ok
+test_authenticated_malformed_metadata_refused (test_backup.BackupTests.test_authenticated_malformed_metadata_refused) ... ok
+test_bad_hash_with_valid_aead (test_backup.BackupTests.test_bad_hash_with_valid_aead) ... ok
+test_ciphertext_randomized (test_backup.BackupTests.test_ciphertext_randomized) ... ok
+test_corrupt_active_generation_not_silently_replaced (test_backup.BackupTests.test_corrupt_active_generation_not_silently_replaced) ... ok
+test_corrupt_and_future_sqlite (test_backup.BackupTests.test_corrupt_and_future_sqlite) ... ok
+test_crashes_all_boundaries_and_recovery_in_fresh_interpreter (test_backup.BackupTests.test_crashes_all_boundaries_and_recovery_in_fresh_interpreter) ... ok
+test_disk_full_after_staging_preserves_current_generation (test_backup.BackupTests.test_disk_full_after_staging_preserves_current_generation) ... ok
+test_duplicate_json_keys (test_backup.BackupTests.test_duplicate_json_keys) ... ok
+test_encrypted_round_trip_source_unchanged (test_backup.BackupTests.test_encrypted_round_trip_source_unchanged) ... ok
+test_existing_archive_never_overwritten (test_backup.BackupTests.test_existing_archive_never_overwritten) ... ok
+test_failed_pointer_write_and_orphan_control_recovery (test_backup.BackupTests.test_failed_pointer_write_and_orphan_control_recovery) ... ok
+test_first_restore_crash_back_to_no_active (test_backup.BackupTests.test_first_restore_crash_back_to_no_active) ... ok
+test_future_format (test_backup.BackupTests.test_future_format) ... ok
+test_idempotence_and_explicit_conflict (test_backup.BackupTests.test_idempotence_and_explicit_conflict) ... ok
+test_incompatible_voice_pack (test_backup.BackupTests.test_incompatible_voice_pack) ... ok
+test_invalid_consent_does_not_export (test_backup.BackupTests.test_invalid_consent_does_not_export) ... ok
+test_live_wal_snapshot_committed_not_uncommitted (test_backup.BackupTests.test_live_wal_snapshot_committed_not_uncommitted) ... ok
+test_memory_inactive_until_exact_local_confirmation (test_backup.BackupTests.test_memory_inactive_until_exact_local_confirmation) ... ok
+test_mismatched_confirmation_no_writes (test_backup.BackupTests.test_mismatched_confirmation_no_writes) ... ok
+test_oversized_object_and_envelope (test_backup.BackupTests.test_oversized_object_and_envelope) ... ok
+test_short_password (test_backup.BackupTests.test_short_password) ... ok
+test_symlink_and_unmanaged_store_refused (test_backup.BackupTests.test_symlink_and_unmanaged_store_refused) ... ok
+test_tampered_header_and_ciphertext (test_backup.BackupTests.test_tampered_header_and_ciphertext) ... ok
+test_traversal_duplicate_unknown_paths (test_backup.BackupTests.test_traversal_duplicate_unknown_paths) ... ok
+test_truncated_archive (test_backup.BackupTests.test_truncated_archive) ... ok
+test_two_processes_restore_are_serialized (test_backup.BackupTests.test_two_processes_restore_are_serialized) ... ok
+test_unconfirmed_memories_absent_including_free_pages (test_backup.BackupTests.test_unconfirmed_memories_absent_including_free_pages) ... ok
+test_unknown_engine (test_backup.BackupTests.test_unknown_engine) ... ok
+test_wrong_password_preserves_existing_store (test_backup.BackupTests.test_wrong_password_preserves_existing_store) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 12.197s
+
+OK

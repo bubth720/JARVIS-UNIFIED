@@ -1,3 +1,12 @@
+# Actualisation de clôture001F
+
+Inventaire source courant : [repositories.json](repositories.json), fraîcheur/date dans
+[le bilan CENTRAL](../JARVIS_CENTRAL_BILAN_GENERAL.md). Les captures API/Git de
+Mission003 et leurs champs manuels restent historiques ; elles ne sont pas remplacées
+par cette inspection source. Une mission locale UNIFIED-001F a été ajoutée avec
+observation distante not_checked, aucun SHA GitHub inventé. Le SUMMARY historique
+conserve sa génération ; le bilan001F est le point d’entrée actuel.
+
 # Registre central JARVIS
 
 Commencer par [SUMMARY.md](SUMMARY.md) pour lire le suivi des **neuf dépôts**.

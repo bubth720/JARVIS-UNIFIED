@@ -1,0 +1,15 @@
+{
+  "bundle": "/workspace/JARVIS-UNIFIED/.audit-cache/001f/safety.bundle",
+  "file_count": 89,
+  "initial_clean": true,
+  "preserved_refs": {
+    "audit/mission-001": "004b89d1f86135962e452fb644b489f69fc177d1",
+    "mission-001-architecture-unified": "d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8",
+    "mission-002-backup": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+    "mission-003-central-registry": "f7b7a5ad96527bc43bd5349b97b7834667da9f03",
+    "origin/main": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
+  },
+  "remote": "https://github.com/bubth720/JARVIS-UNIFIED.git",
+  "restore_verified": true,
+  "sha256": "cae1bb45c87746f695d3db037ea1d2029bd2518737582b5f60319f94e43c4713"
+}
