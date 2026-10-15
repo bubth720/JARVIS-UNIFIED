@@ -1,3 +1,11 @@
+> **Rapport historique de clôture001F, conservé.** Depuis ce bilan, l’utilisateur
+> a approuvé l’orientation ADR-001 avec précisions le15 octobre2026. Voir
+> [ADR actuelle](docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md) et
+> [validation officielle](docs/DECISIONS/VALIDATION-UTILISATEUR-ADR-001-2026-10-15.md).
+> Les anciens statuts non approuvés ci-dessous décrivent la clôture001F ;
+> aucun résultat de tests, inventaire GitHub ou raccordement n’est actualisé par
+> cette seule décision architecturale.
+
 # JARVIS-CENTRAL — bilan général Mission001F
 
 **Terminée localement, publication bloquée. ADR proposée, non approuvée.**

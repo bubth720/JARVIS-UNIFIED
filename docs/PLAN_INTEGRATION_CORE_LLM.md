@@ -9,7 +9,9 @@ contrats proposés1.0.0 ; [ADR-001](DECISIONS/ADR-001-CORE-LLM-UNIFIED.md).
 2. Qualifier LLM003B : premier plan, diagnostic passif puis chargement naturel
    admis, PSS/RSS/thermique/batterie et Arrêt/déchargement. Pas de stress forcé,
    budget diminué ou PLEINE PUISSANCE pour faire passer l’essai.
-3. Faire approuver ADR, API supportées et transport local. Choisir explicitement
+3. L’orientation ADR est approuvée avec précisions le15 octobre2026. Faire
+   approuver séparément API supportées, transport, signatures et arbitrage avant
+   toute mise en œuvre. Choisir explicitement
    un adaptateur intraprocessus ou IPC ; ne pas additionner arbitrairement deux
    APK. Client authentifié par UID/certificat/permission, service non exporté par
    défaut, toute exposition avec contrôle d’identité et quotas testés.

@@ -1,3 +1,11 @@
+> **Revue historique antérieure à la décision.** L’orientation option3 a été
+> approuvée avec précisions le15 octobre2026 : [ADR actuelle](ADR-001-CORE-LLM-UNIFIED.md)
+> et [validation explicite](VALIDATION-UTILISATEUR-ADR-001-2026-10-15.md).
+> Le texte initial ci-dessous est conservé comme trace, sans nouvelle demande
+> d’approbation de l’orientation. Ses détails techniques restent des propositions.
+> La règle historique d’un modèle unique n’interdit pas une future multi-résidence
+> sur matériel qualifié et arbitrage vérifié ; aucune activation autorisée ici.
+
 # Décision utilisateur — revue 001F
 
 **PROPOSED / AWAITING USER APPROVAL. Aucun accord enregistré.**

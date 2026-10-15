@@ -3,15 +3,28 @@
 **UNIFIED coordonne les preuves, registres, contrats et plans. Ce dépôt n’est ni
 un runtime Android, ni un troisième moteur LLM, ni une application doublon.**
 L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md),
-**proposée — en attente de validation utilisateur**. Aucun raccordement applicatif
+**APPROUVÉE AVEC PRÉCISIONS le 15 octobre 2026 — orientation uniquement**. Aucun raccordement applicatif
 n’est développé pendant cette consolidation.
 
-## Clôture 001F
+## Décision officielle ADR-001
+
+Option3 approuvée : CORE orchestrateur, architecture modulaire hybride et
+adaptateurs interchangeables. Applications autonomes conservées initialement ;
+aucun nombre d’APK imposé. Pour le pilote Android, privilégier un travail lourd ;
+multi-résidence seulement sur matériel qualifié et arbitrage vérifié, sans second
+chargement non maîtrisé. Contrats v1 inchangés et toujours proposés.
+[Validation utilisateur et réserves](docs/DECISIONS/VALIDATION-UTILISATEUR-ADR-001-2026-10-15.md).
+Aucun déploiement, raccordement ni migration autorisé par cette approbation.
+[Vérifications de cette consignation](docs/DECISIONS/VERIFICATION-APPROBATION-ADR-001.md) :
+validateurs réussis ; 79/80 tests réussis, un échec préexistant du compteur
+de missions documenté, sans modification de code ou de test.
+
+## Clôture 001F — photographie historique
 
 **Terminée localement, publication bloquée HTTP403.** Branche de reprise
 `mission-001f-closure`, issue de d74730a ; anciennes branches inchangées.
 [Bilan général CENTRAL](JARVIS_CENTRAL_BILAN_GENERAL.md),
-[décision utilisateur non approuvée](docs/DECISIONS/REVUE-ADR-001F.md),
+[revue préalable conservée](docs/DECISIONS/REVUE-ADR-001F.md),
 [preuves et tests frais](reports/001f/README.md),
 [reprise publication et récupération](docs/RUNBOOK.md).
 VOICE005I observée à f917ef1 ; code applicatif inchangé, nouveaux rapports CI
@@ -19,7 +32,7 @@ versionnés de coinstallation émulateur. Pas de qualification Xiaomi nouvelle.
 
 ## Qui fait quoi — actuel et cible
 
-| Module / dépôt exact | Code actuel inspecté | Responsabilité cible proposée |
+| Module / dépôt exact | Code actuel inspecté | Responsabilité cible approuvée — déploiement non autorisé |
 |---|---|---|
 | CORE — bubth720/JAVIS-Local-v2 | Monolithe : commandes/routage, SQLite, PDF/RAG, wrapper LLM, Whisper, TTS et UI | Orchestration, sessions, permissions et souvenirs confirmés ; conserver les fonctions jusqu’au remplacement testé |
 | LLM — bubth720/JARVIS-LLM | Application autonome, backend llama.cpp/JNI, import GGUF vérifié, protections et catalogue | Un seul moteur d’inférence interchangeable ; pas la mémoire personnelle ni toute l’orchestration |
@@ -84,8 +97,9 @@ Le workflow [validate-unified](.github/workflows/validate-unified.yml) prépare 
 mêmes contrôles en PR ; audit live uniquement manuel, lecture seule. Il n’a pas
 été exécuté sur GitHub dans cette session. Aucun APK ou modèle construit ici.
 
-Prochaine action : faire valider l’ADR, puis stabiliser CORE et qualifier LLM003B
-sur appareils avant **une mission distincte autorisée d’adaptateur local**.
+Prochaine action : rétablir la publication documentaire par un accès autorisé,
+puis soumettre séparément les propositions techniques ouvertes et les missions
+de stabilisation/qualification. Aucun adaptateur n’est autorisé ici.
 TABLET0.6B Q4_K_M et MOBILE1.7B sont des références initiales ; mini-PC à qualifier.
 Ne pas supprimer une fonction, une donnée ou une ancienne installation pour
 simplifier la transition. GitHub est utilisé pour le développement, jamais comme
@@ -102,4 +116,4 @@ réutilisés ; aucun de leurs résultats anciens n’est réécrit comme résult
 [BACKUP_FORMAT.md](BACKUP_FORMAT.md), [RESTORE_PLAN.md](RESTORE_PLAN.md),
 [COMPATIBILITY.md](COMPATIBILITY.md) et rapports002/003 restent historiques.
 L’architecture ancienne envisageant un assemblage Android dans UNIFIED est
-**supplantée comme proposition cible par la nouvelle ADR**, sans effacer l’historique.
+**supplantée comme orientation par l’ADR approuvée avec précisions**, sans effacer l’historique.

@@ -1,6 +1,7 @@
 # Feuille de route 001F — missions proposées P0 à P3
 
-Aucune mission ci-dessous n’est commencée par cette clôture. Chaque mission
+Seule la consignation documentaire de l’approbation ADR est réalisée ; aucune
+mission de développement ci-dessous n’est commencée. Chaque mission
 nécessite une autorisation distincte dans son dépôt propriétaire. Branche dédiée,
 aucune fusion principale ni déploiement sans accord. Commencer par enregistrer le
 SHA courant et archiver les preuves ; les têtes citées ici sont datées dans
@@ -9,7 +10,7 @@ SHA courant et archiver les preuves ; les têtes citées ici sont datées dans
 | Priorité / mission | Propriétaire / branche proposée | Dépendances et fichiers prévus | Acceptation testable / risque / validation humaine |
 |---|---|---|---|
 | P0-PUBLISH | UNIFIED / mission-001f-closure existante | Droits rétablis ; registre et rapports existants | Push sans force, SHA/fichiers identiques, PR brouillon ; main inchangée. Risque : droits/confidentialité ; humain rétablit accès et relit PR |
-| P0-ADR | CENTRAL + UNIFIED / decision/adr-001 | Revue 001F ; ADR et note de décision | Réponse explicite et objections enregistrées ; aucun transport adopté implicitement. Risque : confondre rôle logique et nombre d’APK ; humain décide |
+| P0-ADR — orientation clôturée | CENTRAL + UNIFIED / docs/adr-001-approved-2026-10-15 | Validation utilisateur USER-ADR-001-2026-10-15 consignée | Option3 approuvée avec précisions ; transport/signatures/APK/arbitre/migrations/performance restent ouverts. Aucun code ou déploiement autorisé |
 | P0-CORE | JAVIS-Local-v2 / stabilization/current-core | Autorisation dédiée, tête226e2e8 à revérifier ; AppGraph/JarvisCore, LocalDatabase, WavRecorder et tests associés | Tests commandes/heure, SQLite V1→V2+échec, PDF/RAG, capture/lifecycle et annulation ; restauration fictive démontrée. Risques : perte/race/legacy mémoire ; humain valide symptômes et essais prudents |
 | P0-LLM | JARVIS-LLM / qualification/003b-devices | Appareils et modèles déjà locaux, code003B1756e29 à revérifier ; ESSAIS_MEMOIRE_003B.md, rapports synthétiques | Redmi/POCO : mesures froid/chaud/repos, PSS, capteurs, arrêt effectif ; si admission refusée conserver refus, pas de benchmark forcé. Risque : RAM/chauffe ; accord humain pour essai et toute modification de seuil |
 | P0-VOICE | JARVIS-VOICE / qualification/005i-xiaomi | 005H et sauvegarde privée conservées, pack exact local ; TEST-XIAOMI et rapport sans audio personnel | Restauration B locale, même UUID/SHA, écoute A/B, Arrêt, mode avion et métriques disponibles ; conserver H si échec. Risques : voix/données/signature ; propriétaire écoute et confirme, aucune archive au cloud |
