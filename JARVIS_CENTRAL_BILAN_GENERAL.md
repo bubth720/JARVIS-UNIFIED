@@ -148,6 +148,9 @@ et plateforme : [validation.json](reports/001f/validation.json) et ses trois log
 Cryptography existante utilisée pour la sauvegarde fictive ; aucun export réel.
 Le validateur vérifie inventaire/contrats/exemples/liens/JSON et jetons usuels ;
 la liste des contrôles documentaires finaux est dans reports/001f/checks.json.
+Le contrôle whitespace complet signale uniquement trois sauts Markdown intentionnels
+(deux espaces, lignes4–6) du cahier utilisateur conservé à l’identique ; hors ce
+fichier il réussit. Cette exception documentaire ne concerne aucun test.
 
 Audit API : sortie2, neuf refus documentés, **audit incomplet**. Pas un échec des80
 tests ni une CI verte. Aucun gradle/adb/kotlinc dans PATH, aucun appareil attaché

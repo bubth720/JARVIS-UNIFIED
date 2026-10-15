@@ -16,7 +16,10 @@
     "delivery_secret_pattern_matches": 0,
     "validator_passed": true,
     "registry_valid_9_repositories_16_missions": true,
-    "git_diff_check_passed": true
+    "tracked_changes_diff_check_passed_before_staging": true,
+    "full_diff_check_exit_code": 2,
+    "full_diff_check_exception": "Three intentional Markdown hard line breaks (two trailing spaces), lines4\u20136 in the exact user-supplied specification. No other whitespace warnings.",
+    "full_diff_check_excluding_unchanged_user_spec_passed": true
   },
   "scan_limit": "Known credential patterns and PEM private keys; no claim of exhaustive secret detection."
 }
