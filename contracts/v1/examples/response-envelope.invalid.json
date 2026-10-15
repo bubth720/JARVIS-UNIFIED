@@ -1,0 +1,23 @@
+{
+  "protocol_version": "1.0",
+  "contract_version": "1.0.0",
+  "correlation_id": "00000000-0000-4000-8000-000000000001",
+  "status": "success",
+  "result": null,
+  "error": {
+    "code": "MODULE_ABSENT",
+    "retryable": false
+  },
+  "provenance": {
+    "module_id": "llm",
+    "source_commit": null,
+    "engine_id": "unavailable",
+    "model_sha256": null,
+    "verification": "fixture"
+  },
+  "execution": {
+    "duration_ms": 0,
+    "native_stopped": null,
+    "data_logged": false
+  }
+}

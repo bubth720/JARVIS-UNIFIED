@@ -14,3 +14,4 @@ backup-work/
 *.safetensors
 *.bin
 .backup-private/
+.audit-cache/

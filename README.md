@@ -1,52 +1,94 @@
-# JARVIS-UNIFIED
+# JARVIS-UNIFIED — référence technique centrale
 
-Préparation d'une application Android JARVIS unique, modulaire et entièrement
-hors ligne. **Mission 002 : prototype fictif de sauvegarde/restauration terminé.**
-Aucune application fusionnée, aucun moteur intégré ni APK UNIFIED à cette étape.
+**UNIFIED coordonne les preuves, registres, contrats et plans. Ce dépôt n’est ni
+un runtime Android, ni un troisième moteur LLM, ni une application doublon.**
+L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md),
+**proposée — en attente de validation utilisateur**. Aucun raccordement applicatif
+n’est développé pendant cette consolidation.
 
-## Mission 002 — préserver les données
+## Qui fait quoi — actuel et cible
 
-- [BACKUP_FORMAT.md](BACKUP_FORMAT.md) : inventaire CORE/LLM/VOICE et archive versionnée AES-GCM/scrypt.
-- [RESTORE_PLAN.md](RESTORE_PLAN.md) : usage du prototype, restauration et récupération après erreur.
-- [COMPATIBILITY.md](COMPATIBILITY.md) : moteurs, profils et futur transfert Android/mini-PC.
-- [MISSION_002_REPORT.md](MISSION_002_REPORT.md) : preuves, résultats et limites.
-- [Prototype](backup_prototype/README.md) et [ressources](resources/README.md) : données fictives et métadonnées uniquement.
+| Module / dépôt exact | Code actuel inspecté | Responsabilité cible proposée |
+|---|---|---|
+| CORE — bubth720/JAVIS-Local-v2 | Monolithe : commandes/routage, SQLite, PDF/RAG, wrapper LLM, Whisper, TTS et UI | Orchestration, sessions, permissions et souvenirs confirmés ; conserver les fonctions jusqu’au remplacement testé |
+| LLM — bubth720/JARVIS-LLM | Application autonome, backend llama.cpp/JNI, import GGUF vérifié, protections et catalogue | Un seul moteur d’inférence interchangeable ; pas la mémoire personnelle ni toute l’orchestration |
+| VOICE — bubth720/JARVIS-VOICE | Prototypes neuronaux autonomes, profils/identités/archives, DTO expression005I | Capacités vocales démontrées, profil/pack exact et consentement ; capture/STT à migrer explicitement depuis CORE |
+| INTERFACE — bubth720/JARVIS-INTERFACE | UI Compose autonome ; contrat avatar sans rendu | UI/événements et avatar à qualifier, pas un moteur ni CORE |
+| bubth720/JARVIS-INTERFACE- | README seul, dépôt distinct | Rôle/relation avec INTERFACE inconnus, conservé |
+| NEXUS — bubth720/JARVIS-NEXUS | README seul ; documents actuellement dans CORE | Documents/index/recherche futurs, sans déplacement ici |
+| EVOLUTION candidat — bubth720/JARVIS-VOLUTION- | README seul ; alias non confirmé | Diagnostic et correctifs isolés après revue ; aucun auto-déploiement |
+| SERVICES — bubth720/JARVIS-SERVICES | README seul | Outils supplémentaires sous permissions |
+| UNIFIED — bubth720/JARVIS-UNIFIED | Registre, backup fictif et consolidation locaux ; main distant README initial | Source de vérité technique sans dépendance runtime pour les applications |
 
-Depuis ce checkout, avec Python 3.12 et cryptography 50.0.0 :
+JARVIS-CENTRAL dans ChatGPT est une coordination humaine ; une conversation commune
+n’est ni une mémoire technique exhaustive ni une synchronisation GitHub.
+
+## Ce qui est fusionné et ce qui communique
+
+- **Merge Git :** les corrections heure/SQLite et documentation CORE sont dans
+  son main226e2e8. LLM main917e335 est documentaire, ses branches développées non
+  fusionnées ; VOICE mainb80b172 reste README, branches005D/H/I hors main.
+  INTERFACE n’annonce pas de main, seulement development/mission-002.
+- **Communications :** CORE appelle son propre LlamaLocalEngine, pas l’APK LLM.
+  Aucun pont runtime inter-APK CORE↔LLM/VOICE/NEXUS/SERVICES/INTERFACE n’est démontré
+  par les sources inspectées. DTO CORE→VOICE005I et AvatarSession sont des
+  frontières locales, pas des connexions. Les bibliothèques VOICE internes sont
+  bien réutilisées dans ses applications autonomes.
+- **Tests :** les tests locaux UNIFIED sont réellement exécutés et détaillés dans
+  la [synthèse centrale](docs/COMPTE_RENDU_CENTRAL.md). Les tests Android historiques
+  sont séparés des résultats de cette mission. API GitHub/CI actuelle bloquées
+  par tunnel proxy403 ; aucune nouvelle CI distante verte annoncée.
+- **Appareils :** aucune qualification physique réalisée ici. Pas de promesse de
+  clonage/naturel/émotion, d’avatar2.5D rendu ou de compatibilité API24→LLM29.
+
+La [matrice](docs/MATRICE_INTEGRATION.md) donne séparément contrat, code, test,
+appareil et main pour chaque lien. Aucun pourcentage d’avancement inventé.
+
+## Consulter les preuves et contrats
+
+- [Inventaire daté](docs/INVENTAIRE.md), [preuves GitHub immuables](docs/PROUVES.md),
+  [registre de dépôts](registry/repositories.json), [modules](registry/modules.json)
+  et [liens machine](registry/integrations.json).
+- [Contrats v1 et sémantique](contracts/v1/SEMANTICS.md), schémas/exemples fermés,
+  indépendants du transport ; aucun IPC interprocessus implémenté.
+- [Plan CORE↔LLM soumis à autorisation](docs/PLAN_INTEGRATION_CORE_LLM.md),
+  [roadmap](docs/ROADMAP.md), [risques](docs/RISQUES.md), [runbook](docs/RUNBOOK.md).
+- [Compte rendu directement réutilisable dans CENTRAL](docs/COMPTE_RENDU_CENTRAL.md).
+
+## Vérifier localement
+
+Python3.12 ; nouveaux audit/contrats/registre en bibliothèque standard :
 
 ```sh
-python3 -m unittest discover -s backup_prototype/tests -v
-python3 -m backup_prototype.demo
+python3 scripts/validate_unified.py
+python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s registry/tests -v
+python3 scripts/audit_repos.py --offline --output-dir reports/offline
 ```
 
-30 tests passent : intégrité, mémoire autorisée, conflits, erreurs IO et
-récupération après interruption. Le prototype n'est pas destiné aux données réelles
-ni aux poids volumineux. Aucun téléchargement automatique ou secret dans Git.
-Les profils vocaux fictifs ne produisent aucun son.
+La fixture offline est explicitement synthétique, pas un état GitHub réel.
+La régression de sauvegarde Mission002 utilise sa dépendance existante
+cryptography50.0.0 : `python3 -m unittest discover -s backup_prototype/tests -v`.
+Le workflow [validate-unified](.github/workflows/validate-unified.yml) prépare les
+mêmes contrôles en PR ; audit live uniquement manuel, lecture seule. Il n’a pas
+été exécuté sur GitHub dans cette session. Aucun APK ou modèle construit ici.
 
-## Mission 001 — audit préservé
+Prochaine action : faire valider l’ADR, puis stabiliser CORE et qualifier LLM003B
+sur appareils avant **une mission distincte autorisée d’adaptateur local**.
+TABLET0.6B Q4_K_M et MOBILE1.7B sont des références initiales ; mini-PC à qualifier.
+Ne pas supprimer une fonction, une donnée ou une ancienne installation pour
+simplifier la transition. GitHub est utilisé pour le développement, jamais comme
+service obligatoire à l’exécution hors ligne.
 
-Les cinq documents sont conservés sur `audit/mission-001` dans le commit `004b89d`.
-Mission002 se trouve sur la branche `mission-002-backup`, sans fusion dans main.
+## Travaux antérieurs préservés
 
-- [AUDIT.md](AUDIT.md) : branches/SHAs, fonctions, preuves et limites.
-- [ARCHITECTURE.md](ARCHITECTURE.md) : CORE/LLM/VOICE, contrats et mémoire confirmée.
-- [MIGRATION_PLAN.md](MIGRATION_PLAN.md) : missions proposées et retours arrière.
-- [TEST_PLAN.md](TEST_PLAN.md) : vérifications Mission001 et qualification future.
-
-CORE reprendrait orchestration, mémoire, documents et Whisper de
-[bubth720/JAVIS-Local-v2](https://github.com/bubth720/JAVIS-Local-v2).
-LLM reprendrait le moteur unique et les protections de
-[bubth720/JARVIS-LLM](https://github.com/bubth720/JARVIS-LLM), branche 003B.
-VOICE préparerait la synthèse neuronale et les profils personnels de
-[bubth720/JARVIS-VOICE](https://github.com/bubth720/JARVIS-VOICE), branche Android
-005D/E/F/G. Aucun TTS Android générique ne remplace la voix personnalisée.
-La ressemblance personnelle et le naturel restent à qualifier sur appareil.
-
-Références initiales évolutives : TABLET Redmi Pad SE / Qwen3 0,6B Q4_K_M ;
-MOBILE POCO X8 Pro / Qwen3 1,7B Q4_K_M ; CENTRAL mini-PC/modèles à qualifier.
-Aucun des trois dépôts sources n'a été modifié ou supprimé. Aucune dépendance
-cloud obligatoire. Aucune mission suivante n'est commencée.
-
-Travailler dans le checkout existant, sans worktree supplémentaire. Les données,
-audios, profils personnels et clés restent hors Git et hors du présent prototype.
+Base locale f7b7a5a sur mission-003-central-registry, précédée de004b89d et55680bc.
+Le nouveau cahier est conservé [ici](docs/CAHIER_DES_CHARGES_CONSOLIDATION.md).
+Le registre historique, ses champs manuels/snapshots et le backup fictif sont
+réutilisés ; aucun de leurs résultats anciens n’est réécrit comme résultat actuel.
+[AUDIT.md](AUDIT.md), [ARCHITECTURE.md](ARCHITECTURE.md),
+[MIGRATION_PLAN.md](MIGRATION_PLAN.md), [TEST_PLAN.md](TEST_PLAN.md),
+[BACKUP_FORMAT.md](BACKUP_FORMAT.md), [RESTORE_PLAN.md](RESTORE_PLAN.md),
+[COMPATIBILITY.md](COMPATIBILITY.md) et rapports002/003 restent historiques.
+L’architecture ancienne envisageant un assemblage Android dans UNIFIED est
+**supplantée comme proposition cible par la nouvelle ADR**, sans effacer l’historique.

@@ -97,3 +97,14 @@ les branches. Le script ne lance jamais de commandes sur les applications.
 
 [Rapport de Mission003](../MISSION_003_REPORT.md) : base de branche, résultats,
 limites et prochaine mission proposée.
+
+## Consolidation de l’architecture
+
+Le nouveau [README central](../README.md) et l’ADR proposée clarifient désormais
+UNIFIED comme coordination sans runtime. Le relevé détaillé des sources est dans
+[repositories.json](repositories.json), les preuves typées dans
+[proofs.json](proofs.json), les relations dans [integrations.json](integrations.json).
+Les champs `consolidation` de modules.json sont des annotations sourcées distinctes
+des anciennes observations datées ; les champs manual sont préservés. Le résumé
+historique SUMMARY n’est pas la matrice runtime. Le nouvel audit reproductible
+est décrit dans [RUNBOOK](../docs/RUNBOOK.md), sans remplacer le collecteur existant.

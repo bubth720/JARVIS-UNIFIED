@@ -1,0 +1,317 @@
+{
+  "captured_at": "2026-10-15T15:42:25+00:00",
+  "repositories": [
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JAVIS-Local-v2",
+      "repository_id": "core",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "mission-003b-resources",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "1756e29557287550b5cfdffdd911cada2a302db6",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "repository_id": "llm",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "feat/voice-expression-005i",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "56ffebc5b514d683f977ea177a26e2b6a91b4930",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-VOICE",
+      "repository_id": "voice",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "development/mission-002",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "repository_id": "interface",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-INTERFACE-",
+      "repository_id": "interface-placeholder",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-NEXUS",
+      "repository_id": "nexus",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "repository_id": "evolution-candidate",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-SERVICES",
+      "repository_id": "services",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T15:42:25+00:00",
+      "ci": {
+        "status": "not_checked"
+      },
+      "commit": null,
+      "commit_date_utc": null,
+      "evidence_state": "retrieval_error",
+      "files": null,
+      "hardware": "not_checked",
+      "http_status": null,
+      "main_relation": "unknown",
+      "proof_type": "source",
+      "prs": {
+        "status": "not_checked"
+      },
+      "ref_change": {
+        "observed": null,
+        "previous": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "state": "unknown"
+      },
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "repository_id": "unified",
+      "retrieval": "proxy_forbidden",
+      "runtime_integration": "not_demonstrated_by_audit",
+      "source": "github_api"
+    }
+  ],
+  "requests": [
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-LLM"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-VOICE"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE-"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-NEXUS"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-VOLUTION-"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-SERVICES"
+    },
+    {
+      "http_status": null,
+      "method": "GET",
+      "outcome": "proxy_forbidden",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED"
+    }
+  ],
+  "runtime_qualification": false,
+  "schema_version": 1,
+  "source": "github_api",
+  "synthetic": false
+}

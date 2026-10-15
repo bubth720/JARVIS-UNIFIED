@@ -158,3 +158,15 @@ personnelle dans les champs manuels. Un jeton peut être lu en RAM via
 `--token-env GH_TOKEN` ou `GITHUB_TOKEN`, uniquement après un refus HTTP anonyme
 401/403/429 ; jamais sur simple échec de tunnel. Aucun jeton n'est demandé ni
 ajouté aux fichiers par le script. Son absence n'empêche ni la démo ni le mode Git.
+
+## Extension additive de consolidation
+
+Chaque entrée modules conserve ses champs historiques et manual. `module_id` et
+`repository_id` la relient à repositories.json (un nom exact par ID stable).
+`consolidation` distingue responsabilité cible, frontières, branches développées,
+main observé, SHA/source/date inspectés, interfaces locales versus contrats prévus,
+dépendances cibles, état du code, tests et qualification physique. Une cible n’est
+pas une implémentation. Ses notes éditoriales ne réécrivent pas l’ancien snapshot.
+Les `proofs.json` portent type/portée/URL/SHA ; les `integrations.json` séparent
+contrat, liaison, intégration testée, appareil et présence main. Les scripts
+existants conservent ces champs supplémentaires lors de leurs actualisations.

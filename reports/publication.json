@@ -1,0 +1,11 @@
+{
+  "branch": "mission-001-architecture-unified",
+  "main_modified": false,
+  "previous_attempt": {
+    "branch": "mission-003-central-registry",
+    "sha": "f7b7a5ad96527bc43bd5349b97b7834667da9f03",
+    "status": "refused_http_403"
+  },
+  "pull_request": null,
+  "status": "not_attempted_for_this_branch"
+}

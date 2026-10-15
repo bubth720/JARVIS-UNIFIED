@@ -1,0 +1,17 @@
+{
+  "contract_version": "1.0.0",
+  "lease_id": "00000000-0000-4000-8000-000000000001",
+  "owner": "llm",
+  "operation_id": "00000000-0000-4000-8000-000000000001",
+  "resource_class": "model",
+  "decision": "admitted",
+  "state": "stop_requested",
+  "model_resident": true,
+  "cancellation_requested": true,
+  "effective_end": false,
+  "release_confirmed": false,
+  "declared_envelope_bytes": 2147483648,
+  "reserves_android_ram": false,
+  "coordination_scope": "process",
+  "generation": 1
+}

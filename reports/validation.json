@@ -1,0 +1,62 @@
+{
+  "android_source_tests_executed": false,
+  "branch": "mission-001-architecture-unified",
+  "captured_at": "2026-10-15T15:52:28+00:00",
+  "hardware_tests_executed": false,
+  "manual_fields_preserved": true,
+  "modified_base_files": [
+    ".gitignore",
+    "README.md",
+    "registry/README.md",
+    "registry/REGISTRY_FORMAT.md",
+    "registry/modules.json"
+  ],
+  "platform": "Linux cloud Python 3.12.14",
+  "preserved_base_files": 38,
+  "remote_ci_observed": false,
+  "source": "local_unittest",
+  "source_base_commit": "f7b7a5ad96527bc43bd5349b97b7834667da9f03",
+  "suites": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "errors": 0,
+      "executed": 27,
+      "failures": 0,
+      "passed": 27,
+      "seconds": 0.091,
+      "skipped": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s registry/tests -v",
+      "errors": 0,
+      "executed": 23,
+      "failures": 0,
+      "passed": 23,
+      "seconds": 0.265,
+      "skipped": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s backup_prototype/tests -v",
+      "errors": 0,
+      "executed": 30,
+      "failures": 0,
+      "passed": 30,
+      "seconds": 13.343,
+      "skipped": 0
+    }
+  ],
+  "tested_sources_sha256": {
+    "contracts/v1/capability-manifest.schema.json": "fdeda2a14c9ea818ebfedaad43035b192ccddc8b941fa61d6c25fa8d98b03b9a",
+    "contracts/v1/health-status.schema.json": "84420f0f18763f557d1f14cd7a06be9bc1d05705e11c672c91d68ecfbadf2bd0",
+    "contracts/v1/request-envelope.schema.json": "9c13abea1907cccb7f01990888d4eeb4a81aad90b5d823213bb5fe75372450fc",
+    "contracts/v1/resource-lease.schema.json": "0cabee9828db1ee719d5d43ab3b1e268aeafce7af49755224c78bf705595343c",
+    "contracts/v1/response-envelope.schema.json": "3649f25aab483c20fc53e909a0b6486724abc050245e15acdb03f8f4b17edd38",
+    "scripts/audit_repos.py": "cdfe903767342b676922ffe7557984e62f0b818005dce3e71e2c84d57d013618",
+    "scripts/capture_sources.py": "05393c4199eca8d0e0d05ded89adc253eb196ca4f7a9ede7e9ac1109ba2960a6",
+    "scripts/contracts.py": "9fd7072520b12c24614f6ee9327988191f830a19652c8264f949155f876e21fa",
+    "scripts/validate_unified.py": "c0335dcf7401121585ebd95390ef57f594191f416118d11c533246c6bb4ce129",
+    "tests/test_audit_repos.py": "16a6c2723f1fd800f5b7a43711e40c1071e6a0f500bbc003bdfb715dff6db4de",
+    "tests/test_contracts.py": "9dca093136df91512934888a65d749584ddcec41285529a4f9d4d92d8ed00088"
+  },
+  "total_executed": 80
+}
