@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-10-15T12:26:06+00:00",
+  "generation": "48d53a2c935d48379aec42e3a4a127a5",
+  "note": "API inaccessible pendant Mission003 ; diagnostic réseau séparé : tunnel proxy 403 Forbidden. Observations Git courantes conservées dans le registre principal.",
+  "observations": [
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-LLM"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-VOICE"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE-"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-NEXUS"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-VOLUTION-"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-SERVICES"
+    },
+    {
+      "authenticated_retry": false,
+      "http_status": null,
+      "method": "GET",
+      "reason": "network_unavailable",
+      "status": "failure",
+      "url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "api_probe_not_current_git_observations"
+}

@@ -1,0 +1,451 @@
+{
+  "generation": "39fa39d3478d4bf7ac97317909c25543",
+  "modules": [
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Audit Mission001, preuves historiques à distinguer des contrôles courants"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "role": "CORE : orchestration, mémoire, documents et Whisper",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "mission-003b-resources",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Audit Mission001"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-003b-resources",
+          "reason": null,
+          "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "mission-003b-resources",
+      "repository": "bubth720/JARVIS-LLM",
+      "role": "Moteur LLM et protections",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "feat/voice-identity-005h",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Branche nouvelle observée par Git ; contenu 005H non audité ici"
+      },
+      "observation": {
+        "branch": {
+          "name": "feat/voice-identity-005h",
+          "reason": null,
+          "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "feat/voice-identity-005h",
+      "repository": "bubth720/JARVIS-VOICE",
+      "role": "Synthèse neuronale et profils vocaux",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "development/mission-002",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom et branche observés, sans audit applicatif"
+      },
+      "observation": {
+        "branch": {
+          "name": "development/mission-002",
+          "reason": null,
+          "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "development/mission-002",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "development/mission-002",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "role": "Interface, rôle détaillé à confirmer",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom conservé exactement ; aucun regroupement"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-INTERFACE-",
+      "role": "Rôle à préciser ; dépôt distinct de JARVIS-INTERFACE",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Aucun audit applicatif dans cette mission"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "role": "Rôle à préciser",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom conservé exactement"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "role": "Rôle à préciser",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom seul, capacités non auditées"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "role": "Services, rôle détaillé à confirmer",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [
+          "Missions001/002 présentes localement, absentes des branches annoncées sur GitHub.",
+          "API GitHub actuellement inaccessible via le proxy."
+        ],
+        "decisions": [
+          "Préserver la base locale mission-002-backup ; aucune publication autorisée."
+        ],
+        "local_base_commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+        "local_branch": "mission-003-central-registry",
+        "next_action": "Revoir le registre ; conserver les branches locales et décider séparément de leur éventuelle publication.",
+        "phase": "in_progress"
+      },
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "role": "Préparation de l’unification et registre central",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    }
+  ],
+  "schema_version": 1
+}

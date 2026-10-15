@@ -1,0 +1,14 @@
+{
+  "audit_branch": "audit/mission-001",
+  "audit_commit": "004b89d1f86135962e452fb644b489f69fc177d1",
+  "backup_branch": "mission-002-backup",
+  "backup_commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+  "notes": [
+    "Base propre, audit ancêtre de backup, cinq documents audit conservés ; contrôles effectués avant création de la branche003.",
+    "Les missions locales ne sont pas des branches GitHub observées.",
+    "Le commit final de Mission003 est le commit contenant MISSION_003_REPORT.md, identifiable par git log -1 --format=%H -- MISSION_003_REPORT.md ; aucun hash autoréférent n’est inventé."
+  ],
+  "origin_main": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+  "source": "local_git",
+  "verified_at": "2026-10-15T12:25:32+00:00"
+}
