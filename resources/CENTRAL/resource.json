@@ -1,0 +1,14 @@
+{
+  "schema": "jarvis-resource-reference",
+  "version": 1,
+  "weights_included": false,
+  "auto_download": false,
+  "sha256": null,
+  "hardware_qualified": false,
+  "deployment": "CENTRAL",
+  "device": "future-mini-PC",
+  "reference": null,
+  "quantization": null,
+  "status": "unqualified",
+  "backend_candidate": null
+}

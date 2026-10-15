@@ -1,0 +1,15 @@
+{
+  "schema": "jarvis-resource-reference",
+  "version": 1,
+  "weights_included": false,
+  "auto_download": false,
+  "sha256": null,
+  "hardware_qualified": false,
+  "deployment": "TABLET",
+  "device": "Redmi Pad SE",
+  "reference": "Qwen3-0.6B",
+  "quantization": "Q4_K_M",
+  "status": "reference-not-installed",
+  "backend_candidate": "llama.cpp",
+  "limits": "existing-safety-policy-required"
+}
