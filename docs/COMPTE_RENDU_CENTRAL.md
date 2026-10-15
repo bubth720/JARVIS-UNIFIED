@@ -95,8 +95,7 @@ Le dépôt ne doit pas afficher une CI verte avant un vrai run au bon SHA.
 API : tunnel403 ; aucun accès aux PR/workflows actuels malgré Git lisible. Le
 dernier push contrôlé précédent a été refusé HTTP403 « Permission to
 bubth720/JARVIS-UNIFIED.git denied to bubth720 ». Aucune écriture/PR réussie n’est
-présumée. La livraison indique si une nouvelle tentative a été réalisée ou si
-la branche/patch reste local. Aucun contournement, auto-merge ou déploiement.
+présumée. La nouvelle publication du commit61b30fc vers mission-001-architecture-unified a été tentée une seule fois sans forçage : retour128/HTTP403, même refus. Branche non créée sur GitHub, aucune PR, aucune nouvelle tentative. Les fichiers/commits et le bundle vérifié restent locaux. Aucun contournement, auto-merge ou déploiement.
 Les données Android réelles n’ont pas d’export global démontré, les qualifications
 physiques restent à faire et l’alias EVOLUTION reste non confirmé.
 
