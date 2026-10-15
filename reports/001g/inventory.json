@@ -1,0 +1,36 @@
+{
+  "baseline": "f7b7a5ad96527bc43bd5349b97b7834667da9f03",
+  "original_count": 15,
+  "current_count": 16,
+  "unique_ids": 16,
+  "original_entries_unchanged": true,
+  "added": [
+    {
+      "branch": "mission-001f-closure",
+      "checked_at": null,
+      "id": "UNIFIED-001F",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Publication bloquée HTTP 403 ; API PR/CI bloquée par politique réseau.",
+          "ADR en attente d’approbation humaine distincte."
+        ],
+        "decisions": [
+          "Aucun merge, raccordement produit ou changement des dépôts externes."
+        ],
+        "local_base_commit": "d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8",
+        "local_branch": "mission-001f-closure",
+        "local_evidence": "JARVIS_CENTRAL_BILAN_GENERAL.md",
+        "next_action": "Rétablir les accès et publier la branche de reprise sans forçage ; soumettre ADR et missions P0 séparément.",
+        "phase": "completed",
+        "validation_note": "Clôture locale ; résultats dans reports/001f/validation.json. Aucun SHA distant revendiqué."
+      },
+      "observation": null,
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "not_checked",
+      "verified_at": null
+    }
+  ],
+  "registry_sha256": "5c5fee801f64650cda710d6d65e6ff8e635407bc3f8e2d3677783273d1765b8b",
+  "source_commit_of_added_mission": "191a5f24bf577359ad679f0ff52cf2c4334c1daf"
+}

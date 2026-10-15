@@ -1,0 +1,10 @@
+$ python3 scripts/validate_unified.py
+{"contracts": 5, "invalid_examples_rejected": 5, "repositories": 9, "valid_examples": 5}
+exit_code=0
+
+$ python3 registry/scripts/update_registry.py --validate-only
+Registre valide : 9 dépôts, 16 missions.
+exit_code=0
+
+$ git diff --check
+exit_code=0

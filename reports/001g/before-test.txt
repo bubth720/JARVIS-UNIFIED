@@ -1,0 +1,14 @@
+test_read_valid_registry (test_registry.RegistryTests.test_read_valid_registry) ... FAIL
+
+======================================================================
+FAIL: test_read_valid_registry (test_registry.RegistryTests.test_read_valid_registry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/JARVIS-UNIFIED/registry/tests/test_registry.py", line 36, in test_read_valid_registry
+    self.assertEqual(len(self.missions['missions']), 15)
+AssertionError: 16 != 15
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)

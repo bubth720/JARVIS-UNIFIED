@@ -33,7 +33,7 @@ class RegistryTests(unittest.TestCase):
     def test_read_valid_registry(self):
         self.assertTrue(r.validate(self.modules, self.missions))
         self.assertEqual(len(self.modules['modules']), 9)
-        self.assertEqual(len(self.missions['missions']), 15)
+        self.assertEqual(len(self.missions['missions']), 16)
 
     def test_inaccessible_repository_no_invention(self):
         modules, _ = self.run_demo()
