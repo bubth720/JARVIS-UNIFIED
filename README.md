@@ -16,8 +16,17 @@ chargement non maîtrisé. Contrats v1 inchangés et toujours proposés.
 [Validation utilisateur et réserves](docs/DECISIONS/VALIDATION-UTILISATEUR-ADR-001-2026-10-15.md).
 Aucun déploiement, raccordement ni migration autorisé par cette approbation.
 [Vérifications de cette consignation](docs/DECISIONS/VERIFICATION-APPROBATION-ADR-001.md) :
-validateurs réussis ; 79/80 tests réussis, un échec préexistant du compteur
-de missions documenté, sans modification de code ou de test.
+rapport historique de l’approbation : 79/80. Le défaut du compteur a ensuite
+été corrigé exclusivement en [Mission001G](MISSION_001G_REPORT.md) : **80/80
+réussis, aucun saut**. Registre et ADR inchangés.
+
+## Maintenance001G
+
+Sept branches utiles publiées sans forçage, SHA distants vérifiés ; main inchangée.
+PR brouillon non créée : API GitHub bloquée par le proxy.
+[Rapport et opérations restantes](MISSION_001G_REPORT.md). La branche
+mission-001g-maintenance rassemble consolidation, décision ADR et correctif testé.
+Aucune connexion runtime ajoutée.
 
 ## Clôture 001F — photographie historique
 
@@ -97,7 +106,7 @@ Le workflow [validate-unified](.github/workflows/validate-unified.yml) prépare 
 mêmes contrôles en PR ; audit live uniquement manuel, lecture seule. Il n’a pas
 été exécuté sur GitHub dans cette session. Aucun APK ou modèle construit ici.
 
-Prochaine action : rétablir la publication documentaire par un accès autorisé,
+Prochaine action : appliquer le réglage réseau API et ouvrir une PR brouillon,
 puis soumettre séparément les propositions techniques ouvertes et les missions
 de stabilisation/qualification. Aucun adaptateur n’est autorisé ici.
 TABLET0.6B Q4_K_M et MOBILE1.7B sont des références initiales ; mini-PC à qualifier.

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-15T23:55:41.044582+00:00",
+  "validators": [
+    {
+      "command": [
+        "python3",
+        "scripts/validate_unified.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"contracts\": 5, \"invalid_examples_rejected\": 5, \"repositories\": 9, \"valid_examples\": 5}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "registry/scripts/update_registry.py",
+        "--validate-only"
+      ],
+      "exit_code": 0,
+      "stdout": "Registre valide : 9 d\u00e9p\u00f4ts, 16 missions.\n"
+    }
+  ],
+  "registry_unchanged": true,
+  "approved_adr_unchanged": true,
+  "test_change_exactly_expected_count": true,
+  "test_sha256": "3ec3c40ed0188aa89baa3ce2b74ba032ba1fbde73ceee536515cf97e9040ce8f",
+  "existing_refs_unchanged": true,
+  "main_remote_unchanged": true,
+  "tests_passed": 80,
+  "tests_failed": 0,
+  "tests_skipped": 0
+}
