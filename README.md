@@ -6,6 +6,18 @@ L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-U
 **APPROUVÉE AVEC PRÉCISIONS le 15 octobre 2026 — orientation uniquement**. Aucun raccordement applicatif
 n’est développé pendant cette consolidation.
 
+## D4-02 — responsabilités et premier raccordement proposé
+
+[Matrice consolidée proposée](docs/D4-02/MATRICE_RESPONSABILITES.md),
+[adaptations/contrats](docs/D4-02/ADAPTATIONS_ET_CONTRATS.md),
+[plan CORE↔LLM](docs/D4-02/PREMIER_RACCORDEMENT_CORE_LLM.md),
+[risques](docs/D4-02/RISQUES_ET_PROTECTIONS.md),
+[décisions et missions ordonnées](docs/D4-02/DECISIONS_ET_MISSIONS.md),
+[rapport et sources fraîches](docs/D4-02/RAPPORT_ET_SOURCES.md).
+Conception documentaire seule ; CORE004A et LLM003C relus, pas encore raccordés.
+Le mapping du prompt système, le cycle de vie et l’admission interprocessus exigent
+des décisions techniques distinctes ; l’orientation ADR reste approuvée, inchangée.
+
 ## DESIGN-004 — conception multi-appareils et expressions
 
 [Architecture SYNC V1](docs/DESIGN-004/SYNC_V1.md),

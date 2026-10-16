@@ -1,3 +1,8 @@
+> Mise à jour : la mission documentaire D4-02 a été autorisée puis livrée dans
+> [D4-02](../D4-02/RAPPORT_ET_SOURCES.md). Ses décisions restent proposées ;
+> aucune mission de développement ci-dessous commencée. La liste initiale
+> est conservée comme trace ; lire les [suites ordonnées](../D4-02/DECISIONS_ET_MISSIONS.md).
+
 # Missions Codex suivantes — courtes, proposées et testables
 
 **Aucune mission ci-dessous n’est commencée.** Chaque ligne est une autorisation

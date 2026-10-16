@@ -1,3 +1,7 @@
+> Plan préalable conservé. La référence détaillée proposée après lecture de
+> CORE004A et LLM003C est le [plan D4-02](D4-02/PREMIER_RACCORDEMENT_CORE_LLM.md).
+> Aucun raccordement ni choix de transport/signature/arbitre adopté ici.
+
 # Plan CORE↔LLM — implémentation future soumise à autorisation
 
 Ce plan n’autorise aucun changement de CORE/LLM. Bases : CORE226e2e8, LLM1756e29,
