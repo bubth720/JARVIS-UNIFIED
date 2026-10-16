@@ -6,6 +6,20 @@ L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-U
 **APPROUVÉE AVEC PRÉCISIONS le 15 octobre 2026 — orientation uniquement**. Aucun raccordement applicatif
 n’est développé pendant cette consolidation.
 
+## DESIGN-004 — conception multi-appareils et expressions
+
+[Architecture SYNC V1](docs/DESIGN-004/SYNC_V1.md),
+[EXPRESSIONS V1](docs/DESIGN-004/EXPRESSIONS_V1.md),
+[responsabilités et réserves ADR](docs/DESIGN-004/RESPONSABILITES_ET_ADR.md),
+[contrats proposés](docs/DESIGN-004/CONTRATS_INTEGRATION_PROPOSES.md),
+[missions suivantes](docs/DESIGN-004/MISSIONS_SUIVANTES.md) et
+[rapport sourcé](docs/DESIGN-004/RAPPORT_DESIGN_004.md).
+Conception documentaire uniquement : pas de sync réelle ni de bibliothèque800
+formulations déjà livrée. Les sources du16 octobre complètent la photographie001F :
+SERVICES dispose maintenant de fondations et BRIDGE simulé, VOICE de Studio005J
+et d’un cahier005K, INTERFACE d’un stockage local005. Les nouveaux rôles de stockage,
+transports et contrats restent à proposer/autoriser séparément ; ADR inchangée.
+
 ## Décision officielle ADR-001
 
 Option3 approuvée : CORE orchestrateur, architecture modulaire hybride et
@@ -39,7 +53,11 @@ Aucune connexion runtime ajoutée.
 VOICE005I observée à f917ef1 ; code applicatif inchangé, nouveaux rapports CI
 versionnés de coinstallation émulateur. Pas de qualification Xiaomi nouvelle.
 
-## Qui fait quoi — actuel et cible
+## Qui fait quoi — photographie001F et cible ADR
+
+Le tableau ci-dessous conserve la lecture001F. Pour les développements plus récents
+SERVICES/VOICE/INTERFACE, lire les [sources DESIGN-004](docs/DESIGN-004/SOURCES.md)
+et la [matrice de responsabilités](docs/DESIGN-004/RESPONSABILITES_ET_ADR.md).
 
 | Module / dépôt exact | Code actuel inspecté | Responsabilité cible approuvée — déploiement non autorisé |
 |---|---|---|
