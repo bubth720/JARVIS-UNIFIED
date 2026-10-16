@@ -156,3 +156,9 @@ réutilisés ; aucun de leurs résultats anciens n’est réécrit comme résult
 [COMPATIBILITY.md](COMPATIBILITY.md) et rapports002/003 restent historiques.
 L’architecture ancienne envisageant un assemblage Android dans UNIFIED est
 **supplantée comme orientation par l’ADR approuvée avec précisions**, sans effacer l’historique.
+
+## Audit de convergence D4-02C
+
+[Rapport CORE004B ↔ LLM003D](docs/D4-02C/RAPPORT_FINAL.md) : références vérifiées,
+matrice et corrections proposées, comparaison O3 et deux missions de fixtures.
+Travail documentaire uniquement ; O3 reste à approuver, aucun raccordement réalisé.
