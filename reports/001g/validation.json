@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-15T23:53:09.082737+00:00",
+  "base_commit": "e0e6f69c4908a152da4e43864a08fef0c8f7a7af",
+  "branch": "mission-001g-maintenance",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "runs": [
+    {
+      "suite": "audit-contracts",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 27,
+      "duration_seconds": 0.196,
+      "summary": "OK",
+      "log": "audit-contracts.txt"
+    },
+    {
+      "suite": "registry",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "registry/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 23,
+      "duration_seconds": 0.453,
+      "summary": "OK",
+      "log": "registry.txt"
+    },
+    {
+      "suite": "backup",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "backup_prototype/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 30,
+      "duration_seconds": 12.898,
+      "summary": "OK",
+      "log": "backup.txt"
+    }
+  ],
+  "total": 80,
+  "test_file_sha256": "3ec3c40ed0188aa89baa3ce2b74ba032ba1fbde73ceee536515cf97e9040ce8f"
+}

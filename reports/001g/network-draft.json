@@ -1,0 +1,12 @@
+{
+  "status": "saved",
+  "requires_publish": true,
+  "added_custom_domains": [
+    "api.github.com"
+  ],
+  "existing_custom_rules_preserved": true,
+  "presets_preserved": true,
+  "scripts_repositories_secrets_unchanged": true,
+  "runtime_application": "not_applied_by_draft_save",
+  "source": "supported_environment_configuration_workflow"
+}

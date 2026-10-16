@@ -1,0 +1,99 @@
+{
+  "captured_at": "2026-10-15T17:47:11.623005+00:00",
+  "branch": "mission-001f-closure",
+  "base_commit": "d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "runs": [
+    {
+      "name": "audit-contracts",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 27,
+      "duration_seconds": 0.156,
+      "log": "audit-contracts.txt",
+      "summary": "OK"
+    },
+    {
+      "name": "registry",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "registry/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 23,
+      "duration_seconds": 0.372,
+      "log": "registry.txt",
+      "summary": "OK"
+    },
+    {
+      "name": "backup",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "backup_prototype/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 30,
+      "duration_seconds": 12.321,
+      "log": "backup.txt",
+      "summary": "OK"
+    }
+  ],
+  "total": 80,
+  "android_tools": {
+    "gradle": null,
+    "adb": null,
+    "kotlinc": null
+  },
+  "source_sha256": {
+    "scripts/audit_repos.py": "cdfe903767342b676922ffe7557984e62f0b818005dce3e71e2c84d57d013618",
+    "scripts/validate_unified.py": "c0335dcf7401121585ebd95390ef57f594191f416118d11c533246c6bb4ce129",
+    "scripts/capture_sources.py": "05393c4199eca8d0e0d05ded89adc253eb196ca4f7a9ede7e9ac1109ba2960a6",
+    "scripts/contracts.py": "9fd7072520b12c24614f6ee9327988191f830a19652c8264f949155f876e21fa",
+    "tests/test_contracts.py": "9dca093136df91512934888a65d749584ddcec41285529a4f9d4d92d8ed00088",
+    "tests/test_audit_repos.py": "16a6c2723f1fd800f5b7a43711e40c1071e6a0f500bbc003bdfb715dff6db4de",
+    "tests/fixtures/audit.json": "056a3a334119eb98c3610243468a1abb1a5a6189e073e590561943beeabbc8ef",
+    "registry/scripts/update_registry.py": "b799d4534510fc2cdce7b528df18f283a1c4b67534bbab331741352e038ff4d3",
+    "registry/tests/test_registry.py": "502d4e1426c6e798d39644ed360c647719890f0b6c0bd0de7cb4f34fdfda34f2",
+    "backup_prototype/__init__.py": "334a04ef2b05cfa1ea2dd48151a364fd4e2e73e1c8c1ad18dc8bf2a27b6ed5c3",
+    "backup_prototype/backup.py": "5f7cfd28f2a9479c1dc9ec0d38814a9e90ec1f7a8c55110ff8e5632834c2a030",
+    "backup_prototype/demo.py": "2114020e007e9af08a55cfcd00bb9690a432bf9512f7e472cd6dd5a1467b2e53",
+    "backup_prototype/manifest.example.json": "7e8918fff1d7e6fafdd55f45448e28317dd494834d0f6ebcec26c0fe3f88ae5c",
+    "backup_prototype/validation.json": "ed1776c9b7934177ed8e32cddf1ad2c1954fd9b6e75150b13735b475443ebdcb",
+    "backup_prototype/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backup_prototype/tests/test_backup.py": "3e947cfacca59efc78c81ef6f6fcc5d60795a3ed3a9ce40a4c17f63d6a92aaf8",
+    "contracts/v1/request-envelope.schema.json": "9c13abea1907cccb7f01990888d4eeb4a81aad90b5d823213bb5fe75372450fc",
+    "contracts/v1/capability-manifest.schema.json": "fdeda2a14c9ea818ebfedaad43035b192ccddc8b941fa61d6c25fa8d98b03b9a",
+    "contracts/v1/health-status.schema.json": "84420f0f18763f557d1f14cd7a06be9bc1d05705e11c672c91d68ecfbadf2bd0",
+    "contracts/v1/resource-lease.schema.json": "0cabee9828db1ee719d5d43ab3b1e268aeafce7af49755224c78bf705595343c",
+    "contracts/v1/response-envelope.schema.json": "3649f25aab483c20fc53e909a0b6486724abc050245e15acdb03f8f4b17edd38",
+    "contracts/v1/examples/capability-manifest.valid.json": "a310bcd81c58836f8f6dcadd18923462ca98ad0bf53d27a160fd0b03de140acd",
+    "contracts/v1/examples/capability-manifest.invalid.json": "844a13e9cf6c0e84ba8b974fa5b981ae026940bcef0312d78fb3d10361c49932",
+    "contracts/v1/examples/response-envelope.invalid.json": "4997f5a11b768f6cb3f5bfb9e51841fce80803db892f30db9c34476558cb5f0f",
+    "contracts/v1/examples/request-envelope.invalid.json": "fd562609800c1f23655e36be96264856078f8816be5d7c1621a6f6e339cee562",
+    "contracts/v1/examples/health-status.valid.json": "115fca096b11d261c7a788dac6a2ba56dd27985e77c12ae1bd53d1cf02562489",
+    "contracts/v1/examples/resource-lease.invalid.json": "abb615a5429f74beaa557457999f64cd2af39c5788b7f4eb8d963383ff827375",
+    "contracts/v1/examples/health-status.invalid.json": "e205254264409a48e55ff5dd80bb20ffd214389346276d824d6bc82199e808b2",
+    "contracts/v1/examples/request-envelope.valid.json": "b98c1f151e0671212aedba25254d63d76efd00962cac0aa5b3fc1cf5e484c4d4",
+    "contracts/v1/examples/response-envelope.valid.json": "bd5277ece7e5e27b4c64f4d9f025ce2c70bfde350910e964172520913fe8327d",
+    "contracts/v1/examples/resource-lease.valid.json": "cce59992a1801aa527fc6a6a384ee6191b1df405a36ae151ec1294c5ea1c2eb9"
+  }
+}

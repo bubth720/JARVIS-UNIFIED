@@ -1,0 +1,39 @@
+{
+  "mission": "002",
+  "scope": "synthetic-only",
+  "date": "2026-10-15",
+  "runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "cryptography": "50.0.0"
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s backup_prototype/tests -v",
+    "executed": 30,
+    "passed": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "seconds": 10.698
+  },
+  "demo": {
+    "encrypted_create": "PASS",
+    "verify": "PASS",
+    "restore_exact_bytes": "PASS",
+    "failure_after_activation": "PASS",
+    "rollback": "PASS",
+    "previous_generation_unchanged": "PASS",
+    "source_unchanged": "PASS",
+    "retry": "PASS"
+  },
+  "not_validated": [
+    "Android adapter",
+    "physical devices",
+    "real voice profiles",
+    "large model archives",
+    "production security review"
+  ],
+  "contains_personal_data": false,
+  "models_downloaded": false
+}

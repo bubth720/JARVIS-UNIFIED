@@ -1,0 +1,32 @@
+{
+  "schema": "jarvis-resource-reference",
+  "version": 1,
+  "weights_included": false,
+  "auto_download": false,
+  "sha256": null,
+  "hardware_qualified": false,
+  "deployment": "VOICES",
+  "status": "metadata-only-no-profiles",
+  "profile_formats": [
+    {
+      "format": "JVFP1",
+      "requires": "exact-FP32-pack-identity",
+      "interchangeable_with_all_engines": false
+    },
+    {
+      "format": "PTVB1",
+      "requires": "exact-INT8-preset-pack",
+      "interchangeable_with_all_engines": false
+    },
+    {
+      "format": "safetensors",
+      "requires": "matching-CPU-engine-and-checkpoint",
+      "interchangeable_with_all_engines": false
+    },
+    {
+      "format": "JARVIS-DEMO-VOICE-1",
+      "requires": "jarvis-demo-no-inference-v1",
+      "inference_usable": false
+    }
+  ]
+}

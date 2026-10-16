@@ -1,0 +1,29 @@
+{
+  "protocol_version": "1.0",
+  "contract_version": "1.0.0",
+  "correlation_id": "00000000-0000-4000-8000-000000000001",
+  "origin": "core",
+  "destination": "llm",
+  "capability": "text.generate",
+  "scope": {
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "authorization_ref": "00000000-0000-4000-8000-000000000001"
+  },
+  "limits": {
+    "max_input_bytes": 8192,
+    "max_output_tokens": 64,
+    "timeout_ms": 60000,
+    "declared_memory_bytes": 2147483648
+  },
+  "deadline": {
+    "clock": "sender_monotonic",
+    "sent_at_ms": 1000,
+    "expires_at_ms": 61000
+  },
+  "cancellation_id": "00000000-0000-4000-8000-000000000001",
+  "payload": {
+    "content_ref": "00000000-0000-4000-8000-000000000001",
+    "model_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "transport_url": "https://cloud.invalid"
+}

@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-15T17:53:46.492080+00:00",
+  "command": [
+    "git",
+    "ls-remote",
+    "--symref",
+    "origin",
+    "HEAD",
+    "refs/heads/*"
+  ],
+  "exit_code": 0,
+  "stdout": "ref: refs/heads/main\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\trefs/heads/main\n",
+  "main_unchanged": true
+}

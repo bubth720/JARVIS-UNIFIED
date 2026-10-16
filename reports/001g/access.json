@@ -1,0 +1,53 @@
+{
+  "remote_sanitized": "https://github.com/bubth720/JARVIS-UNIFIED.git",
+  "git_read": {
+    "command": [
+      "git",
+      "ls-remote",
+      "--symref",
+      "origin",
+      "HEAD",
+      "refs/heads/*"
+    ],
+    "checked_at": "2026-10-15T23:53:08+00:00",
+    "exit_code": 0,
+    "stdout": "ref: refs/heads/main\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\tHEAD\ne4435f4bd60c5fdc5595c411cc8cab9da7ef020b\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "api_read": {
+    "method": "GET",
+    "endpoint": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED",
+    "checked_at": "2026-10-15T23:53:08+00:00",
+    "token_used": false,
+    "status": "failure",
+    "reason": "Tunnel connection failed: 403 Forbidden"
+  },
+  "write_probe": {
+    "command": [
+      "git",
+      "push",
+      "--dry-run",
+      "--porcelain",
+      "origin",
+      "refs/heads/mission-001g-maintenance:refs/heads/mission-001g-maintenance"
+    ],
+    "checked_at": "2026-10-15T23:53:08+00:00",
+    "exit_code": 0,
+    "stdout": "To https://github.com/bubth720/JARVIS-UNIFIED.git\n*\trefs/heads/mission-001g-maintenance:refs/heads/mission-001g-maintenance\t[new branch]\nDone\n",
+    "stderr": ""
+  },
+  "actual_push_attempted": false,
+  "pr_created": false,
+  "credential_variables_present": [
+    "GH_TOKEN"
+  ],
+  "network_policy": {
+    "state_observed": "enforced",
+    "github_com_allowed": true,
+    "api_github_com_allowed": false,
+    "vpn_configured": false
+  },
+  "installation_permissions": "not_observable",
+  "branch_protections": "not_observable",
+  "exact_git_refusal_cause": "unconfirmed"
+}

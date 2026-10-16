@@ -1,0 +1,174 @@
+{
+  "captured_at": "2026-10-15T00:00:00Z",
+  "records": [
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "1111111111111111111111111111111111111111",
+      "files": [
+        "README.md",
+        "app/src/main/AndroidManifest.xml"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "repository_id": "core",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "mission-003b-resources",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "synthetic_run",
+        "status": "success"
+      },
+      "commit": "2222222222222222222222222222222222222222",
+      "files": [
+        "README.md",
+        "app/src/main/AndroidManifest.xml"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "not_included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-LLM",
+      "repository_id": "llm",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "feat/voice-expression-005i",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "3333333333333333333333333333333333333333",
+      "files": [
+        "README.md",
+        "app/src/main/AndroidManifest.xml"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "not_included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-VOICE",
+      "repository_id": "voice",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "development/mission-002",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "4444444444444444444444444444444444444444",
+      "files": [
+        "README.md",
+        "app/src/main/AndroidManifest.xml"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "repository_id": "interface",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "5555555555555555555555555555555555555555",
+      "files": [
+        "README.md"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-INTERFACE-",
+      "repository_id": "interface-placeholder",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "6666666666666666666666666666666666666666",
+      "files": [
+        "README.md"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "repository_id": "nexus",
+      "retrieval": "confirmed"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": null,
+      "files": [
+        "README.md"
+      ],
+      "hardware": "not_checked",
+      "http_status": 404,
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "repository_id": "evolution-candidate",
+      "retrieval": "not_found_or_inaccessible"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": null,
+      "files": [
+        "README.md"
+      ],
+      "hardware": "not_checked",
+      "http_status": 403,
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "repository_id": "services",
+      "retrieval": "forbidden"
+    },
+    {
+      "branch": "main",
+      "captured_at": "2026-10-15T00:00:00Z",
+      "ci": {
+        "reason": "no_ci",
+        "status": "unknown"
+      },
+      "commit": "9999999999999999999999999999999999999999",
+      "files": [
+        "README.md"
+      ],
+      "hardware": "not_checked",
+      "main_relation": "included",
+      "proof_type": "source",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "repository_id": "unified",
+      "retrieval": "confirmed"
+    }
+  ],
+  "synthetic": true
+}

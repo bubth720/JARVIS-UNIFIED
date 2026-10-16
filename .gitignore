@@ -1,0 +1,17 @@
+__pycache__/
+.venv/
+*.jvb
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.key
+*.keystore
+*.wav
+*.pcm
+backup-work/
+*.gguf
+*.onnx
+*.safetensors
+*.bin
+.backup-private/
+.audit-cache/

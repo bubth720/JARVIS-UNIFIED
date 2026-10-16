@@ -1,0 +1,26 @@
+{
+  "probes": [
+    {
+      "absence_proven": false,
+      "method": "prior_manual_git_ls_remote_in_this_session",
+      "name": "bubth720/JARVIS-CORE",
+      "observation": "git_repository_not_found_exit_128",
+      "proof_type": "source",
+      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "relationship": "unknown",
+      "status": "inaccessible",
+      "url": "https://github.com/bubth720/JARVIS-CORE"
+    },
+    {
+      "absence_proven": false,
+      "method": "prior_manual_git_ls_remote_in_this_session",
+      "name": "bubth720/JARVIS-EVOLUTION",
+      "observation": "git_repository_not_found_exit_128",
+      "proof_type": "source",
+      "recorded_at": "2026-10-15T15:35:37+00:00",
+      "relationship": "unknown",
+      "status": "inaccessible",
+      "url": "https://github.com/bubth720/JARVIS-EVOLUTION"
+    }
+  ]
+}

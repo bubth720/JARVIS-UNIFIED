@@ -1,0 +1,51 @@
+[
+  {
+    "id": "core",
+    "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+    "changed_fields": []
+  },
+  {
+    "id": "llm",
+    "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+    "changed_fields": []
+  },
+  {
+    "id": "voice",
+    "sha": "f917ef15ce74a045564ddabdc407ccde4b595ba6",
+    "changed_fields": [
+      "observed_commit",
+      "branches",
+      "files"
+    ]
+  },
+  {
+    "id": "interface",
+    "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+    "changed_fields": []
+  },
+  {
+    "id": "interface-placeholder",
+    "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+    "changed_fields": []
+  },
+  {
+    "id": "nexus",
+    "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+    "changed_fields": []
+  },
+  {
+    "id": "evolution-candidate",
+    "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+    "changed_fields": []
+  },
+  {
+    "id": "services",
+    "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+    "changed_fields": []
+  },
+  {
+    "id": "unified",
+    "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+    "changed_fields": []
+  }
+]

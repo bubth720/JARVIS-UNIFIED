@@ -1,0 +1,934 @@
+{
+  "generation": "39fa39d3478d4bf7ac97317909c25543",
+  "modules": [
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "historical_monolith",
+        "developed_branches": [
+          "docs/mission-002-project-knowledge",
+          "fix/api-24-25-time-reply",
+          "fix/sqlite-data-preservation"
+        ],
+        "evidence_ref": "registry/repositories.json#core",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "226e2e8cc3eebd479805b89d035eb5c1cbcad540"
+        },
+        "next_mission": "Validate historical CORE on device without removing features",
+        "observed_commit": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JAVIS-Local-v2/tree/226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "responsibility": "Orchestration, sessions, permissions et politique de confirmation ; SQLite historique reste dans CORE jusqu’à migration testée. Stockage NEXUS seulement cible proposée.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "routing",
+          "durable_memory"
+        ],
+        "target_dependencies": [
+          "llm",
+          "voice",
+          "nexus",
+          "services",
+          "interface"
+        ],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 3,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Audit Mission001, preuves historiques à distinguer des contrôles courants"
+      },
+      "module_id": "core",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "repository_id": "core",
+      "role": "CORE historique et orchestration cible",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "standalone_implementation",
+        "developed_branches": [
+          "mission-002-prototype",
+          "mission-002b-memory",
+          "mission-002c-tablet",
+          "mission-003-catalogue",
+          "mission-003b-resources"
+        ],
+        "evidence_ref": "registry/repositories.json#llm",
+        "existing_interfaces": [
+          {
+            "name": "LanguageModel",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/Conversation.kt"
+          },
+          {
+            "name": "KnowledgeSource",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+          },
+          {
+            "name": "RetrievalIndex",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+          },
+          {
+            "name": "SemanticRetriever",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+          },
+          {
+            "name": "CatalogueRoute",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/catalogue/Catalogue.kt"
+          },
+          {
+            "name": "ResourceGrant",
+            "path": "domain/src/main/kotlin/fr/jarvis/domain/resources/ResourceCoordinator.kt"
+          }
+        ],
+        "inspection_branch": "mission-003b-resources",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "917e3351f9b525857b6aa019e98d07872d8f6e76"
+        },
+        "next_mission": "Qualify 003B on device before adapter implementation",
+        "observed_commit": "1756e29557287550b5cfdffdd911cada2a302db6",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-LLM/tree/1756e29557287550b5cfdffdd911cada2a302db6",
+        "responsibility": "Inférence locale interchangeable, tokenizer, annulation native et garde-fous ; pas de mémoire personnelle automatique.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "inference"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 12,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "mission-003b-resources",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Audit Mission001"
+      },
+      "module_id": "llm",
+      "observation": {
+        "branch": {
+          "name": "mission-003b-resources",
+          "reason": null,
+          "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "mission-003b-resources",
+      "repository": "bubth720/JARVIS-LLM",
+      "repository_id": "llm",
+      "role": "LLM spécialisé",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "standalone_implementation",
+        "developed_branches": [
+          "feat/android-pocket-cloning",
+          "feat/android-pocket-cloning-005d",
+          "feat/android-pocket-probe",
+          "feat/android-tts-foundation",
+          "feat/pocket-tts-cpu-prototype",
+          "feat/voice-expression-005i",
+          "feat/voice-identity-005h"
+        ],
+        "evidence_ref": "registry/repositories.json#voice",
+        "existing_interfaces": [
+          {
+            "name": "SpeechEngine",
+            "path": "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt"
+          },
+          {
+            "name": "SpeechResult",
+            "path": "app/src/main/java/com/jarvis/voice/speech/SpeechEngine.kt"
+          },
+          {
+            "name": "VoiceBackendIdentityBinding",
+            "path": "identityRuntime/src/main/kotlin/com/jarvis/voice/identity/IdentityTypes.kt"
+          },
+          {
+            "name": "ExperimentalSpeechBackend",
+            "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ExperimentalSpeechBackend.kt"
+          },
+          {
+            "name": "ReferenceImporter",
+            "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+          },
+          {
+            "name": "ReferenceDecoder",
+            "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+          },
+          {
+            "name": "LocalProfileEncoder",
+            "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+          },
+          {
+            "name": "VoiceProfile",
+            "path": "pocketRuntime/src/main/kotlin/com/jarvis/voice/pocket/ReferenceImport.kt"
+          }
+        ],
+        "inspection_branch": "feat/voice-expression-005i",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "b80b1728c481200b3b0e11c0843f1a268a184fa1"
+        },
+        "next_mission": "Qualify local profiles and source contract before any CORE bridge",
+        "observed_commit": "f917ef15ce74a045564ddabdc407ccde4b595ba6",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-VOICE/tree/f917ef15ce74a045564ddabdc407ccde4b595ba6",
+        "responsibility": "Synthèse et profils vocaux compatibles ; cible capture/transcription à migrer explicitement depuis CORE.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "voice",
+          "speech"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 40,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "feat/voice-identity-005h",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Branche nouvelle observée par Git ; contenu 005H non audité ici"
+      },
+      "module_id": "voice",
+      "observation": {
+        "branch": {
+          "name": "feat/voice-identity-005h",
+          "reason": null,
+          "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "feat/voice-identity-005h",
+      "repository": "bubth720/JARVIS-VOICE",
+      "repository_id": "voice",
+      "role": "VOICE spécialisée",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "standalone_implementation",
+        "developed_branches": [
+          "development/mission-002"
+        ],
+        "evidence_ref": "registry/repositories.json#interface",
+        "existing_interfaces": [
+          {
+            "name": "AvatarSession",
+            "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt"
+          },
+          {
+            "name": "HomeAction",
+            "path": "app/src/main/java/com/jarvis/interfaceapp/domain/HomeState.kt"
+          }
+        ],
+        "inspection_branch": "development/mission-002",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": null
+        },
+        "next_mission": "Clarify scope before implementation",
+        "observed_commit": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-INTERFACE/tree/d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "responsibility": "UI et futur avatar ; pas de génération, mémoire ou orchestration implicites.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "ui"
+        ],
+        "target_dependencies": [
+          "core"
+        ],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 2,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "development/mission-002",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom et branche observés, sans audit applicatif"
+      },
+      "module_id": "interface",
+      "observation": {
+        "branch": {
+          "name": "development/mission-002",
+          "reason": null,
+          "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "development/mission-002",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "development/mission-002",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "repository_id": "interface",
+      "role": "INTERFACE autonome",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "readme_only",
+        "developed_branches": [],
+        "evidence_ref": "registry/repositories.json#interface-placeholder",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "a857f5019354ea1c912e6f66bebdcc053c0cb700"
+        },
+        "next_mission": "Clarify scope before implementation",
+        "observed_commit": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-INTERFACE-/tree/a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "responsibility": "Dépôt distinct conservé ; aucune fonctionnalité déduite de son nom.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 0,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom conservé exactement ; aucun regroupement"
+      },
+      "module_id": "interface-placeholder",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-INTERFACE-",
+      "repository_id": "interface-placeholder",
+      "role": "INTERFACE- à clarifier",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "readme_only",
+        "developed_branches": [],
+        "evidence_ref": "registry/repositories.json#nexus",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "b27df0b84d8f0082d17ca6278549298aaaf97926"
+        },
+        "next_mission": "Clarify scope before implementation",
+        "observed_commit": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-NEXUS/tree/b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "responsibility": "Cible proposée : documents, Wikipedia/Kiwix, index/recherche et stockage des souvenirs confirmés ; CORE décide des permissions et confirmations. Aucun code NEXUS actuellement.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "documents"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 0,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Aucun audit applicatif dans cette mission"
+      },
+      "module_id": "nexus",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "repository_id": "nexus",
+      "role": "NEXUS cible documentaire",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "readme_only",
+        "developed_branches": [],
+        "evidence_ref": "registry/repositories.json#evolution-candidate",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0"
+        },
+        "next_mission": "Clarify scope before implementation",
+        "observed_commit": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-VOLUTION-/tree/a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "responsibility": "Équivalence plausible non confirmée ; cible diagnostics et correctifs isolés soumis à validation.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "correction"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 0,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom conservé exactement"
+      },
+      "module_id": "evolution-candidate",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "repository_id": "evolution-candidate",
+      "role": "VOLUTION- candidat EVOLUTION",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "readme_only",
+        "developed_branches": [],
+        "evidence_ref": "registry/repositories.json#services",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "c9f94ad2fa219a5e09cda92fb451aca606ee1646"
+        },
+        "next_mission": "Clarify scope before implementation",
+        "observed_commit": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-SERVICES/tree/c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "responsibility": "Outils additionnels sous autorisation ; aucun runtime implémenté observé.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "tools"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 0,
+          "status": "not_executed_here"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [
+          "Ne pas renommer ni fusionner les dépôts similaires."
+        ],
+        "next_action": "Auditer le contenu et vérifier les résultats CI via API avant toute conclusion.",
+        "phase": "unknown",
+        "role_basis": "Nom seul, capacités non auditées"
+      },
+      "module_id": "services",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "repository_id": "services",
+      "role": "SERVICES cible outils",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "consolidation": {
+        "captured_at": "2026-10-15T17:46:31+00:00",
+        "code_state": "coordination_local_only",
+        "developed_branches": [],
+        "evidence_ref": "registry/repositories.json#unified",
+        "existing_interfaces": [],
+        "inspection_branch": "main",
+        "local_base_commit": "f7b7a5ad96527bc43bd5349b97b7834667da9f03",
+        "merged_branch": {
+          "name": "main",
+          "observed_commit": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
+        },
+        "next_mission": "User review of proposed ADR and separate authorized implementation missions",
+        "observed_commit": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "physical_qualification": "not_checked",
+        "planned_interfaces": [
+          "contracts/v1/capability-manifest.schema.json",
+          "contracts/v1/request-envelope.schema.json",
+          "contracts/v1/response-envelope.schema.json",
+          "contracts/v1/resource-lease.schema.json",
+          "contracts/v1/health-status.schema.json"
+        ],
+        "proof_url": "https://github.com/bubth720/JARVIS-UNIFIED/tree/e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "responsibility": "Source de vérité technique, registres, contrats, audits et plans ; pas de troisième moteur ni APK doublon.",
+        "scope_boundaries": [
+          "No mandatory cloud at application runtime",
+          "No integration inferred from CI or repository membership"
+        ],
+        "target_capability_ownership": [
+          "technical_registry"
+        ],
+        "target_dependencies": [],
+        "tests": {
+          "ci": "unknown_api_unavailable",
+          "source_test_files": 0,
+          "status": "local_checks_to_be_reported"
+        },
+        "unverified": [
+          "GitHub PR/CI live access",
+          "Physical device operation"
+        ]
+      },
+      "last_verified_commit": {
+        "branch": "main",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [
+          "Missions001/002 présentes localement, absentes des branches annoncées sur GitHub.",
+          "API GitHub actuellement inaccessible via le proxy."
+        ],
+        "decisions": [
+          "Préserver la base locale mission-002-backup ; aucune publication autorisée."
+        ],
+        "local_base_commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+        "local_branch": "mission-003-central-registry",
+        "next_action": "Revoir le registre ; conserver les branches locales et décider séparément de leur éventuelle publication.",
+        "phase": "in_progress"
+      },
+      "module_id": "unified",
+      "observation": {
+        "branch": {
+          "name": "main",
+          "reason": null,
+          "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "reference_branch": "main",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "repository_id": "unified",
+      "role": "UNIFIED coordination sans runtime",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,22 @@
+$ python3 scripts/validate_unified.py
+{"contracts": 5, "invalid_examples_rejected": 5, "repositories": 9, "valid_examples": 5}
+exit_code=0
+
+$ python3 registry/scripts/update_registry.py --validate-only
+Registre valide : 9 dépôts, 16 missions.
+exit_code=0
+
+$ git diff --check
+exit_code=0
+
+$ git diff --check d74730a HEAD
+docs/CAHIER_DES_CHARGES_001F.md:4: trailing whitespace.
++**Date de référence : 15 octobre 2026** [two intentional trailing spaces]
+docs/CAHIER_DES_CHARGES_001F.md:5: trailing whitespace.
++**Dépôt de travail exclusif :** `bubth720/JARVIS-UNIFIED` [two intentional trailing spaces]
+docs/CAHIER_DES_CHARGES_001F.md:6: trailing whitespace.
++**Type :** continuation de la Mission 001 (ne pas repartir de zéro) [two intentional trailing spaces]
+exit_code=2
+Exception: exact user specification retains three Markdown hard breaks.
+$ git diff --check d74730a HEAD -- . :!docs/CAHIER_DES_CHARGES_001F.md
+exit_code=0

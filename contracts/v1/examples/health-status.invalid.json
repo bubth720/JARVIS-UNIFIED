@@ -1,0 +1,14 @@
+{
+  "contract_version": "1.0.0",
+  "module_id": "voice",
+  "state": "unknown",
+  "checked_at": "2026-10-15T00:00:00Z",
+  "reason_code": "UNKNOWN",
+  "diagnostic": {
+    "model_resident": null,
+    "active_heavy_work": null,
+    "qualified_hardware": null,
+    "details_logged": false,
+    "private_path": "/synthetic/forbidden"
+  }
+}

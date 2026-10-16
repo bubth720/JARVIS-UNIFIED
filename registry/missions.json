@@ -1,0 +1,740 @@
+{
+  "generation": "39fa39d3478d4bf7ac97317909c25543",
+  "missions": [
+    {
+      "branch": "docs/mission-002-project-knowledge",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "CORE-KNOWLEDGE",
+      "last_verified_commit": {
+        "branch": "docs/mission-002-project-knowledge",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "e0417e1609b478073e7cd019a25f8146a25a0fb8",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Branche inventoriée Mission001 ; intégrée à main selon contrôle historique.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "docs/mission-002-project-knowledge",
+          "reason": null,
+          "sha": "e0417e1609b478073e7cd019a25f8146a25a0fb8",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JAVIS-Local-v2",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "fix/api-24-25-time-reply",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "CORE-TIME",
+      "last_verified_commit": {
+        "branch": "fix/api-24-25-time-reply",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "d7e51b4ac55b0726e5289b7f062478903fb7aa67",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "7 tests JVM rapportés historiquement dans AUDIT.md, pas une observation CI courante.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "fix/api-24-25-time-reply",
+          "reason": null,
+          "sha": "d7e51b4ac55b0726e5289b7f062478903fb7aa67",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JAVIS-Local-v2",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "fix/sqlite-data-preservation",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "CORE-SQLITE",
+      "last_verified_commit": {
+        "branch": "fix/sqlite-data-preservation",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "7a5b53e3247dc7132eb9e5648ecf4169a4054d62",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "33 cas SQLite rapportés historiquement ; pas de CI relue par cette mission.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "fix/sqlite-data-preservation",
+          "reason": null,
+          "sha": "7a5b53e3247dc7132eb9e5648ecf4169a4054d62",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JAVIS-Local-v2",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "mission-002-prototype",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "LLM-002",
+      "last_verified_commit": {
+        "branch": "mission-002-prototype",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "aa6b3d37c9109dc3da1296bc00214839bb218e39",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Audit Mission001 disponible ; état de mission non déduit du nom ou de l’existence de sa branche.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-002-prototype",
+          "reason": null,
+          "sha": "aa6b3d37c9109dc3da1296bc00214839bb218e39",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "mission-002b-memory",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "LLM-002B",
+      "last_verified_commit": {
+        "branch": "mission-002b-memory",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "204c6c9a117501286aac54202c6e7dd1365c48b5",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Audit Mission001 disponible ; état de mission non déduit du nom ou de l’existence de sa branche.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-002b-memory",
+          "reason": null,
+          "sha": "204c6c9a117501286aac54202c6e7dd1365c48b5",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "mission-002c-tablet",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "LLM-002C",
+      "last_verified_commit": {
+        "branch": "mission-002c-tablet",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "fbda51f3ed762d8e63d5397618daf052567002d6",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Audit Mission001 disponible ; état de mission non déduit du nom ou de l’existence de sa branche.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-002c-tablet",
+          "reason": null,
+          "sha": "fbda51f3ed762d8e63d5397618daf052567002d6",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "mission-003-catalogue",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "LLM-003",
+      "last_verified_commit": {
+        "branch": "mission-003-catalogue",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "0b5eba7a37d9304e2a33e66ab6e84a0f70e02a2a",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Audit Mission001 disponible ; état de mission non déduit du nom ou de l’existence de sa branche.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-003-catalogue",
+          "reason": null,
+          "sha": "0b5eba7a37d9304e2a33e66ab6e84a0f70e02a2a",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "mission-003b-resources",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "LLM-003B",
+      "last_verified_commit": {
+        "branch": "mission-003b-resources",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Audit Mission001 disponible ; état de mission non déduit du nom ou de l’existence de sa branche.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "mission-003b-resources",
+          "reason": null,
+          "sha": "1756e29557287550b5cfdffdd911cada2a302db6",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-LLM",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "feat/pocket-tts-cpu-prototype",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "VOICE-CPU",
+      "last_verified_commit": {
+        "branch": "feat/pocket-tts-cpu-prototype",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Prototype CPU, pas preuve du clonage personnel Android.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "sha": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-VOICE",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "feat/android-pocket-cloning-005d",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "VOICE-005D-G",
+      "last_verified_commit": {
+        "branch": "feat/android-pocket-cloning-005d",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "9429a9ebf0f21909ac6c59a07491fa2bca027493",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [
+          "Validation humaine sur les appareils cibles non démontrée par l’audit Mission001.",
+          "Échecs historiques AudioTrack005D et de parité FP32 à distinguer des résultats 005F/G."
+        ],
+        "decisions": [],
+        "evidence_note": "Suivi de la branche commune 005D/E/F/G ; les campagnes distinctes restent référencées dans AUDIT.md.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "feat/android-pocket-cloning-005d",
+          "reason": null,
+          "sha": "9429a9ebf0f21909ac6c59a07491fa2bca027493",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-VOICE",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "feat/voice-identity-005h",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "VOICE-005H",
+      "last_verified_commit": {
+        "branch": "feat/voice-identity-005h",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "next_action": "Auditer cette nouvelle branche ; ne pas annoncer une validation de clonage par son seul nom.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "feat/voice-identity-005h",
+          "reason": null,
+          "sha": "17c5697ba3bdb21bcbcbf4ce041cd4fc41615f55",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "feat/pocket-tts-cpu-prototype",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-VOICE",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "development/mission-002",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "INTERFACE-002",
+      "last_verified_commit": {
+        "branch": "development/mission-002",
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "scope": "remote_branch",
+        "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "source": "git",
+        "verified_at": "2026-10-15T12:29:31+00:00"
+      },
+      "manual": {
+        "blockers": [],
+        "decisions": [],
+        "evidence_note": "Identifiant de suivi déduit du nom de branche, résultat de mission inconnu.",
+        "next_action": "Vérifier le contenu de la branche et ses preuves GitHub avant de qualifier la mission.",
+        "phase": "unknown"
+      },
+      "observation": {
+        "branch": {
+          "name": "development/mission-002",
+          "reason": null,
+          "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+          "status": "success"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "development/mission-002",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "state": "success",
+      "verified_at": "2026-10-15T12:29:31+00:00"
+    },
+    {
+      "branch": "audit/mission-001",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "UNIFIED-001",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Branche locale non publiée sur GitHub ; aucune publication autorisée."
+        ],
+        "decisions": [],
+        "local_base_commit": "004b89d1f86135962e452fb644b489f69fc177d1",
+        "local_branch": "audit/mission-001",
+        "local_evidence": {
+          "commit": "004b89d1f86135962e452fb644b489f69fc177d1",
+          "path": "evidence/local-baseline.json",
+          "scope": "local_only",
+          "source": "local_git"
+        },
+        "next_action": "Préserver les livrables locaux ; mise à jour GitHub uniquement après une publication autorisée séparément.",
+        "phase": "completed"
+      },
+      "observation": {
+        "branch": {
+          "reason": "branch_not_advertised_by_git",
+          "status": "failure"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "failure",
+      "verified_at": null
+    },
+    {
+      "branch": "mission-002-backup",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "UNIFIED-002",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Branche locale non publiée sur GitHub ; aucune publication autorisée."
+        ],
+        "decisions": [],
+        "local_base_commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+        "local_branch": "mission-002-backup",
+        "local_evidence": {
+          "commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+          "path": "evidence/local-baseline.json",
+          "scope": "local_only",
+          "source": "local_git"
+        },
+        "next_action": "Préserver les livrables locaux ; mise à jour GitHub uniquement après une publication autorisée séparément.",
+        "phase": "completed"
+      },
+      "observation": {
+        "branch": {
+          "reason": "branch_not_advertised_by_git",
+          "status": "failure"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "failure",
+      "verified_at": null
+    },
+    {
+      "branch": "mission-003-central-registry",
+      "checked_at": "2026-10-15T12:29:31+00:00",
+      "id": "UNIFIED-003",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Branche locale non publiée sur GitHub ; aucune publication autorisée."
+        ],
+        "decisions": [],
+        "local_base_commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+        "local_branch": "mission-003-central-registry",
+        "local_evidence": {
+          "commit": "55680bcfe1f793618c79eb1bdc7b2b8c847b369e",
+          "kind": "branch_creation_base_not_final_commit",
+          "path": "evidence/local-baseline.json",
+          "scope": "local_only",
+          "source": "local_git"
+        },
+        "next_action": "Préserver les livrables locaux ; mise à jour GitHub uniquement après une publication autorisée séparément.",
+        "phase": "completed",
+        "validation_note": "23 tests du registre réussis localement ; API GitHub non disponible. Commit final résolu par le rapport de livraison, pas par GitHub."
+      },
+      "observation": {
+        "branch": {
+          "reason": "branch_not_advertised_by_git",
+          "status": "failure"
+        },
+        "checked_at": "2026-10-15T12:29:31+00:00",
+        "ci": {
+          "reason": "git_does_not_expose_ci",
+          "status": "not_checked"
+        },
+        "evidence_id": "39fa39d3478d4bf7ac97317909c25543",
+        "pull_requests": {
+          "reason": "git_does_not_expose_prs",
+          "status": "not_checked"
+        },
+        "repository": {
+          "default_branch": "main",
+          "reason": null,
+          "status": "success"
+        },
+        "source": "git"
+      },
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "failure",
+      "verified_at": null
+    },
+    {
+      "branch": "mission-001f-closure",
+      "checked_at": null,
+      "id": "UNIFIED-001F",
+      "last_verified_commit": null,
+      "manual": {
+        "blockers": [
+          "Publication bloquée HTTP 403 ; API PR/CI bloquée par politique réseau.",
+          "ADR en attente d’approbation humaine distincte."
+        ],
+        "decisions": [
+          "Aucun merge, raccordement produit ou changement des dépôts externes."
+        ],
+        "local_base_commit": "d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8",
+        "local_branch": "mission-001f-closure",
+        "local_evidence": "JARVIS_CENTRAL_BILAN_GENERAL.md",
+        "next_action": "Rétablir les accès et publier la branche de reprise sans forçage ; soumettre ADR et missions P0 séparément.",
+        "phase": "completed",
+        "validation_note": "Clôture locale ; résultats dans reports/001f/validation.json. Aucun SHA distant revendiqué."
+      },
+      "observation": null,
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "state": "not_checked",
+      "verified_at": null
+    }
+  ],
+  "schema_version": 1
+}

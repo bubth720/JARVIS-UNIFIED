@@ -1,0 +1,68 @@
+{
+  "archive_id": "f1f40a8f-2e0c-4a96-bcf3-6923b5ce47a5",
+  "compatibility": {
+    "android_adapter": false,
+    "pc_inference": false,
+    "reader": "mission002-python-v1"
+  },
+  "created_utc": "2026-10-15T11:59:51.078573+00:00",
+  "files": [
+    {
+      "kind": "sqlite-core",
+      "path": "core/core.sqlite",
+      "schema_version": 2,
+      "sha256": "2754d34658d3aba616a7009eb92b5609952dcf55fb4299d99d8257226b3dee6d",
+      "size": 28672
+    },
+    {
+      "kind": "memory-authorizations",
+      "path": "core/memory-authorizations.json",
+      "schema_version": 1,
+      "sha256": "3dcaa7e5c87cd8e74837ac8135e74f989d86cfd31e6c6fe903f8ee57f950290e",
+      "size": 178
+    },
+    {
+      "kind": "preferences",
+      "path": "core/preferences.json",
+      "schema_version": 1,
+      "sha256": "6f5d01a2d61360f2e69edf990e8d0b1afc041b8fc73f255a299f5d233eaff5f5",
+      "size": 82
+    },
+    {
+      "kind": "catalogue-demo",
+      "path": "llm/catalogue.json",
+      "schema_version": 1,
+      "sha256": "ff87c7561ee0479a3f281407501057ae43d00d7cf0225b8c28a49ed7c2eb1e2b",
+      "size": 81
+    },
+    {
+      "kind": "resource-references",
+      "path": "resources/resources.json",
+      "schema_version": 1,
+      "sha256": "00c727e4fa7afe257367350de74276705ee9e909a05c16d349c4694d5647f4e2",
+      "size": 291
+    },
+    {
+      "kind": "voice-demo",
+      "path": "voices/demo/profile.json",
+      "schema_version": 1,
+      "sha256": "c09c9d4b65fb18ac5ae6def5429ef42cbe85c5742ee8146bee4252df105dd87c",
+      "size": 256
+    }
+  ],
+  "format": "jarvis-backup",
+  "purpose": "synthetic-demo-only",
+  "required_engines": [
+    {
+      "id": "jarvis-demo-no-inference-v1",
+      "pack_sha256": "dea1ff9ae161c1e8ffafbf44ae3151e800d1f1606e35a3b9455f0b9cb1bc2f3d",
+      "usable": false
+    }
+  ],
+  "source_revisions": {
+    "CORE": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+    "LLM": "1756e29557287550b5cfdffdd911cada2a302db6",
+    "VOICE": "9429a9ebf0f21909ac6c59a07491fa2bca027493"
+  },
+  "version": 1
+}
