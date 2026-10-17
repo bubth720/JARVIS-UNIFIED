@@ -181,3 +181,9 @@ Aucune implémentation ni approbation automatique du contrat de fixture /2.
 [missions et résultats réels ID-001](IDENTITY_MISSIONS.md).
 CORE conserve l’autorité, un seul moteur local, aucun runtime modifié.
 La proposition attend approbation ; aucune insertion dans les fixtures /2.
+
+## D4-02E — clarification du protocole candidat
+
+[Rapport et propositions F1/F2/COMMIT/F3](docs/D4-02E/RAPPORT.md).
+Révision à valider, vecteurs synthétiques uniquement ; CORE004D reste bloquée
+jusqu’à correction LLM et revue du nouveau bundle. Aucune insertion IDENTITY /2.
