@@ -162,3 +162,12 @@ L’architecture ancienne envisageant un assemblage Android dans UNIFIED est
 [Rapport CORE004B ↔ LLM003D](docs/D4-02C/RAPPORT_FINAL.md) : références vérifiées,
 matrice et corrections proposées, comparaison O3 et deux missions de fixtures.
 Travail documentaire uniquement ; O3 reste à approuver, aucun raccordement réalisé.
+
+## D4-02D — amorçage et réconciliation proposés
+
+[Diagnostic et reprise](docs/D4-02D/BOOTSTRAP_RECOVERY.md),
+[protocole expérimental à valider](docs/D4-02D/PROTOCOLE_PROPOSE.md),
+[tests exécutés, critères et sources](docs/D4-02D/TESTS_ET_PREUVES.md),
+[missions003F/004D proposées](docs/D4-02D/MISSIONS_003F_004D.md).
+Le contrôle initial ne charge aucun modèle ; UNKNOWN reste bloquant sans preuve.
+Aucune implémentation ni approbation automatique du contrat de fixture /2.
