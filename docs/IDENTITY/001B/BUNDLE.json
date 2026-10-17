@@ -63,7 +63,7 @@
     }
   ],
   "validator_file": "scripts/identity_contracts.py",
-  "validator_sha256": "f402329fca54159e342295744938060cfbae9fbb7146db03d51b0e9f08582e50",
+  "validator_sha256": "01d0237afb4226088bb005fabd28b4471cccdc514d4e2fb22f4573af5f3b7c1e",
   "android_codec_sha256": null,
   "notes": "BUNDLE, SOURCES, reports, tools and examples excluded to avoid self-reference; vectors and eight schemas included. No runtime approval."
 }

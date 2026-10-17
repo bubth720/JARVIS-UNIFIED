@@ -3,6 +3,7 @@ import copy
 import json
 from pathlib import Path
 import unittest
+import tempfile
 from scripts import identity_contracts as ic
 
 ROOT=Path(__file__).resolve().parents[1]/'docs/IDENTITY/001B'
@@ -51,6 +52,10 @@ class IdentityCandidateTests(unittest.TestCase):
         raw=ic.canonical(example('manifest'));padded=raw+b' '*(32768-len(raw))
         self.assertTrue(ic.validate_object(ic.decode(padded)))
         with self.assertRaisesRegex(ic.IdentityError,'WIRE_LIMIT'):ic.decode(padded+b' ')
+    def test_cli_file_read_rejects_oversize_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'oversize.json';path.write_bytes(b' '*65536)
+            with self.assertRaisesRegex(ic.IdentityError,'WIRE_LIMIT'):ic.read_document(path)
     def test_depth_list_and_multibyte_bounds(self):
         with self.assertRaises(ic.IdentityError):ic.decode(b'['*9+b'0'+b']'*9)
         self.assertTrue(ic.canonical({'a':'é'*4096}))

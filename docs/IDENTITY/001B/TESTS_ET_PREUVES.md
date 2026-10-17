@@ -20,8 +20,8 @@ python3 scripts/validate_unified.py
 python3 registry/scripts/update_registry.py --validate-only
 ```
 
-27 tests nouveaux couvrent corps/doublons/UTF-8/surrogate/Float/exposant, bornes
-entier sûr/bytes/profondeur/listes, style par clé, permissions interdites, versions
+28 tests nouveaux couvrent corps/doublons/UTF-8/surrogate/Float/exposant, bornes
+entier sûr/bytes/profondeur/listes (lecture de fichier CLI bornée avant parse), style par clé, permissions interdites, versions
 incompatibles (dont fixture /2), PENDING non approbation, persistance personnelle
 refusée, references/snapshot exacts, décision rejetée, résultat de patch et
 révocation/expiration/conflit. Les vecteurs ont six cas dont Unicode non normalisé,

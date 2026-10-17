@@ -76,6 +76,12 @@ def decode(raw):
     if type(v) is not dict:fail('OBJECT_REQUIRED')
     return v
 
+def read_document(path):
+    # Bound untrusted CLI input before reading the whole file into memory.
+    with Path(path).open('rb') as stream:
+        raw=stream.read(32769)
+    return decode(raw)
+
 def canonical(value):
     bounded(value)
     raw=json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False).encode('utf-8')
@@ -224,5 +230,5 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--self-check',action='store_true');parser.add_argument('file',nargs='?');args=parser.parse_args()
     if args.self_check:print(json.dumps(self_check()));return
     if not args.file:parser.error('file or --self-check required')
-    value=decode(Path(args.file).read_bytes());validate_object(value);print(json.dumps({'valid':True,'sha256':digest(value),'runtime_or_authentication_proof':False}))
+    value=read_document(args.file);validate_object(value);print(json.dumps({'valid':True,'sha256':digest(value),'runtime_or_authentication_proof':False}))
 if __name__=='__main__':main()

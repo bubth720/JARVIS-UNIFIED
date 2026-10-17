@@ -20,7 +20,7 @@ enums/styles/bornes/reférences, algorithme canonique, exemples et six vecteurs.
 BUNDLE.json donne la formule, la liste et SHA de chaque fichier ; le vérificateur
 recalcule l’ensemble. Ni BUNDLE lui-même ni rapport ne sont inclus : pas de cycle.
 L’outil de validation UNIFIED existe réellement, SHA-256 :
-`f402329fca54159e342295744938060cfbae9fbb7146db03d51b0e9f08582e50`.
+`01d0237afb4226088bb005fabd28b4471cccdc514d4e2fb22f4573af5f3b7c1e`.
 **Aucun codec Android/Kotlin n’existe dans cette livraison : son SHA est null.**
 Le hash de l’outil Python ne constitue ni un hash de runtime CORE ni une autorisation.
 
@@ -44,7 +44,7 @@ Sous docs/IDENTITY/001B/ :
 - SOURCES.json, REMISE_CORE_ID002.md et ce rapport : provenance, écarts et gates.
 
 Ajouts hors dossier : scripts/identity_contracts.py (outil offline sans réseau,
-prompt composer, stockage ni permission), tests/test_identity_001b.py (27cas).
+prompt composer, stockage ni permission), tests/test_identity_001b.py (28cas).
 README lié au dossier. Aucun test ou validateur historique modifié.
 
 ## Sources intégralement examinées / portée
@@ -69,9 +69,9 @@ runtime_or_authentication_proof=false
 node docs/IDENTITY/001B/verify_vectors.mjs
 6 vecteurs JavaScript OK ; android_codec_tested=false
 python3 -m unittest discover -s tests -p test_identity_001b.py -q
-Ran 27 tests — OK
+Ran 28 tests — OK
 python3 -m unittest discover -s tests -v
-Ran 54 tests — OK (27 historiques +27 nouveaux)
+Ran 55 tests — OK (27 historiques +28 nouveaux)
 python3 -m unittest discover -s registry/tests -v
 Ran 23 tests — OK
 python3 -m unittest discover -s backup_prototype/tests -v
@@ -82,8 +82,8 @@ python3 registry/scripts/update_registry.py --validate-only
 Registre valide : 9 dépôts, 16 missions.
 ```
 
-Total suite globale : **107 tests réussis =80 historiques +27 nouveaux**, aucun
-échec/erreur/saut ; le lancement ciblé27 n’est pas recompté dans ce total.
+Total suite globale : **108 tests réussis =80 historiques +28 nouveaux**, aucun
+échec/erreur/saut ; le lancement ciblé28 n’est pas recompté dans ce total.
 Codes retour0. Sorties intégrales ignorées dans
 `.audit-cache/unified-two-missions/identity-001b/`, et protocole de reproduction
 [TESTS_ET_PREUVES.md](TESTS_ET_PREUVES.md). Contrôles schémas/refs/bytes/rejeu de
