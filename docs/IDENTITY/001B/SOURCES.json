@@ -1,0 +1,97 @@
+{
+  "observed_on": "2026-10-17",
+  "proof_level": "Git source read, not CI or physical qualification",
+  "sources": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "sha": "da40ed7155409b85860a22c1dbbfe35029cea29a",
+      "path": "app/src/main/java/com/stark/jarvislocal/InferenceContract.kt",
+      "sha256": "4588606d1f403fa04d770d1d7f51adb168efb7eb26c7fb98e1826dfda779b997",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/da40ed7155409b85860a22c1dbbfe35029cea29a/app/src/main/java/com/stark/jarvislocal/InferenceContract.kt"
+    },
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "sha": "da40ed7155409b85860a22c1dbbfe35029cea29a",
+      "path": "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+      "sha256": "84502568dadc3d9a9ac55eec95e7f5ac2da1439b3f5c28f5685542d98efa40e2",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/da40ed7155409b85860a22c1dbbfe35029cea29a/app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt"
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "sha": "0f462c8ad5529ba974cefa17fe6562c8d8461d26",
+      "path": "shared-runtime/src/main/java/fr/jarvis/services/modules/guard/Guard.java",
+      "sha256": "c0db62189dcce72b5d634a062679d03bbeee639c935b036c632eec31400bf7f3",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/0f462c8ad5529ba974cefa17fe6562c8d8461d26/shared-runtime/src/main/java/fr/jarvis/services/modules/guard/Guard.java"
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "sha": "0f462c8ad5529ba974cefa17fe6562c8d8461d26",
+      "path": "shared-runtime/src/main/java/fr/jarvis/services/modules/memory/Memory.java",
+      "sha256": "cf09debd97887a1345913b9d4606820b0ea1203f85e383315500dc1377ddf6e3",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/0f462c8ad5529ba974cefa17fe6562c8d8461d26/shared-runtime/src/main/java/fr/jarvis/services/modules/memory/Memory.java"
+    },
+    {
+      "repository": "bubth720/JARVIS-VOICE",
+      "sha": "521e613448083ffe6d575de2c9c369b48fb901f8",
+      "path": "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionContract.kt",
+      "sha256": "672d140f140bf9648b91bb3d69589df2c199fc782ae4d0c5a0018ee6e196bcf4",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/blob/521e613448083ffe6d575de2c9c369b48fb901f8/expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionContract.kt"
+    },
+    {
+      "repository": "bubth720/JARVIS-VOICE",
+      "sha": "521e613448083ffe6d575de2c9c369b48fb901f8",
+      "path": "docs/mission005i/EXPRESSION-CAPABILITIES.md",
+      "sha256": "354e1514336ec759881eb95599d4e851108a69d7a0f9bc9bdef04564bf03c0c0",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/blob/521e613448083ffe6d575de2c9c369b48fb901f8/docs/mission005i/EXPRESSION-CAPABILITIES.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "IDENTITY_CONSTITUTION.md",
+      "sha256": "33b89ce4d09c4f22397219cd13f16583085e7ea0126dbdf6362eb995fcb47214",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/IDENTITY_CONSTITUTION.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "IDENTITY_ARCHITECTURE.md",
+      "sha256": "47e4e08379d019a840ab15ac0acf9b6dbb48542bd7dbd85b7161e90d7e9f94fd",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/IDENTITY_ARCHITECTURE.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "IDENTITY_CONTRACTS.md",
+      "sha256": "b3e275b2e78c8b5682a807144f19b08c9a52ac4c3151f0e64aced89364d0f553",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/IDENTITY_CONTRACTS.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "IDENTITY_SECURITY.md",
+      "sha256": "7ffc7f2fb50a259e46805609a2b82b90b2b6842cfd669c28f97daa7bfe85acb9",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/IDENTITY_SECURITY.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "IDENTITY_MISSIONS.md",
+      "sha256": "54b422f3399df2c61f41d537fa1e2eb5673f299192279cca81af7c44792a9557",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/IDENTITY_MISSIONS.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md",
+      "sha256": "ce3da28ac610f045211b61a3cf028c825d0594a5ade9044642741776a8c05efe",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "sha": "1748cb0706fa4b0cfac2df963d82a14195b9d25a",
+      "path": "docs/DECISIONS/VALIDATION-IDENTITY-ID-001-2026-10-17.md",
+      "sha256": "4abab439274a215066a0fb1c8d66a44f6b0838ea933d1c3d9bcb77081eacd99a",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/1748cb0706fa4b0cfac2df963d82a14195b9d25a/docs/DECISIONS/VALIDATION-IDENTITY-ID-001-2026-10-17.md"
+    }
+  ]
+}

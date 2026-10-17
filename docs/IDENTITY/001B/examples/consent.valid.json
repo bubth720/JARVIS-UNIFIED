@@ -1,0 +1,19 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "consent",
+  "id": "10000000-0000-4000-8000-000000000005",
+  "revision": 1,
+  "subject_ref": "10000000-0000-4000-8000-000000000021",
+  "content_ref": {
+    "id": "10000000-0000-4000-8000-000000000004",
+    "revision": 1,
+    "sha256": "693581f6ca3b9702d26c7c430464bd7e2a549fe1ddd28966d2604140883aee80"
+  },
+  "decision": "GRANTED",
+  "purpose": "PERSONAL_STYLE_SESSION",
+  "confirmation_ref": "10000000-0000-4000-8000-000000000022",
+  "consent_revision": 1,
+  "created_ms": 1000,
+  "expires_ms": 60000
+}

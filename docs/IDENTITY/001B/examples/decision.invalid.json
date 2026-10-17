@@ -1,0 +1,21 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "decision",
+  "id": "10000000-0000-4000-8000-000000000007",
+  "revision": 1,
+  "proposal_ref": {
+    "id": "10000000-0000-4000-8000-000000000006",
+    "revision": 1,
+    "sha256": "21c303c38d4de665ad410c99ddb7826ae5ff56513e2d6126669f5fbd3c628182"
+  },
+  "decision": "APPROVED",
+  "reviewer_ref": "10000000-0000-4000-8000-000000000023",
+  "confirmation_ref": "10000000-0000-4000-8000-000000000024",
+  "scope": "EXACT_PROPOSAL_ONLY",
+  "created_ms": 1000,
+  "expires_ms": 60000,
+  "permissions": [
+    "execute"
+  ]
+}

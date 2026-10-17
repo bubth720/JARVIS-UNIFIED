@@ -1,0 +1,14 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "personal-preference",
+  "id": "10000000-0000-4000-8000-000000000004",
+  "revision": 1,
+  "category": "PERSONAL_STYLE",
+  "subject_ref": "10000000-0000-4000-8000-000000000021",
+  "key": "addressing",
+  "value": "TU",
+  "storage": "EPHEMERAL_ONLY",
+  "created_ms": 1000,
+  "expires_ms": 60000
+}

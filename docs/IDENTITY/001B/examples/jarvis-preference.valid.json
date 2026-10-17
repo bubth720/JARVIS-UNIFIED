@@ -1,0 +1,15 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "jarvis-preference",
+  "id": "10000000-0000-4000-8000-000000000003",
+  "revision": 1,
+  "category": "SIMULATED",
+  "key": "humour",
+  "value": "LIGHT",
+  "storage": "TECHNICAL_CONFIG",
+  "provenance": "PROGRAMMED",
+  "created_ms": 1000,
+  "expires_ms": 60000,
+  "decision_ref": null
+}

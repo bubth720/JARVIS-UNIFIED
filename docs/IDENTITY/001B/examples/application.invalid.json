@@ -1,0 +1,26 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "application",
+  "id": "10000000-0000-4000-8000-000000000008",
+  "revision": 1,
+  "proposal_ref": {
+    "id": "10000000-0000-4000-8000-000000000006",
+    "revision": 1,
+    "sha256": "21c303c38d4de665ad410c99ddb7826ae5ff56513e2d6126669f5fbd3c628182"
+  },
+  "decision_ref": {
+    "id": "10000000-0000-4000-8000-000000000007",
+    "revision": 1,
+    "sha256": "62d28e71ff5b17c10ddbf701f20dae9a6f5c48fc1086eb586b50964d2e65137a"
+  },
+  "state": "APPLIED",
+  "transaction_id": "10000000-0000-4000-8000-000000000025",
+  "previous_sha256": "13f60b25f0a06a58f18a5570448b1373402aa514efa58927960498edcc3a4dd1",
+  "result_sha256": "a660bfb9e021484a667d8cd5dc5784db7e28db94d191074efb6ca0a8dcdfb18d",
+  "rollback_ref": null,
+  "created_ms": 2000,
+  "permissions": [
+    "execute"
+  ]
+}

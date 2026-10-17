@@ -1,0 +1,30 @@
+{
+  "version": "jarvis.identity/1",
+  "schema_revision": "001B.1-candidate",
+  "kind": "change-proposal",
+  "id": "10000000-0000-4000-8000-000000000006",
+  "revision": 1,
+  "target_kind": "manifest",
+  "base_ref": {
+    "id": "10000000-0000-4000-8000-000000000001",
+    "revision": 1,
+    "sha256": "13f60b25f0a06a58f18a5570448b1373402aa514efa58927960498edcc3a4dd1"
+  },
+  "proposer": "USER",
+  "sensitivity": "TECHNICAL",
+  "storage": "TECHNICAL_CONFIG",
+  "decision_state": "PENDING",
+  "patch": [
+    {
+      "key": "humour",
+      "old_value": "OFF",
+      "new_value": "LIGHT"
+    }
+  ],
+  "rationale_ref": null,
+  "created_ms": 1000,
+  "expires_ms": 60000,
+  "permissions": [
+    "execute"
+  ]
+}

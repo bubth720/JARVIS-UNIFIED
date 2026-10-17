@@ -181,3 +181,12 @@ Aucune implémentation ni approbation automatique du contrat de fixture /2.
 [missions et résultats réels ID-001](IDENTITY_MISSIONS.md).
 CORE conserve l’autorité, un seul moteur local, aucun runtime modifié.
 La proposition attend approbation ; aucune insertion dans les fixtures /2.
+
+## IDENTITY ID-001B — candidat de contrat borné
+
+[Spécification et schémas](docs/IDENTITY/001B/CONTRACT.md),
+[port en lecture seule](docs/IDENTITY/001B/IdentityPort.md),
+[remise et gate CORE ID-002](docs/IDENTITY/001B/REMISE_CORE_ID002.md),
+[rapport et validations](docs/IDENTITY/001B/RAPPORT.md).
+Format candidat et vecteurs à accepter avant consommation ; aucune identité
+activée sur Android, aucun changement des contrats existants ou fixtures /2.
