@@ -67,10 +67,10 @@ python3 scripts/validate_unified.py
 python3 registry/scripts/update_registry.py --validate-only
 Registre valide : 9 dépôts, 16 missions.
 python3 docs/D4-02E/verify_vectors.py
-11 contrôles OK ; android_or_native_proof=false
+22 contrôles OK ; android_or_native_proof=false
 ```
 
-**80 tests réussis, aucun échec/erreur/saut** ; tous codes retour0. Les onze contrôles
+**80 tests réussis, aucun échec/erreur/saut** ; tous codes retour0. Les vingt-deux contrôles
 de vecteurs incluent encodeurs indépendants, ordre, Unicode et mutations/proof local
 incorrect ; pas des tests Binder/natif ni approbation d’un codec Android.
 Sorties complètes ignorées dans `.audit-cache/unified-two-missions/d4-02e/` ;

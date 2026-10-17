@@ -113,6 +113,9 @@ conserve UNKNOWN. Les effets de chaque frontière sont à tester avec coupure I/
 primitive C et les quatre hashes attendus. contract=64zéros est un **sentinel de
 test**, pas le digest du futur bundle ni une autorisation. Le nonce fixe est
 réservé au test. Taille du COMMIT d’exemple7508octets, pas garantie de tous les cas.
+Dix vecteurs de messages couvrent toutes les tables modifiées, INSPECT/SNAPSHOT et
+une ancienne clé PRESENT complète ; le label de hash de ces messages est
+jarvis.fixture.p2/2.message.D4E1.
 [verify_vectors.py](verify_vectors.py) vérifie deux encodeurs indépendants et
 mutations ; ne vérifie pas un UID/Binder ou l’état réel du worker.
 

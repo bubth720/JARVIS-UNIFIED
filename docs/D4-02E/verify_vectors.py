@@ -80,5 +80,16 @@ def main():
     except ValueError:count+=1
     else:raise AssertionError('wrong local proof')
     assert len(encode(v['commit']))==v['expected']['commit_json_bytes']<=24576;count+=1
+    for item in v['message_vectors']:
+        fields=item['fields'];kind=item.get('table',item['kind'])
+        names=set(t['fields'][kind])
+        if fields.get('prior_key_state')=='PRESENT':names.update(t['prior_fields_when_PRESENT'])
+        assert set(fields)==names and fields['kind']==kind
+        assert canonical(fields)==independent(fields)
+        assert len(canonical(fields))==item['canonical_bytes']
+        assert digest('jarvis.fixture.p2/2.message.D4E1',fields)==item['sha256']
+        count+=1
+    # No prior-key fields may hide in the NONE variant.
+    assert not set(t['prior_fields_when_PRESENT']) & set(v['commit']);count+=1
     print(json.dumps({'checks':count,'result':'OK','android_or_native_proof':False,'hashes':actual},ensure_ascii=False))
 if __name__=='__main__':main()
