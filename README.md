@@ -171,3 +171,13 @@ Travail documentaire uniquement ; O3 reste à approuver, aucun raccordement réa
 [missions003F/004D proposées](docs/D4-02D/MISSIONS_003F_004D.md).
 Le contrôle initial ne charge aucun modèle ; UNKNOWN reste bloquant sans preuve.
 Aucune implémentation ni approbation automatique du contrat de fixture /2.
+
+## IDENTITY — ID-001, proposition documentaire
+
+[Constitution B proposée](IDENTITY_CONSTITUTION.md),
+[architecture et sources](IDENTITY_ARCHITECTURE.md),
+[structures/compatibilité](IDENTITY_CONTRACTS.md),
+[sécurité et restauration](IDENTITY_SECURITY.md),
+[missions et résultats réels ID-001](IDENTITY_MISSIONS.md).
+CORE conserve l’autorité, un seul moteur local, aucun runtime modifié.
+La proposition attend approbation ; aucune insertion dans les fixtures /2.
