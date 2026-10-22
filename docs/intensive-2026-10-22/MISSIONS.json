@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "campaign": "JARVIS-INTENSIVE-2026-10-22",
+  "status": "PREPARED_NOT_EXECUTED",
+  "branch": "plan/intensive-2026-10-22",
+  "central_base": "8ddac8fe8a1861a27d3abeca81eb4ab8f110c3a9",
+  "central_repo": "bubth720/JARVIS-UNIFIED",
+  "android_gguf": "verified_file_only",
+  "android_JNI": "NO_GO",
+  "repositories": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "planning_commit": "1b7ac9b35b5e6e133167fcaf1873e58b9db7288e",
+      "ids": [
+        "CORE-01",
+        "CORE-02",
+        "CORE-03",
+        "ID-01",
+        "ID-02",
+        "MEM-01",
+        "MEM-02"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-LLM",
+      "planning_commit": "fdb71605d91b69484a38fcf0df283365a2493f38",
+      "ids": [
+        "LLM-01",
+        "LLM-02",
+        "LLM-03"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-VOICE",
+      "planning_commit": "31a0087381db14a9d2256e6e64373ef45b38b616",
+      "ids": [
+        "VOICE-01",
+        "VOICE-02",
+        "VOICE-03"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "planning_commit": "50f5f61708d5ce6b141dec98fe0c73d89eaf00e3",
+      "ids": [
+        "UI-01",
+        "UI-02",
+        "AVA-01",
+        "AVA-02"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "planning_commit": "67e7f798b8bbcb8391e0d57ea5b886a2a9edf4db",
+      "ids": [
+        "SERV-01",
+        "SERV-02",
+        "SERV-03"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "planning_commit": "e4b2018383a35106cd326848fab597ef07a50157",
+      "ids": [
+        "NEX-01",
+        "NEX-02",
+        "NEX-03",
+        "NEX-04",
+        "NEX-05"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "planning_commit": "36d09339aa93869c36c0981800918cde818637ac",
+      "ids": [
+        "EVOL-01",
+        "EVOL-02",
+        "EVOL-03",
+        "EVOL-04"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "CORE-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/CORE-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "CORE-02",
+      "priority": "P1",
+      "wave": 2,
+      "dependencies": [
+        "CORE-01",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/CORE-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "CORE-03",
+      "priority": "P2",
+      "wave": 4,
+      "dependencies": [
+        "CORE-01",
+        "CORE-02",
+        "NEX-03",
+        "SERV-01",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/CORE-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "ID-01",
+      "priority": "P1",
+      "wave": 2,
+      "dependencies": [
+        "CORE-01"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/ID-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "ID-02",
+      "priority": "P2",
+      "wave": 3,
+      "dependencies": [
+        "ID-01",
+        "MEM-01"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/ID-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "MEM-01",
+      "priority": "P1",
+      "wave": 2,
+      "dependencies": [
+        "CORE-01"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/MEM-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "MEM-02",
+      "priority": "P2",
+      "wave": 4,
+      "dependencies": [
+        "MEM-01",
+        "NEX-03"
+      ],
+      "repository": "bubth720/JAVIS-Local-v2",
+      "path": "docs/intensive-2026-10-22/MEM-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "LLM-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-LLM",
+      "path": "docs/intensive-2026-10-22/LLM-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "LLM-02",
+      "priority": "P1",
+      "wave": 1,
+      "dependencies": [
+        "LLM-01"
+      ],
+      "repository": "bubth720/JARVIS-LLM",
+      "path": "docs/intensive-2026-10-22/LLM-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "LLM-03",
+      "priority": "P2",
+      "wave": 3,
+      "dependencies": [
+        "LLM-01",
+        "LLM-02",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JARVIS-LLM",
+      "path": "docs/intensive-2026-10-22/LLM-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "VOICE-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-VOICE",
+      "path": "docs/intensive-2026-10-22/VOICE-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "VOICE-02",
+      "priority": "P1",
+      "wave": 3,
+      "dependencies": [
+        "VOICE-01",
+        "ID-01"
+      ],
+      "repository": "bubth720/JARVIS-VOICE",
+      "path": "docs/intensive-2026-10-22/VOICE-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "VOICE-03",
+      "priority": "P2",
+      "wave": 4,
+      "dependencies": [
+        "VOICE-01",
+        "VOICE-02",
+        "CORE-02",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JARVIS-VOICE",
+      "path": "docs/intensive-2026-10-22/VOICE-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "UI-01",
+      "priority": "P1",
+      "wave": 3,
+      "dependencies": [
+        "CORE-02"
+      ],
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "path": "docs/intensive-2026-10-22/UI-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "UI-02",
+      "priority": "P1",
+      "wave": 3,
+      "dependencies": [
+        "ID-01",
+        "MEM-01"
+      ],
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "path": "docs/intensive-2026-10-22/UI-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "AVA-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "path": "docs/intensive-2026-10-22/AVA-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "AVA-02",
+      "priority": "P1",
+      "wave": 4,
+      "dependencies": [
+        "AVA-01",
+        "VOICE-02",
+        "CORE-02"
+      ],
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "path": "docs/intensive-2026-10-22/AVA-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "SERV-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-SERVICES",
+      "path": "docs/intensive-2026-10-22/SERV-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "SERV-02",
+      "priority": "P1",
+      "wave": 1,
+      "dependencies": [
+        "SERV-01"
+      ],
+      "repository": "bubth720/JARVIS-SERVICES",
+      "path": "docs/intensive-2026-10-22/SERV-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "SERV-03",
+      "priority": "P2",
+      "wave": 3,
+      "dependencies": [
+        "SERV-01",
+        "SERV-02",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JARVIS-SERVICES",
+      "path": "docs/intensive-2026-10-22/SERV-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "NEX-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-NEXUS",
+      "path": "docs/intensive-2026-10-22/NEX-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "NEX-02",
+      "priority": "P0",
+      "wave": 1,
+      "dependencies": [
+        "NEX-01"
+      ],
+      "repository": "bubth720/JARVIS-NEXUS",
+      "path": "docs/intensive-2026-10-22/NEX-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "NEX-03",
+      "priority": "P1",
+      "wave": 2,
+      "dependencies": [
+        "NEX-02"
+      ],
+      "repository": "bubth720/JARVIS-NEXUS",
+      "path": "docs/intensive-2026-10-22/NEX-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "NEX-04",
+      "priority": "P2",
+      "wave": 3,
+      "dependencies": [
+        "NEX-01",
+        "NEX-03"
+      ],
+      "repository": "bubth720/JARVIS-NEXUS",
+      "path": "docs/intensive-2026-10-22/NEX-04.md",
+      "code_executed": false
+    },
+    {
+      "id": "NEX-05",
+      "priority": "P2",
+      "wave": 2,
+      "dependencies": [
+        "NEX-01",
+        "NEX-02"
+      ],
+      "repository": "bubth720/JARVIS-NEXUS",
+      "path": "docs/intensive-2026-10-22/NEX-05.md",
+      "code_executed": false
+    },
+    {
+      "id": "EVOL-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "path": "docs/intensive-2026-10-22/EVOL-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "EVOL-02",
+      "priority": "P1",
+      "wave": 1,
+      "dependencies": [
+        "EVOL-01"
+      ],
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "path": "docs/intensive-2026-10-22/EVOL-02.md",
+      "code_executed": false
+    },
+    {
+      "id": "EVOL-03",
+      "priority": "P2",
+      "wave": 3,
+      "dependencies": [
+        "EVOL-02",
+        "UNI-01"
+      ],
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "path": "docs/intensive-2026-10-22/EVOL-03.md",
+      "code_executed": false
+    },
+    {
+      "id": "EVOL-04",
+      "priority": "P2",
+      "wave": 4,
+      "dependencies": [
+        "EVOL-03"
+      ],
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "path": "docs/intensive-2026-10-22/EVOL-04.md",
+      "code_executed": false
+    },
+    {
+      "id": "UNI-01",
+      "priority": "P0",
+      "wave": 0,
+      "dependencies": [],
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "path": "docs/intensive-2026-10-22/UNI-01.md",
+      "code_executed": false
+    },
+    {
+      "id": "UNI-02",
+      "priority": "P1",
+      "wave": 1,
+      "dependencies": [
+        "UNI-01"
+      ],
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "path": "docs/intensive-2026-10-22/UNI-02.md",
+      "code_executed": false
+    }
+  ],
+  "restrictions": [
+    "no_main_merge",
+    "no_agent_execution_before_user_assignment",
+    "no_personal_device",
+    "no_sensitive_change_without_explicit_review"
+  ]
+}
