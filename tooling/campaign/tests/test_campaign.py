@@ -270,7 +270,8 @@ class GitEvidenceTests(unittest.TestCase):
     def central_receipt(self):
         source = copy.deepcopy(self.evidence)
         receipt = {**self.receipt, "validated_repository": "bubth720/JAVIS-Local-v2",
-                   "validated_commit": source["commit"], "source_report_sha256": source["report_sha256"]}
+                   "validated_commit": source["commit"], "source_report_sha256": source["report_sha256"],
+                   "source_receipt": {"path": "VALIDATION.json", "sha256": source["receipt_sha256"]}}
         target = self.path / "NORMALIZED.json"
         target.write_text(json.dumps(receipt))
         self.commit("coordinator normalizes historical fixture")
@@ -298,6 +299,18 @@ class GitEvidenceTests(unittest.TestCase):
         receipt["validated_commit"] = self.base
         target.write_text(json.dumps(receipt))
         self.commit("invalid subject fixture")
+        evidence["receipt_origin"]["commit"] = self.git("rev-parse", "HEAD").strip()
+        evidence["receipt_sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
+        with self.assertRaises(CampaignError):
+            evaluator.verify("CORE-01", evidence)
+
+    def test_normalized_receipt_checks_original_receipt_digest_too(self):
+        evaluator, evidence = self.central_receipt()
+        target = self.path / "NORMALIZED.json"
+        receipt = json.loads(target.read_text())
+        receipt["source_receipt"]["sha256"] = "0" * 64
+        target.write_text(json.dumps(receipt))
+        self.commit("wrong historical receipt hash fixture")
         evidence["receipt_origin"]["commit"] = self.git("rev-parse", "HEAD").strip()
         evidence["receipt_sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
         with self.assertRaises(CampaignError):

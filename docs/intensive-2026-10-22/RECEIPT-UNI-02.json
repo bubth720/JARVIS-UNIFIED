@@ -6,7 +6,7 @@
   "status": "DELIVERED",
   "capabilities": ["campaign.validate.dag", "campaign.detect.ownership", "campaign.verify.git-evidence", "campaign.report.offline"],
   "checks": [
-    {"command": ["python3", "-m", "unittest", "discover", "-s", "tooling/campaign/tests", "-q"], "exit_code": 0, "passed": 29, "failed": 0, "skipped": 0}
+    {"command": ["python3", "-m", "unittest", "discover", "-s", "tooling/campaign/tests", "-q"], "exit_code": 0, "passed": 30, "failed": 0, "skipped": 0}
   ],
   "limits": ["Receipt verification is not test reproduction or native attestation", "No agent or application runtime is launched"]
 }

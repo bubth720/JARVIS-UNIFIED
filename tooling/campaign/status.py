@@ -64,6 +64,13 @@ class EvidenceGateEvaluator:
         if "receipt_origin" in evidence:
             if receipt.get("validated_repository") != node.repository or receipt.get("validated_commit") != commit or receipt.get("source_report_sha256") != evidence["report_sha256"]:
                 raise CampaignError("Central receipt is not bound to the exact source evidence")
+            if "source_receipt" in receipt:
+                source = receipt["source_receipt"]
+                if not isinstance(source, dict) or set(source) != {"path", "sha256"}:
+                    raise CampaignError("Invalid historical receipt reference")
+                original = self.git(path, "show", commit + ":" + self.safe_path(source["path"]))
+                if hashlib.sha256(original).hexdigest() != source["sha256"]:
+                    raise CampaignError("Historical receipt digest mismatch")
         planning = self.manifest.references[node.repository].planning_commit
         # Mission sheets may live on a docs-only child of the technical base.
         # Accept that parent only after verifying the exact Git diff; never
