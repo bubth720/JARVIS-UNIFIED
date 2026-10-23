@@ -66,6 +66,11 @@ reject(()->ContractSupport.parse("\\\"\\\\ud800\\\""));
 reject(()->ContractSupport.parseUtf8(new byte[]{(byte)0xc3,(byte)0x28}));
 reject(()->ContractSupport.parse("[".repeat(66)+"0"+"]".repeat(66)));
 reject(()->ContractSupport.parse(" ".repeat(65537)));
+String health=Files.readString(Path.of(args[0],"health-status.valid.json"));
+String healthDate=(String)HealthStatus.parse(health).toMap().get("checked_at");
+for(String badDate:new String[]{"0000-01-01T00:00:00Z","2026-10-23T00:00:00z","20261023T000000Z","2026-W43-5T00:00:00Z"})
+    reject(()->HealthStatus.parse(health.replace(healthDate,badDate)));
+expect(HealthStatus.parse(health.replace(healthDate,"2026-10-23T00:00:00.123+00:00")).getCheckedAt().equals("2026-10-23T00:00:00.123+00:00"));
 expect(ContractSupport.json(ContractSupport.parse("{\\\"😀\\\":1,\\\"z\\\":\\\"é\\\",\\\"\\ue000\\\":true}")).equals("{\\\"z\\\":\\\"é\\\",\\\"\\ue000\\\":true,\\\"😀\\\":1}"));
 String request=Files.readString(Path.of(args[0],"request-envelope.valid.json"));
 reject(()->RequestEnvelope.parse(request.replace("61000","1000")));

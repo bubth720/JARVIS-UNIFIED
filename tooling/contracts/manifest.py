@@ -57,9 +57,20 @@ class ContractSchemaLoader:
 
     @classmethod
     def check(cls, schema):
+        if not isinstance(schema, dict):
+            raise SchemaError("Schema object required")
         validate_schema(schema)
-        if "type" in schema and schema["type"] not in {"object", "array", "string", "integer", "boolean", "null"}:
+        if "type" in schema and (not isinstance(schema["type"], str) or schema["type"] not in {"object", "array", "string", "integer", "boolean", "null"}):
             raise SchemaError("Unsupported schema type")
+        for name in ("minimum", "maximum", "minItems", "maxItems", "minLength", "maxLength"):
+            if name in schema and (type(schema[name]) is not int or not -(2**63) <= schema[name] < 2**63):
+                raise SchemaError("Schema bounds require signed Long integers")
+            if name in schema and name not in {"minimum", "maximum"} and schema[name] < 0:
+                raise SchemaError("Negative schema size")
+        if "const" in schema and (type(schema["const"]) not in {str, bool, int} or type(schema["const"]) is int and not -(2**63) <= schema["const"] < 2**63):
+            raise SchemaError("Unsupported constant")
+        if "enum" in schema and (not isinstance(schema["enum"], list) or not schema["enum"] or any(type(x) is not str for x in schema["enum"]) or len(set(schema["enum"])) != len(schema["enum"])):
+            raise SchemaError("Unique string enum values required")
         if "properties" in schema:
             properties = schema["properties"]
             if not isinstance(properties, dict) or not set(schema.get("required", [])) <= properties.keys():
@@ -79,16 +90,17 @@ FrozenContractReader = ContractSchemaLoader
 
 
 def make_manifest(schemas):
-    payload = {"format": "jarvis.contract-manifest/1", "generator": "jarvis.dto/1",
+    payload = {"format": "jarvis.contract-manifest/1", "generator": "jarvis.dto/1.1",
+               "validation_profile": "jarvis.dto.strict-utc/1",
                "contracts": {name: {"schema": schema, "sha256": digest(schema)}
                              for name, schema in sorted(schemas.items())}}
     return {**payload, "sha256": digest(payload)}
 
 
 def verify_manifest(value):
-    if not isinstance(value, dict) or set(value) != {"format", "generator", "contracts", "sha256"}:
+    if not isinstance(value, dict) or set(value) != {"format", "generator", "validation_profile", "contracts", "sha256"}:
         raise SchemaError("Invalid manifest fields")
-    if value["format"] != "jarvis.contract-manifest/1" or value["generator"] != "jarvis.dto/1":
+    if value["format"] != "jarvis.contract-manifest/1" or value["generator"] != "jarvis.dto/1.1" or value["validation_profile"] != "jarvis.dto.strict-utc/1":
         raise SchemaError("Unknown manifest version")
     if digest({k: v for k, v in value.items() if k != "sha256"}) != value["sha256"]:
         raise SchemaError("Manifest digest mismatch")

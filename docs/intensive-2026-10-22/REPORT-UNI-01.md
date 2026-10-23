@@ -15,9 +15,9 @@ CLI `generate`/`verify-contract`. Fichiers dans `tooling/contracts`, sorties
 
 Vérifications réellement exécutées le22octobre2026 en cloud Linux x86_64 :
 
-- `python3 -m unittest discover -s tests/contract_tooling -v` :11/11 réussis.
+- `python3 -m unittest discover -s tests/contract_tooling -v` :14/14 réussis après revue.
 - `python3 -m tooling.contracts.verify_jvm` avec JDK17.0.16+8/Kotlin2.0.21 local :
-  compilation réelle des sources Java/Kotlin,40 vérifications Java et5 aller-retour
+  compilation réelle des sources Java/Kotlin,45 vérifications Java et5 aller-retour
   Kotlin réussis. Exemples valides/invalides, clés inconnues/dupliquées, immutabilité,
   UTF-8/surrogates, Unicode canonique, limites, délais, empreinte modèle,
   fausse libération et réponse tardive sont vérifiés.
@@ -35,3 +35,13 @@ archives historiques sont conservées. Kotlin/Java doivent encore être qualifi�
 dans chaque consommateur Android avant adoption.
 
 Prochaine mission : UNI-02, registre exécutable de dépendances et de preuves.
+
+Revue indépendante du23octobre : correction du refus de dates non portables et
+normalisation des erreurs de parsing, profil `jarvis.dto.strict-utc/1` explicite
+dans le manifeste du générateur1.1. Les formats ISO acceptés diffèrent du Python
+historique ; aucune équivalence complète annoncée. Les anciens manifestes sans
+profil deviennent UNKNOWN et doivent être régénérés explicitement. Bornes de
+schéma non entières/booléennes/hors Long et enums non supportés refusés avant
+génération. Les schémas v1 et leur validateur Python restent inchangés. Aucun
+consommateur Android ni copie volontaire ancienne dans SERVICES n'est mis à jour
+automatiquement par cette correction d'outillage.

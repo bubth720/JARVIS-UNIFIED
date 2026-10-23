@@ -54,6 +54,16 @@ class ContractToolingTest(unittest.TestCase):
         right["generator"] = "jarvis.dto/999"
         self.assertEqual(ContractCompatibilityChecker.compare(left, right)["status"], "UNKNOWN")
 
+    def test_unknown_or_missing_validation_profile_unknown(self):
+        left = make_manifest(self.schemas)
+        for profile in (None, "another.profile/1"):
+            right = copy.deepcopy(left)
+            if profile is None:
+                del right["validation_profile"]
+            else:
+                right["validation_profile"] = profile
+            self.assertEqual(ContractCompatibilityChecker.compare(left, right)["status"], "UNKNOWN")
+
     def test_duplicate_fields_and_nonfinite_rejected(self):
         for text in ('{"a":1,"a":2}', '{"nested":{"a":1,"a":2}}', 'NaN', 'Infinity'):
             with self.assertRaises(SchemaError):
@@ -72,6 +82,16 @@ class ContractToolingTest(unittest.TestCase):
     def test_unknown_required_field_rejected(self):
         with self.assertRaises(SchemaError):
             ContractSchemaLoader.check({"type": "object", "properties": {}, "required": ["missing"]})
+
+    def test_schema_bounds_rejected_before_generating_unusable_jvm_classes(self):
+        for value in (0.5, True, 2**63, -(2**63) - 1):
+            with self.assertRaises(SchemaError):
+                ContractSchemaLoader.check({"type": "integer", "minimum": value})
+
+    def test_unsupported_enum_and_constant_fail_early(self):
+        for spec in ({"type": "integer", "enum": [1]}, {"type": "string", "enum": ["x", "x"]}, {"const": None}, {"const": 2**63}):
+            with self.assertRaises(SchemaError):
+                ContractSchemaLoader.check(spec)
 
     def test_canonical_unicode_and_numbers(self):
         self.assertEqual(canonical({"😀": 1, "z": "é", "\ue000": True}), '{"z":"é","\ue000":true,"😀":1}'.encode())

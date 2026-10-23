@@ -40,3 +40,12 @@ télécharge rien. Il compile dans un répertoire temporaire, exécute les cinq
 exemples, leurs refus et les cas de sécurité, puis supprime uniquement ses propres
 sorties temporaires. Sans toolchain, sortie non nulle et compilation non validée.
 Les besoins de desugaring/packaging Android restent à qualifier séparément.
+
+Le générateur1.1 déclare explicitement `validation_profile:jarvis.dto.strict-utc/1`.
+Les dates utilisent le sous-ensemble portable étendu
+`YYYY-MM-DDTHH:MM:SS`, fraction optionnelle puis `Z` ou `+00:00`, année1–9999,
+fraction1–9chiffres ASCII. Secondes intercalaires et `-00:00` refusés.
+Les dates compactes/ISO semaine et `z` minuscule sont refusées. Le validateur
+Python historique accepte d'autres formes : il reste inchangé, et aucune
+égalité d'acceptation complète avec lui n'est annoncée. Un manifeste sans ce
+profil ou d'une ancienne version du générateur donne UNKNOWN, jamais COMPATIBLE.

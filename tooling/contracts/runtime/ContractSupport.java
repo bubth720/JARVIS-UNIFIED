@@ -204,7 +204,15 @@ public final class ContractSupport {
             String s=(String)value;bounds(s.codePointCount(0,s.length()),schema,"minLength","maxLength");
             if(schema.containsKey("pattern"))require(Pattern.compile((String)schema.get("pattern")).matcher(s).find(),"pattern mismatch");
             if("uuid".equals(schema.get("format")))require(UUID.fromString(s).toString().equals(s),"noncanonical UUID");
-            if("date-time".equals(schema.get("format")))require(OffsetDateTime.parse(s).getOffset().getTotalSeconds()==0,"UTC required");
+            if("date-time".equals(schema.get("format"))) {
+                // Explicit portable validation profile, narrower than Python's
+                // historical fromisoformat. Never claim identical acceptance.
+                require(s.matches("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{1,9})?(Z|\\+00:00)"),"extended UTC date-time required");
+                try {
+                    OffsetDateTime date=OffsetDateTime.parse(s);
+                    require(date.getYear()>=1&&date.getYear()<=9999&&date.getOffset().getTotalSeconds()==0,"UTC year range");
+                } catch(java.time.DateTimeException e) { throw new IllegalArgumentException("invalid UTC date-time",e); }
+            }
         }
         if(value instanceof Long)bounds((Long)value,schema,"minimum","maximum");
         if(schema.containsKey("allOf"))for(Object item:array(schema.get("allOf")))check(value,object(item));

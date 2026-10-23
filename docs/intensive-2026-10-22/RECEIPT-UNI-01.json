@@ -6,8 +6,8 @@
   "status": "DELIVERED",
   "capabilities": ["contracts.generate.jvm", "contracts.verify.closed-compatibility", "contracts.manifest.sha256"],
   "checks": [
-    {"command": ["python3", "-m", "unittest", "discover", "-s", "tests/contract_tooling", "-v"], "exit_code": 0, "passed": 11, "failed": 0, "skipped": 0},
-    {"command": ["python3", "-m", "tooling.contracts.verify_jvm"], "exit_code": 0, "passed": 45, "failed": 0, "skipped": 0}
+    {"command": ["python3", "-m", "unittest", "discover", "-s", "tests/contract_tooling", "-q"], "exit_code": 0, "passed": 14, "failed": 0, "skipped": 0},
+    {"command": ["python3", "-m", "tooling.contracts.verify_jvm"], "exit_code": 0, "passed": 50, "failed": 0, "skipped": 0}
   ],
   "limits": ["Reference JVM only; no Android consumer adopted", "No IPC or native qualification"]
 }
