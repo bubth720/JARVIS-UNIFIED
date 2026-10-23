@@ -7,6 +7,8 @@ et [tooling/campaign](tooling/campaign/README.md). Génération Java/Kotlin stri
 hors runtime, comparaison de compatibilité et registre de dépendances/preuves Git ;
 aucun contrat v1 modifié ni lancement automatique d'agent.
 [État vérifié de campagne](docs/intensive-2026-10-22/VERIFIED_STATUS.md) et
+[bilan de développement](docs/intensive-2026-10-22/CAMPAIGN_REPORT.md),
+[sources GitHub des incréments](docs/intensive-2026-10-22/DELIVERIES.md) et
 [guide du registre](registry/intensive-2026-10-22/README.md). Les livraisons logicielles
 ne constituent pas une qualification JNI, vocale ou Android physique. Les
 instantanés historiques ci-dessous restent datés et conservés.

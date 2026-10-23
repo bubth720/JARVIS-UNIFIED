@@ -12,7 +12,7 @@
   "UNI-02": {
     "status": "DELIVERED",
     "evidence": {
-      "commit": "eab35802958a38ad21cb0f0935327a888155c01b",
+      "commit": "2128077504bcefeac8ed07682202e9c6a21f923b",
       "report": "docs/intensive-2026-10-22/REPORT-UNI-02.md",
       "report_sha256": "4e1048caaaeea7457424ca6da0c29465a729385b5797fe47694f1c7c145e788c",
       "receipt": "docs/intensive-2026-10-22/RECEIPT-UNI-02.json",
@@ -87,7 +87,7 @@
       "receipt_sha256": "2546064115cbae28e18bd792f375ec5808e19e82f978c389888c2ac6ed79a161",
       "receipt_origin": {
         "repository": "bubth720/JARVIS-UNIFIED",
-        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+        "commit": "2128077504bcefeac8ed07682202e9c6a21f923b"
       }
     }
   },
@@ -101,7 +101,7 @@
       "receipt_sha256": "a97b3b98696bd93664deb44815841595681f38a008812d6f0c3409d8895ec820",
       "receipt_origin": {
         "repository": "bubth720/JARVIS-UNIFIED",
-        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+        "commit": "2128077504bcefeac8ed07682202e9c6a21f923b"
       }
     }
   },
@@ -115,7 +115,7 @@
       "receipt_sha256": "8fb832195906985de0d1895cdb7c236934d6107fd831201903a59aeb60774648",
       "receipt_origin": {
         "repository": "bubth720/JARVIS-UNIFIED",
-        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+        "commit": "2128077504bcefeac8ed07682202e9c6a21f923b"
       }
     }
   },
@@ -129,7 +129,7 @@
       "receipt_sha256": "ddd3552b1dd372f022c2ee325d5dfb5277dec2efa7d310dc4be95198c8f64afc",
       "receipt_origin": {
         "repository": "bubth720/JARVIS-UNIFIED",
-        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+        "commit": "2128077504bcefeac8ed07682202e9c6a21f923b"
       }
     }
   },
@@ -143,7 +143,7 @@
       "receipt_sha256": "2b2489e73621fc129c281378b321fa336879ae688e3cf6f9451b80503d41e738",
       "receipt_origin": {
         "repository": "bubth720/JARVIS-UNIFIED",
-        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+        "commit": "2128077504bcefeac8ed07682202e9c6a21f923b"
       }
     }
   },
@@ -222,18 +222,47 @@
     ]
   },
   "MEM-01": {
-    "status": "IN_PROGRESS",
-    "owner": "core_delivery",
-    "branch": "feat/mem-01-intensive"
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "e46ba56163e54bc03d7a2321b0fcb51449e68973",
+      "report": "docs/intensive-2026-10-22/REPORT-MEM-01.md",
+      "report_sha256": "457ca686991dab3b81372a5c2db1b2fcca1206f9c4f30efbb7e1c8a8ffe2dbe6",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-MEM-01.json",
+      "receipt_sha256": "9264719f733570e88f8527b0f22ebbc3f64bf56ee4e21862e1078f262d1b5cd8"
+    }
   },
   "VOICE-02": {
-    "status": "IN_PROGRESS",
-    "owner": "voice_delivery",
-    "branch": "feat/voice-02-intensive"
+    "status": "BLOCKED",
+    "blockers": [
+      "Incrément publié 3ffb28011506abcc94b5d4ee71d6c79fc278333b ; modulation native et rendu physique non qualifiés."
+    ],
+    "decisions": [
+      "Timeline de segments/pauses PCM logicielle disponible ; aucun phonème ni clock playback attesté."
+    ]
   },
   "NEX-05": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "3acec55616ff8e3b1666091780fca59261377e18",
+      "report": "docs/dev/NEX-05.md",
+      "report_sha256": "4f9716cd915187522a6e109c78485ed8183900c4c9424a4a23bba8b4dc8dc5d3",
+      "receipt": "docs/dev/NEX-05-VALIDATION.json",
+      "receipt_sha256": "97b4b59c126006ef5f474b4fc7fafd87ffca3b2258065f659ee0053212e5da0b"
+    }
+  },
+  "ID-02": {
+    "status": "IN_PROGRESS",
+    "owner": "core_delivery",
+    "branch": "feat/id-02-intensive"
+  },
+  "UI-02": {
+    "status": "IN_PROGRESS",
+    "owner": "plan_llm_voice",
+    "branch": "feat/ui-02-ui-avatar"
+  },
+  "NEX-04": {
     "status": "IN_PROGRESS",
     "owner": "plan_nexus_evolution",
-    "branch": "feat/nex-05-sauvegarde-chiffrable-restaura"
+    "branch": "feat/nex-04-bibliotheque-encyclopedique-ho"
   }
 }

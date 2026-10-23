@@ -30,3 +30,15 @@ pas les tests ; natif Linux, Android simulé et appareil physique restent distin
 
 Le bilan humain versionné accompagne cet instantané dans
 [VERIFIED_STATUS.md](../../docs/intensive-2026-10-22/VERIFIED_STATUS.md).
+
+[deliveries.json](deliveries.json) est un index de sources complémentaire,
+format `jarvis.campaign-source-index/1` : mission, dépôt, branche, commit complet,
+état de l'incrément (`SOFTWARE_DELIVERED` ou `PARTIAL`), liens et SHA-256 des
+rapports/reçus présents à ce commit. Il inclut les incréments partiels pour qu'ils
+restent consultables ; il ne remplace pas le gate de `verified-state.json` et ne
+débloque aucune dépendance. Les liens de branche peuvent avancer ; les liens de
+commit et les empreintes désignent les octets examinés. Le commit UNI-02 dans
+l'index précède intentionnellement le commit contenant l'index lui-même.
+
+Le [bilan de développement](../../docs/intensive-2026-10-22/CAMPAIGN_REPORT.md)
+sépare code, tests réexécutés, résultats réutilisés, simulations et blocages.
