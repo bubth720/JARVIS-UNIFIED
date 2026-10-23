@@ -1,0 +1,12 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "UNI-02",
+  "base_commit": "bd283dad3a57effa276f7f4441901839d2834d5c",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "capabilities": ["campaign.validate.dag", "campaign.detect.ownership", "campaign.verify.git-evidence", "campaign.report.offline"],
+  "checks": [
+    {"command": ["python3", "-m", "unittest", "discover", "-s", "tooling/campaign/tests", "-q"], "exit_code": 0, "passed": 27, "failed": 0, "skipped": 0}
+  ],
+  "limits": ["Receipt verification is not test reproduction or native attestation", "No agent or application runtime is launched"]
+}
