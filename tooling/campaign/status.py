@@ -107,11 +107,25 @@ class EvidenceGateEvaluator:
         checks = receipt.get("checks")
         if not isinstance(checks, list) or not checks:
             raise CampaignError("Missing executed checks")
+        counted_evidence = False
         for check in checks:
             if not isinstance(check, dict) or not isinstance(check.get("command"), list) or not check["command"] or any(not isinstance(s, str) for s in check["command"]):
                 raise CampaignError("Invalid validation command")
-            if any(type(check.get(k)) is not int for k in ("exit_code", "passed", "failed", "skipped")) or check["exit_code"] != 0 or check["passed"] <= 0 or check["failed"] != 0 or check["skipped"] != 0:
+            if any(type(check.get(k)) is not int for k in ("exit_code", "passed", "failed", "skipped")) or check["exit_code"] != 0 or check["passed"] < 0 or check["failed"] != 0 or check["skipped"] != 0:
                 raise CampaignError("Failed, skipped or unexecuted checks block delivery")
+            if "lint_errors" in check and (type(check["lint_errors"]) is not int or check["lint_errors"] != 0):
+                raise CampaignError("Lint errors block delivery")
+            if check["passed"] == 0:
+                if check.get("kind") == "build_lint" and check.get("lint_errors") == 0:
+                    pass  # A successful build has no unit-test count.
+                elif check.get("kind") == "functional_demo" and isinstance(check.get("observed"), list) and check["observed"] and all(isinstance(x, str) and x for x in check["observed"]):
+                    pass  # Demonstrations never become fabricated test counts.
+                else:
+                    raise CampaignError("Unexecuted checks block delivery")
+            else:
+                counted_evidence = True
+        if not counted_evidence:
+            raise CampaignError("A build-only receipt does not prove tested software")
         capabilities = receipt.get("capabilities")
         if not isinstance(capabilities, list) or not capabilities or any(not isinstance(x, str) or not x for x in capabilities) or len(set(capabilities)) != len(capabilities):
             raise CampaignError("Missing or duplicate capabilities")

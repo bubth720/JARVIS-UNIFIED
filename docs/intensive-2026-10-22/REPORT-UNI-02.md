@@ -13,7 +13,7 @@ blocages/décisions manuels, rendu JSON/Markdown et commandes list-ready,
 list-blocked, explain-mission, export-wave. Aucune génération de processus agent,
 mutation Git, connexion réseau, exécution de patch ou orchestration applicative.
 
-Vérifications Linux réellement exécutées le23octobre2026 : suite dédiée30tests
+Vérifications Linux réellement exécutées le23octobre2026 : suite dédiée32tests
 réussis, zéro échec/erreur/saut ; vrai dépôt Git synthétique temporaire vérifiant
 les SHA, rapports, reçus et filiations, y compris base documentaire et base non
 documentaire refusée. Tests de cycles, dépendances absentes, collision ownership,
@@ -37,8 +37,9 @@ nouvel état intervient maintenant avant toute mutation ; un test vérifie son
 absence d'effet après refus. Un reçu PARTIAL ne débloque aucune dépendance.
 
 Non-régression :41 tests audit/contrats/outillage,23 registre,30 sauvegarde et
-27 campagne initialement passés, puis30 campagne après ajout des reçus centraux
-et vérification du reçu historique original. Cela représente124 tests Python
+27 campagne initialement passés, puis32 campagne après ajout des reçus centraux,
+vérification du reçu historique original et distinction build/démo/tests.
+Cela représente126 tests Python
 distincts, sans échec/erreur/saut. Le générateur
 UNI-01 a en plus été compilé/exécuté sur45 vérifications Java et5 Kotlin. Le
 validateur UNIFIED passe ; aucune modification des contrats v1, de leur ancien
@@ -51,3 +52,8 @@ attribuée à ces traductions. Le reçu central et le rapport d'origine sont li�
 par dépôt/SHA/empreinte, avec vérification de filiation et refus d'un autre
 émetteur. Trois tests couvrent ces liens et les falsifications. Les limites
 Android/instrumentation initiales restent conservées.
+
+Les builds et démonstrations SERV-02 n'ont pas de compte JUnit : ils conservent
+zéro test et leur type explicite. Les preuves testées positives sont requises en
+plus ; aucun succès de compilation n'est converti en test réussi. Deux tests
+protègent cette distinction et le refus d'une livraison fondée sur un build seul.

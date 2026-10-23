@@ -44,7 +44,11 @@ Le reçu versionné comporte `format:jarvis.campaign-validation/1`, `mission`,
 `base_commit` (vraie base complète, jamais une approximation), `capabilities`
 (liste non vide), `qualification:software_tested` et `checks`. Chaque check porte
 `command` (tableau de chaînes), `exit_code:0`, `passed` strictement positif,
-`failed:0` et `skipped:0`. Les autres validations non exécutées/sautées et les
+`failed:0` et `skipped:0`. Un build/Lint réussi peut garder `passed:0` avec
+`kind:build_lint` et `lint_errors:0` ; une démo garde aussi zéro test avec
+`kind:functional_demo` et des observations explicites. Au moins une preuve
+comptée positive reste obligatoire : un build seul ne qualifie pas le logiciel.
+Les autres validations non exécutées/sautées et les
 limites doivent rester explicites dans le rapport ; un sous-ensemble réussi
 n'autorise pas à annoncer toute la mission qualifiée. Une fonctionnalité dont
 une dépendance nécessaire manque reste BLOCKED.

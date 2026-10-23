@@ -199,6 +199,19 @@ class GitEvidenceTests(unittest.TestCase):
         with self.assertRaises(CampaignError):
             self.evaluator.verify("CORE-01", self.evidence)
 
+    def test_successful_build_and_demo_are_not_fabricated_test_counts(self):
+        self.receipt["checks"].extend([
+            {"command": ["synthetic-build"], "exit_code": 0, "passed": 0, "failed": 0, "skipped": 0, "kind": "build_lint", "lint_errors": 0},
+            {"command": ["synthetic-demo"], "exit_code": 0, "passed": 0, "failed": 0, "skipped": 0, "kind": "functional_demo", "observed": ["Synthetic fixture output inspected"]}])
+        self.write_evidence()
+        self.assertEqual(self.evaluator.verify("CORE-01", self.evidence).mission, "CORE-01")
+
+    def test_build_only_receipt_does_not_unlock_mission(self):
+        self.receipt["checks"] = [{"command": ["synthetic-build"], "exit_code": 0, "passed": 0, "failed": 0, "skipped": 0, "kind": "build_lint", "lint_errors": 0}]
+        self.write_evidence()
+        with self.assertRaises(CampaignError):
+            self.evaluator.verify("CORE-01", self.evidence)
+
     def test_partial_receipt_does_not_unlock_dependencies(self):
         self.receipt["status"] = "PARTIAL"
         self.receipt["blocking_limitations"] = ["Native tokenizer unavailable"]
