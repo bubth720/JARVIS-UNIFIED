@@ -1,0 +1,239 @@
+{
+  "UNI-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "bd283dad3a57effa276f7f4441901839d2834d5c",
+      "report": "docs/intensive-2026-10-22/REPORT-UNI-01.md",
+      "report_sha256": "99244bac35844f2b1c476c88b5b409329a8d06962323f61fe0919dc8b35c9950",
+      "receipt": "docs/intensive-2026-10-22/RECEIPT-UNI-01.json",
+      "receipt_sha256": "75723f1b72912bcca5f43633bed286ca727febda449fe7ae2ab5012fa4216b9f"
+    }
+  },
+  "UNI-02": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "eab35802958a38ad21cb0f0935327a888155c01b",
+      "report": "docs/intensive-2026-10-22/REPORT-UNI-02.md",
+      "report_sha256": "4e1048caaaeea7457424ca6da0c29465a729385b5797fe47694f1c7c145e788c",
+      "receipt": "docs/intensive-2026-10-22/RECEIPT-UNI-02.json",
+      "receipt_sha256": "bb4814644071261b937845bd34fa6ddb55778355bfb75964ba1c454f80596e1a"
+    }
+  },
+  "LLM-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "062054edcbf47ba96408f751f25189d86b0b023d",
+      "report": "docs/intensive-2026-10-22/REPORT-LLM-01.md",
+      "report_sha256": "31733e670610ba710cecbca1733ae7b9248c405fbb4d5bc68d24dd9e44cc737c",
+      "receipt": "docs/intensive-2026-10-22/RECEIPT-LLM-01.json",
+      "receipt_sha256": "a90616a541fec8053fbb676fe723ab51c92d5ee7b02106151db41abd547451e1"
+    }
+  },
+  "CORE-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "e86107b8213b0aeaf9d22025cf6bef91a8e544a5",
+      "report": "docs/intensive-2026-10-22/REPORT-CORE-01.md",
+      "report_sha256": "9cfa42b5a88aa749c2e1d58756d04a15833abe7e50e1b21c4c6e410ee901770e",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-CORE-01.json",
+      "receipt_sha256": "8ba9fe58b295a74570159b817a46a5d41841dc788f28ef8a3ce1c74537a163c6"
+    }
+  },
+  "CORE-02": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "e86107b8213b0aeaf9d22025cf6bef91a8e544a5",
+      "report": "docs/intensive-2026-10-22/REPORT-CORE-02.md",
+      "report_sha256": "9e70865a46fcd5a6e4c4524a007567184d70eb7928a7df6ea6d3fa2bc2f665cb",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-CORE-02.json",
+      "receipt_sha256": "484a64bb9e41095140d1aa5770487722007b8da4761e66360319e8d54a2451e2"
+    }
+  },
+  "VOICE-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "99d4073426896c992141bc010a69bb2690e03e71",
+      "report": "docs/intensive-2026-10-22/REPORT-VOICE-01.md",
+      "report_sha256": "6a466d4f765d42adf4724455a65968911e56f83d948e72ff11411b394d4fe582",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-VOICE-01.json",
+      "receipt_sha256": "d18092926f60a26a696603a49a1be5cfafe53e7ba4955ce64452cf4cee496b27"
+    }
+  },
+  "LLM-02": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Incrément logiciel publié ; tokenisation exacte/worker natif non qualifiés."
+    ],
+    "decisions": [
+      "Aucune activation JNI/F3B ou réconciliation CORE004D autorisée."
+    ]
+  },
+  "LLM-03": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Incrément logiciel publié ; tokenisation exacte/worker natif non qualifiés."
+    ],
+    "decisions": [
+      "Aucune activation JNI/F3B ou réconciliation CORE004D autorisée."
+    ]
+  },
+  "AVA-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "0c6d8a1bdeabe8f23fe8f98263cfe88d8c3c216e",
+      "report": "docs/intensive-2026-10-22/REPORT-AVA-01.md",
+      "report_sha256": "2bb4761eb26339a6ffcbf533365c6037bcf2cfdf774be3bfbcffe6516ccbaed9",
+      "receipt": "registry/intensive-2026-10-22/normalized-receipts/AVA-01.json",
+      "receipt_sha256": "2546064115cbae28e18bd792f375ec5808e19e82f978c389888c2ac6ed79a161",
+      "receipt_origin": {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+      }
+    }
+  },
+  "EVOL-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "9cc6288b537d71743fbb634a8d098ce304441464",
+      "report": "docs/intensive-2026-10-22/REPORT-EVOL-01.md",
+      "report_sha256": "d6d576279a0c3a45c0f798d0877df6c06b60bf4eeff4e3a322ccde68626fb54f",
+      "receipt": "registry/intensive-2026-10-22/normalized-receipts/EVOL-01.json",
+      "receipt_sha256": "a97b3b98696bd93664deb44815841595681f38a008812d6f0c3409d8895ec820",
+      "receipt_origin": {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+      }
+    }
+  },
+  "EVOL-02": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "0abd5f96caa27ee1e73a623d538e48555a02ce76",
+      "report": "docs/intensive-2026-10-22/REPORT-EVOL-02.md",
+      "report_sha256": "7e615f3dd771065b3f0977183c1007f6b2084dbec421ca963ad9d7bc466ff9b1",
+      "receipt": "registry/intensive-2026-10-22/normalized-receipts/EVOL-02.json",
+      "receipt_sha256": "8fb832195906985de0d1895cdb7c236934d6107fd831201903a59aeb60774648",
+      "receipt_origin": {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+      }
+    }
+  },
+  "NEX-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "c25d401dff6865657b75d320361ae81811363fa8",
+      "report": "docs/dev/NEX-01.md",
+      "report_sha256": "9a882055d7bfbf489032dce5cdb8e33e4ee0c4d5c7d61a8f1ce2dfb3d86dcffb",
+      "receipt": "registry/intensive-2026-10-22/normalized-receipts/NEX-01.json",
+      "receipt_sha256": "ddd3552b1dd372f022c2ee325d5dfb5277dec2efa7d310dc4be95198c8f64afc",
+      "receipt_origin": {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+      }
+    }
+  },
+  "SERV-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "d300642a4f10b53bdc988a43e0d7abb05c0d2253",
+      "report": "docs/intensive-2026-10-22/REPORT-SERV-01.md",
+      "report_sha256": "b3ba8a9363918dfff025b70ca097276bf9b0a7803b119318879cdcf231233801",
+      "receipt": "registry/intensive-2026-10-22/normalized-receipts/SERV-01.json",
+      "receipt_sha256": "2b2489e73621fc129c281378b321fa336879ae688e3cf6f9451b80503d41e738",
+      "receipt_origin": {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "eab35802958a38ad21cb0f0935327a888155c01b"
+      }
+    }
+  },
+  "ID-01": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "9b04ecd8794da54e571d95f28a1de02512e86b5d",
+      "report": "docs/intensive-2026-10-22/REPORT-ID-01.md",
+      "report_sha256": "fff1ccc54a483fbc347163f034cf4f7698439cbadf210b91d7a3b1baeeb262f7",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-ID-01.json",
+      "receipt_sha256": "8c09f40c586b7285208525f660565ecf35c5c3c4590ad0008e3fd1a75935586f"
+    }
+  },
+  "SERV-02": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "f7681707e7308d4b967e642d2f807f3e354209cc",
+      "report": "docs/intensive-2026-10-22/REPORT-SERV-02.md",
+      "report_sha256": "524ff419f36e35462e6408c72513870937d82c88eb397e7963f6904eb43438b1",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-SERV-02.json",
+      "receipt_sha256": "fc00a94d069f4c16ffa3744d3a659fb13df1d49d47b1fa24efeb6af6d6c2e9c2"
+    }
+  },
+  "SERV-03": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "3decdc47d82f9b43713c48cab244762941770a81",
+      "report": "docs/intensive-2026-10-22/REPORT-SERV-03.md",
+      "report_sha256": "1bb71574ffe18f44ddc76b815091fb06b83a72ddd29130b8392b2efa58adbb59",
+      "receipt": "docs/intensive-2026-10-22/VALIDATION-SERV-03.json",
+      "receipt_sha256": "666fff53818ba716ada0b278e367dd42e1abdb17b86f2d14603d2e8f1a9bd587"
+    }
+  },
+  "NEX-02": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "bfa46e1fe08d4943fe864ac53d0c0ba56109ea9c",
+      "report": "docs/dev/NEX-02.md",
+      "report_sha256": "4549485ed9ffc6ddd4b69900afbe67d8a511bd38130de2cb5332421369cc2168",
+      "receipt": "docs/dev/NEX-02-VALIDATION.json",
+      "receipt_sha256": "8b5bddf49dcdbf53f0a140da6376cce8e26863a609deb0b266ba2d47c3efec71"
+    }
+  },
+  "NEX-03": {
+    "status": "DELIVERED",
+    "evidence": {
+      "commit": "777e6afa75ecb99b85e52d68837cb0fefcf161cd",
+      "report": "docs/dev/NEX-03.md",
+      "report_sha256": "4c7536c7b352d8e4f4057e557439cd1431181a719a6fc9e1ca813c02767ad23d",
+      "receipt": "docs/dev/NEX-03-VALIDATION.json",
+      "receipt_sha256": "6644bfeb3c09ece1c1d54bbc3b0aa21f78545990e2956871de5c944aa287ae84"
+    }
+  },
+  "UI-01": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Incrément UI publié 48db1ecbb40dfa5b90a8e696fe6c2a62228f5ce9 ; CORE02 ne fournit pas de contenu/soumission externe, aucun transport activé."
+    ],
+    "decisions": [
+      "NON CONNECTÉ par défaut ; démo explicitement sans CORE/LLM."
+    ]
+  },
+  "EVOL-03": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Tranche inerte publiée c0180181804338d21f3bf9d4b537b709595902f7 ; sandbox OS non qualifiée : bwrap uid map read-only."
+    ],
+    "decisions": [
+      "Aucun patch non fiable exécuté, aucune nouvelle tentative de contournement."
+    ]
+  },
+  "EVOL-04": {
+    "status": "BLOCKED",
+    "blockers": [
+      "EVOL-03 ne fournit pas de runner OS qualifié."
+    ]
+  },
+  "MEM-01": {
+    "status": "IN_PROGRESS",
+    "owner": "core_delivery",
+    "branch": "feat/mem-01-intensive"
+  },
+  "VOICE-02": {
+    "status": "IN_PROGRESS",
+    "owner": "voice_delivery",
+    "branch": "feat/voice-02-intensive"
+  },
+  "NEX-05": {
+    "status": "IN_PROGRESS",
+    "owner": "plan_nexus_evolution",
+    "branch": "feat/nex-05-sauvegarde-chiffrable-restaura"
+  }
+}

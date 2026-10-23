@@ -1,5 +1,16 @@
 # JARVIS-UNIFIED — référence technique centrale
 
+## Campagne intensive du22octobre2026
+
+Les outils exécutables sont disponibles dans [tooling/contracts](tooling/contracts/README.md)
+et [tooling/campaign](tooling/campaign/README.md). Génération Java/Kotlin strictement
+hors runtime, comparaison de compatibilité et registre de dépendances/preuves Git ;
+aucun contrat v1 modifié ni lancement automatique d'agent.
+[État vérifié de campagne](docs/intensive-2026-10-22/VERIFIED_STATUS.md) et
+[guide du registre](registry/intensive-2026-10-22/README.md). Les livraisons logicielles
+ne constituent pas une qualification JNI, vocale ou Android physique. Les
+instantanés historiques ci-dessous restent datés et conservés.
+
 **UNIFIED coordonne les preuves, registres, contrats et plans. Ce dépôt n’est ni
 un runtime Android, ni un troisième moteur LLM, ni une application doublon.**
 L’orientation est formalisée dans [ADR-001](docs/DECISIONS/ADR-001-CORE-LLM-UNIFIED.md),
