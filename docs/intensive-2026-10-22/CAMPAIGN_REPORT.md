@@ -8,8 +8,8 @@ pas ses champs `code_executed: false` ni ses fiches initiales.
 ## Comment lire les résultats
 
 Le [registre vérifié](VERIFIED_STATUS.md) présente l'état strict des 31 missions.
-À cet instant, 18 missions sont livrées sur preuves logicielles ; 23 incréments
-sont publiés en comptant les cinq livraisons partielles. Les
+À cet instant, 20 missions sont livrées sur preuves logicielles ; 26 incréments
+sont publiés en comptant les six livraisons partielles. Les
 [liens GitHub par mission](DELIVERIES.md) et l'[index des sources et empreintes](../../registry/intensive-2026-10-22/deliveries.json)
 permettent de retrouver les rapports sans rechercher les anciennes conversations.
 `DELIVERED` signifie que les capacités logicielles déclarées ont un rapport, un
@@ -28,7 +28,7 @@ ne pas les additionner pour annoncer un total de tests distincts.
 | Domaine | Missions livrées sur preuves logicielles | Fonctionnement obtenu |
 |---|---|---|
 | CORE | CORE-01, CORE-02 | Routage d'intentions et tâches locales, capacités et autorisations hôte ; bus d'événements corrélés et projection d'état. Pas de nouveau transport inter-APK. |
-| IDENTITY / MEMORY dans CORE | ID-01, MEM-01 | Profils versionnés, comparaison, aperçus et retour à une révision ; mémoire de laboratoire SQLite avec confirmation du contenu exact, révocation et projection en lecture seule. Athéna reste inactive. |
+| IDENTITY / MEMORY dans CORE | ID-01, ID-02, MEM-01, MEM-02 | Profils versionnés, comparaison, aperçus et retour à une révision ; goûts simulés et règles de langage bornées ; mémoire de laboratoire SQLite avec confirmation exacte, rappel traçable et export volontaire vérifié. Athéna reste inactive. |
 | LLM | LLM-01 | Catalogue GGUF, import local vérifié et sélection persistée. Cette sélection n'est pas encore celle du worker d'inférence. |
 | VOICE | VOICE-01 | SDK réutilisant le coffre, le moteur et le renderer existants ; file PCM bornée, annulation et quarantaine. Aucun nouveau moteur TTS générique. |
 | INTERFACE / AVATAR | AVA-01 | Chargement de packs PNG vérifiés, rendu multicouche, prévisualisation et respect du cycle de vie. |
@@ -41,6 +41,7 @@ ne pas les additionner pour annoncer un total de tests distincts.
 
 | Mission | Code utile livré | Blocage conservé |
 |---|---|---|
+| CORE-03 | Client autonome JVM : recherche NEXUS, résolution de citations, outils SERVICES CSV/DOCX et confirmation de mutations dans une fixture contrôlée. | NEXUS/JDBC et SERVICES ne sont pas qualifiés pour CORE Android API24. Aucun raccordement AppGraph/SessionCoordinator/PromptBuilder ou inter-APK. |
 | LLM-02 | Planificateur de contexte et port de mesure exacte ; réautorisation avant réduction de l'historique. | Tokenizer exact renvoie `UNSUPPORTED` en l'absence d'implémentation native qualifiée. Aucun comptage approximatif substitué. |
 | LLM-03 | Profils matériels et observation passive des ressources du processus. | Patch F3B non appliqué, preuve native et prérequis LLM-02 incomplets. `EMPTY_UNATTESTED` ne prouve pas une libération. |
 | VOICE-02 | Styles contextuels, segmentation, pauses, timeline PCM et comparaison A/B locale dans Studio. | Pas de modulation native ou d'écoute physique qualifiée. Les offsets PCM ne sont ni des phonèmes ni une horloge de lecture AudioTrack attestée. |
@@ -54,7 +55,10 @@ ne pas les additionner pour annoncer un total de tests distincts.
 | CORE-01 | 425 cas réexécutés, zéro échec/saut ; builds et Lint sans erreur. | 36 résultats de fixture réutilisés séparément ; aucune qualification JNI Android. |
 | CORE-02 | 348 tests réexécutés, zéro échec/saut ; builds et Lint sans erreur. | Bus de métadonnées interne, pas une conversation distante. |
 | ID-01 | 334 tests debug réexécutés, zéro échec/saut. | SQLite sous Robolectric API24/25/35 ; les paramètres d'éditeur ne modifient pas `jarvis.identity/1`. |
+| ID-02 | 400 tests initiaux conservés ; correctif d'aperçu puis 406 tests debug réexécutés, zéro échec/saut. | Goûts et règles dans le format d'éditeur local, aucun changement de contrat v1 ni activation d'Athéna. |
 | MEM-01 | 426 tests réexécutés : 376 debug et 50 MVP2, zéro échec/saut. | Base privée isolée, pas de chiffrement applicatif ni migration historique. La restauration de fixture testée n'est pas encore un export produit. |
+| MEM-02 | 501 tests réexécutés : 448 debug et 53 MVP2, zéro échec/saut ; trois builds API24/ARM64, Lint sans erreur. | Export privé réel et protocole de copie SAF testé avec doubles ; aucun fournisseur/appareil physique qualifié. Chiffrement indisponible sans port qualifié, aucune restauration automatique. |
+| CORE-03 | 10 tests JVM sans échec/saut, vraie recherche SQLite/FTS5, CSV SERVICES et DOCX relu ; source modifiée refusée. | Android inchangé contre MEM-02 ; ses 501 résultats restent des preuves du parent, pas 501 réexécutions supplémentaires. |
 | LLM-01 / 02 / 03 | Respectivement 240, 249, 254 tests logiciels sans échec/saut ; builds et Lint sans erreur. | Le test CTest Linux sans GGUF ne prouve pas une génération Android. |
 | VOICE-01 | 25 tests SDK ciblés réussis ; régression globale 104 réussites et 16 sauts historiques sur 120 cas. | Sauts dus aux packs absents, conservés et signalés. Aucun clonage vocal ni rendu expressif physique nouvellement validé. |
 | VOICE-02 | 37 tests ciblés réussis sans saut ; régression élargie 116 réussites et 16 sauts historiques, avec résultats inchangés réutilisés explicitement. Build/Lint Studio sans erreur. | Démonstration des timelines sur ports synthétiques, aucune preuve de rendu neuronal expressif. |
@@ -102,13 +106,46 @@ Les avertissements Lint existants sont conservés et quantifiés par dépôt.
   réellement déchiffrés avant parsing et borne l'énumération ZIP. Le nettoyage
   vérifie l'identité de son workspace. Ces corrections sont couvertes par tests ;
   elles ne constituent pas une protection absolue contre un parent hôte hostile.
+- Le correctif ID-02 expose aussi les valeurs par défaut masquées et les retraits
+  d'overrides dans la revue ; les 400 anciens tests et leur commit restent conservés.
+- MEM-02 ne bloque pas la révocation sur un fournisseur de fichiers en attente.
+  Une erreur de copie conserve la copie privée, consomme la confirmation et ne
+  prétend ni effacer le document du fournisseur ni retirer les octets déjà copiés.
+
+## Reprise ciblée CORE / MEMORY
+
+| Incrément | Branche publiée | Commit exact | Résultat |
+|---|---|---|---|
+| Correctif ID-02 | `feat/id-02-intensive` | `283423cb8b9d567539f33cf7f2f1fafa602cf974` | Correctifs locaux interrompus repris ; 406 tests, dont les 400 initiaux, sans réécriture du commit `7a54f85`. |
+| MEM-02 | `feat/mem-02-intensive` | `49ad428e94edd75c2a1d115c8c2504f26609eace` | Rappel lexical confirmé, budget propre, aperçu exact et export volontaire, import isolé sans écriture ; 501 tests. |
+| CORE-03 | `feat/core-03-intensive` | `aea5ac859ac551d54fe16187c1883a487dbee9d6` | Bibliothèques clientes JVM réellement exécutées, 10 tests ; objectif Android encore PARTIAL. |
+
+Les branches forment une filiation linéaire, sans fusion. Leurs SHA distants sont
+vérifiés par `git ls-remote` ; CORE main reste
+`226e2e8cc3eebd479805b89d035eb5c1cbcad540`. Rapports, reçus, contrôles APK et guide
+du laboratoire se trouvent dans les commits [indexés par mission](DELIVERIES.md).
+La reprise ciblée ne modifie aucun autre module applicatif.
+
+Après cette reprise, les suites UNIFIED sont réellement réexécutées : 41 tests
+audit/contrats, 23 registre, 32 campagne, 30 sauvegarde, soit 126 réussites sans
+échec/erreur/saut. Le validateur passe et les 26 incréments de l'index ont leurs
+rapports/reçus relus depuis Git et leurs SHA-256 vérifiés. Ces vérifications ne
+transforment pas les six incréments PARTIAL en missions livrées.
+
+Les travaux interrompus UI-02, VOICE-03 et NEX-04 restent dans leurs checkouts et
+branches, **non commités/non publiés et non comptés comme livrés**. Des copies
+locales ZIP des patchs index/worktree et fichiers non suivis ont été vérifiées,
+originaux conservés, sous `/workspace/shared/jarvis-reprise-20261023T220439Z/`.
+Le fichier `BACKUPS.json` y conserve leurs empreintes. Ce chemin est une sauvegarde
+de l'environnement, pas un téléchargement GitHub ni une preuve de validation de
+ces trois missions. Aucun agent concurrent n'est annoncé actif après interruption.
 
 ## Suite autorisée et décisions sensibles
 
-Les missions ID-02, UI-02 et NEX-04 se poursuivent sur leurs branches distinctes.
-MEM-02 et CORE-03 suivent dans le même checkout CORE ; les portions isolées de
-VOICE-03 restent limitées par les gates natifs et de transport ; AVA-02 dépend
-des capacités temporelles réellement livrées par VOICE-02.
+La reprise ciblée ID-02/MEM-02/CORE-03 est publiée. CORE-03 doit ensuite qualifier
+les bibliothèques pour Android API24 avant de brancher ses ports au vrai hôte.
+UI-02, VOICE-03 et NEX-04 attendent reprise et publication de leurs travaux locaux ;
+AVA-02 dépend des capacités temporelles réellement livrées par VOICE-02.
 Un seul agent écrit à la fois dans un dépôt. Les [états du registre](VERIFIED_STATUS.md)
 précisent les affectations et blocages courants ; cette liste n'autorise pas le
 lancement d'une dépendance dont les fonctions manquent.

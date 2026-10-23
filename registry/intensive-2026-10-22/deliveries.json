@@ -423,20 +423,20 @@
       "mission": "UNI-02",
       "repository": "bubth720/JARVIS-UNIFIED",
       "branch": "feat/uni-02-tooling",
-      "commit": "2128077504bcefeac8ed07682202e9c6a21f923b",
+      "commit": "7d9909978c64b4ebd7eafd42dc52b23fb3a552b7",
       "implementation": "SOFTWARE_DELIVERED",
       "branch_url": "https://github.com/bubth720/JARVIS-UNIFIED/tree/feat/uni-02-tooling",
-      "commit_url": "https://github.com/bubth720/JARVIS-UNIFIED/commit/2128077504bcefeac8ed07682202e9c6a21f923b",
+      "commit_url": "https://github.com/bubth720/JARVIS-UNIFIED/commit/7d9909978c64b4ebd7eafd42dc52b23fb3a552b7",
       "sources": [
         {
           "path": "docs/intensive-2026-10-22/REPORT-UNI-02.md",
           "sha256": "4e1048caaaeea7457424ca6da0c29465a729385b5797fe47694f1c7c145e788c",
-          "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/2128077504bcefeac8ed07682202e9c6a21f923b/docs/intensive-2026-10-22/REPORT-UNI-02.md"
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/7d9909978c64b4ebd7eafd42dc52b23fb3a552b7/docs/intensive-2026-10-22/REPORT-UNI-02.md"
         },
         {
           "path": "docs/intensive-2026-10-22/RECEIPT-UNI-02.json",
           "sha256": "bb4814644071261b937845bd34fa6ddb55778355bfb75964ba1c454f80596e1a",
-          "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/2128077504bcefeac8ed07682202e9c6a21f923b/docs/intensive-2026-10-22/RECEIPT-UNI-02.json"
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/7d9909978c64b4ebd7eafd42dc52b23fb3a552b7/docs/intensive-2026-10-22/RECEIPT-UNI-02.json"
         }
       ]
     },
@@ -479,6 +479,69 @@
           "path": "docs/dev/NEX-05-VALIDATION.json",
           "sha256": "97b4b59c126006ef5f474b4fc7fafd87ffca3b2258065f659ee0053212e5da0b",
           "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/3acec55616ff8e3b1666091780fca59261377e18/docs/dev/NEX-05-VALIDATION.json"
+        }
+      ]
+    },
+    {
+      "mission": "ID-02",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "feat/id-02-intensive",
+      "commit": "283423cb8b9d567539f33cf7f2f1fafa602cf974",
+      "implementation": "SOFTWARE_DELIVERED",
+      "branch_url": "https://github.com/bubth720/JAVIS-Local-v2/tree/feat/id-02-intensive",
+      "commit_url": "https://github.com/bubth720/JAVIS-Local-v2/commit/283423cb8b9d567539f33cf7f2f1fafa602cf974",
+      "sources": [
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-ID-02.md",
+          "sha256": "575f25512e9215e50e6aa925beef743939da11a3081aff0d1e8cb98dc2a0f395",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/283423cb8b9d567539f33cf7f2f1fafa602cf974/docs/intensive-2026-10-22/REPORT-ID-02.md"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/VALIDATION-ID-02.json",
+          "sha256": "a53fd13d2165cd0d73c6069282e655d50449b13708712c373dcb0cf0abf5565b",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/283423cb8b9d567539f33cf7f2f1fafa602cf974/docs/intensive-2026-10-22/VALIDATION-ID-02.json"
+        }
+      ]
+    },
+    {
+      "mission": "MEM-02",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "feat/mem-02-intensive",
+      "commit": "49ad428e94edd75c2a1d115c8c2504f26609eace",
+      "implementation": "SOFTWARE_DELIVERED",
+      "branch_url": "https://github.com/bubth720/JAVIS-Local-v2/tree/feat/mem-02-intensive",
+      "commit_url": "https://github.com/bubth720/JAVIS-Local-v2/commit/49ad428e94edd75c2a1d115c8c2504f26609eace",
+      "sources": [
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-MEM-02.md",
+          "sha256": "3745856c2893206790a6e72b7dd7a6fc959787016b048f7867368d16c5331ea2",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/49ad428e94edd75c2a1d115c8c2504f26609eace/docs/intensive-2026-10-22/REPORT-MEM-02.md"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/VALIDATION-MEM-02.json",
+          "sha256": "5cf786bcf731363dad6591d5e7f9d3dcccee036769e41b667b31ef9af3dc4968",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/49ad428e94edd75c2a1d115c8c2504f26609eace/docs/intensive-2026-10-22/VALIDATION-MEM-02.json"
+        }
+      ]
+    },
+    {
+      "mission": "CORE-03",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "feat/core-03-intensive",
+      "commit": "aea5ac859ac551d54fe16187c1883a487dbee9d6",
+      "implementation": "PARTIAL",
+      "branch_url": "https://github.com/bubth720/JAVIS-Local-v2/tree/feat/core-03-intensive",
+      "commit_url": "https://github.com/bubth720/JAVIS-Local-v2/commit/aea5ac859ac551d54fe16187c1883a487dbee9d6",
+      "sources": [
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-CORE-03.md",
+          "sha256": "9aa6232782e3a74897b896a01fe85aea867969455631762e6e1ec258d6cc995d",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/aea5ac859ac551d54fe16187c1883a487dbee9d6/docs/intensive-2026-10-22/REPORT-CORE-03.md"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/VALIDATION-CORE-03.json",
+          "sha256": "3f8f5743895d20d233f8d26cb307c5455b802320a8e268bf839fbd6b3f38c012",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/aea5ac859ac551d54fe16187c1883a487dbee9d6/docs/intensive-2026-10-22/VALIDATION-CORE-03.json"
         }
       ]
     }
