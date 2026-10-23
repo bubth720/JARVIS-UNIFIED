@@ -1,0 +1,38 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "EVOL-02",
+  "base_commit": "9cc6288b537d71743fbb634a8d098ce304441464",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "validated_repository": "bubth720/JARVIS-VOLUTION-",
+  "validated_commit": "0abd5f96caa27ee1e73a623d538e48555a02ce76",
+  "source_report_sha256": "7e615f3dd771065b3f0977183c1007f6b2084dbec421ca963ad9d7bc466ff9b1",
+  "source_receipt": {
+    "path": "docs/intensive-2026-10-22/VALIDATION-EVOL-02.json",
+    "sha256": "baecea84a0f5ceeb8a89cf1ff2ab5ebbbcc1a5d495ed9979cbfb304f386afa8f"
+  },
+  "provenance": "transcribed from exact versioned module report; not rerun by normalization",
+  "capabilities": [
+    "evolution.evidence-diagnostics",
+    "evolution.human-case-review"
+  ],
+  "checks": [
+    {
+      "command": [
+        "./gradlew",
+        "test",
+        ":evolution-cli:installDist",
+        "--no-daemon",
+        "--console=plain"
+      ],
+      "exit_code": 0,
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "limits": [
+    "No repair applied",
+    "No Android or native attestation"
+  ]
+}
