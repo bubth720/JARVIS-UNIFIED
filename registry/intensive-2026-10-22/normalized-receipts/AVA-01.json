@@ -1,0 +1,36 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "AVA-01",
+  "base_commit": "50f5f61708d5ce6b141dec98fe0c73d89eaf00e3",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "validated_repository": "bubth720/JARVIS-INTERFACE",
+  "validated_commit": "0c6d8a1bdeabe8f23fe8f98263cfe88d8c3c216e",
+  "source_report_sha256": "2bb4761eb26339a6ffcbf533365c6037bcf2cfdf774be3bfbcffe6516ccbaed9",
+  "provenance": "transcribed from the exact versioned module report; not rerun by normalization",
+  "capabilities": [
+    "avatar.layered-assets",
+    "avatar.bounded-local-loader"
+  ],
+  "checks": [
+    {
+      "command": [
+        "./scripts/check.sh",
+        "--no-daemon",
+        "--console=plain",
+        "--max-workers=1"
+      ],
+      "exit_code": 0,
+      "passed": 84,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "limits": [
+    "Three new instrumented tests compiled, not executed"
+  ],
+  "source_receipt": {
+    "path": "docs/intensive-2026-10-22/VALIDATION-AVA-01.json",
+    "sha256": "a5e9eb1d52adb367076b1f5025fe4157c6b9894160ebc4ea713ea34d1d537c5c"
+  }
+}

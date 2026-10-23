@@ -1,0 +1,37 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "EVOL-01",
+  "base_commit": "36d09339aa93869c36c0981800918cde818637ac",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "validated_repository": "bubth720/JARVIS-VOLUTION-",
+  "validated_commit": "9cc6288b537d71743fbb634a8d098ce304441464",
+  "source_report_sha256": "d6d576279a0c3a45c0f798d0877df6c06b60bf4eeff4e3a322ccde68626fb54f",
+  "provenance": "transcribed from the exact versioned module report; not rerun by normalization",
+  "capabilities": [
+    "evolution.bounded-technical-events",
+    "evolution.sanitized-sqlite"
+  ],
+  "checks": [
+    {
+      "command": [
+        "./gradlew",
+        "test",
+        ":evolution-cli:installDist",
+        "--no-daemon",
+        "--console=plain"
+      ],
+      "exit_code": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "limits": [
+    "No Android probe or runtime connection"
+  ],
+  "source_receipt": {
+    "path": "docs/intensive-2026-10-22/VALIDATION-EVOL-01.json",
+    "sha256": "b07b7e2175ea6b12195f8df3bc6dab0d19821317704f1c8cbb1c6c150ce87d27"
+  }
+}

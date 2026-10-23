@@ -1,0 +1,35 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "SERV-01",
+  "base_commit": "67e7f798b8bbcb8391e0d57ea5b886a2a9edf4db",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "validated_repository": "bubth720/JARVIS-SERVICES",
+  "validated_commit": "d300642a4f10b53bdc988a43e0d7abb05c0d2253",
+  "source_report_sha256": "b3ba8a9363918dfff025b70ca097276bf9b0a7803b119318879cdcf231233801",
+  "provenance": "transcribed from the exact versioned module report; not rerun by normalization",
+  "capabilities": [
+    "services.tool-registry",
+    "services.confirmed-dispatch"
+  ],
+  "checks": [
+    {
+      "command": [
+        "JAVA_HOME=/workspace/.jarvis-core-tools/jdk-17.0.16+8",
+        "GRADLE_USER_HOME=/workspace/.services-tools/gradle-home",
+        "./scripts/cloud-gradle.sh",
+        ":desktop:test",
+        ":desktop:toolsDemo",
+        "--no-daemon",
+        "--max-workers=2"
+      ],
+      "exit_code": 0,
+      "passed": 69,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "limits": [
+    "Android build/Lint pending at this source commit"
+  ]
+}

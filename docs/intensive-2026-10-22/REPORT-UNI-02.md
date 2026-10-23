@@ -13,7 +13,7 @@ blocages/décisions manuels, rendu JSON/Markdown et commandes list-ready,
 list-blocked, explain-mission, export-wave. Aucune génération de processus agent,
 mutation Git, connexion réseau, exécution de patch ou orchestration applicative.
 
-Vérifications Linux réellement exécutées le23octobre2026 : suite dédiée27tests
+Vérifications Linux réellement exécutées le23octobre2026 : suite dédiée29tests
 réussis, zéro échec/erreur/saut ; vrai dépôt Git synthétique temporaire vérifiant
 les SHA, rapports, reçus et filiations, y compris base documentaire et base non
 documentaire refusée. Tests de cycles, dépendances absentes, collision ownership,
@@ -36,8 +36,17 @@ DELIVERED depuis une branche sœur sans le commit dépendant. La validation du
 nouvel état intervient maintenant avant toute mutation ; un test vérifie son
 absence d'effet après refus. Un reçu PARTIAL ne débloque aucune dépendance.
 
-Non-régression finale :41 tests audit/contrats/outillage,23 registre,27 campagne,
-30 sauvegarde =121 tests Python réussis sans échec/erreur/saut. Le générateur
+Non-régression :41 tests audit/contrats/outillage,23 registre,30 sauvegarde et
+27 campagne initialement passés, puis29 campagne après ajout des reçus centraux.
+Cela représente123 tests Python distincts, sans échec/erreur/saut. Le générateur
 UNI-01 a en plus été compilé/exécuté sur45 vérifications Java et5 Kotlin. Le
 validateur UNIFIED passe ; aucune modification des contrats v1, de leur ancien
 validateur ou du manifeste de planification.
+
+Les quatre fondations anciennes SERV-01/AVA-01/NEX-01/EVOL-01 sont normalisées
+dans le registre central à partir de leurs rapports Git exacts : aucune branche
+module réécrite, aucune commande ni compte inventé, aucune nouvelle exécution
+attribuée à ces traductions. Le reçu central et le rapport d'origine sont liés
+par dépôt/SHA/empreinte, avec vérification de filiation et refus d'un autre
+émetteur. Deux tests couvrent ces liens et les falsifications. Les limites
+Android/instrumentation initiales restent conservées.

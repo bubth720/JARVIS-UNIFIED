@@ -1,0 +1,44 @@
+{
+  "format": "jarvis.campaign-validation/1",
+  "mission": "NEX-01",
+  "base_commit": "e4b2018383a35106cd326848fab597ef07a50157",
+  "qualification": "software_tested",
+  "status": "DELIVERED",
+  "validated_repository": "bubth720/JARVIS-NEXUS",
+  "validated_commit": "c25d401dff6865657b75d320361ae81811363fa8",
+  "source_report_sha256": "9a882055d7bfbf489032dce5cdb8e33e4ee0c4d5c7d61a8f1ce2dfb3d86dcffb",
+  "provenance": "transcribed from the exact versioned module report; not rerun by normalization",
+  "capabilities": [
+    "nexus.sqlite.catalog",
+    "nexus.source-provenance"
+  ],
+  "checks": [
+    {
+      "command": [
+        "gradle",
+        "test",
+        ":nexus-cli:installDist",
+        "wrapper",
+        "--gradle-version",
+        "8.10.2",
+        "--distribution-type",
+        "bin",
+        "--gradle-distribution-sha256-sum",
+        "31c55713e40233a8303827ceb42ca48a47267a0ad4bab9177123121e71524c26",
+        "--no-daemon",
+        "--console=plain"
+      ],
+      "exit_code": 0,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "limits": [
+    "No Android qualification or inter-application connection"
+  ],
+  "source_receipt": {
+    "path": "docs/dev/NEX-01-VALIDATION.json",
+    "sha256": "731b673e436c74676f6367500f7195dccd07c7d33b6aa40cf3e25cebf8444800"
+  }
+}

@@ -35,7 +35,8 @@ class EvidenceGateEvaluator:
 
     def verify(self, mission, evidence):
         node = self.manifest.nodes[mission]
-        if set(evidence) != {"commit", "report", "report_sha256", "receipt", "receipt_sha256"}:
+        fields = {"commit", "report", "report_sha256", "receipt", "receipt_sha256"}
+        if set(evidence) not in (fields, fields | {"receipt_origin"}):
             raise CampaignError("Invalid evidence fields")
         commit = evidence["commit"]
         if not isinstance(commit, str) or not re.fullmatch("[0-9a-f]{40}", commit):
@@ -46,6 +47,23 @@ class EvidenceGateEvaluator:
         actual = self.git(path, "rev-parse", commit + "^{commit}").decode().strip()
         if actual != commit:
             raise CampaignError("Commit mismatch")
+        receipt_path, receipt_commit = path, commit
+        if "receipt_origin" in evidence:
+            origin = evidence["receipt_origin"]
+            central = self.manifest.value["central_repo"]
+            if not isinstance(origin, dict) or set(origin) != {"repository", "commit"} or origin["repository"] != central:
+                raise CampaignError("Only the central registry can normalize historical receipts")
+            if central not in self.paths or not isinstance(origin["commit"], str) or not re.fullmatch("[0-9a-f]{40}", origin["commit"]):
+                raise CampaignError("Central receipt repository or full commit missing")
+            receipt_path, receipt_commit = Path(self.paths[central]), origin["commit"]
+            self.git(receipt_path, "merge-base", "--is-ancestor", self.manifest.references[central].planning_commit, receipt_commit)
+        receipt_bytes = self.git(receipt_path, "show", receipt_commit + ":" + self.safe_path(evidence["receipt"]))
+        if hashlib.sha256(receipt_bytes).hexdigest() != evidence["receipt_sha256"]:
+            raise CampaignError("Receipt digest mismatch")
+        receipt = strict_json(receipt_bytes.decode("utf-8"))
+        if "receipt_origin" in evidence:
+            if receipt.get("validated_repository") != node.repository or receipt.get("validated_commit") != commit or receipt.get("source_report_sha256") != evidence["report_sha256"]:
+                raise CampaignError("Central receipt is not bound to the exact source evidence")
         planning = self.manifest.references[node.repository].planning_commit
         # Mission sheets may live on a docs-only child of the technical base.
         # Accept that parent only after verifying the exact Git diff; never
@@ -56,7 +74,7 @@ class EvidenceGateEvaluator:
             changes = self.git(path, "diff", "--name-status", parents[1], planning).decode().splitlines()
             if changes and all(line.startswith("A\tdocs/intensive-2026-10-22/") for line in changes):
                 allowed_bases.add(parents[1])
-        base = strict_json(self.git(path, "show", commit + ":" + self.safe_path(evidence["receipt"])).decode("utf-8")).get("base_commit")
+        base = receipt.get("base_commit")
         if not isinstance(base, str) or not re.fullmatch("[0-9a-f]{40}", base):
             raise CampaignError("Full base SHA required")
         anchored = False
@@ -71,10 +89,8 @@ class EvidenceGateEvaluator:
             raise CampaignError("Unverified technical base")
         self.git(path, "merge-base", "--is-ancestor", base, commit)
         report = self.git(path, "show", commit + ":" + self.safe_path(evidence["report"]))
-        receipt_bytes = self.git(path, "show", commit + ":" + self.safe_path(evidence["receipt"]))
         if not report.strip() or hashlib.sha256(report).hexdigest() != evidence["report_sha256"] or hashlib.sha256(receipt_bytes).hexdigest() != evidence["receipt_sha256"]:
             raise CampaignError("Evidence digest mismatch")
-        receipt = strict_json(receipt_bytes.decode("utf-8"))
         if receipt.get("format") != "jarvis.campaign-validation/1" or receipt.get("mission") != mission:
             raise CampaignError("Wrong validation receipt")
         if receipt.get("status", "DELIVERED") != "DELIVERED" or receipt.get("blocking_limitations"):

@@ -63,3 +63,13 @@ outil ne qualifie ni l'authenticité du processus natif, ni Android physique, ni
 la publication distante. Ces preuves se vérifient séparément. Les catégories
 sensibles de `OwnershipPolicy` exigent toujours une autorisation distincte ;
 leur présence dans un plan ne donne aucun droit d'exécution.
+
+Pour réutiliser les rapports anciens sans réécrire leurs branches, une preuve peut
+ajouter `receipt_origin` avec `repository:bubth720/JARVIS-UNIFIED` et un `commit`
+complet. Le reçu normalisé, stocké dans ce commit central, doit lier exactement
+`validated_repository`, `validated_commit` et `source_report_sha256` au module
+et rapport d'origine ; ses propres octets sont également vérifiés par SHA-256.
+L'ascendance du commit central est contrôlée. Aucun autre dépôt de reçus n'est
+accepté. Les commandes/comptes sont transcrits des preuves Git historiques avec
+leur provenance explicite, jamais annoncés comme des tests rejoués maintenant.
+Une validation Android restée en attente dans le rapport demeure en attente.

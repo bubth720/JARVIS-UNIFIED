@@ -267,6 +267,42 @@ class GitEvidenceTests(unittest.TestCase):
         self.assertEqual(before, (self.git("show-ref"), self.git("status", "--porcelain")))
         self.assertEqual(files, {str(p.relative_to(self.path)): p.read_bytes() for p in self.path.rglob("*") if p.is_file() and ".git" not in p.parts})
 
+    def central_receipt(self):
+        source = copy.deepcopy(self.evidence)
+        receipt = {**self.receipt, "validated_repository": "bubth720/JAVIS-Local-v2",
+                   "validated_commit": source["commit"], "source_report_sha256": source["report_sha256"]}
+        target = self.path / "NORMALIZED.json"
+        target.write_text(json.dumps(receipt))
+        self.commit("coordinator normalizes historical fixture")
+        source.update(receipt="NORMALIZED.json", receipt_sha256=hashlib.sha256(target.read_bytes()).hexdigest(),
+                      receipt_origin={"repository": "bubth720/JARVIS-UNIFIED", "commit": self.git("rev-parse", "HEAD").strip()})
+        value = copy.deepcopy(self.manifest.value)
+        value["central_base"] = self.base
+        evaluator = EvidenceGateEvaluator(CampaignManifestReader(value), {
+            "bubth720/JAVIS-Local-v2": self.path, "bubth720/JARVIS-UNIFIED": self.path})
+        return evaluator, source
+
+    def test_central_normalization_preserves_original_source_commit(self):
+        evaluator, evidence = self.central_receipt()
+        self.assertNotEqual(evidence["commit"], evidence["receipt_origin"]["commit"])
+        self.assertEqual(evaluator.verify("CORE-01", evidence).mission, "CORE-01")
+
+    def test_foreign_receipt_origin_and_wrong_subject_rejected(self):
+        evaluator, evidence = self.central_receipt()
+        bad_origin = copy.deepcopy(evidence)
+        bad_origin["receipt_origin"]["repository"] = "bubth720/JARVIS-LLM"
+        with self.assertRaises(CampaignError):
+            evaluator.verify("CORE-01", bad_origin)
+        target = self.path / "NORMALIZED.json"
+        receipt = json.loads(target.read_text())
+        receipt["validated_commit"] = self.base
+        target.write_text(json.dumps(receipt))
+        self.commit("invalid subject fixture")
+        evidence["receipt_origin"]["commit"] = self.git("rev-parse", "HEAD").strip()
+        evidence["receipt_sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
+        with self.assertRaises(CampaignError):
+            evaluator.verify("CORE-01", evidence)
+
 
 if __name__ == "__main__":
     unittest.main()
