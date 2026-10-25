@@ -1,0 +1,163 @@
+{
+  "format": "jarvis.fusion-validation/1",
+  "mission": "FUSION-01/F0",
+  "repository": "bubth720/JARVIS-UNIFIED",
+  "branch": "feat/fusion-01-integration-lock",
+  "base_commit": "329f304115c9bc5b6dd6ccc2d68d19bf455b5e6c",
+  "status": "F0_VERIFIED_PROGRAM_PARTIAL_BLOCKED",
+  "platform": {
+    "os": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.14"
+  },
+  "tests": [
+    {
+      "suite": "audit_contracts",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "passed": 41,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "fresh": true
+    },
+    {
+      "suite": "registry",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "registry/tests",
+        "-q"
+      ],
+      "passed": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "fresh": true
+    },
+    {
+      "suite": "campaign",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/campaign/tests",
+        "-q"
+      ],
+      "passed": 32,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "fresh": true
+    },
+    {
+      "suite": "backup",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "backup_prototype/tests",
+        "-q"
+      ],
+      "passed": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "fresh": true
+    },
+    {
+      "suite": "integration",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/tests",
+        "-q"
+      ],
+      "passed": 21,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "fresh": true
+    }
+  ],
+  "total_distinct_tests": 147,
+  "source_check": {
+    "command": [
+      "python3",
+      "-m",
+      "tooling.integration.cli",
+      "validate",
+      "--repositories",
+      "<local-map>"
+    ],
+    "mode": "local_git_objects",
+    "references": 20,
+    "source_files": 160,
+    "frozen_contracts": 5,
+    "exit_code": 0,
+    "external_tests_reexecuted": false,
+    "hardware_qualified": false
+  },
+  "unified_validator": {
+    "repositories": 9,
+    "contracts": 5,
+    "valid_examples": 5,
+    "invalid_examples_rejected": 5,
+    "exit_code": 0
+  },
+  "proposal": {
+    "version": "jarvis.technical-health/1-draft",
+    "approved": false,
+    "runtime_connected": false,
+    "valid_examples": 1,
+    "invalid_examples_rejected": 1
+  },
+  "not_run": [
+    "external repository test/build execution",
+    "new Android instrumentation/emulator or physical tests",
+    "native LLM generation/termination/unload",
+    "composed product E2E",
+    "new distribution APK",
+    "remote UNIFIED CI"
+  ],
+  "publication": {
+    "scope": "dedicated branch only; remote verification in final response",
+    "draft_pr": "not_created_api_forbidden",
+    "main_reference": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
+  },
+  "sha256": {
+    "docs/fusion-01/proposals/technical-health.invalid.json": "a827aa110138f3e8d139326b94d0b64b8c1301b494fc75e776b3513ea89821f0",
+    "docs/fusion-01/proposals/technical-health.schema.json": "a09920fafe78bd8f5523f29443b83a3dfabf94be6d396f56a4dcf5d93e3f4a94",
+    "docs/fusion-01/proposals/technical-health.valid.json": "13a03de95dc56424682d4fe026c52e1dbb4ff2338019cf12f5f82081ac5c2c33",
+    "integration-lock.json": "145ecec0bd2ca24bd92ce244359b6f8b23c2ddb393d6e40fc7730469f5a0bf6f",
+    "tooling/integration/__init__.py": "297cfaae28b56a57b1d6b754c6391579e7b8f9b72db4e3e32e0ea99b57ec923b",
+    "tooling/integration/cli.py": "21806349c9a00b5f5bf7b45069147cfe7f5c9bbdde09e36aa9448b9e7e53775e",
+    "tooling/integration/lock.py": "ef6ea1cdb7928ad5d0b44a797c0dee32246417d45905c868f3ecd9610eb7e78f",
+    "tooling/integration/lock.schema.json": "0824d481c93c1c20cd5b13b368c723f412535c03ddaaac22da78ac01b4d00443",
+    "tooling/integration/proposals.py": "55f59213c5d6ebb3b303470b66b0a95167ace12dc22142aa045db8b26982382b",
+    "tooling/integration/tests/test_lock.py": "87f57c2e29327b9a6f3afe85443bcb3b01ab601c982ea48382f053b110abb34d",
+    "tooling/integration/tests/test_proposals.py": "18ff08febd912faed9cf4485664fb0a713d8fcb71c098fa2a8460525921d1bb0"
+  }
+}

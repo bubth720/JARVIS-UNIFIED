@@ -1,0 +1,354 @@
+{
+  "date_utc": "2026-10-25",
+  "scope": "read_only_code_git_reports; no builds or tests executed",
+  "remote_refs_verified": true,
+  "core": {
+    "repo": "bubth720/JAVIS-Local-v2",
+    "branch": "feat/core-03-intensive",
+    "commit": "aea5ac859ac551d54fe16187c1883a487dbee9d6",
+    "parent": "49ad428e94edd75c2a1d115c8c2504f26609eace",
+    "id02": "283423cb8b9d567539f33cf7f2f1fafa602cf974",
+    "main": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+    "min_sdk": 24,
+    "compile_sdk": 35,
+    "target_sdk": 35,
+    "abi": [
+      "arm64-v8a"
+    ],
+    "toolchain": {
+      "java": 17,
+      "gradle": "8.10.2",
+      "kotlin": "2.0.21",
+      "agp": "8.7.3"
+    },
+    "license": {
+      "project": "UNKNOWN (no top-level LICENSE found)",
+      "native_llama": "dev.ffmpegkit-maintained:llama-android:0.1.1, artifact provenance docs/identity-002t/NATIVE_AUDIT.json",
+      "pdfbox": "third-party dependency notices require distribution review"
+    },
+    "schemas": {
+      "historical_sqlite": {
+        "path": "app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt",
+        "name": "jarvis_local_v2.db",
+        "version": 2,
+        "v1_v2_same_logical_schema": true
+      },
+      "confirmed_memory": {
+        "path": "app/src/main/java/com/stark/jarvislocal/memory/ConfirmedMemoryStore.kt",
+        "name": "confirmed_memory_lab.sqlite",
+        "version": 1,
+        "migration": "refused"
+      }
+    },
+    "sourcesets": [
+      "app/main",
+      "app/preview",
+      "app/mvp",
+      "app/mvp2",
+      "app/mvp3",
+      "fixtures/p2-client (includeP2Fixture=true)",
+      "integration-lab standalone JVM NOT included in Android settings"
+    ],
+    "reported_tests": [
+      {
+        "mission": "CORE03",
+        "count": 10,
+        "kind": "real libraries JVM Linux",
+        "fresh_for_this_audit": false,
+        "receipt": "docs/intensive-2026-10-22/VALIDATION-CORE-03.json"
+      },
+      {
+        "mission": "MEM02",
+        "count": 501,
+        "breakdown": {
+          "Debug": 448,
+          "Mvp2": 53
+        },
+        "kind": "JVM/Robolectric",
+        "fresh_for_this_audit": false,
+        "receipt": "docs/intensive-2026-10-22/VALIDATION-MEM-02.json"
+      },
+      {
+        "mission": "ID02",
+        "count": 406,
+        "note": "includes old400; do not sum with MEM02",
+        "fresh_for_this_audit": false
+      }
+    ],
+    "integration_pins": {
+      "nexus": {
+        "repository": "bubth720/JARVIS-NEXUS",
+        "commit": "777e6afa75ecb99b85e52d68837cb0fefcf161cd",
+        "git_tree": "b534f8a7f7e441cf264097773afb042103aefd36",
+        "source_files": 46,
+        "tree_sha256": "4a1a3cfcafe50e7f56d985a02e7017ec7d47b11d431202d3a21259d63f87521e"
+      },
+      "services": {
+        "repository": "bubth720/JARVIS-SERVICES",
+        "commit": "3decdc47d82f9b43713c48cab244762941770a81",
+        "git_tree": "56f5214de9a0d1d164638e9e128bb3335ee23499",
+        "source_files": 189,
+        "tree_sha256": "975a2dcafa3b90ed4f3216da0d1fba98410f5a940b058e55c2eb2ece2b646dbb"
+      }
+    },
+    "contracts": {
+      "correlation": "canonical UUID session/request + generation>=0",
+      "search": {
+        "question_utf8_bytes": 1024,
+        "budget_bytes_min": 256,
+        "budget_bytes_max": 16000,
+        "items": 5,
+        "sources": 5
+      },
+      "context": {
+        "version": "jarvis.core.context-lab/1",
+        "max_bytes": 20000,
+        "untrusted_data": true,
+        "generation_available": false,
+        "confirmed_memory": null
+      },
+      "tool_review": {
+        "argument_fields": 16,
+        "total_argument_bytes": 8192,
+        "invocation_timeout_ms": 5000,
+        "review_ttl_ms": 30000,
+        "pending_quota": 32,
+        "request_history_quota": 128
+      },
+      "inference": {
+        "version": 1,
+        "system_separate": true,
+        "max_context": 2048,
+        "max_output": 256,
+        "note": "legacy UTF8 conservative guard is not exact tokenization"
+      }
+    },
+    "voice_divergence": {
+      "commit": "7426665f2794cba83646008fa0f342d102141201",
+      "merge_base": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "core_only_commits": 35,
+      "voice_only_commits": 4,
+      "voice_changed_paths_since_mergebase": 20,
+      "conflict_surfaces": [
+        "AppGraph.kt",
+        "MainActivity.kt",
+        "AGENTS.md",
+        "docs/PROJECT_KNOWLEDGE.md"
+      ],
+      "runtime_activation": false
+    },
+    "blockers": [
+      "production SessionCoordinator does not consume new NEXUS/SERVICES adapters",
+      "source snapshots reject newer pins without explicit porting",
+      "no exact JNI tokenizer; requestStop UNSUPPORTED; generation completion is not unload",
+      "persona inactive; no data migrations authorized"
+    ],
+    "evidence": [
+      {
+        "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/NexusSearchAdapter.kt",
+        "sha256": "22a8acadabbdb7eda7aa828f5566c42f6b7affa484fdfb5b0b9f9abcef719de5"
+      },
+      {
+        "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/ServicesToolAdapter.kt",
+        "sha256": "6422a37754dc454eb587fc67c90466850ede6b46fd9fa542d6221681a2977fb0"
+      },
+      {
+        "path": "integration-lab/build.gradle.kts",
+        "sha256": "208cd095ce3db2f237842c2a716238d87bc6d6cb4b915977fbc2cd477b04c6ed"
+      },
+      {
+        "path": "app/src/main/java/com/stark/jarvislocal/InferenceContract.kt",
+        "sha256": "4588606d1f403fa04d770d1d7f51adb168efb7eb26c7fb98e1826dfda779b997"
+      },
+      {
+        "path": "app/src/main/java/com/stark/jarvislocal/LlamaLocalEngine.kt",
+        "sha256": "5cb8dc75c9cc17ded1d3ff3af5c7e53fc0b33dcd1c8efb0b1e1dcc45a7015ac2"
+      },
+      {
+        "path": "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+        "sha256": "6610fca9c2c4d3c1cef18c9f2521527468a3d81b99cfc4400958bfea768e0a50"
+      }
+    ]
+  },
+  "llm": {
+    "repo": "bubth720/JARVIS-LLM",
+    "branch": "feat/llm-03-runtime",
+    "commit": "2efb3f7aa6205062ab71f570212019fd1d9885b6",
+    "parent": "895a067ffc860d56a2dbb1ce22cb274096f8e3a2",
+    "native_base": "8f1c2f5a936d6c01874d7be6bb987f4459b83374",
+    "main": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+    "min_sdk": 29,
+    "compile_sdk": 36,
+    "target_sdk": 36,
+    "abi": [
+      "arm64-v8a"
+    ],
+    "toolchain": {
+      "java": 21,
+      "gradle": "8.11.1",
+      "kotlin": "2.1.21",
+      "agp": "8.10.1",
+      "ndk": "28.1.13356709",
+      "cmake": "3.22.1"
+    },
+    "source_sets": [
+      "domain JVM bytecode17",
+      "app Android29",
+      "fixtures/p2-endpoint /2",
+      "F3B test candidates via candidate.init.gradle only"
+    ],
+    "license": {
+      "project": "UNKNOWN (no top-level LICENSE found)",
+      "native_engine": {
+        "repository": "ggml-org/llama.cpp",
+        "commit": "1b70350c92563449576bcbbf552994b1d1ed847d",
+        "license": "MIT",
+        "evidence": "docs/THIRD_PARTY.md"
+      },
+      "kotlin_androidx_coroutines": "Apache-2.0 documented; aggregate transitive notices pending"
+    },
+    "schemas": {
+      "catalogue_sqlite": {
+        "path": "app/src/main/java/fr/jarvis/llm/catalogue/CatalogueStore.kt",
+        "name": "catalogue.db",
+        "version": 1,
+        "scope": "answer catalogue not personal memory"
+      },
+      "catalogue_json": {
+        "max_bytes": 8388608,
+        "max_records": 5000
+      }
+    },
+    "contracts": {
+      "version": "jarvis.llm.p2/1.0",
+      "not_ipc": true,
+      "operation_key": [
+        "epoch",
+        "operationId",
+        "sessionId",
+        "correlationId",
+        "cancellationId",
+        "authorizationRef",
+        "leaseId",
+        "generation"
+      ],
+      "generation_min": 1,
+      "generation_max": 9007199254740991,
+      "system_max_utf8_bytes": 8192,
+      "question_max_utf8_bytes": 8192,
+      "history_turn_max_utf8_bytes": 4096,
+      "history_max_turns": 6,
+      "documents_max": 4,
+      "document_max_utf8_bytes": 4096,
+      "context_tokens": [
+        512,
+        2048
+      ],
+      "context_alignment": 256,
+      "output_tokens_max": 256,
+      "input_bytes_max": 65536,
+      "remaining_ms_max": 90000,
+      "output_utf8_max": 65536,
+      "guard_tokens": 8,
+      "trust": "key refs are not authentication; exact CoreAuthorizationGate required",
+      "native_tokenizer": "UNSUPPORTED/TOKENIZER_UNAVAILABLE",
+      "native_generation_p2": "NATIVE_P2_UNAVAILABLE",
+      "native_observation": "UNATTESTED even EMPTY_UNATTESTED broker"
+    },
+    "core_mapping": "Core004BMapping.textOnly refuses nonempty context or any sources (CONTEXT_NOT_REPRESENTABLE); no lossy provenance mapping allowed",
+    "reported_tests": [
+      {
+        "mission": "LLM03",
+        "count": 254,
+        "breakdown": {
+          "domain": 100,
+          "app": 36,
+          "fixture": 118
+        },
+        "kind": "JVM/Robolectric",
+        "fresh_for_this_audit": false,
+        "receipt": "docs/intensive-2026-10-22/RECEIPT-LLM-03.json"
+      },
+      {
+        "mission": "LLM02",
+        "count": 249,
+        "note": "subset/overlap of LLM03; do not sum",
+        "fresh_for_this_audit": false
+      },
+      {
+        "mission": "F3B",
+        "linux_ctest": 1,
+        "note": "historical native_safety code; not proposed new probe"
+      }
+    ],
+    "blockers": [
+      "exact tokenizer same-model/template/context/worker/lease not implemented",
+      "F3B sensitive backend/JNI patch not applied or qualified",
+      "nativeTermination/nativeUnload passive status UNATTESTED",
+      "CORE004D and heavy-worker integration remain blocked",
+      "Android29 app cannot link in-process into CORE API24",
+      "no physical model/Android qualification"
+    ],
+    "evidence": [
+      {
+        "path": "domain/src/main/kotlin/fr/jarvis/domain/generation/P2Contract.kt",
+        "sha256": "740441c8ee4a0001e91744ade5eb5f5343480c4d491979ec1019d38fbd20d696"
+      },
+      {
+        "path": "domain/src/main/kotlin/fr/jarvis/domain/generation/P2Prompt.kt",
+        "sha256": "1cf0784c6e4f83a4752fd4c981d79773aa5f2696795844149c230f824703a70f"
+      },
+      {
+        "path": "domain/src/main/kotlin/fr/jarvis/domain/generation/Core004BMapping.kt",
+        "sha256": "a64a818e7d4891db8ec30c28d9f93a6e6acd0e1f9dcd58d00acd49ad23c1c7b3"
+      },
+      {
+        "path": "domain/src/main/kotlin/fr/jarvis/domain/prompt/ContextPlanner.kt",
+        "sha256": "a4a3b3d2d640781c3712247dcf19c48123fb0c7d2958e9a93bc9a24351bec500"
+      },
+      {
+        "path": "domain/src/main/kotlin/fr/jarvis/domain/runtime/RuntimePolicyProfiles.kt",
+        "sha256": "16d71c641546b02407dc5d7aeff5622d753797e8fbb05ba5d931ee373fcc881b"
+      },
+      {
+        "path": "app/src/main/java/fr/jarvis/llm/runtime/ProcessRuntimeObservationPort.kt",
+        "sha256": "c4ce3a7db798fdd76d059da4034beaa3027d2f8f5bb8e1057f0ef91718163aa1"
+      }
+    ]
+  },
+  "ci": [
+    {
+      "kind": "api_ci",
+      "status": "UNKNOWN",
+      "error": "api.github.com proxy CONNECT 403 Forbidden; no workaround attempted"
+    },
+    {
+      "repo": "JAVIS-Local-v2",
+      "status": 200,
+      "ci": "unknown",
+      "candidate_text": []
+    },
+    {
+      "repo": "JARVIS-LLM",
+      "status": 200,
+      "ci": "unknown",
+      "candidate_text": []
+    }
+  ],
+  "platform_matrix": {
+    "core": {
+      "API24": "SUPPORTED as build and reported Robolectric only, physical NOT_TESTED",
+      "API25": "SUPPORTED as reported Robolectric only, physical NOT_TESTED",
+      "API26": "NOT_TESTED here",
+      "API29_ARM64": "NOT_TESTED physically",
+      "Linux_miniPC": "integration-lab JVM software only; product hardware NOT_TESTED"
+    },
+    "llm": {
+      "API24": "BLOCKED minSdk29",
+      "API25": "BLOCKED minSdk29",
+      "API26": "BLOCKED minSdk29",
+      "API29_ARM64": "native end-to-end BLOCKED, APK reported built; physical NOT_TESTED",
+      "Linux_miniPC": "NOT_TESTED product runtime; domain JVM tests/native_safety historical only"
+    }
+  }
+}

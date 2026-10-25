@@ -1,0 +1,382 @@
+{
+  "observed_at": "2026-10-25",
+  "audit_mode": "read_only_sources; temporary bare Git repositories only; no tests/builds freshly executed",
+  "refs": [
+    {
+      "module": "INTERFACE",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "branch": "feat/interface-final-01",
+      "sha": "db459ba388a3fea992d80320c3989be0edda8500",
+      "remote_verified": true
+    },
+    {
+      "module": "AVATAR_REVIEW",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "branch": "feat/ava-04-delivery",
+      "sha": "283ed2f3cd361d5b0b6bc927432bf836af8db1f6",
+      "remote_verified": true
+    },
+    {
+      "module": "VOICE",
+      "repo": "bubth720/JARVIS-VOICE",
+      "branch": "feat/voice-final-01",
+      "sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "remote_verified": true
+    },
+    {
+      "module": "VOICE_BRIDGE_REVIEW",
+      "repo": "bubth720/JARVIS-VOICE",
+      "branch": "feat/voice-bridge-pilot",
+      "sha": "04c4ca1c050c16e097d27b08831544b66121128c",
+      "remote_verified": true
+    },
+    {
+      "module": "VOICE_07_REVIEW",
+      "repo": "bubth720/JARVIS-VOICE",
+      "branch": "feat/voice-07-voice-delivery",
+      "sha": "40cb27b1e27567ae1841e4cfb3dd2c57a7b57820",
+      "remote_verified": true
+    },
+    {
+      "module": "EVOLUTION",
+      "repo": "bubth720/JARVIS-VOLUTION-",
+      "branch": "feat/evol-03-atelier-de-correctifs-isoles-e",
+      "sha": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "remote_verified": true
+    }
+  ],
+  "graph": {
+    "interface_final_descends_ava04": true,
+    "interface_final_only_commits": 4,
+    "voice_final_descends_bridge": true,
+    "voice_final_descends_voice07": false,
+    "voice_final_voice07_merge_base": "1a9f713dff28f6e4fb145728815e9ed118f5a929",
+    "voice_final_voice07_unique_commits": [
+      4,
+      6
+    ],
+    "voice_candidate_strategy": "Retain final studio as standalone evidence; retain voice07 review-only parallel branch; no implicit merge or production client activation."
+  },
+  "ci_observed": [
+    {
+      "module": "INTERFACE",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40182654910",
+      "sha": "db459ba388a3fea992d80320c3989be0edda8500",
+      "status": "success",
+      "observed_via": "GitHub HTML workflow list embedded JSON and run summary; logs not independently rerun",
+      "preceding_failure": {
+        "run": 40182619628,
+        "sha": "011c9c0520fda8415193138b762b7def665391b4"
+      }
+    },
+    {
+      "module": "VOICE",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40143704689",
+      "sha": "a59a9c5a6e95cdd645ad09661b6172e98af5323c",
+      "status": "success",
+      "observed_via": "GitHub HTML run summary; older code SHA, not candidate documentation HEAD"
+    },
+    {
+      "module": "VOICE07",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40090529698",
+      "sha": "0b1d879f36e2aa61269a3841cc3e1305b394a5a0",
+      "status": "success",
+      "observed_via": "GitHub HTML run summary; older code SHA, not candidate documentation HEAD"
+    },
+    {
+      "module": "EVOLUTION",
+      "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/39996031251",
+      "sha": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "status": "success",
+      "observed_via": "GitHub HTML workflow list embedded JSON and run summary"
+    }
+  ],
+  "build_metadata": {
+    "INTERFACE": {
+      "gradle": "8.13",
+      "kotlin": "2.1.20",
+      "agp": "8.9.2",
+      "java": 17,
+      "min_sdk": 26,
+      "compile_sdk": 35,
+      "target_sdk": 35,
+      "abi": "no native payload identified in app dependencies; architecture-independent Kotlin/Compose",
+      "source_sets": [
+        "app/src/main",
+        "app/src/test",
+        "app/src/androidTest",
+        "fixtures/core02-reference/src in test only"
+      ],
+      "schemas": [
+        "LayoutCodec version1 max65536bytes",
+        "WorkspaceCodec sidecar version1 max2097152bytes",
+        "AvatarV2 manifest version2"
+      ]
+    },
+    "VOICE": {
+      "gradle": "8.13",
+      "kotlin": "2.1.20",
+      "agp": "8.9.2",
+      "java": 17,
+      "min_sdk": 26,
+      "compile_sdk": 35,
+      "target_sdk": 35,
+      "abi": [
+        "arm64-v8a default",
+        "prototypeTestAbi emulator override"
+      ],
+      "source_sets": [
+        "voiceFinalSdk JVM",
+        "voiceFinalRuntime JVM generated observed engine copy",
+        "voiceFinalStudio Android generated legacy studio source + legacy res/assets"
+      ],
+      "onnxruntime": "1.27.0",
+      "schemas": [
+        "voice.final01.events/1",
+        "voice.bridge.fixture/1",
+        "voice.speech.public-lab/2-draft in parallel voice07 only"
+      ]
+    },
+    "EVOLUTION": {
+      "gradle": "8.13",
+      "kotlin": "2.1.20",
+      "java": 17,
+      "min_sdk": null,
+      "android_adapter": false,
+      "source_sets": [
+        "evolution-core JVM",
+        "evolution-cli JVM",
+        "evolution-sandbox JVM"
+      ],
+      "dependencies": [
+        "sqlite-jdbc3.46.1.0",
+        "kotlinx-coroutines1.10.2"
+      ],
+      "schemas": [
+        "technical SQLite user_version1",
+        "diagnostic SQLite user_version1",
+        "patch-proposal/1 metadata review only"
+      ]
+    }
+  },
+  "licenses": {
+    "repository_license_files": "No root LICENSE detected in the three inspected pinned trees; project license remains UNKNOWN, do not infer from dependencies.",
+    "dependencies_documented": [
+      "Kotlin/Gradle/AGP Apache-2.0",
+      "ONNX Runtime1.27 MIT",
+      "Pocket TTS code MIT; public french weights/tokenizer and Alba reference CC BY4.0 according to docs/pocket-probe/LICENSES.md",
+      "SQLite public domain + sqlite-jdbc Apache-2.0",
+      "JUnit4.13.2 EPL1.0 (EVOL README)"
+    ],
+    "assets": "Athena private concept portraits not published, no approved premium rig; private voice licenses/consents are not made universal by model license."
+  },
+  "contracts": [
+    {
+      "id": "interface.content.proposal/1",
+      "owner": "CORE producer; INTERFACE consumer only",
+      "path": "app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationTransport.kt",
+      "types": [
+        "SubmitUserText",
+        "ContentAck",
+        "ContentKey(sessionId,requestId,generation)",
+        "CoreMessageEnvelope(eventId,key,sequence,proposalVersion)",
+        "AssistantTextChunk",
+        "Completed",
+        "Cancelled",
+        "Failure",
+        "ToolPending"
+      ],
+      "limits": {
+        "text_utf8_bytes": 16384,
+        "aggregate_output_utf8_bytes": 262144,
+        "chunks": 256,
+        "early_events": 16,
+        "reorder_buffer": 8,
+        "tool_id_characters": 80,
+        "ack_timeout_ms": 5000,
+        "ack_keys_retained": 128
+      },
+      "state": "LOCAL_LAB_PROPOSAL_ONLY; origin NONE/LABORATORY, no CORE producer/authenticated production transport",
+      "missing": [
+        "ToolApproval confirmation exact contract",
+        "Citation event body",
+        "production origin/authentication/transport review",
+        "native generation qualification"
+      ]
+    },
+    {
+      "id": "voice.final01.events/1",
+      "owner": "VOICE local runtime",
+      "path": "voiceFinalSdk/src/main/kotlin/com/jarvis/voice/final01/VoiceEvents.kt",
+      "types": [
+        "START",
+        "FIRST_AUDIO",
+        "PROGRESS",
+        "PAUSE",
+        "COMPLETE",
+        "CANCELLED",
+        "ERROR",
+        "UNKNOWN"
+      ],
+      "limits": {
+        "total_segments": 4000
+      },
+      "missing": [
+        "no session/request/generation UUID",
+        "no timestamp/wallclock/time-origin field in DTO",
+        "no phoneme timing",
+        "no transport"
+      ],
+      "semantics": "presentedSamples is estimated playback observation; FIRST_AUDIO not human audibility; completed+skipped==total allowed, skipped is never successful speech"
+    },
+    {
+      "id": "voice.bridge.fixture/1",
+      "owner": "VOICE pilot endpoint, CORE fixture authorized client",
+      "path": "voiceBridgePilot/src/main/java/com/jarvis/voice/bridgepilot/PilotWire.kt",
+      "limits": {
+        "payload_bytes": 4096,
+        "speech_utf16_units": 300,
+        "speech_utf8_bytes": 1200,
+        "generation_max": 9007199254740991
+      },
+      "trust": "signature permission + actual Binder UID + exact package + signer + explicit pairing; production inactive; native admission must remain blocked without evidence"
+    },
+    {
+      "id": "evolution.technical.internal/1",
+      "owner": "EVOLUTION sanitized sink; future producers opt in",
+      "path": "evolution-core/src/main/kotlin/fr/jarvis/evolution/events/EvolutionEvent.kt",
+      "fields": [
+        "closed Module enum",
+        "closed EventCode enum",
+        "closed Severity enum",
+        "numeric allowlist latencyMs/usedBytes/limitBytes/queueSize only"
+      ],
+      "limits": {
+        "payload_entries_inspected": 32,
+        "latency_ms_max": 86400000,
+        "bytes_max": 10000000000000,
+        "queue_size_metric_max": 1000000,
+        "queue_default": 64,
+        "queue_max": 256,
+        "database_default_bytes": 4194304,
+        "database_default_rows": 2048,
+        "retention_days": 7
+      },
+      "missing": [
+        "versioned cross-module TechnicalHealthObservation producer contract",
+        "actual CORE/LLM/VOICE producers",
+        "Android storage adapter"
+      ],
+      "trust": "discard arbitrary text before queue/hash/storage, default DISABLED; does not read sibling data"
+    }
+  ],
+  "historical_tests_not_freshly_run": {
+    "INTERFACE": "191 JVM +9 targeted Android API26 reexecutions after a prior full64 suite; not73 unique. Detailed committed reports. CI latest success observed separately, not a rerun here.",
+    "VOICE": "16 new JVM passed +2 model-dependent optional native tests skipped in CI; separate two native Linux tests reported (20 paired generations + cancellation), not freshly executed.8Android API26 +8API35 reported. Legacy scope/underrun failures remain documented.",
+    "VOICE07": "Security Binder V1 fixture 9 tests on API26/35 plus alternate-signer variants with 2passes7skips each, not V2 production IPC. Core/native all blocked.",
+    "EVOLUTION": "38 tests last report:13 sandbox tests actually rerun,25 unchanged reused UP-TO-DATE after earlier success; no fresh rerun here."
+  },
+  "platform_matrix": {
+    "INTERFACE_UI_ONLY": {
+      "API24": "BLOCKED minSdk26",
+      "API25": "BLOCKED minSdk26",
+      "API26": "SUPPORTED for standalone UI/emulator evidence only; CORE integration BLOCKED",
+      "API29_ARM64": "NOT_TESTED",
+      "API35": "NOT_TESTED latest interface report",
+      "Linux_miniPC": "NOT_TESTED Android app"
+    },
+    "VOICE_STANDALONE": {
+      "API24": "BLOCKED minSdk26",
+      "API25": "BLOCKED minSdk26",
+      "API26": "SUPPORTED synthetic AudioTrack/emulator test evidence only",
+      "API29_ARM64": "NOT_TESTED hardware/identity/human speech",
+      "API35": "SUPPORTED synthetic AudioTrack/emulator test evidence only",
+      "Linux_miniPC": "NOT_TESTED physical mini-PC; Linux ONNX native benchmark only"
+    },
+    "EVOLUTION_DIAGNOSTIC": {
+      "API24": "BLOCKED no adapter/JVM17 JDBC",
+      "API25": "BLOCKED no adapter/JVM17 JDBC",
+      "API26": "BLOCKED no adapter/JVM17 JDBC",
+      "API29_ARM64": "BLOCKED no adapter/JVM17 JDBC",
+      "API35": "BLOCKED no adapter/JVM17 JDBC",
+      "Linux_miniPC": "NOT_TESTED physical mini-PC; JVM17 diagnostic tested historically"
+    },
+    "EVOLUTION_PATCH_EXECUTION": {
+      "all": "BLOCKED SANDBOX_NOT_QUALIFIED; never activate from signature/review alone"
+    }
+  },
+  "preservation": {
+    "source_repositories_modified": false,
+    "temporary_git_repositories": [
+      "/tmp/fusion-ui-audit.git",
+      "/tmp/fusion-voice-audit.git"
+    ],
+    "preexisting_dirty_worktrees": [
+      "JARVIS-INTERFACE feat/ui-02-ui-avatar",
+      "JARVIS-VOICE feat/voice-03-intensive"
+    ],
+    "interface_default_branch": "development/mission-002",
+    "interface_default_head": "d1c0931c4507e9af8f1aa60951947c23f4394b56"
+  },
+  "parents": {
+    "INTERFACE": {
+      "sha": "db459ba388a3fea992d80320c3989be0edda8500",
+      "parents": [
+        "011c9c0520fda8415193138b762b7def665391b4"
+      ]
+    },
+    "AVA04": {
+      "sha": "283ed2f3cd361d5b0b6bc927432bf836af8db1f6",
+      "parents": [
+        "1d10ddb52e1df4b609824d5666a095df4b361a63"
+      ]
+    },
+    "VOICE": {
+      "sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "parents": [
+        "a59a9c5a6e95cdd645ad09661b6172e98af5323c"
+      ]
+    },
+    "VOICE07": {
+      "sha": "40cb27b1e27567ae1841e4cfb3dd2c57a7b57820",
+      "parents": [
+        "0b1d879f36e2aa61269a3841cc3e1305b394a5a0"
+      ]
+    },
+    "VOICE_BRIDGE": {
+      "sha": "04c4ca1c050c16e097d27b08831544b66121128c",
+      "parents": [
+        "ea37d5a461b94f64f3a89a2e655a7d47b0d1150d"
+      ]
+    },
+    "EVOLUTION": {
+      "sha": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "parents": [
+        "0abd5f96caa27ee1e73a623d538e48555a02ce76"
+      ]
+    }
+  },
+  "authorization_review": {
+    "issues_read_in_full": [
+      "UNIFIED#4",
+      "INTERFACE#5",
+      "INTERFACE#4",
+      "VOICE#21",
+      "EVOLUTION#1"
+    ],
+    "AGENTS_at_pinned_module_trees": "not present; checked tree and existing checkout; UNIFIED instructions control scope",
+    "readmes_and_reports_read": true,
+    "source_repositories_written": false,
+    "network": "inherited proxy + TLS, restricted/enforced policy, observations current",
+    "builds_or_tests_executed": false
+  },
+  "risks": [
+    "UI artist target FUSION anime/brown medium hair/navy futuristic uniform is not validated by previous semi-realistic private portrait gallery; ART_REVIEW_PENDING and RIG_PENDING remain.",
+    "Voice final SDK has no correlation IDs/time-origin: cannot directly act as authorized cross-app conversation or phoneme clock.",
+    "VOICEfinal and VOICE07 are divergent: no assumption final contains newer client/gateway.",
+    "UI and VOICE min26 cannot be copied as dependencies into CORE min24 and called compatible without dedicated port qualification.",
+    "EVOLUTION JVM17/sqlite-jdbc/Ed25519/List.copyOf is not an Android24 library; isolate port/storage before Android integration.",
+    "VOICE standalone native Linux benchmark reports PSS after job ~2.30GiB p95; not an Android peak, not a safe co-residency budget.",
+    "No root project LICENSE found; third-party license inventory is not permission to publish private portraits or voice references."
+  ]
+}

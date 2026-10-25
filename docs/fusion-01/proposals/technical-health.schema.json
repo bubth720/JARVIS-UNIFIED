@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis:technical-health:1-draft",
+  "title": "technical-health-proposal",
+  "description": "PROPOSED, not approved, not IPC and not a runtime activation. No free-form personal data.",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "jarvis.technical-health/1-draft"
+    },
+    "observation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "core",
+        "llm",
+        "voice",
+        "interface",
+        "nexus",
+        "services",
+        "evolution"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "AVAILABLE",
+        "UNAVAILABLE",
+        "BUSY",
+        "UNKNOWN"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "NOT_CONNECTED",
+        "UNSUPPORTED",
+        "CANCELLED",
+        "UNKNOWN_STATE",
+        "RESOURCE_LIMIT",
+        "INTERNAL_FAILURE"
+      ]
+    },
+    "clock": {
+      "const": "sender_monotonic_ms"
+    },
+    "observed_at_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "latency_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 90000
+        },
+        "used_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 17179869184
+        },
+        "limit_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 17179869184
+        },
+        "queue_size": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 256
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "observation_id",
+    "module",
+    "state",
+    "code",
+    "clock",
+    "observed_at_ms",
+    "metrics"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,571 @@
+{
+  "recorded_at_utc": "2026-10-25T10:39:33.072114+00:00",
+  "scope": "UNIFIED F0 read-only external audit",
+  "fresh_external_tests_executed": false,
+  "source_repositories_modified": false,
+  "references": [
+    {
+      "module": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/nex-06a-android-api24",
+      "commit": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+      "parents": [
+        "3acec55616ff8e3b1666091780fca59261377e18"
+      ],
+      "source_evidence": [
+        {
+          "path": "build.gradle.kts",
+          "sha256": "755238d2e0adaaf91bc6afabb626c62f0d9d45dbe8fdae194dbab844c76a5d93",
+          "bytes": 219,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "6c248c0542313f0938db74ea5a5a198f10a8290744a21be6b564404596fcd6ab",
+          "bytes": 787,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/settings.gradle.kts"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "sha256": "1e0f77d58c3622d3d257673a07af18ddd827c94c78644e018345135955c5ad82",
+          "bytes": 242,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt",
+          "sha256": "4fdb50f5562b611bc6b6c724a128d36f7e484aeae772f6896e3d9046ae4279d5",
+          "bytes": 817,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt",
+          "sha256": "abb34ecd7079402643c004ea197ffcb3b79174d1acfb977671f97cebb841c568",
+          "bytes": 4229,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+          "sha256": "c2512a2aa774c080ca0bb8ae2d96f6283b5ca1f6364aab1809dc3bfe7fec4e32",
+          "bytes": 2878,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+        },
+        {
+          "path": "nexus-android-store/build.gradle.kts",
+          "sha256": "bab8378c67bbd1d0097effa33fffbb16b487138f68764298b1098d4426ff2351",
+          "bytes": 924,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-android-store/build.gradle.kts"
+        },
+        {
+          "path": "nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt",
+          "sha256": "ce3fec3a94e909c0f4007b517fcdd58dec5846242a5818ec3b73a9e932bb5617",
+          "bytes": 7709,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt"
+        },
+        {
+          "path": "nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/SelectedDocumentImporter.kt",
+          "sha256": "a57a252bb43482cd829d682c1b36b9634b3ede8c80a2cf48141034292514e815",
+          "bytes": 3784,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/SelectedDocumentImporter.kt"
+        },
+        {
+          "path": "docs/dev/NEX-06A.md",
+          "sha256": "779e121a8a7c449460e21408b867fa5bc119b3e555a8216d7b9ecf61a7ab91c8",
+          "bytes": 9882,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/docs/dev/NEX-06A.md"
+        },
+        {
+          "path": "docs/dev/NEX-06A-VALIDATION.json",
+          "sha256": "37e9f7d97b92bc7861c933ed2458a1e8c43b1b055eac53b41d763670c0b2a5b2",
+          "bytes": 4478,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/docs/dev/NEX-06A-VALIDATION.json"
+        }
+      ],
+      "ci": {
+        "status": "failure",
+        "commit": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40115049468",
+        "observed_at": "2026-10-25T10:39:33.072114+00:00",
+        "method": "public GitHub HTML run and job step attributes",
+        "reason": "storage JVM job succeeded; android-adapter job failed at android-actions/setup-android@v3 before build/tests/Lint; underlying log unavailable anonymously",
+        "jobs": [
+          {
+            "id": "120934494420",
+            "name": "storage",
+            "status": "success"
+          },
+          {
+            "id": "120934494656",
+            "name": "android-adapter",
+            "status": "failure",
+            "failed_step": "Run android-actions/setup-android@v3"
+          }
+        ]
+      },
+      "selection": "candidate_primary",
+      "schema_version": 3,
+      "min_sdk": 24,
+      "toolchain": {
+        "jdk": 17,
+        "kotlin": "2.0.21",
+        "gradle": "8.10.2",
+        "agp": "8.7.3",
+        "compile_sdk": 35,
+        "own_bytecode_target": "1.8"
+      },
+      "project_license": "UNKNOWN",
+      "license_reason": "No root project license file found; no project redistribution license inferred",
+      "native_payload": "none in Android AAR; platform SQLite only",
+      "historical_tests": {
+        "jvm": 69,
+        "robolectric": 33,
+        "failures": 0,
+        "skipped": 0,
+        "freshly_executed_in_F0": false,
+        "instrumentation_executed": false
+      },
+      "blockers": [
+        "FTS5+fts5vocab/MATCH/BM25 unavailable in recorded Robolectric SQLite; CAPABILITY_UNAVAILABLE retained",
+        "Android citation capability not physically or instrumentally qualified",
+        "schema4/library/graph and final ArchiveReader absent"
+      ],
+      "platforms": {
+        "api24": "BLOCKED",
+        "api25": "BLOCKED",
+        "api26": "BLOCKED",
+        "api29_arm64": "NOT_TESTED",
+        "linux_minipc": "NOT_TESTED"
+      },
+      "platform_reason": "BLOCKED refers to Android cited RAG capability; source compilation API24 and host simulations are historical proofs, not hardware. JVM JDBC library has historical tests on Linux x86_64, no mini-PC qualification."
+    },
+    {
+      "module": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/nexus-final-01",
+      "commit": "d903bf04f497ab0dc7f40e9708ed057e4f24c6ee",
+      "parents": [
+        "bbccac2ff2cc052f897c7f5015f234507e047b95"
+      ],
+      "source_evidence": [
+        {
+          "path": "build.gradle.kts",
+          "sha256": "38614212f7666af2d963c75b1a6cecb7bdd4947c002f5803e84b81efbf1064f1",
+          "bytes": 116,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "sha256": "e141f8b555f1084160af0cd733887456aa1601a6a490f260a625f5003fb80da2",
+          "bytes": 251,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusDatabase.kt",
+          "sha256": "36b337b0380bcad73600275449e3fcbca952f2a7fa73dd60f1209e09fd468f4c",
+          "bytes": 10364,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusDatabase.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+          "sha256": "544ef2a30c331f8f47ed296ea18d1beb66ecff11774c9d94b05a8613e8809341",
+          "bytes": 2953,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/library/LibraryService.kt",
+          "sha256": "a76b2a3ba77cba35c0ab03feb01470cc6153f192d7ca41b90039484e2da5a18a",
+          "bytes": 10280,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/library/LibraryService.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt",
+          "sha256": "9ee3a3ee5e8e0b09c1751fdbc0db19fe9cde27ab4c70b0b7a6d2dc2217cb8975",
+          "bytes": 8455,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/graph/GraphService.kt",
+          "sha256": "0fb9fde4c5cd834c99bbcf6161d2590ae4d82137d7861cd540ed5bfd8b7cb668",
+          "bytes": 8977,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/graph/GraphService.kt"
+        },
+        {
+          "path": "docs/dev/NEXUS-FINAL-01.md",
+          "sha256": "d64c13ccf74eddb0b93d52fc43083c46f573e7bb848da331dee62d3b0bfac8f5",
+          "bytes": 15107,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/docs/dev/NEXUS-FINAL-01.md"
+        },
+        {
+          "path": "docs/dev/NEXUS-FINAL-01-VALIDATION.json",
+          "sha256": "a8dfe111173552b46ef52d824b60e32e11a7dd415d1d070641fd6ca62f7f0fb8",
+          "bytes": 11450,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/docs/dev/NEXUS-FINAL-01-VALIDATION.json"
+        },
+        {
+          "path": "docs/dev/ZIM-DEPENDENCIES.md",
+          "sha256": "2a38bc5047910d7003c801429518e05d0754d29643d96bbd2833f98850b87f20",
+          "bytes": 5939,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/docs/dev/ZIM-DEPENDENCIES.md"
+        }
+      ],
+      "ci": {
+        "status": "unknown",
+        "commit": "d903bf04f497ab0dc7f40e9708ed057e4f24c6ee",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions?query=branch%3Afeat%2Fnexus-final-01",
+        "observed_at": "2026-10-25T10:39:33.072114+00:00",
+        "method": "public GitHub HTML filtered Actions list",
+        "reason": "0 workflow run results; absence of listed results is not proof of failed tests"
+      },
+      "selection": "divergent_alternative_not_composed",
+      "schema_version": 4,
+      "project_license": "UNKNOWN",
+      "min_sdk": null,
+      "toolchain": {
+        "jdk": 17,
+        "kotlin": "2.0.21",
+        "gradle": "8.10.2"
+      },
+      "blockers": [
+        "No Android module; production core directly references java.sql, java.nio.file and java.time.Clock",
+        "Final Kotlin/JVM compilation, new tests and encrypted backup regression explicitly NOT_RUN in final report",
+        "schema4 not supported by primary schema3 binary; do not open schema4 with primary",
+        "ArchiveReader article(ArticleSelection) contract incompatible with primary readRange(offset,maxBytes) port"
+      ],
+      "historical_tests": {
+        "sqlite_python": 10,
+        "viewer_node": 7,
+        "zim_python_passed": 18,
+        "zim_skipped": 1,
+        "jvm_final": "NOT_RUN",
+        "freshly_executed_in_F0": false
+      },
+      "optional_dependency_licenses": [
+        {
+          "name": "libzim",
+          "license": "GPL-2.0-or-later",
+          "added_to_build": false
+        },
+        {
+          "name": "python-libzim",
+          "license": "GPL-3.0-or-later",
+          "added_to_build": false
+        },
+        {
+          "name": "java-libkiwix",
+          "license": "GPL-3.0-or-later",
+          "added_to_build": false
+        }
+      ]
+    },
+    {
+      "module": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "feat/serv-04a-android-tool-port",
+      "commit": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "parents": [
+        "3decdc47d82f9b43713c48cab244762941770a81"
+      ],
+      "source_evidence": [
+        {
+          "path": "settings.gradle",
+          "sha256": "ad6516078e1abb656017e36168d47f6f12bf6e53ea3a328b713b51e025992dfc",
+          "bytes": 686,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/settings.gradle"
+        },
+        {
+          "path": "services-portable-api/build.gradle",
+          "sha256": "6e91374570a90aff307d49dac109155c1979dbd40011223bedb522b99dd385f0",
+          "bytes": 186,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/build.gradle"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java",
+          "sha256": "89eddc1ed68eeae39d20e1d0867aff59399a415b6f728ed4a50685456cef163c",
+          "bytes": 627,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/tools/ToolInvocation.java",
+          "sha256": "1cf08ae672450ed5aa25e3c973736d48fa68355ec1f828c408a46721a544bd42",
+          "bytes": 1708,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/tools/ToolInvocation.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/tools/ApprovalGate.java",
+          "sha256": "5dfdce971a550d8fc689cf4eea1f93e17dd934c89e0af57fc31285fe583e66a8",
+          "bytes": 3399,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/tools/ApprovalGate.java"
+        },
+        {
+          "path": "services-android-adapter/build.gradle",
+          "sha256": "fb8b8b3c4ea9a9c1e0eb1f806483bb49589489e493740e86d3ca87f340a089fc",
+          "bytes": 1577,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-android-adapter/build.gradle"
+        },
+        {
+          "path": "services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/ServicesAndroidToolPort.java",
+          "sha256": "99649b2adb9dcad59db7173abc04ab79ab359c758808c2d9ed64b86e6a043de7",
+          "bytes": 10189,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/ServicesAndroidToolPort.java"
+        },
+        {
+          "path": "services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/JournalDatabase.java",
+          "sha256": "8e0def95a73e567feb7b2a40affca150f5d58ad8452a47c8eff05af67727c85a",
+          "bytes": 3863,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/JournalDatabase.java"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-SERV-04A.md",
+          "sha256": "7d5cce98e46b386cdda35ae8c2e0d458d3c71cb613f5db5b91e053d9d9339368",
+          "bytes": 11711,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/docs/intensive-2026-10-22/REPORT-SERV-04A.md"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/VALIDATION-SERV-04A.json",
+          "sha256": "7d849c611082f22bf181ae1cfaa1b22316734760efa014c2280d7ddc2374b847",
+          "bytes": 3158,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/docs/intensive-2026-10-22/VALIDATION-SERV-04A.json"
+        },
+        {
+          "path": "docs/DEPENDENCIES.md",
+          "sha256": "c55e9cc00be5cfba47e857e6daeeec0bddbfc66ec7c1e3a04e5db8a4b76c20e9",
+          "bytes": 2278,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/docs/DEPENDENCIES.md"
+        }
+      ],
+      "ci": {
+        "status": "failure",
+        "commit": "f00091a639612b91eca1a301580c8f531249f1e3",
+        "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40115305244",
+        "observed_at": "2026-10-25T10:39:33.072114+00:00",
+        "method": "public GitHub HTML run and job step attributes",
+        "reason": "JVM and historical API26 instrumentation jobs succeeded; android-build failed at SERV-04A Android24 adapter regressions and library; subsequent API24 boot compile skipped. Exact Gradle/test error logs unavailable anonymously",
+        "jobs": [
+          {
+            "id": "120935248589",
+            "name": "jvm",
+            "status": "success"
+          },
+          {
+            "id": "120935248672",
+            "name": "android-instrumented",
+            "status": "success"
+          },
+          {
+            "id": "120935248386",
+            "name": "android-build",
+            "status": "failure",
+            "failed_step": "SERV-04A Android24 adapter regressions and library"
+          }
+        ]
+      },
+      "selection": "candidate_primary",
+      "min_sdk": 24,
+      "historical_app_min_sdk": 26,
+      "toolchain": {
+        "jdk": 17,
+        "java_source": "11",
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "compile_sdk": 35
+      },
+      "project_license": "UNKNOWN",
+      "license_reason": "docs/DEPENDENCIES.md explicitly refuses to invent project SERVICES license",
+      "local_api_version": "jarvis.services.inprocess/1",
+      "tools": [
+        "documents.search",
+        "data.csv.normalize"
+      ],
+      "historical_tests": {
+        "jvm": 94,
+        "robolectric": 40,
+        "failures": 0,
+        "skipped": 0,
+        "freshly_executed_in_F0": false,
+        "api24_instrumentation_executed": false
+      },
+      "platforms": {
+        "api24": "NOT_TESTED",
+        "api25": "NOT_TESTED",
+        "api26": "NOT_TESTED",
+        "api29_arm64": "NOT_TESTED",
+        "linux_minipc": "NOT_TESTED"
+      },
+      "platform_reason": "Code compiles min24 and host simulations recorded; new Android adapter has no recorded device/emulator instrumentation. Historical standalone API26 CI is a different module, not evidence of new adapter API24 support. Linux JDBC tests are host proofs, not mini-PC hardware qualification.",
+      "blockers": [
+        "New Android port DOCX export deliberately SAF_EXPORT_UNQUALIFIED",
+        "Final17tools/LocalJobs/OfflineBridge not included; signatures Guard/AccessGuard changed, JVM consumers require recompilation",
+        "No CORE session authority wired; trusted in-process host only"
+      ],
+      "dependency_licenses": [
+        {
+          "name": "Gson",
+          "version": "2.11.0",
+          "license": "Apache-2.0"
+        },
+        {
+          "name": "PDFBox Android",
+          "version": "2.0.27.0",
+          "license": "Apache-2.0"
+        },
+        {
+          "name": "Bouncy Castle helpers",
+          "version": "1.86",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "module": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "feat/services-final-01",
+      "commit": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+      "parents": [
+        "edfa044321ff09697ae9bec40a6e31aa76a77370"
+      ],
+      "source_evidence": [
+        {
+          "path": "android/build.gradle",
+          "sha256": "f39f386b715f34b7300eec30d112e6029b0fdc3c5864eaa09c6f899542dbef61",
+          "bytes": 1123,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/android/build.gradle"
+        },
+        {
+          "path": "shared-runtime/build.gradle",
+          "sha256": "6e91374570a90aff307d49dac109155c1979dbd40011223bedb522b99dd385f0",
+          "bytes": 186,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/shared-runtime/build.gradle"
+        },
+        {
+          "path": "shared-runtime/src/main/java/fr/jarvis/services/tools/ToolInvocation.java",
+          "sha256": "5cf74f6be5c792a13a0468c080c303861f5ecd329ed40175ede7f040f14eb7f2",
+          "bytes": 1898,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/shared-runtime/src/main/java/fr/jarvis/services/tools/ToolInvocation.java"
+        },
+        {
+          "path": "shared-runtime/src/main/java/fr/jarvis/services/tools/ToolDispatcher.java",
+          "sha256": "397dd608cada7602013877092ee0247048bdd3ce8dd75c384267c65cf68bafa1",
+          "bytes": 5440,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/shared-runtime/src/main/java/fr/jarvis/services/tools/ToolDispatcher.java"
+        },
+        {
+          "path": "shared-runtime/src/main/java/fr/jarvis/services/finalization/FinalToolCatalogue.java",
+          "sha256": "15392433535621940fd6687feda6288aa1dbc160b21bb5f101619a9a65926d4a",
+          "bytes": 6462,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/shared-runtime/src/main/java/fr/jarvis/services/finalization/FinalToolCatalogue.java"
+        },
+        {
+          "path": "contracts/services-final/v1/tool-catalogue.json",
+          "sha256": "9f3cd175d24a3930f21bee3c7e31f898005c28eeb5ec6b0508212624b1c11429",
+          "bytes": 6524,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/contracts/services-final/v1/tool-catalogue.json"
+        },
+        {
+          "path": "contracts/services-final/v1/tool-arguments.schema.json",
+          "sha256": "ac64e2c7da3c3a23786f7cf23dad1a0ec8124189acf8e27f46e1780645df75aa",
+          "bytes": 8866,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/contracts/services-final/v1/tool-arguments.schema.json"
+        },
+        {
+          "path": "docs/services-final-01/CONTRACTS.md",
+          "sha256": "cac518f000089bdb47039eedff7e92325951a3eb66b195f0f68c9c37697d915a",
+          "bytes": 7570,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/docs/services-final-01/CONTRACTS.md"
+        },
+        {
+          "path": "reports/services-final-01/REPORT.md",
+          "sha256": "f3c8c008fbac893bdd245e15fa3b130706100e27f2eff569dca507fef1d6a965",
+          "bytes": 15346,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/REPORT.md"
+        },
+        {
+          "path": "reports/services-final-01/validation.json",
+          "sha256": "62b704392e0304b82972b1693413bcec26c59694a2b47b2b54300012ffb0fc80",
+          "bytes": 13181,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/validation.json"
+        },
+        {
+          "path": "reports/services-final-01/ci.json",
+          "sha256": "143b6bcf9c46de91897f11bcc403319e6eee183bee0c8f517068ee2ecceff532",
+          "bytes": 9750,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/ci.json"
+        },
+        {
+          "path": "reports/services-final-01/packaging.json",
+          "sha256": "f79ee3767e7e681cbef5c8fe34106a4a8bc7dea876bb584478f433e5671665ce",
+          "bytes": 296,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/packaging.json"
+        }
+      ],
+      "ci": {
+        "status": "success",
+        "commit": "edfa044321ff09697ae9bec40a6e31aa76a77370",
+        "head_commit": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+        "head_ci_status": "unknown",
+        "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40142362407",
+        "observed_at": "2026-10-25T10:39:33.072114+00:00",
+        "method": "public GitHub HTML run summary re-read",
+        "reason": "Observed Success 7m12s jvm/android-build/android-instrumented at code+test edfa044; final d16dd84 is documentation/proofs delivery, not same SHA; do not promote HEAD CI to success"
+      },
+      "selection": "divergent_alternative_not_composed",
+      "min_sdk": 26,
+      "toolchain": {
+        "tested_jdk": "Oracle21.0.8",
+        "java_source": "11",
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "compile_sdk": 35
+      },
+      "project_license": "UNKNOWN",
+      "local_contract_path": "contracts/services-final/v1",
+      "tool_count": 17,
+      "historical_tests": {
+        "jvm": 129,
+        "android_api26_x86_instrumented": 17,
+        "failures": 0,
+        "skipped": 0,
+        "freshly_executed_in_F0": false
+      },
+      "packaged_abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "qualified_hardware_abi": "API26 x86 emulator historical; no ARM64 physical qualification",
+      "blockers": [
+        "No services-portable-api or services-android-adapter modules in final branch",
+        "shared-runtime binds java.nio.file/Guard Path; cannot consume blindly in API24 CORE",
+        "Workshop memory is separate consented local memory, not CORE personal memory authority",
+        "OfflineBridge HMAC authenticated file codec only; no enabled production transport",
+        "New LocalJobs/journals explicitly not included in historical Recovery snapshot"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "module": "NEXUS",
+      "primary": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+      "alternative": "d903bf04f497ab0dc7f40e9708ed057e4f24c6ee",
+      "merge_base": "3acec55616ff8e3b1666091780fca59261377e18",
+      "primary_ancestor_of_alternative": false,
+      "alternative_ancestor_of_primary": false,
+      "strategy": "Keep primary portable candidate, preserve final alternative; forward-port final business changes into storage abstraction in owner repo after tests/review; no automatic merge or real data migration"
+    },
+    {
+      "module": "SERVICES",
+      "primary": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "alternative": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+      "merge_base": "3decdc47d82f9b43713c48cab244762941770a81",
+      "primary_ancestor_of_alternative": false,
+      "alternative_ancestor_of_primary": false,
+      "strategy": "Keep primary portable candidate, preserve final alternative; forward-port final business changes into storage abstraction in owner repo after tests/review; no automatic merge or real data migration"
+    }
+  ],
+  "core_consumer_conflict": {
+    "core_commit": "aea5ac859ac551d54fe16187c1883a487dbee9d6",
+    "consumed_nexus": "777e6afa75ecb99b85e52d68837cb0fefcf161cd",
+    "consumed_services": "3decdc47d82f9b43713c48cab244762941770a81",
+    "new_primary_pair_e2e_tested": false,
+    "required": "Port/recompile CORE laboratory consumer against nexus-jvm-store and SERVICES AccessGuard API, then rerun real integration tests in CORE-owned branch"
+  }
+}

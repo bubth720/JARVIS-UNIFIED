@@ -1,0 +1,13 @@
+{
+  "version": "jarvis.technical-health/1-draft",
+  "observation_id": "00000000-0000-4000-8000-000000000001",
+  "module": "llm",
+  "state": "UNKNOWN",
+  "code": "UNKNOWN_STATE",
+  "clock": "sender_monotonic_ms",
+  "observed_at_ms": 10,
+  "metrics": {
+    "queue_size": 0
+  },
+  "conversation": "SYNTHETIC_FORBIDDEN_FIELD"
+}

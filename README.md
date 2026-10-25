@@ -1,5 +1,13 @@
 # JARVIS-UNIFIED — référence technique centrale
 
+## FUSION-01 — convergence par preuves
+
+[Première tranche F0](docs/fusion-01/README.md) : verrou de composition candidate,
+validation hors ligne des SHA/parents/empreintes, DAG/gates et matrice des liens.
+Les finales et ports divergents restent distincts ; FTS5, JNI et raccordements
+Android ne sont pas déclarés qualifiés. [Guide exécutable](tooling/integration/README.md).
+Les photographies antérieures ci-dessous sont conservées à leurs dates.
+
 ## Campagne intensive du22octobre2026
 
 Les outils exécutables sont disponibles dans [tooling/contracts](tooling/contracts/README.md)
