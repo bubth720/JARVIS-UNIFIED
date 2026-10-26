@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 MAX_SIZE = 1024 * 1024
-SHA = re.compile(r"[0-9a-f]{40}\\Z")
+SHA = re.compile(r"[0-9a-f]{40}\Z")
 MODULES = {
     "core": ("bubth720/JAVIS-Local-v2", 24),
     "llm": ("bubth720/JARVIS-LLM", 29),
@@ -85,7 +85,7 @@ def validate(candidate):
     if (candidate["decision"] != "BLOCKED" or candidate["human_approved"] is not False
             or candidate["android_multi_module_go"] is not False):
         raise CandidateError("audit candidate cannot authorize release")
-    if type(candidate["observation_date"]) is not str or not re.fullmatch(r"20\\d\\d-\\d\\d-\\d\\d", candidate["observation_date"]):
+    if type(candidate["observation_date"]) is not str or not re.fullmatch(r"20\d\d-\d\d-\d\d", candidate["observation_date"]):
         raise CandidateError("invalid observation date")
     entries = candidate["modules"]
     if type(entries) is not list or len(entries) != 8:
