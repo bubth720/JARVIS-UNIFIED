@@ -1,0 +1,176 @@
+{
+  "format": "jarvis.uni08-candidate/1",
+  "observation_date": "2026-10-26",
+  "scope": "AUDIT_ONLY",
+  "decision": "BLOCKED",
+  "human_approved": false,
+  "android_multi_module_go": false,
+  "modules": [
+    {
+      "id": "core",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-02-core-readiness",
+      "candidate_sha": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+      "min_sdk": 24,
+      "ci_observations": [
+        {
+          "workflow": "FUSION-02 CORE refused ports and regressions",
+          "run_id": 40287287330,
+          "commit": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40287287330"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "CORE C0 passif; raccord producteur Android non activé."
+    },
+    {
+      "id": "llm",
+      "repository": "bubth720/JARVIS-LLM",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-02-llm-prequalification",
+      "candidate_sha": "f147236820e0633b0c88f6f1725e828f71167b27",
+      "min_sdk": 29,
+      "ci_observations": [
+        {
+          "workflow": "FUSION-02 LLM test-only prequalification",
+          "run_id": 40287437858,
+          "commit": "34491eee148cdd54db09a09175b3ca1742d8e24c",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40287437858"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "La CI verte concerne un parent de code; JNI GGUF/unload Android non attestés."
+    },
+    {
+      "id": "voice",
+      "repository": "bubth720/JARVIS-VOICE",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-02-voice-timeline",
+      "candidate_sha": "95f873226a6b80e2517266a943dfbead94432b86",
+      "min_sdk": 26,
+      "ci_observations": [
+        {
+          "workflow": "FUSION-02 VOICE isolated protocol",
+          "run_id": 40334356407,
+          "commit": "95f873226a6b80e2517266a943dfbead94432b86",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40334356407"
+        },
+        {
+          "workflow": "Pocket Probe",
+          "run_id": 40334356350,
+          "commit": "95f873226a6b80e2517266a943dfbead94432b86",
+          "conclusion": "failure",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40334356350"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "Les workflows historiques ont des échecs; émotions et liaison CORE restent bloquées."
+    },
+    {
+      "id": "interface",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "default_branch": "development/mission-002",
+      "candidate_branch": "feat/fusion-02-interface",
+      "candidate_sha": "3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff",
+      "min_sdk": 26,
+      "ci_observations": [
+        {
+          "workflow": "Android",
+          "run_id": 40288572227,
+          "commit": "3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40288572227"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "Façade laboratoire, pas de transport CORE signé; dépôt secondaire INTERFACE- séparé."
+    },
+    {
+      "id": "nexus",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-01-nexus-integration",
+      "candidate_sha": "9d6928cd8651f83fa5091bdb474b33761d366412",
+      "min_sdk": 24,
+      "ci_observations": [],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "RAG JVM et port documentés, FTS5 Android/consommation CORE non qualifiés."
+    },
+    {
+      "id": "services",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-02-services",
+      "candidate_sha": "9dfbf60a908a7b44030ef060af4c164e349887be",
+      "min_sdk": 24,
+      "ci_observations": [
+        {
+          "workflow": "SERVICES foundation and Android qualification",
+          "run_id": 40352356751,
+          "commit": "9dfbf60a908a7b44030ef060af4c164e349887be",
+          "conclusion": "failure",
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40352356751"
+        },
+        {
+          "workflow": "SERVICES foundation and Android qualification (previous)",
+          "run_id": 40348805777,
+          "commit": "10cdce58fe3cf451c7a1b4220081cece1b82a948",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40348805777"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "Dernière CI au SHA sélectionné en échec après un parent vert; port de production SAF export OFF."
+    },
+    {
+      "id": "evolution",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "default_branch": "main",
+      "candidate_branch": "feat/evolution-final-01",
+      "candidate_sha": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "min_sdk": 0,
+      "ci_observations": [],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "Sandbox OS non qualifiée; pas d’application automatique de correctifs."
+    },
+    {
+      "id": "unified",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "default_branch": "main",
+      "candidate_branch": "feat/fusion-02-android-first-evidence",
+      "candidate_sha": "6de738633586743b3cf3f54e41ab4180c2cf0fee",
+      "min_sdk": 0,
+      "ci_observations": [
+        {
+          "workflow": "FUSION-02 independent evidence",
+          "run_id": 40287691712,
+          "commit": "6de738633586743b3cf3f54e41ab4180c2cf0fee",
+          "conclusion": "success",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40287691712"
+        }
+      ],
+      "android_e2e_attested": false,
+      "physical_attested": false,
+      "runtime_link_attested": false,
+      "risk": "Contrat et CI logicielle seulement; pilote Android global explicitement bloqué."
+    }
+  ]
+}

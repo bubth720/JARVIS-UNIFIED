@@ -1,0 +1,60 @@
+{
+  "name": "UNI-08 U00 audit candidate and baseline",
+  "on": {
+    "push": {
+      "branches": [
+        "feat/uni-08-*"
+      ]
+    },
+    "pull_request": {},
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "candidate-and-regressions": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 20,
+      "steps": [
+        {
+          "uses": "actions/checkout@v4",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "3.12.12"
+          }
+        },
+        {
+          "name": "Historic backup dependency with pinned requirements",
+          "run": "python -m pip install --only-binary=:all: -r backup_prototype/requirements.txt"
+        },
+        {
+          "name": "Original validation including FUSION-02 (167 unique tests)",
+          "run": "python -m tooling.integration.ci --output \"$RUNNER_TEMP/uni08-baseline\""
+        },
+        {
+          "name": "U00 standalone audit regression cases",
+          "run": "python -m unittest discover -s tooling/integration/uni08_tests -v"
+        },
+        {
+          "name": "Verify proposed candidate stays blocked",
+          "run": "python -m tooling.integration.uni08_candidate docs/uni-08/BOM-PROPOSED.json"
+        },
+        {
+          "uses": "actions/upload-artifact@v4",
+          "if": "always()",
+          "with": {
+            "name": "uni08-u00-evidence",
+            "path": "${{ runner.temp }}/uni08-baseline/",
+            "if-no-files-found": "warn"
+          }
+        }
+      ]
+    }
+  }
+}
