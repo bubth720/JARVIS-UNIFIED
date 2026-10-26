@@ -1,0 +1,20 @@
+{
+  "repository": "bubth720/JARVIS-UNIFIED",
+  "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40287363679",
+  "commit": "2fa138c90deab313ab5a6fe880c0b37d37400a54",
+  "status": "success",
+  "duration_reported": "39s",
+  "observed_at": "2026-10-26T07:44:54.735706+00:00",
+  "method": "public visible GitHub run summary; logs not independently downloaded",
+  "artifact": {
+    "name": "fusion-02-validation-evidence",
+    "server_reported_sha256": "079ee48d36c26c83fb6f0b229b66961c2929536e0454674e125f13a9a67e2d3f",
+    "downloaded_and_rehashed": false
+  },
+  "html_sha256": "29f5930fa42e9d77ff9af423f839141cd0d87e7afd80041667447b8e780ac5c3",
+  "warnings": [
+    "GitHub forces Node20-targeting actions to Node24",
+    "ubuntu-latest image migration notice"
+  ],
+  "runtime_android_qualified": false
+}

@@ -44,3 +44,12 @@ Le succès local de cette reprise est documenté dans VALIDATION.json. Le résul
 GitHub de la nouvelle branche doit être observé séparément après publication ;
 aucun badge vert n'est anticipé. Les workflows des autres propriétaires n'ont
 pas été modifiés. Les échecs initiaux et snapshots FUSION-01 restent préservés.
+
+## Reprise réellement observée
+
+Le [run40287363679](https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40287363679)
+a réussi au commit exact de code `2fa138c90deab313ab5a6fe880c0b37d37400a54`,
+en39s ; artefact `fusion-02-validation-evidence` présent. Les warnings Node20
+forcé vers24 et migration ubuntu-latest sont préservés. Voir
+`evidence/ci-recovery.json`. Ne pas attribuer implicitement ce succès au
+commit documentaire suivant ou aux modules Android externes.

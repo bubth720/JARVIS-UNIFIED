@@ -79,8 +79,15 @@ FUSION-01 n'est réécrit ; aucune dépendance de runtime/cloud ajoutée.
 
 Publication uniquement sur branche dédiée, sans force. Main doit rester
 `e4435f4bd60c5fdc5595c411cc8cab9da7ef020b` ; SHA distant vérifié au compte rendu.
-Le résultat CI de la nouvelle branche est une observation séparée après push,
-jamais anticipé depuis les tests locaux. L'accès API actuel renvoie Forbidden :
+La CI indépendante a réussi au commit de code
+`2fa138c90deab313ab5a6fe880c0b37d37400a54` :
+https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40287363679 (39s).
+L’artefact de preuves est présent, digest serveur consigné dans PROVENANCE.json ;
+son archive n’a pas été téléchargée/recalculée ici. Les avertissements Node20→24
+et migration ubuntu-latest sont conservés, pas supprimés. Ce succès CI est
+distinct des167 tests locaux, et n’est pas une qualification Android.
+Le commit final de rapport ne reçoit pas automatiquement la CI du parent ;
+la conclusion de son propre run est vérifiée séparément dans le bilan final. L'accès API actuel renvoie Forbidden :
 PR brouillon non créée ; [texte prêt](PR_DRAFT.md), aucun jeton remplacé ou exposé.
 
 Priorité suivante : NEXUS probe FTS5 instrumentée24/25 et backend autorisé,

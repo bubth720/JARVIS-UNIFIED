@@ -17,4 +17,3 @@ class CiEvidenceTests(unittest.TestCase):
         python=next(s for s in steps if s.get('uses','').startswith('actions/setup-python'))
         self.assertEqual(python['with']['python-version'],'3.12.12')
         self.assertTrue(any(s.get('if')=='always()' and s.get('uses','').startswith('actions/upload-artifact') for s in steps))
-
