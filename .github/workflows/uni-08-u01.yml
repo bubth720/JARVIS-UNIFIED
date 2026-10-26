@@ -1,0 +1,12 @@
+{
+  "name": "UNI-08 U01 proposal gate",
+  "on": {"push": {"branches": ["feat/uni-08-u01-*"]}, "pull_request": {}, "workflow_dispatch": {}},
+  "permissions": {"contents": "read"},
+  "jobs": {"proposal-only": {"runs-on": "ubuntu-latest", "timeout-minutes": 10,
+    "steps": [
+      {"uses": "actions/checkout@v4", "with": {"persist-credentials": false}},
+      {"uses": "actions/setup-python@v5", "with": {"python-version": "3.12.12"}},
+      {"name": "Validate U01 review, no producer or Android invocation", "run": "python -m unittest discover -s tooling/integration/uni08_u01_tests -v"},
+      {"name": "Existing U00 audit regressions", "run": "python -m unittest discover -s tooling/integration/uni08_tests -v"}
+    ]}}
+}
