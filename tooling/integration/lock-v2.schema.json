@@ -1,0 +1,701 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis:integration-lock:2",
+  "title": "integration-lock-v2",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "jarvis.integration-lock/2"
+    },
+    "mission": {
+      "const": "FUSION-02/U"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "baseline_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PARTIAL",
+        "BLOCKED",
+        "READY"
+      ]
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "core",
+              "llm",
+              "voice",
+              "interface",
+              "nexus",
+              "services",
+              "evolution",
+              "unified"
+            ]
+          },
+          "repository": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "primary": {
+            "type": "object",
+            "properties": {
+              "branch": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$",
+                "minLength": 40,
+                "maxLength": 40
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$",
+                  "minLength": 40,
+                  "maxLength": 40
+                },
+                "minItems": 0,
+                "maxItems": 4,
+                "uniqueItems": true
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300,
+                      "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$",
+                      "minLength": 64,
+                      "maxLength": 64
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "sha256"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "maxItems": 40,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "branch",
+              "commit",
+              "parents",
+              "files"
+            ],
+            "additionalProperties": false
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "branch": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160,
+                  "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+                },
+                "commit": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$",
+                  "minLength": 40,
+                  "maxLength": 40
+                },
+                "parents": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{40}$",
+                    "minLength": 40,
+                    "maxLength": 40
+                  },
+                  "minItems": 0,
+                  "maxItems": 4,
+                  "uniqueItems": true
+                },
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "path": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 300,
+                        "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$",
+                        "minLength": 64,
+                        "maxLength": 64
+                      }
+                    },
+                    "required": [
+                      "path",
+                      "sha256"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 1,
+                  "maxItems": 40,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "branch",
+                "commit",
+                "parents",
+                "files"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 12,
+            "uniqueItems": true
+          },
+          "ci": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "success",
+                  "failure",
+                  "pending",
+                  "unknown",
+                  "not_checked"
+                ]
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$",
+                "minLength": 40,
+                "maxLength": 40
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              }
+            },
+            "required": [
+              "status",
+              "commit",
+              "url",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "license": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "IDENTIFIED",
+                  "UNKNOWN"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              }
+            },
+            "required": [
+              "status",
+              "expression",
+              "basis"
+            ],
+            "additionalProperties": false
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "target": {
+                  "type": "string",
+                  "enum": [
+                    "android24",
+                    "android25",
+                    "android26",
+                    "android29_arm64",
+                    "linux"
+                  ]
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "SUPPORTED",
+                    "BLOCKED",
+                    "NOT_TESTED"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000,
+                  "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+                }
+              },
+              "required": [
+                "target",
+                "status",
+                "basis"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 5,
+            "maxItems": 5,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "repository",
+          "owner",
+          "primary",
+          "alternatives",
+          "ci",
+          "license",
+          "platforms"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "frozen_contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "minLength": 64,
+            "maxLength": 64
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module": {
+            "type": "string",
+            "enum": [
+              "core",
+              "llm",
+              "voice",
+              "interface",
+              "nexus",
+              "services",
+              "evolution",
+              "unified"
+            ]
+          },
+          "contracts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500,
+              "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+            },
+            "minItems": 1,
+            "maxItems": 20,
+            "uniqueItems": true
+          },
+          "abi": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500,
+              "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+            },
+            "minItems": 1,
+            "maxItems": 20,
+            "uniqueItems": true
+          },
+          "data_schemas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500,
+              "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+            },
+            "minItems": 1,
+            "maxItems": 20,
+            "uniqueItems": true
+          },
+          "min_sdk": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "proof_scope": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          }
+        },
+        "required": [
+          "module",
+          "contracts",
+          "abi",
+          "data_schemas",
+          "min_sdk",
+          "proof_scope"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "consumed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "consumer": {
+            "type": "string",
+            "enum": [
+              "core",
+              "llm",
+              "voice",
+              "interface",
+              "nexus",
+              "services",
+              "evolution",
+              "unified"
+            ]
+          },
+          "dependency": {
+            "type": "string",
+            "enum": [
+              "core",
+              "llm",
+              "voice",
+              "interface",
+              "nexus",
+              "services",
+              "evolution",
+              "unified"
+            ]
+          },
+          "commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$",
+            "minLength": 40,
+            "maxLength": 40
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "runtime",
+              "build_library",
+              "test_fixture",
+              "alignment_reference"
+            ]
+          },
+          "binding_path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "contract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          }
+        },
+        "required": [
+          "consumer",
+          "dependency",
+          "commit",
+          "role",
+          "binding_path",
+          "contract"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 30,
+      "uniqueItems": true
+    },
+    "proofs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          },
+          "module": {
+            "type": "string",
+            "enum": [
+              "core",
+              "llm",
+              "voice",
+              "interface",
+              "nexus",
+              "services",
+              "evolution",
+              "unified"
+            ]
+          },
+          "commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$",
+            "minLength": 40,
+            "maxLength": 40
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "JVM_PASS",
+              "ANDROID_EMULATOR_PASS",
+              "ANDROID_DEVICE_PASS",
+              "END_TO_END_PASS"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "linux",
+              "android24",
+              "android25",
+              "android26",
+              "android29_arm64",
+              "android35"
+            ]
+          },
+          "scenario": {
+            "type": "string",
+            "enum": [
+              "COMPONENT",
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H",
+              "I",
+              "J"
+            ]
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_RUN",
+              "UNKNOWN"
+            ]
+          },
+          "driver": {
+            "type": "string",
+            "enum": [
+              "jvm",
+              "robolectric",
+              "android_instrumentation",
+              "physical_device",
+              "unknown"
+            ]
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+            },
+            "minItems": 1,
+            "maxItems": 20,
+            "uniqueItems": true
+          },
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300,
+                "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$",
+                "minLength": 64,
+                "maxLength": 64
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "tests": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          },
+          "failed": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          },
+          "skipped": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+          }
+        },
+        "required": [
+          "id",
+          "module",
+          "commit",
+          "level",
+          "target",
+          "scenario",
+          "result",
+          "driver",
+          "capabilities",
+          "evidence",
+          "tests",
+          "failed",
+          "skipped",
+          "basis"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100,
+      "uniqueItems": true
+    },
+    "required_targets": {
+      "const": [
+        "android24",
+        "android25"
+      ]
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+      },
+      "minItems": 0,
+      "maxItems": 40,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "format",
+    "mission",
+    "observed_at",
+    "baseline_sha256",
+    "status",
+    "components",
+    "frozen_contracts",
+    "versions",
+    "consumed",
+    "proofs",
+    "required_targets",
+    "blockers"
+  ],
+  "additionalProperties": false
+}

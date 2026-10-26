@@ -1,5 +1,12 @@
 # JARVIS-UNIFIED — référence technique centrale
 
+## FUSION-02 — Android-first, preuves distinctes
+
+[Tranche UNIFIED U](docs/fusion-02/README.md) : remédiation CI, verrou v2,
+comparaison aux références réellement consommées, statuts/reçus proposés et
+réception API24/25. Le pilote demeure BLOCKED tant que NEXUS/SERVICES/CORE
+ne fournissent pas les preuves instrumentées requises. Aucun runtime activé.
+
 ## FUSION-01 — convergence par preuves
 
 [Première tranche F0](docs/fusion-01/README.md) : verrou de composition candidate,

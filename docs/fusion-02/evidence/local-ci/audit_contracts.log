@@ -1,0 +1,46 @@
+test_canonical_unicode_and_numbers (contract_tooling.test_tooling.ContractToolingTest.test_canonical_unicode_and_numbers) ... ok
+test_checked_in_sources_are_reproducible (contract_tooling.test_tooling.ContractToolingTest.test_checked_in_sources_are_reproducible) ... ok
+test_closed_schema_addition_is_incompatible (contract_tooling.test_tooling.ContractToolingTest.test_closed_schema_addition_is_incompatible) ... ok
+test_digest_tampering_unknown (contract_tooling.test_tooling.ContractToolingTest.test_digest_tampering_unknown) ... ok
+test_duplicate_fields_and_nonfinite_rejected (contract_tooling.test_tooling.ContractToolingTest.test_duplicate_fields_and_nonfinite_rejected) ... ok
+test_exact_manifests_compatible (contract_tooling.test_tooling.ContractToolingTest.test_exact_manifests_compatible) ... ok
+test_invalid_unicode_rejected (contract_tooling.test_tooling.ContractToolingTest.test_invalid_unicode_rejected) ... ok
+test_repeated_generation_has_identical_bytes (contract_tooling.test_tooling.ContractToolingTest.test_repeated_generation_has_identical_bytes) ... ok
+test_schema_bounds_rejected_before_generating_unusable_jvm_classes (contract_tooling.test_tooling.ContractToolingTest.test_schema_bounds_rejected_before_generating_unusable_jvm_classes) ... ok
+test_unknown_generator_version_unknown (contract_tooling.test_tooling.ContractToolingTest.test_unknown_generator_version_unknown) ... ok
+test_unknown_or_missing_validation_profile_unknown (contract_tooling.test_tooling.ContractToolingTest.test_unknown_or_missing_validation_profile_unknown) ... ok
+test_unknown_required_field_rejected (contract_tooling.test_tooling.ContractToolingTest.test_unknown_required_field_rejected) ... ok
+test_unknown_schema_keyword_type_and_format_rejected (contract_tooling.test_tooling.ContractToolingTest.test_unknown_schema_keyword_type_and_format_rejected) ... ok
+test_unsupported_enum_and_constant_fail_early (contract_tooling.test_tooling.ContractToolingTest.test_unsupported_enum_and_constant_fail_early) ... ok
+test_changed_sha_between_captures (test_audit_repos.AuditTests.test_changed_sha_between_captures) ... ok
+test_declaration_not_confirmed_source (test_audit_repos.AuditTests.test_declaration_not_confirmed_source) ... ok
+test_duplicate_repositories_and_alias_not_unified (test_audit_repos.AuditTests.test_duplicate_repositories_and_alias_not_unified) ... ok
+test_hidden_credential_value_is_rejected (test_audit_repos.AuditTests.test_hidden_credential_value_is_rejected) ... ok
+test_http403_404_separate_from_absence (test_audit_repos.AuditTests.test_http403_404_separate_from_absence) ... ok
+test_http_transport_only_get_and_no_auth_for_public_success (test_audit_repos.AuditTests.test_http_transport_only_get_and_no_auth_for_public_success) ... ok
+test_main_behind_mission_and_ci_does_not_qualify_hardware (test_audit_repos.AuditTests.test_main_behind_mission_and_ci_does_not_qualify_hardware) ... ok
+test_missing_sha_stale_and_unknown_timestamp (test_audit_repos.AuditTests.test_missing_sha_stale_and_unknown_timestamp) ... ok
+test_no_ci_is_unknown (test_audit_repos.AuditTests.test_no_ci_is_unknown) ... ok
+test_offline_deterministic_and_network_forbidden (test_audit_repos.AuditTests.test_offline_deterministic_and_network_forbidden) ... ok
+test_output_json_and_markdown (test_audit_repos.AuditTests.test_output_json_and_markdown) ... ok
+test_rate_limit_and_timeout (test_audit_repos.AuditTests.test_rate_limit_and_timeout) ... ok
+test_read_error_never_removes_repository (test_audit_repos.AuditTests.test_read_error_never_removes_repository) ... ok
+test_readme_only_is_not_runtime (test_audit_repos.AuditTests.test_readme_only_is_not_runtime) ... ok
+test_sensitive_unexpected_field_never_published (test_audit_repos.AuditTests.test_sensitive_unexpected_field_never_published) ... ok
+test_boolean_not_integer (test_contracts.ContractTests.test_boolean_not_integer) ... ok
+test_cancellation_does_not_release_residency (test_contracts.ContractTests.test_cancellation_does_not_release_residency) ... ok
+test_correlations_and_responding_identity (test_contracts.ContractTests.test_correlations_and_responding_identity) ... ok
+test_deadline_and_model_identity (test_contracts.ContractTests.test_deadline_and_model_identity) ... ok
+test_five_invalid_examples (test_contracts.ContractTests.test_five_invalid_examples) ... ok
+test_five_valid_examples (test_contracts.ContractTests.test_five_valid_examples) ... ok
+test_release_requires_real_end_and_no_model (test_contracts.ContractTests.test_release_requires_real_end_and_no_model) ... ok
+test_schema_unknown_keywords_fail_closed (test_contracts.ContractTests.test_schema_unknown_keywords_fail_closed) ... ok
+test_unavailable_cannot_advertise_available_capability (test_contracts.ContractTests.test_unavailable_cannot_advertise_available_capability) ... ok
+test_unavailable_incompatible_unauthorized_and_expired_responses (test_contracts.ContractTests.test_unavailable_incompatible_unauthorized_and_expired_responses) ... ok
+test_unknown_fields_rejected_for_every_contract (test_contracts.ContractTests.test_unknown_fields_rejected_for_every_contract) ... ok
+test_voice_binding_is_engine_pack_specific (test_contracts.ContractTests.test_voice_binding_is_engine_pack_specific) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.068s
+
+OK

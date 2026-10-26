@@ -1,0 +1,265 @@
+{
+  "format": "jarvis.fusion02.validation/1",
+  "module": "UNIFIED",
+  "mission": "FUSION-02/U",
+  "branch": "feat/fusion-02-android-first-evidence",
+  "base_commit": "3caa57d91ce0dba31043e7cb6373a5e2df8b9fa4",
+  "status": "UNIFIED_SOFTWARE_PASS_ANDROID_PILOT_BLOCKED",
+  "fresh_local_ci": {
+    "format": "jarvis.fusion02.ci/1",
+    "observed_at": "2026-10-26T07:37:47.209180+00:00",
+    "platform": "linux",
+    "python": "3.12.14",
+    "results": [
+      {
+        "name": "audit_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 41,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 41,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "registry",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "registry/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 23,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 23,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "campaign",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/campaign/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 32,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 32,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "backup",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "backup_prototype/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 30,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 30,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion01",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 21,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 21,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion02",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/fusion02_tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 20,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 20,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "unified_validator",
+        "command": [
+          "python3",
+          "scripts/validate_unified.py"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_proposal",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "proposals"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_comparison",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "compare"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.check_v2_contracts"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      }
+    ],
+    "totals": {
+      "tests": 167,
+      "passed": 167,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ok": true,
+    "android_instrumentation_executed": false,
+    "runtime_authorization_granted": false
+  },
+  "source_check": {
+    "command": [
+      "python3",
+      "-m",
+      "tooling.integration.cli_v2",
+      "validate",
+      "--repositories",
+      "<local-map>"
+    ],
+    "references": 26,
+    "source_files": 238,
+    "frozen_contracts": 5,
+    "exit_code": 0,
+    "external_tests_reexecuted": false
+  },
+  "initial_failures_preserved": [
+    {
+      "kind": "historical_remote_yaml_failure",
+      "run": 40214722427,
+      "cause": "Invalid YAML line48 before any tests"
+    },
+    {
+      "kind": "local_delivery_link_check",
+      "test_failures": 0,
+      "validator_failed": true,
+      "corrected_by": "complete referenced delivery files, no tests removed from historical suites"
+    }
+  ],
+  "not_executed": [
+    "Android emulator or physical tests",
+    "real SAF export",
+    "live concurrent authorizeAtCommit fence",
+    "native LLM qualification",
+    "other repositories test/build execution"
+  ],
+  "code_sha256": {
+    "integration-lock-v2.json": "9a854765ba614f5282b20e6fd9925efde4b242f297a5274eeec76cfdb7655da5",
+    ".github/workflows/fusion-02.yml": "0d1415525211dc554c10db80367eef839dda644c9dde82e11157f917fea571c2",
+    "tooling/integration/contracts_v2.py": "0f3b139b4ffe907ff081e8dcceffbeab346f0216cc8485303caf67b540d3d1d4",
+    "tooling/integration/cli_v2.py": "5c9f4865c8507f39d36aaae6d549c61c931419034ee9c77e06bb60a11d165728",
+    "tooling/integration/v2.py": "57511eb106fe075015ffbc99df1519e1a607bda070337a7bb41cce96684a4874",
+    "tooling/integration/check_v2_contracts.py": "6c2cf8ad93b3ab875056a176b1a40dbaa0f823200a6fb316653153cbfd06222c",
+    "tooling/integration/ci.py": "6235c57d2b3c26fedb5311c9a8b6aa45c579a94ec511f33dd0f8f738ef2afe2e",
+    "docs/fusion-02/proposals/operation-receipt.valid.json": "aacbb82884728478aec9b7a3056ad9adfd7d3cb6807af0ce2414ff6d3076a5f5",
+    "docs/fusion-02/proposals/operation-receipt.schema.json": "a4d790c4eb8535d482a56b4ecce05cfb6851e9437e0ca1511b8d2c2e0284ee8b",
+    "docs/fusion-02/proposals/capability-status.schema.json": "bd2b9db5307e9b976bd1b48c0806931ced2c072e01623fdbdfe20c4172613702",
+    "docs/fusion-02/proposals/capability-status.valid.json": "1d7a03afd9e79c89863efd56d998725a88aadea4df529b574fdabe0dc4221f02",
+    "docs/fusion-02/proposals/capability-status.invalid.json": "b01ee5de18698d14e68ae45b753484f7eb4b9ce45eed2c442d026653dd43758a",
+    "docs/fusion-02/proposals/operation-receipt.invalid.json": "5fbdb695377db73b6e77bbfb5c368b420d174dea81625d23ed4c439c39310c5b"
+  }
+}

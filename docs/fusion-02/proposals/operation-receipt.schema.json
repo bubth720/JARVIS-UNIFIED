@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis:operation-receipt:2-draft",
+  "title": "operation-receipt-proposal",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "jarvis.operation-receipt/2-draft"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "request_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "PREPARED",
+        "DISPATCHED",
+        "COMMITTED",
+        "UNKNOWN"
+      ]
+    },
+    "operation_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "destination_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "confirmation_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "confirmation_consumed": {
+      "type": "boolean"
+    },
+    "authorization_at_commit": {
+      "type": "string",
+      "enum": [
+        "NOT_CHECKED",
+        "GRANTED",
+        "DENIED"
+      ]
+    },
+    "permission_generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "effect": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "STARTED",
+        "CONFIRMED",
+        "UNKNOWN"
+      ]
+    },
+    "readback_verified": {
+      "type": "boolean"
+    },
+    "output_sha256": {
+      "type": "string",
+      "pattern": "^([0-9a-f]{64})?$",
+      "maxLength": 64
+    },
+    "permission_revoked_after_commit": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "PERMISSION_REVOKED",
+        "CANCELLED",
+        "EXPIRED",
+        "ACK_LOST",
+        "IO_UNCERTAIN",
+        "INCOMPATIBLE_VERSION"
+      ]
+    }
+  },
+  "required": [
+    "version",
+    "session_id",
+    "request_id",
+    "generation",
+    "sequence",
+    "state",
+    "operation_sha256",
+    "destination_ref",
+    "confirmation_ref",
+    "confirmation_consumed",
+    "authorization_at_commit",
+    "permission_generation",
+    "effect",
+    "readback_verified",
+    "output_sha256",
+    "permission_revoked_after_commit",
+    "error"
+  ],
+  "additionalProperties": false
+}

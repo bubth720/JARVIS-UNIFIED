@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis:capability-status:2-draft",
+  "title": "capability-status-proposal",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "jarvis.capability-status/2-draft"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "core",
+        "llm",
+        "voice",
+        "interface",
+        "nexus",
+        "services",
+        "evolution",
+        "unified"
+      ]
+    },
+    "build_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "minLength": 40,
+      "maxLength": 40
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+    },
+    "target": {
+      "type": "string",
+      "enum": [
+        "linux",
+        "android24",
+        "android25",
+        "android26",
+        "android29_arm64",
+        "android35"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "READY",
+        "UNSUPPORTED",
+        "UNKNOWN",
+        "BLOCKED"
+      ]
+    },
+    "proof_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "pattern": "^[^\\x00-\\x1f\\x7f]+$"
+      },
+      "minItems": 0,
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "VERIFIED_PRODUCT",
+        "CAPABILITY_UNAVAILABLE",
+        "DEPENDENCY_BLOCKED",
+        "PROOF_MISSING",
+        "CI_FAILURE",
+        "CONTRACT_INCOMPATIBLE"
+      ]
+    }
+  },
+  "required": [
+    "version",
+    "module",
+    "build_commit",
+    "capability",
+    "target",
+    "state",
+    "proof_ids",
+    "reason"
+  ],
+  "additionalProperties": false
+}

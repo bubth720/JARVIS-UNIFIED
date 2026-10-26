@@ -1,0 +1,840 @@
+{
+  "observed_at": "2026-10-25T22:22:43+00:00",
+  "scope": "read_only_external_audit_for_UNIFIED_FUSION02_U0",
+  "fresh_external_tests_executed": false,
+  "external_source_repositories_modified": false,
+  "references": [
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/fusion-01-nexus-integration",
+      "commit": "9d6928cd8651f83fa5091bdb474b33761d366412",
+      "parents": [
+        "d903bf04f497ab0dc7f40e9708ed057e4f24c6ee"
+      ],
+      "selection": "candidate_primary_v4_portable",
+      "remote_ref_verified": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "218ab6082d54f23a4adc88246b4a8c21404bab36d04f66672459e707184b94f8",
+          "bytes": 9338,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/README.md"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "e8a37c4280d969caa9200e70f1eeaf47b549426740435d4958eecdf2d978bdff",
+          "bytes": 378,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "6c248c0542313f0938db74ea5a5a198f10a8290744a21be6b564404596fcd6ab",
+          "bytes": 787,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/settings.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335",
+          "bytes": 340,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "sha256": "1e0f77d58c3622d3d257673a07af18ddd827c94c78644e018345135955c5ad82",
+          "bytes": 242,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt",
+          "sha256": "e9a64ca6c9962842cf7f44f8b80b43bf85a3d10622d4d47e1793d11b170c5fb7",
+          "bytes": 7206,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt",
+          "sha256": "5ab3937518312bd3c866d2d45c039b2ec9ee4bacf883b053a023ab1ae3c31ba5",
+          "bytes": 944,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+          "sha256": "544ef2a30c331f8f47ed296ea18d1beb66ecff11774c9d94b05a8613e8809341",
+          "bytes": 2953,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+        },
+        {
+          "path": "nexus-android-store/build.gradle.kts",
+          "sha256": "5cc5a58d47ec5d76cfcd55c4d6d7188666cb35895a69717f3bec07cc04062769",
+          "bytes": 1324,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-android-store/build.gradle.kts"
+        },
+        {
+          "path": "nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt",
+          "sha256": "8f22a275b326f057999543b631e82d4af4b5ba25d7cbf0f0e30c6cf6ca273ffa",
+          "bytes": 7808,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt",
+          "sha256": "a5571dfb138739f2bed5e13022ed4cca08926072d31627eec569bfb1c08a1d2c",
+          "bytes": 4846,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveRangeSource.kt",
+          "sha256": "d6a0bfa64d943b204d7d6f31dabe165602f52dae936717fa0b68bc99b68cb2d5",
+          "bytes": 391,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveRangeSource.kt"
+        },
+        {
+          "path": "docs/fusion-01/REPORT.md",
+          "sha256": "cd3ea9f99af3394bb4fc0e32af254f8e29259c751f1edefb8fbb4fd9fd1b805d",
+          "bytes": 15062,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/docs/fusion-01/REPORT.md"
+        },
+        {
+          "path": "docs/fusion-01/integration-lock.json",
+          "sha256": "431f09e04782ba8d30766daff103f1f53c50817471a29228d042227f401ec5a1",
+          "bytes": 29532,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/docs/fusion-01/integration-lock.json"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/DocumentaryGateway.kt",
+          "sha256": "461cb82d2386ba048ee0161ab015f69e4a37b3f760a33643e06c0be88767e856",
+          "bytes": 6437,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/DocumentaryGateway.kt"
+        },
+        {
+          "path": ".github/workflows/fusion-01.yml",
+          "sha256": "7c9f0a764c0627cf33d0a2c185ae928affb288efa48399bbdfa11aa6b6394a45",
+          "bytes": 2239,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/.github/workflows/fusion-01.yml"
+        },
+        {
+          "path": "docs/fusion-01/evidence/jvm-results.json",
+          "sha256": "c178e0df82715bd3082c06f4dc3b991666b3c70062cfbfc24f1dfcded76868da",
+          "bytes": 1639,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/docs/fusion-01/evidence/jvm-results.json"
+        },
+        {
+          "path": "docs/fusion-01/evidence/android-results.json",
+          "sha256": "c477a0d98940b61ba47a6d81680f32403ac4c534cdfd71fdd6a9725125ce6714",
+          "bytes": 452,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/docs/fusion-01/evidence/android-results.json"
+        },
+        {
+          "path": "nexus-jvm-store/src/test/kotlin/fr/jarvis/nexus/FusionSnapshotMigrationTest.kt",
+          "sha256": "0962fac30fcdd47303fff804edc86ead6d6566e0482b3c9c8eb7f2ebcd1484ed",
+          "bytes": 4572,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/9d6928cd8651f83fa5091bdb474b33761d366412/nexus-jvm-store/src/test/kotlin/fr/jarvis/nexus/FusionSnapshotMigrationTest.kt"
+        }
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "reason": "No root LICENSE/COPYING project file in inspected tree; dependency licenses do not license the project."
+      }
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/nex-06a-android-api24",
+      "commit": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+      "parents": [
+        "3acec55616ff8e3b1666091780fca59261377e18"
+      ],
+      "selection": "legacy_port_v3",
+      "remote_ref_verified": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "44d659ea7c7578b14b138c96c1461a9023ff93c1654ad392317777e2ebd04705",
+          "bytes": 5458,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/README.md"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "755238d2e0adaaf91bc6afabb626c62f0d9d45dbe8fdae194dbab844c76a5d93",
+          "bytes": 219,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "6c248c0542313f0938db74ea5a5a198f10a8290744a21be6b564404596fcd6ab",
+          "bytes": 787,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/settings.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335",
+          "bytes": 340,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "sha256": "1e0f77d58c3622d3d257673a07af18ddd827c94c78644e018345135955c5ad82",
+          "bytes": 242,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt",
+          "sha256": "abb34ecd7079402643c004ea197ffcb3b79174d1acfb977671f97cebb841c568",
+          "bytes": 4229,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusSchema.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt",
+          "sha256": "4fdb50f5562b611bc6b6c724a128d36f7e484aeae772f6896e3d9046ae4279d5",
+          "bytes": 817,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+          "sha256": "c2512a2aa774c080ca0bb8ae2d96f6283b5ca1f6364aab1809dc3bfe7fec4e32",
+          "bytes": 2878,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+        },
+        {
+          "path": "nexus-android-store/build.gradle.kts",
+          "sha256": "bab8378c67bbd1d0097effa33fffbb16b487138f68764298b1098d4426ff2351",
+          "bytes": 924,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-android-store/build.gradle.kts"
+        },
+        {
+          "path": "nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt",
+          "sha256": "ce3fec3a94e909c0f4007b517fcdd58dec5846242a5818ec3b73a9e932bb5617",
+          "bytes": 7709,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-android-store/src/main/kotlin/fr/jarvis/nexus/android/AndroidNexusStorage.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt",
+          "sha256": "15be7c3674f3c1a9dddd485cc28890fdb4381c2c03179208dd4b8ed6ae1459b6",
+          "bytes": 386,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt"
+        },
+        {
+          "path": "docs/dev/NEX-06A.md",
+          "sha256": "779e121a8a7c449460e21408b867fa5bc119b3e555a8216d7b9ecf61a7ab91c8",
+          "bytes": 9882,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/docs/dev/NEX-06A.md"
+        },
+        {
+          "path": "docs/dev/NEX-06A-VALIDATION.json",
+          "sha256": "37e9f7d97b92bc7861c933ed2458a1e8c43b1b055eac53b41d763670c0b2a5b2",
+          "bytes": 4478,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/374ea2e2fd640e78f2f5e12e60e75b493420e504/docs/dev/NEX-06A-VALIDATION.json"
+        }
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "reason": "No root LICENSE/COPYING project file in inspected tree; dependency licenses do not license the project."
+      }
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/nexus-final-01",
+      "commit": "d903bf04f497ab0dc7f40e9708ed057e4f24c6ee",
+      "parents": [
+        "bbccac2ff2cc052f897c7f5015f234507e047b95"
+      ],
+      "selection": "alternative_final_v4_parent",
+      "remote_ref_verified": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "3e15b24724a34a9d7380eab2e0d2b4f44c3d9d3a381d29f4ac180b5c4d68835c",
+          "bytes": 8001,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/README.md"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "38614212f7666af2d963c75b1a6cecb7bdd4947c002f5803e84b81efbf1064f1",
+          "bytes": 116,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "cd2ac9db3e7367a29590fa47543c15c5d62380e3830582765fd075d056e934dd",
+          "bytes": 652,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/settings.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335",
+          "bytes": 340,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "sha256": "e141f8b555f1084160af0cd733887456aa1601a6a490f260a625f5003fb80da2",
+          "bytes": 251,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+          "sha256": "544ef2a30c331f8f47ed296ea18d1beb66ecff11774c9d94b05a8613e8809341",
+          "bytes": 2953,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt",
+          "sha256": "9ee3a3ee5e8e0b09c1751fdbc0db19fe9cde27ab4c70b0b7a6d2dc2217cb8975",
+          "bytes": 8455,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/nexus-core/src/main/kotlin/fr/jarvis/nexus/archive/ArchiveReader.kt"
+        },
+        {
+          "path": "docs/dev/NEXUS-FINAL-01.md",
+          "sha256": "d64c13ccf74eddb0b93d52fc43083c46f573e7bb848da331dee62d3b0bfac8f5",
+          "bytes": 15107,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/docs/dev/NEXUS-FINAL-01.md"
+        },
+        {
+          "path": "docs/dev/NEXUS-FINAL-01-VALIDATION.json",
+          "sha256": "a8dfe111173552b46ef52d824b60e32e11a7dd415d1d070641fd6ca62f7f0fb8",
+          "bytes": 11450,
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/d903bf04f497ab0dc7f40e9708ed057e4f24c6ee/docs/dev/NEXUS-FINAL-01-VALIDATION.json"
+        }
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "reason": "No root LICENSE/COPYING project file in inspected tree; dependency licenses do not license the project."
+      }
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "feat/serv-04a-android-tool-port",
+      "commit": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "parents": [
+        "3decdc47d82f9b43713c48cab244762941770a81"
+      ],
+      "selection": "candidate_primary_android24",
+      "remote_ref_verified": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "b46c434c29f634a480e7b52e8906d2c62ae929132790745a6699b7ca895997db",
+          "bytes": 3387,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/README.md"
+        },
+        {
+          "path": "build.gradle",
+          "sha256": "88224c6709891a88c82a040ff4da2496a87020f115312c03d84e6cdb2bc8a86a",
+          "bytes": 64,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/build.gradle"
+        },
+        {
+          "path": "settings.gradle",
+          "sha256": "ad6516078e1abb656017e36168d47f6f12bf6e53ea3a328b713b51e025992dfc",
+          "bytes": 686,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/settings.gradle"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+          "bytes": 338,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "android/build.gradle",
+          "sha256": "f39f386b715f34b7300eec30d112e6029b0fdc3c5864eaa09c6f899542dbef61",
+          "bytes": 1123,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/android/build.gradle"
+        },
+        {
+          "path": "services-portable-api/build.gradle",
+          "sha256": "6e91374570a90aff307d49dac109155c1979dbd40011223bedb522b99dd385f0",
+          "bytes": 186,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/build.gradle"
+        },
+        {
+          "path": "services-android-adapter/build.gradle",
+          "sha256": "fb8b8b3c4ea9a9c1e0eb1f806483bb49589489e493740e86d3ca87f340a089fc",
+          "bytes": 1577,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-android-adapter/build.gradle"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java",
+          "sha256": "89eddc1ed68eeae39d20e1d0867aff59399a415b6f728ed4a50685456cef163c",
+          "bytes": 627,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java"
+        },
+        {
+          "path": "services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/ServicesAndroidToolPort.java",
+          "sha256": "99649b2adb9dcad59db7173abc04ab79ab359c758808c2d9ed64b86e6a043de7",
+          "bytes": 10189,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-android-adapter/src/main/java/fr/jarvis/services/android/adapter/ServicesAndroidToolPort.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/tools/ToolDispatcher.java",
+          "sha256": "d37d3d2ccca0e67dcb5990f8a35105b0ccad9f081f99238d1c689d7023be09be",
+          "bytes": 4543,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/tools/ToolDispatcher.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/modules/guard/AccessGuard.java",
+          "sha256": "1a7bcd345c2447ccc15d5e1c146cc8c2ce51143d8d1a23b012d32c5af9e4b9a5",
+          "bytes": 3166,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/services-portable-api/src/main/java/fr/jarvis/services/modules/guard/AccessGuard.java"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-SERV-04A.md",
+          "sha256": "7d5cce98e46b386cdda35ae8c2e0d458d3c71cb613f5db5b91e053d9d9339368",
+          "bytes": 11711,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/docs/intensive-2026-10-22/REPORT-SERV-04A.md"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/VALIDATION-SERV-04A.json",
+          "sha256": "7d849c611082f22bf181ae1cfaa1b22316734760efa014c2280d7ddc2374b847",
+          "bytes": 3158,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/docs/intensive-2026-10-22/VALIDATION-SERV-04A.json"
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "242c190802eef8a4bbff93c59be46f597755845f4136ee1c914ee467b220de0f",
+          "bytes": 5101,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/f00091a639612b91eca1a301580c8f531249f1e3/.github/workflows/verify.yml"
+        }
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "reason": "No root LICENSE/COPYING project file in inspected tree; dependency licenses do not license the project."
+      }
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "feat/services-final-01",
+      "commit": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+      "parents": [
+        "edfa044321ff09697ae9bec40a6e31aa76a77370"
+      ],
+      "selection": "alternative_final17_uncomposed",
+      "remote_ref_verified": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "d2aebe071d5add7fbf12d7547b8c82a2f63e50a7a90f1c800103fc348a8ac6a5",
+          "bytes": 4023,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/README.md"
+        },
+        {
+          "path": "build.gradle",
+          "sha256": "88224c6709891a88c82a040ff4da2496a87020f115312c03d84e6cdb2bc8a86a",
+          "bytes": 64,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/build.gradle"
+        },
+        {
+          "path": "settings.gradle",
+          "sha256": "4eed094b0d8c9494a78a44b8abc3a442e47c662cee724334b0b5327f21a30b21",
+          "bytes": 413,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/settings.gradle"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+          "bytes": 338,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "android/build.gradle",
+          "sha256": "f39f386b715f34b7300eec30d112e6029b0fdc3c5864eaa09c6f899542dbef61",
+          "bytes": 1123,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/android/build.gradle"
+        },
+        {
+          "path": "reports/services-final-01/REPORT.md",
+          "sha256": "f3c8c008fbac893bdd245e15fa3b130706100e27f2eff569dca507fef1d6a965",
+          "bytes": 15346,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/REPORT.md"
+        },
+        {
+          "path": "reports/services-final-01/validation.json",
+          "sha256": "62b704392e0304b82972b1693413bcec26c59694a2b47b2b54300012ffb0fc80",
+          "bytes": 13181,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/reports/services-final-01/validation.json"
+        },
+        {
+          "path": "contracts/services-final/v1/tool-catalogue.json",
+          "sha256": "9f3cd175d24a3930f21bee3c7e31f898005c28eeb5ec6b0508212624b1c11429",
+          "bytes": 6524,
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/d16dd84f27881460ec9f02d2a54d9ddff23187dc/contracts/services-final/v1/tool-catalogue.json"
+        }
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "reason": "No root LICENSE/COPYING project file in inspected tree; dependency licenses do not license the project."
+      }
+    }
+  ],
+  "ci_observed": [
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "commit": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+      "status": "failure",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40115049468",
+      "job_url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40115049468/job/120934494656",
+      "job": "android-adapter",
+      "failed_step": "Run android-actions/setup-android@v3",
+      "product_test_executed_in_failed_job": false,
+      "underlying_error": "UNKNOWN: anonymous HTML says Sign in to view logs; no stacktrace accessible",
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": "1",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:21Z",
+          "completed-at": "2026-10-24T17:12:22Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "2",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:22Z",
+          "completed-at": "2026-10-24T17:12:23Z"
+        },
+        {
+          "name": "Run actions/setup-java@v4",
+          "number": "3",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:23Z",
+          "completed-at": "2026-10-24T17:12:23Z"
+        },
+        {
+          "name": "Run android-actions/setup-android@v3",
+          "number": "4",
+          "conclusion": "failure",
+          "started-at": "2026-10-24T17:12:23Z",
+          "completed-at": "2026-10-24T17:12:42Z"
+        },
+        {
+          "name": "Run sdkmanager \"platforms;android-35\" \"build-tools;35.0.0\"",
+          "number": "5",
+          "conclusion": "skipped",
+          "started-at": "2026-10-24T17:12:42Z",
+          "completed-at": "2026-10-24T17:12:42Z"
+        },
+        {
+          "name": "API24 library, host SQLite tests, instrumentation compile and Lint",
+          "number": "6",
+          "conclusion": "skipped",
+          "started-at": "2026-10-24T17:12:42Z",
+          "completed-at": "2026-10-24T17:12:42Z"
+        },
+        {
+          "name": "Run python3 tools/check-android-boundary.py",
+          "number": "7",
+          "conclusion": "skipped",
+          "started-at": "2026-10-24T17:12:42Z",
+          "completed-at": "2026-10-24T17:12:42Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "number": "8",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:42Z",
+          "completed-at": "2026-10-24T17:12:43Z"
+        },
+        {
+          "name": "Post Run actions/setup-java@v4",
+          "number": "15",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:43Z",
+          "completed-at": "2026-10-24T17:12:43Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "16",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:43Z",
+          "completed-at": "2026-10-24T17:12:43Z"
+        },
+        {
+          "name": "Complete job",
+          "number": "17",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:12:43Z",
+          "completed-at": "2026-10-24T17:12:43Z"
+        }
+      ],
+      "observed_at": "2026-10-25T22:22:43+00:00",
+      "method": "public GitHub HTML, no API bypass"
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "commit": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "status": "failure",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40115305244",
+      "job_url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40115305244/job/120935248386",
+      "job": "android-build",
+      "failed_step": "SERV-04A Android24 adapter regressions and library",
+      "annotation": "Process completed with exit code 1.",
+      "underlying_error": "UNKNOWN: failed Gradle/test output requires login; exact failing test not observable",
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": "1",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:41Z",
+          "completed-at": "2026-10-24T17:15:42Z"
+        },
+        {
+          "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": "2",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:42Z",
+          "completed-at": "2026-10-24T17:15:43Z"
+        },
+        {
+          "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+          "number": "3",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:43Z",
+          "completed-at": "2026-10-24T17:15:43Z"
+        },
+        {
+          "name": "Run android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd",
+          "number": "4",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:43Z",
+          "completed-at": "2026-10-24T17:15:53Z"
+        },
+        {
+          "name": "SDK prerequisites",
+          "number": "5",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:53Z",
+          "completed-at": "2026-10-24T17:15:59Z"
+        },
+        {
+          "name": "Build diagnostic APK",
+          "number": "6",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:15:59Z",
+          "completed-at": "2026-10-24T17:17:31Z"
+        },
+        {
+          "name": "Build instrumentation APK",
+          "number": "7",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:17:31Z",
+          "completed-at": "2026-10-24T17:17:58Z"
+        },
+        {
+          "name": "Android Lint (no suppression or severity reduction)",
+          "number": "8",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:17:58Z",
+          "completed-at": "2026-10-24T17:18:29Z"
+        },
+        {
+          "name": "SERV-04A Android24 adapter regressions and library",
+          "number": "9",
+          "conclusion": "failure",
+          "started-at": "2026-10-24T17:18:29Z",
+          "completed-at": "2026-10-24T17:18:44Z"
+        },
+        {
+          "name": "Compile shared and Android sources against API24 boot classes",
+          "number": "10",
+          "conclusion": "skipped",
+          "started-at": "2026-10-24T17:18:44Z",
+          "completed-at": "2026-10-24T17:18:44Z"
+        },
+        {
+          "name": "Artifact provenance",
+          "number": "11",
+          "conclusion": "skipped",
+          "started-at": "2026-10-24T17:18:44Z",
+          "completed-at": "2026-10-24T17:18:44Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "number": "12",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:18:44Z",
+          "completed-at": "2026-10-24T17:18:46Z"
+        },
+        {
+          "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+          "number": "23",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:18:46Z",
+          "completed-at": "2026-10-24T17:18:46Z"
+        },
+        {
+          "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": "24",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:18:46Z",
+          "completed-at": "2026-10-24T17:18:46Z"
+        },
+        {
+          "name": "Complete job",
+          "number": "25",
+          "conclusion": "success",
+          "started-at": "2026-10-24T17:18:46Z",
+          "completed-at": "2026-10-24T17:18:46Z"
+        }
+      ],
+      "observed_at": "2026-10-25T22:22:43+00:00",
+      "method": "public GitHub HTML, no API bypass"
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "commit": "9d6928cd8651f83fa5091bdb474b33761d366412",
+      "status": "unknown",
+      "reason": "Filtered public Actions page shows 0 runs for fusion branch; workflow_dispatch-only new workflow not on default main tree",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/actions?query=branch%3Afeat%2Ffusion-01-nexus-integration",
+      "observed_at": "2026-10-25T22:22:43+00:00",
+      "method": "public GitHub HTML, no API bypass"
+    }
+  ],
+  "graph": {
+    "nexus_fusion1_descends_final": true,
+    "nexus_fusion1_descends_old_port": false,
+    "nexus_final_old_port_merge_base": "3acec55616ff8e3b1666091780fca59261377e18",
+    "services_final_port_merge_base": "3decdc47d82f9b43713c48cab244762941770a81",
+    "services_final_descends_port": false
+  },
+  "candidate_recommendation": {
+    "nexus": "9d6928cd8651f83fa5091bdb474b33761d366412",
+    "services": "f00091a639612b91eca1a301580c8f531249f1e3",
+    "reason": "NEX fusion1 has reconciled schema4 with portable storage; SERVICES remains only delivered API24 branch; neither establishes Android pilot GO."
+  },
+  "nexus_primary": {
+    "contract": {
+      "documentary_gateway": 1,
+      "context_carrier": "jarvis.nexus.context/1",
+      "rag_citation_fields_preserved": true,
+      "storage_api": "NexusStoragePort/readSession/inTransaction/acquireImportLease",
+      "archive_range_api": "ArchiveRangeSource distinct from ArchiveReader articles"
+    },
+    "abi": {
+      "binary_compatibility": "NOT_PROMISED_RECOMPILE_CONSUMERS",
+      "own_bytecode": "Java8",
+      "android_native_payload_added": false
+    },
+    "data_schema": 4,
+    "min_sdk": 24,
+    "toolchain": {
+      "kotlin": "2.0.21",
+      "agp": "8.7.3",
+      "gradle": "8.10.2",
+      "java": 17,
+      "compile_sdk": 35,
+      "build_tools": "35.0.0"
+    },
+    "proofs_reported_not_reexecuted": {
+      "jvm": {
+        "tests": 95,
+        "failed": 0,
+        "skipped": 0
+      },
+      "robolectric": {
+        "tests": 37,
+        "failed": 0,
+        "skipped": 0,
+        "sdk_simulations": [
+          24,
+          25,
+          26,
+          35
+        ]
+      },
+      "instrumented": {
+        "compiled": 2,
+        "executed": 0
+      },
+      "sdk24_boot_compile": {
+        "java_sources": 1,
+        "kotlin_sources": 22
+      },
+      "v3_encrypted_snapshot_to_v4_copy": "PASS_JVM_REPORTED",
+      "android_fts5_rag": "BLOCKED_NOT_INSTRUMENTED",
+      "sql_tests": 10,
+      "graph_tests": 7,
+      "zim_tests": {
+        "passed": 18,
+        "skipped": 1,
+        "real_archive": "NOT_RUN"
+      }
+    },
+    "consumed": [
+      {
+        "repository": "bubth720/JARVIS-SERVICES",
+        "commit": "fd41d75015f77e947d22d6a60e619adc00bd70b7",
+        "scope": "optional JVM extraction adapter, actually built and source-tree hashed in NEX report; not SERVICES Android24 SDK",
+        "path": "nexus-services-adapter/src/main/kotlin/fr/jarvis/nexus/adapters/ServicesParser.kt"
+      }
+    ]
+  },
+  "services_primary": {
+    "contract": "jarvis.services.inprocess/1",
+    "abi": {
+      "binary_compatibility": "RECOMPILE_AFTER_GUARD_ACCESSGUARD_EXTRACTION",
+      "own_bytecode": "Java11 / explicit API24 stub-source compile historically validated"
+    },
+    "data_schema": {
+      "entry_store": 1,
+      "sdk_owner_marker": "jarvis.services.android-journal/1"
+    },
+    "min_sdk": 24,
+    "historical_app_min_sdk": 26,
+    "toolchain": {
+      "agp": "8.9.2",
+      "gradle": "8.13",
+      "java": 17,
+      "compile_sdk": 35
+    },
+    "dependencies": {
+      "gson": "2.11.0",
+      "pdfbox_android": "2.0.27.0",
+      "bouncycastle": "1.86"
+    },
+    "available_tools": [
+      "documents.search",
+      "data.csv.normalize"
+    ],
+    "docx_export": "SAF_EXPORT_UNQUALIFIED",
+    "fence_authorize_at_commit": "ABSENT: AccessGuard.Context copies grants; dispatcher checks snapshot before adapter call, no live CORE authority callback atomically spanning effect start",
+    "proofs_reported_not_reexecuted": {
+      "jvm": 94,
+      "robolectric": 40,
+      "sdk_simulations": [
+        24,
+        25,
+        26,
+        35
+      ],
+      "instrumented_new_port_executed": 0
+    },
+    "final_alternative": {
+      "tools": 17,
+      "min_sdk": 26,
+      "jvm_tests_reported": 129,
+      "instrumented_api26_tests_reported": 17,
+      "composed_with_android24_port": false
+    }
+  },
+  "required_android_evidence": {
+    "api24": "NOT_RUN_for_rag_and_export_fence",
+    "api25": "NOT_RUN_for_rag_and_export_fence",
+    "api26": "NOT_RUN_for_new_port_qualification; final standalone historical tests distinct",
+    "api29_arm64": "NOT_TESTED",
+    "api35": "NOT_RUN_instrumentation_for_rag_and_export_fence",
+    "physical": "NOT_TESTED"
+  },
+  "blocking_conditions": [
+    "Actual FTS5/vocab/MATCH/BM25 probe and RAG citation/reopen in API24 and API25 instrumented process missing",
+    "SQLite native inclusion needs separate explicit approval if platform lacks FTS5",
+    "SERVICES live CORE authorizeAtCommit fence and exact destination/content consent are not implemented",
+    "New SAF export/readback byte equality, bad ACK/cancellation/kill/revoke races not instrumented",
+    "CORE consumed snapshots must be pinned independently; do not silently replace old NEX777/SERV3de",
+    "Project/asset distribution license unknown; dependency notices do not license project",
+    "No personal data migration, device installation or sensitive activation authorized"
+  ],
+  "public_html_sha256": {
+    "fusion02-nexus-old-run.html": "4fa037ce638188db2eadce0f1e57f82c06ccb6ad868455f82397c37fb8716285",
+    "fusion02-services-old-run.html": "021cbe92f5649f0d6b860689f23fe32c674a9e87f20bf5ff9172529a42916509",
+    "fusion02-nexus-failed-job.html": "65bf9adba4f639fa201ab7888c5f436bde93a0616b233bfca4b9034cbfcdcfd2",
+    "fusion02-services-failed-job.html": "a8859e5889854fdb5c986aef6b4a1510d50af1c6fe39993086559349757cab5e",
+    "fusion02-nexus-new-actions.html": "f0b3ce3f0e06b93e80b17545442d6612327a1360cc2bbd19378142ccba2c4b31"
+  }
+}

@@ -1,0 +1,873 @@
+{
+  "observed_at": "2026-10-25T22:19:51+00:00",
+  "scope": "FUSION-02 U0 read-only CORE+LLM",
+  "fresh_external_tests_executed": false,
+  "source_repositories_modified": false,
+  "references": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "feat/fusion-01-core-integration",
+      "commit": "36761cea101b5f88b87cd4136dc075d28a1adb96",
+      "parents": [
+        "0d41e6f3f412386371a81fe0d1a862fc87ae22cf"
+      ],
+      "base": "aea5ac859ac551d54fe16187c1883a487dbee9d6",
+      "base_is_ancestor": true,
+      "source_evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "d832c83e458720a0e19450a8fd6595460378b707bdc1d094e2e5c13c171465eb",
+          "bytes": 35073,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/AGENTS.md"
+        },
+        {
+          "path": "README.md",
+          "sha256": "91b13afaf897faec74d347a58b03607bb9489e780ddf27be567b68b84a628b4a",
+          "bytes": 2280,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/README.md"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "sha256": "be358aa8ded614ff4b21053835c278f864b9a64a808cfb828e3a255068ebcefa",
+          "bytes": 3324,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/app/build.gradle.kts"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "50425357e4449207a6e3098fa4f4dc66864a870859025051fc809589ddb858df",
+          "bytes": 142,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "2d895395ecb9cd468e3afda7a610ee1a6c3270e4d1c1313e723792779dd323fb",
+          "bytes": 449,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/settings.gradle.kts"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/CORE03-SOURCES.json",
+          "sha256": "9b5648dc8ba322ec152cfda902d0ff3eb245d833a7d6a6d5369416fc2f985890",
+          "bytes": 588,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/docs/intensive-2026-10-22/CORE03-SOURCES.json"
+        },
+        {
+          "path": "integration-lab/build.gradle.kts",
+          "sha256": "208cd095ce3db2f237842c2a716238d87bc6d6cb4b915977fbc2cd477b04c6ed",
+          "bytes": 433,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/integration-lab/build.gradle.kts"
+        },
+        {
+          "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/DocumentToolWorkflow.kt",
+          "sha256": "24a85559b931ec056196191a7cdfc579b67a2d192002ed3e81fd9599cb3c7fb8",
+          "bytes": 6821,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/DocumentToolWorkflow.kt"
+        },
+        {
+          "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/WorkflowReceipts.kt",
+          "sha256": "c2772b57ddbeb63927ca4c7c1e1137d564d9a204230951e23fd9595a7ab7e6cf",
+          "bytes": 3197,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/WorkflowReceipts.kt"
+        },
+        {
+          "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/ServicesToolAdapter.kt",
+          "sha256": "1423846dfb6708a74100cd90334ef73648623367e5618da20fcb0945718509ed",
+          "bytes": 5979,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/ServicesToolAdapter.kt"
+        },
+        {
+          "path": "integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/NexusSearchAdapter.kt",
+          "sha256": "e1e7cc6c3c135bc630f906e291d6bb2cd3fe0e23f08213a187de6430fa0500ba",
+          "bytes": 4775,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/integration-lab/src/main/kotlin/com/stark/jarvislocal/integrations/NexusSearchAdapter.kt"
+        },
+        {
+          "path": "docs/fusion-01/REPORT.md",
+          "sha256": "11e6014038de3b580e7c0dde66d459c1f798dd697c8ab1c76eb63095c18a6573",
+          "bytes": 12249,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/docs/fusion-01/REPORT.md"
+        },
+        {
+          "path": "docs/fusion-01/RESULTS.json",
+          "sha256": "e6d869495cb91cb6d87fca69eeb3fcd695c4513f853f0f146417800f6c27323d",
+          "bytes": 2036,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/docs/fusion-01/RESULTS.json"
+        },
+        {
+          "path": "docs/fusion-01/COMPATIBILITY.md",
+          "sha256": "4eecb05be4dae1c67c841899136c24708adbbb0d2c17b47003ab7826e3d9814a",
+          "bytes": 7615,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/docs/fusion-01/COMPATIBILITY.md"
+        },
+        {
+          "path": ".github/workflows/fusion-01-core.yml",
+          "sha256": "6fff08f5ad49478a8ec6880c0b2e90431df089d4e3ce8db226598117f63b3f03",
+          "bytes": 2830,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/.github/workflows/fusion-01-core.yml"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt",
+          "sha256": "2e8fa2c8eea6b793081bf47b0f9c86b78266df980e4435e2e7381f5561768804",
+          "bytes": 4449,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/app/src/main/java/com/stark/jarvislocal/LocalDatabase.kt"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/memory/ConfirmedMemoryStore.kt",
+          "sha256": "5545e25d494119d71c745aaebda96837c6edf76db1fc7d84bb207d9be3495e7d",
+          "bytes": 8313,
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/36761cea101b5f88b87cd4136dc075d28a1adb96/app/src/main/java/com/stark/jarvislocal/memory/ConfirmedMemoryStore.kt"
+        }
+      ],
+      "code_parent": "0d41e6f3f412386371a81fe0d1a862fc87ae22cf",
+      "production_app_diff_from_base": [],
+      "consumed": {
+        "nexus": {
+          "repository": "bubth720/JARVIS-NEXUS",
+          "commit": "777e6afa75ecb99b85e52d68837cb0fefcf161cd",
+          "git_tree": "b534f8a7f7e441cf264097773afb042103aefd36",
+          "source_files": 46,
+          "tree_sha256": "4a1a3cfcafe50e7f56d985a02e7017ec7d47b11d431202d3a21259d63f87521e"
+        },
+        "services": {
+          "repository": "bubth720/JARVIS-SERVICES",
+          "commit": "3decdc47d82f9b43713c48cab244762941770a81",
+          "git_tree": "56f5214de9a0d1d164638e9e128bb3335ee23499",
+          "source_files": 189,
+          "tree_sha256": "975a2dcafa3b90ed4f3216da0d1fba98410f5a940b058e55c2eb2ece2b646dbb"
+        }
+      },
+      "versions": {
+        "contract": "core.workflow-receipt/1; local Kotlin APIs",
+        "ABI": "source-compatible additions in standalone JVM lab; APK binaries unchanged from base, no binary intermodule ABI claim",
+        "data_schema": {
+          "historical_sqlite": 2,
+          "confirmed_memory": 1,
+          "workflow_receipt": "core.workflow-receipt/1"
+        },
+        "minSdk": 24,
+        "compileSdk": 35,
+        "targetSdk": 35,
+        "ABIs": [
+          "arm64-v8a"
+        ],
+        "java": 17,
+        "kotlin": "2.0.21",
+        "AGP": "8.7.3",
+        "Gradle": "8.10.2"
+      },
+      "reported_tests": {
+        "freshly_executed_in_this_audit": false,
+        "passed": 567,
+        "breakdown": {
+          "core_debug": 448,
+          "mvp2": 53,
+          "P2_fixture": 36,
+          "integration_jvm": 30
+        },
+        "failures": 0,
+        "skipped": 0,
+        "instrumentation_executed": false,
+        "physical_executed": false,
+        "lint": {
+          "debug_warnings": 27,
+          "mvp2_warnings": 37,
+          "errors": 0
+        },
+        "original_failure_preserved": "CANCELLED_RESULT_ACCEPTED on original code"
+      },
+      "contracts": {
+        "correlation": "canonical UUID session/request; generation Long>=0; child request IDs derived from request/step",
+        "permission_fence": "MISSING: Core HostAccessPort rechecks before dispatch and result acceptance, but SERVICES Guard.Context snapshot has no worker authorizeAtCommit fence",
+        "workflow_states": [
+          "PREPARED",
+          "DISPATCHED",
+          "COMPLETED",
+          "REFUSED",
+          "UNKNOWN"
+        ],
+        "prepared_dispatched_recovery": "UNKNOWN; no retry/reset; previous owner must be stopped",
+        "workflow_receipts_quota": 256,
+        "receipt_payload": [
+          "schema",
+          "session",
+          "request",
+          "generation serialized as string",
+          "state"
+        ],
+        "store": "Existing SERVICES Store namespace core_workflow_receipts",
+        "mutation_result": "COMPLETED is accepted tool result, NOT durable commit/readback attestation",
+        "confirmation": "exact review digest; rechecks confirm grant; consumable once",
+        "cancellation": "sticky logical invalidation on cancel/timeout/interruption/revocation/mismatch, not native release",
+        "limits": {
+          "workflow_deadline_ms": 30000,
+          "csv_bytes": 4096,
+          "numeric_column_bytes": 128,
+          "tool_argument_bytes": 8192,
+          "pending_reviews": 32,
+          "seen_request_ids": 128,
+          "tool_timeout_ms": 5000,
+          "context_bytes": 12000
+        }
+      },
+      "license": {
+        "project": "UNKNOWN",
+        "root_license_files": [],
+        "redistribution_approved": false
+      },
+      "blockers": [
+        "No Android producer composition in AppGraph/SessionCoordinator",
+        "NEXUS FTS5 and SERVICES SAF instrumentation unavailable",
+        "No linearized revoke/effect authorizeAtCommit fence",
+        "No Android process death/rotation/SAF proof",
+        "Native tokenizer/JNI/CORE004D remain blocked"
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-LLM",
+      "branch": "feat/fusion-01-llm-integration",
+      "commit": "e0b781442b21034a251f6af450396faabc5f667d",
+      "parents": [
+        "378a1cf4c2ceaaf531ded60670dc9161dc269575"
+      ],
+      "base": "2efb3f7aa6205062ab71f570212019fd1d9885b6",
+      "base_is_ancestor": true,
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "92ff5af637db98d47aa35ec3eebe757de3da60df1abae0df81fb77e3e800824c",
+          "bytes": 5164,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/README.md"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "sha256": "7d0a2cb3bf904eb17b2aad81c6ac13a77ca3d5ec646920ea9e674110e0af45b4",
+          "bytes": 3596,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/app/build.gradle.kts"
+        },
+        {
+          "path": "domain/build.gradle.kts",
+          "sha256": "ddf1debf802a10dbe9178ad597268b39f938deb89c67b6e1ba6a9f5d7a27932c",
+          "bytes": 366,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/domain/build.gradle.kts"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "874d1149813c03edd010c3b5a96bf8090cc50556c763b70e34bb4f138b7b9e58",
+          "bytes": 232,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "sha256": "73d92496184d445909336facb82607ece12518e8b6fce670878524d618df05ec",
+          "bytes": 538,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/settings.gradle.kts"
+        },
+        {
+          "path": "docs/fusion-01/CLIENT-CONTRACT.json",
+          "sha256": "f29f8a9f3e10645fe1f25ea01913ccc8cf2ee883cbc45f7adca18645ac322b0f",
+          "bytes": 3030,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/CLIENT-CONTRACT.json"
+        },
+        {
+          "path": "docs/fusion-01/CLIENT-CONTRACT.sha256",
+          "sha256": "c9ed6c6a58c21cc49072614d5f036afbf37272f0098bb7c59a53416edbf413a0",
+          "bytes": 87,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/CLIENT-CONTRACT.sha256"
+        },
+        {
+          "path": "docs/fusion-01/REPORT.md",
+          "sha256": "ee398d3f55c61af11238bde282b90b6d5b8792830049d9a48aa5f91b6a17a727",
+          "bytes": 10332,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/REPORT.md"
+        },
+        {
+          "path": "docs/fusion-01/CONTRACT.md",
+          "sha256": "250d1fab5b02e6fc4b07a7e89b21c11c3d29e5d9be60867c91ddf3d40d6b989a",
+          "bytes": 5761,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/CONTRACT.md"
+        },
+        {
+          "path": "docs/fusion-01/NATIVE-REVIEW.md",
+          "sha256": "8f633692e977720586c6c1527a97a0846d994944c0874c8ac75240bf38dae4c0",
+          "bytes": 3727,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/NATIVE-REVIEW.md"
+        },
+        {
+          "path": "docs/fusion-01/evidence/LOCAL-RESULTS.json",
+          "sha256": "080ed8bc727b6e90a438b1fed581c4e0e67535fc863c7e09b610874b7849fc2e",
+          "bytes": 8787,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/evidence/LOCAL-RESULTS.json"
+        },
+        {
+          "path": "docs/fusion-01/evidence/CI.json",
+          "sha256": "8355915e9e6c043367bc08b48c6fd5dc4251753cdc5e440caf1a9965eae311b6",
+          "bytes": 2606,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/fusion-01/evidence/CI.json"
+        },
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt",
+          "sha256": "6ef7976b1c689d497c78f92da95f37557640686291ed19ebc7e78677989c14fd",
+          "bytes": 7334,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt"
+        },
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/client/ClientStreamMonitor.kt",
+          "sha256": "044bb4eab2e764e72825c82572ac5e7f17b2fc651c5dba5bbe3fb2fd8ee0937f",
+          "bytes": 4404,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/domain/src/main/kotlin/fr/jarvis/domain/client/ClientStreamMonitor.kt"
+        },
+        {
+          "path": "app/src/main/java/fr/jarvis/llm/client/LocalClientReadinessPort.kt",
+          "sha256": "c161ce850d7ea78a928b3d95b6ea82d8e44cd997f84e320284d70dcbea2072c8",
+          "bytes": 1552,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/app/src/main/java/fr/jarvis/llm/client/LocalClientReadinessPort.kt"
+        },
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/generation/P2Contract.kt",
+          "sha256": "740441c8ee4a0001e91744ade5eb5f5343480c4d491979ec1019d38fbd20d696",
+          "bytes": 8351,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/domain/src/main/kotlin/fr/jarvis/domain/generation/P2Contract.kt"
+        },
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/generation/Core004BMapping.kt",
+          "sha256": "a64a818e7d4891db8ec30c28d9f93a6e6acd0e1f9dcd58d00acd49ad23c1c7b3",
+          "bytes": 1343,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/domain/src/main/kotlin/fr/jarvis/domain/generation/Core004BMapping.kt"
+        },
+        {
+          "path": "docs/THIRD_PARTY.md",
+          "sha256": "8354bc0a9b1d20cee05bba2046faed5bb8b268bf6e0ee4cd76eb0281470e1f7c",
+          "bytes": 1059,
+          "url": "https://github.com/bubth720/JARVIS-LLM/blob/e0b781442b21034a251f6af450396faabc5f667d/docs/THIRD_PARTY.md"
+        }
+      ],
+      "code_parent": "378a1cf4c2ceaaf531ded60670dc9161dc269575",
+      "head_vs_tested_code_diff": [
+        "docs/fusion-01/REPORT.md",
+        "docs/fusion-01/evidence/ANCESTRY.json",
+        "docs/fusion-01/evidence/BUILD-IDENTITY.json",
+        "docs/fusion-01/evidence/CI.json",
+        "docs/fusion-01/evidence/CONTRACT-CHECKS.json",
+        "docs/fusion-01/evidence/EXTERNAL-OBSERVATIONS.json",
+        "docs/fusion-01/evidence/FILES-CODE-COMMIT.txt",
+        "docs/fusion-01/evidence/HISTORICAL-CI.json",
+        "docs/fusion-01/evidence/LOCAL-RESULTS.json",
+        "docs/fusion-01/evidence/PRESERVATION.jsonl",
+        "docs/fusion-01/evidence/SHA256SUMS",
+        "docs/fusion-01/evidence/SOURCE-INPUTS.json",
+        "docs/fusion-01/evidence/apk-check.log",
+        "docs/fusion-01/evidence/baseline.log",
+        "docs/fusion-01/evidence/build-tests-lint.log",
+        "docs/fusion-01/evidence/final-domain.log",
+        "docs/fusion-01/evidence/fixture-apk-check.log",
+        "docs/fusion-01/evidence/fixture-apks-local.json",
+        "docs/fusion-01/evidence/initial-client-failure.log",
+        "docs/fusion-01/evidence/junit-baseline.tar.gz",
+        "docs/fusion-01/evidence/junit-local.tar.gz",
+        "docs/fusion-01/evidence/native.log"
+      ],
+      "head_changes_documentation_only": true,
+      "versions": {
+        "contract": "jarvis.llm.client/1; jarvis.llm.p2/1.0; fixture /2 unchanged",
+        "ABI": "app ARM64 min29; domain bytecode17, local source API only, transport NONE",
+        "data_schema": {
+          "catalogue": 1,
+          "shared_contracts_changed": false
+        },
+        "minSdk": 29,
+        "compileSdk": 36,
+        "targetSdk": 36,
+        "ABIs": [
+          "arm64-v8a"
+        ],
+        "JDK": 21,
+        "domain_jvm_target": 17,
+        "kotlin": "2.1.21",
+        "AGP": "8.10.1",
+        "Gradle": "8.11.1",
+        "NDK": "28.1.13356709",
+        "CMake": "3.22.1"
+      },
+      "reported_tests": {
+        "freshly_executed_in_this_audit": false,
+        "passed": 285,
+        "breakdown": {
+          "domain": 127,
+          "app": 40,
+          "P2_fixture": 118
+        },
+        "failures": 0,
+        "skipped": 0,
+        "native_historical_ctest": "native_safety without GGUF; not real generation nor F3B observation",
+        "instrumentation_executed": false,
+        "physical_executed": false
+      },
+      "contracts": {
+        "client_version": "jarvis.llm.client/1",
+        "prompt_version": "jarvis.llm.p2/1.0",
+        "transport": "NONE",
+        "request_fields": [
+          "version",
+          "prompt",
+          "priority",
+          "profile",
+          "target"
+        ],
+        "request_reference": [
+          "epoch",
+          "operationId",
+          "sessionId",
+          "correlationId",
+          "cancellationId",
+          "authorizationRef",
+          "leaseId",
+          "generation",
+          "requestSha256"
+        ],
+        "fingerprint": "SHA256 of length-framed strict UTF8 + numeric big-endian fields, not authentication",
+        "event_types": [
+          "Ack",
+          "StreamChunk",
+          "Completed",
+          "Error"
+        ],
+        "event_origins": [
+          "FIXTURE",
+          "UNAVAILABLE"
+        ],
+        "live_path": "Error UNAVAILABLE only; never fake ACK/chunk/Completed",
+        "sequence_max": 257,
+        "events_max": 258,
+        "chunk_bytes_max": 4096,
+        "output_bytes_max": 65536,
+        "token_count_status": "UNSUPPORTED",
+        "exact_token_count": null,
+        "native_ready": false,
+        "native_termination": "UNATTESTED",
+        "native_unload": "UNATTESTED",
+        "may_admit_another_engine": false,
+        "linux_backend": "NOT_IMPLEMENTED",
+        "FULL_POWER_ANDROID": "forbidden/unqualified",
+        "core_document_mapping": "Core004BMapping.textOnly refuses nonempty context/sources",
+        "request_residency": "model selection CATALOGUE_SELECTED_NOT_RUNNING, fileRevalidatedNow=false"
+      },
+      "license": {
+        "project": "UNKNOWN",
+        "root_license_files": [],
+        "redistribution_approved": false
+      },
+      "blockers": [
+        "JNI/F3B not applied or qualified",
+        "Exact token count UNSUPPORTED",
+        "Native unload/termination UNATTESTED; UNKNOWN blocks admission",
+        "API24/25/26 in-process incompatibility min29",
+        "Client only local/passive and no CORE transport"
+      ]
+    }
+  ],
+  "ci_observations": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40215415459",
+      "status": "failure",
+      "source_commit": "0d41e6f3f412386371a81fe0d1a862fc87ae22cf",
+      "jobs": [
+        "/actions/runs/40215415459/job/121235381781"
+      ],
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": "1",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:28Z",
+          "completed-at": "2026-10-25T17:13:31Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "2",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:31Z",
+          "completed-at": "2026-10-25T17:13:31Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "3",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:31Z",
+          "completed-at": "2026-10-25T17:13:32Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "4",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:32Z",
+          "completed-at": "2026-10-25T17:13:33Z"
+        },
+        {
+          "name": "Run actions/setup-java@v4",
+          "number": "5",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:33Z",
+          "completed-at": "2026-10-25T17:13:33Z"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "number": "6",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:33Z",
+          "completed-at": "2026-10-25T17:13:39Z"
+        },
+        {
+          "name": "Run android-actions/setup-android@v3",
+          "number": "7",
+          "conclusion": "failure",
+          "started-at": "2026-10-25T17:13:39Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Verify local lock and isolated dependency snapshots",
+          "number": "8",
+          "conclusion": "skipped",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Real JVM producers, synthetic files and consent, no models",
+          "number": "9",
+          "conclusion": "skipped",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Historical 501 cases plus 36 fixture cases, builds and Lint",
+          "number": "10",
+          "conclusion": "skipped",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Compare executed cases with immutable baseline inventory",
+          "number": "11",
+          "conclusion": "skipped",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "number": "12",
+          "conclusion": "failure",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:45Z"
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "number": "20",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:45Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        },
+        {
+          "name": "Post Run actions/setup-java@v4",
+          "number": "21",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:46Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "22",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:46Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "23",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:46Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "24",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:46Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        },
+        {
+          "name": "Complete job",
+          "number": "25",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:46Z",
+          "completed-at": "2026-10-25T17:13:46Z"
+        }
+      ],
+      "observed_at": "2026-10-25T22:18:55+00:00",
+      "method": "public GitHub HTML run favicon/title and check-step attributes",
+      "artifact_logs_downloaded": false,
+      "hardware_qualified": false
+    },
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40215604539",
+      "status": "success",
+      "source_commit": "36761cea101b5f88b87cd4136dc075d28a1adb96",
+      "jobs": [
+        "/actions/runs/40215604539/job/121235951011"
+      ],
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": "1",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:46Z",
+          "completed-at": "2026-10-25T17:15:48Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "2",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:48Z",
+          "completed-at": "2026-10-25T17:15:48Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "3",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:48Z",
+          "completed-at": "2026-10-25T17:15:49Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "number": "4",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:49Z",
+          "completed-at": "2026-10-25T17:15:49Z"
+        },
+        {
+          "name": "Run actions/setup-java@v4",
+          "number": "5",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:49Z",
+          "completed-at": "2026-10-25T17:15:49Z"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "number": "6",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:49Z",
+          "completed-at": "2026-10-25T17:15:53Z"
+        },
+        {
+          "name": "Verify local lock and isolated dependency snapshots",
+          "number": "7",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:53Z",
+          "completed-at": "2026-10-25T17:15:54Z"
+        },
+        {
+          "name": "Real JVM producers, synthetic files and consent, no models",
+          "number": "8",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:15:54Z",
+          "completed-at": "2026-10-25T17:17:21Z"
+        },
+        {
+          "name": "Pinned repository SDK tooling, after independent JVM checks",
+          "number": "9",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:17:21Z",
+          "completed-at": "2026-10-25T17:17:28Z"
+        },
+        {
+          "name": "Historical 501 cases plus 36 fixture cases, builds and Lint",
+          "number": "10",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:17:28Z",
+          "completed-at": "2026-10-25T17:23:59Z"
+        },
+        {
+          "name": "Compare executed cases with immutable baseline inventory",
+          "number": "11",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:23:59Z",
+          "completed-at": "2026-10-25T17:23:59Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "number": "12",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:23:59Z",
+          "completed-at": "2026-10-25T17:24:00Z"
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "number": "20",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:00Z",
+          "completed-at": "2026-10-25T17:24:01Z"
+        },
+        {
+          "name": "Post Run actions/setup-java@v4",
+          "number": "21",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:01Z",
+          "completed-at": "2026-10-25T17:24:01Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "22",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:01Z",
+          "completed-at": "2026-10-25T17:24:01Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "23",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:01Z",
+          "completed-at": "2026-10-25T17:24:01Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "number": "24",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:01Z",
+          "completed-at": "2026-10-25T17:24:02Z"
+        },
+        {
+          "name": "Complete job",
+          "number": "25",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:24:02Z",
+          "completed-at": "2026-10-25T17:24:02Z"
+        }
+      ],
+      "observed_at": "2026-10-25T22:18:55+00:00",
+      "method": "public GitHub HTML run favicon/title and check-step attributes",
+      "artifact_logs_downloaded": false,
+      "hardware_qualified": false
+    },
+    {
+      "repository": "bubth720/JARVIS-LLM",
+      "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40214822563",
+      "status": "success",
+      "source_commit": "378a1cf4c2ceaaf531ded60670dc9161dc269575",
+      "jobs": [
+        "/actions/runs/40214822563/job/121233565167"
+      ],
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": "1",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:06:04Z",
+          "completed-at": "2026-10-25T17:06:06Z"
+        },
+        {
+          "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": "2",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:06:06Z",
+          "completed-at": "2026-10-25T17:06:07Z"
+        },
+        {
+          "name": "Freeze existing runtime, models, catalogue, policy, JNI and wire contracts",
+          "number": "3",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:06:07Z",
+          "completed-at": "2026-10-25T17:06:10Z"
+        },
+        {
+          "name": "Run bash tools/setup-cloud.sh",
+          "number": "4",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:06:10Z",
+          "completed-at": "2026-10-25T17:07:03Z"
+        },
+        {
+          "name": "Historical native tests without model or device",
+          "number": "5",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:07:03Z",
+          "completed-at": "2026-10-25T17:08:36Z"
+        },
+        {
+          "name": "JVM, simulated Android, ARM64 and Lint",
+          "number": "6",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:08:36Z",
+          "completed-at": "2026-10-25T17:13:50Z"
+        },
+        {
+          "name": "Actual APK signatures, permissions and alignment",
+          "number": "7",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:50Z",
+          "completed-at": "2026-10-25T17:13:51Z"
+        },
+        {
+          "name": "Collect real test results (no native readiness claim)",
+          "number": "8",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:51Z",
+          "completed-at": "2026-10-25T17:13:51Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "number": "9",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:51Z",
+          "completed-at": "2026-10-25T17:13:53Z"
+        },
+        {
+          "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": "18",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:53Z",
+          "completed-at": "2026-10-25T17:13:53Z"
+        },
+        {
+          "name": "Complete job",
+          "number": "19",
+          "conclusion": "success",
+          "started-at": "2026-10-25T17:13:53Z",
+          "completed-at": "2026-10-25T17:13:53Z"
+        }
+      ],
+      "observed_at": "2026-10-25T22:18:55+00:00",
+      "method": "public GitHub HTML run favicon/title and check-step attributes",
+      "artifact_logs_downloaded": false,
+      "hardware_qualified": false
+    }
+  ],
+  "compatibility": {
+    "android24": {
+      "core": "baseline compile/Robolectric historical only; composed pilot NOT_RUN",
+      "llm": "BLOCKED min29"
+    },
+    "android25": {
+      "core": "baseline compile/Robolectric historical only; composed pilot NOT_RUN",
+      "llm": "BLOCKED min29"
+    },
+    "android26": {
+      "core": "composed pilot NOT_RUN",
+      "llm": "BLOCKED min29"
+    },
+    "android29_arm64": {
+      "core": "physical NOT_RUN",
+      "llm": "build exists, device/native generation NOT_RUN"
+    },
+    "linux_minipc": {
+      "core": "real JVM laboratory historical, hardware NOT_TESTED",
+      "llm": "client fixture only; inference backend NOT_IMPLEMENTED"
+    }
+  },
+  "integration_recommendation": [
+    "Primary CORE36761 and LLMe0b781 are source candidates only; preserve their old tested base refs as alternatives.",
+    "Record CORE consumed NEX777/SERV3de separately from candidate Android ports NEX374/SERVf000.",
+    "New U4 COMMITTED must require explicit worker commit/readback provenance; never alias legacy COMPLETED to COMMITTED.",
+    "A valid receipt is not a permission. Generation fence authorizeAtCommit must linearize revocation against worker effect; caller snapshot/recheck alone insufficient.",
+    "Revoke before fence => no effect; revoke after fence => outcome may finish and must be honestly acknowledged. Lost ACK/crash => UNKNOWN, no automatic retry.",
+    "CORE Android integration remains blocked by producer gates independently of LLM/VOICE lanes."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "jarvis.capability-status/2-draft",
+  "module": "nexus",
+  "build_commit": "9d6928cd8651f83fa5091bdb474b33761d366412",
+  "capability": "document.search",
+  "target": "android24",
+  "state": "READY",
+  "proof_ids": [],
+  "reason": "VERIFIED_PRODUCT"
+}

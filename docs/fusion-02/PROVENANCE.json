@@ -1,0 +1,31 @@
+{
+  "module": "UNIFIED",
+  "mission": "FUSION-02/U",
+  "branch": "feat/fusion-02-android-first-evidence",
+  "base_commit": "3caa57d91ce0dba31043e7cb6373a5e2df8b9fa4",
+  "head_resolution": "commit containing this delivery; final SHA in assistant report",
+  "source_inventory": {
+    "lock": "integration-lock-v2.json",
+    "refs": 26,
+    "source_files": 238,
+    "frozen_schemas": 5,
+    "remote_snapshot": "evidence/remote-heads.json"
+  },
+  "ci_initial_failure": {
+    "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40214722427",
+    "commit": "3caa57d91ce0dba31043e7cb6373a5e2df8b9fa4",
+    "status": "failure",
+    "cause_verified": "Invalid YAML at line48, command --only-binary=:all: in unquoted scalar",
+    "local_reproduction": "PyYAML ScannerError line48 column54",
+    "jobs_started": false
+  },
+  "external_tests_freshly_executed": false,
+  "runtime_changes": false,
+  "shared_v1_changed": false,
+  "api_access": "gh api user: Forbidden; no credential bypass",
+  "main_reference": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+  "sha256": {
+    "integration-lock-v2.json": "9a854765ba614f5282b20e6fd9925efde4b242f297a5274eeec76cfdb7655da5",
+    "integration-lock.json": "145ecec0bd2ca24bd92ce244359b6f8b23c2ddb393d6e40fc7730469f5a0bf6f"
+  }
+}

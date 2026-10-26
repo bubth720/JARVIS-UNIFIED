@@ -1,0 +1,52 @@
+{
+  "name": "FUSION-02 independent evidence",
+  "on": {
+    "push": {
+      "branches": [
+        "feat/fusion-02-*"
+      ]
+    },
+    "pull_request": {},
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "independent-validation": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 15,
+      "steps": [
+        {
+          "uses": "actions/checkout@v4",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "3.12.12"
+          }
+        },
+        {
+          "name": "Existing backup dependency only",
+          "run": "python -m pip install --only-binary=:all: -r backup_prototype/requirements.txt"
+        },
+        {
+          "name": "All original 147 tests plus FUSION-02 regressions and validators",
+          "run": "python -m tooling.integration.ci --output \"$RUNNER_TEMP/fusion-02\""
+        },
+        {
+          "uses": "actions/upload-artifact@v4",
+          "if": "always()",
+          "with": {
+            "name": "fusion-02-validation-evidence",
+            "path": "${{ runner.temp }}/fusion-02/",
+            "if-no-files-found": "warn"
+          }
+        }
+      ]
+    }
+  }
+}

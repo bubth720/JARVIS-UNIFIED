@@ -1,0 +1,25 @@
+test_failed_empty_skipped_and_missing_results_do_not_become_pass (test_ci.CiEvidenceTests.test_failed_empty_skipped_and_missing_results_do_not_become_pass) ... ok
+test_independent_workflow_is_parseable_without_yaml_dependency (test_ci.CiEvidenceTests.test_independent_workflow_is_parseable_without_yaml_dependency) ... ok
+test_ack_lost_and_unknown_never_auto_retry (test_v2.ContractV2Tests.test_ack_lost_and_unknown_never_auto_retry) ... ok
+test_collector_ready_or_missing_capability_proof_is_not_product_ready (test_v2.ContractV2Tests.test_collector_ready_or_missing_capability_proof_is_not_product_ready) ... ok
+test_commit_requires_confirmation_and_exact_readback (test_v2.ContractV2Tests.test_commit_requires_confirmation_and_exact_readback) ... ok
+test_denial_before_commit_never_claims_effect (test_v2.ContractV2Tests.test_denial_before_commit_never_claims_effect) ... ok
+test_examples_remain_unapproved_and_runtime_absent (test_v2.ContractV2Tests.test_examples_remain_unapproved_and_runtime_absent) ... ok
+test_old_completed_never_becomes_committed (test_v2.ContractV2Tests.test_old_completed_never_becomes_committed) ... ok
+test_operation_destination_generation_and_sequence_bound (test_v2.ContractV2Tests.test_operation_destination_generation_and_sequence_bound) ... ok
+test_revocation_after_commit_preserves_honest_effect (test_v2.ContractV2Tests.test_revocation_after_commit_preserves_honest_effect) ... ok
+test_wrong_build_and_personal_fields_refused (test_v2.ContractV2Tests.test_wrong_build_and_personal_fields_refused) ... ok
+test_api26_proof_cannot_satisfy_api24_or_25 (test_v2.EvidenceV2Tests.test_api26_proof_cannot_satisfy_api24_or_25) ... ok
+test_consumed_unknown_dependency_sha_is_rejected (test_v2.EvidenceV2Tests.test_consumed_unknown_dependency_sha_is_rejected) ... ok
+test_core_min_sdk_and_fusion01_baseline_cannot_be_changed (test_v2.EvidenceV2Tests.test_core_min_sdk_and_fusion01_baseline_cannot_be_changed) ... ok
+test_current_candidate_is_blocked_and_v1_intact (test_v2.EvidenceV2Tests.test_current_candidate_is_blocked_and_v1_intact) ... ok
+test_failed_skipped_empty_and_unbound_proofs_refused (test_v2.EvidenceV2Tests.test_failed_skipped_empty_and_unbound_proofs_refused) ... ok
+test_independent_lanes_do_not_add_pilot_ci_blockers (test_v2.EvidenceV2Tests.test_independent_lanes_do_not_add_pilot_ci_blockers) ... ok
+test_rag_reconciliation_is_not_misreported_as_old_v3 (test_v2.EvidenceV2Tests.test_rag_reconciliation_is_not_misreported_as_old_v3) ... ok
+test_ready_without_instrumentation_or_successful_ci_refused (test_v2.EvidenceV2Tests.test_ready_without_instrumentation_or_successful_ci_refused) ... ok
+test_robolectric_cannot_be_promoted_to_emulator (test_v2.EvidenceV2Tests.test_robolectric_cannot_be_promoted_to_emulator) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.152s
+
+OK

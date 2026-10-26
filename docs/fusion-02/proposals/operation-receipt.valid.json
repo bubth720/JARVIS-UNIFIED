@@ -1,0 +1,19 @@
+{
+  "version": "jarvis.operation-receipt/2-draft",
+  "session_id": "00000000-0000-4000-8000-000000000001",
+  "request_id": "00000000-0000-4000-8000-000000000002",
+  "generation": 1,
+  "sequence": 1,
+  "state": "PREPARED",
+  "operation_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "destination_ref": "00000000-0000-4000-8000-000000000003",
+  "confirmation_ref": "00000000-0000-4000-8000-000000000004",
+  "confirmation_consumed": false,
+  "authorization_at_commit": "NOT_CHECKED",
+  "permission_generation": 1,
+  "effect": "NONE",
+  "readback_verified": false,
+  "output_sha256": "",
+  "permission_revoked_after_commit": false,
+  "error": "NONE"
+}

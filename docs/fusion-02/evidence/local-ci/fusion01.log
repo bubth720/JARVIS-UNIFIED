@@ -1,0 +1,26 @@
+test_blockers_are_preserved_in_plan_and_markdown (test_lock.LockTests.test_blockers_are_preserved_in_plan_and_markdown) ... ok
+test_boolean_not_integer_and_unknown_field_refused (test_lock.LockTests.test_boolean_not_integer_and_unknown_field_refused) ... ok
+test_branch_commit_and_evidence_path_admission (test_lock.LockTests.test_branch_commit_and_evidence_path_admission) ... ok
+test_ci_cannot_inherit_another_commit_or_repository_success (test_lock.LockTests.test_ci_cannot_inherit_another_commit_or_repository_success) ... ok
+test_cli_fails_closed_without_echoing_sensitive_error_details (test_lock.LockTests.test_cli_fails_closed_without_echoing_sensitive_error_details) ... ok
+test_compare_no_duplicate_or_implicit_mutation (test_lock.LockTests.test_compare_no_duplicate_or_implicit_mutation) ... ok
+test_complete_candidate_validates_without_granting_runtime (test_lock.LockTests.test_complete_candidate_validates_without_granting_runtime) ... ok
+test_duplicate_component_cannot_hide_missing_one (test_lock.LockTests.test_duplicate_component_cannot_hide_missing_one) ... ok
+test_duplicate_json_nonfinite_and_huge_file_refused (test_lock.LockTests.test_duplicate_json_nonfinite_and_huge_file_refused) ... ok
+test_duplicate_repository_identity_or_owner_rejected (test_lock.LockTests.test_duplicate_repository_identity_or_owner_rejected) ... ok
+test_exact_platform_inventory_required (test_lock.LockTests.test_exact_platform_inventory_required) ... ok
+test_independent_jvm_gate_does_not_depend_on_native_voice_or_llm (test_lock.LockTests.test_independent_jvm_gate_does_not_depend_on_native_voice_or_llm) ... ok
+test_missing_f0_unknown_dependency_and_cycles_refused (test_lock.LockTests.test_missing_f0_unknown_dependency_and_cycles_refused) ... ok
+test_missing_repository_map_fails_closed (test_lock.LockTests.test_missing_repository_map_fails_closed) ... ok
+test_no_go_with_unresolved_conflicts_or_missing_dependencies (test_lock.LockTests.test_no_go_with_unresolved_conflicts_or_missing_dependencies) ... ok
+test_only_readonly_git_objects_are_used (test_lock.LockTests.test_only_readonly_git_objects_are_used) ... ok
+test_unknown_ci_remains_unknown_in_report (test_lock.LockTests.test_unknown_ci_remains_unknown_in_report) ... ok
+test_examples_are_checked_without_approval_or_activation (test_proposals.TechnicalObservationTests.test_examples_are_checked_without_approval_or_activation) ... ok
+test_free_text_and_personal_data_not_admitted (test_proposals.TechnicalObservationTests.test_free_text_and_personal_data_not_admitted) ... ok
+test_invalid_metrics_and_boolean_coercion_are_refused (test_proposals.TechnicalObservationTests.test_invalid_metrics_and_boolean_coercion_are_refused) ... ok
+test_unknown_module_and_string_metrics_are_refused (test_proposals.TechnicalObservationTests.test_unknown_module_and_string_metrics_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.253s
+
+OK

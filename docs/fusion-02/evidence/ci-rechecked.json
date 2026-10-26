@@ -1,0 +1,66 @@
+[
+  {
+    "name": "unified",
+    "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40214722427",
+    "status": "failure",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:00.397952+00:00",
+    "html_sha256": "d881779ad8a7a2e5b279e8a81e29b52a777c66d9cc61eb0503ffd191e171bd50"
+  },
+  {
+    "name": "core",
+    "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40215604539",
+    "status": "success",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:00.432906+00:00",
+    "html_sha256": "ea2a9ae7b69bc24852f718bd72b8d1c7c1995a91c11e32ef6fb3facb5b37911e"
+  },
+  {
+    "name": "nexus_old_port",
+    "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40115049468",
+    "status": "failure",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:00.541169+00:00",
+    "html_sha256": "ca8a5cb31047c4e79d149353ab786c8dff962d12861d86195500fe5f43306650"
+  },
+  {
+    "name": "services",
+    "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40115305244",
+    "status": "failure",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:00.390249+00:00",
+    "html_sha256": "59680e1ce5fd0049cf13e97f337ad623edb84bb66b877364df4c94c7092bd59f"
+  },
+  {
+    "name": "llm_code_parent",
+    "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40214822563",
+    "status": "success",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:01.113273+00:00",
+    "html_sha256": "3fcb39783cb6267df74604a91530ff70ea7a4c87cbf6db85422b2acf5f7a80c5"
+  },
+  {
+    "name": "interface",
+    "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40214158554",
+    "status": "success",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:01.029517+00:00",
+    "html_sha256": "0c28d6bfa61147ca30da304280cda3bbf3d53e0c0796e99e5d18c96383726315"
+  },
+  {
+    "name": "voice_code_parent",
+    "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40143704689",
+    "status": "success",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:01.357952+00:00",
+    "html_sha256": "6f83f71e16b268b24174538c726af28e26007ba75cf6318f256379e4d9acb8f0"
+  },
+  {
+    "name": "evolution",
+    "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/39996031251",
+    "status": "success",
+    "method": "public visible run summary",
+    "observed_at": "2026-10-26T07:41:01.048982+00:00",
+    "html_sha256": "e0614d281de73b66d5616705e6ae24c316e87b8591265b82a5418f8bf8fa6e5a"
+  }
+]

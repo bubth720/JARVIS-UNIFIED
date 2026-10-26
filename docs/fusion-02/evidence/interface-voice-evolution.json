@@ -1,0 +1,419 @@
+{
+  "format": "jarvis.fusion02.readonly-module-audit/1",
+  "observed_at": "2026-10-25T22:20:11+00:00",
+  "scope": "read-only UI/VOICE/EVOLUTION sources/issues/CI; no new tests or builds",
+  "source_repositories_modified": false,
+  "references": [
+    {
+      "module": "interface",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "branch": "fix/athena-premium-default",
+      "commit": "1d0a89f3d92cba64122db08cc7b326239f85c08d",
+      "parents": [
+        "db459ba388a3fea992d80320c3989be0edda8500"
+      ],
+      "remote_verified": true,
+      "min_sdk": 26,
+      "abi": [
+        "architecture-independent Compose; no new native payload"
+      ],
+      "contract_versions": [
+        "CoreConversationTransport proposalVersion1; CoreTextOrigin NONE/LABORATORY only",
+        "PremiumManifest V2",
+        "CapabilityStatus/OperationReceipt not consumed"
+      ],
+      "data_schemas": [
+        "dashboard DataStore V1 unchanged",
+        "workspace-v1.json sidecar V1",
+        "private Athena zip via AtomicFile, no schema migration"
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "basis": "No project LICENSE in pinned root; third-party notices do not license project or private assets."
+      },
+      "ci": {
+        "status": "success",
+        "commit": "1d0a89f3d92cba64122db08cc7b326239f85c08d",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40214158554",
+        "method": "public GitHub HTML success marker and full commit link",
+        "instrumented_execution_in_this_ci": false
+      },
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "c4b4499d1171208815f63df060a2107c5fa4ae51904a62377bc409df8c238867",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/README.md"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "sha256": "dfef0542de619b9b139d4bb3e4f8f4ca5386437ed65d048e582d77267f5df281",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/build.gradle.kts"
+        },
+        {
+          "path": "app/src/main/AndroidManifest.xml",
+          "sha256": "17cdfaadde23ded6ce906c3326a7fe1934571fb1a49eff64ffef0ff0ce458e83",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "path": "gradle/libs.versions.toml",
+          "sha256": "808a3ebcfe393e42a0b4addcccd2aa78f96406cc936948810d527dcd68d4ccce",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/gradle/libs.versions.toml"
+        },
+        {
+          "path": ".github/workflows/android.yml",
+          "sha256": "bd8e9cf8dbddbb5d68b6cc74f5897fc92092ddc7d80c57eefe42018631bc4224",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/.github/workflows/android.yml"
+        },
+        {
+          "path": "docs/athena-visible/DELIVERY.md",
+          "sha256": "31c7a15929f30f963be1d906f5d2f71ca3b1171d8c26e0ed122bfbb5f558aa2c",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/athena-visible/DELIVERY.md"
+        },
+        {
+          "path": "docs/athena-visible/validation/private-build.json",
+          "sha256": "ceb464d6419d1253e641a04045d0f37eae614819996cd7306d5d79824ddaef41",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/athena-visible/validation/private-build.json"
+        },
+        {
+          "path": "docs/athena-visible/validation/public-build.json",
+          "sha256": "72fe275c851de848fa61c3bc44af5fd3590c6df5cc06cef568676a32020037ce",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/athena-visible/validation/public-build.json"
+        },
+        {
+          "path": "docs/athena-visible/validation/restart.json",
+          "sha256": "979914046b3d3cc2a4044364751094deb319d67b4e28037147af2f57fa009956",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/athena-visible/validation/restart.json"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/CORE02-REFERENCE.json",
+          "sha256": "825f4db69b5535bd9b1cfca2e5c445de96af7b29a74d8e4d0e726e6df656e3df",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/intensive-2026-10-22/CORE02-REFERENCE.json"
+        },
+        {
+          "path": "docs/ui-02/CORE-ALIGNMENT.json",
+          "sha256": "6ef93912d8fb356b6283a0b4da9ddcae2e31c4e14f649ac6eca9eefb3be1bb12",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/docs/ui-02/CORE-ALIGNMENT.json"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/athena/AthenaResources.kt",
+          "sha256": "5e437df04e32b11f07a3c9e5b05b54ecac35889629b3b7136d8e56471d294622",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/java/com/jarvis/interfaceapp/avatar/athena/AthenaResources.kt"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/athena/AthenaAvatar.kt",
+          "sha256": "6eb3d7a26dc317854355861d5b75d9d7239537910e4002574de6ad4c389fe5bb",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/java/com/jarvis/interfaceapp/avatar/athena/AthenaAvatar.kt"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationTransport.kt",
+          "sha256": "71c245a4cb52f7641b694196ea55b866c539da8c617c454dc6ba8a472aa67cef",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationTransport.kt"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/storage/LayoutCodec.kt",
+          "sha256": "41ca0fbd255e8cb28931061d5f4c050fe367d3715e5dfcd57e3f5e7a792a1074",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/java/com/jarvis/interfaceapp/storage/LayoutCodec.kt"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/workspace/WorkspaceCodec.kt",
+          "sha256": "08ac17c9cdf82906c2e000706154d8d10fc4f454db1644ee267be30fc44ab2c7",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/1d0a89f3d92cba64122db08cc7b326239f85c08d/app/src/main/java/com/jarvis/interfaceapp/workspace/WorkspaceCodec.kt"
+        }
+      ],
+      "alternatives": [
+        {
+          "branch": "feat/interface-final-01",
+          "commit": "db459ba388a3fea992d80320c3989be0edda8500",
+          "relation": "direct_parent"
+        },
+        {
+          "branch": "feat/ava-04-delivery",
+          "commit": "283ed2f3cd361d5b0b6bc927432bf836af8db1f6",
+          "relation": "ancestor"
+        }
+      ],
+      "consumed": [
+        {
+          "repository": "bubth720/JAVIS-Local-v2",
+          "commit": "e86107b8213b0aeaf9d22025cf6bef91a8e544a5",
+          "usage": "EXACT_TEST_SOURCE_ONLY_NOT_PACKAGED",
+          "evidence": "docs/intensive-2026-10-22/CORE02-REFERENCE.json"
+        },
+        {
+          "repository": "bubth720/JAVIS-Local-v2",
+          "commit": "283423cb8b9d567539f33cf7f2f1fafa602cf974",
+          "usage": "READ_ONLY_ID02_REFERENCE_NOT_RUNTIME",
+          "evidence": "docs/ui-02/CORE-ALIGNMENT.json"
+        },
+        {
+          "repository": "bubth720/JAVIS-Local-v2",
+          "commit": "49ad428e94edd75c2a1d115c8c2504f26609eace",
+          "usage": "READ_ONLY_MEMORY_REFERENCE_NOT_RUNTIME",
+          "evidence": "docs/ui-02/CORE-ALIGNMENT.json"
+        }
+      ],
+      "proof": {
+        "fresh_tests": 0,
+        "historical_jvm": 191,
+        "historical_android_api26": 68,
+        "historical_extra_capture_test": 1,
+        "python_packager": 9,
+        "instrumentation_basis": "versioned local private-build report, NOT this CI",
+        "physical": "NOT_RUN",
+        "android24_25": "BLOCKED min26",
+        "android29_arm64": "NOT_TESTED",
+        "new_core_e2e": "BLOCKED no transport/product producer"
+      },
+      "limits": {
+        "user_text_and_chunk_bytes": 16384,
+        "chunks": 256,
+        "aggregate_text_bytes": 262144,
+        "manifest_bytes": 65536,
+        "layers_textures": 16,
+        "png_bytes": 2097152,
+        "decoded_texture_bytes": 8388608,
+        "total_pixels": 2097152,
+        "layout_bytes": 65536,
+        "workspace_bytes": 2097152
+      },
+      "art": {
+        "private_pack": "12 portrait IMAGE_REPLACEMENT, not articulated rig/lipsync",
+        "primary_renderer": "premium pack if privately built/imported, no automatic vector substitution",
+        "public_apk": "no private assets, prompts explicit import",
+        "art_distribution_authorized": false,
+        "assets_copied_for_audit": false
+      }
+    },
+    {
+      "module": "voice",
+      "repository": "bubth720/JARVIS-VOICE",
+      "branch": "feat/voice-final-01",
+      "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "parents": [
+        "a59a9c5a6e95cdd645ad09661b6172e98af5323c"
+      ],
+      "remote_verified": true,
+      "min_sdk": 26,
+      "abi": [
+        "arm64-v8a default; emulator ABI override is not device qualification"
+      ],
+      "contract_versions": [
+        "voice.final01.events/1",
+        "voice.bridge.fixture/1 separate branch",
+        "voice.speech.public-lab/2-draft parallel branch only"
+      ],
+      "data_schemas": [
+        "legacy voice profiles/vault untouched; no crossmodule transfer"
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "basis": "No project LICENSE in pinned root; third-party notices do not license project or private assets."
+      },
+      "ci": {
+        "status": "unknown",
+        "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+        "url": "NOT_OBSERVED",
+        "reason": "Successful code-parent run cannot be promoted to documentation HEAD",
+        "code_parent_observation": {
+          "status": "success",
+          "commit": "a59a9c5a6e95cdd645ad09661b6172e98af5323c",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40143704689",
+          "method": "public HTML success marker; title short SHA a59a9c5 resolves uniquely to local parent"
+        }
+      },
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "26132334b7f0362252d7bdd6d89a7f38b437f4cfb77ee317942257f9557f1d65",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/README.md"
+        },
+        {
+          "path": "voiceFinalSdk/README.md",
+          "sha256": "61705c57f523a8752bae1e70eac140e537e642b98e5440c82fb121ba3588e1dd",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalSdk/README.md"
+        },
+        {
+          "path": "voiceFinalSdk/src/main/kotlin/com/jarvis/voice/final01/VoiceEvents.kt",
+          "sha256": "b0541cf4969a180b3fc8f0a3a4b2aa89a498a712997f0c8e9273294323abd98c",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalSdk/src/main/kotlin/com/jarvis/voice/final01/VoiceEvents.kt"
+        },
+        {
+          "path": "voiceFinalRuntime/build.gradle.kts",
+          "sha256": "5b992201ef163a49c9c77c9ac83e84f45349bd049f2bdc01df523c5bbd4ae429",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalRuntime/build.gradle.kts"
+        },
+        {
+          "path": "voiceFinalStudio/build.gradle.kts",
+          "sha256": "16d990db4cff27833ed1638f70bf579faf8d2eb260c45fbf041b43e4acc79e98",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalStudio/build.gradle.kts"
+        },
+        {
+          "path": "docs/mission-voice-final-01/REPORT.md",
+          "sha256": "0560885358b7f99935103c57bca82367be7ad62182e63f91f311e5b92d4a0706",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/docs/mission-voice-final-01/REPORT.md"
+        },
+        {
+          "path": "docs/pocket-probe/LICENSES.md",
+          "sha256": "f8e66167ce09106ff602d9f2b251c5ab3d899bdb6fc2cd2d3238c601059c8a5b",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/blob/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/docs/pocket-probe/LICENSES.md"
+        }
+      ],
+      "alternatives": [
+        {
+          "branch": "feat/voice-bridge-pilot",
+          "commit": "04c4ca1c050c16e097d27b08831544b66121128c",
+          "relation": "ancestor"
+        },
+        {
+          "branch": "feat/voice-07-voice-delivery",
+          "commit": "40cb27b1e27567ae1841e4cfb3dd2c57a7b57820",
+          "relation": "divergent",
+          "merge_base": "1a9f713dff28f6e4fb145728815e9ed118f5a929"
+        }
+      ],
+      "consumed": [
+        {
+          "repository": "bubth720/JARVIS-VOICE",
+          "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "usage": "in-repository existing pocketRuntime/identityRuntime/expressionRuntime/voice04Runtime; not CORE"
+        }
+      ],
+      "proof": {
+        "fresh_tests": 0,
+        "historical_sdk_new_tests": 16,
+        "historical_ci_native_skipped": 2,
+        "historical_android_api26": 8,
+        "historical_android_api35": 8,
+        "historical_native_linux_tests": 2,
+        "physical": "NOT_RUN",
+        "core_voice_production": "BLOCKED",
+        "emotion_acoustic": "UNSUPPORTED except NEUTRAL as qualified scope"
+      },
+      "limits": {
+        "document_utf16": 200000,
+        "segments": 4000,
+        "segment_utf16": 300,
+        "segment_tokens": 50,
+        "onnx_threads": 1,
+        "bridge_frame_bytes": 4096,
+        "bridge_text_utf8": 1200,
+        "bridge_text_utf16": 300
+      },
+      "event_gap": "Final DTO has no session/request/generation, UUID binding or clock source. PCM counters and FIRST_AUDIO are not audibility/phonemes/unload attestation."
+    },
+    {
+      "module": "evolution",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "branch": "feat/evol-03-atelier-de-correctifs-isoles-e",
+      "commit": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "parents": [
+        "0abd5f96caa27ee1e73a623d538e48555a02ce76"
+      ],
+      "remote_verified": true,
+      "min_sdk": null,
+      "abi": [
+        "JVM17/JDBC; not Android API24 library"
+      ],
+      "contract_versions": [
+        "internal event schema1",
+        "patch-proposal/1 inert",
+        "UNIFIED technical-health/1-draft not consumed"
+      ],
+      "data_schemas": [
+        "technical SQLite v1",
+        "diagnostic SQLite v1"
+      ],
+      "project_license": {
+        "status": "UNKNOWN",
+        "basis": "No project LICENSE in pinned root; third-party notices do not license project or private assets."
+      },
+      "ci": {
+        "status": "success",
+        "commit": "c0180181804338d21f3bf9d4b537b709595902f7",
+        "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/39996031251",
+        "method": "public GitHub HTML success marker and full commit link"
+      },
+      "source_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "f269b583d6169bf39d9e80922c00c78ee40fda7b7767b02bb9042ee4779a5464",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/README.md"
+        },
+        {
+          "path": "build.gradle.kts",
+          "sha256": "c5ec24119d252f9e974f5bc1f3954e755e1d52aa6a60f64b7824630d8870a99e",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/build.gradle.kts"
+        },
+        {
+          "path": "evolution-core/build.gradle.kts",
+          "sha256": "0f0742d5d95013e100428e2c2f744d277e4ab43df94f5df59cede0905e83a558",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/evolution-core/build.gradle.kts"
+        },
+        {
+          "path": "evolution-core/src/main/kotlin/fr/jarvis/evolution/events/EvolutionEvent.kt",
+          "sha256": "201754f63a5b304b0f102ef1aa4a937837128e9a7b379e349ecf72e60898518a",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/evolution-core/src/main/kotlin/fr/jarvis/evolution/events/EvolutionEvent.kt"
+        },
+        {
+          "path": "evolution-core/src/main/kotlin/fr/jarvis/evolution/events/BoundedEventStore.kt",
+          "sha256": "bd791b6ebca60d8ae384258ed7d0bf9bc44e12a4fea601cb39c993cfb7f654aa",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/evolution-core/src/main/kotlin/fr/jarvis/evolution/events/BoundedEventStore.kt"
+        },
+        {
+          "path": "evolution-core/src/main/kotlin/fr/jarvis/evolution/probes/LocalTelemetryService.kt",
+          "sha256": "f0a747dca8fa575858c8fc57f9ab8465c44be1f0597cff930d841c4d219e57dd",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/evolution-core/src/main/kotlin/fr/jarvis/evolution/probes/LocalTelemetryService.kt"
+        },
+        {
+          "path": "evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/PatchProposal.kt",
+          "sha256": "cd5d4ee427b6ac4265893041e875ca9ce169aa8368cbab814b065eb59403c6a3",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/PatchProposal.kt"
+        },
+        {
+          "path": "docs/intensive-2026-10-22/REPORT-EVOL-03.md",
+          "sha256": "7c4a74ab86e75c693b527f3189476e32ae509a278be3fe7bb28c3064fdb2daff",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/blob/c0180181804338d21f3bf9d4b537b709595902f7/docs/intensive-2026-10-22/REPORT-EVOL-03.md"
+        }
+      ],
+      "alternatives": [
+        {
+          "branch": "feat/evolution-final-01",
+          "commit": "c0180181804338d21f3bf9d4b537b709595902f7",
+          "relation": "same_commit_alias"
+        }
+      ],
+      "consumed": [],
+      "proof": {
+        "fresh_tests": 0,
+        "historical_total": 38,
+        "historical_last_reexecuted": 13,
+        "historical_last_up_to_date": 25,
+        "physical": "NOT_RUN",
+        "android": "BLOCKED no adapter",
+        "runner": "NOT_RUN/SANDBOX_NOT_QUALIFIED"
+      },
+      "limits": {
+        "queue_default": 64,
+        "queue_max": 256,
+        "db_default_bytes": 4194304,
+        "rows_default": 2048,
+        "retention_default_days": 7,
+        "metrics_existing_caps": {
+          "latencyMs": 86400000.0,
+          "usedBytes": 10000000000000.0,
+          "limitBytes": 10000000000000.0,
+          "queueSize": 1000000.0
+        }
+      },
+      "semantic_gap": "CollectorStatus.READY means collection enabled, not qualified product. Existing metrics are camelCase numeric floats; UNIFIED draft integer snake_case lower bounds is not consumed or an implicit compatible contract."
+    }
+  ],
+  "no_new_fusion02_remote_branch_observed": true,
+  "issues_fully_read": [
+    "https://github.com/bubth720/JARVIS-UNIFIED/issues/5",
+    "https://github.com/bubth720/JARVIS-INTERFACE/issues/6",
+    "https://github.com/bubth720/JARVIS-VOICE/issues/22",
+    "https://github.com/bubth720/JARVIS-VOLUTION-/issues/2"
+  ],
+  "proposed_release_gate": "UI/VOICE/EVOLUTION are parallel preparatory lanes, not hard dependencies for CORE+NEXUS+SERVICES Android document/tool pilot"
+}

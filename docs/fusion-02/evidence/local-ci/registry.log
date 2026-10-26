@@ -1,0 +1,28 @@
+test_api_failures_preserve_historical_commit_and_date (test_registry.RegistryTests.test_api_failures_preserve_historical_commit_and_date) ... ok
+test_api_only_get_requests_and_no_remote_git_operations (test_registry.RegistryTests.test_api_only_get_requests_and_no_remote_git_operations) ... ok
+test_branch_with_slash_encoded_exactly (test_registry.RegistryTests.test_branch_with_slash_encoded_exactly) ... ok
+test_demo_no_network_no_git_no_secret_read (test_registry.RegistryTests.test_demo_no_network_no_git_no_secret_read) ... ok
+test_demo_requires_separate_output_and_leaves_registry_unchanged (test_registry.RegistryTests.test_demo_requires_separate_output_and_leaves_registry_unchanged) ... ok
+test_duplicate_ids_and_confusing_repository_names_refused (test_registry.RegistryTests.test_duplicate_ids_and_confusing_repository_names_refused) ... ok
+test_duplicate_prs_deduplicated_and_head_identity_filtered (test_registry.RegistryTests.test_duplicate_prs_deduplicated_and_head_identity_filtered) ... ok
+test_git_mode_uses_only_ls_remote (test_registry.RegistryTests.test_git_mode_uses_only_ls_remote) ... ok
+test_inaccessible_repository_no_invention (test_registry.RegistryTests.test_inaccessible_repository_no_invention) ... ok
+test_local_snapshots_traceable_and_manual_preserved (test_registry.RegistryTests.test_local_snapshots_traceable_and_manual_preserved) ... ok
+test_manual_blockers_decisions_and_unknown_fields_preserved (test_registry.RegistryTests.test_manual_blockers_decisions_and_unknown_fields_preserved) ... ok
+test_markdown_escapes_manual_content (test_registry.RegistryTests.test_markdown_escapes_manual_content) ... ok
+test_missing_branch_is_not_ci_failure (test_registry.RegistryTests.test_missing_branch_is_not_ci_failure) ... ok
+test_missing_ci_endpoint_does_not_become_success (test_registry.RegistryTests.test_missing_ci_endpoint_does_not_become_success) ... ok
+test_mixed_generation_refused (test_registry.RegistryTests.test_mixed_generation_refused) ... ok
+test_no_ci_results_is_unknown (test_registry.RegistryTests.test_no_ci_results_is_unknown) ... ok
+test_pagination_limit_is_unknown_not_partial_green (test_registry.RegistryTests.test_pagination_limit_is_unknown_not_partial_green) ... ok
+test_pending_failure_unknown_and_sha_filter (test_registry.RegistryTests.test_pending_failure_unknown_and_sha_filter) ... ok
+test_proxy_failure_does_not_trigger_token_retry (test_registry.RegistryTests.test_proxy_failure_does_not_trigger_token_retry) ... ok
+test_read_valid_registry (test_registry.RegistryTests.test_read_valid_registry) ... ok
+test_redirect_rejected_even_to_github (test_registry.RegistryTests.test_redirect_rejected_even_to_github) ... ok
+test_repeated_update_no_duplicate_modules_missions_or_prs (test_registry.RegistryTests.test_repeated_update_no_duplicate_modules_missions_or_prs) ... ok
+test_token_only_after_anonymous_denial_and_never_in_evidence (test_registry.RegistryTests.test_token_only_after_anonymous_denial_and_never_in_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.232s
+
+OK

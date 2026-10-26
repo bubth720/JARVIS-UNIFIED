@@ -1,0 +1,285 @@
+{
+  "format": "jarvis.integration-diff/2",
+  "components": [
+    {
+      "module": "core",
+      "before": "aea5ac859ac551d54fe16187c1883a487dbee9d6",
+      "after": "36761cea101b5f88b87cd4136dc075d28a1adb96",
+      "changed": true,
+      "ci_before": "unknown",
+      "ci_after": "success",
+      "versions": {
+        "module": "core",
+        "contracts": [
+          "core.workflow-receipt/1; local Kotlin APIs"
+        ],
+        "abi": [
+          "source-compatible additions in standalone JVM lab; APK binaries unchanged from base, no binary intermodule ABI claim",
+          "arm64-v8a"
+        ],
+        "data_schemas": [
+          "historical_sqlite: 2",
+          "confirmed_memory: 1",
+          "workflow_receipt: core.workflow-receipt/1"
+        ],
+        "min_sdk": 24,
+        "proof_scope": "Historical JVM/Robolectric software and selected CI; no Android multimodule runtime."
+      }
+    },
+    {
+      "module": "evolution",
+      "before": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "after": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "changed": false,
+      "ci_before": "success",
+      "ci_after": "success",
+      "versions": {
+        "module": "evolution",
+        "contracts": [
+          "internal event schema1",
+          "patch-proposal/1 inert",
+          "UNIFIED technical-health/1-draft not consumed"
+        ],
+        "abi": [
+          "JVM17/JDBC; not Android API24 library"
+        ],
+        "data_schemas": [
+          "technical SQLite v1",
+          "diagnostic SQLite v1"
+        ],
+        "min_sdk": 0,
+        "proof_scope": "Independent lane, not a prerequisite for the document/tool pilot; historical reports, no fresh execution."
+      }
+    },
+    {
+      "module": "interface",
+      "before": "db459ba388a3fea992d80320c3989be0edda8500",
+      "after": "1d0a89f3d92cba64122db08cc7b326239f85c08d",
+      "changed": true,
+      "ci_before": "success",
+      "ci_after": "success",
+      "versions": {
+        "module": "interface",
+        "contracts": [
+          "CoreConversationTransport proposalVersion1; CoreTextOrigin NONE/LABORATORY only",
+          "PremiumManifest V2",
+          "CapabilityStatus/OperationReceipt not consumed"
+        ],
+        "abi": [
+          "architecture-independent Compose; no new native payload"
+        ],
+        "data_schemas": [
+          "dashboard DataStore V1 unchanged",
+          "workspace-v1.json sidecar V1",
+          "private Athena zip via AtomicFile, no schema migration"
+        ],
+        "min_sdk": 26,
+        "proof_scope": "Independent lane, not a prerequisite for the document/tool pilot; historical reports, no fresh execution."
+      }
+    },
+    {
+      "module": "llm",
+      "before": "2efb3f7aa6205062ab71f570212019fd1d9885b6",
+      "after": "e0b781442b21034a251f6af450396faabc5f667d",
+      "changed": true,
+      "ci_before": "unknown",
+      "ci_after": "unknown",
+      "versions": {
+        "module": "llm",
+        "contracts": [
+          "jarvis.llm.client/1; jarvis.llm.p2/1.0; fixture /2 unchanged"
+        ],
+        "abi": [
+          "app ARM64 min29; domain bytecode17, local source API only, transport NONE",
+          "arm64-v8a"
+        ],
+        "data_schemas": [
+          "catalogue: 1",
+          "shared_contracts_changed: False"
+        ],
+        "min_sdk": 29,
+        "proof_scope": "Historical JVM/Robolectric software and selected CI; no Android multimodule runtime."
+      }
+    },
+    {
+      "module": "nexus",
+      "before": "374ea2e2fd640e78f2f5e12e60e75b493420e504",
+      "after": "9d6928cd8651f83fa5091bdb474b33761d366412",
+      "changed": true,
+      "ci_before": "failure",
+      "ci_after": "unknown",
+      "versions": {
+        "module": "nexus",
+        "contracts": [
+          "DocumentaryGateway/1",
+          "NEXUS RAG/source/citation APIs"
+        ],
+        "abi": [
+          "source recompile required",
+          "portable Java8 API24; JDBC stays JVM-only"
+        ],
+        "data_schemas": [
+          "NEXUS SQLite user_version4",
+          "v3→v4 synthetic-copy migration tested historically"
+        ],
+        "min_sdk": 24,
+        "proof_scope": "95 JVM +37 Robolectric historically; actual Android FTS5 probe/instrumentation NOT_RUN."
+      }
+    },
+    {
+      "module": "services",
+      "before": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "after": "f00091a639612b91eca1a301580c8f531249f1e3",
+      "changed": false,
+      "ci_before": "failure",
+      "ci_after": "failure",
+      "versions": {
+        "module": "services",
+        "contracts": [
+          "jarvis.services.inprocess/1",
+          "ApprovalGate exact digest/epoch/expiry"
+        ],
+        "abi": [
+          "portable Java11 sources compile against SDK24",
+          "Guard/AccessGuard extraction requires consumer recompile"
+        ],
+        "data_schemas": [
+          "SDK journal owner marker1",
+          "historical data schema1 separate; no migration"
+        ],
+        "min_sdk": 24,
+        "proof_scope": "94 JVM +40 Robolectric historically; no live commit fence or qualified SAF export."
+      }
+    },
+    {
+      "module": "unified",
+      "before": "329f304115c9bc5b6dd6ccc2d68d19bf455b5e6c",
+      "after": "3caa57d91ce0dba31043e7cb6373a5e2df8b9fa4",
+      "changed": true,
+      "ci_before": "unknown",
+      "ci_after": "failure",
+      "versions": {
+        "module": "unified",
+        "contracts": [
+          "jarvis.integration-lock/2",
+          "CapabilityStatus/OperationReceipt 2-draft proposals only"
+        ],
+        "abi": [
+          "Python stdlib, not Android runtime"
+        ],
+        "data_schemas": [
+          "v1 lock retained byte-identical; v2 separate review artifact"
+        ],
+        "min_sdk": 0,
+        "proof_scope": "Fresh UNIFIED tests only; no authority over runtime permissions."
+      }
+    },
+    {
+      "module": "voice",
+      "before": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "after": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "changed": false,
+      "ci_before": "unknown",
+      "ci_after": "unknown",
+      "versions": {
+        "module": "voice",
+        "contracts": [
+          "voice.final01.events/1",
+          "voice.bridge.fixture/1 separate branch",
+          "voice.speech.public-lab/2-draft parallel branch only"
+        ],
+        "abi": [
+          "arm64-v8a default; emulator ABI override is not device qualification"
+        ],
+        "data_schemas": [
+          "legacy voice profiles/vault untouched; no crossmodule transfer"
+        ],
+        "min_sdk": 26,
+        "proof_scope": "Independent lane, not a prerequisite for the document/tool pilot; historical reports, no fresh execution."
+      }
+    }
+  ],
+  "consumed": [
+    {
+      "consumer": "core",
+      "dependency": "nexus",
+      "commit": "777e6afa75ecb99b85e52d68837cb0fefcf161cd",
+      "role": "build_library",
+      "binding_path": "docs/intensive-2026-10-22/CORE03-SOURCES.json",
+      "contract": "CORE03 source tree pinned; no API24 port consumed"
+    },
+    {
+      "consumer": "core",
+      "dependency": "services",
+      "commit": "3decdc47d82f9b43713c48cab244762941770a81",
+      "role": "build_library",
+      "binding_path": "docs/intensive-2026-10-22/CORE03-SOURCES.json",
+      "contract": "CORE03 source tree pinned; no API24 port consumed"
+    },
+    {
+      "consumer": "interface",
+      "dependency": "core",
+      "commit": "e86107b8213b0aeaf9d22025cf6bef91a8e544a5",
+      "role": "test_fixture",
+      "binding_path": "docs/intensive-2026-10-22/CORE02-REFERENCE.json",
+      "contract": "EXACT_TEST_SOURCE_ONLY_NOT_PACKAGED"
+    },
+    {
+      "consumer": "interface",
+      "dependency": "core",
+      "commit": "283423cb8b9d567539f33cf7f2f1fafa602cf974",
+      "role": "alignment_reference",
+      "binding_path": "docs/ui-02/CORE-ALIGNMENT.json",
+      "contract": "READ_ONLY_ID02_REFERENCE_NOT_RUNTIME"
+    },
+    {
+      "consumer": "interface",
+      "dependency": "core",
+      "commit": "49ad428e94edd75c2a1d115c8c2504f26609eace",
+      "role": "alignment_reference",
+      "binding_path": "docs/ui-02/CORE-ALIGNMENT.json",
+      "contract": "READ_ONLY_MEMORY_REFERENCE_NOT_RUNTIME"
+    }
+  ],
+  "assessment": {
+    "verdict": "BLOCKED",
+    "android_multi_module_go": false,
+    "blockers": [
+      "ANDROID_E2E_MISSING:android24:A",
+      "ANDROID_E2E_MISSING:android24:B",
+      "ANDROID_E2E_MISSING:android24:C",
+      "ANDROID_E2E_MISSING:android24:D",
+      "ANDROID_E2E_MISSING:android24:E",
+      "ANDROID_E2E_MISSING:android24:F",
+      "ANDROID_E2E_MISSING:android24:G",
+      "ANDROID_E2E_MISSING:android24:H",
+      "ANDROID_E2E_MISSING:android24:I",
+      "ANDROID_E2E_MISSING:android24:J",
+      "ANDROID_E2E_MISSING:android25:A",
+      "ANDROID_E2E_MISSING:android25:B",
+      "ANDROID_E2E_MISSING:android25:C",
+      "ANDROID_E2E_MISSING:android25:D",
+      "ANDROID_E2E_MISSING:android25:E",
+      "ANDROID_E2E_MISSING:android25:F",
+      "ANDROID_E2E_MISSING:android25:G",
+      "ANDROID_E2E_MISSING:android25:H",
+      "ANDROID_E2E_MISSING:android25:I",
+      "ANDROID_E2E_MISSING:android25:J",
+      "ANDROID_PRODUCER_PROOF_MISSING:nexus:android24",
+      "ANDROID_PRODUCER_PROOF_MISSING:nexus:android25",
+      "ANDROID_PRODUCER_PROOF_MISSING:services:android24",
+      "ANDROID_PRODUCER_PROOF_MISSING:services:android25",
+      "CI_NOT_SUCCESS:nexus",
+      "CI_NOT_SUCCESS:services",
+      "CORE production Android AppGraph/SessionCoordinator does not compose the selected primary ports.",
+      "CORE_NOT_CONSUMING_PRIMARY:nexus",
+      "CORE_NOT_CONSUMING_PRIMARY:services",
+      "NEXUS real Android FTS5/citation and API24/25 instrumentation missing.",
+      "SERVICES live authorizeAtCommit fence and SAF readback export not qualified."
+    ],
+    "authorization_granted": false,
+    "physical_device_qualified": false,
+    "scope": "recorded evidence review only; not an installation or runtime permission"
+  },
+  "automatic_migration": false
+}
