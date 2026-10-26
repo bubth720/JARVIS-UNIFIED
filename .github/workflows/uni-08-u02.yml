@@ -1,0 +1,27 @@
+name: UNI-08 U02 modular workspace proposal gate
+on:
+  push:
+    branches: ['feat/uni-08-u02-*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  proposal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.12'
+      - name: Refuse implicit monolith and integration approval
+        run: python3 workspace/check_plan.py workspace/modular-workspace.proposed.json
+      - name: Proposal invariants and falsification tests
+        run: python3 -m unittest discover -s workspace/tests -v
+      - name: U01 contract and U00 candidate regressions
+        run: |
+          python3 -m unittest discover -s tooling/integration/uni08_u01_tests -v
+          python3 -m unittest discover -s tooling/integration/uni08_tests -v

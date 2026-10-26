@@ -1,0 +1,129 @@
+{
+  "format": "jarvis.modular-workspace/1",
+  "observed_date": "2026-10-26",
+  "purpose": "PROPOSED_ONLY",
+  "approved": false,
+  "runtime_enabled": false,
+  "automated_checkout_enabled": false,
+  "unified_apk_qualified": false,
+  "android_multi_module_go": false,
+  "layout": "single-project-modular",
+  "distribution": "independent-modules-until-qualified",
+  "modules": [
+    {
+      "id": "core",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "feat/fusion-02-core-readiness",
+      "commit": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+      "min_sdk": 24
+    },
+    {
+      "id": "llm",
+      "repository": "bubth720/JARVIS-LLM",
+      "branch": "feat/fusion-02-llm-prequalification",
+      "commit": "f147236820e0633b0c88f6f1725e828f71167b27",
+      "min_sdk": 29
+    },
+    {
+      "id": "voice",
+      "repository": "bubth720/JARVIS-VOICE",
+      "branch": "feat/fusion-02-voice-timeline",
+      "commit": "95f873226a6b80e2517266a943dfbead94432b86",
+      "min_sdk": 26
+    },
+    {
+      "id": "interface",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "branch": "feat/fusion-02-interface",
+      "commit": "3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff",
+      "min_sdk": 26
+    },
+    {
+      "id": "nexus",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "feat/nex-07-source-quota-preflight",
+      "commit": "8c778be1b302d10c8dcbf8444f6e6e051477c825",
+      "min_sdk": 24
+    },
+    {
+      "id": "services",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "feat/serv-08-wire-preflight",
+      "commit": "f8976cda0c68449d63a015c89ab1829a852b5e97",
+      "min_sdk": 24
+    },
+    {
+      "id": "evolution",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "branch": "feat/evolution-final-01",
+      "commit": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "min_sdk": 0
+    },
+    {
+      "id": "unified",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "branch": "feat/uni-08-u01-contract-review",
+      "commit": "25d7146b450a13965a2325582772288e9be18dc0",
+      "min_sdk": 0
+    }
+  ],
+  "proposed_dependencies": [
+    {
+      "consumer": "interface",
+      "provider": "core",
+      "role": "ui_events",
+      "enabled": false
+    },
+    {
+      "consumer": "core",
+      "provider": "llm",
+      "role": "inference",
+      "enabled": false
+    },
+    {
+      "consumer": "core",
+      "provider": "voice",
+      "role": "speech",
+      "enabled": false
+    },
+    {
+      "consumer": "core",
+      "provider": "nexus",
+      "role": "document_retrieval",
+      "enabled": false
+    },
+    {
+      "consumer": "core",
+      "provider": "services",
+      "role": "tools",
+      "enabled": false
+    }
+  ],
+  "gates": [
+    {
+      "id": "contracts",
+      "state": "BLOCKED",
+      "reason": "ADR-002 is a review proposal; CORE/SERVICES durable authorization not approved"
+    },
+    {
+      "id": "nexus_android",
+      "state": "BLOCKED",
+      "reason": "Real platform FTS5 missing in observed API24/25; NEX-07 alone does not qualify retrieval"
+    },
+    {
+      "id": "services_android",
+      "state": "BLOCKED",
+      "reason": "API35 SAF selection failures; runtime DOCX export remains OFF"
+    },
+    {
+      "id": "runtime_e2e",
+      "state": "BLOCKED",
+      "reason": "No Android CORE + LLM + VOICE + NEXUS + SERVICES end-to-end application evidence"
+    },
+    {
+      "id": "physical",
+      "state": "NOT_RUN",
+      "reason": "No unified product APK test on POCO or Redmi"
+    }
+  ]
+}
