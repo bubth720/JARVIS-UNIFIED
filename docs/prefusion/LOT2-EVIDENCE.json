@@ -1,0 +1,130 @@
+{
+  "format": "jarvis.uni08.lot2-evidence/1",
+  "observed_date": "2026-10-27",
+  "status": "REVIEW_ONLY",
+  "approved": false,
+  "merge_main_allowed": false,
+  "runtime_activation_allowed": false,
+  "code_combined": false,
+  "physical_device_qualified": false,
+  "source_baseline": {
+    "repo": "bubth720/JARVIS-UNIFIED",
+    "branch": "codex/prefusion-20261026-lot1",
+    "sha": "b8f22bb7091c29b654f5e958e97da4f94434b164"
+  },
+  "modules": [
+    {
+      "module": "CORE",
+      "repo": "bubth720/JAVIS-Local-v2",
+      "prs": [
+        {
+          "number": 20,
+          "sha": "95a2722dd7c4e67682eb7dc787431274968aa1fa",
+          "run": 40563102521,
+          "files": [
+            ".github/workflows/prefusion-core-lot2.yml",
+            "app/src/main/java/com/stark/jarvislocal/integrations/DocumentToolGateSnapshot.kt",
+            "app/src/test/java/com/stark/jarvislocal/integrations/DocumentToolGateSnapshotTest.kt",
+            "docs/prefusion/LOT2-CORE-REPORT.md"
+          ]
+        },
+        {
+          "number": 21,
+          "sha": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+          "run": 40565029341,
+          "files": [
+            ".github/workflows/prefusion-lot2.yml",
+            "AGENTS.md",
+            "app/src/main/java/com/stark/jarvislocal/integrations/PinnedDocumentReadiness.kt",
+            "app/src/test/java/com/stark/jarvislocal/integrations/PinnedDocumentReadinessTest.kt",
+            "docs/PROJECT_KNOWLEDGE.md",
+            "docs/prefusion/LOT2.md",
+            "tools/check-prefusion-lot2.py"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "INTERFACE",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "prs": [
+        {
+          "number": 9,
+          "sha": "a7dd2c37baa2568860557c3cf3f07c31374de1d2",
+          "run": 40563235219,
+          "files": [
+            "app/src/main/java/com/jarvis/interfaceapp/fusion/UntrustedCitationPreview.kt",
+            "app/src/test/java/com/jarvis/interfaceapp/fusion/UntrustedCitationPreviewTest.kt",
+            "docs/prefusion/LOT2-UI-REPORT.md"
+          ]
+        },
+        {
+          "number": 10,
+          "sha": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+          "run": 40565042203,
+          "files": [
+            "app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationClientAdapter.kt",
+            "app/src/test/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationClientTest.kt",
+            "docs/prefusion/LOT2.md"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "EVOLUTION",
+      "repo": "bubth720/JARVIS-VOLUTION-",
+      "prs": [
+        {
+          "number": 4,
+          "sha": "8d1155fd23078d0a25dbe32edd498a95d60906ac",
+          "run": 40563113538,
+          "files": [
+            "docs/prefusion/LOT2-EVOL-REPORT.md",
+            "evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/ReviewOnlyAdmission.kt",
+            "evolution-sandbox/src/test/kotlin/fr/jarvis/evolution/sandbox/ReviewOnlyAdmissionTest.kt"
+          ]
+        },
+        {
+          "number": 5,
+          "sha": "2e10d6f5c4d41458d0e55cd6724cd93973db450e",
+          "run": 40565363719,
+          "files": [
+            "docs/prefusion/LOT2.md",
+            "evolution-core/src/main/kotlin/fr/jarvis/evolution/probes/LocalTelemetryService.kt",
+            "evolution-core/src/test/kotlin/fr/jarvis/evolution/TelemetryTest.kt"
+          ]
+        }
+      ]
+    }
+  ],
+  "release_gates": [
+    {
+      "name": "ANDROID_FTS5",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "CORE_SERVICES_ADR002",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "JNI_UNLOAD",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "VOICE_EMOTIONS",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "PHYSICAL_DEVICE",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "SIGNED_CORE_UI",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "EVOLUTION_SANDBOX",
+      "status": "BLOCKED"
+    }
+  ]
+}
