@@ -1,0 +1,294 @@
+{
+  "format": "jarvis.prefusion-observation/1",
+  "observed_date": "2026-10-27",
+  "purpose": "REVIEW_ONLY",
+  "runtime_enabled": false,
+  "merge_authorized": false,
+  "mission_branch": "mission/prefusion-gates-20261026",
+  "refs": [
+    {
+      "repo": "JARVIS-INTERFACE",
+      "sha": "82675ade011e69eb3bccd99efbf46d0697a3276b",
+      "parent": "3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412782652,
+            "name": "Android",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 26,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/40412782652/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/40412782652/logs",
+            "workflow_id": 384435276
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-LLM",
+      "sha": "12fc58a81ceee70eedbba2d0b187b1294bae6283",
+      "parent": "f147236820e0633b0c88f6f1725e828f71167b27",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412770819,
+            "name": "FUSION-01 LLM additive contract validation",
+            "status": "completed",
+            "conclusion": "skipped",
+            "run_number": 2,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770819/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770819/logs",
+            "workflow_id": 396194919
+          },
+          {
+            "id": 40412770975,
+            "name": "FUSION-02 LLM test-only prequalification",
+            "status": "completed",
+            "conclusion": "skipped",
+            "run_number": 2,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770975/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770975/logs",
+            "workflow_id": 396771534
+          },
+          {
+            "id": 40412770792,
+            "name": "Android prototype checks",
+            "status": "completed",
+            "conclusion": "failure",
+            "run_number": 36,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770792/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-LLM/actions/runs/40412770792/logs",
+            "workflow_id": 383631408
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-NEXUS",
+      "sha": "bdb51f77a5fe105dbff43d43032882fe1474a4ee",
+      "parent": "8c778be1b302d10c8dcbf8444f6e6e051477c825",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412740972,
+            "name": "NEX-07 isolated quota preflight",
+            "status": "completed",
+            "conclusion": "failure",
+            "run_number": 5,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-NEXUS/actions/runs/40412740972/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-NEXUS/actions/runs/40412740972/logs",
+            "workflow_id": 397576954
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-SERVICES",
+      "sha": "365da117ccb29b59ed990711b2c3f72472ce2d9d",
+      "parent": "7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412745341,
+            "name": "SERVICES foundation and Android qualification",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 27,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-SERVICES/actions/runs/40412745341/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-SERVICES/actions/runs/40412745341/logs",
+            "workflow_id": 386502287
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-UNIFIED",
+      "sha": "6b0ae1a1ca1a257446931a69bdff15a4f77ac019",
+      "parent": "ade69697f55d425f871e4e3b90c7155bf7657d7a",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412734539,
+            "name": "UNI-08 U01 proposal gate",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 4,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734539/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734539/logs",
+            "workflow_id": 397572363
+          },
+          {
+            "id": 40412734541,
+            "name": "UNI-08 U02 modular workspace proposal gate",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 3,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734541/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734541/logs",
+            "workflow_id": 397605086
+          },
+          {
+            "id": 40412734591,
+            "name": "Validate UNIFIED coordination",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 5,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734591/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734591/logs",
+            "workflow_id": 396193902
+          },
+          {
+            "id": 40412735001,
+            "name": "FUSION-02 independent evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 6,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412735001/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412735001/logs",
+            "workflow_id": 396770915
+          },
+          {
+            "id": 40412734657,
+            "name": "UNI-08 U00 audit candidate and baseline",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 17,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734657/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-UNIFIED/actions/runs/40412734657/logs",
+            "workflow_id": 397520082
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-VOICE",
+      "sha": "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b",
+      "parent": "95f873226a6b80e2517266a943dfbead94432b86",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412774881,
+            "name": "Android",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 168,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-VOICE/actions/runs/40412774881/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-VOICE/actions/runs/40412774881/logs",
+            "workflow_id": 383630794
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JARVIS-VOLUTION-",
+      "sha": "4af477877c3ceb32e5805948ca42798970512d44",
+      "parent": "c0180181804338d21f3bf9d4b537b709595902f7",
+      "ci": {
+        "workflow_runs": [
+          {
+            "id": 40412785717,
+            "name": "Evolution local JVM",
+            "status": "completed",
+            "conclusion": "success",
+            "run_number": 5,
+            "jobs_url": "https://api.github.com/repos/bubth720/JARVIS-VOLUTION-/actions/runs/40412785717/jobs",
+            "logs_url": "https://api.github.com/repos/bubth720/JARVIS-VOLUTION-/actions/runs/40412785717/logs",
+            "workflow_id": 393756615
+          }
+        ]
+      },
+      "ci_scope": "PR runs, first page only"
+    },
+    {
+      "repo": "JAVIS-Local-v2",
+      "sha": "cd2adea393287ea94eb3145e8463209f6fa37e9d",
+      "parent": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+      "ci": {
+        "workflow_runs": []
+      },
+      "ci_scope": "PR runs, first page only"
+    }
+  ],
+  "default_branches_observed": [
+    {
+      "repo": "JARVIS-INTERFACE",
+      "default_branch": "development/mission-002",
+      "observed_sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56"
+    },
+    {
+      "repo": "JARVIS-LLM",
+      "default_branch": "main",
+      "observed_sha": "917e3351f9b525857b6aa019e98d07872d8f6e76"
+    },
+    {
+      "repo": "JARVIS-NEXUS",
+      "default_branch": "main",
+      "observed_sha": "b27df0b84d8f0082d17ca6278549298aaaf97926"
+    },
+    {
+      "repo": "JARVIS-SERVICES",
+      "default_branch": "main",
+      "observed_sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646"
+    },
+    {
+      "repo": "JARVIS-UNIFIED",
+      "default_branch": "main",
+      "observed_sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b"
+    },
+    {
+      "repo": "JARVIS-VOICE",
+      "default_branch": "feat/pocket-tts-cpu-prototype",
+      "observed_sha": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4"
+    },
+    {
+      "repo": "JARVIS-VOLUTION-",
+      "default_branch": "main",
+      "observed_sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0"
+    },
+    {
+      "repo": "JAVIS-Local-v2",
+      "default_branch": "main",
+      "observed_sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540"
+    }
+  ],
+  "published_corrections": [
+    {
+      "repository": "bubth720/JARVIS-LLM",
+      "base_sha": "12fc58a81ceee70eedbba2d0b187b1294bae6283",
+      "local_tested_commit": "90335f82ae15862a63e433d39ab37f6968785436",
+      "tree_sha": "52a75bfb7b2ee102c958fd0a7bc642c560693fc2",
+      "published_commit": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+      "runtime_changed": false
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "base_sha": "bdb51f77a5fe105dbff43d43032882fe1474a4ee",
+      "local_tested_commit": "ce171fb07cc4075e3fd2d4b2b0e942e84b115e6d",
+      "tree_sha": "c6debf4d2fe4c539c460229c3efce2736d575f4d",
+      "published_commit": "201f0d2b03209de104157595a557143fe87eb94e",
+      "runtime_changed": false
+    },
+    {
+      "repository": "bubth720/JARVIS-VOICE",
+      "base_sha": "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b",
+      "local_tested_commit": "fd05fdb26e050f58c7e8c60c7618e81d17889c00",
+      "tree_sha": "366780b28dd5e5690682d7c638a9e8eb3e6df40f",
+      "published_commit": "d10671119fa9a52bc130c28b21ca193edd99d604",
+      "runtime_changed": false
+    }
+  ],
+  "services_report_commit": "ea541d20b08f7ad0949354829a977f6752cbffa3",
+  "limitations": [
+    "PR workflow lookup filters PR events and first page; empty is UNKNOWN",
+    "Snapshot is not a release lock or qualification",
+    "No personal device or runtime E2E proof",
+    "Local execution environment became unavailable"
+  ]
+}
