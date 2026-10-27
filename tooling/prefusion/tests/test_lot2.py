@@ -4,7 +4,7 @@ from copy import deepcopy
 from pathlib import Path
 from tooling.prefusion.check_lot2 import check,load,EvidenceError
 
-PATH=Path(__file__).resolve().parents[2]/"docs/prefusion/LOT2-EVIDENCE.json"
+PATH=Path(__file__).resolve().parents[3]/"docs/prefusion/LOT2-EVIDENCE.json"
 
 class Lot2EvidenceTests(unittest.TestCase):
     def setUp(self):
