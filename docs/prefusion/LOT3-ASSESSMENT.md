@@ -85,8 +85,9 @@ n'est activé par ces ajouts. Ne supprimer ni réinitialiser des travaux existan
 Le premier workflow UNIFIED a échoué avant tout job : sélecteur pip contenant
 `:` non cité en YAML. Correction publiée et CI suivante verte; l’échec initial
 40665128398 n’est ni supprimé ni compté comme un test exécuté.
-INTERFACE a de vrais échecs API26/35, encore à diagnostiquer : voir résultats
-propriétaires. Les tests locaux réussis ne les masquent pas.
+Les premières campagnes INTERFACE et NEXUS ont eu de vrais échecs Android.
+La mise à jour finale décrit leurs causes, corrections et campagnes ultérieures
+vertes sur les SHA exacts; les échecs antérieurs restent dans les preuves.
 
 ## Gates et décisions avant un autre lot
 

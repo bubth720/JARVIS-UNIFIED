@@ -9,14 +9,17 @@ migration, installation personnelle ou activation de production.
 | Module / mission | Branche | Commit propriétaire | Preuves |
 |---|---|---|---|
 | CORE / CORE-PF-02 | codex/prefusion-lot3-core | aed84860f2ca85713140a687ba7d86efc0203dc8 | 629 tests hôte JVM/Robolectric réussis, 0échec/erreur/saut;3builds/3Lint; CI40667196196 SUCCESS |
-| INTERFACE / UI-PF-02 | codex/prefusion-lot3-interface | 9e60e4571fe21d112b2f5e425391b8bcdcc3299e | 217JVM etbuilds/Lint verts au4914dcc;18testsPython du dernier correctif réussis; campagne de capture au9e60 en cours lors de cette capture |
+| INTERFACE / UI-PF-02 | codex/prefusion-lot3-interface | 9e60e4571fe21d112b2f5e425391b8bcdcc3299e | 217JVM/builds/Lint et18Python réussis; CI9e60 SUCCESS,22+2cas/API26/35 etPNG vérifié |
 | SERVICES / SERV-PF-02 | codex/prefusion-lot3-services | cfb5f117edc72acd8d5967980d3dfc9dfbf2903f | 121JVM+40Robolectric réussis; CI40665178466 SUCCESS,7jobs dont matricesAPI24/25/26/35 |
 | NEXUS / NEX-PF-02 | codex/prefusion-lot3-nexus | c5dee7ab0344a23bfd80b13cd52d09e8b26241dd | CI40752240534 SUCCESS,56tests instrumentés (14/API24/25/26/35),0échec/erreur/saut |
-| UNIFIED / UNI-PF-02 | codex/prefusion-lot3-unified | Voir git log du rapport publié | 251Python réussis,0échec/erreur/saut; CI265734b SUCCESS; garde etvalidateur relancés après reprise |
+| UNIFIED / UNI-PF-02 | codex/prefusion-lot3-unified | Voir git log du rapport publié | 251Python réussis,0échec/erreur/saut; CI18a55be SUCCESS; garde etvalidateur relancés après reprise |
 
 [SHA distants et arbres](CURRENT-OWNER-COMMITS.json),
 [contrôle des références principales](MAIN-REFS.json),
 [revue indépendante](REVIEW-NOTES.md).
+Les deux campagnes INTERFACE et la campagne NEXUS sont maintenant vertes au
+SHA de leur livraison finale. Les échecs corrigés sont conservés ci-dessous.
+
 La ventilation des629cas CORE entre JUnit pur etRobolectric n'est pas établie :
 510+53+36+30 sont des suites hôte, aucune qualification émulateur ou physique.
 Les SDK, modèles et protections matériels de production sont préservés.
@@ -50,7 +53,7 @@ idempotente. Aucun rejeu de lecture/grant/export, aucune assertion retirée.
 Les runs8bc0154 et748b3c5 restent en échec dans l'historique; ils ne sont pas
 renommés en succès par la campagne ultérieure.
 
-## Validation INTERFACE et limite de capture
+## Validation INTERFACE confirmée et corrections de capture
 
 [Run40747853353](https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40747853353)
 au4914dcc :22tests initiaux passent sur chacune des API26/35; le script valide
@@ -68,7 +71,13 @@ Signature, CRC etdimensions sont vérifiés; stderr classifié en constantes bor
 aucun contenu privé publié.18tests Python réussis, garde114fichiers historiques,
 Bash etdiffcheck PASS. Nouvelle campagne exacte :
 [40753173250](https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40753173250),
-au9e60e457, IN_PROGRESS lors de la capture. Le résultat final n'est pas anticipé.
+au9e60e457, **SUCCESS**, observé19:29UTC. La CI Android générale
+[40753173199](https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40753173199)
+est aussi SUCCESS sur ce SHA. Pour chaque API26/35 :22tests initiaux sans échec,
+erreur ou saut, puis2contrôles de reprise validés avant le marqueur COMPLETE/0.
+Les annotations PUBLIC_PNG_AVAILABLE attestent le passage du vérificateur de
+signature/CRC/dimensions; les fichiers PNG et XML protégés n’ont pas été
+téléchargés indépendamment. [Preuve sélectionnée](INTERFACE-CI-FINAL.json).
 Trois anciens tests à pack privé non autorisé restent NOT_RUN dans cette sélection.
 
 ## Autres preuves et préservation
@@ -100,7 +109,7 @@ instructions de reprise. Il n'est pas appliqué : examiner/enregistrer dans les
 paramètres puis publier l'environnement pour l'activer; droitsAPI encore à vérifier.
 Aucun jeton demandé, extrait ou stocké.
 
-Prochaine action : terminer la vérification de capture INTERFACE, puis examiner
+Prochaine action : examiner
 ADR-002 (clôture du droit/génération, point de commit/journaux, UNKNOWN/readback).
 Confiance réelle CORE/UI, driverFTS, mutationsSAF, JNI/unload, sandboxEVOLUTION et
 installation physique restent soumis aux preuves et autorisations distinctes.
