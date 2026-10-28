@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-10-28T19:19:59.838363+00:00",
+  "owners": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "branch": "codex/prefusion-lot3-core",
+      "sha": "aed84860f2ca85713140a687ba7d86efc0203dc8",
+      "tree": "f6bb7d1756d2192963a6125acb1a03883cf64c99",
+      "remote_sha": "aed84860f2ca85713140a687ba7d86efc0203dc8",
+      "equal": true,
+      "working_tree_clean": true
+    },
+    {
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "branch": "codex/prefusion-lot3-interface",
+      "sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "tree": "e3a1d254c9f481c6ea2b1482e71becbb473d2d54",
+      "remote_sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "equal": true,
+      "working_tree_clean": true
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "branch": "codex/prefusion-lot3-services",
+      "sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+      "tree": "779ecc5e4590e38fd2ce315262e89eff27eec149",
+      "remote_sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+      "equal": true,
+      "working_tree_clean": true
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "codex/prefusion-lot3-nexus",
+      "sha": "c5dee7ab0344a23bfd80b13cd52d09e8b26241dd",
+      "tree": "bf6c23ee39f762f0b3577e9bfb9b28d262d4e8b0",
+      "remote_sha": "c5dee7ab0344a23bfd80b13cd52d09e8b26241dd",
+      "equal": true,
+      "working_tree_clean": true
+    }
+  ]
+}

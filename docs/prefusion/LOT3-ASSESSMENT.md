@@ -9,6 +9,12 @@ Code initial f057ced917c1b49467b93eb462c774bf4e812957; correction CI
 Le SHA livré et son arbre s'obtiennent avec `git log -1 --format='%H %T'` sur la
 branche publiée; ce document ne fabrique pas un SHA autoréférentiel.
 
+## État le plus récent
+
+La [mise à jour de reprise](lot3/LATEST-STATUS.md) complète les premières
+captures ci-dessous : SHA propriétaires, campagnes Android et corrections CI.
+Les anciens résultats restent datés et ne sont pas réattribués aux nouveaux SHA.
+
 ## Travaux communs livrés
 
 - [Audit des huit PR précédentes](lot3/PR-AUDIT.md), [données vérifiées](lot3/PR-AUDIT.json) : tête, base, arbre, diff et CI accessibles. Les huit restent Draft. L'association UNIFIED#10/b8f22 est confirmée. Les CI liées seulement au numéro de PR demeurent UNKNOWN sur le SHA exact.
