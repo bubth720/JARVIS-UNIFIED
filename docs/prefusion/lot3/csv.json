@@ -1,0 +1,52 @@
+{
+  "format": "jarvis.prefusion.lot3.transcript/1",
+  "origin": "LABORATORY",
+  "runtime_enabled": false,
+  "session": "10000000-0000-4000-8000-000000000001",
+  "request": "10000000-0000-4000-8000-000000000002",
+  "epoch": "10000000-0000-4000-8000-000000000003",
+  "generation": 1,
+  "source": {
+    "kind": "CSV",
+    "text": "item,count\nfixture,2\n",
+    "sha256": "4369be59df660797e0ec700d337c35115a847ac636a350180a589180e9448207"
+  },
+  "events": [
+    {
+      "sequence": 1,
+      "module": "CORE",
+      "state": "SUBMITTED",
+      "session": "10000000-0000-4000-8000-000000000001",
+      "request": "10000000-0000-4000-8000-000000000002",
+      "epoch": "10000000-0000-4000-8000-000000000003",
+      "generation": 1
+    },
+    {
+      "sequence": 2,
+      "module": "CORE",
+      "state": "ACK_UNTRUSTED",
+      "session": "10000000-0000-4000-8000-000000000001",
+      "request": "10000000-0000-4000-8000-000000000002",
+      "epoch": "10000000-0000-4000-8000-000000000003",
+      "generation": 1
+    },
+    {
+      "sequence": 3,
+      "module": "NEXUS",
+      "state": "UNSUPPORTED",
+      "session": "10000000-0000-4000-8000-000000000001",
+      "request": "10000000-0000-4000-8000-000000000002",
+      "epoch": "10000000-0000-4000-8000-000000000003",
+      "generation": 1
+    },
+    {
+      "sequence": 4,
+      "module": "INTERFACE",
+      "state": "DISPLAY_UNAVAILABLE",
+      "session": "10000000-0000-4000-8000-000000000001",
+      "request": "10000000-0000-4000-8000-000000000002",
+      "epoch": "10000000-0000-4000-8000-000000000003",
+      "generation": 1
+    }
+  ]
+}

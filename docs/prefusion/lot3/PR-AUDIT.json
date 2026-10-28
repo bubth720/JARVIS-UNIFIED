@@ -1,0 +1,616 @@
+[
+  {
+    "module": "UNIFIED",
+    "repo": "bubth720/JARVIS-UNIFIED",
+    "pr": 10,
+    "url": "https://github.com/bubth720/JARVIS-UNIFIED/pull/10",
+    "observed_at": "2026-10-28T09:29:13.916372+00:00",
+    "ci_exact_head": "UNKNOWN",
+    "base_commit": "6b0ae1a1ca1a257446931a69bdff15a4f77ac019",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+    "tree": "78d0a20e70565da64ed98701e1bb26047e169f44",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-20261026-lot1",
+    "parents": [
+      "6b0ae1a1ca1a257446931a69bdff15a4f77ac019"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957355",
+        "workflow": "UNI-08 U02 modular workspace proposal gate",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:16:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-UNIFIED/pull/10"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957713",
+        "workflow": "UNI-08 U01 proposal gate",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:16:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-UNIFIED/pull/10"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548958161",
+        "workflow": "Validate UNIFIED coordination",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:16:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-UNIFIED/pull/10"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957667",
+        "workflow": "FUSION-02 independent evidence",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:16:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-UNIFIED/pull/10"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957578",
+        "workflow": "UNI-08 U00 audit candidate and baseline",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:16:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-UNIFIED/pull/10"
+        }
+      }
+    ],
+    "diff": {
+      "base": "6b0ae1a1ca1a257446931a69bdff15a4f77ac019",
+      "exit_code": 0,
+      "files": [
+        "A\tdocs/prefusion/ASSESSMENT.md",
+        "A\tdocs/prefusion/COMPATIBILITY.md",
+        "A\tdocs/prefusion/EVIDENCE.json",
+        "A\tdocs/prefusion/REVIEW-AND-PILOT.md"
+      ]
+    },
+    "ci_exact_head_success_runs": [],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "NEXUS",
+    "repo": "bubth720/JARVIS-NEXUS",
+    "pr": 8,
+    "url": "https://github.com/bubth720/JARVIS-NEXUS/pull/8",
+    "observed_at": "2026-10-28T09:29:13.919904+00:00",
+    "ci_exact_head": "UNKNOWN",
+    "base_commit": "bdb51f77a5fe105dbff43d43032882fe1474a4ee",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "201f0d2b03209de104157595a557143fe87eb94e",
+    "tree": "c6debf4d2fe4c539c460229c3efce2736d575f4d",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-20261026-lot1",
+    "parents": [
+      "bdb51f77a5fe105dbff43d43032882fe1474a4ee"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40547468137",
+        "workflow": "NEX-07 isolated quota preflight",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:06:46Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-NEXUS/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#8",
+          "linkUrl": "/bubth720/JARVIS-NEXUS/pull/8"
+        }
+      }
+    ],
+    "diff": {
+      "base": "bdb51f77a5fe105dbff43d43032882fe1474a4ee",
+      "exit_code": 0,
+      "files": [
+        "M\t.github/workflows/nex-07.yml",
+        "A\tdocs/prefusion/ASSESSMENT.md",
+        "A\ttests/prefusion/test_preservation.py",
+        "A\ttools/check-prefusion.py"
+      ]
+    },
+    "ci_exact_head_success_runs": [],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "SERVICES",
+    "repo": "bubth720/JARVIS-SERVICES",
+    "pr": 7,
+    "url": "https://github.com/bubth720/JARVIS-SERVICES/pull/7",
+    "observed_at": "2026-10-28T09:29:13.924126+00:00",
+    "ci_exact_head": "UNKNOWN",
+    "base_commit": "365da117ccb29b59ed990711b2c3f72472ce2d9d",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "ea541d20b08f7ad0949354829a977f6752cbffa3",
+    "tree": "41fad0a190d0517fa27bff37a871a5916a20845e",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-20261026-lot1",
+    "parents": [
+      "3fc4556032ff6f3bb86116c4efd7bb848b5809d0"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40548088662",
+        "workflow": "SERVICES foundation and Android qualification",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:10:42Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-SERVICES/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#7",
+          "linkUrl": "/bubth720/JARVIS-SERVICES/pull/7"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40547887375",
+        "workflow": "SERVICES foundation and Android qualification",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_CANCELLED"
+        },
+        "created_at": "2026-10-27T17:09:27Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-SERVICES/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#7",
+          "linkUrl": "/bubth720/JARVIS-SERVICES/pull/7"
+        }
+      }
+    ],
+    "diff": {
+      "base": "365da117ccb29b59ed990711b2c3f72472ce2d9d",
+      "exit_code": 0,
+      "files": [
+        "A\tdocs/prefusion/ASSESSMENT.md"
+      ]
+    },
+    "ci_exact_head_success_runs": [],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "LLM",
+    "repo": "bubth720/JARVIS-LLM",
+    "pr": 6,
+    "url": "https://github.com/bubth720/JARVIS-LLM/pull/6",
+    "observed_at": "2026-10-28T09:29:13.931369+00:00",
+    "ci_exact_head": "SUCCESS_OBSERVED_NOT_FULL_CAMPAIGN",
+    "base_commit": "12fc58a81ceee70eedbba2d0b187b1294bae6283",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+    "tree": "52a75bfb7b2ee102c958fd0a7bc642c560693fc2",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-20261026-lot1",
+    "parents": [
+      "12fc58a81ceee70eedbba2d0b187b1294bae6283"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525669",
+        "workflow": "PRE-FUSION LLM frozen runtime qualification",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:07:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-LLM/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#6",
+          "linkUrl": "/bubth720/JARVIS-LLM/pull/6"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525692",
+        "workflow": "FUSION-02 LLM test-only prequalification",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SKIPPED"
+        },
+        "created_at": "2026-10-27T17:07:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-LLM/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#6",
+          "linkUrl": "/bubth720/JARVIS-LLM/pull/6"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525750",
+        "workflow": "Android prototype checks",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SKIPPED"
+        },
+        "created_at": "2026-10-27T17:07:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-LLM/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#6",
+          "linkUrl": "/bubth720/JARVIS-LLM/pull/6"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525902",
+        "workflow": "FUSION-01 LLM additive contract validation",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SKIPPED"
+        },
+        "created_at": "2026-10-27T17:07:08Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-LLM/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#6",
+          "linkUrl": "/bubth720/JARVIS-LLM/pull/6"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547519540",
+        "workflow": "PRE-FUSION LLM frozen runtime qualification",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:07:06Z",
+        "sha40": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+        "source": "https://github.com/bubth720/JARVIS-LLM/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Commit",
+          "linkText": "6ae8a4f",
+          "linkUrl": "/bubth720/JARVIS-LLM/commit/6ae8a4f5c2490f6c9814e08957909a8e3a807180"
+        }
+      }
+    ],
+    "diff": {
+      "base": "12fc58a81ceee70eedbba2d0b187b1294bae6283",
+      "exit_code": 0,
+      "files": [
+        "M\t.github/workflows/android.yml",
+        "A\t.github/workflows/prefusion.yml",
+        "A\tdocs/prefusion/ASSESSMENT.md",
+        "A\ttests/prefusion/test_preservation.py",
+        "A\ttools/check-prefusion.py"
+      ]
+    },
+    "ci_exact_head_success_runs": [
+      "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547519540"
+    ],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "VOICE",
+    "repo": "bubth720/JARVIS-VOICE",
+    "pr": 25,
+    "url": "https://github.com/bubth720/JARVIS-VOICE/pull/25",
+    "observed_at": "2026-10-28T09:29:17.459998+00:00",
+    "ci_exact_head": "SUCCESS_OBSERVED_NOT_FULL_CAMPAIGN",
+    "base_commit": "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+    "tree": "366780b28dd5e5690682d7c638a9e8eb3e6df40f",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-20261026-lot1",
+    "parents": [
+      "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547583230",
+        "workflow": "FUSION-02 VOICE isolated protocol",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:07:29Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-VOICE/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#25",
+          "linkUrl": "/bubth720/JARVIS-VOICE/pull/25"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547583238",
+        "workflow": "Android",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:07:29Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-VOICE/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#25",
+          "linkUrl": "/bubth720/JARVIS-VOICE/pull/25"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542779",
+        "workflow": "Android",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T17:07:14Z",
+        "sha40": "d10671119fa9a52bc130c28b21ca193edd99d604",
+        "source": "https://github.com/bubth720/JARVIS-VOICE/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Commit",
+          "linkText": "d106711",
+          "linkUrl": "/bubth720/JARVIS-VOICE/commit/d10671119fa9a52bc130c28b21ca193edd99d604"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542815",
+        "workflow": "FUSION-02 VOICE isolated protocol",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_CANCELLED"
+        },
+        "created_at": "2026-10-27T17:07:14Z",
+        "sha40": "d10671119fa9a52bc130c28b21ca193edd99d604",
+        "source": "https://github.com/bubth720/JARVIS-VOICE/actions?query=branch%3Acodex%2Fprefusion-20261026-lot1",
+        "description": {
+          "primaryText": "Commit",
+          "linkText": "d106711",
+          "linkUrl": "/bubth720/JARVIS-VOICE/commit/d10671119fa9a52bc130c28b21ca193edd99d604"
+        }
+      }
+    ],
+    "diff": {
+      "base": "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b",
+      "exit_code": 0,
+      "files": [
+        "M\t.github/workflows/fusion-02-voice.yml",
+        "A\tdocs/prefusion/ASSESSMENT.md",
+        "A\ttests/prefusion/test_preservation.py",
+        "A\ttools/check-prefusion.py"
+      ]
+    },
+    "ci_exact_head_success_runs": [
+      "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542779"
+    ],
+    "ci_exact_head_non_success_runs": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542815",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_CANCELLED"
+      }
+    ]
+  },
+  {
+    "module": "CORE",
+    "repo": "bubth720/JAVIS-Local-v2",
+    "pr": 21,
+    "url": "https://github.com/bubth720/JAVIS-Local-v2/pull/21",
+    "observed_at": "2026-10-28T09:29:17.741555+00:00",
+    "ci_exact_head": "SUCCESS_OBSERVED_NOT_FULL_CAMPAIGN",
+    "base_commit": "cd2adea393287ea94eb3145e8463209f6fa37e9d",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+    "tree": "3d920058cccb9f02ca2af8e7d1bc7acbaedef631",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-lot2-20261027",
+    "parents": [
+      "cd2adea393287ea94eb3145e8463209f6fa37e9d"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40565029341",
+        "workflow": "PRE-FUSION CORE lot2 passive regressions",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T18:59:32Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JAVIS-Local-v2/actions?query=branch%3Acodex%2Fprefusion-lot2-20261027",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#21",
+          "linkUrl": "/bubth720/JAVIS-Local-v2/pull/21"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40565016885",
+        "workflow": "PRE-FUSION CORE lot2 passive regressions",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T18:59:27Z",
+        "sha40": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+        "source": "https://github.com/bubth720/JAVIS-Local-v2/actions?query=branch%3Acodex%2Fprefusion-lot2-20261027",
+        "description": {
+          "primaryText": "Commit",
+          "linkText": "a311379",
+          "linkUrl": "/bubth720/JAVIS-Local-v2/commit/a3113797a3c481bc516c5ef1fd4d7a74b919de40"
+        }
+      }
+    ],
+    "diff": {
+      "base": "cd2adea393287ea94eb3145e8463209f6fa37e9d",
+      "exit_code": 0,
+      "files": [
+        "A\t.github/workflows/prefusion-lot2.yml",
+        "M\tAGENTS.md",
+        "A\tapp/src/main/java/com/stark/jarvislocal/integrations/PinnedDocumentReadiness.kt",
+        "A\tapp/src/test/java/com/stark/jarvislocal/integrations/PinnedDocumentReadinessTest.kt",
+        "M\tdocs/PROJECT_KNOWLEDGE.md",
+        "A\tdocs/prefusion/LOT2.md",
+        "A\ttools/check-prefusion-lot2.py"
+      ]
+    },
+    "ci_exact_head_success_runs": [
+      "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40565016885"
+    ],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "INTERFACE",
+    "repo": "bubth720/JARVIS-INTERFACE",
+    "pr": 10,
+    "url": "https://github.com/bubth720/JARVIS-INTERFACE/pull/10",
+    "observed_at": "2026-10-28T09:29:17.908229+00:00",
+    "ci_exact_head": "UNKNOWN",
+    "base_commit": "82675ade011e69eb3bccd99efbf46d0697a3276b",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+    "tree": "4b87f64cbb1709992c9ee2b36aee47faa304b6ed",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-lot2-20261027",
+    "parents": [
+      "82675ade011e69eb3bccd99efbf46d0697a3276b"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40565042203",
+        "workflow": "Android",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T18:59:38Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-INTERFACE/actions?query=branch%3Acodex%2Fprefusion-lot2-20261027",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#10",
+          "linkUrl": "/bubth720/JARVIS-INTERFACE/pull/10"
+        }
+      },
+      {
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40565039146",
+        "workflow": "Android",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T18:59:37Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-INTERFACE/actions?query=branch%3Acodex%2Fprefusion-lot2-20261027",
+        "description": {}
+      }
+    ],
+    "diff": {
+      "base": "82675ade011e69eb3bccd99efbf46d0697a3276b",
+      "exit_code": 0,
+      "files": [
+        "M\tapp/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationClientAdapter.kt",
+        "M\tapp/src/test/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationClientTest.kt",
+        "A\tdocs/prefusion/LOT2.md"
+      ]
+    },
+    "ci_exact_head_success_runs": [],
+    "ci_exact_head_non_success_runs": []
+  },
+  {
+    "module": "EVOLUTION",
+    "repo": "bubth720/JARVIS-VOLUTION-",
+    "pr": 5,
+    "url": "https://github.com/bubth720/JARVIS-VOLUTION-/pull/5",
+    "observed_at": "2026-10-28T09:29:18.060626+00:00",
+    "ci_exact_head": "UNKNOWN",
+    "base_commit": "4af477877c3ceb32e5805948ca42798970512d44",
+    "runtime_qualified": false,
+    "state": "Draft",
+    "head_sha": "2e10d6f5c4d41458d0e55cd6724cd93973db450e",
+    "tree": "cab1d33b881f78e24930a2f03fdd7f377b17f860",
+    "base_ref": "mission/prefusion-gates-20261026",
+    "head_ref": "codex/prefusion-lot2-20261027",
+    "parents": [
+      "4af477877c3ceb32e5805948ca42798970512d44"
+    ],
+    "ci_observations": [
+      {
+        "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/40565363719",
+        "workflow": "Evolution local JVM",
+        "status": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "created_at": "2026-10-27T19:01:43Z",
+        "sha40": "UNKNOWN",
+        "source": "https://github.com/bubth720/JARVIS-VOLUTION-/actions?query=branch%3Acodex%2Fprefusion-lot2-20261027",
+        "description": {
+          "primaryText": "Pull request",
+          "linkText": "#5",
+          "linkUrl": "/bubth720/JARVIS-VOLUTION-/pull/5"
+        }
+      }
+    ],
+    "diff": {
+      "base": "4af477877c3ceb32e5805948ca42798970512d44",
+      "exit_code": 0,
+      "files": [
+        "A\tdocs/prefusion/LOT2.md",
+        "M\tevolution-core/src/main/kotlin/fr/jarvis/evolution/probes/LocalTelemetryService.kt",
+        "M\tevolution-core/src/test/kotlin/fr/jarvis/evolution/TelemetryTest.kt"
+      ]
+    },
+    "ci_exact_head_success_runs": [],
+    "ci_exact_head_non_success_runs": []
+  }
+]
