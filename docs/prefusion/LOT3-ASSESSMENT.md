@@ -4,6 +4,8 @@ Observation : 28 octobre 2026 UTC. UNI-PF-02, branche
 `codex/prefusion-lot3-unified`, base mission
 `e4c678faf630a0a98adfaecd7a87fc11dfd82486`, arbre initial
 `d9274d820c9bcf46fe580bb13149371af31d509d`.
+Code initial f057ced917c1b49467b93eb462c774bf4e812957; correction CI
+3bacb70e32e3909ba154cfe6d57da0812dd7d9cf (run40665265643 SUCCESS).
 Le SHA livré et son arbre s'obtiennent avec `git log -1 --format='%H %T'` sur la
 branche publiée; ce document ne fabrique pas un SHA autoréférentiel.
 
@@ -59,6 +61,10 @@ jeton, changement de proxy ni tentative répétée. Une création de PR n'est do
 pas revendiquée. Corps prêt dans [PR-BODY.md](lot3/PR-BODY.md).
 Sur GitHub, ouvrir Compare, base `mission/prefusion-lot3-20261027`, compare
 `codex/prefusion-lot3-unified`, puis **Create draft pull request**.
+Un brouillon de configuration cloud a aussi été sauvegardé : instructions de
+reprise de la chaîne testée et ajout proposé du seul domaine `api.github.com`.
+Il ne modifie pas le réseau actuel : examiner/enregistrer puis publier dans les
+paramètres de l’environnement pour l’appliquer; les droits API restent à vérifier.
 Les propriétaires utilisent la même base et leur branche `codex/prefusion-lot3-*`.
 Aucune fusion demandée. Pour débloquer l'API dans Codex, autoriser
 `api.github.com` dans les paramètres réseau de l'environnement, puis vérifier
@@ -67,6 +73,14 @@ l'accès et les droits effectifs; un accès Git ne prouve pas un droit API.
 Rollback : rester sur la branche de mission initiale; aucun runtime de production
 n'est activé par ces ajouts. Ne supprimer ni réinitialiser des travaux existants.
 `main` UNIFIED reste `e4435f4bd60c5fdc5595c411cc8cab9da7ef020b` lors du contrôle.
+
+## Corrections et limites conservées
+
+Le premier workflow UNIFIED a échoué avant tout job : sélecteur pip contenant
+`:` non cité en YAML. Correction publiée et CI suivante verte; l’échec initial
+40665128398 n’est ni supprimé ni compté comme un test exécuté.
+INTERFACE a de vrais échecs API26/35, encore à diagnostiquer : voir résultats
+propriétaires. Les tests locaux réussis ne les masquent pas.
 
 ## Gates et décisions avant un autre lot
 

@@ -1,0 +1,48 @@
+{
+  "repository": "bubth720/JARVIS-SERVICES",
+  "sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+  "run_id": "40665178466",
+  "conclusion": "SUCCESS",
+  "duration": "9m21s",
+  "jobs": {
+    "jvm": {
+      "id": "122737755541",
+      "status": "SUCCESS"
+    },
+    "android-build": {
+      "id": "122737755176",
+      "status": "SUCCESS"
+    },
+    "android-instrumented": {
+      "id": "122737755516",
+      "status": "SUCCESS"
+    },
+    "services-port-api24": {
+      "id": "122737755472",
+      "status": "SUCCESS",
+      "duration": "7m15s"
+    },
+    "services-port-api25": {
+      "id": "122737755572",
+      "status": "SUCCESS",
+      "duration": "6m25s"
+    },
+    "services-port-api26": {
+      "id": "122737756177",
+      "status": "SUCCESS",
+      "duration": "9m16s"
+    },
+    "services-port-api35": {
+      "id": "122737755649",
+      "status": "SUCCESS",
+      "duration": "5m16s"
+    }
+  },
+  "instrumentation_count_status": "15 cases/API enforced by unchanged CI summarizer; XML/log contents not independently read (public logs endpoint returns404/login required).",
+  "evidence_hashes": {
+    "/tmp/lot3-services-run-final.html": "272ef459e522ce72381438efc55cffbbcc825ea3c107d42c2b6d646a9f47b4b9",
+    "/tmp/lot3-services-matrix-final.html": "c6472bd3f40e3f6c62d029d0861a476b446bc678e676874adcaeecc0b5688fb3",
+    "/tmp/lot3-services-published-actions.html": "e44fb59385c9d584a6c12cd4c17c607c75486964d2f86be0fbae919b2e5b5bb1"
+  },
+  "source_url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40665178466"
+}
