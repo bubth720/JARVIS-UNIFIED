@@ -1,0 +1,30 @@
+name: Prefusion lot3 coordinator OFF
+on:
+  push:
+    branches: ['codex/prefusion-lot3-unified']
+  pull_request:
+    branches: ['mission/prefusion-lot3-20261027']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.12'
+      - run: 'python -m pip install --only-binary=:all: -r backup_prototype/requirements.txt'
+      - run: python -m tooling.integration.ci --output /tmp/lot3-validation
+      - run: python -m unittest discover -s tooling/integration/uni08_tests -v
+      - run: python -m unittest discover -s tooling/integration/uni08_u01_tests -v
+      - run: python -m unittest discover -s workspace/tests -v
+      - run: python workspace/check_plan.py workspace/modular-workspace.proposed.json
+      - run: python -m unittest discover -s tooling/integration/prefusion_lot3_tests -v
+      - run: python -m tooling.integration.prefusion_lot3 docs/prefusion/lot3/txt.json
+      - run: python -m tooling.integration.prefusion_lot3 docs/prefusion/lot3/csv.json
+      - run: python scripts/check_prefusion_lot3.py

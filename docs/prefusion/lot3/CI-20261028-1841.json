@@ -1,0 +1,182 @@
+[
+  {
+    "repo": "JARVIS-UNIFIED",
+    "branch": "codex/prefusion-lot3-unified",
+    "head": "265734bb159cdb9e801bffe1624301afec6d2521",
+    "source_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions?query=branch%3Acodex%2Fprefusion-lot3-unified",
+    "observed_at": "2026-10-28T18:41:39.801068+00:00",
+    "runs": [
+      {
+        "name": "Prefusion lot3 coordinator OFF",
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40667555234",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "265734bb159cdb9e801bffe1624301afec6d2521"
+      },
+      {
+        "name": "Prefusion lot3 coordinator OFF",
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40665265643",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "3bacb70e32e3909ba154cfe6d57da0812dd7d9cf"
+      },
+      {
+        "name": ".github/workflows/prefusion-lot3.yml",
+        "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40665128398",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "f057ced917c1b49467b93eb462c774bf4e812957"
+      }
+    ]
+  },
+  {
+    "repo": "JAVIS-Local-v2",
+    "branch": "codex/prefusion-lot3-core",
+    "head": "aed84860f2ca85713140a687ba7d86efc0203dc8",
+    "source_url": "https://github.com/bubth720/JAVIS-Local-v2/actions?query=branch%3Acodex%2Fprefusion-lot3-core",
+    "observed_at": "2026-10-28T18:41:39.949793+00:00",
+    "runs": [
+      {
+        "name": "PRE-FUSION CORE lot3 read-only lab",
+        "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40667196196",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "aed84860f2ca85713140a687ba7d86efc0203dc8"
+      }
+    ]
+  },
+  {
+    "repo": "JARVIS-INTERFACE",
+    "branch": "codex/prefusion-lot3-interface",
+    "head": "cc5d860f91c0c84c3513419cf3c80ffa0354bfd4",
+    "source_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions?query=branch%3Acodex%2Fprefusion-lot3-interface",
+    "observed_at": "2026-10-28T18:41:39.900435+00:00",
+    "runs": [
+      {
+        "name": "Android",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40667162396",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "cc5d860f91c0c84c3513419cf3c80ffa0354bfd4"
+      },
+      {
+        "name": "PREFUSION LOT3 public Android consumer",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40667162403",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "cc5d860f91c0c84c3513419cf3c80ffa0354bfd4"
+      },
+      {
+        "name": "PREFUSION LOT3 public Android consumer",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40666996061",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "2df48fc42980ccad44064bfca722c34ecc4a7b79"
+      },
+      {
+        "name": "Android",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40666995843",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "2df48fc42980ccad44064bfca722c34ecc4a7b79"
+      },
+      {
+        "name": "Android",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40665765393",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "0cbde77dc36f5537af0442c077b4f7d4acfd9eaa"
+      },
+      {
+        "name": "PREFUSION LOT3 public Android consumer",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40665765400",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "0cbde77dc36f5537af0442c077b4f7d4acfd9eaa"
+      },
+      {
+        "name": "Android",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40664650732",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "a1d9db6cf31c41256f96508147606029286ca343"
+      },
+      {
+        "name": "PREFUSION LOT3 public Android consumer",
+        "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40664650866",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "a1d9db6cf31c41256f96508147606029286ca343"
+      }
+    ]
+  },
+  {
+    "repo": "JARVIS-SERVICES",
+    "branch": "codex/prefusion-lot3-services",
+    "head": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+    "source_url": "https://github.com/bubth720/JARVIS-SERVICES/actions?query=branch%3Acodex%2Fprefusion-lot3-services",
+    "observed_at": "2026-10-28T18:41:39.745733+00:00",
+    "runs": [
+      {
+        "name": "SERVICES foundation and Android qualification",
+        "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40665178466",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+        },
+        "sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f"
+      }
+    ]
+  },
+  {
+    "repo": "JARVIS-NEXUS",
+    "branch": "codex/prefusion-lot3-nexus",
+    "head": "e256594a9b3a0f2cd8bab6e14a2b4ea371085a70",
+    "source_url": "https://github.com/bubth720/JARVIS-NEXUS/actions?query=branch%3Acodex%2Fprefusion-lot3-nexus",
+    "observed_at": "2026-10-28T18:41:39.829168+00:00",
+    "runs": [
+      {
+        "name": "NEX-PF-02 synthetic laboratory",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40668219474",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "e256594a9b3a0f2cd8bab6e14a2b4ea371085a70"
+      },
+      {
+        "name": "NEX-PF-02 synthetic laboratory",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40666775515",
+        "state": {
+          "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+          "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+        },
+        "sha": "b5f89c0db8fa5ad96ed43697b5ffdb4d33ca757a"
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-28T19:29:06.580615+00:00",
+  "runs": [
+    {
+      "name": "Android",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40753173199",
+      "sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      }
+    },
+    {
+      "name": "PREFUSION LOT3 public Android consumer",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40753173250",
+      "sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      }
+    }
+  ],
+  "public_run_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40753173250",
+  "annotation_observations": {
+    "complete_exit_zero_count": 2,
+    "xml_22_zero_failure_count": 2,
+    "public_png_available_count": 2
+  },
+  "raw_run_sha256": "fbb857a97435e998b5704f683bc888b7519e9407bb5e0ecac2863893cc0d6979",
+  "matrix_sha256": "064d8e6d399edf70db79b0837670a7c792ee95616fd4cb2c581fcfbddfeb1b02",
+  "detail_limit": "Selected public annotations and matrix status; artifact PNG bytes and private XML/logs not independently downloaded."
+}

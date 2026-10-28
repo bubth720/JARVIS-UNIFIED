@@ -1,0 +1,94 @@
+{
+  "module": "NEXUS",
+  "mission": "NEX-PF-02",
+  "repository": "bubth720/JARVIS-NEXUS",
+  "branch": "codex/prefusion-lot3-nexus",
+  "sha": "c5dee7ab0344a23bfd80b13cd52d09e8b26241dd",
+  "tree": "bf6c23ee39f762f0b3577e9bfb9b28d262d4e8b0",
+  "remote_head_verified": true,
+  "main_unchanged": true,
+  "observed_at": "2026-10-28T19:20:26.381803+00:00",
+  "ci": {
+    "run_url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40752240534",
+    "run_id": "40752240534",
+    "conclusion": "SUCCESS",
+    "duration": "5m58s",
+    "jobs": [
+      {
+        "job": "123041723860",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40752240534/job/123041723860",
+        "api": 24,
+        "counts": [
+          "labs/android-lab: reports=1, tests=5, failures=0, errors=0, skipped=0",
+          "nexus-android-store: reports=1, tests=9, failures=0, errors=0, skipped=0"
+        ],
+        "job_html_sha256": "aeda9a0df64ac4de2e44c0d5e7b56d94f585e08fbdc3ed4042dd925f6feaeaa9"
+      },
+      {
+        "job": "123041724053",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40752240534/job/123041724053",
+        "api": 25,
+        "counts": [
+          "labs/android-lab: reports=1, tests=5, failures=0, errors=0, skipped=0",
+          "nexus-android-store: reports=1, tests=9, failures=0, errors=0, skipped=0"
+        ],
+        "job_html_sha256": "b6e0a618580c843e1b87cafa76ca82b165eaa5b909afc61feed115fc4c5058b4"
+      },
+      {
+        "job": "123041724158",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40752240534/job/123041724158",
+        "api": 35,
+        "counts": [
+          "labs/android-lab: reports=1, tests=5, failures=0, errors=0, skipped=0",
+          "nexus-android-store: reports=1, tests=9, failures=0, errors=0, skipped=0"
+        ],
+        "job_html_sha256": "b15ace4fd070cc4cb816da2626d631ed6807fd6d466cfae442394490b5839e6f"
+      },
+      {
+        "job": "123041723565",
+        "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40752240534/job/123041723565",
+        "api": 26,
+        "counts": [
+          "labs/android-lab: reports=1, tests=5, failures=0, errors=0, skipped=0",
+          "nexus-android-store: reports=1, tests=9, failures=0, errors=0, skipped=0"
+        ],
+        "job_html_sha256": "883a5b3b7d68f260af98c2ddfe3e6faef7439c2ad99467b53b4a1b7ed2388ae3"
+      }
+    ],
+    "source_html_sha256": "dc7e786629917b4fec7c0deac03df1e6d5b0ab7276b8c978b421e0a813aa97f9"
+  },
+  "local": {
+    "jvm_prior_frozen_sources": 95,
+    "robolectric_prior_frozen_sources": 71,
+    "lot3_python_reexecuted": 24,
+    "historical_guard_tests": 6,
+    "sql_host": 10,
+    "zim_passed": 18,
+    "zim_skipped": 1,
+    "node": 7,
+    "combined_passed": 231,
+    "combined_skipped": 1,
+    "last_apk_and_lint": "SUCCESS33s,7executed/105tasks",
+    "instrumentation": "NOT_RUN: no /dev/kvm"
+  },
+  "restrictions": {
+    "production_source_changed": false,
+    "native_driver_added": false,
+    "physical_tested": false,
+    "rag_qualified": false,
+    "personal_data_migrated": false,
+    "pr_created": false
+  },
+  "fixes": [
+    "wait for the real resumed Activity and picker callback",
+    "test-only targetSdk35/minSdk24 for current platform",
+    "reacquire stale idempotent DocumentsUI root handle with monotonic deadline"
+  ],
+  "remaining_limits": [
+    "FTS5 capability is separate from test pass (unsupported is a truthful accepted result)",
+    "ZIM archive absent: one test skipped",
+    "CI XML bodies/logs require GitHub login; public counts inspected",
+    "GitHub API Forbidden prevents draft PR creation"
+  ],
+  "main_observed_sha": "b27df0b84d8f0082d17ca6278549298aaaf97926"
+}

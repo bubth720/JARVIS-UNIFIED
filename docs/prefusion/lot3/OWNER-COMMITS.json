@@ -1,0 +1,106 @@
+{
+  "format": "jarvis.prefusion.lot3.owner-evidence/1",
+  "observed_at": "2026-10-28T09:50:57.445075+00:00",
+  "owners": [
+    {
+      "module": "CORE",
+      "repo": "bubth720/JAVIS-Local-v2",
+      "branch": "codex/prefusion-lot3-core",
+      "base": "af6fe97e2d3f1cded76a4c0e28754b2c21272692",
+      "sha": "aed84860f2ca85713140a687ba7d86efc0203dc8",
+      "tree": "f6bb7d1756d2192963a6125acb1a03883cf64c99",
+      "remote_head_verified": true,
+      "files": [
+        "A\t.github/workflows/prefusion-lot3-core.yml",
+        "M\tAGENTS.md",
+        "A\tapp/src/main/java/com/stark/jarvislocal/coreui/lab/ReadOnlyCoreUiLabPort.kt",
+        "A\tapp/src/test/java/com/stark/jarvislocal/coreui/lab/ReadOnlyCoreUiLabPortTest.kt",
+        "M\tdocs/PROJECT_KNOWLEDGE.md",
+        "A\tdocs/prefusion/lot3/IMPACT.md",
+        "A\tdocs/prefusion/lot3/PROTOCOL-REVIEW.md",
+        "A\tdocs/prefusion/lot3/REPORT.md",
+        "A\tdocs/prefusion/lot3/evidence/APK-CHECKS.json",
+        "A\tdocs/prefusion/lot3/evidence/CASE-INVENTORY.json",
+        "A\tdocs/prefusion/lot3/evidence/VALIDATION.json",
+        "A\tdocs/prefusion/lot3/evidence/full-android.log.gz",
+        "A\tdocs/prefusion/lot3/evidence/integration-jvm.log.gz",
+        "A\tdocs/prefusion/lot3/evidence/scope-results.log",
+        "A\ttools/check-prefusion-lot3.py"
+      ],
+      "runtime_qualification": false,
+      "physical_qualification": false
+    },
+    {
+      "module": "INTERFACE",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "branch": "codex/prefusion-lot3-interface",
+      "base": "c14eebdbce8b2fda024043d6abd1e84bc719f113",
+      "sha": "cc5d860f91c0c84c3513419cf3c80ffa0354bfd4",
+      "tree": "2214b17e3fa781588738a23dcdd981c7d5560c2f",
+      "remote_head_verified": true,
+      "files": [
+        "A\t.github/workflows/prefusion-lot3.yml",
+        "A\tapp/src/androidTest/java/com/jarvis/interfaceapp/prefusion/PrefusionConsumerBoundaryTest.kt",
+        "A\tapp/src/androidTest/java/com/jarvis/interfaceapp/prefusion/PrefusionOffUiTest.kt",
+        "A\tdocs/prefusion/lot3/REPORT.md",
+        "A\tdocs/prefusion/lot3/VALIDATION.json",
+        "A\tscripts/check_prefusion_lot3.py",
+        "A\tscripts/run_prefusion_lot3_emulator.sh",
+        "A\tscripts/summarize_prefusion_lot3.py",
+        "A\tscripts/tests/test_prefusion_summary.py"
+      ],
+      "runtime_qualification": false,
+      "physical_qualification": false
+    },
+    {
+      "module": "SERVICES",
+      "repo": "bubth720/JARVIS-SERVICES",
+      "branch": "codex/prefusion-lot3-services",
+      "base": "7c9b0efe10187edadbf8555fefe4c98702fa5e98",
+      "sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+      "tree": "779ecc5e4590e38fd2ce315262e89eff27eec149",
+      "remote_head_verified": true,
+      "files": [
+        "M\t.github/workflows/verify.yml",
+        "A\tdesktop/src/test/java/fr/jarvis/services/prefusion/ReceiptContractBench.java",
+        "A\tdesktop/src/test/java/fr/jarvis/services/prefusion/ReceiptContractBenchTest.java",
+        "A\tdocs/prefusion/lot3/ADR-002-PROPOSEE.md",
+        "A\tdocs/prefusion/lot3/EVIDENCE.json",
+        "A\tdocs/prefusion/lot3/IMPACT.md",
+        "A\tdocs/prefusion/lot3/PR-BODY.md",
+        "A\tdocs/prefusion/lot3/REPORT.md"
+      ],
+      "runtime_qualification": false,
+      "physical_qualification": false
+    },
+    {
+      "module": "NEXUS",
+      "repo": "bubth720/JARVIS-NEXUS",
+      "branch": "codex/prefusion-lot3-nexus",
+      "base": "b2b899c8cce73ee0763bf6896fb9ceffe62c2bc6",
+      "sha": "b5f89c0db8fa5ad96ed43697b5ffdb4d33ca757a",
+      "tree": "3979cf5b8cdb2ee5e02ac5a8ffc00505114f156d",
+      "remote_head_verified": true,
+      "files": [
+        "M\t.github/workflows/nex-07.yml",
+        "A\t.github/workflows/prefusion-lot3.yml",
+        "A\tdocs/prefusion/lot3/BACKEND-DECISION.md",
+        "A\tdocs/prefusion/lot3/REPORT.md",
+        "A\tlabs/android-lab/build.gradle.kts",
+        "A\tlabs/android-lab/src/androidTest/java/fr/jarvis/nexus/prefusion/lab/Lot3QualificationTest.java",
+        "A\tlabs/android-lab/src/main/AndroidManifest.xml",
+        "A\tlabs/android-lab/src/main/java/fr/jarvis/nexus/prefusion/lab/SyntheticPickerActivity.java",
+        "A\tlabs/prefusion_lot3/matrix.py",
+        "A\tlabs/saf-provider/build.gradle.kts",
+        "A\tlabs/saf-provider/src/main/AndroidManifest.xml",
+        "A\tlabs/saf-provider/src/main/java/fr/jarvis/nexus/prefusion/provider/SyntheticDocumentsProvider.java",
+        "M\tsettings.gradle.kts",
+        "A\ttests/prefusion_lot3/test_matrix.py",
+        "A\ttests/prefusion_lot3/test_scope.py",
+        "A\ttools/check-prefusion-lot3.py"
+      ],
+      "runtime_qualification": false,
+      "physical_qualification": false
+    }
+  ]
+}

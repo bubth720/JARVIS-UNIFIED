@@ -1,0 +1,240 @@
+{
+  "format": "jarvis.fusion02.ci/1",
+  "observed_at": "2026-10-28T09:29:43.227805+00:00",
+  "platform": "linux",
+  "python": "3.12.14",
+  "results": [
+    {
+      "name": "audit_contracts",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 41,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 41,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "registry",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "registry/tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 23,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "campaign",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/campaign/tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 32,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 32,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "backup",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "backup_prototype/tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 30,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "fusion01",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 21,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 21,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "fusion02",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/fusion02_tests",
+        "-v"
+      ],
+      "kind": "unittest",
+      "tests": 20,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 20,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "unified_validator",
+      "command": [
+        "python3",
+        "scripts/validate_unified.py"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "v1_lock",
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.cli",
+        "validate"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "v1_proposal",
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.cli",
+        "proposals"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "v2_lock",
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.cli_v2",
+        "validate"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "v2_comparison",
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.cli_v2",
+        "compare"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "name": "v2_contracts",
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.check_v2_contracts"
+      ],
+      "kind": "validation",
+      "exit_code": 0,
+      "ok": true
+    }
+  ],
+  "totals": {
+    "tests": 167,
+    "passed": 167,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ok": true,
+  "android_instrumentation_executed": false,
+  "runtime_authorization_granted": false,
+  "additional_suites": [
+    {
+      "name": "U00",
+      "tests": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "name": "U01",
+      "tests": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "name": "U02",
+      "tests": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "name": "lot3_transcript",
+      "tests": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "combined_tests": 251,
+  "scope_base": "e4c678faf630a0a98adfaecd7a87fc11dfd82486",
+  "instrumentation_executed": false
+}
