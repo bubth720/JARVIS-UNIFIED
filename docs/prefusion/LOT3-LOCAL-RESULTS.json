@@ -1,0 +1,315 @@
+{
+  "platform": "Linux Python3.12.14, API reconstructed source at e4c678faf630a0a98adfaecd7a87fc11dfd82486 plus additive lot3 files",
+  "baseline": {
+    "format": "jarvis.fusion02.ci/1",
+    "observed_at": "2026-10-29T09:06:23.255708+00:00",
+    "platform": "linux",
+    "python": "3.12.14",
+    "results": [
+      {
+        "name": "audit_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 41,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 41,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "registry",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "registry/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 23,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 23,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "campaign",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/campaign/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 32,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 32,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "backup",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "backup_prototype/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 30,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 30,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion01",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 21,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 21,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion02",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/fusion02_tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 20,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 20,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "unified_validator",
+        "command": [
+          "python3",
+          "scripts/validate_unified.py"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_proposal",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "proposals"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_comparison",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "compare"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.check_v2_contracts"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      }
+    ],
+    "totals": {
+      "tests": 167,
+      "passed": 167,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ok": true,
+    "android_instrumentation_executed": false,
+    "runtime_authorization_granted": false
+  },
+  "additional": [
+    {
+      "suite": "tooling/integration/uni08_tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/uni08_tests",
+        "-v"
+      ],
+      "tests": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 23,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "suite": "tooling/integration/uni08_u01_tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/uni08_u01_tests",
+        "-v"
+      ],
+      "tests": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 23,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "suite": "workspace/tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "workspace/tests",
+        "-v"
+      ],
+      "tests": 20,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 20,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "suite": "tooling/integration/lot3_tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/lot3_tests",
+        "-v"
+      ],
+      "tests": 14,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 14,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.uni08_candidate",
+        "docs/uni-08/BOM-PROPOSED.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"android_multi_module_go\": false,\n  \"authorization_granted\": false,\n  \"github_bytes_verified_now\": false,\n  \"modules\": [\n    {\n      \"candidate_sha\": \"f6a3b2d0c280c69ef1570544fdbf5bcf5818810c\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"core\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"c0180181804338d21f3bf9d4b537b709595902f7\",\n      \"ci_review\": \"UNKNOWN\",\n      \"id\": \"evolution\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"interface\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"f147236820e0633b0c88f6f1725e828f71167b27\",\n      \"ci_review\": \"STALE_ONLY\",\n      \"id\": \"llm\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"9d6928cd8651f83fa5091bdb474b33761d366412\",\n      \"ci_review\": \"UNKNOWN\",\n      \"id\": \"nexus\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"9dfbf60a908a7b44030ef060af4c164e349887be\",\n      \"ci_review\": \"FAILED\",\n      \"id\": \"services\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"6de738633586743b3cf3f54e41ab4180c2cf0fee\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"unified\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"95f873226a6b80e2517266a943dfbead94432b86\",\n      \"ci_review\": \"MIXED\",\n      \"id\": \"voice\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    }\n  ],\n  \"verdict\": \"BLOCKED\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "workspace/check_plan.py",
+        "workspace/modular-workspace.proposed.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"all_source_code_combined\": false,\n  \"android_multi_module_go\": false,\n  \"merge_authorized\": false,\n  \"missing_gates\": [\n    \"contracts\",\n    \"nexus_android\",\n    \"physical\",\n    \"runtime_e2e\",\n    \"services_android\"\n  ],\n  \"proposed_links\": 5,\n  \"remote_shas_reverified_now\": false,\n  \"runtime_links_enabled\": 0,\n  \"status\": \"REVIEW_ONLY\",\n  \"unified_apk_qualified\": false,\n  \"validated_modules\": 8\n}\n"
+    }
+  ],
+  "unique_unittest_total": 247,
+  "passed": 247,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "android": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "remote_ci": "not claimed by local execution"
+}
