@@ -1,0 +1,485 @@
+{
+  "owners": [
+    {
+      "module": "CORE",
+      "repo": "JAVIS-Local-v2",
+      "pr": 23,
+      "branch": "codex/prefusion-lot3-core",
+      "sha": "aed84860f2ca85713140a687ba7d86efc0203dc8",
+      "tree": "f6bb7d1756d2192963a6125acb1a03883cf64c99",
+      "run": 40667196196,
+      "observed": "629 host cases (510+53+36+30), 0fail/error/skip per validation; builds/lint SUCCESS; Android NOT_RUN"
+    },
+    {
+      "module": "INTERFACE",
+      "repo": "JARVIS-INTERFACE",
+      "pr": 12,
+      "branch": "codex/prefusion-lot3-interface",
+      "sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "tree": "e3a1d254c9f481c6ea2b1482e71becbb473d2d54",
+      "run": 40753173250,
+      "observed": "217 JVM,18 Python,22+2 Android per API26/35 =48 executions; 0fail/error/skip in public selection; private NOT_RUN"
+    },
+    {
+      "module": "SERVICES",
+      "repo": "JARVIS-SERVICES",
+      "pr": 9,
+      "branch": "codex/prefusion-lot3-services",
+      "sha": "cfb5f117edc72acd8d5967980d3dfc9dfbf2903f",
+      "tree": "779ecc5e4590e38fd2ce315262e89eff27eec149",
+      "run": 40665178466,
+      "observed": "7/7jobs SUCCESS; Android15/API24/25/26/35=60 executions,0fail/skip;121JVM+40Robo counts declared in REPORT, XML not recounted"
+    },
+    {
+      "module": "NEXUS",
+      "repo": "JARVIS-NEXUS",
+      "pr": 10,
+      "branch": "codex/prefusion-lot3-nexus",
+      "sha": "c5dee7ab0344a23bfd80b13cd52d09e8b26241dd",
+      "tree": "bf6c23ee39f762f0b3577e9bfb9b28d262d4e8b0",
+      "run": 40752240534,
+      "observed": "5jobs SUCCESS; Android14/API24/25/26/35=56executions,0fail/error/skip;65host PASS+1ZIMSKIP observed;95JVM+71Robo declared counts, Gradle tasks SUCCESS"
+    },
+    {
+      "module": "UNIFIED",
+      "repo": "JARVIS-UNIFIED",
+      "pr": 13,
+      "branch": "codex/prefusion-lot3-unified",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "tree": "6e4246fedfb2f2915232ad6d6f0a9193bcd1b1c3",
+      "run": 40756115690,
+      "observed": "6distinct workflows SUCCESS;251 local Python tests freshly rerun29Oct,0fail/error/skip"
+    }
+  ],
+  "unified_ci": [
+    {
+      "id": 40756115673,
+      "name": "UNI-08 U00 audit candidate and baseline",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115673"
+    },
+    {
+      "id": 40756115932,
+      "name": "UNI-08 U02 modular workspace proposal gate",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115932"
+    },
+    {
+      "id": 40756115645,
+      "name": "UNI-08 U01 proposal gate",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115645"
+    },
+    {
+      "id": 40756115690,
+      "name": "Prefusion lot3 coordinator OFF",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115690"
+    },
+    {
+      "id": 40756115832,
+      "name": "FUSION-02 independent evidence",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115832"
+    },
+    {
+      "id": 40756115674,
+      "name": "Validate UNIFIED coordination",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40756115674"
+    },
+    {
+      "id": 40755167508,
+      "name": "Prefusion lot3 coordinator OFF",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "4fa55d468228a6f222f6177e807938660d735a8c",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40755167508"
+    }
+  ],
+  "main_refs": [
+    {
+      "repo": "JARVIS-UNIFIED",
+      "before": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "after": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JARVIS-NEXUS",
+      "before": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "after": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JARVIS-SERVICES",
+      "before": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "after": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JARVIS-LLM",
+      "before": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "after": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JARVIS-VOICE",
+      "before": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+      "after": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JAVIS-Local-v2",
+      "before": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "after": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "state": "UNCHANGED"
+    },
+    {
+      "repo": "JARVIS-INTERFACE",
+      "before": null,
+      "after": null,
+      "state": "NOT_FOUND"
+    },
+    {
+      "repo": "JARVIS-VOLUTION-",
+      "before": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "after": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "state": "UNCHANGED"
+    }
+  ],
+  "fresh_unified_baseline": {
+    "format": "jarvis.fusion02.ci/1",
+    "observed_at": "2026-10-29T09:25:18.525887+00:00",
+    "platform": "linux",
+    "python": "3.12.14",
+    "results": [
+      {
+        "name": "audit_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 41,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 41,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "registry",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "registry/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 23,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 23,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "campaign",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/campaign/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 32,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 32,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "backup",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "backup_prototype/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 30,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 30,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion01",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 21,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 21,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "fusion02",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tooling/integration/fusion02_tests",
+          "-v"
+        ],
+        "kind": "unittest",
+        "tests": 20,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 20,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "unified_validator",
+        "command": [
+          "python3",
+          "scripts/validate_unified.py"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v1_proposal",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli",
+          "proposals"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_lock",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "validate"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_comparison",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.cli_v2",
+          "compare"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "name": "v2_contracts",
+        "command": [
+          "python3",
+          "-m",
+          "tooling.integration.check_v2_contracts"
+        ],
+        "kind": "validation",
+        "exit_code": 0,
+        "ok": true
+      }
+    ],
+    "totals": {
+      "tests": 167,
+      "passed": 167,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ok": true,
+    "android_instrumentation_executed": false,
+    "runtime_authorization_granted": false
+  },
+  "fresh_unified_extra": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/uni08_tests",
+        "-v"
+      ],
+      "tests": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 23,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/uni08_u01_tests",
+        "-v"
+      ],
+      "tests": 23,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 23,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "workspace/tests",
+        "-v"
+      ],
+      "tests": 20,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 20,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/prefusion_lot3_tests",
+        "-v"
+      ],
+      "tests": 18,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 18,
+      "exit_code": 0,
+      "ok": true
+    },
+    {
+      "command": [
+        "python3",
+        "workspace/check_plan.py",
+        "workspace/modular-workspace.proposed.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"all_source_code_combined\": false,\n  \"android_multi_module_go\": false,\n  \"merge_authorized\": false,\n  \"missing_gates\": [\n    \"contracts\",\n    \"nexus_android\",\n    \"physical\",\n    \"runtime_e2e\",\n    \"services_android\"\n  ],\n  \"proposed_links\": 5,\n  \"remote_shas_reverified_now\": false,\n  \"runtime_links_enabled\": 0,\n  \"status\": \"REVIEW_ONLY\",\n  \"unified_apk_qualified\": false,\n  \"validated_modules\": 8\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.uni08_candidate",
+        "docs/uni-08/BOM-PROPOSED.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"android_multi_module_go\": false,\n  \"authorization_granted\": false,\n  \"github_bytes_verified_now\": false,\n  \"modules\": [\n    {\n      \"candidate_sha\": \"f6a3b2d0c280c69ef1570544fdbf5bcf5818810c\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"core\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"c0180181804338d21f3bf9d4b537b709595902f7\",\n      \"ci_review\": \"UNKNOWN\",\n      \"id\": \"evolution\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"interface\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"f147236820e0633b0c88f6f1725e828f71167b27\",\n      \"ci_review\": \"STALE_ONLY\",\n      \"id\": \"llm\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"9d6928cd8651f83fa5091bdb474b33761d366412\",\n      \"ci_review\": \"UNKNOWN\",\n      \"id\": \"nexus\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"9dfbf60a908a7b44030ef060af4c164e349887be\",\n      \"ci_review\": \"FAILED\",\n      \"id\": \"services\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"6de738633586743b3cf3f54e41ab4180c2cf0fee\",\n      \"ci_review\": \"SOFTWARE_CI_SUCCESS_ONLY\",\n      \"id\": \"unified\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    },\n    {\n      \"candidate_sha\": \"95f873226a6b80e2517266a943dfbead94432b86\",\n      \"ci_review\": \"MIXED\",\n      \"id\": \"voice\",\n      \"physical_qualified\": false,\n      \"runtime_qualified\": false\n    }\n  ],\n  \"verdict\": \"BLOCKED\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.prefusion_lot3",
+        "docs/prefusion/lot3/txt.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"UNSUPPORTED\",\n  \"display\": \"UNAVAILABLE\",\n  \"trusted\": false,\n  \"runtime_link_enabled\": false,\n  \"mutation_performed\": false,\n  \"source_sha256\": \"5daf7f3e76906048d80e0fec617bcfc568d2e1b4b1fe43acdadccd856af7aea8\",\n  \"review_only\": true\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "tooling.integration.prefusion_lot3",
+        "docs/prefusion/lot3/csv.json"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"UNSUPPORTED\",\n  \"display\": \"UNAVAILABLE\",\n  \"trusted\": false,\n  \"runtime_link_enabled\": false,\n  \"mutation_performed\": false,\n  \"source_sha256\": \"4369be59df660797e0ec700d337c35115a847ac636a350180a589180e9448207\",\n  \"review_only\": true\n}\n"
+    }
+  ],
+  "unique_unified_passed": 251,
+  "fresh_source_tree": "6e4246fedfb2f2915232ad6d6f0a9193bcd1b1c3",
+  "owner_android_runs": "CI du28oct audit\u00e9es29oct, pas nouvelles ex\u00e9cutions"
+}

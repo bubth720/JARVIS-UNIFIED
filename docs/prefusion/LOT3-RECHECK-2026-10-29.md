@@ -1,14 +1,38 @@
-# Lot3 — bilan de pré-intégration contrôlée
+# Lot3 — complément de vérification du29octobre2026
 
 **PARTIAL / BLOCKED pour l'intégration Android.** Aucune APK unifiée livrée ni déclarée utilisable. Travaux de laboratoire OFF, documents et tests seulement. Missions propriétaires distribuées en parallèle conformément au lot UNI-PF-02. Aucun merge, migration, changement de licence/ABI/minSdk ni activation sensible effectué.
 
-## UNIFIED : développement et validation locale
+## Correction du relevé initial : les livraisons existaient déjà
+
+Les cinq PR propriétaires du lot3 ont été créées le28octobre2026. Ce complément du29octobre **ne remplace pas** la livraison [UNIFIED#13](https://github.com/bubth720/JARVIS-UNIFIED/pull/13) ni son [LOT3-ASSESSMENT.md](https://github.com/bubth720/JARVIS-UNIFIED/blob/4fa55d468228a6f222f6177e807938660d735a8c/docs/prefusion/LOT3-ASSESSMENT.md). Le premier relevé de cette session n'avait pas identifié ces PR avant de lancer des prototypes supplémentaires. Les quatre prototypes propriétaires locaux ont été abandonnés sans publication ni modification des branches existantes. Aucune PR propriétaire supplémentaire, aucun lot4 modifié.
+
+Les tests247 du complément ci-dessous sont distincts des **251 tests de la livraison UNIFIED existante**, qui ont aussi été relancés le29octobre sur une copie dont l'arbre Git exact est `6e4246fedfb2f2915232ad6d6f0a9193bcd1b1c3`. Résultat frais :167baseline+23U00+23U01+20U02+18scénario = **251PASS,0FAIL,0ERROR,0SKIP** ; six validateurs historiques exit0, deux fixtures TXT/CSV UNSUPPORTED/UNAVAILABLE, plan U02 REVIEW_ONLY. La garde historique `scripts/check_prefusion_lot3.py` n'a pas été relancée localement car le commit de base n'est pas présent dans la reconstruction API ; sa CI à la tête exacte est SUCCESS. Les326 blobs/arbre de la livraison ont été vérifiés, pas seulement leurs noms. Ne pas additionner251et247 : ils partagent233régressions.
+
+### PR livrées et preuves réobservées
+
+Toutes les PR suivantes sont ouvertes en brouillon, vers `mission/prefusion-lot3-20261027`, sans merge. Les CI Android/JVM sont du28octobre et ont été auditées le29 ; aucun nouvel essai Android local n'est revendiqué. [Données détaillées, SHA/arbre, runs, commandes et main](LOT3-EXISTING-RECHECK.json).
+
+| Module / PR | Commit / arbre | Résultats exacts et limites |
+| --- | --- | --- |
+| [CORE#23](https://github.com/bubth720/JAVIS-Local-v2/pull/23) | `aed84860f2ca85713140a687ba7d86efc0203dc8` / `f6bb7d1756d2192963a6125acb1a03883cf64c99` | Run40667196196 SUCCESS ; logs629cas hôte (510+53+36+30), validation0échec/erreur/saut ;602historiques+27nouveaux. Ventilation JVM pur/Robo non établie. Builds/Lint SUCCESS, instrumenté/physique NOT_RUN |
+| [INTERFACE#12](https://github.com/bubth720/JARVIS-INTERFACE/pull/12) | `9e60e4571fe21d112b2f5e425391b8bcdcc3299e` / `e3a1d254c9f481c6ea2b1482e71becbb473d2d54` | Runs40753173250/40753173199 SUCCESS. Logs217JVM,18Python,22+2instrumentés par API26/35=48exécutions ;0échec/erreur/saut publics. COMPLETE/0 et PUBLIC_PNG_AVAILABLE observés. Privé NOT_RUN, nombre3 seulement déclaré antérieurement, non recompté |
+| [SERVICES#9](https://github.com/bubth720/JARVIS-SERVICES/pull/9) | `cfb5f117edc72acd8d5967980d3dfc9dfbf2903f` / `779ecc5e4590e38fd2ce315262e89eff27eec149` | Run40665178466,7/7jobsSUCCESS. Logs15/15parAPI24/25/26/35=60exécutions,0échec/saut.121JVM+40Robo déclarés REPORT, tâches SUCCESS mais XML non recomptés |
+| [NEXUS#10](https://github.com/bubth720/JARVIS-NEXUS/pull/10) | `c5dee7ab0344a23bfd80b13cd52d09e8b26241dd` / `bf6c23ee39f762f0b3577e9bfb9b28d262d4e8b0` | Run40752240534,5jobsSUCCESS. Logs9+5parAPI24/25/26/35=56instrumentés,0échec/erreur/saut. Hôte65PASS+1ZIMSKIP observés ;95JVM+71Robo déclarés REPORT, tâchesSUCCESS ; total déclaré231PASS+1SKIP avec réserve XML |
+| [UNIFIED#13](https://github.com/bubth720/JARVIS-UNIFIED/pull/13) | `4fa55d468228a6f222f6177e807938660d735a8c` / `6e4246fedfb2f2915232ad6d6f0a9193bcd1b1c3` | Six workflows distinctsSUCCESS à la tête exacte ;251PythonPASS fraîchement relancés,0échec/erreur/saut |
+
+La matrice et les décisions de la PR13 restent les références propriétaires. Son rapport historique disait que la création de PR était bloquée : le contrôle actuel corrige ce statut, les cinq PR existent bien. Les branches lot4 et propositions d'approbation repérées dans GitHub sont hors périmètre de cette réexécution ; aucune autorisation sensible n'en est déduite ici.
+
+Les sept main exposés sont inchangés entre les deux relevés de cette session ; main INTERFACE renvoie404 (ne prouve pas une absence de dépôt). Les prototypes propriétaires initiaux non publiés ne font pas partie de ces résultats. Rollback du complément : abandonner sa seule branche/PR16, sans affecter les PR préexistantes.
+
+## Travaux supplémentaires du29octobre, séparés de la livraison existante
+
+## UNIFIED complément : développement et validation locale
 
 Base mission `e4c678faf630a0a98adfaecd7a87fc11dfd82486`, arbre `d9274d820c9bcf46fe580bb13149371af31d509d`. Branche `codex/prefusion-lot3-unified-20261029`, PR brouillon vers `mission/prefusion-lot3-20261027` seulement. Commit/arbre de livraison et URL de PR communiqués après publication ; ne pas confondre le commit local de reconstruction avec le commit GitHub.
 
 Le clone a échoué sur le proxy8080 ; `gh auth status` indique le jeton GH_TOKEN invalide, aucune identité ou secret configuré confirmé par l'environnement. Le connecteur GitHub a permis la lecture et la publication. Les303 fichiers de base ont été récupérés par API au SHA immuable puis vérifiés contre leurs303 empreintes blob Git exactes. Aucun contournement réseau. Checkout local reconstruit pour tests, pas de worktree.
 
-Nouveaux fichiers : `tooling/integration/lot3_lab.py`, `lot3_scope.py`, `lot3_tests/test_lab.py`, `.github/workflows/prefusion-lot3.yml` et les fichiers `docs/prefusion/LOT3-*`. Les303 fichiers historiques restent byte-identiques. Les schémas v1, propositions v2, registres, BOM et verrous restent inchangés.
+Nouveaux fichiers : `tooling/integration/lot3_lab.py`, `lot3_scope.py`, `lot3_tests/test_lab.py`, `.github/workflows/prefusion-lot3-recheck.yml` et les fichiers `docs/prefusion/LOT3-*`. Les303 fichiers historiques restent byte-identiques. Les schémas v1, propositions v2, registres, BOM et verrous restent inchangés.
 
 Le scénario TXT/CSV synthétique retourne explicitement UNSUPPORTED sans réponse ni citation inventées. Le consommateur Python refuse faux READY, rejeu, mutation d'identité/digest, citations, transport activé et écriture. Ce n'est pas un test E2E des applications Android. [Matrice des contrats](LOT3-CONTRACT-MATRIX.md), [décisions ADR-002 proposées](LOT3-ADR-002-DECISIONS.md).
 
@@ -51,4 +75,4 @@ FTS5/SAF Android NEXUS, identité/signature CORE↔UI, JNI et unload LLM/VOICE, 
 
 Décisions utilisateur encore ouvertes : autorité/génération, instant de commit/ordre des journaux, ACK perdu/révocation/readback (dossier ADR-002). Choix d'un backend natif NEXUS et toute migration nécessitent aussi une décision distincte. Aucun de ces choix n'est adopté dans cette PR.
 
-Rollback UNIFIED : abandonner la branche ou revert des seuls fichiers additifs lot3 ; aucune donnée ni migration à restaurer. Les rapports propriétaires et références publiées complètent ce document avant clôture du lot.
+Rollback UNIFIED : abandonner la branche ou revert des seuls fichiers additifs lot3 ; aucune donnée ni migration à restaurer. Les livraisons propriétaires préexistantes et leurs limites sont détaillées en tête de ce document.

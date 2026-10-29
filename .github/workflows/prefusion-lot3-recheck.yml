@@ -5,7 +5,7 @@ on:
       - 'docs/prefusion/LOT3-*'
       - 'tooling/integration/lot3*'
       - 'tooling/integration/lot3_tests/**'
-      - '.github/workflows/prefusion-lot3.yml'
+      - '.github/workflows/prefusion-lot3-recheck.yml'
 permissions:
   contents: read
 jobs:

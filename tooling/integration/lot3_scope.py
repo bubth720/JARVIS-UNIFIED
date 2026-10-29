@@ -7,7 +7,7 @@ def allowed(path):
     return (path.startswith('docs/prefusion/LOT3-')
             or path in ('tooling/integration/lot3_lab.py', 'tooling/integration/lot3_scope.py')
             or path.startswith('tooling/integration/lot3_tests/')
-            or path == '.github/workflows/prefusion-lot3.yml')
+            or path == '.github/workflows/prefusion-lot3-recheck.yml')
 
 
 def main():
