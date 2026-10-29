@@ -1,0 +1,106 @@
+{
+  "schema": "jarvis.m50.candidate-lock/1",
+  "as_of": "2026-10-29",
+  "approval": "PROPOSAL_ONLY",
+  "not_release_lock": true,
+  "runtime_enabled": false,
+  "permission_or_ipc_activation_approved": false,
+  "data_migration_approved": false,
+  "merge_main_approved": false,
+  "product": "single-user-experience-modular-source",
+  "assembly": "federated-git-development-workspace-first",
+  "modules": [
+    {
+      "id": "UNIFIED",
+      "repo": "bubth720/JARVIS-UNIFIED",
+      "source_branch": "feat/lot4-offline-recovery-20261028",
+      "source_commit_sha": "deccfb709944f72a45f6a524001b1144b6c3b8dc",
+      "role": "documentation-and-contracts",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "CORE",
+      "repo": "bubth720/JAVIS-Local-v2",
+      "source_branch": "feat/lot4-offline-recovery-20261028",
+      "source_commit_sha": "3eafb4acd82255f4578d4a3bc113d418508add86",
+      "role": "runtime-owner",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "INTERFACE",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "source_branch": "codex/prefusion-lot3-interface",
+      "source_commit_sha": "9e60e4571fe21d112b2f5e425391b8bcdcc3299e",
+      "role": "ui",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "NEXUS",
+      "repo": "bubth720/JARVIS-NEXUS",
+      "source_branch": "codex/prefusion-lot3-nexus",
+      "source_commit_sha": "c5dee7ab0344a23bfd80b13cd52d09e8b26241dd",
+      "role": "document-provider",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "SERVICES",
+      "repo": "bubth720/JARVIS-SERVICES",
+      "source_branch": "feat/lot4-offline-recovery-20261028",
+      "source_commit_sha": "7f2416dd73b8fb1d60ec87b09fd9d6749001281d",
+      "role": "tool-provider",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "LLM",
+      "repo": "bubth720/JARVIS-LLM",
+      "source_branch": "codex/prefusion-20261026-lot1",
+      "source_commit_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+      "role": "local-engine",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "VOICE",
+      "repo": "bubth720/JARVIS-VOICE",
+      "source_branch": "codex/prefusion-20261026-lot1",
+      "source_commit_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+      "role": "optional-speech",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    },
+    {
+      "id": "EVOLUTION",
+      "repo": "bubth720/JARVIS-VOLUTION-",
+      "source_branch": "codex/prefusion-lot2-20261027",
+      "source_commit_sha": "2e10d6f5c4d41458d0e55cd6724cd93973db450e",
+      "role": "optional-diagnostics",
+      "source_status": "draft-unmerged",
+      "mission_branch": "mission/m50-integrated-beta-20261029"
+    }
+  ],
+  "additional_provenance": {
+    "unified_parallel_lot3_recheck": {
+      "repo": "bubth720/JARVIS-UNIFIED",
+      "sha": "d2c1dafd51339c185a758141e353f93f72ecb9fc",
+      "pr": 16,
+      "relationship": "independent-parallel-branch",
+      "auto_merge": false
+    }
+  },
+  "blocking_gates": [
+    "host-app-isolated-build",
+    "core-ui-trust-or-same-process-boundary",
+    "nexus-android-retrieval",
+    "local-llm-native",
+    "services-read-only-path",
+    "offline-e2e-emulator",
+    "backup-restore",
+    "physical-device-validation"
+  ],
+  "reason": "Pin known candidate SHAs for review; not artifact provenance, CI release qualification or runtime approval"
+}
