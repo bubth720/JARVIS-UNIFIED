@@ -5,7 +5,7 @@ Dépôt : `bubth720/JARVIS-UNIFIED`. Branche de mission : `mission/m50-integrate
 Base UNIFIED : `deccfb709944f72a45f6a524001b1144b6c3b8dc` (lot4, PR#15).
 Complément parallèle à comparer sans intégration automatique : UNIFIED#16 commit `d2c1dafd51339c185a758141e353f93f72ecb9fc`.
 
-**Lire d'abord** `docs/m50/ACCEPTANCE-AND-ROADMAP.md` et `docs/m50/CANDIDATE-SOURCES.json`. Le premier document définit les huit gates **M50-G1..G8**, obligatoires. Le second est une proposition de références, PAS un lock de livraison approuvé. Ne pas inventer de pourcentage d'avancement actuel.
+**Lire d'abord** `docs/m50/ACCEPTANCE-AND-ROADMAP.md`, `docs/m50/CANDIDATE-SOURCES.json` et `docs/m50/M50-READINESS.md` (gates non satisfaits et diagnostics CI NEXUS/LLM). Le premier document définit les huit gates **M50-G1..G8**, obligatoires. Le second est une proposition de références, PAS un lock de livraison approuvé. Ne pas inventer de pourcentage d'avancement actuel.
 
 ## Missions déposées dans les propriétaires
 
