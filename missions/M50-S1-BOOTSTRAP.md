@@ -1,6 +1,8 @@
 # JARVIS — M50-S1 : récupération CI et première coquille intégrée (Codex)
 
 **Statut : mission distribuée — aucun développement S1 exécuté par ce document.**
+
+**Reprise du travail local du 29 octobre : lire d'abord `missions/M50-S1-RECOVERY.md`.** Les commits locaux A1/A2/A3 et UNIFIED n'ont pas été retrouvés publiés sur GitHub au contrôle; récupérer les patches authentiques avant tout développement supplémentaire. Ce fichier n'autorise aucun merge ni activation.
 **Propriétaire : UNIFIED / coordination.**
 **Branche de mission** : `mission/m50-s1-bootstrap-20261029`, parent M50 `9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80`.
 **Périmètre** : nouvelle branche de développement par dépôt, uniquement labo/testOnly et gardes. PR brouillon vers la branche M50 de chaque propriétaire, ou vers une branche dédiée de mission revue. Aucune fusion `main`.
