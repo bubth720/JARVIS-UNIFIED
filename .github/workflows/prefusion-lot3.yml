@@ -1,0 +1,28 @@
+name: PREFUSION lot3 synthetic lab only
+on:
+  pull_request:
+    paths:
+      - 'docs/prefusion/LOT3-*'
+      - 'tooling/integration/lot3*'
+      - 'tooling/integration/lot3_tests/**'
+      - '.github/workflows/prefusion-lot3.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restrict change scope
+        env:
+          LOT3_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python3 -m tooling.integration.lot3_scope --base "$LOT3_BASE_SHA"
+      - name: Synthetic lab refusals, no module or Android calls
+        run: python3 -m unittest discover -s tooling/integration/lot3_tests -v

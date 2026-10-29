@@ -1,0 +1,349 @@
+{
+  "observed_at": "2026-10-29 09:05:26 UTC",
+  "kind": "remote GitHub metadata, not newly executed tests",
+  "pull_requests": [
+    {
+      "repo": "JARVIS-UNIFIED",
+      "pr": 10,
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/pull/10",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+      "base": "6b0ae1a1ca1a257446931a69bdff15a4f77ac019",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "78d0a20e70565da64ed98701e1bb26047e169f44",
+      "parents": [
+        "6b0ae1a1ca1a257446931a69bdff15a4f77ac019"
+      ],
+      "runs": [
+        {
+          "id": 40577947695,
+          "name": "UNI-08 U00 audit candidate and baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40577947695"
+        },
+        {
+          "id": 40548957355,
+          "name": "UNI-08 U02 modular workspace proposal gate",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957355"
+        },
+        {
+          "id": 40548957713,
+          "name": "UNI-08 U01 proposal gate",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957713"
+        },
+        {
+          "id": 40548958161,
+          "name": "Validate UNIFIED coordination",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548958161"
+        },
+        {
+          "id": 40548957667,
+          "name": "FUSION-02 independent evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957667"
+        },
+        {
+          "id": 40548957578,
+          "name": "UNI-08 U00 audit candidate and baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b8f22bb7091c29b654f5e958e97da4f94434b164",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40548957578"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-NEXUS",
+      "pr": 8,
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/pull/8",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "201f0d2b03209de104157595a557143fe87eb94e",
+      "base": "bdb51f77a5fe105dbff43d43032882fe1474a4ee",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "c6debf4d2fe4c539c460229c3efce2736d575f4d",
+      "parents": [
+        "bdb51f77a5fe105dbff43d43032882fe1474a4ee"
+      ],
+      "runs": [
+        {
+          "id": 40547468137,
+          "name": "NEX-07 isolated quota preflight",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "201f0d2b03209de104157595a557143fe87eb94e",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40547468137"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-SERVICES",
+      "pr": 7,
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/pull/7",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "ea541d20b08f7ad0949354829a977f6752cbffa3",
+      "base": "365da117ccb29b59ed990711b2c3f72472ce2d9d",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "41fad0a190d0517fa27bff37a871a5916a20845e",
+      "parents": [
+        "3fc4556032ff6f3bb86116c4efd7bb848b5809d0"
+      ],
+      "runs": [
+        {
+          "id": 40548088662,
+          "name": "SERVICES foundation and Android qualification",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ea541d20b08f7ad0949354829a977f6752cbffa3",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40548088662"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-LLM",
+      "pr": 6,
+      "url": "https://github.com/bubth720/JARVIS-LLM/pull/6",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+      "base": "12fc58a81ceee70eedbba2d0b187b1294bae6283",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "52a75bfb7b2ee102c958fd0a7bc642c560693fc2",
+      "parents": [
+        "12fc58a81ceee70eedbba2d0b187b1294bae6283"
+      ],
+      "runs": [
+        {
+          "id": 40547525669,
+          "name": "PRE-FUSION LLM frozen runtime qualification",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525669"
+        },
+        {
+          "id": 40547525692,
+          "name": "FUSION-02 LLM test-only prequalification",
+          "status": "completed",
+          "conclusion": "skipped",
+          "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525692"
+        },
+        {
+          "id": 40547525750,
+          "name": "Android prototype checks",
+          "status": "completed",
+          "conclusion": "skipped",
+          "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525750"
+        },
+        {
+          "id": 40547525902,
+          "name": "FUSION-01 LLM additive contract validation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547525902"
+        },
+        {
+          "id": 40547519540,
+          "name": "PRE-FUSION LLM frozen runtime qualification",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "6ae8a4f5c2490f6c9814e08957909a8e3a807180",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40547519540"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-VOICE",
+      "pr": 25,
+      "url": "https://github.com/bubth720/JARVIS-VOICE/pull/25",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "d10671119fa9a52bc130c28b21ca193edd99d604",
+      "base": "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "366780b28dd5e5690682d7c638a9e8eb3e6df40f",
+      "parents": [
+        "697110fa5a8dc87c4ed2a7e8df81a2e644a9559b"
+      ],
+      "runs": [
+        {
+          "id": 40547583230,
+          "name": "FUSION-02 VOICE isolated protocol",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547583230"
+        },
+        {
+          "id": 40547583238,
+          "name": "Android",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547583238"
+        },
+        {
+          "id": 40547542779,
+          "name": "Android",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542779"
+        },
+        {
+          "id": 40547542815,
+          "name": "FUSION-02 VOICE isolated protocol",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "head_sha": "d10671119fa9a52bc130c28b21ca193edd99d604",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40547542815"
+        }
+      ]
+    },
+    {
+      "repo": "JAVIS-Local-v2",
+      "pr": 21,
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/pull/21",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+      "base": "cd2adea393287ea94eb3145e8463209f6fa37e9d",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "3d920058cccb9f02ca2af8e7d1bc7acbaedef631",
+      "parents": [
+        "cd2adea393287ea94eb3145e8463209f6fa37e9d"
+      ],
+      "runs": [
+        {
+          "id": 40565029341,
+          "name": "PRE-FUSION CORE lot2 passive regressions",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40565029341"
+        },
+        {
+          "id": 40565016885,
+          "name": "PRE-FUSION CORE lot2 passive regressions",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a3113797a3c481bc516c5ef1fd4d7a74b919de40",
+          "event": "push",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/40565016885"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-INTERFACE",
+      "pr": 10,
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/pull/10",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+      "base": "82675ade011e69eb3bccd99efbf46d0697a3276b",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "4b87f64cbb1709992c9ee2b36aee47faa304b6ed",
+      "parents": [
+        "82675ade011e69eb3bccd99efbf46d0697a3276b"
+      ],
+      "runs": [
+        {
+          "id": 40578705243,
+          "name": "Android",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40578705243"
+        },
+        {
+          "id": 40565042203,
+          "name": "Android",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40565042203"
+        },
+        {
+          "id": 40565039146,
+          "name": "Android",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "4bc1993d4b6525b248f2b12e95a18a279a3d9fdc",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40565039146"
+        }
+      ]
+    },
+    {
+      "repo": "JARVIS-VOLUTION-",
+      "pr": 5,
+      "url": "https://github.com/bubth720/JARVIS-VOLUTION-/pull/5",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "2e10d6f5c4d41458d0e55cd6724cd93973db450e",
+      "base": "4af477877c3ceb32e5805948ca42798970512d44",
+      "base_ref": "mission/prefusion-gates-20261026",
+      "tree": "cab1d33b881f78e24930a2f03fdd7f377b17f860",
+      "parents": [
+        "4af477877c3ceb32e5805948ca42798970512d44"
+      ],
+      "runs": [
+        {
+          "id": 40565363719,
+          "name": "Evolution local JVM",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "2e10d6f5c4d41458d0e55cd6724cd93973db450e",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/40565363719"
+        }
+      ]
+    }
+  ]
+}
