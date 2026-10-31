@@ -1,0 +1,41 @@
+name: M50 S1 exact-source coordination evidence
+on:
+  pull_request:
+    branches: ['mission/m50-s1-bootstrap-20261029']
+  push:
+    branches: ['codex/m50-s1-unified-evidence-20261029']
+permissions:
+  contents: read
+jobs:
+  offline-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.12'
+      - name: Record exact subject and platform (no Android qualification)
+        run: |
+          mkdir -p "$RUNNER_TEMP/m50-s1"
+          git rev-parse HEAD 'HEAD^{tree}' > "$RUNNER_TEMP/m50-s1/subject.txt"
+          python3 --version >> "$RUNNER_TEMP/m50-s1/subject.txt"
+      - run: python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt
+      - name: Existing independent regression and measured test counts
+        run: python3 -m tooling.integration.ci --output "$RUNNER_TEMP/m50-s1/regression"
+      - name: Keep ADR002 and workspace restrictions OFF
+        run: |
+          python3 -m unittest discover -s tooling/integration/adr002_lot4_tests -v
+          python3 -m unittest discover -s tooling/integration/uni08_u01_tests -v
+          python3 -m unittest discover -s tooling/integration/uni08_tests -v
+          python3 -m unittest discover -s workspace/tests -v
+          python3 workspace/check_plan.py workspace/modular-workspace.proposed.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m50-s1-coordination-${{ github.event.pull_request.head.sha || github.sha }}
+          path: ${{ runner.temp }}/m50-s1/
+          if-no-files-found: error
