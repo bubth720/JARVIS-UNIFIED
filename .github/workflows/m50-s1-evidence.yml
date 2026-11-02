@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: ['mission/m50-s1-bootstrap-20261029']
   push:
-    branches: ['codex/m50-s1-unified-evidence-20261029']
+    branches: ['codex/m50-s1-unified-evidence-20261029', 'codex/m50-s1-unified-evidence-recovered-20261031']
 permissions:
   contents: read
 jobs:
@@ -23,7 +23,7 @@ jobs:
           mkdir -p "$RUNNER_TEMP/m50-s1"
           git rev-parse HEAD 'HEAD^{tree}' > "$RUNNER_TEMP/m50-s1/subject.txt"
           python3 --version >> "$RUNNER_TEMP/m50-s1/subject.txt"
-      - run: python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt
+      - run: 'python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt'
       - name: Existing independent regression and measured test counts
         run: python3 -m tooling.integration.ci --output "$RUNNER_TEMP/m50-s1/regression"
       - name: Keep ADR002 and workspace restrictions OFF
