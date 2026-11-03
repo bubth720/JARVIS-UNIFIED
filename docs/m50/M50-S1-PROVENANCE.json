@@ -1,0 +1,633 @@
+{
+  "schema": "jarvis.m50-s1.provenance-observation/1",
+  "observed_at": "2026-10-29T17:32:07Z",
+  "purpose": "review evidence; not approved release lock or accepted gate",
+  "runtime_enabled": false,
+  "release_lock_approved": false,
+  "gate_acceptance_inferred": false,
+  "default_heads_observed_before_our_branch_mutations_comparison": "Snapshots obtained during S1; this agent made no branch mutation. Recheck final snapshots separately.",
+  "modules": [
+    {
+      "id": "UNIFIED",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+      "mission_tree": "c43f8fbacc406e5412a89363ddb076fcfbb4f730",
+      "default_branch": "main",
+      "default_head_before": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "default_tree_before": "3233363256e421c3649cb85b8ccd13da26f303cf",
+      "versions": {
+        "runtime": false,
+        "android": false,
+        "source": "coordination only"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 5,
+          "returned": 5,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852891237,
+            "name": "UNI-08 U02 modular workspace proposal gate",
+            "path": ".github/workflows/uni-08-u02.yml",
+            "head_sha": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40852891237"
+          },
+          {
+            "id": 40852891294,
+            "name": "UNI-08 U01 proposal gate",
+            "path": ".github/workflows/uni-08-u01.yml",
+            "head_sha": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40852891294"
+          },
+          {
+            "id": 40852891239,
+            "name": "Validate UNIFIED coordination",
+            "path": ".github/workflows/validate-unified.yml",
+            "head_sha": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40852891239"
+          },
+          {
+            "id": 40852891255,
+            "name": "UNI-08 U00 audit candidate and baseline",
+            "path": ".github/workflows/uni-08-u00.yml",
+            "head_sha": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40852891255"
+          },
+          {
+            "id": 40852891223,
+            "name": "FUSION-02 independent evidence",
+            "path": ".github/workflows/fusion-02.yml",
+            "head_sha": "9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40852891223"
+          }
+        ]
+      },
+      "default_head_after": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "CORE",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "d754a6c19e3c94e415e8506d0d37b8d943951d88",
+      "mission_tree": "8d22a663574c611fa108f9656f6dd285083a6f71",
+      "default_branch": "main",
+      "default_head_before": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "default_tree_before": "613d83288a702d27de4887eac78878962017cb20",
+      "versions": {
+        "agp": "8.7.3",
+        "kotlin": "2.0.21",
+        "java": "17",
+        "gradle": "8.10.2",
+        "minSdk": 24,
+        "compileSdk": 35,
+        "targetSdk": 35,
+        "abi": [
+          "arm64-v8a"
+        ],
+        "source": "AGENTS.md and inspected app/build.gradle.kts"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 0,
+          "returned": 0,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": []
+      },
+      "default_head_after": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "INTERFACE",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "3a0841266fd691b74fae784004804429e6e2e219",
+      "mission_tree": "9c0f615aa9d8795bd376cd0bbe922d8333acb130",
+      "default_branch": "development/mission-002",
+      "default_head_before": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "default_tree_before": "fffd41e35dd9ff24c88684fe0a7ec70a86141471",
+      "versions": {
+        "agp": "8.9.2",
+        "kotlin": "2.1.20",
+        "java": "17",
+        "gradle": "8.13",
+        "minSdk": 26,
+        "compileSdk": 35,
+        "targetSdk": 35,
+        "abi": "no native backend in inspected UI module",
+        "source": "gradle/libs.versions.toml; app/build.gradle.kts; wrapper properties"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 2,
+          "returned": 2,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852572450,
+            "name": "Android",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "3a0841266fd691b74fae784004804429e6e2e219",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40852572450"
+          },
+          {
+            "id": 40852058103,
+            "name": "Android",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "3a0841266fd691b74fae784004804429e6e2e219",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "push",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40852058103"
+          }
+        ]
+      },
+      "default_head_after": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "c02a00e8d6829de48a212cc03ac392e7ec73c82c",
+      "mission_tree": "7648ce620381158a875059db9b028c9b71740052",
+      "default_branch": "main",
+      "default_head_before": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "default_tree_before": "5a458f0442702d0f82a8aa698069afb07279c2f0",
+      "versions": {
+        "agp": "8.7.3",
+        "kotlin": "2.0.21",
+        "javaTarget": "1.8",
+        "minSdk": 24,
+        "compileSdk": 35,
+        "targetSdk": null,
+        "abi": "not declared in inspected Android library",
+        "source": "build.gradle.kts; nexus-android-store/build.gradle.kts"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 1,
+          "returned": 1,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852579751,
+            "name": "NEX-07 isolated quota preflight",
+            "path": ".github/workflows/nex-07.yml",
+            "head_sha": "c02a00e8d6829de48a212cc03ac392e7ec73c82c",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "failure",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/40852579751"
+          }
+        ]
+      },
+      "default_head_after": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "mission_tree": "e4b0f5c440a577114f2968f0cc45220483407822",
+      "default_branch": "main",
+      "default_head_before": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "default_tree_before": "efc83b9ab5c4d3ed1429c6dfb9b4f07c70e20e47",
+      "versions": {
+        "agp": "8.9.2",
+        "javaTarget": "11",
+        "minSdk": 24,
+        "compileSdk": 35,
+        "targetSdk": 35,
+        "abi": "not declared in inspected Android library",
+        "source": "services-android-adapter/build.gradle"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 1,
+          "returned": 1,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852606525,
+            "name": "SERVICES foundation and Android qualification",
+            "path": ".github/workflows/verify.yml",
+            "head_sha": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40852606525"
+          }
+        ]
+      },
+      "default_head_after": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "LLM",
+      "repository": "bubth720/JARVIS-LLM",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "615a2f165d6479c0bbb7a7daf2281677884b494f",
+      "mission_tree": "f383e2369c4c03d24537120662a49af9ecd97911",
+      "default_branch": "main",
+      "default_head_before": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "default_tree_before": "cfece8da10c842584edda8d080525fb597b0ad85",
+      "versions": {
+        "java": "17",
+        "minSdk": 29,
+        "compileSdk": 36,
+        "targetSdk": 36,
+        "abi": [
+          "arm64-v8a"
+        ],
+        "ndk": "28.1.13356709",
+        "cmake": "3.22.1",
+        "source": "app/build.gradle.kts; no native qualification inferred"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 4,
+          "returned": 4,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852611095,
+            "name": "FUSION-01 LLM additive contract validation",
+            "path": ".github/workflows/fusion-01-llm.yml",
+            "head_sha": "615a2f165d6479c0bbb7a7daf2281677884b494f",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "skipped",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40852611095"
+          },
+          {
+            "id": 40852611085,
+            "name": "Android prototype checks",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "615a2f165d6479c0bbb7a7daf2281677884b494f",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "failure",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40852611085"
+          },
+          {
+            "id": 40852610857,
+            "name": "FUSION-02 LLM test-only prequalification",
+            "path": ".github/workflows/fusion-02-llm.yml",
+            "head_sha": "615a2f165d6479c0bbb7a7daf2281677884b494f",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "skipped",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40852610857"
+          },
+          {
+            "id": 40852168436,
+            "name": "Android prototype checks",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "615a2f165d6479c0bbb7a7daf2281677884b494f",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "push",
+            "status": "completed",
+            "conclusion": "failure",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/40852168436"
+          }
+        ]
+      },
+      "default_head_after": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "VOICE",
+      "repository": "bubth720/JARVIS-VOICE",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+      "mission_tree": "e8b2027e43d3959caefbcda109ae50d4047619a4",
+      "default_branch": "feat/pocket-tts-cpu-prototype",
+      "default_head_before": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+      "default_tree_before": "16d66e2a355d2082a36df3c130111937b492a627",
+      "versions": {
+        "agp": "8.9.2",
+        "kotlin": "2.1.20",
+        "java": "17",
+        "minSdk": 26,
+        "compileSdk": 35,
+        "targetSdk": 35,
+        "abi": "not declared in inspected app module; optional native modules not inventoried here",
+        "source": "build.gradle.kts; app/build.gradle.kts"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 2,
+          "returned": 2,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852617465,
+            "name": "Android",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40852617465"
+          },
+          {
+            "id": 40852173293,
+            "name": "Android",
+            "path": ".github/workflows/android.yml",
+            "head_sha": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "push",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40852173293"
+          }
+        ]
+      },
+      "default_head_after": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+      "default_head_unchanged": true
+    },
+    {
+      "id": "EVOLUTION",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "mission_branch": "mission/m50-integrated-beta-20261029",
+      "mission_head": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "mission_tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b",
+      "default_branch": "main",
+      "default_head_before": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "default_tree_before": "bfc6b621b1a16b596d47cfd0b089792320b4f61f",
+      "versions": {
+        "kotlin": "2.1.20",
+        "javaToolchain": "17",
+        "android": false,
+        "abi": "JVM sqlite-jdbc3.46.1.0; no Android qualification inferred",
+        "source": "build.gradle.kts; evolution-core/build.gradle.kts"
+      },
+      "ci": {
+        "query": {
+          "head_sha_filtered": true,
+          "per_page": 100,
+          "page": 1,
+          "total_count": 1,
+          "returned": 1,
+          "pagination_complete": true,
+          "scope": "all events, first100 exact-SHA runs"
+        },
+        "runs": [
+          {
+            "id": 40852624130,
+            "name": "Evolution local JVM",
+            "path": ".github/workflows/jvm.yml",
+            "head_sha": "84ebc2e2b55d48306247fc9045a712294abaf457",
+            "branch": "mission/m50-integrated-beta-20261029",
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "run_attempt": 1,
+            "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/40852624130"
+          }
+        ]
+      },
+      "default_head_after": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "default_head_unchanged": true
+    }
+  ],
+  "s1_coordinator": {
+    "repository": "bubth720/JARVIS-UNIFIED",
+    "branch": "mission/m50-s1-bootstrap-20261029",
+    "head": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+    "tree": "f2b7bcf01d193c59b9de997ab205e9ff12683431",
+    "ci": {
+      "query": {
+        "head_sha_filtered": true,
+        "per_page": 100,
+        "page": 1,
+        "total_count": 5,
+        "returned": 5,
+        "pagination_complete": true,
+        "scope": "all events, first100 exact-SHA runs"
+      },
+      "runs": [
+        {
+          "id": 40899955725,
+          "name": "FUSION-02 independent evidence",
+          "path": ".github/workflows/fusion-02.yml",
+          "head_sha": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+          "branch": "mission/m50-s1-bootstrap-20261029",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40899955725"
+        },
+        {
+          "id": 40899955787,
+          "name": "UNI-08 U01 proposal gate",
+          "path": ".github/workflows/uni-08-u01.yml",
+          "head_sha": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+          "branch": "mission/m50-s1-bootstrap-20261029",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40899955787"
+        },
+        {
+          "id": 40899955611,
+          "name": "UNI-08 U02 modular workspace proposal gate",
+          "path": ".github/workflows/uni-08-u02.yml",
+          "head_sha": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+          "branch": "mission/m50-s1-bootstrap-20261029",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40899955611"
+        },
+        {
+          "id": 40899955738,
+          "name": "Validate UNIFIED coordination",
+          "path": ".github/workflows/validate-unified.yml",
+          "head_sha": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+          "branch": "mission/m50-s1-bootstrap-20261029",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40899955738"
+        },
+        {
+          "id": 40899955802,
+          "name": "UNI-08 U00 audit candidate and baseline",
+          "path": ".github/workflows/uni-08-u00.yml",
+          "head_sha": "a67116b44d828b435a7a1a662d3cd0200993e1c1",
+          "branch": "mission/m50-s1-bootstrap-20261029",
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/40899955802"
+        }
+      ]
+    }
+  },
+  "unified_divergence": {
+    "base_pr": 15,
+    "base": "deccfb709944f72a45f6a524001b1144b6c3b8dc",
+    "head_pr": 16,
+    "head": "d2c1dafd51339c185a758141e353f93f72ecb9fc",
+    "status": "diverged",
+    "ahead_by": 2,
+    "behind_by": 12,
+    "merge_base": "e4c678faf630a0a98adfaecd7a87fc11dfd82486",
+    "files": [
+      {
+        "path": ".github/workflows/prefusion-lot3-recheck.yml",
+        "status": "added",
+        "additions": 28,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-ADR-002-DECISIONS.md",
+        "status": "added",
+        "additions": 13,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-CONTRACT-MATRIX.md",
+        "status": "added",
+        "additions": 19,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-EXISTING-RECHECK.json",
+        "status": "added",
+        "additions": 485,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-LOCAL-RESULTS.json",
+        "status": "added",
+        "additions": 315,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-PR-EVIDENCE.json",
+        "status": "added",
+        "additions": 349,
+        "deletions": 0
+      },
+      {
+        "path": "docs/prefusion/LOT3-RECHECK-2026-10-29.md",
+        "status": "added",
+        "additions": 78,
+        "deletions": 0
+      },
+      {
+        "path": "tooling/integration/lot3_lab.py",
+        "status": "added",
+        "additions": 41,
+        "deletions": 0
+      },
+      {
+        "path": "tooling/integration/lot3_scope.py",
+        "status": "added",
+        "additions": 26,
+        "deletions": 0
+      },
+      {
+        "path": "tooling/integration/lot3_tests/test_lab.py",
+        "status": "added",
+        "additions": 70,
+        "deletions": 0
+      }
+    ],
+    "automatic_integration": false,
+    "interpretation": "independent divergent history; compare evidence, no blind code reprise"
+  },
+  "default_heads_after_observed_at": "2026-10-29T19:36:33Z"
+}

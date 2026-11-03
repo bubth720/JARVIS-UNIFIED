@@ -1,0 +1,97 @@
+{
+  "status": "REVIEW_ONLY_NOT_ASSEMBLED",
+  "approval": "source-copy-authorized-by-S1; release-license-lock-unqualified",
+  "modules": [
+    {
+      "id": "CORE",
+      "repo": "bubth720/JAVIS-Local-v2",
+      "sha": "d754a6c19e3c94e415e8506d0d37b8d943951d88",
+      "tree": "8d22a663574c611fa108f9656f6dd285083a6f71",
+      "files": [
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "eebc7d05eeda7da036a07efcead1bbbf888794da",
+          "size": 12957,
+          "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2/git/blobs/eebc7d05eeda7da036a07efcead1bbbf888794da"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/Models.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "60f0bb4ae3474f05faa6606980b033533e6be78b",
+          "size": 1196,
+          "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2/git/blobs/60f0bb4ae3474f05faa6606980b033533e6be78b"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/events/CoreEventBus.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "53f571fca4154661bc16f7b3e0ff70337e34e956",
+          "size": 4108,
+          "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2/git/blobs/53f571fca4154661bc16f7b3e0ff70337e34e956"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/events/CoreSessionEvents.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "447e8dd6b80157661bc2a346841289f61e455c62",
+          "size": 5534,
+          "url": "https://api.github.com/repos/bubth720/JAVIS-Local-v2/git/blobs/447e8dd6b80157661bc2a346841289f61e455c62"
+        }
+      ]
+    },
+    {
+      "id": "INTERFACE",
+      "repo": "bubth720/JARVIS-INTERFACE",
+      "sha": "3a0841266fd691b74fae784004804429e6e2e219",
+      "tree": "9c0f615aa9d8795bd376cd0bbe922d8333acb130",
+      "files": [
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/ui/chat/CoreEventUiPort.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90b6e5a5119c757a67c6073cfd648ae289744f57",
+          "size": 2592,
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/git/blobs/90b6e5a5119c757a67c6073cfd648ae289744f57"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationTransport.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "117c2dadfd21578ce121be2d15ae7e78365c09e8",
+          "size": 2711,
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/git/blobs/117c2dadfd21578ce121be2d15ae7e78365c09e8"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/ui/chat/core/CoreConversationClientAdapter.kt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2b68ecfaf2d6f1640a71c249b9e4655b94973535",
+          "size": 9435,
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/git/blobs/2b68ecfaf2d6f1640a71c249b9e4655b94973535"
+        }
+      ]
+    }
+  ],
+  "license": {
+    "project_license_found": false,
+    "release_distribution": "BLOCKED_PENDING_EXPLICIT_LICENSE",
+    "temporary_private_compile": "AUTHORIZED_S1_NO_LICENSE_CHANGE"
+  },
+  "minimalGradleProposal": {
+    "jdk": "17",
+    "gradle": "8.13",
+    "agp": "8.9.2",
+    "kotlin": "2.1.20",
+    "coroutines": "1.10.2",
+    "compileSdk": 35,
+    "targetSdk": 35,
+    "minSdk": 29,
+    "nativeLibraries": [],
+    "applicationId": "fr.jarvis.lab.m50s1",
+    "testOnly": true,
+    "permissions": []
+  }
+}
