@@ -1,0 +1,1075 @@
+{
+  "observed_at": "2026-11-04T13:47:54.590088+00:00",
+  "source_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+  "runs": [
+    {
+      "id": 41839854697,
+      "name": "Android",
+      "path": ".github/workflows/android.yml",
+      "event": "pull_request",
+      "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854697",
+      "jobs": [
+        {
+          "id": 126608236128,
+          "run_id": 41839854697,
+          "workflow_name": "Android",
+          "head_branch": "codex/m50-s1b-android-20261104",
+          "run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/41839854697",
+          "run_attempt": 1,
+          "node_id": "CR_kwDOVIB7_c8AAAAdenBeYA",
+          "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/jobs/126608236128",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854697/job/126608236128",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-11-04T13:37:50Z",
+          "started_at": "2026-11-04T13:37:52Z",
+          "completed_at": "2026-11-04T13:42:38Z",
+          "name": "build",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-04T13:37:53Z",
+              "completed_at": "2026-11-04T13:37:55Z"
+            },
+            {
+              "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-04T13:37:55Z",
+              "completed_at": "2026-11-04T13:37:57Z"
+            },
+            {
+              "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-04T13:37:57Z",
+              "completed_at": "2026-11-04T13:37:57Z"
+            },
+            {
+              "name": "Install supported Android SDK packages",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-04T13:37:57Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Verify preserved UI-01 and V1 scope and pinned CORE test source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Verify synthetic layered avatar assets",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Verify AVA-03 technical fixture and honest art status",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Verify AVA-04 privacy, scope and packager",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Build APK, run JVM tests and Lint, compile instrumented APK",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Verify FUSION-02 preservation and fresh JVM results",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Verify private Athena is absent from public APK",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Verify CORE reference is not packaged",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Verify APKs and executed JVM tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Prepare physical-device validation kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:23Z"
+            },
+            {
+              "name": "Upload physical-device validation kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-04T13:42:23Z",
+              "completed_at": "2026-11-04T13:42:25Z"
+            },
+            {
+              "name": "Prepare avatar prototype kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16,
+              "started_at": "2026-11-04T13:42:25Z",
+              "completed_at": "2026-11-04T13:42:25Z"
+            },
+            {
+              "name": "Upload avatar prototype kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17,
+              "started_at": "2026-11-04T13:42:25Z",
+              "completed_at": "2026-11-04T13:42:27Z"
+            },
+            {
+              "name": "Prepare AVA-03 partial delivery kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18,
+              "started_at": "2026-11-04T13:42:27Z",
+              "completed_at": "2026-11-04T13:42:28Z"
+            },
+            {
+              "name": "Upload AVA-03 partial delivery kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19,
+              "started_at": "2026-11-04T13:42:28Z",
+              "completed_at": "2026-11-04T13:42:29Z"
+            },
+            {
+              "name": "Upload APKs",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20,
+              "started_at": "2026-11-04T13:42:29Z",
+              "completed_at": "2026-11-04T13:42:31Z"
+            },
+            {
+              "name": "Upload validation reports",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21,
+              "started_at": "2026-11-04T13:42:31Z",
+              "completed_at": "2026-11-04T13:42:32Z"
+            },
+            {
+              "name": "Upload INTERFACE-FINAL-01 review documentation",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22,
+              "started_at": "2026-11-04T13:42:32Z",
+              "completed_at": "2026-11-04T13:42:34Z"
+            },
+            {
+              "name": "Upload Athena code validation without private artwork",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23,
+              "started_at": "2026-11-04T13:42:34Z",
+              "completed_at": "2026-11-04T13:42:35Z"
+            },
+            {
+              "name": "Upload FUSION-02 public synthetic evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24,
+              "started_at": "2026-11-04T13:42:35Z",
+              "completed_at": "2026-11-04T13:42:36Z"
+            },
+            {
+              "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 47,
+              "started_at": "2026-11-04T13:42:36Z",
+              "completed_at": "2026-11-04T13:42:37Z"
+            },
+            {
+              "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 48,
+              "started_at": "2026-11-04T13:42:37Z",
+              "completed_at": "2026-11-04T13:42:37Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 49,
+              "started_at": "2026-11-04T13:42:37Z",
+              "completed_at": "2026-11-04T13:42:37Z"
+            }
+          ],
+          "check_run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/check-runs/126608236128",
+          "labels": [
+            "ubuntu-24.04"
+          ],
+          "runner_id": 1000001566,
+          "runner_name": "GitHub Actions 1000001566",
+          "runner_group_id": 0,
+          "runner_group_name": "GitHub Actions"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13329765014,
+          "name": "jarvis-interface-final-01-review",
+          "size_in_bytes": 963186,
+          "digest": "sha256:172eecdb1d1d71052b423cc8f77dbcc8458db45436849b69716ed36185684cc4",
+          "expired": false
+        },
+        {
+          "id": 13329450175,
+          "name": "android-validation-reports",
+          "size_in_bytes": 86261,
+          "digest": "sha256:4ebba0f5309caed782235ef79503fc8b450cd7196ebbf195ecff25772d29474a",
+          "expired": false
+        },
+        {
+          "id": 13329360267,
+          "name": "jarvis-athena-code-review",
+          "size_in_bytes": 9441,
+          "digest": "sha256:12238af28c3bce5d31675b8bd79c8f896ea802ff5d320bbf98894c6f6df29643",
+          "expired": false
+        },
+        {
+          "id": 13328044234,
+          "name": "jarvis-interface-apks",
+          "size_in_bytes": 11076801,
+          "digest": "sha256:c698ff2a17a4ea0fb83639441025452d909626c3b329fd63a061922596d37b2a",
+          "expired": false
+        },
+        {
+          "id": 13328044229,
+          "name": "jarvis-interface-avatar-kit",
+          "size_in_bytes": 9998471,
+          "digest": "sha256:b52b79c07bfc978e6e80d96203067a81b57b5c8a47e04f3fc7c83edf1ae56676",
+          "expired": false
+        },
+        {
+          "id": 13327794356,
+          "name": "jarvis-interface-ava03-partial-kit",
+          "size_in_bytes": 10003691,
+          "digest": "sha256:cb2f9f23e01a11c3c2a36d645745ec3d2ac415ea2171759330b49003acb42064",
+          "expired": false
+        },
+        {
+          "id": 13327619347,
+          "name": "jarvis-interface-fusion02-review",
+          "size_in_bytes": 357601,
+          "digest": "sha256:b4e0735d49e08108dd8003ce8835dc94ffb3ba1a39912dd95ab3dec9abccca25",
+          "expired": false
+        },
+        {
+          "id": 13327074756,
+          "name": "jarvis-interface-device-kit",
+          "size_in_bytes": 9994030,
+          "digest": "sha256:5d6578e01c58f26689a77c38828c0d2dc85c3196317309e2bc49b4e1f8abe7a3",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": 41839854603,
+      "name": "M50-S1B CORE INTERFACE isolated Android laboratory",
+      "path": ".github/workflows/m50-s1b-lab.yml",
+      "event": "pull_request",
+      "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854603",
+      "jobs": [
+        {
+          "id": 126609046561,
+          "run_id": 41839854603,
+          "workflow_name": "M50-S1B CORE INTERFACE isolated Android laboratory",
+          "head_branch": "codex/m50-s1b-android-20261104",
+          "run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/41839854603",
+          "run_attempt": 1,
+          "node_id": "CR_kwDOVIB7_c8AAAAdeny8IQ",
+          "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/jobs/126609046561",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854603/job/126609046561",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-11-04T13:39:22Z",
+          "started_at": "2026-11-04T13:39:25Z",
+          "completed_at": "2026-11-04T13:47:49Z",
+          "name": "qualify",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-04T13:39:26Z",
+              "completed_at": "2026-11-04T13:39:29Z"
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-04T13:39:29Z",
+              "completed_at": "2026-11-04T13:39:31Z"
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-04T13:39:31Z",
+              "completed_at": "2026-11-04T13:39:32Z"
+            },
+            {
+              "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-04T13:39:32Z",
+              "completed_at": "2026-11-04T13:39:32Z"
+            },
+            {
+              "name": "Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-04T13:39:32Z",
+              "completed_at": "2026-11-04T13:39:36Z"
+            },
+            {
+              "name": "Run android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-04T13:39:36Z",
+              "completed_at": "2026-11-04T13:39:45Z"
+            },
+            {
+              "name": "Verify exact temporary sources and untouched historical application",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-04T13:39:45Z",
+              "completed_at": "2026-11-04T13:39:45Z"
+            },
+            {
+              "name": "Record exact subject and development platform",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-04T13:39:45Z",
+              "completed_at": "2026-11-04T13:39:46Z"
+            },
+            {
+              "name": "Real Kotlin composition, regression, APK and Lint",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9,
+              "started_at": "2026-11-04T13:39:46Z",
+              "completed_at": "2026-11-04T13:42:04Z"
+            },
+            {
+              "name": "Inspect actual APK and signature, no installation on a personal device",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-04T13:42:04Z",
+              "completed_at": "2026-11-04T13:42:05Z"
+            },
+            {
+              "name": "Enable authorized emulator acceleration",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11,
+              "started_at": "2026-11-04T13:42:05Z",
+              "completed_at": "2026-11-04T13:42:05Z"
+            },
+            {
+              "name": "API29 instrumentation, airplane mode and actual process restart",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12,
+              "started_at": "2026-11-04T13:42:05Z",
+              "completed_at": "2026-11-04T13:44:48Z"
+            },
+            {
+              "name": "API35 instrumentation of the same APK and actual process restart",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13,
+              "started_at": "2026-11-04T13:44:48Z",
+              "completed_at": "2026-11-04T13:47:41Z"
+            },
+            {
+              "name": "Bind all actual reports to the exact source and tested APK",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14,
+              "started_at": "2026-11-04T13:47:41Z",
+              "completed_at": "2026-11-04T13:47:41Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-04T13:47:41Z",
+              "completed_at": "2026-11-04T13:47:43Z"
+            },
+            {
+              "name": "Publish laboratory APK only after all qualification steps succeed",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16,
+              "started_at": "2026-11-04T13:47:43Z",
+              "completed_at": "2026-11-04T13:47:45Z"
+            },
+            {
+              "name": "Post Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 29,
+              "started_at": "2026-11-04T13:47:45Z",
+              "completed_at": "2026-11-04T13:47:45Z"
+            },
+            {
+              "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 30,
+              "started_at": "2026-11-04T13:47:45Z",
+              "completed_at": "2026-11-04T13:47:45Z"
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 31,
+              "started_at": "2026-11-04T13:47:45Z",
+              "completed_at": "2026-11-04T13:47:46Z"
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 32,
+              "started_at": "2026-11-04T13:47:46Z",
+              "completed_at": "2026-11-04T13:47:46Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33,
+              "started_at": "2026-11-04T13:47:46Z",
+              "completed_at": "2026-11-04T13:47:46Z"
+            }
+          ],
+          "check_run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/check-runs/126609046561",
+          "labels": [
+            "ubuntu-24.04"
+          ],
+          "runner_id": 1000001567,
+          "runner_name": "GitHub Actions 1000001567",
+          "runner_group_id": 0,
+          "runner_group_name": "GitHub Actions"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13329266245,
+          "name": "JARVIS-M50-S1B-QUALIFIED-LAB-681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+          "size_in_bytes": 1611254,
+          "digest": "sha256:85b5380415365715411231c64b309b2bb81bbb8f853c2c1705c75884df4f3b45",
+          "expired": false
+        },
+        {
+          "id": 13329226310,
+          "name": "m50-s1b-reports-b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "size_in_bytes": 318284,
+          "digest": "sha256:719f837ce85123a0a200d8644b3cfbe48e559020b91ad32411f876ac018ec8ff",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": 41839843882,
+      "name": "M50-S1B CORE INTERFACE isolated Android laboratory",
+      "path": ".github/workflows/m50-s1b-lab.yml",
+      "event": "push",
+      "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839843882",
+      "jobs": [
+        {
+          "id": 126608205342,
+          "run_id": 41839843882,
+          "workflow_name": "M50-S1B CORE INTERFACE isolated Android laboratory",
+          "head_branch": "codex/m50-s1b-android-20261104",
+          "run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/41839843882",
+          "run_attempt": 1,
+          "node_id": "CR_kwDOVIB7_c8AAAAdem_mHg",
+          "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/jobs/126608205342",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839843882/job/126608205342",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "created_at": "2026-11-04T13:37:47Z",
+          "started_at": "2026-11-04T13:37:49Z",
+          "completed_at": "2026-11-04T13:39:22Z",
+          "name": "qualify",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-04T13:37:49Z",
+              "completed_at": "2026-11-04T13:37:52Z"
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-04T13:37:52Z",
+              "completed_at": "2026-11-04T13:37:54Z"
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-04T13:37:54Z",
+              "completed_at": "2026-11-04T13:37:54Z"
+            },
+            {
+              "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-04T13:37:54Z",
+              "completed_at": "2026-11-04T13:37:54Z"
+            },
+            {
+              "name": "Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-04T13:37:54Z",
+              "completed_at": "2026-11-04T13:38:01Z"
+            },
+            {
+              "name": "Run android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-04T13:38:01Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Verify exact temporary sources and untouched historical application",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:10Z"
+            },
+            {
+              "name": "Record exact subject and development platform",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-04T13:38:10Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Real Kotlin composition, regression, APK and Lint",
+              "status": "completed",
+              "conclusion": "cancelled",
+              "number": 9,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "Inspect actual APK and signature, no installation on a personal device",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 10,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "Enable authorized emulator acceleration",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 11,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "API29 instrumentation, airplane mode and actual process restart",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 12,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "API35 instrumentation of the same APK and actual process restart",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 13,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "Bind all actual reports to the exact source and tested APK",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 14,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:16Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-04T13:39:16Z",
+              "completed_at": "2026-11-04T13:39:18Z"
+            },
+            {
+              "name": "Publish laboratory APK only after all qualification steps succeed",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 16,
+              "started_at": "2026-11-04T13:39:18Z",
+              "completed_at": "2026-11-04T13:39:18Z"
+            },
+            {
+              "name": "Post Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 29,
+              "started_at": "2026-11-04T13:39:18Z",
+              "completed_at": "2026-11-04T13:39:18Z"
+            },
+            {
+              "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 30,
+              "started_at": "2026-11-04T13:39:18Z",
+              "completed_at": "2026-11-04T13:39:19Z"
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 31,
+              "started_at": "2026-11-04T13:39:19Z",
+              "completed_at": "2026-11-04T13:39:19Z"
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 32,
+              "started_at": "2026-11-04T13:39:19Z",
+              "completed_at": "2026-11-04T13:39:19Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33,
+              "started_at": "2026-11-04T13:39:19Z",
+              "completed_at": "2026-11-04T13:39:20Z"
+            }
+          ],
+          "check_run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/check-runs/126608205342",
+          "labels": [
+            "ubuntu-24.04"
+          ],
+          "runner_id": 1000001565,
+          "runner_name": "GitHub Actions 1000001565",
+          "runner_group_id": 0,
+          "runner_group_name": "GitHub Actions"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13328601131,
+          "name": "m50-s1b-reports-b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "size_in_bytes": 2226,
+          "digest": "sha256:b474ac02f490771c142fa2e2edba3b36e4c3c735b751815699343acb88d52622",
+          "expired": false
+        }
+      ]
+    },
+    {
+      "id": 41839843870,
+      "name": "Android",
+      "path": ".github/workflows/android.yml",
+      "event": "push",
+      "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839843870",
+      "jobs": [
+        {
+          "id": 126608198050,
+          "run_id": 41839843870,
+          "workflow_name": "Android",
+          "head_branch": "codex/m50-s1b-android-20261104",
+          "run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/runs/41839843870",
+          "run_attempt": 1,
+          "node_id": "CR_kwDOVIB7_c8AAAAdem_Jog",
+          "head_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+          "url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/actions/jobs/126608198050",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839843870/job/126608198050",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-11-04T13:37:46Z",
+          "started_at": "2026-11-04T13:37:48Z",
+          "completed_at": "2026-11-04T13:41:35Z",
+          "name": "build",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-04T13:37:49Z",
+              "completed_at": "2026-11-04T13:37:53Z"
+            },
+            {
+              "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-04T13:37:53Z",
+              "completed_at": "2026-11-04T13:37:57Z"
+            },
+            {
+              "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-04T13:37:57Z",
+              "completed_at": "2026-11-04T13:37:57Z"
+            },
+            {
+              "name": "Install supported Android SDK packages",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-04T13:37:57Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Verify preserved UI-01 and V1 scope and pinned CORE test source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Verify synthetic layered avatar assets",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Verify AVA-03 technical fixture and honest art status",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Verify AVA-04 privacy, scope and packager",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:38:11Z"
+            },
+            {
+              "name": "Build APK, run JVM tests and Lint, compile instrumented APK",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9,
+              "started_at": "2026-11-04T13:38:11Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Verify FUSION-02 preservation and fresh JVM results",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Verify private Athena is absent from public APK",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Verify CORE reference is not packaged",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Verify APKs and executed JVM tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Prepare physical-device validation kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:13Z"
+            },
+            {
+              "name": "Upload physical-device validation kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-04T13:41:13Z",
+              "completed_at": "2026-11-04T13:41:16Z"
+            },
+            {
+              "name": "Prepare avatar prototype kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16,
+              "started_at": "2026-11-04T13:41:16Z",
+              "completed_at": "2026-11-04T13:41:16Z"
+            },
+            {
+              "name": "Upload avatar prototype kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17,
+              "started_at": "2026-11-04T13:41:16Z",
+              "completed_at": "2026-11-04T13:41:19Z"
+            },
+            {
+              "name": "Prepare AVA-03 partial delivery kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18,
+              "started_at": "2026-11-04T13:41:19Z",
+              "completed_at": "2026-11-04T13:41:19Z"
+            },
+            {
+              "name": "Upload AVA-03 partial delivery kit",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19,
+              "started_at": "2026-11-04T13:41:19Z",
+              "completed_at": "2026-11-04T13:41:22Z"
+            },
+            {
+              "name": "Upload APKs",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20,
+              "started_at": "2026-11-04T13:41:22Z",
+              "completed_at": "2026-11-04T13:41:24Z"
+            },
+            {
+              "name": "Upload validation reports",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21,
+              "started_at": "2026-11-04T13:41:24Z",
+              "completed_at": "2026-11-04T13:41:26Z"
+            },
+            {
+              "name": "Upload INTERFACE-FINAL-01 review documentation",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22,
+              "started_at": "2026-11-04T13:41:26Z",
+              "completed_at": "2026-11-04T13:41:28Z"
+            },
+            {
+              "name": "Upload Athena code validation without private artwork",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23,
+              "started_at": "2026-11-04T13:41:28Z",
+              "completed_at": "2026-11-04T13:41:29Z"
+            },
+            {
+              "name": "Upload FUSION-02 public synthetic evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24,
+              "started_at": "2026-11-04T13:41:29Z",
+              "completed_at": "2026-11-04T13:41:31Z"
+            },
+            {
+              "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 47,
+              "started_at": "2026-11-04T13:41:31Z",
+              "completed_at": "2026-11-04T13:41:31Z"
+            },
+            {
+              "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 48,
+              "started_at": "2026-11-04T13:41:31Z",
+              "completed_at": "2026-11-04T13:41:32Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 49,
+              "started_at": "2026-11-04T13:41:32Z",
+              "completed_at": "2026-11-04T13:41:32Z"
+            }
+          ],
+          "check_run_url": "https://api.github.com/repos/bubth720/JARVIS-INTERFACE/check-runs/126608198050",
+          "labels": [
+            "ubuntu-24.04"
+          ],
+          "runner_id": 1000001564,
+          "runner_name": "GitHub Actions 1000001564",
+          "runner_group_id": 0,
+          "runner_group_name": "GitHub Actions"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 13329440831,
+          "name": "jarvis-interface-fusion02-review",
+          "size_in_bytes": 357601,
+          "digest": "sha256:918983c0dde4ff47382ea8d278d9f89c48bab8bdb4dab7d65412f77cff70916b",
+          "expired": false
+        },
+        {
+          "id": 13329440814,
+          "name": "android-validation-reports",
+          "size_in_bytes": 86040,
+          "digest": "sha256:d20c7f83563fd6aa364eec867ba523990db0a7ba7c4fa7d3851ebdcbf48236de",
+          "expired": false
+        },
+        {
+          "id": 13329405070,
+          "name": "jarvis-athena-code-review",
+          "size_in_bytes": 9441,
+          "digest": "sha256:06c50fdfaad1da0f19a8c15816d51239f4c35361f7f35435997c1014ede0f042",
+          "expired": false
+        },
+        {
+          "id": 13328084376,
+          "name": "jarvis-interface-device-kit",
+          "size_in_bytes": 9994040,
+          "digest": "sha256:4fdeb42c416c84cdf0baf46cbf70a2ada57d7faed97da3f739a6cba52874a97c",
+          "expired": false
+        },
+        {
+          "id": 13328069398,
+          "name": "jarvis-interface-ava03-partial-kit",
+          "size_in_bytes": 10003701,
+          "digest": "sha256:87541c04abecc76894788a78bd6613a436b4648d0f79c57ce980afd180309b21",
+          "expired": false
+        },
+        {
+          "id": 13327964695,
+          "name": "jarvis-interface-avatar-kit",
+          "size_in_bytes": 9998481,
+          "digest": "sha256:da110cfba8a64b6ecf67e04bdc8f5d6f0a0acad673f14c173f586cff891c5f4c",
+          "expired": false
+        },
+        {
+          "id": 13327599382,
+          "name": "jarvis-interface-apks",
+          "size_in_bytes": 11076797,
+          "digest": "sha256:91b77e1ec2a063816d2d525d15d8f0264ee1140f6fb5ce631d86bbd380ed5dbc",
+          "expired": false
+        },
+        {
+          "id": 13327109429,
+          "name": "jarvis-interface-final-01-review",
+          "size_in_bytes": 963186,
+          "digest": "sha256:fccdc585a8f8a88e2d0faf8d87882be40268d8df1e6bfcbedbec6b720a6e9d2b",
+          "expired": false
+        }
+      ]
+    }
+  ]
+}

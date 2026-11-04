@@ -1002,5 +1002,11 @@
     "ci": "NOT_RUN",
     "android": "NOT_RUN",
     "physical": "NOT_RUN"
+  },
+  "current_readiness": {
+    "observed_at": "2026-11-04T13:47:54.590088+00:00",
+    "evidence": "s1b-20261104/GATES.json",
+    "historical_snapshot_preserved": true,
+    "M50": "NOT_ACHIEVED"
   }
 }

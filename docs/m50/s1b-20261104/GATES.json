@@ -1,0 +1,63 @@
+{
+  "schema": "jarvis.m50-s1b.readiness/1",
+  "observed_at": "2026-11-04T13:47:54.590088+00:00",
+  "mission": "M50-S1B",
+  "M50": "NOT_ACHIEVED",
+  "overall_progress": "NOT_QUANTIFIED",
+  "release_lock_approved": false,
+  "human_product_acceptance": "PENDING",
+  "verified_pass_gates": [
+    "G2"
+  ],
+  "gates": {
+    "G1": "PARTIAL",
+    "G2": "PASS",
+    "G3": "BLOCKED",
+    "G4": "BLOCKED",
+    "G5": "PARTIAL",
+    "G6": "PARTIAL",
+    "G7": "PARTIAL",
+    "G8": "NOT_RUN"
+  },
+  "G2_scope": "Single private testOnly CORE/INTERFACE Android laboratory, synthetic responses, real API29/API35 emulator execution; no native LLM or documents qualified.",
+  "application_source_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+  "ci_qualification_run": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854603",
+  "historical_application_regression_run": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854697",
+  "tested_apk_sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+  "tested_apk_digest_source": "Runtime qualifier GitHub output used in qualified artifact name, observed via GitHub metadata.",
+  "qualified_artifact": {
+    "id": 13329266245,
+    "name": "JARVIS-M50-S1B-QUALIFIED-LAB-681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+    "size_in_bytes": 1611254,
+    "digest": "sha256:85b5380415365715411231c64b309b2bb81bbb8f853c2c1705c75884df4f3b45",
+    "expired": false,
+    "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/41839854603/artifacts/13329266245"
+  },
+  "reports_artifact": {
+    "id": 13329226310,
+    "name": "m50-s1b-reports-b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+    "size_in_bytes": 318284,
+    "digest": "sha256:719f837ce85123a0a200d8644b3cfbe48e559020b91ad32411f876ac018ec8ff",
+    "expired": false
+  },
+  "android_api29": "PASS: full instrumentation, airplane mode, UNKNOWN, external force-stop/restart and same APK digest assertions",
+  "android_api35": "PASS: full instrumentation, airplane mode, UNKNOWN, external force-stop/restart and same APK digest assertions",
+  "ci_exact_case_counts_and_metrics": "Stored in actual QUALIFICATION.json and per-API RESULTS.json/XML in the artifacts; raw files not downloaded to this terminal.",
+  "remote_artifacts_rehashed_locally": false,
+  "artifact_host_access": "Proxy policy does not allow Actions blob storage/log hosts; delivery is through authenticated GitHub artifact links.",
+  "local_counts": {
+    "JVM": 11,
+    "Python_preservation": 11,
+    "UNIFIED": 94
+  },
+  "sensitive_activation_authorized": false,
+  "main_merge_authorized": false,
+  "personal_installation_authorized": false,
+  "data_migration_authorized": false,
+  "native_llm": "OFF_NOT_QUALIFIED",
+  "nexus": "OFF",
+  "services": "OFF",
+  "voice": "OFF",
+  "evolution": "OFF",
+  "physical_device": "NOT_RUN"
+}
