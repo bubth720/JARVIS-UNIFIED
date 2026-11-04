@@ -1,5 +1,11 @@
 # JARVIS M50 — État de départ et preuves à produire
 
+**Mise à jour courante du 4 novembre 2026 :**
+[réception S1B](s1b-20261104/REPORT.md), [huit gates](s1b-20261104/GATES.json).
+Le laboratoire CORE/INTERFACE est qualifié sur API29/35 (G2 PASS dans ce
+périmètre). M50 reste NON ATTEINT. Le relevé du 29 octobre ci-dessous est
+conservé comme instantané historique.
+
 **Référence :** 29 octobre 2026, branche `mission/m50-integrated-beta-20261029`, sans merge.
 **Jalon M50 : NON ATTEINT.** Les pourcentages du projet global restent non quantifiés, car la V1 finale n'a pas encore un périmètre et un système d'acceptation approuvés.
 **Cette fiche ne certifie aucun livrable Android unifié.** Voir `ACCEPTANCE-AND-ROADMAP.md`.

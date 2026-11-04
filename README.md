@@ -1,5 +1,14 @@
 # JARVIS-UNIFIED — référence technique centrale
 
+## M50-S1B — laboratoire CORE + INTERFACE, 4 novembre 2026
+
+[Réception et téléchargement](docs/m50/s1b-20261104/REPORT.md) : APK testOnly
+avec le vrai SessionCoordinator et le client INTERFACE dans le même processus,
+qualifiée sur émulateurs API29/35 ; régression historique INTERFACE réussie.
+Réponses LAB/SYNTHETIC, autres modules OFF. [Huit gates actuels](docs/m50/s1b-20261104/GATES.json) :
+G2 PASS dans ce périmètre de laboratoire ; M50 reste NON ATTEINT.
+Les instantanés antérieurs ci-dessous conservent leur date.
+
 ## FUSION-02 — Android-first, preuves distinctes
 
 [Tranche UNIFIED U](docs/fusion-02/README.md) : remédiation CI, verrou v2,

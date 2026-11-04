@@ -1,0 +1,82 @@
+{
+  "source_sha": "358ede1d33742b3bb00c575d49d4d829a3fe1ec1",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "host_tests": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "closeClearsRamAndLateWorkerCannotReopenThePort"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "identicalEventReplayIsDeduplicated"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "reusedEventIdAtAnotherSequencePoisonsTheClient"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "ownerErrorIsARealCoordinatorErrorNotAResponse"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "realCoordinatorAckAndFixedSyntheticContent"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "malformedTextCannotReachTheCoordinator"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "replayedSubmissionIdCannotStartASecondCoreTurn"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "staleStopCannotCancelTheCurrentCoreRequest"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "lostAckTimesOutWithoutStartingCoreOrRetrying"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "resourceUnknownAfterCompletedMetadataNeverBecomesSuccessfulContent"
+      ],
+      [
+        "com.stark.jarvislocal.LabCoreTransportTest",
+        "stopKeepsTheGateUntilActualSyntheticWorkerDrain"
+      ]
+    ]
+  },
+  "python_tests": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0
+  },
+  "local_emulator_acceleration": false,
+  "android_instrumentation": "NOT_RUN_LOCALLY",
+  "lint": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "local_apk": {
+    "schema": "jarvis.m50-s1b.apk/1",
+    "sha256": "9cf076f0339aea5d362362573f51ed51a95061bb9ce6d4f987660c2b8808d0fe",
+    "size": 4025134,
+    "application_id": "fr.jarvis.lab.m50s1",
+    "min_sdk": 29,
+    "target_sdk": 35,
+    "test_only": true,
+    "permissions": [],
+    "native_libraries": [],
+    "models": [],
+    "backup_enabled": false,
+    "android_execution": "NOT_PROVEN_BY_THIS_CHECK"
+  },
+  "final_build_log_sha256": "824c3cd4059444a152a97c625dca9ac706b1ecbf4e79bccc0b42cae8ed7e6b9e"
+}

@@ -1,0 +1,129 @@
+{
+  "observed_at": "2026-11-04T13:10:34.724087+00:00",
+  "sources": [
+    {
+      "module": "CORE",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "pr": "https://github.com/bubth720/JAVIS-Local-v2/pull/27",
+      "state": "open",
+      "sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "tree": "bef8a470e25847cff8a09351792133adfa268c38",
+      "default_branch": "main",
+      "default_sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "runs": [
+        {
+          "id": 41731949559,
+          "name": "M50-S1 CORE exact-source regression",
+          "head_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/41731949559"
+        },
+        {
+          "id": 41731937156,
+          "name": "M50-S1 CORE exact-source regression",
+          "head_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/41731937156"
+        }
+      ]
+    },
+    {
+      "module": "INTERFACE",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "pr": "https://github.com/bubth720/JARVIS-INTERFACE/pull/13",
+      "state": "open",
+      "sha": "3a0841266fd691b74fae784004804429e6e2e219",
+      "tree": "9c0f615aa9d8795bd376cd0bbe922d8333acb130",
+      "default_branch": "development/mission-002",
+      "default_sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "runs": [
+        {
+          "id": 40852572450,
+          "name": "Android",
+          "head_sha": "3a0841266fd691b74fae784004804429e6e2e219",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40852572450"
+        },
+        {
+          "id": 40852058103,
+          "name": "Android",
+          "head_sha": "3a0841266fd691b74fae784004804429e6e2e219",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/40852058103"
+        }
+      ]
+    },
+    {
+      "module": "UNIFIED",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "pr": "https://github.com/bubth720/JARVIS-UNIFIED/pull/19",
+      "state": "open",
+      "sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+      "tree": "42800cab95f7388d4dd544bd009d5df6ea8f24ce",
+      "default_branch": "main",
+      "default_sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "runs": [
+        {
+          "id": 41731965299,
+          "name": "UNI-08 U01 proposal gate",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965299"
+        },
+        {
+          "id": 41731965228,
+          "name": "UNI-08 U02 modular workspace proposal gate",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965228"
+        },
+        {
+          "id": 41731965289,
+          "name": "Validate UNIFIED coordination",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965289"
+        },
+        {
+          "id": 41731965296,
+          "name": "UNI-08 U00 audit candidate and baseline",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965296"
+        },
+        {
+          "id": 41731965343,
+          "name": "FUSION-02 independent evidence",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965343"
+        },
+        {
+          "id": 41731965467,
+          "name": "M50 S1 exact-source coordination evidence",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731965467"
+        },
+        {
+          "id": 41731954766,
+          "name": "M50 S1 exact-source coordination evidence",
+          "head_sha": "34f2de4ef0bd74738ead9656c85bdf4d947f1e0d",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41731954766"
+        }
+      ]
+    }
+  ]
+}
