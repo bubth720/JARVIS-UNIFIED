@@ -1,0 +1,7 @@
+{
+  "schema": "jarvis.v1.receipts/1",
+  "receipts": [],
+  "host_receipt": "PENDING_PARENT_APK_AND_ANDROID_PROOFS",
+  "qualification": "NOT_RUN",
+  "score_claims_allowed": false
+}

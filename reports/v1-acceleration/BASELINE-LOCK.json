@@ -1,0 +1,1412 @@
+{
+  "schema": "jarvis.v1.baseline-lock/1",
+  "observed_at": "2026-11-07T15:38:11.066099+00:00",
+  "mission_document": {
+    "file": "JARVIS_V1_Mission_Maitresse_M51-M54_AVATAR_2026-11-07.pdf",
+    "pages": 46,
+    "sha256": "93cb9f7bb8acf518ea4218ab2db0d450beba8aa14a465760f63a7bac70915c8c"
+  },
+  "coordination_base": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+  "composition": {
+    "id": "jarvis.v1.lab.m51",
+    "runtime_modules": [],
+    "composition_code_present": false,
+    "status": "NO_RUNTIME_ASSEMBLY_IN_UNIFIED",
+    "host_reference": "INTERFACE_UI01C",
+    "target_application_id": "fr.jarvis.v1.lab",
+    "target_application_id_status": "PROPOSED_PENDING_HOST_RECEIPT",
+    "claims_scope": "PINNED_AUDIT_NOT_DEPLOYMENT"
+  },
+  "modules": [
+    {
+      "module_id": "CORE",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "source_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "source_tree": "bef8a470e25847cff8a09351792133adfa268c38",
+      "source_branch": "codex/m50-s1-core-ci-20261029",
+      "pull_request": 27,
+      "pull_request_url": "https://github.com/bubth720/JAVIS-Local-v2/pull/27",
+      "default_branch": "main",
+      "default_sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "default_tree": "613d83288a702d27de4887eac78878962017cb20",
+      "main_sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [
+        {
+          "path": "docs/mvp-004/QWEN-LICENSE.txt",
+          "sha256": "5de36594c10839788a8c589443a8ef9d8b8d17c65a1b5807206ae037fc36c6bd",
+          "declared_notice": "Apache-2.0",
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/docs/mvp-004/QWEN-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        }
+      ],
+      "toolchain": {
+        "gradle": null,
+        "agp": "8.7.3",
+        "kotlin": "2.0.21",
+        "jvm_target": "17",
+        "jdk_toolchain": null,
+        "compile_sdk": 35,
+        "min_sdk": 24,
+        "target_sdk": 35,
+        "abi": [
+          "arm64-v8a"
+        ],
+        "compose": null,
+        "ndk": null,
+        "native_dependency": "dev.ffmpegkit-maintained:llama-android:0.1.1"
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "c7ad7549e74f63b6958ba4e171cc08161976da49",
+          "sha256": "50425357e4449207a6e3098fa4f4dc66864a870859025051fc809589ddb858df",
+          "bytes": 142,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "3d81b62eef6325410a3810b49f209f7414303ed7",
+          "sha256": "2d895395ecb9cd468e3afda7a610ee1a6c3270e4d1c1313e723792779dd323fb",
+          "bytes": 449,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/settings.gradle.kts"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "git_blob_sha": "c8a2a66250eda5a44b34df4dd56373317dd42e59",
+          "sha256": "be358aa8ded614ff4b21053835c278f864b9a64a808cfb828e3a255068ebcefa",
+          "bytes": 3324,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/app/build.gradle.kts"
+        },
+        {
+          "path": "app/src/main/AndroidManifest.xml",
+          "git_blob_sha": "0e18c72b2c120aa316e73823d069617a590fd6d4",
+          "sha256": "13311e2ed2d072bd7528ad42815430a09e32b4a6f478f7e0218aecfdd95a4006",
+          "bytes": 1002,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+          "git_blob_sha": "eebc7d05eeda7da036a07efcead1bbbf888794da",
+          "sha256": "6610fca9c2c4d3c1cef18c9f2521527468a3d81b99cfc4400958bfea768e0a50",
+          "bytes": 12957,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/InferenceContract.kt",
+          "git_blob_sha": "87df84dde2f4b23b8757e54da2282e6b0c3ba2f2",
+          "sha256": "4588606d1f403fa04d770d1d7f51adb168efb7eb26c7fb98e1826dfda779b997",
+          "bytes": 2665,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/app/src/main/java/com/stark/jarvislocal/InferenceContract.kt"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/TextLabConversation.kt",
+          "git_blob_sha": "47d0bde8bbc6cff3c16e6428a85cfad76acb7a68",
+          "sha256": "b6292526eddee4632e2b7aeccca6c9ca5c1382e78c496bc3fe0de47369591473",
+          "bytes": 3028,
+          "url": "https://raw.githubusercontent.com/bubth720/JAVIS-Local-v2/5da98383ed12cb5a54e896fbe57560bacc432fb5/app/src/main/java/com/stark/jarvislocal/TextLabConversation.kt"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+          "sha256": "6610fca9c2c4d3c1cef18c9f2521527468a3d81b99cfc4400958bfea768e0a50",
+          "declarations": [
+            "enum class SessionPhase { PREPARING, READY, THINKING, STARTING_AUDIO, LISTENING, STOPPING_AUDIO, TRANSCRIBING, IMPORTING, ERROR, TIMEOUT }",
+            "data class SessionState(",
+            "internal interface SessionActions {",
+            "fun beforeTextChat() { }",
+            "fun requestInferenceStop() { }",
+            "fun inferenceReleaseUnconfirmed(): Boolean = false",
+            "suspend fun prepare(progress: (String) -> Unit)",
+            "suspend fun chat(text: String): ChatMessage",
+            "suspend fun importPdf(uri: String)",
+            "suspend fun startRecording()",
+            "suspend fun awaitRecording(): File",
+            "suspend fun stopRecording(discard: Boolean): File?",
+            "suspend fun transcribe(file: File): String",
+            "fun deleteRecording(file: File)",
+            "suspend fun reportError(detail: String)",
+            "fun speakIfEnabled(text: String)",
+            "fun stopSpeech()",
+            "fun releaseSpeech()",
+            "fun initializeSpeechIfEnabled()",
+            "class SessionCoordinator internal constructor(",
+            "fun prepare(): Boolean = begin(SessionPhase.PREPARING, \"Préparation du noyau local…\", reportFailure = false) {",
+            "fun send(text: String): Boolean {",
+            "fun importPdf(uri: String): Boolean = begin(SessionPhase.IMPORTING, \"Import du PDF…\") {",
+            "fun startRecording(): Boolean {",
+            "fun stopRecording(discard: Boolean = false): Boolean {",
+            "fun onForeground() {",
+            "fun onBackground() {",
+            "fun onScreenDestroyed(changingConfigurations: Boolean) {",
+            "fun cancelCurrent() {",
+            "private suspend fun conversation(text: String) {",
+            "private suspend fun <T> waitForWork(phase: SessionPhase, timeoutMillis: Long, block: suspend () -> T): T = supervisorScope {",
+            "private fun begin(phase: SessionPhase, detail: String, reportFailure: Boolean = true,",
+            "private fun update(phase: SessionPhase, detail: String) {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/InferenceContract.kt",
+          "sha256": "4588606d1f403fa04d770d1d7f51adb168efb7eb26c7fb98e1826dfda779b997",
+          "declarations": [
+            "data class GenerationLimits(val contextSize: Int = 2048, val maxTokens: Int = 256)",
+            "data class InferenceSource(val documentId: Long, val chunkId: Long, val documentName: String, val chunkIndex: Int)",
+            "data class InferenceRequest(",
+            "fun renderPrompt(): String = context + \"UTILISATEUR: $question\\nASSISTANT:\"",
+            "fun settings(): JarvisSettings = JarvisSettings(systemPrompt = systemPrompt,",
+            "data class InferenceCapabilities(",
+            "data class EngineCompletion(val nativeDone: Boolean, val modelUnloaded: Boolean)",
+            "data class InferenceResponse(val sessionId: String, val requestId: String, val text: String, val nativeDone: Boolean = true)",
+            "enum class StopResult { REQUESTED, UNSUPPORTED, NOT_RUNNING }",
+            "enum class UnloadResult { CONFIRMED, UNKNOWN, FAILED }",
+            "enum class InferenceRefusal { BUSY, CONTRACT, SYSTEM_PROMPT, BUDGET, STALE_RESPONSE, STOP_REQUESTED, RELEASE_UNCONFIRMED, DELEGATE_DISABLED, PROCESS_ENGINE_HELD }",
+            "class InferenceRejected(val reason: InferenceRefusal) : IllegalStateException(\"Inférence refusée : $reason\")",
+            "class InferenceFailure(message: String, val nativeDone: Boolean, cause: Throwable? = null,",
+            "internal fun validateInference(request: InferenceRequest, capabilities: InferenceCapabilities, prompt: String = request.renderPrompt()) {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "app/src/main/java/com/stark/jarvislocal/TextLabConversation.kt",
+          "sha256": "b6292526eddee4632e2b7aeccca6c9ca5c1382e78c496bc3fe0de47369591473",
+          "declarations": [
+            "data class TextLabState(val active: Boolean = false, val messages: List<ChatMessage> = emptyList())",
+            "class TextLabConversation internal constructor(",
+            "internal suspend fun chat(text: String): ChatMessage {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 41731949559,
+          "name": "M50-S1 CORE exact-source regression",
+          "path": ".github/workflows/m50-s1-core.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/41731949559",
+          "created_at": "2026-11-03T22:34:17Z"
+        },
+        {
+          "id": 41731937156,
+          "name": "M50-S1 CORE exact-source regression",
+          "path": ".github/workflows/m50-s1-core.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+          "event": "push",
+          "url": "https://github.com/bubth720/JAVIS-Local-v2/actions/runs/41731937156",
+          "created_at": "2026-11-03T22:34:12Z"
+        }
+      ],
+      "source_tree_entry_count": 618,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "LLM",
+      "repository": "bubth720/JARVIS-LLM",
+      "source_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+      "source_tree": "aa2910dbddb25289ff7c22830fcf99d5463871e1",
+      "source_branch": "codex/llm-lab-admission-review",
+      "pull_request": 15,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-LLM/pull/15",
+      "default_branch": "main",
+      "default_sha": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "default_tree": "cfece8da10c842584edda8d080525fb597b0ad85",
+      "main_sha": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.11.1",
+        "agp": "8.10.1",
+        "kotlin": "2.1.21",
+        "jvm_target": "17",
+        "jdk_toolchain": null,
+        "compile_sdk": 36,
+        "min_sdk": 29,
+        "target_sdk": 36,
+        "abi": [
+          "arm64-v8a"
+        ],
+        "compose": null,
+        "ndk": "28.1.13356709",
+        "cmake": "3.22.1",
+        "llama_cpp": "1b70350c92563449576bcbbf552994b1d1ed847d"
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "8de1ffb46557d922cf6824ca25de7814ed454a28",
+          "sha256": "874d1149813c03edd010c3b5a96bf8090cc50556c763b70e34bb4f138b7b9e58",
+          "bytes": 232,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "811b65eea0403df2f8341f8b4ad45c5af40d6679",
+          "sha256": "73d92496184d445909336facb82607ece12518e8b6fce670878524d618df05ec",
+          "bytes": 538,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/settings.gradle.kts"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "git_blob_sha": "0d034edf01a901a6d2ce960c2d351258c202455f",
+          "sha256": "7d0a2cb3bf904eb17b2aad81c6ac13a77ca3d5ec646920ea9e674110e0af45b4",
+          "bytes": 3596,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/app/build.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "eb1a55be0e150907b4442736a9f121cb6de6f2bd",
+          "sha256": "fe90ff0d9944879f591a8c37b6dbaf5046d1051ccbb6b26b22081692c321f432",
+          "bytes": 340,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "app/src/main/AndroidManifest.xml",
+          "git_blob_sha": "efc13dc3759735ae5c19c0276a3fc9a9003c2239",
+          "sha256": "bbba3fde4dea2b85d3f9febc86eef2f758eaf202d454d0a9eb1f5f52e1ccf7ad",
+          "bytes": 1071,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt",
+          "git_blob_sha": "6f77f004d95aa2e69a91d4b5fe19b7eda253efae",
+          "sha256": "6ef7976b1c689d497c78f92da95f37557640686291ed19ebc7e78677989c14fd",
+          "bytes": 7334,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt"
+        },
+        {
+          "path": "app/src/main/java/fr/jarvis/llm/engine/LlamaBackend.kt",
+          "git_blob_sha": "fb3a9e73996045c7b296d5477e646a69bd4927df",
+          "sha256": "1e8f5db4a849dde593e4ce36edd656ffd5071c8684bf6c55c1a5b0d84091539a",
+          "bytes": 15421,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/app/src/main/java/fr/jarvis/llm/engine/LlamaBackend.kt"
+        },
+        {
+          "path": "tools/prepare-native.sh",
+          "git_blob_sha": "50a1a3aa7e46c1e81a29e194973f0dbf874e9ef4",
+          "sha256": "d2b7e7d6d382fce7d203bfb4d2c3b3ec8bee56a59a9e1fbea2949ce111a0d302",
+          "bytes": 877,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-LLM/69400fe26d61688262b94cc8a2d5efe20d1da4be/tools/prepare-native.sh"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt",
+          "sha256": "6ef7976b1c689d497c78f92da95f37557640686291ed19ebc7e78677989c14fd",
+          "declarations": [
+            "const val CLIENT_VERSION = \"jarvis.llm.client/1\"",
+            "enum class Priority { INTERACTIVE, BACKGROUND }",
+            "enum class ExecutionTarget { ANDROID_LOCAL, LINUX_LOCAL }",
+            "enum class TokenCountStatus { UNSUPPORTED }",
+            "enum class ClientError { UNAUTHORIZED, NATIVE_UNQUALIFIED, TOKENIZER_UNAVAILABLE, UNSUPPORTED_PROFILE, UNKNOWN_STATE }",
+            "class GenerateRequest private constructor(val prompt: P2Request, val priority: Priority,",
+            "private fun fingerprint(): String {",
+            "fun text(s: String) { val b = s.toByteArray(Charsets.UTF_8); out.writeInt(b.size); out.write(b) }",
+            "fun create(version: String = CLIENT_VERSION, prompt: P2Request, priority: Priority,",
+            "fun decode(input: Fields): GenerateRequest {",
+            "fun string(k: String) = f[k] as? String ?: throw P2Exception(P2Error.INVALID_INPUT)",
+            "fun <T> choice(k: String, values: Array<T>): T where T : Enum<T> =",
+            "internal fun digest(bytes: ByteArray) = MessageDigest.getInstance(\"SHA-256\").digest(bytes).joinToString(\"\") { \"%02x\".format(it) }",
+            "data class RequestReference(val key: OperationKey, val requestSha256: String) {",
+            "class Cancel(val reference: RequestReference) {",
+            "data class NativeResourceState(val observation: RuntimeObservation?) {",
+            "data class ClientCapabilities(val version: String = CLIENT_VERSION) {",
+            "enum class EventOrigin { FIXTURE, UNAVAILABLE }",
+            "sealed class ClientEvent(val reference: RequestReference, val sequence: Int, val origin: EventOrigin) {",
+            "class Ack(reference: RequestReference, origin: EventOrigin) : ClientEvent(reference, 0, origin)",
+            "class StreamChunk(reference: RequestReference, sequence: Int, val text: String, origin: EventOrigin) : ClientEvent(reference, sequence, origin) {",
+            "class Completed(reference: RequestReference, sequence: Int, origin: EventOrigin) : ClientEvent(reference, sequence, origin)",
+            "class Error(reference: RequestReference, sequence: Int, val code: ClientError, origin: EventOrigin = EventOrigin.UNAVAILABLE) : ClientEvent(reference, sequence, origin)",
+            "fun interface ClientAuthorizationGate { fun permits(request: GenerateRequest): Boolean }",
+            "interface GenerationClientPort {",
+            "fun submit(request: GenerateRequest): ClientEvent",
+            "fun cancel(request: Cancel): NativeResourceState",
+            "class UnavailableGenerationClient(private val authorization: ClientAuthorizationGate = ClientAuthorizationGate { false }) : GenerationClientPort {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "app/src/main/java/fr/jarvis/llm/engine/LlamaBackend.kt",
+          "sha256": "1e8f5db4a849dde593e4ce36edd656ffd5071c8684bf6c55c1a5b0d84091539a",
+          "declarations": [
+            "internal interface NativeApi {",
+            "fun create(): Long",
+            "fun begin(handle: Long)",
+            "fun cancel(handle: Long)",
+            "fun load(handle: Long, path: ByteArray, context: Int, threads: Int, small: Boolean)",
+            "fun generate(handle: Long, roles: Array<ByteArray>, texts: Array<ByteArray>, maxTokens: Int): ByteArray",
+            "fun generateP2(handle: Long, roles: Array<ByteArray>, texts: Array<ByteArray>, maxTokens: Int, system: ByteArray): ByteArray",
+            "fun measureFixtureP2(handle: Long, system: ByteArray, question: ByteArray): Array<ByteArray> = error(\"fixture measure unsupported\")",
+            "fun generateFixtureP2(handle: Long, system: ByteArray, question: ByteArray, maxTokens: Int, contextLimit: Int): ByteArray = error(\"fixture generate unsupported\")",
+            "fun generateStream(handle: Long, system: ByteArray, question: ByteArray, maxTokens: Int, contextLimit: Int,",
+            "fun allocations(handle: Long): LongArray",
+            "fun unload(handle: Long)",
+            "fun destroy(handle: Long)",
+            "internal object NativeBridge : NativeApi {",
+            "class LlamaBackend internal constructor(private val native: NativeApi) : LanguageModel {",
+            "private fun refreshAllocations() {",
+            "suspend fun generateFixtureP2(request: GenerationRequest, contextLimit: Int): FixtureGeneration {",
+            "fun hash(bytes: ByteArray) = java.security.MessageDigest.getInstance(\"SHA-256\").digest(bytes).joinToString(\"\") { \"%02x\".format(it.toInt() and 255) }",
+            "internal suspend fun generateOwnedStream(request: GenerationRequest, contextLimit: Int,",
+            "class FixtureGeneration(val text: String, val inputTokens: Int, val templateSha256: String,",
+            "class FixtureContextExceeded : IllegalArgumentException(\"CONTEXT_EXCEEDED\")"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 42364011431,
+          "name": "FUSION-01 LLM additive contract validation",
+          "path": ".github/workflows/fusion-01-llm.yml",
+          "status": "completed",
+          "conclusion": "skipped",
+          "head_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42364011431",
+          "created_at": "2026-11-07T10:27:12Z"
+        },
+        {
+          "id": 42364011384,
+          "name": "FUSION-02 LLM test-only prequalification",
+          "path": ".github/workflows/fusion-02-llm.yml",
+          "status": "completed",
+          "conclusion": "skipped",
+          "head_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42364011384",
+          "created_at": "2026-11-07T10:27:12Z"
+        },
+        {
+          "id": 42364011395,
+          "name": "Android prototype checks",
+          "path": ".github/workflows/android.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42364011395",
+          "created_at": "2026-11-07T10:27:12Z"
+        },
+        {
+          "id": 42363959206,
+          "name": "Android prototype checks",
+          "path": ".github/workflows/android.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42363959206",
+          "created_at": "2026-11-07T10:26:26Z"
+        },
+        {
+          "id": 42363959285,
+          "name": "LAB-ADMISSION-01 exact unapplied patch review",
+          "path": ".github/workflows/lab-admission-review.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42363959285",
+          "created_at": "2026-11-07T10:26:26Z"
+        }
+      ],
+      "source_tree_entry_count": 493,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "INTERFACE",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "source_sha": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "source_tree": "57ea00745ddfb0bc3c992c18ba4b61240c85706b",
+      "source_branch": "feat/ui-01-native-cockpit",
+      "pull_request": 16,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-INTERFACE/pull/16",
+      "default_branch": "development/mission-002",
+      "default_sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "default_tree": "fffd41e35dd9ff24c88684fe0a7ec70a86141471",
+      "main_sha": null,
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "kotlin": "2.1.20",
+        "jvm_target": "17",
+        "jdk_toolchain": null,
+        "compile_sdk": 35,
+        "min_sdk": 26,
+        "target_sdk": 35,
+        "abi": [],
+        "abi_note": "no native library declaration in inspected app build",
+        "compose_bom": "2025.04.01",
+        "ndk": null
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "9deb573e20ab714db3df8243650306bedaeda15a",
+          "sha256": "7af865aea3e2dde810363caa1c3f9eed33324aa47f1c7e281034d4bd69129b3d",
+          "bytes": 170,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "ecb97e873f4467f295102897d54b9083358ade17",
+          "sha256": "0be8db4611e68305288440bfc19b2e822a2ad956aac851b7e22e51c082bdc051",
+          "bytes": 285,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/settings.gradle.kts"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "git_blob_sha": "f8db471ec804f045461df74e995d1d22981edca6",
+          "sha256": "0aba11cd2f422043a35e868fd8a0f12766a81e48da31dd526df7886cf313d249",
+          "bytes": 1350,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/app/build.gradle.kts"
+        },
+        {
+          "path": "gradle/libs.versions.toml",
+          "git_blob_sha": "bd8c7a220bf7d4a521a42f7a6c047b9c45d41788",
+          "sha256": "06650995c842a0caafde2c11a81fcd4f124216a706b3cfeaae169499fda9596f",
+          "bytes": 1331,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/gradle/libs.versions.toml"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "36e4933e1da7ba705f81a2e2a0052d348c8377a4",
+          "sha256": "c040b6ef2fb893ff5beea5a281614f2848f1c3996a7886f650b713f8240656a2",
+          "bytes": 338,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "app/src/main/AndroidManifest.xml",
+          "git_blob_sha": "aea2027a6e4cf07a4b8de224e3a55dd4f3e15792",
+          "sha256": "08ece412cf7ae58c2e721b078edc6ba282f57a6a50fbc13467a4bd7db5ea6070",
+          "bytes": 815,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/cockpit/CockpitContracts.kt",
+          "git_blob_sha": "d3c7f79cf5c418212bbe1d0c98938ac346124b41",
+          "sha256": "659c227f878072a266121cf365ce8d7896fe921154a6dae8136b239a1349af60",
+          "bytes": 942,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/app/src/main/java/com/jarvis/interfaceapp/cockpit/CockpitContracts.kt"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+          "git_blob_sha": "148b30de800b142b736d7b29218e91151ee26d3c",
+          "sha256": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+          "bytes": 392,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/cockpit/CockpitContracts.kt",
+          "sha256": "659c227f878072a266121cf365ce8d7896fe921154a6dae8136b239a1349af60",
+          "declarations": [
+            "enum class Weather { CLEAR, CLOUDS, RAIN, STORM, FOG, SNOW }",
+            "data class WeatherObservation(val weather: Weather, val observedAtEpochMillis: Long, val source: String)",
+            "interface WeatherSource { fun lastKnown(): WeatherObservation? }",
+            "interface ModuleGateway { fun connectionStatus(module: String): String }",
+            "enum class DayPhase { SUNRISE, MORNING, AFTERNOON, SUNSET, NIGHT }",
+            "fun dayPhase(time: LocalTime): DayPhase = when (time.hour) {",
+            "data class SceneReference(val phase: DayPhase, val weather: Weather?, val localUri: String)"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+          "sha256": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+          "declarations": [
+            "enum class AvatarMediaKind { MP4, ANIMATION_2D, HYBRID }",
+            "interface AvatarSession {",
+            "fun setVisible(visible: Boolean)",
+            "fun resize(widthPx: Int, heightPx: Int)",
+            "fun release()"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [],
+      "source_tree_entry_count": 89,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "source_sha": "be70faa41d202d77eb8cf0cc5c831e10cfb020b5",
+      "source_tree": "1045f29dc045ee739630c97f2c241a6f45561a42",
+      "source_branch": "codex/m50-s1-nexus-ci-20261029",
+      "pull_request": 12,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-NEXUS/pull/12",
+      "default_branch": "main",
+      "default_sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "default_tree": "5a458f0442702d0f82a8aa698069afb07279c2f0",
+      "main_sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.10.2",
+        "agp": "8.7.3",
+        "kotlin": "2.0.21",
+        "jvm_target": "1.8",
+        "jdk_toolchain": "17",
+        "compile_sdk": 35,
+        "min_sdk": 24,
+        "target_sdk": null,
+        "abi": [],
+        "compose": null,
+        "ndk": null,
+        "android": "optional explicit withAndroid flag"
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "489086b937dc28e4d1390341e7174555d65ee0f1",
+          "sha256": "e8a37c4280d969caa9200e70f1eeaf47b549426740435d4958eecdf2d978bdff",
+          "bytes": 378,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "f2c2753711a45e6cd342cccc120ae144ee67f1fa",
+          "sha256": "a981aa1368458e53ecdb69ea8af74065d9414215503ae41b617cced773ac7aac",
+          "bytes": 1236,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/settings.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "fb602ee2af066d5b8e5169d82be87166f8d65446",
+          "sha256": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335",
+          "bytes": 340,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "nexus-core/build.gradle.kts",
+          "git_blob_sha": "00eec03fc1fc5e481dad0cf3daf4d101dfb5c3e8",
+          "sha256": "1e0f77d58c3622d3d257673a07af18ddd827c94c78644e018345135955c5ad82",
+          "bytes": 242,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/nexus-core/build.gradle.kts"
+        },
+        {
+          "path": "nexus-android-store/build.gradle.kts",
+          "git_blob_sha": "6dd7b930b5f153ea3e6e0d598d9c54b0520a321a",
+          "sha256": "5cc5a58d47ec5d76cfcd55c4d6d7188666cb35895a69717f3bec07cc04062769",
+          "bytes": 1324,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/nexus-android-store/build.gradle.kts"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/DocumentaryGateway.kt",
+          "git_blob_sha": "29341b5722ec19735002d50c7945da56c30253da",
+          "sha256": "461cb82d2386ba048ee0161ab015f69e4a37b3f760a33643e06c0be88767e856",
+          "bytes": 6437,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/DocumentaryGateway.kt"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt",
+          "git_blob_sha": "84b6d242259bb34a182f2cde4b8766847b64fe98",
+          "sha256": "5ab3937518312bd3c866d2d45c039b2ec9ee4bacf883b053a023ab1ae3c31ba5",
+          "bytes": 944,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt"
+        },
+        {
+          "path": "nexus-android-store/src/main/AndroidManifest.xml",
+          "git_blob_sha": "94cbbcfc396aca20240417158bac4d52ba4e1a14",
+          "sha256": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066",
+          "bytes": 72,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-NEXUS/be70faa41d202d77eb8cf0cc5c831e10cfb020b5/nexus-android-store/src/main/AndroidManifest.xml"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/DocumentaryGateway.kt",
+          "sha256": "461cb82d2386ba048ee0161ab015f69e4a37b3f760a33643e06c0be88767e856",
+          "declarations": [
+            "const val DOCUMENTARY_GATEWAY_VERSION = 1",
+            "enum class DocumentaryRefusal { DENIED, CANCELLED, DEADLINE_EXCEEDED, INDEX_MISSING, UNSUPPORTED, BYTE_BUDGET, CITATION_MISMATCH, NEXUS_REJECTED }",
+            "sealed interface DocumentaryResult {",
+            "data class Ready(val bundle: ContextBundle) : DocumentaryResult",
+            "data class Refused(val reason: DocumentaryRefusal, val knowledgeError: KnowledgeError? = null) : DocumentaryResult",
+            "class DocumentaryCall(val deadlineMonotonicMs: Long, val authorized: () -> Boolean = { false },",
+            "class DocumentaryGateway(private val storage: NexusStoragePort, private val catalog: KnowledgeCatalogService,",
+            "private class Refusal(val reason: DocumentaryRefusal) : RuntimeException()",
+            "private fun check(call: DocumentaryCall) {",
+            "private fun allowed(request: SearchScope): SearchScope {",
+            "private fun requireIndex(scope: SearchScope) {",
+            "fun retrieve(query: KnowledgeQuery, request: SearchScope, call: DocumentaryCall,",
+            "private fun rejected(error: KnowledgeError) = DocumentaryResult.Refused("
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/store/NexusStoragePort.kt",
+          "sha256": "5ab3937518312bd3c866d2d45c039b2ec9ee4bacf883b053a023ab1ae3c31ba5",
+          "declarations": [
+            "interface NexusStoragePort : AutoCloseable {",
+            "fun <T> readSession(block: (NexusSession) -> T): T",
+            "fun <T> inTransaction(block: (NexusSession) -> T): T",
+            "fun acquireImportLease(): AutoCloseable?",
+            "fun availableBytes(): Long? = null",
+            "interface NexusSession {",
+            "fun execute(sql: String, vararg values: Any?): Int",
+            "fun <T> query(sql: String, vararg values: Any?, map: (NexusRow) -> T): List<T>",
+            "class NexusStorageException(cause: Throwable) : RuntimeException(cause)",
+            "fun interface NexusClock { fun millis(): Long }"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 41731910018,
+          "name": "NEX-07 isolated quota preflight",
+          "path": ".github/workflows/nex-07.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be70faa41d202d77eb8cf0cc5c831e10cfb020b5",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/41731910018",
+          "created_at": "2026-11-03T22:34:01Z"
+        }
+      ],
+      "source_tree_entry_count": 317,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "source_sha": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "source_tree": "e4b0f5c440a577114f2968f0cc45220483407822",
+      "source_branch": "mission/m50-integrated-beta-20261029",
+      "pull_request": 12,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-SERVICES/pull/12",
+      "default_branch": "main",
+      "default_sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "default_tree": "efc83b9ab5c4d3ed1429c6dfb9b4f07c70e20e47",
+      "main_sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "kotlin": null,
+        "jvm_target": "11",
+        "jdk_toolchain": null,
+        "compile_sdk": 35,
+        "min_sdk": 26,
+        "target_sdk": 35,
+        "abi": [],
+        "compose": null,
+        "ndk": null
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle",
+          "git_blob_sha": "fbb663ec9e5d5bcbef685a93c3f0b19cca68d703",
+          "sha256": "88224c6709891a88c82a040ff4da2496a87020f115312c03d84e6cdb2bc8a86a",
+          "bytes": 64,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/build.gradle"
+        },
+        {
+          "path": "settings.gradle",
+          "git_blob_sha": "aad0b06123a834f71e624dbd2e7d832a487d5101",
+          "sha256": "e4ed2ab562d03fe545daa4b3f3eec50a32b7801f59f172ad2c22227bb78dab25",
+          "bytes": 780,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/settings.gradle"
+        },
+        {
+          "path": "android/build.gradle",
+          "git_blob_sha": "7e6f7d37fd56d1d7066e2b8a5fd9b771e45862db",
+          "sha256": "f39f386b715f34b7300eec30d112e6029b0fdc3c5864eaa09c6f899542dbef61",
+          "bytes": 1123,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/android/build.gradle"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "ccf4a0811ea88da2fe2f4e35f8bdfd6f282b3562",
+          "sha256": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+          "bytes": 338,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java",
+          "git_blob_sha": "2d7d6d619f444903b5473664764fb63dec20f83a",
+          "sha256": "89eddc1ed68eeae39d20e1d0867aff59399a415b6f728ed4a50685456cef163c",
+          "bytes": 627,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/tools/ApprovalGate.java",
+          "git_blob_sha": "519611eb78acc05c3f78a47ab602379a471c3552",
+          "sha256": "5dfdce971a550d8fc689cf4eea1f93e17dd934c89e0af57fc31285fe583e66a8",
+          "bytes": 3399,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/services-portable-api/src/main/java/fr/jarvis/services/tools/ApprovalGate.java"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/pipeline/SelectedDocumentSearch.java",
+          "git_blob_sha": "0c494a10e7f1eb01a3d0aedb5c67446057195d41",
+          "sha256": "55df39fa3e55dc434de305320674e6528f14bcd1ce8191d371c7a3e8ce5985f6",
+          "bytes": 1412,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/services-portable-api/src/main/java/fr/jarvis/services/pipeline/SelectedDocumentSearch.java"
+        },
+        {
+          "path": "android/src/main/AndroidManifest.xml",
+          "git_blob_sha": "407c9d49bb01af43e9e165ccf1b5d2ecc377ad7a",
+          "sha256": "cb8b57b85c22ee57fb88346541c2ad735d296c0e6157a53d83ca86fe50ba4336",
+          "bytes": 640,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-SERVICES/8d80d09d6aabf6eac00a7bc6bb4930862bd72812/android/src/main/AndroidManifest.xml"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/api/ServicesToolPort.java",
+          "sha256": "89eddc1ed68eeae39d20e1d0867aff59399a415b6f728ed4a50685456cef163c",
+          "declarations": [
+            "public interface ServicesToolPort extends AutoCloseable {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/tools/ApprovalGate.java",
+          "sha256": "5dfdce971a550d8fc689cf4eea1f93e17dd934c89e0af57fc31285fe583e66a8",
+          "declarations": [],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        },
+        {
+          "path": "services-portable-api/src/main/java/fr/jarvis/services/pipeline/SelectedDocumentSearch.java",
+          "sha256": "55df39fa3e55dc434de305320674e6528f14bcd1ce8191d371c7a3e8ce5985f6",
+          "declarations": [],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 40852606525,
+          "name": "SERVICES foundation and Android qualification",
+          "path": ".github/workflows/verify.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40852606525",
+          "created_at": "2026-10-29T09:49:08Z"
+        }
+      ],
+      "source_tree_entry_count": 372,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "VOICE",
+      "repository": "bubth720/JARVIS-VOICE",
+      "source_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "source_tree": "65035f97cdaccfea6ab2fff91faf63416986f43d",
+      "source_branch": "feat/voice-final-01",
+      "pull_request": 20,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-VOICE/pull/20",
+      "default_branch": "feat/pocket-tts-cpu-prototype",
+      "default_sha": "6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4",
+      "default_tree": "16d66e2a355d2082a36df3c130111937b492a627",
+      "main_sha": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [
+        {
+          "path": "docs/pocket-probe/LICENSES.md",
+          "sha256": "f8e66167ce09106ff602d9f2b251c5ab3d899bdb6fc2cd2d3238c601059c8a5b",
+          "declared_notice": "OTHER_OR_UNKNOWN",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/docs/pocket-probe/LICENSES.md",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "pocketProbe/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/pocketProbe/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "scripts/pocket/NETAI-LICENSE.txt",
+          "sha256": "9021a2c09139b6420fb13f3a694fbd7d9bba24b8222c72b61d2605c9512250bc",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/scripts/pocket/NETAI-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "voiceExpression/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceExpression/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "voiceIdentity/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceIdentity/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "voicePrototype/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voicePrototype/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "voiceQuality/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceQuality/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        },
+        {
+          "path": "voiceStudio/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "declared_notice": "MIT",
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceStudio/src/main/assets/ONNX-RUNTIME-LICENSE.txt",
+          "scope": "THIRD_PARTY_OR_MODEL_NOTICE_ONLY"
+        }
+      ],
+      "toolchain": {
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "kotlin": "2.1.20",
+        "jvm_target": "17",
+        "jdk_toolchain": null,
+        "compile_sdk": 35,
+        "min_sdk": 26,
+        "target_sdk": 35,
+        "abi": [
+          "arm64-v8a"
+        ],
+        "compose": null,
+        "ndk": null,
+        "onnx_runtime": "1.27.0"
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "bdbe3aab6a4d10c0728396ee85f458e7cf751c60",
+          "sha256": "41ea3c3fdceb3f06c39a0375efec91327f0d4888790c7bb1064f4bd3d36f8e38",
+          "bytes": 206,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "4a349da569911d7ff03ab0ba4e46408f278dffcb",
+          "sha256": "023603fab89deb790e22d125a5ac082aab4643ad41eaa791811792c1363b5bf3",
+          "bytes": 996,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/settings.gradle.kts"
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "git_blob_sha": "9e616b9adb72cc69f282bce902da71646a3f9f52",
+          "sha256": "d14dc2a93aced9bea3e07a005e359796a7e2002ab3345be32f1015a820a5e03d",
+          "bytes": 548,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/app/build.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "ccf4a0811ea88da2fe2f4e35f8bdfd6f282b3562",
+          "sha256": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+          "bytes": 338,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "voiceFinalSdk/build.gradle.kts",
+          "git_blob_sha": "090f3c5d618081fe502de6860768fd1229aaf328",
+          "sha256": "0b3bfdafaf813f8f03de798241d0c27055237576152c62d985e6cd19e59900ef",
+          "bytes": 363,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalSdk/build.gradle.kts"
+        },
+        {
+          "path": "voiceFinalRuntime/build.gradle.kts",
+          "git_blob_sha": "61a2096de9c32f36005ac43380c909a73f95e4f9",
+          "sha256": "5b992201ef163a49c9c77c9ac83e84f45349bd049f2bdc01df523c5bbd4ae429",
+          "bytes": 2863,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalRuntime/build.gradle.kts"
+        },
+        {
+          "path": "voiceFinalStudio/build.gradle.kts",
+          "git_blob_sha": "202ca653e81097eae560b52187794f22c6e70882",
+          "sha256": "16d990db4cff27833ed1638f70bf579faf8d2eb260c45fbf041b43e4acc79e98",
+          "bytes": 3325,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalStudio/build.gradle.kts"
+        },
+        {
+          "path": "voiceSdk/build.gradle.kts",
+          "git_blob_sha": "80c221eac8b0c1e3ba2276c53bb419b1987458fe",
+          "sha256": "ecb585aa5d8425d325ee186765fc4cc79258e5f28750bc5e47f618488f32084b",
+          "bytes": 993,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceSdk/build.gradle.kts"
+        },
+        {
+          "path": "voiceFinalStudio/src/main/AndroidManifest.xml",
+          "git_blob_sha": "fb5e3232eb678c25e39b6bab9de1be333b8f7068",
+          "sha256": "e37751f7948b70cb846d46120a68b763b43e24e4caa5f47fe0f27b2af2cccb40",
+          "bytes": 827,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOICE/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba/voiceFinalStudio/src/main/AndroidManifest.xml"
+        }
+      ],
+      "api_inspection": [],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 40145045314,
+          "name": "VOICE SDK and expression styles",
+          "path": ".github/workflows/voice-sdk.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045314",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045330,
+          "name": "Voice Bridge 005K contracts only",
+          "path": ".github/workflows/voice-bridge.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045330",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045326,
+          "name": "VOICE Binder V1 — isolated public fixtures",
+          "path": ".github/workflows/voice-bridge-pilot.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045326",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045349,
+          "name": "Android",
+          "path": ".github/workflows/android.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045349",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045335,
+          "name": "Voice Prototype 005F",
+          "path": ".github/workflows/voice-prototype.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045335",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045381,
+          "name": "Voice Quality 005G",
+          "path": ".github/workflows/voice-quality.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045381",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045318,
+          "name": "Voice Identity 005H",
+          "path": ".github/workflows/voice-identity.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045318",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045352,
+          "name": "Pocket Probe",
+          "path": ".github/workflows/pocket-probe.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045352",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045311,
+          "name": "Voice Expression 005I",
+          "path": ".github/workflows/voice-expression.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045311",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045315,
+          "name": "Voice Studio 005J",
+          "path": ".github/workflows/voice-studio.yml",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045315",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145045344,
+          "name": "VOICE FINAL-01 independent studio",
+          "path": ".github/workflows/voice-final-01.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145045344",
+          "created_at": "2026-10-25T00:01:15Z"
+        },
+        {
+          "id": 40145041706,
+          "name": "VOICE FINAL-01 independent studio",
+          "path": ".github/workflows/voice-final-01.yml",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145041706",
+          "created_at": "2026-10-25T00:01:12Z"
+        },
+        {
+          "id": 40145041684,
+          "name": "Android",
+          "path": ".github/workflows/android.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+          "event": "push",
+          "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/40145041684",
+          "created_at": "2026-10-25T00:01:12Z"
+        }
+      ],
+      "source_tree_entry_count": 564,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "EVOLUTION",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "source_sha": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "source_tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b",
+      "source_branch": "mission/m50-integrated-beta-20261029",
+      "pull_request": 6,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-VOLUTION-/pull/6",
+      "default_branch": "main",
+      "default_sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "default_tree": "bfc6b621b1a16b596d47cfd0b089792320b4f61f",
+      "main_sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.13",
+        "agp": null,
+        "kotlin": "2.1.20",
+        "jvm_target": null,
+        "jdk_toolchain": null,
+        "compile_sdk": null,
+        "min_sdk": null,
+        "target_sdk": null,
+        "abi": [],
+        "compose": null,
+        "ndk": null
+      },
+      "source_documents": [
+        {
+          "path": "build.gradle.kts",
+          "git_blob_sha": "d2d2f2ee97d030cf2b978d932224732e76a290a1",
+          "sha256": "c5ec24119d252f9e974f5bc1f3954e755e1d52aa6a60f64b7824630d8870a99e",
+          "bytes": 120,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOLUTION-/84ebc2e2b55d48306247fc9045a712294abaf457/build.gradle.kts"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "git_blob_sha": "53c1da886aded1a89fa6d3aee4175001e6a77ba7",
+          "sha256": "1d1020ed5e3a432484bdf81d100e340b33f799eb375cc14e48238e12d0918bca",
+          "bytes": 252,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOLUTION-/84ebc2e2b55d48306247fc9045a712294abaf457/settings.gradle.kts"
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "git_blob_sha": "36e4933e1da7ba705f81a2e2a0052d348c8377a4",
+          "sha256": "c040b6ef2fb893ff5beea5a281614f2848f1c3996a7886f650b713f8240656a2",
+          "bytes": 338,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOLUTION-/84ebc2e2b55d48306247fc9045a712294abaf457/gradle/wrapper/gradle-wrapper.properties"
+        },
+        {
+          "path": "evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/DiffPolicyValidator.kt",
+          "git_blob_sha": "afe7f79a34c007b489f03514a383fa2cea15336f",
+          "sha256": "8125c88b7474ab82077f4f5bc02f8a81d3639ff2e114c73369864dc1a017c832",
+          "bytes": 5609,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-VOLUTION-/84ebc2e2b55d48306247fc9045a712294abaf457/evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/DiffPolicyValidator.kt"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/DiffPolicyValidator.kt",
+          "sha256": "8125c88b7474ab82077f4f5bc02f8a81d3639ff2e114c73369864dc1a017c832",
+          "declarations": [
+            "class DiffPolicyException(val reason: String):IllegalArgumentException(reason)",
+            "data class DiffSummary(val sha256:String,val files:List<String>,val added:Int,val removed:Int)",
+            "class DiffPolicyValidator(allowedFiles:Set<String>) {",
+            "fun safePath(path:String):Boolean {",
+            "fun sha256(bytes:ByteArray)=MessageDigest.getInstance(\"SHA-256\").digest(bytes).joinToString(\"\"){\"%02x\".format(it)}",
+            "fun validate(diff:String):DiffSummary {",
+            "fun checked(ok:Boolean,reason:String){if(!ok)throw DiffPolicyException(reason)}",
+            "fun validateSyntheticFiles(root:Path,summary:DiffSummary) {"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 40852624130,
+          "name": "Evolution local JVM",
+          "path": ".github/workflows/jvm.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "84ebc2e2b55d48306247fc9045a712294abaf457",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-VOLUTION-/actions/runs/40852624130",
+          "created_at": "2026-10-29T09:49:17Z"
+        }
+      ],
+      "source_tree_entry_count": 47,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "UNIFIED",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "source_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+      "source_tree": "0226f108b72f44ec90a5640b8ca8f77d058fc686",
+      "source_branch": "codex/m50-s1b-coordination-20261104",
+      "pull_request": 20,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-UNIFIED/pull/20",
+      "default_branch": "main",
+      "default_sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "default_tree": "3233363256e421c3649cb85b8ccd13da26f303cf",
+      "main_sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "GitHub license API returned null; no repository license inferred from dependency notices.",
+      "third_party_notices": [],
+      "toolchain": {
+        "runtime": "Python stdlib, no Android runtime",
+        "python": "3.12",
+        "gradle": null,
+        "agp": null,
+        "kotlin": null,
+        "jvm_target": null,
+        "jdk_toolchain": null,
+        "compile_sdk": null,
+        "min_sdk": null,
+        "target_sdk": null,
+        "abi": [],
+        "compose": null,
+        "ndk": null
+      },
+      "source_documents": [
+        {
+          "path": "AGENTS.md",
+          "git_blob_sha": "a4aaae03358fcf8283ffa843b0645b34030eaf9e",
+          "sha256": "52d6adbc91d62ce35369b444eae4ef857f75721a757cf303883469ca45040687",
+          "bytes": 2077,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-UNIFIED/a73c1571f3e1dd0acd50e87b9742fbe2214a93d2/AGENTS.md"
+        }
+      ],
+      "api_inspection": [],
+      "reference_tree_truncated": false,
+      "ci_observed": [
+        {
+          "id": 41843014421,
+          "name": "UNI-08 U02 modular workspace proposal gate",
+          "path": ".github/workflows/uni-08-u02.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41843014421",
+          "created_at": "2026-11-04T13:58:34Z"
+        },
+        {
+          "id": 41843014391,
+          "name": "UNI-08 U01 proposal gate",
+          "path": ".github/workflows/uni-08-u01.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41843014391",
+          "created_at": "2026-11-04T13:58:34Z"
+        },
+        {
+          "id": 41843014239,
+          "name": "Validate UNIFIED coordination",
+          "path": ".github/workflows/validate-unified.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41843014239",
+          "created_at": "2026-11-04T13:58:34Z"
+        },
+        {
+          "id": 41843014641,
+          "name": "FUSION-02 independent evidence",
+          "path": ".github/workflows/fusion-02.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41843014641",
+          "created_at": "2026-11-04T13:58:34Z"
+        },
+        {
+          "id": 41843014450,
+          "name": "UNI-08 U00 audit candidate and baseline",
+          "path": ".github/workflows/uni-08-u00.yml",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+          "event": "pull_request",
+          "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/41843014450",
+          "created_at": "2026-11-04T13:58:34Z"
+        }
+      ],
+      "source_tree_entry_count": 349,
+      "full_build_reproduction": "NOT_RUN_FOR_THIS_COORDINATION_AUDIT",
+      "git_fsck": "NOT_RUN_FOR_REMOTE_ONLY_SOURCES"
+    },
+    {
+      "module_id": "AVATAR",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "source_sha": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "source_tree": "57ea00745ddfb0bc3c992c18ba4b61240c85706b",
+      "source_branch": "feat/ui-01-native-cockpit",
+      "pull_request": 16,
+      "pull_request_url": "https://github.com/bubth720/JARVIS-INTERFACE/pull/16",
+      "default_branch": "development/mission-002",
+      "default_sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+      "default_tree": "fffd41e35dd9ff24c88684fe0a7ec70a86141471",
+      "main_sha": null,
+      "main_absence_proven": false,
+      "visibility": "public",
+      "repository_license": "UNKNOWN",
+      "license_note": "No approved visual assets received by this audit.",
+      "third_party_notices": [],
+      "toolchain": {
+        "gradle": "8.13",
+        "agp": "8.9.2",
+        "kotlin": "2.1.20",
+        "jvm_target": "17",
+        "jdk_toolchain": null,
+        "compile_sdk": 35,
+        "min_sdk": 26,
+        "target_sdk": 35,
+        "abi": [],
+        "abi_note": "no native library declaration in inspected app build",
+        "compose_bom": "2025.04.01",
+        "ndk": null
+      },
+      "source_documents": [
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+          "git_blob_sha": "148b30de800b142b736d7b29218e91151ee26d3c",
+          "sha256": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+          "bytes": 392,
+          "url": "https://raw.githubusercontent.com/bubth720/JARVIS-INTERFACE/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4/app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt"
+        }
+      ],
+      "api_inspection": [
+        {
+          "path": "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+          "sha256": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+          "declarations": [
+            "enum class AvatarMediaKind { MP4, ANIMATION_2D, HYBRID }",
+            "interface AvatarSession {",
+            "fun setVisible(visible: Boolean)",
+            "fun resize(widthPx: Int, heightPx: Int)",
+            "fun release()"
+          ],
+          "runtime_connected": false,
+          "binary_compatibility": "NOT_RUN"
+        }
+      ],
+      "reference_tree_truncated": false,
+      "ci_observed": [],
+      "source_tree_entry_count": 89,
+      "full_build_reproduction": "NOT_RUN",
+      "git_fsck": "NOT_RUN",
+      "role": "OPTIONAL_RENDERER_CONTRACT_ONLY"
+    }
+  ]
+}

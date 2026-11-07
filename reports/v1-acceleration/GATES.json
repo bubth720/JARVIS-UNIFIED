@@ -1,0 +1,87 @@
+{
+  "schema": "jarvis.v1.gates/1",
+  "mission": "M51",
+  "sensitive_execution_authorized": false,
+  "gates": [
+    {
+      "gate_id": "G-A",
+      "status": "BLOCKED",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "LAB_CLOUD exact patch application"
+    },
+    {
+      "gate_id": "G-ROOT",
+      "status": "BLOCKED",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Operator trust root provisioning"
+    },
+    {
+      "gate_id": "G-B",
+      "status": "NOT_RUN",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Real native generation and safety"
+    },
+    {
+      "gate_id": "G-C",
+      "status": "NOT_RUN",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Android and performance qualification"
+    },
+    {
+      "gate_id": "G-DOC",
+      "status": "NOT_RUN",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Document/service integration and sensitive writes"
+    },
+    {
+      "gate_id": "G-VOICE",
+      "status": "NOT_RUN",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Voice/avatar assets, quality and resources"
+    },
+    {
+      "gate_id": "G-V1",
+      "status": "NOT_RUN",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Product acceptance"
+    },
+    {
+      "gate_id": "G-MERGE",
+      "status": "BLOCKED",
+      "approved": false,
+      "approval_ref": null,
+      "crossed": false,
+      "object": "Git merge"
+    }
+  ],
+  "lab_patch": {
+    "source_commit": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+    "sha256": "8df826451e501a107305f8fcaee5ca3d5334e22de23246d32cc7fd5312da21e8",
+    "state": "UNAPPLIED",
+    "root": "CLOSED"
+  },
+  "never_implicit": [
+    "merge",
+    "root_provision",
+    "native_patch",
+    "personal_device_install",
+    "real_data_migration",
+    "model_acquisition",
+    "external_write",
+    "cloud_purchase"
+  ]
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="420" viewBox="0 0 820 420" role="img" aria-labelledby="title desc">
+<title id="title">Grille V1 préenregistrée — nouvelle composition M51</title>
+<desc id="desc">Les barres grises sont des points non attribués. Aucun document ou test isolé ne vaut capacité intégrée.</desc>
+<rect width="820" height="420" fill="#101b2c"/>
+<text x="20" y="30" fill="white" font-size="18">Nouvelle composition M51 : points non encore attribués</text>
+<text x="20" y="80" fill="white" font-size="14">CHAT</text>
+<rect x="160" y="65" width="500" height="22" fill="#64748b"/>
+<rect x="160" y="65" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="80" fill="white" font-size="14">0/25</text>
+<text x="20" y="118" fill="white" font-size="14">COCKPIT</text>
+<rect x="160" y="103" width="400" height="22" fill="#64748b"/>
+<rect x="160" y="103" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="118" fill="white" font-size="14">0/20</text>
+<text x="20" y="156" fill="white" font-size="14">NEXUS</text>
+<rect x="160" y="141" width="300" height="22" fill="#64748b"/>
+<rect x="160" y="141" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="156" fill="white" font-size="14">0/15</text>
+<text x="20" y="194" fill="white" font-size="14">SERVICES</text>
+<rect x="160" y="179" width="300" height="22" fill="#64748b"/>
+<rect x="160" y="179" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="194" fill="white" font-size="14">0/15</text>
+<text x="20" y="232" fill="white" font-size="14">VOICE</text>
+<rect x="160" y="217" width="200" height="22" fill="#64748b"/>
+<rect x="160" y="217" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="232" fill="white" font-size="14">0/10</text>
+<text x="20" y="270" fill="white" font-size="14">AVATAR</text>
+<rect x="160" y="255" width="100" height="22" fill="#64748b"/>
+<rect x="160" y="255" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="270" fill="white" font-size="14">0/5</text>
+<text x="20" y="308" fill="white" font-size="14">EVOLUTION</text>
+<rect x="160" y="293" width="100" height="22" fill="#64748b"/>
+<rect x="160" y="293" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="308" fill="white" font-size="14">0/5</text>
+<text x="20" y="346" fill="white" font-size="14">STABILITY</text>
+<rect x="160" y="331" width="100" height="22" fill="#64748b"/>
+<rect x="160" y="331" width="0" height="22" fill="#22d3ee"/>
+<text x="690" y="346" fill="white" font-size="14">0/5</text>
+<text x="20" y="390" fill="#cbd5e1" font-size="13">Gris : non évalué/bloqué. Cyan : acquis par preuve. Ce n’est pas le % historique du projet.</text>
+</svg>

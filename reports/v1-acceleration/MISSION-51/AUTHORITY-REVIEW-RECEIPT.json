@@ -1,0 +1,28 @@
+{
+  "schema": "jarvis.v1.independent-authority-review/1",
+  "module_id": "LLM",
+  "status": "NO_GO",
+  "source_commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+  "source_tree": "053a59b808396314943b21bb5005887076a2e08e",
+  "source_branch": "codex/m51-lab-cloud-audit",
+  "pr_url": "https://github.com/bubth720/JARVIS-LLM/pull/16",
+  "reviewed_base": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+  "reviewed_patch_sha256": "8df826451e501a107305f8fcaee5ca3d5334e22de23246d32cc7fd5312da21e8",
+  "ci_run": 42387659515,
+  "ci_url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/42387659515",
+  "ci_conclusion": "success",
+  "artifact_id": 13579759500,
+  "artifact_sha256": "833fca982d22c3de1c0cd1ee9eed4260e6c1360d3c4eb816a63fe60c27c7a3f6",
+  "tests": {
+    "historical_and_prior_review": 247,
+    "new_adversarial_reproductions": 12,
+    "interpretation": "Passing reproductions demonstrate safety limitations, not permission or native qualification."
+  },
+  "authority_opened": false,
+  "patch_applied": false,
+  "model_acquired": false,
+  "real_generation": "NOT_RUN",
+  "android": "NOT_RUN",
+  "device_qualified": false,
+  "runtime_ready": false
+}
