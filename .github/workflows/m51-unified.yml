@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Existing backup dependency only, no model or runtime
-        run: python -m pip install --only-binary=:all: -r backup_prototype/requirements.txt
+        run: 'python -m pip install --only-binary=:all: -r backup_prototype/requirements.txt'
       - name: Frozen baseline, historical regression and new evidence safety tests
         run: python -m tooling.v1.run_checks
       - name: Stage bounded text reports only
