@@ -1,0 +1,133 @@
+{
+  "api": 29,
+  "planned_baseline_cases": 18,
+  "started_cases": 12,
+  "passed_cases": 9,
+  "failed_cases_reported": 3,
+  "suite_completed": false,
+  "candidate_cases": "NOT_RUN",
+  "restart": "NOT_RUN",
+  "benchmarks": "NOT_RUN",
+  "events": [
+    {
+      "class": "com.jarvis.interfaceapp.AmbienceRotationTest",
+      "test": "simulationAndOrientationPreserveActivityAndRealWeather",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.AmbienceRotationTest",
+      "test": "simulationAndOrientationPreserveActivityAndRealWeather",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.CockpitPersistenceTest",
+      "test": "lastKnownObservationRetainsItsSourceAndTimestamp",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.CockpitPersistenceTest",
+      "test": "lastKnownObservationRetainsItsSourceAndTimestamp",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.CockpitPersistenceTest",
+      "test": "economyPreferenceSurvivesRecreationAndAndroidBack",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.CockpitPersistenceTest",
+      "test": "economyPreferenceSurvivesRecreationAndAndroidBack",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.DocumentPickerContractTest",
+      "test": "actualAndroidDocumentPickerImportsLocalFileWithoutDeletingOriginal",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.DocumentPickerContractTest",
+      "test": "actualAndroidDocumentPickerImportsLocalFileWithoutDeletingOriginal",
+      "code": -2
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "settingsReturnsToDashboard",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "settingsReturnsToDashboard",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "recreationRestoresUsableInterface",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "recreationRestoresUsableInterface",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "allEightModulesOpenAndReturn",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "allEightModulesOpenAndReturn",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "launchesDashboardAndAvatarWithoutPartners",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.StandaloneStartupTest",
+      "test": "launchesDashboardAndAvatarWithoutPartners",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "navigationContractAllIconsAndModulesInBothOrientations",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "navigationContractAllIconsAndModulesInBothOrientations",
+      "code": -2
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "settingsContractAllWeatherProfilesSlidersAndRealCacheIsolation",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "settingsContractAllWeatherProfilesSlidersAndRealCacheIsolation",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "powerContractCancelSleepResumeAndCloseOnlyThisActivity",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "powerContractCancelSleepResumeAndCloseOnlyThisActivity",
+      "code": 0
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "projectContractStepsProgressAndHistoryAreReal",
+      "code": 1
+    },
+    {
+      "class": "com.jarvis.interfaceapp.Ui01cContractTest",
+      "test": "projectContractStepsProgressAndHistoryAreReal",
+      "code": -2
+    }
+  ]
+}

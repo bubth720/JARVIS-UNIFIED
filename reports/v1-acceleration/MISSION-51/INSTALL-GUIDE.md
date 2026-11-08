@@ -1,3 +1,5 @@
+> **Réception finale : NON ACCEPTÉE — qualification Android FAIL.** Voir [bilan final](FINAL-ACCEPTANCE.md). Les états de préparation historiques ci-dessous conservent leur date.
+
 # Guide Android de laboratoire — aucune installation autorisée ici
 
 Ce sous-lot UNIFIED ne construit pas d'APK. Le parent INTERFACE fournira son lien GitHub réel, nom, SHA256, applicationId, versionCode, certificat et limites de test. **Ne pas remplacer ces champs par une URL supposée.** Aucun APK de ce guide n'est installé sur le POCO ou la Redmi sans accord distinct.

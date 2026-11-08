@@ -1,0 +1,12 @@
+{
+  "api": 35,
+  "planned_baseline_cases": 18,
+  "started_cases": 0,
+  "passed_cases": 0,
+  "failed_cases_reported": 0,
+  "suite_completed": false,
+  "candidate_cases": "NOT_RUN",
+  "restart": "NOT_RUN",
+  "benchmarks": "NOT_RUN",
+  "events": []
+}

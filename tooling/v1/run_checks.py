@@ -3,6 +3,7 @@ import json,platform,re,subprocess,sys
 from pathlib import Path
 from tooling.v1.validate import ROOT,validate,graph_svg,read,REPORTS
 from tooling.v1.check_scope import check
+from tooling.v1 import reception
 
 def main():
  out=ROOT/'.audit-cache/m51-ci/raw';out.mkdir(parents=True,exist_ok=True)
@@ -23,6 +24,8 @@ def main():
  if not failed:
   (out/'validation.json').write_text(json.dumps({**validate(),**identity},indent=2)+'\n')
   (out/'SCORE.svg').write_text(graph_svg(read(REPORTS/'SCORE.json')))
+  (out/'reception-validation.json').write_text(json.dumps({**reception.validate(),**identity},indent=2)+'\n')
+  (out/'RECEPTION-SCORE.svg').write_text(reception.graph_svg(read(REPORTS/'RECEPTION-SCORE.json')))
   (out/'preservation.json').write_text(json.dumps(check(),indent=2)+'\n')
  return 1 if failed else 0
 if __name__=='__main__':raise SystemExit(main())

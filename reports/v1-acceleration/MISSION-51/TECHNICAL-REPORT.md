@@ -1,3 +1,5 @@
+> **Réception finale : NON ACCEPTÉE — qualification Android FAIL.** Voir [bilan final](FINAL-ACCEPTANCE.md). Les états de préparation historiques ci-dessous conservent leur date.
+
 # M51.01 / UNIFIED — rapport de coordination
 
 Module UNIFIED, branche `codex/m51-unified-gates`, dépôt bubth720/JARVIS-UNIFIED. Base exacte PR20 a73c1571f3e1dd0acd50e87b9742fbe2214a93d2/tree0226f108b72f44ec90a5640b8ca8f77d058fc686. Le commit/tree de livraison et les résultats CI finaux seront inscrits dans la PR après exécution des sources exactes ; ne pas substituer la base au head testé.
@@ -12,7 +14,7 @@ Les sources publiques sont observées aux commits du verrou via GitHub ; aucun p
 
 L'API de licence renvoie null pour les huit dépôts, et les licences internes globales restent UNKNOWN. Les notices de dépendances ne valent pas permission de redistribuer tous les modèles/assets. Les différences Gradle/Kotlin/SDK sont conservées dans le DAG ; aucun alignement arbitraire ni suppression de support n'est appliqué.
 
-Les fonctions du cockpit, la persistance, APK, certificats et essais Android M51 relèvent de la PR INTERFACE du parent. Ce sous-lot ne leur attribue aucun nouveau PASS. Les résultats API34 UI-01C antérieurs et M50-S1B synthétique sont historiques, à leurs références, pas une qualification de la nouvelle APK. Les prochaines réceptions seront liées à leurs preuves brutes exactes, sans réécrire la baseline.
+Les fonctions du cockpit, la persistance, APK, certificats et essais Android M51 relèvent de la PR INTERFACE du parent. Ce sous-lot ne leur attribue aucun nouveau PASS. Les résultats API 34 UI-01C antérieurs et M50-S1B synthétique sont historiques, à leurs références, pas une qualification de la nouvelle APK. Les prochaines réceptions seront liées à leurs preuves brutes exactes, sans réécrire la baseline.
 
 ## Tests et régression
 
@@ -25,3 +27,9 @@ Les chiffres locaux initiaux ne sont pas une CI observée. Les résultats finaux
 Audit/coordination, code de validation et PR peuvent être qualifiés par leurs propres tests. M51 produit reste PENDING jusqu'à réception de l'APK/hôte/tests de navigation, CRUD, offline, persistance et performance comparée. M52/G-B reste BLOCKED : patch LAB non appliqué, racine fermée, aucun token réel qualifié. Score de la **nouvelle composition** : critères non attribués, pas une estimation globale du projet. Aucun objectif de 50–70 points n'est présumé atteint.
 
 Risque principal : confondre version de source, trace historique et capacité du nouvel assemblage. Les outils refusent les promotions implicites mais ne remplacent pas l'examen humain des preuves. Prochaine action prioritaire : recevoir le commit/APK et les rapports M51 du parent, puis relier chaque critère à son niveau de preuve exact. Voir [décisions](DECISIONS.md) et [rollback](ROLLBACK.md).
+
+## Réception complémentaire du 8 novembre 2026
+
+[Livraisons et APK](DELIVERIES.md) et [reçus machine](RECEPTION.json) conservent le commit/tree/API/type de preuve propre à chaque résultat. Le build INTERFACE6c2656d… a réellement produit les deux APK testOnly et leurs testAPK ; archives et empreintes ont été vérifiées. Les régressionsJVM et le lint de ce head sont PASS. Aucun nouveau PASS Android, matériel ou intermodule n'est déduit du seul build. La nouvelle réception n'altère ni le verrou des sources initial ni les CI historiques datées.
+
+Le rapport du dernier commitUNIFIED est un document de coordination, pas le commit source d'une APK. La compilation et les futurs reçus appareils restent attachés au SHA réellement exécuté, même lorsque ce rapport est mis à jour ensuite. Voir la matrice détaillée pour éviter toute assimilation d'une mise à jour documentaire à une recompilation ou installation.

@@ -1,3 +1,5 @@
+> **Réception finale : NON ACCEPTÉE — qualification Android FAIL.** Voir [bilan final](FINAL-ACCEPTANCE.md). Les états de préparation historiques ci-dessous conservent leur date.
+
 # Registre de décision M51
 
 | Décision | État | Justification / prochaine action |
@@ -11,7 +13,7 @@
 | Recherche NEXUS lecture seule / SERVICES | Préparation indépendante | Corpus synthétique, provenance et refus ; écritures/export sensibles OFF |
 | AVATAR / références visuelles | Préparation indépendante | Pas d'asset officiel reçu ; schémas/contrôleurs et fixtures anonymes seulement, aucun upload privé public |
 | Co-résidence VOICE+LLM | **NON QUALIFIÉE** | Ne pas additionner des budgets séparés ; aucune qualification physique transposée depuis Linux |
-| API29/35 M51 UI sans JNI | Test cloud permis si hôte qualifié | Distinguer l'émulation UI x86 compatible de l'ancien blocage ARM64 LLM ; pas de répétition des macOS HV_UNSUPPORTED |
+| API 29/35 M51 UI sans JNI LLM | Test cloud permis si hôte qualifié | Distinguer l'émulation UI x86 compatible de l'ancien blocage ARM64 LLM ; pas de répétition des macOS HV_UNSUPPORTED |
 | Installation POCO/Redmi / migration réelle | **STOP séparé** | APK/signature/SHA/guide/sauvegarde d'abord ; aucun appareil personnel ciblé automatiquement |
 | Merge/main ou modification de protection | **STOP G-MERGE** | CI verte et PR draft ne valent jamais accord utilisateur |
 
