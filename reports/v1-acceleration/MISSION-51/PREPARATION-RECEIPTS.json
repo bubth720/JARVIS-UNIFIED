@@ -1,0 +1,91 @@
+{
+  "schema": "jarvis.v1.preparation-receipts/1",
+  "accepted_as_runtime": false,
+  "android_score_points": 0,
+  "receipts": [
+    {
+      "module_id": "NEXUS",
+      "mission": "M53_READONLY_PREPARATION",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "branch": "codex/m53-readonly-preparation",
+      "pr_url": "https://github.com/bubth720/JARVIS-NEXUS/pull/13",
+      "source_commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "source_tree": "1f5d78b084946e162617ac0525b32658cea80e15",
+      "ci_run": 42456624435,
+      "ci_url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/42456624435",
+      "ci_conclusion": "success",
+      "tests": {
+        "jvm": 100,
+        "historical_jvm": 92,
+        "new_jvm": 8,
+        "python_sqlite_historical": 10,
+        "frozen_files": 317
+      },
+      "artifact_id": 13607547887,
+      "artifact_zip_sha256": "476d3ab192b50f9997c9288934bf25e2731432475a16c65c898a52ad97df26c9",
+      "artifact_text_files": 19,
+      "artifact_expires": "2026-12-08",
+      "archive_and_internal_hashes": "VERIFIED_BY_PARENT_RECEPTION",
+      "preserved_failures": [
+        {
+          "run": 42456495284,
+          "kind": "INVALID_WORKFLOW_ZERO_JOBS",
+          "status": "FAIL"
+        },
+        {
+          "run": 42456627732,
+          "kind": "HISTORICAL_NEX07_SCOPE_GUARD",
+          "status": "FAIL"
+        },
+        {
+          "run": 42456497929,
+          "kind": "HISTORICAL_NEX07_SCOPE_GUARD",
+          "status": "FAIL"
+        }
+      ],
+      "runtime_connected": false,
+      "android": "NOT_RUN",
+      "real_model": "NOT_RUN",
+      "private_data": "NOT_ACQUIRED",
+      "qualification": "PASS_HOST_PREPARATION_ONLY"
+    },
+    {
+      "module_id": "AVATAR",
+      "mission": "M54_ISOLATED_PREPARATION",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "branch": "codex/m54-avatar-preparation",
+      "pr_url": "https://github.com/bubth720/JARVIS-INTERFACE/pull/19",
+      "source_commit": "2397bf29526ba48ac881e67c8e07dde3e01cf489",
+      "source_tree": "85286f4d763c53e77e56dc1291cacc62ef530446",
+      "ci_run": 42456453636,
+      "ci_url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/42456453636",
+      "ci_conclusion": "success",
+      "tests": {
+        "jvm": 21,
+        "python": 20,
+        "frozen_files": 89
+      },
+      "artifact_id": 13608031391,
+      "artifact_zip_sha256": "8196e1c715aac1be9eef134a264e8b215c56e57cc6eb4944b2845f6c2b620c7f",
+      "artifact_text_files": 6,
+      "artifact_expires": "2027-02-06",
+      "archive_and_internal_hashes": "VERIFIED_BY_PARENT_RECEPTION",
+      "historical_workflows": [
+        {
+          "run": 42456453605,
+          "status": "success"
+        },
+        {
+          "run": 42456455914,
+          "status": "success"
+        }
+      ],
+      "runtime_connected": false,
+      "android_renderer": "NOT_RUN",
+      "approved_master": "ABSENT",
+      "human_reception": "NOT_RUN",
+      "private_assets": "NOT_ACQUIRED",
+      "qualification": "PASS_HOST_PREPARATION_ONLY"
+    }
+  ]
+}

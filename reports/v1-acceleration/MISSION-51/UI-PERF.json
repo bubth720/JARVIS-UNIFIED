@@ -1,0 +1,16 @@
+{
+  "schema": "jarvis.m51.final-ui-perf/1",
+  "source_commit": "9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a",
+  "source_tree": "39427d75257a841208e6e75e2f1755d1cb564d85",
+  "status": "NOT_RUN_CRITICAL_BASELINE_FAILURE",
+  "frame_windows_executed": 0,
+  "ui_frame_p50_ms": null,
+  "ui_frame_p95_ms": null,
+  "modern_jank_percent": null,
+  "legacy_jank_percent": null,
+  "memory_pss_bytes": null,
+  "llm_ttft_p95_ms": null,
+  "physical_android": "NOT_RUN",
+  "gain_qualified": false,
+  "note": "No frame benchmark ran; no missing metric replaced by zero. APK compilation, parser tests and historical UI01C measurements are separate evidence."
+}

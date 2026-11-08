@@ -1,0 +1,114 @@
+{
+  "schema": "jarvis.v1.source-evidence/1",
+  "observed_at": "2026-11-07T15:38:11.066099+00:00",
+  "records": {
+    "source_CORE": {
+      "module_id": "CORE",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/tree/5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_LLM": {
+      "module_id": "LLM",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-LLM/tree/69400fe26d61688262b94cc8a2d5efe20d1da4be",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_INTERFACE": {
+      "module_id": "INTERFACE",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/tree/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_NEXUS": {
+      "module_id": "NEXUS",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "be70faa41d202d77eb8cf0cc5c831e10cfb020b5",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/tree/be70faa41d202d77eb8cf0cc5c831e10cfb020b5",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_SERVICES": {
+      "module_id": "SERVICES",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/tree/8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_VOICE": {
+      "module_id": "VOICE",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/tree/fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_EVOLUTION": {
+      "module_id": "EVOLUTION",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-VOLUTION-/tree/84ebc2e2b55d48306247fc9045a712294abaf457",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_UNIFIED": {
+      "module_id": "UNIFIED",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/tree/a73c1571f3e1dd0acd50e87b9742fbe2214a93d2",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Source inspection is not execution, integration or physical qualification."
+    },
+    "source_AVATAR": {
+      "module_id": "AVATAR",
+      "kind": "SOURCE",
+      "status": "PASS",
+      "tested_commit": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "platform": "SOURCE_INSPECTION",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/tree/0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+      "operation_ids": [
+        "CODE_PRESENT"
+      ],
+      "note": "Minimal AvatarSession contract only; no renderer or approved asset pack."
+    }
+  }
+}

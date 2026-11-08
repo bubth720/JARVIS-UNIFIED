@@ -1,0 +1,95 @@
+{
+  "source_commit": "e2a2aca68465eff05a4e01781047d297b582f841",
+  "source_tree": "ca5902838c758cb41338cea50adb656298828f2c",
+  "toolchain": "Android SDK build-tools35.0.0 zipalign; GNU readelf",
+  "android_16k_execution": "NOT_RUN",
+  "llm_jni": "ABSENT",
+  "apks": {
+    "baseline": {
+      "apk_sha256": "50855675df3d4c2bb776564cfd5d8ba85e4762a81423cc15050f7a3134ec78a9",
+      "zipalign_16k": "PASS",
+      "elf_16k_static": "PASS",
+      "libraries": [
+        {
+          "entry": "lib/arm64-v8a/libandroidx.graphics.path.so",
+          "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+          "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/x86/libandroidx.graphics.path.so",
+          "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/x86_64/libandroidx.graphics.path.so",
+          "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        }
+      ]
+    },
+    "candidate": {
+      "apk_sha256": "257bfc0e3d2cbf5beddca70961fa73dacd1fce3a1eddc7dfb4f811cda5df13b2",
+      "zipalign_16k": "PASS",
+      "elf_16k_static": "PASS",
+      "libraries": [
+        {
+          "entry": "lib/arm64-v8a/libandroidx.graphics.path.so",
+          "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+          "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/x86/libandroidx.graphics.path.so",
+          "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        },
+        {
+          "entry": "lib/x86_64/libandroidx.graphics.path.so",
+          "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+          "load_segment_alignment": [
+            16384,
+            16384,
+            16384
+          ]
+        }
+      ]
+    }
+  }
+}
