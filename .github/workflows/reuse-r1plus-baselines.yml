@@ -1,0 +1,146 @@
+name: REUSE R1plus pinned independent module baselines
+on:
+  push:
+    branches: [codex/reuse-first-r1plus-20261108]
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  modules:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - module: CORE
+            repository: bubth720/JAVIS-Local-v2
+            source: 5da98383ed12cb5a54e896fbe57560bacc432fb5
+            java: '17'
+          - module: VOICE
+            repository: bubth720/JARVIS-VOICE
+            source: 642d9c19bcba35e5ffe686403d50c65aa9dc992a
+            java: '17'
+          - module: SERVICES
+            repository: bubth720/JARVIS-SERVICES
+            source: 8d80d09d6aabf6eac00a7bc6bb4930862bd72812
+            java: '21'
+          - module: EVOLUTION
+            repository: bubth720/JARVIS-VOLUTION-
+            source: 84ebc2e2b55d48306247fc9045a712294abaf457
+            java: '17'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          repository: ${{ matrix.repository }}
+          ref: ${{ matrix.source }}
+          path: snapshot
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        if: matrix.module == 'CORE'
+        with:
+          repository: bubth720/JARVIS-NEXUS
+          ref: 777e6afa75ecb99b85e52d68837cb0fefcf161cd
+          path: dependencies/nexus
+          persist-credentials: false
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        if: matrix.module == 'CORE'
+        with:
+          repository: bubth720/JARVIS-SERVICES
+          ref: 3decdc47d82f9b43713c48cab244762941770a81
+          path: dependencies/services
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          gradle-version: '8.10.2'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        if: matrix.module == 'CORE' || matrix.module == 'VOICE'
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+      - name: SDK for unchanged Android host tests only, no device or model
+        if: matrix.module == 'CORE' || matrix.module == 'VOICE'
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Verify exact audited source, do not substitute new module branches
+        working-directory: snapshot
+        env:
+          EXPECTED_SOURCE: ${{ matrix.source }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SOURCE"
+          git diff --exit-code HEAD
+          mkdir -p build/reuse-baseline
+          git rev-parse HEAD > build/reuse-baseline/source.txt
+          git rev-parse HEAD^{tree} > build/reuse-baseline/tree.txt
+          java -version 2> build/reuse-baseline/java.txt
+      - name: Reuse pinned CORE test library inputs and existing regression suites
+        if: matrix.module == 'CORE'
+        working-directory: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests/m50_s1 -v 2>&1 | tee build/reuse-baseline/python.log
+          python3 tools/prepare-core03-sources.py nexus "$RUNNER_TEMP/core-nexus" --checkout ../dependencies/nexus
+          python3 tools/prepare-core03-sources.py services "$RUNNER_TEMP/core-services" --checkout ../dependencies/services
+          gradle -p integration-lab -PcoreNexusSource="$RUNNER_TEMP/core-nexus" -PcoreServicesSource="$RUNNER_TEMP/core-services" test run --rerun-tasks --no-daemon --max-workers=2 -Pkotlin.compiler.execution.strategy=in-process 2>&1 | tee build/reuse-baseline/integration.log
+          gradle -PincludeP2Fixture=true :app:testDebugUnitTest :app:testMvp2UnitTest --tests '*Mvp*' --tests '*MemoryLabUiTest*' :p2-client:testDebugUnitTest --rerun-tasks --no-daemon --max-workers=2 -Pkotlin.compiler.execution.strategy=in-process 2>&1 | tee build/reuse-baseline/gradle.log
+      - name: Reuse VOICE protocol suites, no profile switch or real audio claim
+        if: matrix.module == 'VOICE'
+        working-directory: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests/prefusion -v 2>&1 | tee build/reuse-baseline/python.log
+          ./gradlew :voiceFusion02:test :voiceFusion02:run :voiceFinalSdk:test :voiceFinalRuntime:test :voice04Runtime:test :voiceSdk:test :studioRuntime:test :expressionRuntime:test :identityRuntime:test :pocketRuntime:test :voiceBridgeContract:test :voiceBridgeHarness:test :app:testDebugUnitTest :voiceBridgePilot:testDebugUnitTest -PincludeVoicePilot=true --rerun-tasks --no-daemon --max-workers=2 2>&1 | tee build/reuse-baseline/gradle.log
+      - name: Reuse SERVICES desktop tests, mutations remain synthetic fixtures
+        if: matrix.module == 'SERVICES'
+        working-directory: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./gradlew :desktop:test --rerun-tasks --no-daemon --max-workers=2 2>&1 | tee build/reuse-baseline/gradle.log
+      - name: Reuse EVOLUTION tests and blocked-execution policy demos
+        if: matrix.module == 'EVOLUTION'
+        working-directory: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./gradlew test :evolution-cli:installDist --rerun-tasks --no-daemon --max-workers=2 2>&1 | tee build/reuse-baseline/gradle.log
+          python3 scripts/check_demo.py
+          python3 scripts/check_diagnostic_demo.py
+          python3 scripts/check_proposal_policy_demo.py
+      - name: Record actual JUnit case identities, failures and skips without promotion
+        if: always()
+        working-directory: snapshot
+        env:
+          BASELINE_MODULE: ${{ matrix.module }}
+          BASELINE_SOURCE: ${{ matrix.source }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,shutil,subprocess,xml.etree.ElementTree as ET
+          out=Path('build/reuse-baseline');out.mkdir(parents=True,exist_ok=True)
+          rows=[]
+          for p in Path('.').rglob('TEST-*.xml'):
+              if 'test-results' not in p.parts or any(part in {'.gradle','reuse-baseline'} for part in p.parts):continue
+              suite=ET.parse(p).getroot()
+              target=out/('junit-'+hashlib.sha256(str(p).encode()).hexdigest()[:12]+'.xml')
+              shutil.copy2(p,target)
+              rows.append({'path':str(p),'tests':int(suite.attrib.get('tests',0)),'failures':int(suite.attrib.get('failures',0)),'errors':int(suite.attrib.get('errors',0)),'skipped':int(suite.attrib.get('skipped',0)),'cases':[{'class':t.attrib.get('classname'),'name':t.attrib.get('name'),'skip':t.find('skipped') is not None,'failure':t.find('failure') is not None or t.find('error') is not None} for t in suite.findall('testcase')]})
+          data={'module':os.environ['BASELINE_MODULE'],'source':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'expected_source':os.environ['BASELINE_SOURCE'],'junit':rows,'android_instrumentation':'NOT_RUN','llm_generation':'NOT_RUN','physical_hardware':'NOT_RUN','real_voice_quality':'NOT_RUN','production_activation':False}
+          assert data['source']==data['expected_source']
+          (out/'results.json').write_text(json.dumps(data,indent=2)+'\n')
+          (out/'SHA256SUMS').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in sorted(out.iterdir()) if p.is_file() and p.name!='SHA256SUMS'))
+          print(json.dumps({'module':data['module'],'reports':len(rows),'tests':sum(r['tests'] for r in rows),'failures':sum(r['failures']+r['errors'] for r in rows),'skips':sum(r['skipped'] for r in rows)}))
+          PY
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: REUSE-R1plus-baseline-${{ matrix.module }}-${{ matrix.source }}
+          path: snapshot/build/reuse-baseline/
+          retention-days: 90
