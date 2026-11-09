@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/validate_unified.py"
+    ],
+    "exit_code": 0,
+    "output": "{\"contracts\": 5, \"invalid_examples_rejected\": 5, \"repositories\": 9, \"valid_examples\": 5}\n"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tooling/reuse_r1plus/tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output": "test_apk_build_cannot_replace_android_reception (test_reception.ReuseReceptionTests.test_apk_build_cannot_replace_android_reception) ... ok\ntest_closed_campaign_cannot_be_reported_as_new_attempt (test_reception.ReuseReceptionTests.test_closed_campaign_cannot_be_reported_as_new_attempt) ... ok\ntest_green_jvm_cannot_promote_any_runtime_capability (test_reception.ReuseReceptionTests.test_green_jvm_cannot_promote_any_runtime_capability) ... ok\ntest_llm_tests_reproducing_defects_do_not_mean_safety_pass (test_reception.ReuseReceptionTests.test_llm_tests_reproducing_defects_do_not_mean_safety_pass) ... ok\ntest_nexus_host_adapter_is_not_a_runtime_connection (test_reception.ReuseReceptionTests.test_nexus_host_adapter_is_not_a_runtime_connection) ... ok\ntest_other_snapshot_cannot_inherit_fresh_core_tests (test_reception.ReuseReceptionTests.test_other_snapshot_cannot_inherit_fresh_core_tests) ... ok\ntest_raw_preflight_contradicted_by_anr_is_not_accepted (test_reception.ReuseReceptionTests.test_raw_preflight_contradicted_by_anr_is_not_accepted) ... ok\ntest_real_receipts_pass_only_documentary_check (test_reception.ReuseReceptionTests.test_real_receipts_pass_only_documentary_check) ... ok\ntest_voice_skips_cannot_be_reported_as_passes (test_reception.ReuseReceptionTests.test_voice_skips_cannot_be_reported_as_passes) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.139s\n\nOK\n"
+  }
+]

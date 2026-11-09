@@ -1,0 +1,13 @@
+{
+  "source_commit": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+  "tree": "d1be502225c6b7477495b38108f5eb7f0bbc6a38",
+  "junit": {
+    "tests": 108,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": "NOT_RUN",
+  "llm": "NOT_RUN",
+  "production_connected": false
+}

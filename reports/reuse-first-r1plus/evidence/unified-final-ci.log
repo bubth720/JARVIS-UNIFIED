@@ -1,0 +1,211 @@
+{"contracts": 5, "invalid_examples_rejected": 5, "repositories": 9, "valid_examples": 5}
+test_canonical_unicode_and_numbers (contract_tooling.test_tooling.ContractToolingTest.test_canonical_unicode_and_numbers) ... ok
+test_checked_in_sources_are_reproducible (contract_tooling.test_tooling.ContractToolingTest.test_checked_in_sources_are_reproducible) ... ok
+test_closed_schema_addition_is_incompatible (contract_tooling.test_tooling.ContractToolingTest.test_closed_schema_addition_is_incompatible) ... ok
+test_digest_tampering_unknown (contract_tooling.test_tooling.ContractToolingTest.test_digest_tampering_unknown) ... ok
+test_duplicate_fields_and_nonfinite_rejected (contract_tooling.test_tooling.ContractToolingTest.test_duplicate_fields_and_nonfinite_rejected) ... ok
+test_exact_manifests_compatible (contract_tooling.test_tooling.ContractToolingTest.test_exact_manifests_compatible) ... ok
+test_invalid_unicode_rejected (contract_tooling.test_tooling.ContractToolingTest.test_invalid_unicode_rejected) ... ok
+test_repeated_generation_has_identical_bytes (contract_tooling.test_tooling.ContractToolingTest.test_repeated_generation_has_identical_bytes) ... ok
+test_schema_bounds_rejected_before_generating_unusable_jvm_classes (contract_tooling.test_tooling.ContractToolingTest.test_schema_bounds_rejected_before_generating_unusable_jvm_classes) ... ok
+test_unknown_generator_version_unknown (contract_tooling.test_tooling.ContractToolingTest.test_unknown_generator_version_unknown) ... ok
+test_unknown_or_missing_validation_profile_unknown (contract_tooling.test_tooling.ContractToolingTest.test_unknown_or_missing_validation_profile_unknown) ... ok
+test_unknown_required_field_rejected (contract_tooling.test_tooling.ContractToolingTest.test_unknown_required_field_rejected) ... ok
+test_unknown_schema_keyword_type_and_format_rejected (contract_tooling.test_tooling.ContractToolingTest.test_unknown_schema_keyword_type_and_format_rejected) ... ok
+test_unsupported_enum_and_constant_fail_early (contract_tooling.test_tooling.ContractToolingTest.test_unsupported_enum_and_constant_fail_early) ... ok
+test_changed_sha_between_captures (test_audit_repos.AuditTests.test_changed_sha_between_captures) ... ok
+test_declaration_not_confirmed_source (test_audit_repos.AuditTests.test_declaration_not_confirmed_source) ... ok
+test_duplicate_repositories_and_alias_not_unified (test_audit_repos.AuditTests.test_duplicate_repositories_and_alias_not_unified) ... ok
+test_hidden_credential_value_is_rejected (test_audit_repos.AuditTests.test_hidden_credential_value_is_rejected) ... ok
+test_http403_404_separate_from_absence (test_audit_repos.AuditTests.test_http403_404_separate_from_absence) ... ok
+test_http_transport_only_get_and_no_auth_for_public_success (test_audit_repos.AuditTests.test_http_transport_only_get_and_no_auth_for_public_success) ... ok
+test_main_behind_mission_and_ci_does_not_qualify_hardware (test_audit_repos.AuditTests.test_main_behind_mission_and_ci_does_not_qualify_hardware) ... ok
+test_missing_sha_stale_and_unknown_timestamp (test_audit_repos.AuditTests.test_missing_sha_stale_and_unknown_timestamp) ... ok
+test_no_ci_is_unknown (test_audit_repos.AuditTests.test_no_ci_is_unknown) ... ok
+test_offline_deterministic_and_network_forbidden (test_audit_repos.AuditTests.test_offline_deterministic_and_network_forbidden) ... ok
+test_output_json_and_markdown (test_audit_repos.AuditTests.test_output_json_and_markdown) ... ok
+test_rate_limit_and_timeout (test_audit_repos.AuditTests.test_rate_limit_and_timeout) ... ok
+test_read_error_never_removes_repository (test_audit_repos.AuditTests.test_read_error_never_removes_repository) ... ok
+test_readme_only_is_not_runtime (test_audit_repos.AuditTests.test_readme_only_is_not_runtime) ... ok
+test_sensitive_unexpected_field_never_published (test_audit_repos.AuditTests.test_sensitive_unexpected_field_never_published) ... ok
+test_boolean_not_integer (test_contracts.ContractTests.test_boolean_not_integer) ... ok
+test_cancellation_does_not_release_residency (test_contracts.ContractTests.test_cancellation_does_not_release_residency) ... ok
+test_correlations_and_responding_identity (test_contracts.ContractTests.test_correlations_and_responding_identity) ... ok
+test_deadline_and_model_identity (test_contracts.ContractTests.test_deadline_and_model_identity) ... ok
+test_five_invalid_examples (test_contracts.ContractTests.test_five_invalid_examples) ... ok
+test_five_valid_examples (test_contracts.ContractTests.test_five_valid_examples) ... ok
+test_release_requires_real_end_and_no_model (test_contracts.ContractTests.test_release_requires_real_end_and_no_model) ... ok
+test_schema_unknown_keywords_fail_closed (test_contracts.ContractTests.test_schema_unknown_keywords_fail_closed) ... ok
+test_unavailable_cannot_advertise_available_capability (test_contracts.ContractTests.test_unavailable_cannot_advertise_available_capability) ... ok
+test_unavailable_incompatible_unauthorized_and_expired_responses (test_contracts.ContractTests.test_unavailable_incompatible_unauthorized_and_expired_responses) ... ok
+test_unknown_fields_rejected_for_every_contract (test_contracts.ContractTests.test_unknown_fields_rejected_for_every_contract) ... ok
+test_voice_binding_is_engine_pack_specific (test_contracts.ContractTests.test_voice_binding_is_engine_pack_specific) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.113s
+
+OK
+test_api_failures_preserve_historical_commit_and_date (test_registry.RegistryTests.test_api_failures_preserve_historical_commit_and_date) ... ok
+test_api_only_get_requests_and_no_remote_git_operations (test_registry.RegistryTests.test_api_only_get_requests_and_no_remote_git_operations) ... ok
+test_branch_with_slash_encoded_exactly (test_registry.RegistryTests.test_branch_with_slash_encoded_exactly) ... ok
+test_demo_no_network_no_git_no_secret_read (test_registry.RegistryTests.test_demo_no_network_no_git_no_secret_read) ... ok
+test_demo_requires_separate_output_and_leaves_registry_unchanged (test_registry.RegistryTests.test_demo_requires_separate_output_and_leaves_registry_unchanged) ... ok
+test_duplicate_ids_and_confusing_repository_names_refused (test_registry.RegistryTests.test_duplicate_ids_and_confusing_repository_names_refused) ... ok
+test_duplicate_prs_deduplicated_and_head_identity_filtered (test_registry.RegistryTests.test_duplicate_prs_deduplicated_and_head_identity_filtered) ... ok
+test_git_mode_uses_only_ls_remote (test_registry.RegistryTests.test_git_mode_uses_only_ls_remote) ... ok
+test_inaccessible_repository_no_invention (test_registry.RegistryTests.test_inaccessible_repository_no_invention) ... ok
+test_local_snapshots_traceable_and_manual_preserved (test_registry.RegistryTests.test_local_snapshots_traceable_and_manual_preserved) ... ok
+test_manual_blockers_decisions_and_unknown_fields_preserved (test_registry.RegistryTests.test_manual_blockers_decisions_and_unknown_fields_preserved) ... ok
+test_markdown_escapes_manual_content (test_registry.RegistryTests.test_markdown_escapes_manual_content) ... ok
+test_missing_branch_is_not_ci_failure (test_registry.RegistryTests.test_missing_branch_is_not_ci_failure) ... ok
+test_missing_ci_endpoint_does_not_become_success (test_registry.RegistryTests.test_missing_ci_endpoint_does_not_become_success) ... ok
+test_mixed_generation_refused (test_registry.RegistryTests.test_mixed_generation_refused) ... ok
+test_no_ci_results_is_unknown (test_registry.RegistryTests.test_no_ci_results_is_unknown) ... ok
+test_pagination_limit_is_unknown_not_partial_green (test_registry.RegistryTests.test_pagination_limit_is_unknown_not_partial_green) ... ok
+test_pending_failure_unknown_and_sha_filter (test_registry.RegistryTests.test_pending_failure_unknown_and_sha_filter) ... ok
+test_proxy_failure_does_not_trigger_token_retry (test_registry.RegistryTests.test_proxy_failure_does_not_trigger_token_retry) ... ok
+test_read_valid_registry (test_registry.RegistryTests.test_read_valid_registry) ... ok
+test_redirect_rejected_even_to_github (test_registry.RegistryTests.test_redirect_rejected_even_to_github) ... ok
+test_repeated_update_no_duplicate_modules_missions_or_prs (test_registry.RegistryTests.test_repeated_update_no_duplicate_modules_missions_or_prs) ... ok
+test_token_only_after_anonymous_denial_and_never_in_evidence (test_registry.RegistryTests.test_token_only_after_anonymous_denial_and_never_in_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.601s
+
+OK
+test_changed_owner_and_replacement_id_rejected (test_campaign.CampaignTests.test_changed_owner_and_replacement_id_rejected) ... ok
+test_cli_commands_execute_without_connection (test_campaign.CampaignTests.test_cli_commands_execute_without_connection) ... ok
+test_cycle_rejected (test_campaign.CampaignTests.test_cycle_rejected) ... ok
+test_dependency_not_delivered_blocks_assignment (test_campaign.CampaignTests.test_dependency_not_delivered_blocks_assignment) ... ok
+test_duplicate_and_missing_ids_rejected (test_campaign.CampaignTests.test_duplicate_and_missing_ids_rejected) ... ok
+test_independent_repositories_accepted (test_campaign.CampaignTests.test_independent_repositories_accepted) ... ok
+test_main_and_branch_traversal_rejected (test_campaign.CampaignTests.test_main_and_branch_traversal_rejected) ... ok
+test_manual_blockers_and_decisions_preserved (test_campaign.CampaignTests.test_manual_blockers_and_decisions_preserved) ... ok
+test_missing_proof_never_delivered (test_campaign.CampaignTests.test_missing_proof_never_delivered) ... ok
+test_real_31_mission_graph (test_campaign.CampaignTests.test_real_31_mission_graph) ... ok
+test_repeated_reporting_has_no_duplicates_or_mutation (test_campaign.CampaignTests.test_repeated_reporting_has_no_duplicates_or_mutation) ... ok
+test_sensitive_changes_require_separate_authorization (test_campaign.CampaignTests.test_sensitive_changes_require_separate_authorization) ... ok
+test_shared_repository_collision_even_different_files (test_campaign.CampaignTests.test_shared_repository_collision_even_different_files) ... ok
+test_unknown_dependency_rejected (test_campaign.CampaignTests.test_unknown_dependency_rejected) ... ok
+test_unknown_version_repository_and_path_rejected (test_campaign.CampaignTests.test_unknown_version_repository_and_path_rejected) ... ok
+test_build_only_receipt_does_not_unlock_mission (test_campaign.GitEvidenceTests.test_build_only_receipt_does_not_unlock_mission) ... ok
+test_central_normalization_preserves_original_source_commit (test_campaign.GitEvidenceTests.test_central_normalization_preserves_original_source_commit) ... ok
+test_commit_report_receipt_and_ancestry_verified (test_campaign.GitEvidenceTests.test_commit_report_receipt_and_ancestry_verified) ... ok
+test_derived_base_is_accepted_only_with_verified_ancestry (test_campaign.GitEvidenceTests.test_derived_base_is_accepted_only_with_verified_ancestry) ... ok
+test_docs_only_planning_child_preserves_technical_base (test_campaign.GitEvidenceTests.test_docs_only_planning_child_preserves_technical_base) ... ok
+test_failed_skipped_zero_or_boolean_check_rejected (test_campaign.GitEvidenceTests.test_failed_skipped_zero_or_boolean_check_rejected) ... ok
+test_foreign_receipt_origin_and_wrong_subject_rejected (test_campaign.GitEvidenceTests.test_foreign_receipt_origin_and_wrong_subject_rejected) ... ok
+test_non_documentary_planning_child_cannot_bypass_base (test_campaign.GitEvidenceTests.test_non_documentary_planning_child_cannot_bypass_base) ... ok
+test_normalized_receipt_checks_original_receipt_digest_too (test_campaign.GitEvidenceTests.test_normalized_receipt_checks_original_receipt_digest_too) ... ok
+test_partial_receipt_does_not_unlock_dependencies (test_campaign.GitEvidenceTests.test_partial_receipt_does_not_unlock_dependencies) ... ok
+test_physical_claim_and_wrong_mission_rejected (test_campaign.GitEvidenceTests.test_physical_claim_and_wrong_mission_rejected) ... ok
+test_repository_inaccessible_rejected (test_campaign.GitEvidenceTests.test_repository_inaccessible_rejected) ... ok
+test_sibling_branch_delivery_rejected_without_mutating_state (test_campaign.GitEvidenceTests.test_sibling_branch_delivery_rejected_without_mutating_state) ... ok
+test_successful_build_and_demo_are_not_fabricated_test_counts (test_campaign.GitEvidenceTests.test_successful_build_and_demo_are_not_fabricated_test_counts) ... ok
+test_unsafe_evidence_path_rejected (test_campaign.GitEvidenceTests.test_unsafe_evidence_path_rejected) ... ok
+test_verification_does_not_modify_git_or_files (test_campaign.GitEvidenceTests.test_verification_does_not_modify_git_or_files) ... ok
+test_wrong_hash_and_nonexistent_commit_rejected (test_campaign.GitEvidenceTests.test_wrong_hash_and_nonexistent_commit_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.371s
+
+OK
+test_blockers_are_preserved_in_plan_and_markdown (test_lock.LockTests.test_blockers_are_preserved_in_plan_and_markdown) ... ok
+test_boolean_not_integer_and_unknown_field_refused (test_lock.LockTests.test_boolean_not_integer_and_unknown_field_refused) ... ok
+test_branch_commit_and_evidence_path_admission (test_lock.LockTests.test_branch_commit_and_evidence_path_admission) ... ok
+test_ci_cannot_inherit_another_commit_or_repository_success (test_lock.LockTests.test_ci_cannot_inherit_another_commit_or_repository_success) ... ok
+test_cli_fails_closed_without_echoing_sensitive_error_details (test_lock.LockTests.test_cli_fails_closed_without_echoing_sensitive_error_details) ... ok
+test_compare_no_duplicate_or_implicit_mutation (test_lock.LockTests.test_compare_no_duplicate_or_implicit_mutation) ... ok
+test_complete_candidate_validates_without_granting_runtime (test_lock.LockTests.test_complete_candidate_validates_without_granting_runtime) ... ok
+test_duplicate_component_cannot_hide_missing_one (test_lock.LockTests.test_duplicate_component_cannot_hide_missing_one) ... ok
+test_duplicate_json_nonfinite_and_huge_file_refused (test_lock.LockTests.test_duplicate_json_nonfinite_and_huge_file_refused) ... ok
+test_duplicate_repository_identity_or_owner_rejected (test_lock.LockTests.test_duplicate_repository_identity_or_owner_rejected) ... ok
+test_exact_platform_inventory_required (test_lock.LockTests.test_exact_platform_inventory_required) ... ok
+test_independent_jvm_gate_does_not_depend_on_native_voice_or_llm (test_lock.LockTests.test_independent_jvm_gate_does_not_depend_on_native_voice_or_llm) ... ok
+test_missing_f0_unknown_dependency_and_cycles_refused (test_lock.LockTests.test_missing_f0_unknown_dependency_and_cycles_refused) ... ok
+test_missing_repository_map_fails_closed (test_lock.LockTests.test_missing_repository_map_fails_closed) ... ok
+test_no_go_with_unresolved_conflicts_or_missing_dependencies (test_lock.LockTests.test_no_go_with_unresolved_conflicts_or_missing_dependencies) ... ok
+test_only_readonly_git_objects_are_used (test_lock.LockTests.test_only_readonly_git_objects_are_used) ... ok
+test_unknown_ci_remains_unknown_in_report (test_lock.LockTests.test_unknown_ci_remains_unknown_in_report) ... ok
+test_examples_are_checked_without_approval_or_activation (test_proposals.TechnicalObservationTests.test_examples_are_checked_without_approval_or_activation) ... ok
+test_free_text_and_personal_data_not_admitted (test_proposals.TechnicalObservationTests.test_free_text_and_personal_data_not_admitted) ... ok
+test_invalid_metrics_and_boolean_coercion_are_refused (test_proposals.TechnicalObservationTests.test_invalid_metrics_and_boolean_coercion_are_refused) ... ok
+test_unknown_module_and_string_metrics_are_refused (test_proposals.TechnicalObservationTests.test_unknown_module_and_string_metrics_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.350s
+
+OK
+test_android_matrix_must_include_both_received_apis (test_reception.ReceivedComposition.test_android_matrix_must_include_both_received_apis) ... ok
+test_apk_digest_mismatch_rejected (test_reception.ReceivedComposition.test_apk_digest_mismatch_rejected) ... ok
+test_build_count_never_qualifies_an_android_operation (test_reception.ReceivedComposition.test_build_count_never_qualifies_an_android_operation) ... ok
+test_ci_from_another_run_rejected (test_reception.ReceivedComposition.test_ci_from_another_run_rejected) ... ok
+test_device_source_mismatch_rejected (test_reception.ReceivedComposition.test_device_source_mismatch_rejected) ... ok
+test_device_tree_mismatch_rejected (test_reception.ReceivedComposition.test_device_tree_mismatch_rejected) ... ok
+test_different_test_apk_or_package_cannot_certify_candidate (test_reception.ReceivedComposition.test_different_test_apk_or_package_cannot_certify_candidate) ... ok
+test_failed_device_cannot_carry_qualified_operations (test_reception.ReceivedComposition.test_failed_device_cannot_carry_qualified_operations) ... ok
+test_false_physical_claim_rejected (test_reception.ReceivedComposition.test_false_physical_claim_rejected) ... ok
+test_job_failure_cannot_be_overwritten_by_receipt_pass (test_reception.ReceivedComposition.test_job_failure_cannot_be_overwritten_by_receipt_pass) ... ok
+test_old_validator_is_still_strict_and_cannot_promote_new_source (test_reception.ReceivedComposition.test_old_validator_is_still_strict_and_cannot_promote_new_source) ... ok
+test_one_api_without_crud_proof_does_not_award_crud (test_reception.ReceivedComposition.test_one_api_without_crud_proof_does_not_award_crud) ... ok
+test_provenance_link_cannot_point_elsewhere (test_reception.ReceivedComposition.test_provenance_link_cannot_point_elsewhere) ... ok
+test_raw_file_digest_and_duplicate_receipt_id_rejected (test_reception.ReceivedComposition.test_raw_file_digest_and_duplicate_receipt_id_rejected) ... ok
+test_real_receipt_and_score_validate_without_authority (test_reception.ReceivedComposition.test_real_receipt_and_score_validate_without_authority) ... ok
+test_score_scope_cannot_be_extended_to_real_chat (test_reception.ReceivedComposition.test_score_scope_cannot_be_extended_to_real_chat) ... ok
+test_sensitive_permission_and_runtime_connections_rejected (test_reception.ReceivedComposition.test_sensitive_permission_and_runtime_connections_rejected) ... ok
+test_synthetic_valid_receipt_preserves_baseline_mapping (test_reception.ReceivedComposition.test_synthetic_valid_receipt_preserves_baseline_mapping) ... ok
+test_two_different_builds_of_same_commit_do_not_form_one_matrix (test_reception.ReceivedComposition.test_two_different_builds_of_same_commit_do_not_form_one_matrix) ... ok
+test_absent_latency_must_not_be_zero (test_v1.V1Safety.test_absent_latency_must_not_be_zero) ... ok
+test_active_without_approved_runtime_refused (test_v1.V1Safety.test_active_without_approved_runtime_refused) ... ok
+test_all_sensitive_actions_stay_closed (test_v1.V1Safety.test_all_sensitive_actions_stay_closed) ... ok
+test_boolean_claim_needs_evidence (test_v1.V1Safety.test_boolean_claim_needs_evidence) ... ok
+test_ci_failure_not_reclassified_as_success (test_v1.V1Safety.test_ci_failure_not_reclassified_as_success) ... ok
+test_ci_of_another_commit_refused (test_v1.V1Safety.test_ci_of_another_commit_refused) ... ok
+test_criterion_weights_cannot_silently_change (test_v1.V1Safety.test_criterion_weights_cannot_silently_change) ... ok
+test_default_branch_is_not_assumed_main (test_v1.V1Safety.test_default_branch_is_not_assumed_main) ... ok
+test_documentation_does_not_earn_points (test_v1.V1Safety.test_documentation_does_not_earn_points) ... ok
+test_duplicate_json_keys_are_rejected (test_v1.V1Safety.test_duplicate_json_keys_are_rejected) ... ok
+test_duplicate_module_refused (test_v1.V1Safety.test_duplicate_module_refused) ... ok
+test_false_prepared_points_refused (test_v1.V1Safety.test_false_prepared_points_refused) ... ok
+test_missing_dimension_never_defaults_to_false (test_v1.V1Safety.test_missing_dimension_never_defaults_to_false) ... ok
+test_model_artifact_and_path_escape_refused (test_v1.V1Safety.test_model_artifact_and_path_escape_refused) ... ok
+test_p95_not_published_under_twenty_samples (test_v1.V1Safety.test_p95_not_published_under_twenty_samples) ... ok
+test_physical_qualification_is_not_source_or_emulator (test_v1.V1Safety.test_physical_qualification_is_not_source_or_emulator) ... ok
+test_preparation_never_marks_gate_pass (test_v1.V1Safety.test_preparation_never_marks_gate_pass) ... ok
+test_public_artifact_needs_exact_hash (test_v1.V1Safety.test_public_artifact_needs_exact_hash) ... ok
+test_ready_label_without_meaning_refused (test_v1.V1Safety.test_ready_label_without_meaning_refused) ... ok
+test_real_snapshot_is_valid (test_v1.V1Safety.test_real_snapshot_is_valid) ... ok
+test_root_does_not_open_from_workflow_success (test_v1.V1Safety.test_root_does_not_open_from_workflow_success) ... ok
+test_runtime_connected_boolean_cannot_open_gate (test_v1.V1Safety.test_runtime_connected_boolean_cannot_open_gate) ... ok
+test_score_claim_cannot_skip_platform (test_v1.V1Safety.test_score_claim_cannot_skip_platform) ... ok
+test_score_platform_cannot_be_changed_to_weaker_layer (test_v1.V1Safety.test_score_platform_cannot_be_changed_to_weaker_layer) ... ok
+test_score_weights_are_fixed_at_one_hundred (test_v1.V1Safety.test_score_weights_are_fixed_at_one_hundred) ... ok
+test_self_claimed_approval_is_not_authorization (test_v1.V1Safety.test_self_claimed_approval_is_not_authorization) ... ok
+test_short_git_sha_refused (test_v1.V1Safety.test_short_git_sha_refused) ... ok
+test_source_inspection_is_not_execution (test_v1.V1Safety.test_source_inspection_is_not_execution) ... ok
+test_svg_is_deterministic_and_labels_unassessed_scope (test_v1.V1Safety.test_svg_is_deterministic_and_labels_unassessed_scope) ... ok
+test_truncated_tree_refused (test_v1.V1Safety.test_truncated_tree_refused) ... ok
+test_unknown_repository_licence_is_preserved (test_v1.V1Safety.test_unknown_repository_licence_is_preserved) ... ok
+test_unpinned_source_link_refused (test_v1.V1Safety.test_unpinned_source_link_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.084s
+
+OK
+{"capabilities": 9, "gates": 8, "models_acquired": false, "modules": 9, "qualified_points": 0, "runtime_activated": false, "scope": "OFFLINE_COORDINATION_ONLY", "source_documents": 54, "status": "PASS", "tested_commit": "2993961a537b5abcb0dda177691ebbd6b5877345", "tested_tree": "106b7a2172f4f8f341612ca9e291ca88faf6b06e"}
+{"llm_generation": "NOT_RUN", "physical_android": "NOT_RUN", "qualified_points": 0, "runtime_authority_granted": false, "scope": "RECEIVED_LOCAL_INTERFACE_ONLY", "scored_source": null, "source_audit_lock_changed": false, "status": "PASS"}
+{"can_activate": false, "hashed_files": 36, "historical_files_preserved": 397, "module_receipts": 8, "status": "PASS_DOCUMENTARY_CHECK_ONLY"}
+test_apk_build_cannot_replace_android_reception (test_reception.ReuseReceptionTests.test_apk_build_cannot_replace_android_reception) ... ok
+test_closed_campaign_cannot_be_reported_as_new_attempt (test_reception.ReuseReceptionTests.test_closed_campaign_cannot_be_reported_as_new_attempt) ... ok
+test_green_jvm_cannot_promote_any_runtime_capability (test_reception.ReuseReceptionTests.test_green_jvm_cannot_promote_any_runtime_capability) ... ok
+test_llm_tests_reproducing_defects_do_not_mean_safety_pass (test_reception.ReuseReceptionTests.test_llm_tests_reproducing_defects_do_not_mean_safety_pass) ... ok
+test_nexus_host_adapter_is_not_a_runtime_connection (test_reception.ReuseReceptionTests.test_nexus_host_adapter_is_not_a_runtime_connection) ... ok
+test_other_snapshot_cannot_inherit_fresh_core_tests (test_reception.ReuseReceptionTests.test_other_snapshot_cannot_inherit_fresh_core_tests) ... ok
+test_raw_preflight_contradicted_by_anr_is_not_accepted (test_reception.ReuseReceptionTests.test_raw_preflight_contradicted_by_anr_is_not_accepted) ... ok
+test_real_receipts_pass_only_documentary_check (test_reception.ReuseReceptionTests.test_real_receipts_pass_only_documentary_check) ... ok
+test_voice_skips_cannot_be_reported_as_passes (test_reception.ReuseReceptionTests.test_voice_skips_cannot_be_reported_as_passes) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.123s
+
+OK

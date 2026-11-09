@@ -1,0 +1,1977 @@
+{
+  "module": "VOICE",
+  "source": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+  "expected_source": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+  "junit": [
+    {
+      "path": "studioRuntime/build/test-results/test/TEST-com.jarvis.voice.studio.StudioPcmWindowTests.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.studio.StudioPcmWindowTests",
+          "name": "contiguousDecodedFramesSelectExactFiveSecondsAtStartAndAfterSeek",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioPcmWindowTests",
+          "name": "earlyEosAndEmptyBlocksCannotProduceACompleteOrPaddedRegion",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "studioRuntime/build/test-results/test/TEST-com.jarvis.voice.studio.StudioStateTests.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.studio.StudioStateTests",
+          "name": "simpleSettingsKeepNeutralInputsAndRequireExplicitPauseOptIn",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioStateTests",
+          "name": "durationAndBoundariesRejectShortFilesAndNeverCropSilently",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioStateTests",
+          "name": "profileConfirmationNeverAcceptsDifferentIdentityHashOrDisabledProfile",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioStateTests",
+          "name": "navigationAndInterruptedWizardRoundTripRetainPrivateDraftButNoConsent",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "studioRuntime/build/test-results/test/TEST-com.jarvis.voice.studio.StudioParityTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.studio.StudioParityTests",
+          "name": "officialPublicProfileKeepsExact005iPcmWithAndWithoutPausesAndIntents",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "studioRuntime/build/test-results/test/TEST-com.jarvis.voice.studio.StudioLibraryTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.studio.StudioLibraryTests",
+          "name": "twoFilesBelongToOneNewIdentityAndNeverReplacePreviouslyActiveVoice",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioLibraryTests",
+          "name": "encryptedIArchiveRestoresExactlyButStillRequiresNewStudioConfirmation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.studio.StudioLibraryTests",
+          "name": "invalidConsentRegionOrCanceledEncodingDoesNotSelectNewVoiceOrCommitProfile",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "app/build/test-results/testDebugUnitTest/TEST-com.jarvis.voice.speech.SpeechRouterTest.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "cloudFailureBeforeAcceptanceFallsBack",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "invalidCloudRequestDoesNotFallBack",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "onlineHybridUsesCloud",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "blankTextDoesNotReachAnyEngine",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "localModeDoesNotUseCloud",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "explicitCloudDoesNotSilentlyUseLocal",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "lifecycleReleasesBothEngines",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speech.SpeechRouterTest",
+          "name": "offlineHybridUsesLocal",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionStoreTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStoreTests",
+          "name": "canceledSaveAndDeletionAreIsolatedAndNotesNeedRealAudition",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStoreTests",
+          "name": "abLocksExactProfileSeedTextSettingsAndActiveIdentity",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStoreTests",
+          "name": "archiveMigrationPreservesExactActiveProfileAndOmittedWavsWithoutReencoding",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionStyleTests.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "publicPersonaMappingOnlyChangesSoftwareLabelsAndDoesNotRewriteTutoiement",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "neutralAndAthenaPlansDifferReproduciblyWithoutTextOrSamplingChange",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "styleNeverGrantsPauseConsentOrOverridesExplicitValue",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "inconsistentDurationOrIncompleteEosCannotProduceTimingProof",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "existingTokenAndAmbiguousBoundaryRefusalsRemainEffective",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "comparisonReusesExactRawPcmAndVaultRevocationWithoutTouchingOtherCaches",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "intensityRhythmAndRequiredNativeEmotionAreRefusedBeforePreparation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionStyleTests",
+          "name": "timelineUsesExactRenderedSampleOffsetsAndActualZeroPause",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionContractTests.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.expression.ExpressionContractTests",
+          "name": "strictValidationAndNoPayloadEcho",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionContractTests",
+          "name": "unknownIntentDeterministicAndNeverApplied",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionContractTests",
+          "name": "roundTripAndNoPersonaVoiceCoupling",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ExpressionContractTests",
+          "name": "identityAndPriorityCannotBypassGuards",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ProsodyTests.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.expression.ProsodyTests",
+          "name": "explicitWholeSentencePausesOnlyAndNoImplicitPermission",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ProsodyTests",
+          "name": "boundsEosAndCancellationNeverDeliverPartialSuccess",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ProsodyTests",
+          "name": "rendererPreservesExactFloatPcmAndInsertsOnlyRequestedSilence",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.expression.ProsodyTests",
+          "name": "longSentenceAndMeaningAreNeverEditedOrSplitByIntent",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.PublicNeutralParityTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.expression.PublicNeutralParityTests",
+          "name": "publicAlbaNeutralAndUnsupportedStyleAreBitIdenticalToUnchanged005gBackend",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceFusion02/build/test-results/test/TEST-com.jarvis.voice.fusion02.PublicRenderBenchmarkTest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.fusion02.PublicRenderBenchmarkTest",
+          "name": "publicWholeDocumentsThroughCorrelatedRenderOnlyProxy",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceFusion02/build/test-results/test/TEST-com.jarvis.voice.fusion02.TimelineTests.xml",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "executableProxyWipesPrivateBufferAndCompletes",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "completeRequiresObservedWritePresentationEosAndAllSegments",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "replayStaleGenerationAndCapacityFailClosed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "metadataContainsOnlyAllowlistedOperationalFields",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "avatarRejectsDuplicatesAndStopsAtTerminalWithoutPhonemes",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "stopDoesNotReleaseAdmissionWhileWorkerBlockedAndLateAudioRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "canonicalKeysAndSegmentBounds",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "clocksAreMonotonicRelativeAndTestClockDeclared",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "queuedAndFirstPcmAreUniqueAndCounterBounded",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "stopIsStickyRejectsLateAndWrongCorrelation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "rendererFailureAndNonfiniteAudioCannotSucceed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "unknownQuarantinesAdmissionEvenAfterWorkerReturns",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "truncatedAndNoEosNeverSucceed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "coreSttAndUnqualifiedEmotionsRemainUnsupported",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "boundedTelemetryHasExplicitGapAndImmutableSnapshot",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.fusion02.TimelineTests",
+          "name": "renderOnlyCannotClaimDevicePlayback",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.PublicTokenizationTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.PublicTokenizationTests",
+          "name": "exactOfficialTokenizer50_51_100_150_200LosslessAndDeterministic",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.PublicObservationParityTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.PublicObservationParityTests",
+          "name": "observedEngineKeepsExactOfficialPcmAndMeasuresStages",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.LongFormTests.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "invalidUtf16AndReservedTokensRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "explicitNewlinePreservesQuotesAndDoesNotRewriteNames",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "overSixJobsRequiresSeparateConsentedBatches",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "incompleteOrOversizedIsRefusedAsAWholeBeforeGeneration",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "cancellationInJobNeverConsumesIt",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "interruptAndExplicitResumeNeverReplaysPreviousCompletedJob",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "quotedOrDecimalOrAbbreviationRequiresHumanCuts",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.LongFormTests",
+          "name": "offsetsPreserveEverySpaceAccentAndOrder",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.PublicLongFormPerformanceTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.PublicLongFormPerformanceTests",
+          "name": "sixNaturalFrenchJobsUseOneThreadCloseEachEngineAndRemainBounded",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.ProgressiveTests.xml",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "invalidSampleRefusedBeforeQueue",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "failureMidStreamCannotBecomeDeferredSuccess",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "slowProducerFallsBackBeforeOpeningOutput",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "smallPhraseUsesCompleteDeferredPath",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "unknownAudioCloseIsQuarantinedRatherThanReportedComplete",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "missingEosIsNotSuccess",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "rapidProducerKeepsEverySampleAcross101Cycles",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "unsupportedDeviceAlwaysFallsBackBeforeAnyWriteEvenWhenFast",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "cancelledBlockedProducerWakesAndDoesNotLeakThread",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.ProgressiveTests",
+          "name": "perJobBudgetCannotBeChainedAway",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.EmotionTests.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.EmotionTests",
+          "name": "neutralReferenceRemainsAvailable",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.EmotionTests",
+          "name": "surpriseRefusedBeforeRendering",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.EmotionTests",
+          "name": "fakeIntensityRefusedEvenInNeutral",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.EmotionTests",
+          "name": "noLabelCanEnableAnUnheardEmotion",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.EmotionTests",
+          "name": "legacyMappingNeverGrantsAcousticCapability",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.NarrativePublicDemoTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.NarrativePublicDemoTests",
+          "name": "sixPublicNativeJobsMatchBaselineAndWriteLocalDemonstration",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.SpeedTraceTests.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.SpeedTraceTests",
+          "name": "firstEventIsNotOverwrittenAndDurationsAccumulate",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.SpeedTraceTests",
+          "name": "refusalAndCancellationNeverInventPlayback",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.SpeedTraceTests",
+          "name": "regressionRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.SpeedTraceTests",
+          "name": "missingIsNullNotZeroAndExportContainsOnlyCounters",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voice04Runtime/build/test-results/test/TEST-com.jarvis.voice.speed.NarrativeDeliveryTests.xml",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "cancelledCurrentJobIsNotConsumed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "nativeUnknownCannotBeResetOrResumed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "concurrencyNeverAdmitsAnotherHeavyJob",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "pooledProgressiveKeepsExactSamplesAndReleasesBothSlots",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "poolOwnershipAndUnknownShutdownAreFailClosed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "poolReusesAndErases101JobsWithFixedBudget",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "sixJobsPauseAndExplicitResumeKeepOrder",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "everyModeExcludesOldApiAndAutoRemembersSlowProducer",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "pooledCapturePresentsOnlyValidPrefixAndNeverMutatesSource",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.speed.NarrativeDeliveryTests",
+          "name": "captureBudgetAndEosCannotBeBypassed",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.ReferenceAudioTests.xml",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "qualityDetectsSilenceAndClippingAndWavIsMono24k",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "privateImportSurvivesRestartAndInvalidReplacementPreservesPrevious",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "failedOrCancelledExcerptPreservesPreviousAndLeavesNoTemporaryFile",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "longExcerptsStayFiniteBeyondIntMultiplicationLimit",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "resamplesWithAntiAliasingAndPreservesSpeechBand",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "convertsStereoToMonoWithoutChangingGain",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ReferenceAudioTests",
+          "name": "rejectsPathTraversalInvalidFormatsAndPretendCloning",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.ExperimentalImportTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalImportTests",
+          "name": "duplicateLocalZipHeadersAreRejectedEvenWithValidFirstEntry",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalImportTests",
+          "name": "wrongDocumentDirectoryUnknownNameMissingAndSizeHaveDistinctReasons",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalImportTests",
+          "name": "everyOfficialStreamingNameIsAcceptedWithoutNormalization",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.QualitySamplerTests.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.QualitySamplerTests",
+          "name": "qualityOneStepExactlyPreservesStableEngineWithSamePublicProfileAndSeed",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.QualitySamplerTests",
+          "name": "cancelledAndInvalidFieldCannotProduceASample",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.QualitySamplerTests",
+          "name": "comparisonRejectsChangedTextSeedVoiceAndCorruptedAudio",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.QualitySamplerTests",
+          "name": "referenceWarningsAndContiguousWindowPreserveInput",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.QualitySamplerTests",
+          "name": "matchesOfficialTorchTraceAndScheduleForEveryStepCount",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.PocketTests.xml",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 8,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "installRealPackAndRejectCorruptedReplacement",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "frontendMatchesPublishedExportFixtures",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "voicePresetHasMatchingLayerCachesAndOffsets",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "nativeRequestCancellationFromAnotherThreadAndRecovery",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "frontendMatchesOfficialFrenchCorpus",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "unsafeZipPreservesExistingPackAndDoesNotEscape",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "cancellationIsStickyAndPreventsInference",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "realFrenchInferenceAndCancellation",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "metricsSeparateComputeAndPlayback",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "pinnedPackHasSixFrenchLayersAndNoCloningEncoder",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PocketTests",
+          "name": "refusesEmptyReservedAndOversizedText",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.PlaybackEvidenceTests.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.PlaybackEvidenceTests",
+          "name": "shortAndLongUtterancesRequireAllFramesAndRealProgress",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PlaybackEvidenceTests",
+          "name": "stalledStartPausedUninitializedAndTerminalCounterNeverPassOnElapsedTime",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PlaybackEvidenceTests",
+          "name": "privateReplayPreservesExactPcmAndOldAudioAfterCancellationOrCorruption",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PlaybackEvidenceTests",
+          "name": "onlyAlreadyPresentedTimestampMayCorroborateFinalFrame",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PlaybackEvidenceTests",
+          "name": "silenceNonFinitePeakAndRmsAreMeasuredBeforeConversion",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.PcmDeliveryTests.xml",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "adaptiveConsumerIsIndependentOfProducer",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "deferredWaitsForCompleteSentenceAndPreservesEverySample",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "stopDuringDeferredGenerationProducesNoSound",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "queueIsBoundedAndRejectsInvalidPcm",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "slowProducerDefersPlaybackAndRaisesAdaptiveReserve",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.PcmDeliveryTests",
+          "name": "stopDuringPlaybackAndSinkFailureArePropagated",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.PerformanceTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.PerformanceTests",
+          "name": "compareOneAndTwoThreadsStreamingAndWholeSentence",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.CandidateVoiceEncoderTests.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.CandidateVoiceEncoderTests",
+          "name": "preCancelledCandidateNeverLoadsModels",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.CandidateVoiceEncoderTests",
+          "name": "realEncoderAndAll18StatesMatchIndependentOfficialGolden",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "pocketRuntime/build/test-results/test/TEST-com.jarvis.voice.pocket.ExperimentalProfileTests.xml",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "zipTraversalAndInt8InputAreRejectedBeforeActivation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "originalPrivateZipInstallsWithEmbeddedManifest",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "profileRejectsWrongPackCorruptionAndMissingConsent",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "wavParserExtractsExactlyFiveSecondsAndRejectsStereo",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "profileRoundTripCancellationPreservesOldStateAndDeletionIsComplete",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.pocket.ExperimentalProfileTests",
+          "name": "realOfflineProfileIsEncodedPersistedSelectedAndUsedByFP32Generator",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceFinalSdk/build/test-results/test/TEST-com.jarvis.voice.final01.VoiceEventTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.final01.VoiceEventTests",
+          "name": "stableMetadataContainsNoIdentityTextAudioOrAlignmentClaim",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.VoiceEventTests",
+          "name": "completeMustAccountForEverySegmentIncludingExplicitOmissions",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.VoiceEventTests",
+          "name": "invalidCountersCannotBecomeProgress",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceFinalRuntime/build/test-results/test/TEST-com.jarvis.voice.final01.FinalRuntimeTests.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "cachePreservesRawFloatBitsAndRejectsCorruptionAndWrongProfileContext",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "unknownNativeCannotResumeAndObserverCannotBreakResourceOwnership",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "changedUiOptionsNeverSilentlyReuseAnOldSamplerOrUnsupportedEmotion",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "unsupportedEmotionAndResourceGuardsAreExplicit",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "invalidInputAndUnsplitWordAreRefusedRatherThanTruncated",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "longSentenceBacktracksAtClausesOrWordsWithoutDroppingPunctuationOrNumbers",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "interruptedPartialSegmentRequiresExplicitDecisionAndNeverReplaysEarlierOne",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "spacedClosingQuoteStaysWithItsSentenceWithoutCreatingAnEmptyJob",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "thousandsOfWordsAreLosslessAndEverySegmentRemainsBounded",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "stopAfterFinalFrameDoesNotMakeCompletedSegmentReplayable",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "quantilesDoNotReplaceUnavailableMeasurementsWithZero",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "acousticFeaturesSeparateSilenceFromCleanVoicedSignalWithoutIdentityClaims",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalRuntimeTests",
+          "name": "pauseAndResumeNeverReplayCompletedSegments",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceFinalRuntime/build/test-results/test/TEST-com.jarvis.voice.final01.FinalPublicBenchmarkTest.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.final01.FinalPublicBenchmarkTest",
+          "name": "nativeCancelAtFirstPcmReturnsCloseWithoutClaimingUnload",
+          "skip": true,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.final01.FinalPublicBenchmarkTest",
+          "name": "officialPublicCorpusParityAndRepeatedWholeGeneration",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgePilot/build/test-results/testDebugUnitTest/TEST-com.jarvis.voice.bridgepilot.PilotTests.xml",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "defaultDisabledAndLocalOptInMustBeVisible",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "concurrentRequestsConsumeAtMostOneGrant",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "packageManagerResolvesRealCallingUidAndSameCertificate",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "actualStubRefusesCallerBeforeMalformedPayloadDeserialization",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "selfDeclaredGlobalLeaseNeverAuthorizesGeneration",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "wrongUidCertificateAndSharedUidAreDenied",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "grantCannotBeReplayedOrReissuedAfterConsumption",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "authorizedStubStillRefusesNativeGenerationAndRevokesOnUnbind",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "strictJsonRejectsMalformedDuplicateEscapedUnknownAndNonStringFields",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "textIsNeverTruncatedAndLegacyValidationAgrees",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "budgetCannotOutliveLocalAuthorizationOrExceedProtocol",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "expirationRevocationAndRestartInvalidateAuthority",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "oldResultsAndChangedGenerationAreRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "sessionAndGrantAreBoundToRealPrincipal",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "keyRejectsNonCanonicalIdsAndInvalidGeneration",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "activityIsOptInAndPauseRevokes",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.PilotTests",
+          "name": "helloCannotClaimNativeCapabilitiesOrExposeProfiles",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgePilot/build/test-results/testDebugUnitTest/TEST-com.jarvis.voice.bridgepilot.Fusion02ProposalTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridgepilot.Fusion02ProposalTests",
+          "name": "proposalCannotBypassPrincipalGrantOrLeaseExpiration",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.Fusion02ProposalTests",
+          "name": "proposalThroughActualV1AuthorityStillRefusesNativeAndReplay",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridgepilot.Fusion02ProposalTests",
+          "name": "localStopRevocationDoesNotAttestNativeUnloadOrFreeGlobalLease",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgeHarness/build/test-results/test/TEST-com.jarvis.voice.bridge.harness.AdapterTests.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridge.harness.AdapterTests",
+          "name": "dtoMatchesUnchanged005iExactlyWithoutChangingTextOrSampling",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.harness.AdapterTests",
+          "name": "unsupportedEmotionIsHonestMetadataAndWrongEngineCannotFallback",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.harness.AdapterTests",
+          "name": "defaultPortNeverLoadsOrConnectsAndRepeatedCancelHasNoSideEffect",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceSdk/build/test-results/test/TEST-com.jarvis.voice.sdk.ExpressionSpeechAdapterTest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.sdk.ExpressionSpeechAdapterTest",
+          "name": "cancellationBeforeOrAfterSoftwarePauseNeverPublishesLateTimelineOrAudio",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.ExpressionSpeechAdapterTest",
+          "name": "changedTextCannotBeDeliveredAsRequestedTimingOrAudio",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.ExpressionSpeechAdapterTest",
+          "name": "failedAvatarListenerDoesNotChangeAudioOrStartAnotherEngine",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.ExpressionSpeechAdapterTest",
+          "name": "sdkUsesExistingRendererSoftwarePausesAndPublishesOnlyRelativeTiming",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceSdk/build/test-results/test/TEST-com.jarvis.voice.sdk.SpeechSessionTest.xml",
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "partialPlaybackIsNotSuccess",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "knownPreNativeValidationRefusalAllowsExplicitCorrectedRequest",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "requestCannotSelectAnotherIdentityThanItsBoundProfile",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "noSilentBatchTruncationOrDuplicateRequest",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "cleanupFailureSuppressedByUseDuringCancellationOrRefusalPreventsSecondEngineCall",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "diagnosticObjectsDoNotEchoTextOrPrivatePcm",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "requestStopAllowsExplicitNewRequestAfterDrain",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "closeDuringRenderWaitsForActualReturnAndRejectsLatePcm",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "absentProfileRefusesBeforeModelOrVaultMutation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "focusObservationFromPreviousUtteranceCannotBeReused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "unknownOutputFailureCannotTriggerAnotherEngineCall",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "sequentialBatchUsesOnePortAndOrderedPcm",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "completeEosRequiredBeforePlayback",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "totalBatchPreservesTwentySecondLimit",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "nonFinitePcmNeverPlays",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "focusUnknownIsNotOfflinePlaybackProof",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "fallbackRequiresExplicitVerifiedOfflineVoice",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "audioCloseFailureBlocksSubsequentDispatch",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "uncertainEngineFailureBlocksOtherSessionsWithoutFallback",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "missingPackReturnsRealAdapterRefusalWithoutNativeLoad",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "preCancelledRequestDoesNotCallEngine",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "frameQueueRejectsOverflowWithoutLosingFirstFrame",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "focusLossRefusesContinuation",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "frameQueueCopiesAndPreservesOrderAndBound",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.sdk.SpeechSessionTest",
+          "name": "interruptedOrCompletedRequestCannotBeReplayed",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.CoordinatorTests.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "replayWindowSaturationRefusesWithoutEvictingLiveTombstones",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "completedOperationCannotBeReplayedWithinDeadlineAndOldSessionCannotConsumeResponse",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "concurrentReservationsHaveOneWinnerWithoutGlobalArbiterClaim",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "oneHeavyWorkAndTwoGibFloorAreNeverRelaxed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "processDeathQuarantinesAndOldGenerationCannotReleaseNewJob",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "unknownResidentsSensorsLowMemoryAbsenceAndApiFail",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "completePlaybackStillRequiresNativeEndAndResidentRelease",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.CoordinatorTests",
+          "name": "cancelIsIdempotentAndExpirationNeverMeansUnloaded",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.MapperTests.xml",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "consentProfileConfirmationSessionAuthorizationAndContentAreAllRequired",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "wrongPackModelAndProfileNeverFallBackToAnotherVoice",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "staleSessionCorrelationDeadlineAndWrongProvenanceFailClosed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "declaredCoreRoleAndAuthorizationUuidDoNotAuthenticate",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "unsupportedOptionsAreRejectedAndPriorityNeverPreempts",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "exactAuthorizedPayloadCannotBeSubstitutedAndPrivateToStringsAreRedacted",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "remainingTimeUsesLocalDeadlineNotAnotherClockDomain",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "responseSuccessMeansGeneratedOnlyNotPlayedOrAudible",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "api24And25KeepTheirOldTtsAndCannotEnterTheVoiceBridge",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "fallbackRequiresExplicitRequestAndStoppedVoiceAndOfflineReadyTts",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "unicodeBoundsRejectMalformedDataWithoutTrimmingOrExecutingText",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.MapperTests",
+          "name": "capabilityDoesNotDiscloseProfilesForAbsentUnauthorizedOrExpiredContext",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.SchemaTests.xml",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "unknownStateCannotBeAvailableAndNoFakeQualifiedCapability",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "booleansAndFloatingNumbersAreNeverTransportIntegers",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "resultErrorAreExclusiveAndNoPrivateLogFlag",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "duplicateEscapedKeysPermissiveSyntaxDepthAndTrailingBytesFail",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "refusedResultIsDistinctAndStatusErrorMismatchOrUnknownApiCannotSucceed",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "unknownNestedFieldsAndClosedVersionsFail",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "invalidUtcUuidUnicodeAndOversizedObjectsFail",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "fivePinnedSchemasValidateAndMapOnlyClosedSpeechSubset",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.bridge.SchemaTests",
+          "name": "releasedLeaseRequiresAllProofsAndGenerationIsFenced",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "identityRuntime/build/test-results/test/TEST-com.jarvis.voice.identity.VoiceIdentityVaultTests.xml",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "repeatedInstancesDoNotOverwriteEachOthersTransactionsAndQuotaRefusalIsAtomic",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "preCancelledAndMidEncodingCancelledCannotAddProfileOrLoseReference",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "eachReferenceRequiresConsentAndSameSpeakerConfirmationAndNeutralIsManual",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "disabledProfilesAndMissingHumanScoresAreNotAutomaticallyActivatedOrRated",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "interruptedOrUnknownSchemaFailsClosedWithoutResettingTheVault",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "identityIsolationAndDestructiveConfirmationNeverSelectAnotherProfile",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "deletingOneProfileCacheNeverDeletesAnotherProfileOrIdentityAudio",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "comparisonUsesDistinctConditioningsAndRejectsOtherTextSeedSettingsIdentityOrInterruptedA",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "failureImmediatelyBeforeCommitPreservesIndexProfilesAndRetainedReferences",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "futureExpressionsAreExplicitlyUnsupportedAndAdmissionPreservesAllGuards",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "twoReferencesTwoProfilesSurviveRestartAndSelectionWithoutOverwriting",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityVaultTests",
+          "name": "compatibilityIntegrityAndSymlinksAreRefusedBeforeLoading",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "identityRuntime/build/test-results/test/TEST-com.jarvis.voice.identity.VoiceIdentityArchiveTests.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityArchiveTests",
+          "name": "failedRestoreCommitRollsBackAllNewFilesAndKeepsPreviousIdentity",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityArchiveTests",
+          "name": "wrongPasswordTamperTruncationHeaderCostAndExistingIdentityNeverMutateDestination",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityArchiveTests",
+          "name": "referencesAreOptionalAndCancelledImportOrOutputFailurePreservesEveryProfile",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityArchiveTests",
+          "name": "authenticatedRoundTripPreservesLogicalIdsProfilesReferencesAndActiveChoice",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "com.jarvis.voice.identity.VoiceIdentityArchiveTests",
+          "name": "authenticatedMaliciousZipNamesDirectoriesDuplicatesHashesAndMissingFilesAreRejectedAtomically",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "identityRuntime/build/test-results/test/TEST-com.jarvis.voice.identity.IdentityWavTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.identity.IdentityWavTests",
+          "name": "stereo48kSelectedRegionBecomesMono24kAndInvalidSegmentsFail",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "identityRuntime/build/test-results/test/TEST-com.jarvis.voice.identity.RealPublicIdentityTests.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "cases": [
+        {
+          "class": "com.jarvis.voice.identity.RealPublicIdentityTests",
+          "name": "twoContiguousPublicAlbaReferencesReallyEncodeAndGenerateDistinctDeterministicConditionings",
+          "skip": true,
+          "failure": false
+        }
+      ]
+    }
+  ],
+  "android_instrumentation": "NOT_RUN",
+  "llm_generation": "NOT_RUN",
+  "physical_hardware": "NOT_RUN",
+  "real_voice_quality": "NOT_RUN",
+  "production_activation": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "jarvis.m50-s1b.apk/1",
+  "sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+  "size": 3922100,
+  "application_id": "fr.jarvis.lab.m50s1",
+  "min_sdk": 29,
+  "target_sdk": 35,
+  "test_only": true,
+  "permissions": [],
+  "native_libraries": [],
+  "models": [],
+  "backup_enabled": false,
+  "android_execution": "NOT_PROVEN_BY_THIS_CHECK"
+}

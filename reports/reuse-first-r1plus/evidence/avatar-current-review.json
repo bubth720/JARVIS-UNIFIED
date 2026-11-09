@@ -1,0 +1,30 @@
+{
+  "schema": "jarvis.m54.avatar-review/1",
+  "source_commit": "2397bf29526ba48ac881e67c8e07dde3e01cf489",
+  "source_tree": "85286f4d763c53e77e56dc1291cacc62ef530446",
+  "worktree_dirty": false,
+  "source_sha256": {
+    "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt": "fd7a8791574f63f6039372c422a739d1f2411397e28781b2fcf8543cfc211045",
+    "m54-avatar/src/AvatarSceneV1.kt": "ccafeb3c95d77ac6e4b9325b3c3c844ae7426b8a2beb2ed5b2fb244eb4dd4033",
+    "m54-avatar/tests/AvatarSceneTest.kt": "2c56d60abc0d82961f44c5f6e5f8ceaa3c7e93993eda165180b0017e2ac5927d",
+    "m54-avatar/check_scope.py": "6e69082c8018032f82b986f917e0c2b518d5c2c34fccc55af8dac574a583b86c",
+    "m54-avatar/inventory.py": "4398f6384d62ad9e931284e515fc53e9fbbc0290f64dd4a3c391157a567af3ac",
+    "m54-avatar/run_review.py": "c105048bbf99f76b97bb80bf1793a72d2f9654ea593c36dfcf56c068810b585b",
+    "m54-avatar/bootstrap_jars.py": "950e35bf4bc470e2a06eab43b022163fc8d97329f82ee7a3b09808f455cdd089",
+    "m54-avatar/tests/test_inventory.py": "b5d5f95eb0ef523001114602e8d62756be000a699673bba123f5ca92e1db6d94",
+    "m54-avatar/JARS.json": "abb60a404ca8dba8187ccdc7f402fba66f6361d9f3402c5ca01b326b6e6152b5"
+  },
+  "jvm": "PASS",
+  "jvm_cases": 21,
+  "python": "PASS",
+  "python_cases": 20,
+  "source_stable": true,
+  "rendering": "NOT_IMPLEMENTED",
+  "android": "NOT_RUN",
+  "artistic_master": "NOT_PROVIDED",
+  "private_inputs_processed": false,
+  "audio": "NOT_RUN",
+  "visemes": "UNSUPPORTED",
+  "runtime_connected": false,
+  "gate_voice_avatar": "NOT_VALIDATED"
+}
