@@ -9,6 +9,7 @@ Observation : 8–9 novembre 2026 UTC. **Les développements indépendants sont 
 - [Diagnostic Android et campagne C1 close](ANDROID.md).
 - [Mesures et limites](PERFORMANCE.md), [commandes et résultats](TESTS.md).
 - [Feuille de route et critères de passage](ROADMAP.md).
+- [Liens des trois PR, CI finale et bilan de livraison](DELIVERY.md).
 - [Réception vérifiable](RECEIPT.json), [empreintes des preuves](EVIDENCE-SHA256.json), [sauvegardes initiales](BACKUP-MANIFEST.json).
 
 | Composant | Résultat réellement observé | Limite de qualification |

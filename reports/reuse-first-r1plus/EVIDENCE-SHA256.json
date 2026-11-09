@@ -34,5 +34,6 @@
   "evidence/services-baseline.json": "c02f1fc8e0a9a1e8b6e5e7245cd7d1ebba0de4a82dc6082b7807c22b1fadf003",
   "evidence/unified-local-results.json": "3222d11a55f494799f65603e370df88c03cdeca1ac67f876736760165e8ed479",
   "evidence/voice-baseline.json": "ce146a0d2f698ef8e3b2b541c103ea0d159c2dcd652f61069a78a98c8d284190",
-  "evidence/unified-final-validation.json": "69a42af3b7c0230c87501cfe4e62be4873277195615b774d81bf0dadb11af55f"
+  "evidence/unified-final-validation.json": "69a42af3b7c0230c87501cfe4e62be4873277195615b774d81bf0dadb11af55f",
+  "evidence/unified-final-ci.log": "8a8c1081cf5ece54579c50071f0e9063c27381bb7281fddad4a00687107e45ef"
 }
