@@ -46,3 +46,5 @@ Une première validation des liens a signalé ce fichier TESTS.md encore absent 
 - Campagne Android C1 : [42524234101 FAILURE](https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/42524234101), preuves brutes et revue séparées ; jamais relancée.
 
 Les logs locaux, XML réels, manifests d'artefacts, captures et bundles sont conservés dans la livraison récupérable. Les limites du corpus, de l'émulation et du microbenchmark figurent dans les rapports liés ; aucune métrique théorique n'est présentée comme mesurée.
+
+La première CI documentaire [42569947051](https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/42569947051) a passé les 168 tests historiques sans dépendance puis refusé son propre fichier build/reuse-r1plus-coordination/results.log comme ajout non déclaré. Correction du workflow : sorties dans runner.temp, sans élargir le garde ni modifier un source historique. La vérification finale utilise le nouveau commit et conserve ce premier échec.

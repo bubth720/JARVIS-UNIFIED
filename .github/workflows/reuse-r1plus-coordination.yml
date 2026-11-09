@@ -6,6 +6,7 @@ permissions:
   contents: read
 env:
   PYTHONDONTWRITEBYTECODE: '1'
+  REUSE_COORDINATION_EVIDENCE: ${{ runner.temp }}/reuse-r1plus-coordination
 jobs:
   coordination:
     runs-on: ubuntu-24.04
@@ -22,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p build/reuse-r1plus-coordination
+          mkdir -p "$REUSE_COORDINATION_EVIDENCE"
           {
             python3 scripts/validate_unified.py
             python3 -m unittest discover -s tests -v
@@ -34,16 +35,16 @@ jobs:
             python3 -m tooling.v1.reception
             python3 -m tooling.reuse_r1plus.verify
             python3 -m unittest discover -s tooling/reuse_r1plus/tests -v
-          } 2>&1 | tee build/reuse-r1plus-coordination/results.log
+          } 2>&1 | tee "$REUSE_COORDINATION_EVIDENCE/results.log"
       - name: Preserve source and exact artifact digests
         if: always()
         run: |
-          git rev-parse HEAD > build/reuse-r1plus-coordination/source.txt
-          git rev-parse HEAD^{tree} > build/reuse-r1plus-coordination/tree.txt
-          sha256sum reports/reuse-first-r1plus/RECEIPT.json reports/reuse-first-r1plus/EVIDENCE-SHA256.json > build/reuse-r1plus-coordination/SHA256SUMS
+          git rev-parse HEAD > "$REUSE_COORDINATION_EVIDENCE/source.txt"
+          git rev-parse HEAD^{tree} > "$REUSE_COORDINATION_EVIDENCE/tree.txt"
+          sha256sum reports/reuse-first-r1plus/RECEIPT.json reports/reuse-first-r1plus/EVIDENCE-SHA256.json > "$REUSE_COORDINATION_EVIDENCE/SHA256SUMS"
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
           name: REUSE-R1plus-coordination-${{ github.sha }}
-          path: build/reuse-r1plus-coordination/
+          path: ${{ env.REUSE_COORDINATION_EVIDENCE }}/
           retention-days: 90
