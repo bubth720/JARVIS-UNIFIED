@@ -17,6 +17,7 @@ on:
         type: string
         default: ''
       api:
+        description: 'API of the already available emulator'
         type: choice
         options: ['29', '35']
         default: '29'
@@ -58,7 +59,7 @@ jobs:
         with: {packages: platform-tools, log-accepted-android-sdk-licenses: false}
       - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Existing UNIFIED backup regression dependency only
-        run: python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt
+        run: 'python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt'
       - name: Execute real pinned campaign, no model or emulator boot
         env:
           LAB_PROFILE: ${{ github.event_name == 'workflow_dispatch' && inputs.profile || 'SAFE' }}
