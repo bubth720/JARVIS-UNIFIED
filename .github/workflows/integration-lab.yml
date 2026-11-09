@@ -39,6 +39,17 @@ jobs:
         with: {python-version: '3.12'}
       - run: python3 tooling/integration-lab/scripts/check_scope.py
       - run: python3 -m unittest discover -s tooling/integration-lab/tests -v
+      - name: LAB-02 read-only triage of the pinned historical SAFE receipt
+        run: |
+          python3 tooling/integration-lab/triage.py --receipt tooling/integration-lab/reports/CI-RECEIPT.json --output /tmp/lab02-historical
+          python3 -m json.tool /tmp/lab02-historical/TRIAGE.json > /dev/null
+          cat /tmp/lab02-historical/TRIAGE.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: lab02-historical-triage
+          path: /tmp/lab02-historical/
+          retention-days: 30
+          if-no-files-found: error
   campaign:
     if: github.event_name != 'pull_request'
     needs: lab-tests
@@ -72,6 +83,20 @@ jobs:
           profile={'SAFE':'safe','ANDROID_LAB':'android_lab'}[os.environ['LAB_PROFILE']]
           sys.exit(subprocess.call([sys.executable,'tooling/integration-lab/lab.py','run','--profile',profile,'--output','.audit-cache/integration-lab','--api',os.environ['LAB_API']]))
           PY
+      - name: LAB-02 triage the current campaign without hiding its exit status
+        if: always()
+        run: |
+          if [ -f .audit-cache/integration-lab/campaign.json ]; then
+            python3 tooling/integration-lab/triage.py --receipt .audit-cache/integration-lab/campaign.json --evidence-root .audit-cache/integration-lab --output .audit-cache/lab02-triage
+            cat .audit-cache/lab02-triage/TRIAGE.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: lab02-campaign-triage
+          path: .audit-cache/lab02-triage/
+          retention-days: 30
+          if-no-files-found: ignore
       - name: Independently verify exported evidence even after a failed module
         if: always()
         run: |
