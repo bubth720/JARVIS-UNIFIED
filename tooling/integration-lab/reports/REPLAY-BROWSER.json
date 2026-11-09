@@ -1,0 +1,11 @@
+{
+  "status": "PASS_SEMANTIC_REPLAY",
+  "receipt_json_byte_identical": true,
+  "html_embedded_receipt_identical": true,
+  "offline_http_requests": 0,
+  "views": 9,
+  "html_markdown_byte_identical": false,
+  "limitation": "Embedded JSON field order in Markdown/HTML can differ after reload; no receipt field differs",
+  "file_url": "BLOCKED_BY_ADMINISTRATOR; tested rendering in memory without policy changes",
+  "android": "NOT_RUN"
+}

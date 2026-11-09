@@ -1,0 +1,151 @@
+{
+  "source_commit": "1a10328459a71578a6e56427b848cb6467fba57d",
+  "source_tree": "b37563981c7fb2db0a236c48cda6adcfa016aff4",
+  "files": [
+    {
+      "status": "A",
+      "path": ".github/workflows/integration-lab.yml",
+      "sha256": "aa41af40d4527e4b195d539f32a714bcae5f1e1eb8de8ee6482f6e4eb285255e"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/README.md",
+      "sha256": "173dca3f7529bcde4a7407ab5b2d7086550f53d8cb4039649b40cd0590e0f5d0"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/adapters/README.md",
+      "sha256": "f4f365bdd5fffc98cdb466f5b9e2c91712bf005dc123786eb9d9c3a7e8e3ef20"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/capabilities.json",
+      "sha256": "c3bb1c309559774e29ea297bcb30be4b28f27b919b1537d3597b5cf1350a8202"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/history.json",
+      "sha256": "90cafa52f2f2b3a1e5709517dc082a7de465f8bbe923fc138e2a4541a5fddd3f"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/modules.lock.json",
+      "sha256": "a0f1f68227274147f494488c0db632f73d0f1b17e38f66e2a1de7a9d5c4b77b7"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/modules.lock.sha256",
+      "sha256": "cf8cfdb477b76997cbe77431ddfd8a921052772c6b23d8b594eacd4753b4aa97"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/profiles/android_lab.json",
+      "sha256": "0335768de41304557736edafbb4839a877a2933737bc136bffbd37701a85d44f"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/config/profiles/safe.json",
+      "sha256": "33d9d6beda40ec0dfc6b9296796d2d503629541f927b951d274fd93c585a7716"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/__init__.py",
+      "sha256": "12f09ae81d3e8ec48884485520faf992c262ec4b884af1aca038dde1ae258c6d"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/android.py",
+      "sha256": "968ecb96115fbd4f8bb3078f19f4ad23bb46765666a8a80897af07a04e503bcb"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/builder.py",
+      "sha256": "f4fd541538a7445e7f3563fc304bd4674bc474365f4c21e907a07129d91bdd2d"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/campaign.py",
+      "sha256": "f14a4ef2d29a2e8c2def2c928f83c2cb9f821517b76930ab1fc85990733fc637"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/contracts.py",
+      "sha256": "e7691cbf55072be9e155749bacf62e24831d920174063ac761d317b12cda3e8a"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/dependencies.py",
+      "sha256": "83201544cdd147794d3d424d643a616d376755245f2b441c524fb7cb5774b2c3"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/evidence.py",
+      "sha256": "3fd8a44bd1275e0148ae74728699e637f55e798b75ed4a7b8abf27a39d24bb56"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/integrity.py",
+      "sha256": "0c43349327abd341d3fb476d097e1c6ac46e1d3801941dbbd420bddc46c31ae9"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/policy.py",
+      "sha256": "a1f4e711da50c063ecd5316296b73d80be596fe78484e1e46cb292aa08c7e4ab"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/reporting.py",
+      "sha256": "3b0be2d3d8e63817b1ff42c9d9c31a73d9d5803551f5ed1f110f1fc910e4eec1"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/repository.py",
+      "sha256": "9e91477b747b0d38e11d854d4d4ef411f2a12ce175304e72b090a6f64ad8f4c7"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/core/runner.py",
+      "sha256": "7bf0fab7c8d0de03901b9c8b1fd5f77b4b53203f09baf2ffc218f91a3f1715b6"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/docs/ARCHITECTURE.md",
+      "sha256": "53ef91bb38d7d778abded9e6088cd7eb53226499f83cae3e57af9d8f03414e47"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/docs/DEPENDENCIES-LICENSES.md",
+      "sha256": "e847bc6b695daea5583e53f2e4416159fa3edfe41c46bfd0dabd3f51e5c7a157"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/docs/GUIDE-ANDROID.md",
+      "sha256": "cf4c871ae23d2242199f958348f985c703e8ae59784b515fbf0ea026aeec941f"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/docs/ROLLBACK.md",
+      "sha256": "ed40106775eccaf14e2d48deced3204afd8bd20ded2d63f77cfd468cea121fda"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/lab.py",
+      "sha256": "dae4531e270a0e7f1f2280ccc9832ed130b5fa24c5db9517e1ec8f63a7b6042d"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/requirements/README.md",
+      "sha256": "94592bab9dc148f8ca801abcf4f2b3f25f5e9a7b4e3b811322ba698a0c05b6e6"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/scripts/check_scope.py",
+      "sha256": "ce13b603867ffd2c750f008b12054732991d28d6ee87eb8f3c33d157735cc55c"
+    },
+    {
+      "status": "A",
+      "path": "tooling/integration-lab/tests/test_lab.py",
+      "sha256": "075d980a5c9519ed627bf32edeed6fd6c33a9700caca772d70429c77ff200c29"
+    }
+  ]
+}
