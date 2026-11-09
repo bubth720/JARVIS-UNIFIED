@@ -1,0 +1,24 @@
+{
+  "schema": "jarvis.integration-lab.capabilities/1",
+  "module_runtime_states": {
+    "CORE": "DISABLED",
+    "LLM": "DISABLED",
+    "VOICE": "DISABLED",
+    "INTERFACE": "DISABLED",
+    "NEXUS": "DISABLED",
+    "SERVICES": "DISABLED",
+    "UNIFIED": "DISABLED",
+    "EVOLUTION": "DISABLED"
+  },
+  "scope": "DEVELOPMENT_TOOL_ONLY",
+  "capabilities": [
+    "PINNED_SOURCE_VERIFICATION",
+    "HOST_TEST_EXECUTION",
+    "INDEPENDENT_BUILDS",
+    "M51_APK_VERIFICATION",
+    "CONDITIONAL_EMULATOR_CAMPAIGN",
+    "OFFLINE_REPORTS"
+  ],
+  "qualification": "REQUIRES_ACTUAL_CAMPAIGN_RECEIPT",
+  "authority_roots": []
+}

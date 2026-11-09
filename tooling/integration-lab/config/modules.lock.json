@@ -1,0 +1,178 @@
+{
+  "schema": "jarvis.integration-lab.lock/1",
+  "mission": "LAB-01",
+  "coordination_base": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+  "verification": "GitHub Git commit endpoints resolved full SHA/tree on 2026-11-08; runtime re-verifies Git objects and protected source hashes",
+  "modules": [
+    {
+      "module": "CORE",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "tree": "bef8a470e25847cff8a09351792133adfa268c38",
+      "branch": "codex/m50-s1-core-ci-20261029",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "app/build.gradle.kts": "be358aa8ded614ff4b21053835c278f864b9a64a808cfb828e3a255068ebcefa",
+        "app/src/main/AndroidManifest.xml": "13311e2ed2d072bd7528ad42815430a09e32b4a6f478f7e0218aecfdd95a4006",
+        "build.gradle.kts": "50425357e4449207a6e3098fa4f4dc66864a870859025051fc809589ddb858df",
+        "settings.gradle.kts": "2d895395ecb9cd468e3afda7a610ee1a6c3270e4d1c1313e723792779dd323fb"
+      },
+      "public_contract_sources": [
+        "app/src/main/java/com/stark/jarvislocal/InferenceContract.kt",
+        "app/src/main/java/com/stark/jarvislocal/SessionCoordinator.kt",
+        "app/src/main/java/com/stark/jarvislocal/integrations/PinnedDocumentReadiness.kt"
+      ]
+    },
+    {
+      "module": "LLM",
+      "repository": "bubth720/JARVIS-LLM",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "tree": "053a59b808396314943b21bb5005887076a2e08e",
+      "branch": "codex/m51-lab-cloud-audit",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "app/build.gradle.kts": "7d0a2cb3bf904eb17b2aad81c6ac13a77ca3d5ec646920ea9e674110e0af45b4",
+        "app/src/main/AndroidManifest.xml": "bbba3fde4dea2b85d3f9febc86eef2f758eaf202d454d0a9eb1f5f52e1ccf7ad",
+        "app/src/main/cpp/bridge.cpp": "5e7394e7ca0f4ad171adc00b274e6a6f5bdc775a3a70efe493119bd341d08245",
+        "build.gradle.kts": "874d1149813c03edd010c3b5a96bf8090cc50556c763b70e34bb4f138b7b9e58",
+        "gradle/wrapper/gradle-wrapper.properties": "fe90ff0d9944879f591a8c37b6dbaf5046d1051ccbb6b26b22081692c321f432",
+        "settings.gradle.kts": "73d92496184d445909336facb82607ece12518e8b6fce670878524d618df05ec"
+      },
+      "public_contract_sources": [
+        "app/src/main/java/fr/jarvis/llm/engine/OwnedStreamContract.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/client/GenerationClientContract.kt",
+        "domain/src/main/kotlin/fr/jarvis/domain/generation/P2Contract.kt",
+        "labadmission/postimages/app/src/main/java/fr/jarvis/llm/engine/OwnedStreamContract.kt"
+      ]
+    },
+    {
+      "module": "VOICE",
+      "repository": "bubth720/JARVIS-VOICE",
+      "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "tree": "65035f97cdaccfea6ab2fff91faf63416986f43d",
+      "branch": "feat/voice-final-01",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNIFIED_v1_SCHEMA_COPY",
+      "protected": {
+        "app/build.gradle.kts": "d14dc2a93aced9bea3e07a005e359796a7e2002ab3345be32f1015a820a5e03d",
+        "app/src/main/AndroidManifest.xml": "947205e74f729de0334b3f7dc89e2f4fa3d4d8a77d56f0b0bfec2aa47ad2a254",
+        "build.gradle.kts": "41ea3c3fdceb3f06c39a0375efec91327f0d4888790c7bb1064f4bd3d36f8e38",
+        "gradle/wrapper/gradle-wrapper.properties": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+        "settings.gradle.kts": "023603fab89deb790e22d125a5ac082aab4643ad41eaa791811792c1363b5bf3"
+      },
+      "public_contract_sources": [
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/ExpressionContract.kt",
+        "expressionRuntime/src/main/kotlin/com/jarvis/voice/expression/StrictContractJson.kt",
+        "voiceBridgeContract/src/main/kotlin/com/jarvis/voice/bridge/BridgeMapper.kt",
+        "voiceBridgeContract/src/main/kotlin/com/jarvis/voice/bridge/BridgeTypes.kt",
+        "voiceBridgeContract/src/main/kotlin/com/jarvis/voice/bridge/SpeechJobCoordinator.kt",
+        "voiceBridgeContract/src/main/kotlin/com/jarvis/voice/bridge/StrictBridgeJson.kt",
+        "voiceBridgeContract/src/main/kotlin/com/jarvis/voice/bridge/UnifiedSchemas.kt",
+        "voiceSdk/src/main/kotlin/com/jarvis/voice/sdk/SpeechContracts.kt"
+      ]
+    },
+    {
+      "module": "INTERFACE",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33",
+      "branch": "codex/m51-r1-android-stability",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "app/build.gradle.kts": "0aba11cd2f422043a35e868fd8a0f12766a81e48da31dd526df7886cf313d249",
+        "app/src/main/AndroidManifest.xml": "08ece412cf7ae58c2e721b078edc6ba282f57a6a50fbc13467a4bd7db5ea6070",
+        "build.gradle.kts": "7af865aea3e2dde810363caa1c3f9eed33324aa47f1c7e281034d4bd69129b3d",
+        "gradle/wrapper/gradle-wrapper.properties": "c040b6ef2fb893ff5beea5a281614f2848f1c3996a7886f650b713f8240656a2",
+        "m51/android-lab/build.gradle.kts": "4fe07662a5cc89024f39f7abafabb9b669a8287d4d84f99a86ecafa32602ee5a",
+        "settings.gradle.kts": "0be8db4611e68305288440bfc19b2e822a2ad956aac851b7e22e51c082bdc051"
+      },
+      "public_contract_sources": [
+        "app/src/main/java/com/jarvis/interfaceapp/avatar/AvatarContract.kt",
+        "app/src/main/java/com/jarvis/interfaceapp/cockpit/CockpitContracts.kt"
+      ]
+    },
+    {
+      "module": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "tree": "1f5d78b084946e162617ac0525b32658cea80e15",
+      "branch": "codex/m53-readonly-preparation",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "build.gradle.kts": "e8a37c4280d969caa9200e70f1eeaf47b549426740435d4958eecdf2d978bdff",
+        "gradle/wrapper/gradle-wrapper.properties": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335",
+        "settings.gradle.kts": "a981aa1368458e53ecdb69ea8af74065d9414215503ae41b617cced773ac7aac"
+      },
+      "public_contract_sources": []
+    },
+    {
+      "module": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "tree": "e4b0f5c440a577114f2968f0cc45220483407822",
+      "branch": "mission/m50-integrated-beta-20261029",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "build.gradle": "88224c6709891a88c82a040ff4da2496a87020f115312c03d84e6cdb2bc8a86a",
+        "contracts/v1/cancellation.schema.json": "b863e99ec6abf00aa8d68ea75d2a24d00b21e08fbf6d18dc13100401c793a81e",
+        "contracts/v1/capabilities.schema.json": "048844ff8d5455d3c4b402a7dfa3a8699eaaf2590ac7cd1e2536e5eec1a9d278",
+        "contracts/v1/progress.schema.json": "b5468f1c5bb0084a884f13ad732b36e8bd9ba78c46119f065c36fe07528c83bc",
+        "contracts/v1/request.schema.json": "06f98370dba9fcd51751bc28679a935cdc09f5e3e1404117583610b32c2db510",
+        "contracts/v1/response.schema.json": "7530e2b1c6b882a10a3cfa7f11d00d7f858d58801dfd5f028c04e4413bd1e383",
+        "gradle/wrapper/gradle-wrapper.properties": "1bb6d43ff8af30abb0eaf03fe58f636ed9b37f758a748bf30a9cebd809639c9d",
+        "settings.gradle": "e4ed2ab562d03fe545daa4b3f3eec50a32b7801f59f172ad2c22227bb78dab25"
+      },
+      "public_contract_sources": [
+        "desktop/src/main/java/org/jarvis/contracts/v1/ContractSupport.java",
+        "services-portable-api/src/main/java/fr/jarvis/services/shared/api/Contracts.java"
+      ]
+    },
+    {
+      "module": "UNIFIED",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "branch": "codex/m51-unified-gates",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "v1",
+      "protected": {
+        "contracts/v1/capability-manifest.schema.json": "fdeda2a14c9ea818ebfedaad43035b192ccddc8b941fa61d6c25fa8d98b03b9a",
+        "contracts/v1/health-status.schema.json": "84420f0f18763f557d1f14cd7a06be9bc1d05705e11c672c91d68ecfbadf2bd0",
+        "contracts/v1/request-envelope.schema.json": "9c13abea1907cccb7f01990888d4eeb4a81aad90b5d823213bb5fe75372450fc",
+        "contracts/v1/resource-lease.schema.json": "0cabee9828db1ee719d5d43ab3b1e268aeafce7af49755224c78bf705595343c",
+        "contracts/v1/response-envelope.schema.json": "3649f25aab483c20fc53e909a0b6486724abc050245e15acdb03f8f4b17edd38"
+      },
+      "public_contract_sources": []
+    },
+    {
+      "module": "EVOLUTION",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b",
+      "branch": "mission/m50-integrated-beta-20261029",
+      "status": "AVAILABLE",
+      "runtime_enabled": false,
+      "contract_version": "UNKNOWN",
+      "protected": {
+        "build.gradle.kts": "c5ec24119d252f9e974f5bc1f3954e755e1d52aa6a60f64b7824630d8870a99e",
+        "gradle/wrapper/gradle-wrapper.properties": "c040b6ef2fb893ff5beea5a281614f2848f1c3996a7886f650b713f8240656a2",
+        "settings.gradle.kts": "1d1020ed5e3a432484bdf81d100e340b33f799eb375cc14e48238e12d0918bca"
+      },
+      "public_contract_sources": [
+        "evolution-sandbox/src/main/kotlin/fr/jarvis/evolution/sandbox/DiffPolicyValidator.kt"
+      ]
+    }
+  ]
+}

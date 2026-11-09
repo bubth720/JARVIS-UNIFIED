@@ -1,0 +1,17 @@
+{
+  "source_commit": "1a10328459a71578a6e56427b848cb6467fba57d",
+  "source_tree": "b37563981c7fb2db0a236c48cda6adcfa016aff4",
+  "lab_dirty": false,
+  "campaign_id": "a073c6d8-f8e6-476d-ada5-a77ce07d27ef",
+  "phase": "android",
+  "status": "BLOCKED",
+  "android": {
+    "app_tests": "NOT_RUN",
+    "kind": "EMULATOR",
+    "reason": "NO_AUTHORIZED_EMULATOR",
+    "status": "BLOCKED"
+  },
+  "apks_compiled": "PASS",
+  "personal_device_installed": false,
+  "llm_generation": "NOT_RUN"
+}

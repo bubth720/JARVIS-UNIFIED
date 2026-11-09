@@ -1,0 +1,1380 @@
+{
+  "android_safe": {
+    "kind": "EMULATOR",
+    "reason": "SAFE_PROFILE",
+    "status": "NOT_RUN"
+  },
+  "apks": {
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+      "m51/collect_build.py"
+    ],
+    "artifacts": [
+      {
+        "bytes": 9752980,
+        "path": "apks/M51-baseline.apk",
+        "sha256": "af928d83eca4c2439bf3fca25ba2f15f9d33c2068d499630d79a1e5bf6e227e5"
+      },
+      {
+        "bytes": 1140427,
+        "path": "apks/M51-baseline-tests.apk",
+        "sha256": "e15b021cf0d475dcb60b123f7901517212d5cc8681621b3b191e59eaeb091e97"
+      },
+      {
+        "bytes": 9752952,
+        "path": "apks/M51-candidate.apk",
+        "sha256": "711c0d87f239681dabbffb01a01b8cb6cfd2b312d97d214a6e244e66decf7fea"
+      },
+      {
+        "bytes": 1147719,
+        "path": "apks/M51-candidate-tests.apk",
+        "sha256": "49b1b264580ac5c8965c22646037ddffb8fd3af81c46cfee9e3922f420760dd1"
+      }
+    ],
+    "clock": "time.monotonic_ns",
+    "duration_ns": 1354045359,
+    "exit_code": 0,
+    "kind": "STATIC",
+    "log": "logs/m51-apk-verifier.log",
+    "log_sha256": "f6938897697771952230bb3f6f08467cc832b07be2a1dbdfc75c8c12d10b5811",
+    "qualification": "NOT_RUN",
+    "ready_to_install": false,
+    "reason": null,
+    "receipt": {
+      "apks": [
+        {
+          "abi": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "allow_backup": false,
+          "apk": "M51-baseline.apk",
+          "certificate_sha256": "ec80f2b6c0f33b867d3caf23845aa37952544fbfb0c8e8b55f7bcb8a2f10dc9c",
+          "min_sdk": 26,
+          "native_libraries": {
+            "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+            "lib/armeabi-v7a/libandroidx.graphics.path.so": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+            "lib/x86/libandroidx.graphics.path.so": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+            "lib/x86_64/libandroidx.graphics.path.so": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+          },
+          "native_scope": "UI_GRAPHICS_PATH_ONLY_NO_LLM",
+          "package": "fr.jarvis.v1.lab.baseline",
+          "page_16k_android": "NOT_RUN",
+          "permissions": [
+            "fr.jarvis.v1.lab.baseline.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+          ],
+          "sha256": "af928d83eca4c2439bf3fca25ba2f15f9d33c2068d499630d79a1e5bf6e227e5",
+          "target_sdk": 35,
+          "test_apk": "M51-baseline-tests.apk",
+          "test_only": true,
+          "test_sha256": "e15b021cf0d475dcb60b123f7901517212d5cc8681621b3b191e59eaeb091e97",
+          "variant": "baseline",
+          "version_code": 51,
+          "version_name": "0.51.0-m51-lab"
+        },
+        {
+          "abi": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "allow_backup": false,
+          "apk": "M51-candidate.apk",
+          "certificate_sha256": "ec80f2b6c0f33b867d3caf23845aa37952544fbfb0c8e8b55f7bcb8a2f10dc9c",
+          "min_sdk": 26,
+          "native_libraries": {
+            "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+            "lib/armeabi-v7a/libandroidx.graphics.path.so": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+            "lib/x86/libandroidx.graphics.path.so": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+            "lib/x86_64/libandroidx.graphics.path.so": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+          },
+          "native_scope": "UI_GRAPHICS_PATH_ONLY_NO_LLM",
+          "package": "fr.jarvis.v1.lab",
+          "page_16k_android": "NOT_RUN",
+          "permissions": [
+            "fr.jarvis.v1.lab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+          ],
+          "sha256": "711c0d87f239681dabbffb01a01b8cb6cfd2b312d97d214a6e244e66decf7fea",
+          "target_sdk": 35,
+          "test_apk": "M51-candidate-tests.apk",
+          "test_only": true,
+          "test_sha256": "49b1b264580ac5c8965c22646037ddffb8fd3af81c46cfee9e3922f420760dd1",
+          "variant": "candidate",
+          "version_code": 51,
+          "version_name": "0.51.0-m51-lab"
+        }
+      ],
+      "jvm_tests": {
+        "historical": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 6
+        },
+        "lab-baseline": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 15
+        },
+        "lab-candidate": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 15
+        }
+      },
+      "llm_generation": "NOT_RUN",
+      "physical_android": "NOT_RUN",
+      "runtime_connections": [
+        "INTERFACE_LOCAL_ONLY"
+      ],
+      "source_commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "source_tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33",
+      "ui_base_commit": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4"
+    },
+    "status": "PASS",
+    "test_invocations": null,
+    "truncated": false,
+    "unique_test_cases": null
+  },
+  "archives": [
+    {
+      "bytes": 20817679,
+      "download_verified": true,
+      "expires_utc": "2027-02-07T14:49:50Z",
+      "id": 13686030170,
+      "run_id": 42638506700,
+      "sha256": "611cbe0d3126a7db952bfc6be2a46c55e04151cbb0ecd453061169002b3eb761"
+    },
+    {
+      "independent_sha256_verification": "PASS",
+      "indexed_files": 82,
+      "path": "evidence.zip",
+      "sha256": "d3403eca0abd32e8f0003906a4a5e69bfd3361461a93101da11f1fd10c0f3e42"
+    }
+  ],
+  "backup": "/workspace/lab01-20261108/BACKUP; workspace is not durable hosting",
+  "branch": "codex/lab-01-complete-integration",
+  "campaign_id": "fa4db0c6-75b6-47ca-8e69-940413456fd2",
+  "campaign_status": "FAIL",
+  "commands": [
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/m50_s1",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "duration_ns": 803022723,
+      "exit_code": 0,
+      "id": "core-scope",
+      "integrity_after": {
+        "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 618,
+        "tree": "bef8a470e25847cff8a09351792133adfa268c38"
+      },
+      "kind": "UNIT",
+      "log": "logs/core-scope.log",
+      "log_sha256": "b9b55d8536dc1a55d6f81202f12fbaedd54536ca46b82b091f95f35d23ad8dc8",
+      "module": "CORE",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 20,
+      "tree": "bef8a470e25847cff8a09351792133adfa268c38",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "perf02",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "duration_ns": 602546072,
+      "exit_code": 0,
+      "id": "llm-perf02",
+      "integrity_after": {
+        "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 507,
+        "tree": "053a59b808396314943b21bb5005887076a2e08e"
+      },
+      "kind": "UNIT",
+      "log": "logs/llm-perf02.log",
+      "log_sha256": "1811b663207242f6f5b732bcf687a2172d544cee32754983023fed9ce872c6f0",
+      "module": "LLM",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 34,
+      "tree": "053a59b808396314943b21bb5005887076a2e08e",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "tools/check-prefusion.py"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "duration_ns": 652712873,
+      "exit_code": 1,
+      "id": "llm-historical-guard",
+      "integrity_after": {
+        "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 507,
+        "tree": "053a59b808396314943b21bb5005887076a2e08e"
+      },
+      "kind": "STATIC",
+      "log": "logs/llm-historical-guard.log",
+      "log_sha256": "608ea4ce43f4784c979c775143a28babb2bf6478c715c9af9e2f247d24e9eac1",
+      "module": "LLM",
+      "physical": "NOT_RUN",
+      "reason": "NONZERO_EXIT",
+      "status": "FAIL",
+      "test_invocations": null,
+      "tree": "053a59b808396314943b21bb5005887076a2e08e",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "tools/check-preservation-003e.py"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "duration_ns": 50919602,
+      "exit_code": 1,
+      "id": "llm-manifest-guard",
+      "integrity_after": {
+        "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 507,
+        "tree": "053a59b808396314943b21bb5005887076a2e08e"
+      },
+      "kind": "STATIC",
+      "log": "logs/llm-manifest-guard.log",
+      "log_sha256": "bc8f692c1d03468f1f59af31661866188c217696c675bac6b57d3de962621ad2",
+      "module": "LLM",
+      "physical": "NOT_RUN",
+      "reason": "NONZERO_EXIT",
+      "status": "FAIL",
+      "test_invocations": null,
+      "tree": "053a59b808396314943b21bb5005887076a2e08e",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "m51",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "duration_ns": 151178685,
+      "exit_code": 0,
+      "id": "interface-host",
+      "integrity_after": {
+        "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 157,
+        "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33"
+      },
+      "kind": "UNIT",
+      "log": "logs/interface-host.log",
+      "log_sha256": "0126e0c6eeb20c9633406c34fd1263f82fd1ff8781d8bab1eb9915f3201e0e64",
+      "module": "INTERFACE",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 17,
+      "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/final",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "duration_ns": 652549630,
+      "exit_code": 0,
+      "id": "nexus-sqlite",
+      "integrity_after": {
+        "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 329,
+        "tree": "1f5d78b084946e162617ac0525b32658cea80e15"
+      },
+      "kind": "INTEGRATION",
+      "log": "logs/nexus-sqlite.log",
+      "log_sha256": "03fd80bdedbaf9867d50c771ccb000d2e634e7e18bf7a9c7cc8b9c4c0c58e236",
+      "module": "NEXUS",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 10,
+      "tree": "1f5d78b084946e162617ac0525b32658cea80e15",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "scripts/validate_unified.py"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 301646153,
+      "exit_code": 0,
+      "id": "unified-validator",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "STATIC",
+      "log": "logs/unified-validator.log",
+      "log_sha256": "d62ec942b40f46c92654afb02d12fdc8bfb9cb1bfa9a8263747cdb9fff3f8832",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": null,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 401890054,
+      "exit_code": 0,
+      "id": "unified-tests",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-tests.log",
+      "log_sha256": "726b7f53effac2cdbab33715fa69c1f3a6a34a0ce5c55196f09b57819c80efd6",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 41,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "registry/tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 903966172,
+      "exit_code": 0,
+      "id": "unified-registry",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-registry.log",
+      "log_sha256": "a9a66f32ac2a1c4a2cb24d47fcc1c583ab014d72dd81fce395f014b3a1b75b35",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 23,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "backup_prototype/tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 15505076867,
+      "exit_code": 0,
+      "id": "unified-backup",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-backup.log",
+      "log_sha256": "0600d161167df0965b035fa65f86a3f2b2cdbd2b705ea61ad9f84de4ab0d759a",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 30,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/campaign/tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 1605023599,
+      "exit_code": 0,
+      "id": "unified-campaign",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-campaign.log",
+      "log_sha256": "183a9bac5364912e28bd5656f9acdb37083ed62e62dc9d345822a1e407fb4158",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 32,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/integration/tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 652613231,
+      "exit_code": 0,
+      "id": "unified-integration",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-integration.log",
+      "log_sha256": "20b127be7ddd6e8d5552a990fb989b919ebb381d8566c361154d5488c4cea39a",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 21,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tooling/v1/tests",
+        "-v"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "duration_ns": 201263895,
+      "exit_code": 0,
+      "id": "unified-v1",
+      "integrity_after": {
+        "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 397,
+        "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+      },
+      "kind": "UNIT",
+      "log": "logs/unified-v1.log",
+      "log_sha256": "8c337be3e1ba4819a092d5af0d28c1437a5033b4aee9f357ecc537ecc39acdc5",
+      "module": "UNIFIED",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": 51,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "bash",
+        "perf03/tests/run.sh"
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "duration_ns": 10940306052,
+      "exit_code": 0,
+      "id": "llm-native-helpers",
+      "integrity_after": {
+        "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 507,
+        "tree": "053a59b808396314943b21bb5005887076a2e08e"
+      },
+      "kind": "NATIVE",
+      "log": "logs/llm-native-helpers.log",
+      "log_sha256": "6970e53c7170245d01f4f20027027a89bc3df0c818e896bc19b5184d52dd7b31",
+      "module": "LLM",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "status": "PASS",
+      "test_invocations": null,
+      "tree": "053a59b808396314943b21bb5005887076a2e08e",
+      "truncated": false,
+      "unique_test_cases": null
+    },
+    {
+      "argv": [
+        "bash",
+        "gradlew",
+        ":expressionRuntime:test",
+        ":voiceBridgeContract:test",
+        ":voiceFinalSdk:test",
+        "--rerun-tasks",
+        "--no-daemon",
+        "--max-workers=2",
+        "--console=plain",
+        "-Pkotlin.compiler.execution.strategy=in-process"
+      ],
+      "binary_inventory": [
+        {
+          "bytes": 83680,
+          "sha256": "1765aef235ebdc2c5d6c9707c14c7a0e2835f2e985869b3554b870243fcfcc02",
+          "source_relative_path": "expressionRuntime/build/libs/expressionRuntime.jar"
+        },
+        {
+          "bytes": 91938,
+          "sha256": "11abbb488d5f4438acb57807c175b4b00d6e28c2729efd38c1a551bba9563e9e",
+          "source_relative_path": "identityRuntime/build/libs/identityRuntime.jar"
+        },
+        {
+          "bytes": 192792,
+          "sha256": "a034705366830f2af4b753cc34f881521211616f53f5db83969f2748c3be8ac8",
+          "source_relative_path": "pocketRuntime/build/libs/pocketRuntime.jar"
+        },
+        {
+          "bytes": 66321,
+          "sha256": "f66a4ab59480634945ebe3dfa12793073f446ec4f5739d08032d2c9356772874",
+          "source_relative_path": "voiceBridgeContract/build/libs/voiceBridgeContract.jar"
+        },
+        {
+          "bytes": 6493,
+          "sha256": "e36fb065a2ba3bf8ce37a1f4ca67df1a828da0a340ae5354ae4dce086c215a89",
+          "source_relative_path": "voiceFinalSdk/build/libs/voiceFinalSdk.jar"
+        }
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "duration_ns": 137103165293,
+      "exit_code": 0,
+      "failures": 0,
+      "id": "voice-jvm",
+      "integrity_after": {
+        "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 564,
+        "tree": "65035f97cdaccfea6ab2fff91faf63416986f43d"
+      },
+      "junit_evidence": [
+        {
+          "path": "results/voice-jvm/expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionContractTests.xml",
+          "sha256": "7f1f8d06da4481ee5e0cc80819b2ce223416b38b5057cd8feaa900a5f761c44b"
+        },
+        {
+          "path": "results/voice-jvm/expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionStoreTests.xml",
+          "sha256": "23435000d72c470e09c4c3698ab841a542376faa6358a25d5687c42bab342a86"
+        },
+        {
+          "path": "results/voice-jvm/expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ExpressionStyleTests.xml",
+          "sha256": "ee95e7b79849444164e62e2c074783ae32731110c63ec9c077283ace2c2dc3d5"
+        },
+        {
+          "path": "results/voice-jvm/expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.ProsodyTests.xml",
+          "sha256": "29339dba0e3c0c47dfadec10fed517c397f4610e44a32f089560df630509b242"
+        },
+        {
+          "path": "results/voice-jvm/expressionRuntime/build/test-results/test/TEST-com.jarvis.voice.expression.PublicNeutralParityTests.xml",
+          "sha256": "411207d7878c64501182dedc075c2e2a326d41689f9ce8aa242fd09c3b6d15fc"
+        },
+        {
+          "path": "results/voice-jvm/voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.CoordinatorTests.xml",
+          "sha256": "1f3b70169fe27b7fa2298e56a52d27ef5754a20d95831021777749a0c01d19f7"
+        },
+        {
+          "path": "results/voice-jvm/voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.MapperTests.xml",
+          "sha256": "039b6c07c8f61797d3cadf2934be820321f2666828eb4d7322733877a0fff101"
+        },
+        {
+          "path": "results/voice-jvm/voiceBridgeContract/build/test-results/test/TEST-com.jarvis.voice.bridge.SchemaTests.xml",
+          "sha256": "262daab5ad5623e311f51300358626d0fb2f678fbf7da9649d9c5609668f290c"
+        },
+        {
+          "path": "results/voice-jvm/voiceFinalSdk/build/test-results/test/TEST-com.jarvis.voice.final01.VoiceEventTests.xml",
+          "sha256": "3e5c0303709b49cd489d6531ada021d9ecd5af9af8a45014e509e9459b715dc3"
+        }
+      ],
+      "kind": "UNIT",
+      "log": "logs/voice-jvm.log",
+      "log_sha256": "6aaee045d3b566e6ea5a0b77b93d1b71b2d3e4bafc9545ba9cf17287b58bbd46",
+      "module": "VOICE",
+      "physical": "NOT_RUN",
+      "reason": "MISSING_OR_FAILED_JUNIT",
+      "skipped": 1,
+      "status": "FAIL",
+      "test_invocations": 52,
+      "tree": "65035f97cdaccfea6ab2fff91faf63416986f43d",
+      "truncated": false,
+      "unique_test_cases": 52
+    },
+    {
+      "argv": [
+        "bash",
+        "gradlew",
+        ":desktop:test",
+        "--rerun-tasks",
+        "--no-daemon",
+        "--max-workers=2",
+        "--console=plain",
+        "-Pkotlin.compiler.execution.strategy=in-process"
+      ],
+      "binary_inventory": [
+        {
+          "bytes": 67180,
+          "sha256": "85d45b99a02964332a1b2232e57cbb57aef01c83eb150a8750d60e1bc82d9164",
+          "source_relative_path": "services-portable-api/build/libs/services-portable-api-1.0.0.jar"
+        },
+        {
+          "bytes": 89280,
+          "sha256": "2d7731b734484f6add090afb9219efeeb779f823b0dbe74f12b7085a184afebc",
+          "source_relative_path": "shared-runtime/build/libs/shared-runtime-1.0.0.jar"
+        }
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "duration_ns": 24991313228,
+      "exit_code": 0,
+      "failures": 0,
+      "id": "services-jvm",
+      "integrity_after": {
+        "commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 372,
+        "tree": "e4b0f5c440a577114f2968f0cc45220483407822"
+      },
+      "junit_evidence": [
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.BundledStorageTest.xml",
+          "sha256": "5b10979160996b97103dbef092183c87bc94ea13f28dc6002407d467d4fe89e4"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.CommitAuthorizationTest.xml",
+          "sha256": "fa066da94a6b2a5a5706e128d108c14b7c6506cefdcae3e261b40c172512e394"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.DocxSecurityTest.xml",
+          "sha256": "0c6cb51844f3c365317c8b182b32f1127a0d5da68a7d46a36a0e32fd440c6d22"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.FoundationTest.xml",
+          "sha256": "314e104a6582897f282a7fca79884400bda8db8ccf9c535a3b94af4dccb34b3c"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.ModulesTest.xml",
+          "sha256": "0b728ee5d8cf8e7eb8c3236f293d945c697c5f9bcf237fa724bb6b997e75a1ca"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.PipelineFixtureTest.xml",
+          "sha256": "92e6135600fcf6a51dcb3db58b2364abc03c69920f7c216cbf615b094139f0c4"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.SafExportWriterTest.xml",
+          "sha256": "09ac653d85fb2c59af44caea4b6ba7c5dab64cd54eb82b36bd71d68e1f4d137e"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.ServicesWirePreflightTest.xml",
+          "sha256": "e113e351ce4a71b332ef7fe57a5a925c088b2e82a1af9474803978efbff5cad1"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.ToolDispatcherTest.xml",
+          "sha256": "694786fc4ab32ba2d5a1fa2b9155677a34c2ce6cb8795e1e2d0941a9672cc6e1"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.ToolReceiptLifecycleTest.xml",
+          "sha256": "40277fe130f13a323b013d0bb88532e1814e7485e051c3651f93d870082c38cc"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.WorkflowBridgeTest.xml",
+          "sha256": "7da4cace8a9eac6c608ddde0b53340993c50352626869827d75b4458d9cf2f4d"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.prefusion.ReceiptContractBenchTest.xml",
+          "sha256": "d79e3a9c5b6a528558d2759ce48d2c1ca4380c1da2d4921e31aef108ab532b96"
+        },
+        {
+          "path": "results/services-jvm/desktop/build/test-results/test/TEST-fr.jarvis.services.prefusion.TwoJournalLot4Test.xml",
+          "sha256": "bd95bcab080a5781ec3b1bd2c17591f402f3589875a847ef97fb2bdfc5e3831f"
+        }
+      ],
+      "kind": "UNIT",
+      "log": "logs/services-jvm.log",
+      "log_sha256": "c94467cf8d6bc40ee301da2ff9a9ad2e572e1903f69380e66dcabce8f14efb80",
+      "module": "SERVICES",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "skipped": 0,
+      "status": "PASS",
+      "test_invocations": 134,
+      "tree": "e4b0f5c440a577114f2968f0cc45220483407822",
+      "truncated": false,
+      "unique_test_cases": 134
+    },
+    {
+      "argv": [
+        "bash",
+        "gradlew",
+        "test",
+        ":evolution-cli:installDist",
+        "--rerun-tasks",
+        "--no-daemon",
+        "--max-workers=2",
+        "--console=plain",
+        "-Pkotlin.compiler.execution.strategy=in-process"
+      ],
+      "binary_inventory": [
+        {
+          "bytes": 14436,
+          "sha256": "37f79e5209fb26450afd8e0de39311da40e5093ac9a0e02f22544eefb7abd4f3",
+          "source_relative_path": "evolution-cli/build/libs/evolution-cli-0.1.0.jar"
+        },
+        {
+          "bytes": 109403,
+          "sha256": "e670f7bd39d5f119301cbfc8ed390e30b082fe0a6bc0d10c0499850e68d11c13",
+          "source_relative_path": "evolution-core/build/libs/evolution-core-0.1.0.jar"
+        },
+        {
+          "bytes": 21884,
+          "sha256": "e6dae3b9187278e4352ad5244417eb155c17786a6223e3e4871b58710b1a7c6d",
+          "source_relative_path": "evolution-sandbox/build/libs/evolution-sandbox-0.1.0.jar"
+        }
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "duration_ns": 59528403738,
+      "exit_code": 0,
+      "failures": 0,
+      "id": "evolution-jvm",
+      "integrity_after": {
+        "commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 47,
+        "tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b"
+      },
+      "junit_evidence": [
+        {
+          "path": "results/evolution-jvm/evolution-core/build/test-results/test/TEST-fr.jarvis.evolution.DiagnosticTest.xml",
+          "sha256": "767f320bc54af2c9697754595faf0427e2b798b14b6c450d174d96fcdaca27b9"
+        },
+        {
+          "path": "results/evolution-jvm/evolution-core/build/test-results/test/TEST-fr.jarvis.evolution.TelemetryTest.xml",
+          "sha256": "49afdce97ea1f86b329b388b222ce20b40c172b70855250bb3aa522496d52271"
+        },
+        {
+          "path": "results/evolution-jvm/evolution-sandbox/build/test-results/test/TEST-fr.jarvis.evolution.sandbox.ProposalPolicyTest.xml",
+          "sha256": "980836ebebc4e3cdcdd708ea01c19e4fe869d9773c0e5b2ad01a9f9d239f8a3b"
+        }
+      ],
+      "kind": "UNIT",
+      "log": "logs/evolution-jvm.log",
+      "log_sha256": "ccce7db990bbead9b9395f2dc200d664b677f045dc1ab3188615c6d49ed3e507",
+      "module": "EVOLUTION",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "skipped": 0,
+      "status": "PASS",
+      "test_invocations": 40,
+      "tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b",
+      "truncated": false,
+      "unique_test_cases": 40
+    },
+    {
+      "argv": [
+        "bash",
+        "gradlew",
+        "-I",
+        "m53review/init.gradle",
+        ":nexus-core:test",
+        ":nexus-jvm-store:test",
+        ":nexus-cli:assemble",
+        "--rerun-tasks",
+        "--no-daemon",
+        "--max-workers=2",
+        "--console=plain",
+        "-Pkotlin.compiler.execution.strategy=in-process"
+      ],
+      "binary_inventory": [
+        {
+          "bytes": 23078,
+          "sha256": "127e9392f2a852773f2b05d4403ad2f61ca9327a0b5dee4efbd35937c0d7f9ee",
+          "source_relative_path": "nexus-cli/build/libs/nexus-cli-0.1.0.jar"
+        },
+        {
+          "bytes": 268699,
+          "sha256": "760920d518df77f001d875dc8390aeafe67f2d73ecf723b2f7996349131786e9",
+          "source_relative_path": "nexus-core/build/libs/nexus-core-0.1.0.jar"
+        },
+        {
+          "bytes": 87728,
+          "sha256": "1a22c3cb7f57526086dcf5e289d2838e27467e5288845ba011d19c9c54840680",
+          "source_relative_path": "nexus-jvm-store/build/libs/nexus-jvm-store-0.1.0.jar"
+        }
+      ],
+      "clock": "time.monotonic_ns",
+      "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "duration_ns": 138299696633,
+      "exit_code": 0,
+      "failures": 0,
+      "id": "nexus-jvm",
+      "integrity_after": {
+        "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 329,
+        "tree": "1f5d78b084946e162617ac0525b32658cea80e15"
+      },
+      "junit_evidence": [
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.ArchiveContextTest.xml",
+          "sha256": "46700f8679e22e4cece36d36ac31cc12d16d1e92a4ac2a737313dd1c67595923"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.FinalLibraryTest.xml",
+          "sha256": "47eba7fb742048172b5f813e94588ab4527d6cb7c5bd6af92fe37786124cd861"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.FusionDocumentaryTest.xml",
+          "sha256": "ab0f1e495e797c3647d7a6b00c4eb28101ce7214ebd10dae8b38bd5c3bb21f08"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.FusionScaleTest.xml",
+          "sha256": "658e81ec6e38688ce8f866d8aa70f4ce67e23bb1d4559d5f5a67b83f9646cc4b"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.FusionSnapshotMigrationTest.xml",
+          "sha256": "547d52affde8553f616492f5ae24a191f416c408aeb31661eaf71a5645a94e10"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.ImportPipelineTest.xml",
+          "sha256": "a1c3ecc2c430a8065948130c0a079cd303f3dc61b2486ab3ae5d232dd463b908"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.NexusStorageTest.xml",
+          "sha256": "c6b1d791d9331806065b9f32d7acfa78c21994972e581d347624e30f58fdf915"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.RagRetrievalTest.xml",
+          "sha256": "fa90666f0164992cbd362ec92de1bb6d0acad93effa8332f33300f5eca9db482"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.SnapshotRecoveryTest.xml",
+          "sha256": "73f30f48d32158c137b5da799e97f4df12d69927830c1413c604525bc95eb248"
+        },
+        {
+          "path": "results/nexus-jvm/nexus-jvm-store/build/test-results/test/TEST-fr.jarvis.nexus.m53.M53ReadOnlyTest.xml",
+          "sha256": "352274a2afcd8e81a69532b28d456bedaadaeb63f723e6ec570a3de174c23880"
+        }
+      ],
+      "kind": "UNIT",
+      "log": "logs/nexus-jvm.log",
+      "log_sha256": "cdf251012b0ca355c4106094c4bbe73c46d8dcc15b32e81d1279558a670dab12",
+      "module": "NEXUS",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "skipped": 0,
+      "status": "PASS",
+      "test_invocations": 100,
+      "tree": "1f5d78b084946e162617ac0525b32658cea80e15",
+      "truncated": false,
+      "unique_test_cases": 100
+    },
+    {
+      "argv": [
+        "bash",
+        "gradlew",
+        "-I",
+        "m51/lab.init.gradle",
+        "-Pm51R1=true",
+        ":app:testDebugUnitTest",
+        ":m51lab:testBaselineDebugUnitTest",
+        ":m51lab:testCandidateDebugUnitTest",
+        ":m51lab:assembleBaselineDebug",
+        ":m51lab:assembleCandidateDebug",
+        ":m51lab:assembleBaselineDebugAndroidTest",
+        ":m51lab:assembleCandidateDebugAndroidTest",
+        ":m51lab:lintCandidateDebug",
+        "--rerun-tasks",
+        "--no-daemon",
+        "--max-workers=2",
+        "--console=plain",
+        "-Pkotlin.compiler.execution.strategy=in-process"
+      ],
+      "binary_inventory": [],
+      "clock": "time.monotonic_ns",
+      "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "duration_ns": 259383447261,
+      "exit_code": 0,
+      "failures": 0,
+      "id": "interface-m51",
+      "integrity_after": {
+        "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+        "sources_preserved": true,
+        "status": "PASS",
+        "submodules_initialized": false,
+        "tracked_files": 157,
+        "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33"
+      },
+      "junit_evidence": [
+        {
+          "path": "results/interface-m51/app/build/test-results/testDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.DayPhaseTest.xml",
+          "sha256": "07c5480bc78566968a25bf9578e2f5d358b3b8466b7e18a64c4d4c67715fdb15"
+        },
+        {
+          "path": "results/interface-m51/app/build/test-results/testDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.WorkspaceRulesTest.xml",
+          "sha256": "6d979ba51ff45d946aac958766e5284d5740a4e4c75228f243ca78ac6b48d4b9"
+        },
+        {
+          "path": "results/interface-m51/app/build/test-results/testDebugUnitTest/TEST-com.jarvis.interfaceapp.domain.HomeStateTest.xml",
+          "sha256": "ca4127181d53dffa08fa552412c2751ba033c61ef68d1bf501e90dfc78304b2e"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testBaselineDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.DayPhaseTest.xml",
+          "sha256": "4be3fa299b5af8a6f729263210b22c754927fddd5a5cea21d0975329b2d08c15"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testBaselineDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.WorkspaceRulesTest.xml",
+          "sha256": "fd0711d787067a0e294f9a4aacd4304dcaac320c306d9f9654f0c371f587832e"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testBaselineDebugUnitTest/TEST-com.jarvis.interfaceapp.domain.HomeStateTest.xml",
+          "sha256": "21ec9cb6dc6f286fb9800fb6f4d0ae2967c7c6e0700573724316c8491da43623"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testBaselineDebugUnitTest/TEST-com.jarvis.interfaceapp.m51.CapabilityRegistryTest.xml",
+          "sha256": "0fb354714b0f1ec35ff29695b78934edeaa128619f42d6c440fbba4f176d3b80"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testCandidateDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.DayPhaseTest.xml",
+          "sha256": "27292d6cd61fe2674bc3b83304501d8806d27ee58998aac37496669c06e9fc5e"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testCandidateDebugUnitTest/TEST-com.jarvis.interfaceapp.cockpit.WorkspaceRulesTest.xml",
+          "sha256": "c302d7e713907b810ece11a080e627eb9e25139850b954d69287bb108b682567"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testCandidateDebugUnitTest/TEST-com.jarvis.interfaceapp.domain.HomeStateTest.xml",
+          "sha256": "c16ef35f3d512f678330979d98f68ba891832f8437f25c72e1388af0b0f948fe"
+        },
+        {
+          "path": "results/interface-m51/m51/android-lab/build/test-results/testCandidateDebugUnitTest/TEST-com.jarvis.interfaceapp.m51.CapabilityRegistryTest.xml",
+          "sha256": "848e51eb67f7ed3257f7d26e9647f9bbce997aef09c5e19389f9932d3fcd0caa"
+        }
+      ],
+      "kind": "UNIT",
+      "log": "logs/interface-m51.log",
+      "log_sha256": "279272eef5a2e783341ae42ac3f2eadcf469c1b14a03a2c441eaa730e667bb88",
+      "module": "INTERFACE",
+      "physical": "NOT_RUN",
+      "reason": null,
+      "skipped": 0,
+      "status": "PASS",
+      "test_invocations": 36,
+      "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33",
+      "truncated": false,
+      "unique_test_cases": 15
+    }
+  ],
+  "compatibility_counts": {
+    "INCOMPATIBLE": 38,
+    "UNKNOWN": 18
+  },
+  "contract_schema_examples": [
+    {
+      "contract": "capability-manifest",
+      "invalid_rejected": true,
+      "kind": "SIMULATION",
+      "scope": "HISTORICAL_SCHEMA_EXAMPLES_ONLY",
+      "sha256": "fdeda2a14c9ea818ebfedaad43035b192ccddc8b941fa61d6c25fa8d98b03b9a",
+      "valid_accepted": true,
+      "version": "v1"
+    },
+    {
+      "contract": "health-status",
+      "invalid_rejected": true,
+      "kind": "SIMULATION",
+      "scope": "HISTORICAL_SCHEMA_EXAMPLES_ONLY",
+      "sha256": "84420f0f18763f557d1f14cd7a06be9bc1d05705e11c672c91d68ecfbadf2bd0",
+      "valid_accepted": true,
+      "version": "v1"
+    },
+    {
+      "contract": "request-envelope",
+      "invalid_rejected": true,
+      "kind": "SIMULATION",
+      "scope": "HISTORICAL_SCHEMA_EXAMPLES_ONLY",
+      "sha256": "9c13abea1907cccb7f01990888d4eeb4a81aad90b5d823213bb5fe75372450fc",
+      "valid_accepted": true,
+      "version": "v1"
+    },
+    {
+      "contract": "resource-lease",
+      "invalid_rejected": true,
+      "kind": "SIMULATION",
+      "scope": "HISTORICAL_SCHEMA_EXAMPLES_ONLY",
+      "sha256": "0cabee9828db1ee719d5d43ab3b1e268aeafce7af49755224c78bf705595343c",
+      "valid_accepted": true,
+      "version": "v1"
+    },
+    {
+      "contract": "response-envelope",
+      "invalid_rejected": true,
+      "kind": "SIMULATION",
+      "scope": "HISTORICAL_SCHEMA_EXAMPLES_ONLY",
+      "sha256": "3649f25aab483c20fc53e909a0b6486724abc050245e15acdb03f8f4b17edd38",
+      "valid_accepted": true,
+      "version": "v1"
+    }
+  ],
+  "historical_ci": [
+    {
+      "run_id": 42638518479,
+      "status": "SUCCESS"
+    },
+    {
+      "run_id": 42638518294,
+      "status": "SUCCESS"
+    },
+    {
+      "run_id": 42638518385,
+      "status": "SUCCESS"
+    },
+    {
+      "run_id": 42638518454,
+      "status": "SUCCESS"
+    },
+    {
+      "run_id": 42638518518,
+      "status": "SUCCESS"
+    }
+  ],
+  "lab_dirty": false,
+  "lab_tests": {
+    "cases": 48,
+    "job": 129234262072,
+    "status": "PASS"
+  },
+  "main_observed": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+  "mission": "LAB-01",
+  "module": "UNIFIED",
+  "modules": [
+    {
+      "branch": "codex/m50-s1-core-ci-20261029",
+      "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "module": "CORE",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "status": "PASS",
+      "tree": "bef8a470e25847cff8a09351792133adfa268c38"
+    },
+    {
+      "branch": "codex/m51-lab-cloud-audit",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "module": "LLM",
+      "repository": "bubth720/JARVIS-LLM",
+      "status": "FAIL",
+      "tree": "053a59b808396314943b21bb5005887076a2e08e"
+    },
+    {
+      "branch": "feat/voice-final-01",
+      "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "module": "VOICE",
+      "repository": "bubth720/JARVIS-VOICE",
+      "status": "FAIL",
+      "tree": "65035f97cdaccfea6ab2fff91faf63416986f43d"
+    },
+    {
+      "branch": "codex/m51-r1-android-stability",
+      "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "module": "INTERFACE",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "status": "PASS",
+      "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33"
+    },
+    {
+      "branch": "codex/m53-readonly-preparation",
+      "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "module": "NEXUS",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "status": "PASS",
+      "tree": "1f5d78b084946e162617ac0525b32658cea80e15"
+    },
+    {
+      "branch": "mission/m50-integrated-beta-20261029",
+      "commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "module": "SERVICES",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "status": "PASS",
+      "tree": "e4b0f5c440a577114f2968f0cc45220483407822"
+    },
+    {
+      "branch": "codex/m51-unified-gates",
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "module": "UNIFIED",
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "status": "PASS",
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+    },
+    {
+      "branch": "mission/m50-integrated-beta-20261029",
+      "commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "module": "EVOLUTION",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "status": "PASS",
+      "tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b"
+    }
+  ],
+  "not_run": [
+    "PHYSICAL",
+    "LLM_GENERATION",
+    "NEW_CORE_LLM_RUNTIME",
+    "ANDROID_EMULATOR_QUALIFICATION"
+  ],
+  "pdf": {
+    "file": "JARVIS_MISSION_LAB-01.pdf",
+    "pages": 16,
+    "sha256": "73b6480af0dc3b667b14654a142cc88003f31a692a199850b9876e4f5aa590e6"
+  },
+  "pr": 23,
+  "pr_lab_checks": {
+    "full_campaign": "SKIPPED_BY_TRIGGER_POLICY",
+    "run_id": 42638518672,
+    "status": "SUCCESS"
+  },
+  "prior_campaigns": [
+    {
+      "reason": "YAML_LINE_61_NO_CAMPAIGN_EXECUTED",
+      "run_id": 42637073935,
+      "source_commit": "37992f112ce2f559a6dbab29d103690507b5e7eb",
+      "status": "FAIL"
+    },
+    {
+      "artifact_id": 13683439058,
+      "artifact_sha256": "5b0ad73cebff4b3d91831351754bd7e7ef227f132a7a5c40b9e81c718a0ac4e3",
+      "download_verified": true,
+      "run_id": 42637416572,
+      "source_commit": "5c5930f2a4f5182e3a23fc4f97914575c1ff9f1a",
+      "status": "FAIL"
+    },
+    {
+      "artifact_id": 13683499747,
+      "artifact_sha256": "a08dcdfa37d14f3eaa55d1a2518c1aeb660133e8afeb4794d3403c3d1d5e95b0",
+      "download_verified": true,
+      "run_id": 42637428156,
+      "source_commit": "5c5930f2a4f5182e3a23fc4f97914575c1ff9f1a",
+      "status": "FAIL"
+    }
+  ],
+  "report_raw_sha256": "f128ab973449761ca8569f73e9663404fb331f58158f88d1a06fc970813b9ae5",
+  "repository": "bubth720/JARVIS-UNIFIED",
+  "run_id": 42638506700,
+  "runtime_gates": "CLOSED",
+  "runtime_integration_proven": false,
+  "schema": "jarvis.lab01.delivery/1",
+  "source_commit": "1a10328459a71578a6e56427b848cb6467fba57d",
+  "source_integrity_after": {
+    "CORE": {
+      "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 618,
+      "tree": "bef8a470e25847cff8a09351792133adfa268c38"
+    },
+    "EVOLUTION": {
+      "commit": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 47,
+      "tree": "45fc5ee2773d5d5e2e57a7bc27355a66ea4fa27b"
+    },
+    "INTERFACE": {
+      "commit": "b9a9506785b8851f55789ed4329c9394a3937447",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 157,
+      "tree": "9726b7846a7c1b068b94ee7af2e07c8ef03d8a33"
+    },
+    "LLM": {
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 507,
+      "tree": "053a59b808396314943b21bb5005887076a2e08e"
+    },
+    "NEXUS": {
+      "commit": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 329,
+      "tree": "1f5d78b084946e162617ac0525b32658cea80e15"
+    },
+    "SERVICES": {
+      "commit": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 372,
+      "tree": "e4b0f5c440a577114f2968f0cc45220483407822"
+    },
+    "UNIFIED": {
+      "commit": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 397,
+      "tree": "1ac087cccbca8d1c1087b1cf62248732abc47e0a"
+    },
+    "VOICE": {
+      "commit": "fe57452fcb33f5b6870070f30ba6c5f1d349c4ba",
+      "sources_preserved": true,
+      "status": "PASS",
+      "submodules_initialized": false,
+      "tracked_files": 564,
+      "tree": "65035f97cdaccfea6ab2fff91faf63416986f43d"
+    }
+  },
+  "source_tree": "b37563981c7fb2db0a236c48cda6adcfa016aff4",
+  "tool_state": "FUNCTIONAL_SOFTWARE_MODULE_QUALIFICATION_PARTIAL",
+  "workflow_conclusion": "failure"
+}

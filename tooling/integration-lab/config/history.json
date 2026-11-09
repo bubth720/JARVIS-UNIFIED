@@ -1,0 +1,24 @@
+{
+  "historical_results_not_reexecuted_by_reading_this_file": [
+    {
+      "module": "INTERFACE",
+      "commit": "9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a",
+      "run_id": 42456346025,
+      "status": "FAIL",
+      "reason": "SAF/navigation/SnapshotStateObserver API29; SystemUI ANR API35"
+    },
+    {
+      "module": "INTERFACE",
+      "commit": "d0e9219b205fbf89fd7dd346ab26aacd03a8f62d",
+      "run_id": 42515139639,
+      "status": "BLOCKED",
+      "reason": "API29 SystemUI fatal before JARVIS; API35 boot timeout"
+    },
+    {
+      "module": "LLM",
+      "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "status": "FAIL",
+      "reason": "Historical AndroidManifest protected baseline drift; authority NO_GO is not opened by passing audit tests"
+    }
+  ]
+}

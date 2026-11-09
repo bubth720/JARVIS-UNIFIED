@@ -1,0 +1,12 @@
+{
+  "profile": "android_lab",
+  "runtime_modules": [
+    "INTERFACE_LOCAL_ONLY"
+  ],
+  "model_acquisition": false,
+  "core_llm_admission": false,
+  "physical_devices": false,
+  "emulator_boot": false,
+  "android_preflight_required": true,
+  "description": "Pinned audit, tests, independent builds and evidence; Android only on existing authorized emulator"
+}
