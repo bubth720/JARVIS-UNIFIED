@@ -1,0 +1,175 @@
+{
+  "schema": "jarvis.m50-s1b.qualification/1",
+  "observed_at": "2026-11-04T13:47:41.931982+00:00",
+  "source_sha": "b9a6c1997710c182dd481b23a47ff7120e3e98a0",
+  "source_tree": "08b3f11f534de54a14734f8be2de2f02324497d7",
+  "qualified": true,
+  "scope": "Private synthetic CORE/INTERFACE laboratory only",
+  "apk": {
+    "schema": "jarvis.m50-s1b.apk/1",
+    "sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+    "size": 3922100,
+    "application_id": "fr.jarvis.lab.m50s1",
+    "min_sdk": 29,
+    "target_sdk": 35,
+    "test_only": true,
+    "permissions": [],
+    "native_libraries": [],
+    "models": [],
+    "backup_enabled": false,
+    "android_execution": "NOT_PROVEN_BY_THIS_CHECK"
+  },
+  "host_cases": [
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "closeClearsRamAndLateWorkerCannotReopenThePort"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "identicalEventReplayIsDeduplicated"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "reusedEventIdAtAnotherSequencePoisonsTheClient"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "ownerErrorIsARealCoordinatorErrorNotAResponse"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "realCoordinatorAckAndFixedSyntheticContent"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "malformedTextCannotReachTheCoordinator"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "replayedSubmissionIdCannotStartASecondCoreTurn"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "staleStopCannotCancelTheCurrentCoreRequest"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "lostAckTimesOutWithoutStartingCoreOrRetrying"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "resourceUnknownAfterCompletedMetadataNeverBecomesSuccessfulContent"
+    ],
+    [
+      "com.stark.jarvislocal.LabCoreTransportTest",
+      "stopKeepsTheGateUntilActualSyntheticWorkerDrain"
+    ]
+  ],
+  "android": {
+    "29": {
+      "api": 29,
+      "apk_sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+      "platform": "Android emulator x86_64",
+      "instrumentation": {
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "cases": [
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "unknownAfterCoreCompletionBlocksAllNewSubmissions"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "duplicateEventsDoNotDuplicateTheDisplayedResponse"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "actualUiSubmitsToSingleCoreAndRotationKeepsItsInstance"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "ownerErrorDoesNotInventAResponse"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "stopWaitsForRealCoreDrainAndRejectsStaleKey"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "manifestIsIsolatedAndHasNoPermissions"
+          ]
+        ]
+      },
+      "airplane_mode": true,
+      "wifi_enabled": false,
+      "external_force_stop_restart": "PASS",
+      "unknown_same_process_blocked": true,
+      "new_process_epoch": true,
+      "old_ram_restored": false,
+      "diagnostic_metrics": {
+        "cold_start_total_ms": 1715,
+        "unknown_synthetic_process_pss_kib": 36129,
+        "native_inference_latency": "NOT_RUN"
+      },
+      "physical_device": "NOT_RUN",
+      "native_generation": "NOT_RUN"
+    },
+    "35": {
+      "api": 35,
+      "apk_sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+      "platform": "Android emulator x86_64",
+      "instrumentation": {
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "cases": [
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "unknownAfterCoreCompletionBlocksAllNewSubmissions"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "duplicateEventsDoNotDuplicateTheDisplayedResponse"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "actualUiSubmitsToSingleCoreAndRotationKeepsItsInstance"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "ownerErrorDoesNotInventAResponse"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "stopWaitsForRealCoreDrainAndRejectsStaleKey"
+          ],
+          [
+            "com.stark.jarvislocal.LabInstrumentedTest",
+            "manifestIsIsolatedAndHasNoPermissions"
+          ]
+        ]
+      },
+      "airplane_mode": true,
+      "wifi_enabled": false,
+      "external_force_stop_restart": "PASS",
+      "unknown_same_process_blocked": true,
+      "new_process_epoch": true,
+      "old_ram_restored": false,
+      "diagnostic_metrics": {
+        "cold_start_total_ms": 2298,
+        "unknown_synthetic_process_pss_kib": 40377,
+        "native_inference_latency": "NOT_RUN"
+      },
+      "physical_device": "NOT_RUN",
+      "native_generation": "NOT_RUN"
+    }
+  },
+  "llm_native": "DISABLED_NOT_QUALIFIED",
+  "nexus": "DISABLED",
+  "services": "DISABLED",
+  "voice": "DISABLED",
+  "evolution": "DISABLED",
+  "physical_device": "NOT_RUN",
+  "M50": "NOT_ACHIEVED"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "jarvis.m51.authority-preservation/1",
+  "base": "69400fe26d61688262b94cc8a2d5efe20d1da4be",
+  "base_tree": "aa2910dbddb25289ff7c22830fcf99d5463871e1",
+  "commit": "08fbda527d187f324d94e0adafbca76fa955a343",
+  "tree": "053a59b808396314943b21bb5005887076a2e08e",
+  "worktree_dirty": false,
+  "frozen_files": 493,
+  "original_patch_sha256": "8df826451e501a107305f8fcaee5ca3d5334e22de23246d32cc7fd5312da21e8",
+  "dry_run": "PASS",
+  "original_patch_changed": false,
+  "productive_sources_changed": false,
+  "jni_changed": false,
+  "patch_applied": false,
+  "operator_root_provisioned": false,
+  "model_acquired": false
+}

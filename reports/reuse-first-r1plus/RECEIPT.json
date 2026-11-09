@@ -1,0 +1,122 @@
+{
+  "schema": "jarvis.reuse.reception/1",
+  "scope": "DOCUMENTARY_ONLY",
+  "historical_coordination_base": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+  "can_activate": false,
+  "productive_connection": false,
+  "android_qualified": false,
+  "real_llm_qualified": false,
+  "vertical_integrated": false,
+  "campaign_source": "7282fd769d4ab787467d08fd8059b2f1e18ca139",
+  "campaign_run": "42524234101",
+  "campaign_attempt": 1,
+  "api29_raw_preflight_accepted": false,
+  "modules": [
+    {
+      "module": "CORE",
+      "tested_source": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "status": "PASS",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/core-baseline.json",
+      "junit": {
+        "tests": 641,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 641
+    },
+    {
+      "module": "VOICE",
+      "tested_source": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+      "status": "PASS",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/voice-baseline.json",
+      "junit": {
+        "tests": 260,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 23
+      },
+      "passed": 237
+    },
+    {
+      "module": "SERVICES",
+      "tested_source": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+      "status": "PASS",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/services-baseline.json",
+      "junit": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 134
+    },
+    {
+      "module": "EVOLUTION",
+      "tested_source": "84ebc2e2b55d48306247fc9045a712294abaf457",
+      "status": "PASS",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/evolution-baseline.json",
+      "junit": {
+        "tests": 40,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 40
+    },
+    {
+      "module": "LLM",
+      "tested_source": "08fbda527d187f324d94e0adafbca76fa955a343",
+      "status": "BLOCKED",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/llm-current-review.json",
+      "safety_verdict": "NO_GO",
+      "tests": 259
+    },
+    {
+      "module": "NEXUS",
+      "tested_source": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+      "status": "PASS",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/nexus-results.json",
+      "junit": {
+        "tests": 108,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "test_source_set_only": true
+    },
+    {
+      "module": "INTERFACE",
+      "tested_source": "d569ce816cf39191742769afef5b0711bc9a28cd",
+      "status": "BLOCKED",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": "evidence/interface-post-C1-build.json",
+      "android_status": "BLOCKED",
+      "device_tests_after_fix": "NOT_RUN",
+      "jvm_tests": 36,
+      "python_tests": 36
+    },
+    {
+      "module": "UNIFIED",
+      "tested_source": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+      "status": "NON_QUALIFIE",
+      "scope": "HOST_TESTS_ONLY",
+      "runtime_qualified": false,
+      "evidence": null,
+      "note": "Historical snapshot source; current coordination-only source is bound by its GitHub run, not this self-referential file."
+    }
+  ]
+}

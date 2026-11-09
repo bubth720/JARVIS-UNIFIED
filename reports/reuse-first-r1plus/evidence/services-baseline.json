@@ -1,0 +1,933 @@
+{
+  "module": "SERVICES",
+  "source": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+  "expected_source": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+  "junit": [
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.ToolDispatcherTest.xml",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "restartInvalidatesPendingReceiptWithoutDeletingJournal()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "collisionAndVersionsAreRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "threeRealAdaptersAndReadableDocx()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "journalContainsNoArgumentsOrPaths()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "contentPrincipalAndRequestCannotBeChanged()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "persistentRegistryDoesNotMakeAdaptersExecutable()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "permissionRefusedBeforeAdapterReadsAnything()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "cancelAndDeadlineArePropagatedAndQueuedWorkNeverRuns()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "absentApprovalAndUnsafePathNeverCreateFile()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolDispatcherTest",
+          "name": "receiptCannotBeReplayedAndConsumptionIsDurable()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.ToolReceiptLifecycleTest.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.ToolReceiptLifecycleTest",
+          "name": "drainCallbackWaitsForActuallyReturnedCancelledOperation()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ToolReceiptLifecycleTest",
+          "name": "uncertainReceiptNeverDeliversSuccessOrValue()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.ServicesWirePreflightTest.xml",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "localGenerationZeroCannotBePromoted()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "oldCompletedIsNotCommitted()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "hugeJavaGenerationCannotBePromoted()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "refusalAndUnknownAreNotSilentlyCast()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "validBoundaryIsStillNotAuthorization()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "nullNeverActivatesRuntime()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ServicesWirePreflightTest",
+          "name": "commitStartedIsNotDispatched()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.PipelineFixtureTest.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "cancellationAndMissingPermissionsAreRefused()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "maliciousDocxXmlIsRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "sourceCitationCannotClaimMissingText()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "pdfAndCsvProduceVerifiedMarkdownAndDocx()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "malformedUtf8AndPdfAreRejectedWithoutPersistence()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "unicodeSegmentsRemainExactAndCsvRejectsInvalidNumbers()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "safePathsAndExactApprovalRemainMandatory()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.PipelineFixtureTest",
+          "name": "atomicExportDoesNotReplaceOriginalAndRefusesReplay()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.prefusion.TwoJournalLot4Test.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "revocationBeforeCommitPreventsSyntheticEffect()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "readOnlyInspectionBeforeUnknownIsInconclusive()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "badReadbackNeverBecomesCommitted()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "repeatConsentRefused()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "noFakeCoreConsent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "appendFailureCannotResetOldOwnerJournal()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "unknownWithFalseEvidenceStaysUnknown()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "lostAckNoRetryOrPromote()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "failedCoreJournalAppendIsUnknown()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "failedWorkerJournalBeforeEffectIsUnknown()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "duplicateDispatchRefused()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "cannotMarkCommittedFromDispatched()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.TwoJournalLot4Test",
+          "name": "successRemainsASyntheticLabOnly()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.DocxSecurityTest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.DocxSecurityTest",
+          "name": "malformedXmlIsRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.DocxSecurityTest",
+          "name": "dtdIsRejectedForUtf8AndUtf16()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.DocxSecurityTest",
+          "name": "utf16AndBuiltInEntitiesRemainSupported()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.DocxSecurityTest",
+          "name": "extractedTextIsBounded()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.ModulesTest.xml",
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "jsonFilterSortNormalizeAggregate()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "cancelledWorkflowCreatesNoFile()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "bridgeIdentityCapabilitiesAndDisconnect()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "recoveryIncludesOriginalsAndMetadata()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "memoryRequiresExactConfirmationAndPersists()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "multiBatchCorpusKeepsEverySource()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "protectedExportDenied()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "realPdfImportSearch()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "incrementalIndexAndDelete()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "vectorBaselineProvenance()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "representativeWorkflowWithNetworkDenied()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "corruptBackupRefused()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "ftsSpecialCharactersAreLiteral()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "analystMultiDocumentMockAndOfflineFallback()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "importsTextAndMetadata()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "limitedSemanticSynonyms()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "noArbitraryToolOrDocumentInstructions()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "cancelledImportLeavesNoOriginal()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "analystRejectsInventedCitation()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "crashedWorkflowIsUnknownNotReplayed()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "memoryRetention()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "scannedPdfReportsOcrRequired()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "memoryRectificationDeletion()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "diagnosticsOfflineAndEightModules()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "analystCoordinatesKnowledgeDocumentsDataAndModel()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "coreMockCorrelationAndPermission()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "malformedCsvAndNumbers()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "xxeInDocxRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "csvExactDedupAndStatistics()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "backupRestoreRequiresConfirmation()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "boundsAndExtensions()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "importsCsvJson()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "docxRoundtripAndNoOverwrite()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "workflowCreatesDocxAndRejectsReplay()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "csvQuotedMultilineRoundtrip()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.ModulesTest",
+          "name": "analystCalculationsDeterministic()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.FoundationTest.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "permissionsFailClosed()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "symbolicLinkRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "destructiveDowngradeRefused()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "backupRestoreRebuildsSearch()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "integrityAndRestart()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "transactionRollsBack()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "traversalAndAbsoluteRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "confirmationBindsExactContent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "confirmationOneShot()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "confirmationBindsIdentity()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "auditDoesNotStoreContent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "singleHeavyTaskAndRelease()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "malformedRequestRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "cancellationAndDeadline()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "migrationRoundtrip()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "malformedBackupDoesNotDelete()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "progressSequence()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.FoundationTest",
+          "name": "unknownProtocolRejected()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.prefusion.ReceiptContractBenchTest.xml",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "revocationAfterDecisionDoesNotUndoObservedEffect()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "exactConsentCannotBeBorrowedAcrossFixtureAuthorities()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "corruptOrReorderedJournalIsNotReset()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "generationZeroAndIntermediateLabelsRemainNonEquivalent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "cancellationBeforeCommitHasNoEffect()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "journalForAnotherGenerationCannotBeAdopted()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "revocationBeforeCommitHasNoEffect()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "duplicateCommandNeverInvokesEffectAgain()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "fullReadbackAndCloseAreRequiredNotJustAFinalHashClaim()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "deterministicClockExpiresWithoutEffectOrSleep()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "journalFailureBeforeEffectConsumesConsentAndStaysUnknown()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "abandonedDispatchAndCommitRecoverAsUnknownNotPrepared()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "lostAckAfterEffectIsUnknownAndNeverRetryable()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.prefusion.ReceiptContractBenchTest",
+          "name": "callbackExceptionAfterDecisionNeverRestoresConsent()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.CommitAuthorizationTest.xml",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "ambiguousCallbackFailureDoesNotRestoreConsent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "revocationAfterCommitCannotPromiseRollback()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "alteredDestinationAndCancellationRefuse()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "everyPreviewFieldIsBoundToExactConsent()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "missingConsentAndExpiredDeadlineRefuse()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.CommitAuthorizationTest",
+          "name": "revocationBeforeCommitPreventsEffect()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.SafExportWriterTest.xml",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "verifiedMarkdownCommitsOnlyAfterReadbackAndCannotReplay()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "docxUsesExistingSecureEncoderAndReader()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "cancellationBeforeWriteCreatesNothing()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "corruptReadbackRollsBackFreshOutputAndRefusesSuccess()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "lostCreationAcknowledgementRemainsUnknown()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "foreignTargetOrMissingPermissionCannotTouchProvider()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.SafExportWriterTest",
+          "name": "writeFailureAndFailedCleanupRemainUnknown()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.BundledStorageTest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.BundledStorageTest",
+          "name": "bundledDriverSupportsFts5AndRollback()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "desktop/build/test-results/test/TEST-fr.jarvis.services.WorkflowBridgeTest.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "realTwoProcessLabTransferDeduplicatesAndAcknowledges()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "cyclesChangedDefinitionsAndUnknownDependenciesAreRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "inFlightRecoveryStaysUnknownAndCannotAutoRetry()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "gapsVectorRegressionTamperAndWrongContractAreRejected()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "permissionsAreCheckedBeforeWorkflowDispatch()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "realThreeStepWorkflowResumesWithoutReplayingCompletedSteps()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "missingOrFalseAckAndDisabledTransportNeverBecomeSuccess()",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.services.WorkflowBridgeTest",
+          "name": "compensationOwnsOnlyFreshTemporaryAndRefusesChangedContent()",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    }
+  ],
+  "android_instrumentation": "NOT_RUN",
+  "llm_generation": "NOT_RUN",
+  "physical_hardware": "NOT_RUN",
+  "real_voice_quality": "NOT_RUN",
+  "production_activation": false
+}

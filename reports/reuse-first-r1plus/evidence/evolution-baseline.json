@@ -1,0 +1,279 @@
+{
+  "module": "EVOLUTION",
+  "source": "84ebc2e2b55d48306247fc9045a712294abaf457",
+  "expected_source": "84ebc2e2b55d48306247fc9045a712294abaf457",
+  "junit": [
+    {
+      "path": "evolution-sandbox/build/test-results/test/TEST-fr.jarvis.evolution.sandbox.ProposalPolicyTest.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "invalidUtf8ControlCharactersAndOversizedDiffsAreRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "forgedOriginSignatureAndDigestAreRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "realTextDiffIsParsedWithoutApplyingIt",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "truncatedReviewJournalIsRefusedWithoutResetOrAutomaticRecovery",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "expiredWrongBaseVersionAndUnifiedReferenceAreRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "reviewAndRevocationPersistWithoutDiffsOrPrivateKeys",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "declaredFilesAreReadOnlyAndOnlySyntheticRootsAreEligible",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "actualEd25519OriginSignatureIsVerifiedAgainstPinnedKey",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "wrongContentAndApprovalReplayDoNotMutateJournal",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "truncatedAndMismatchedHunksCannotBeAccepted",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "evenSignedAndApprovedProposalNeverUnlocksRunner",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "unsafeNamesBinaryRenamesModesAndExecutablePathsAreRefused",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.sandbox.ProposalPolicyTest",
+          "name": "symlinkToEvenAnotherSyntheticFileIsRefused",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "evolution-core/build/test-results/test/TEST-fr.jarvis.evolution.DiagnosticTest.xml",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "oldLowSeverityAndLowRatiosDoNotGenerateFalseDetections",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "groupingKeepsMultipleEvidenceLinksAndStrongestImpact",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "casesEvidenceAcknowledgementAndJournalSurviveReopening",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "corruptedEvidenceIsRefusedInsteadOfPresentedAsVerified",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "individualRulesCanBeDisabledWithoutCreatingAlternativeActions",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "inventedSourceOrChangedDigestIsRejectedBeforeWriting",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "humanStateTransitionsAreExplicitAndDoNotEraseHistory",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "snapshotsRemainVerifiableWhenSourceRetentionRemovesTheEvent",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "sixRulesUseRealSignalsAndKeepOwners",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "repeatedEvaluationDoesNotDuplicateCasesOrResetHumanStatus",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.DiagnosticTest",
+          "name": "missingMetricsFutureAndIncompleteWindowsNeverBecomeCertainCases",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    },
+    {
+      "path": "evolution-core/build/test-results/test/TEST-fr.jarvis.evolution.TelemetryTest.xml",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "schedulerHasNoBackgroundThreadAndHonorsExplicitInterval",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "retentionAndRowRotationPreserveNewest",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "duplicateIncidentsAreCountedAndSurviveReopen",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "moduleAndTimeQueriesAreBounded",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "privatePayloadIsDiscardedBeforeQueueAndSqliteWrite",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "disableSerializesWithInFlightWriteAndDropsRemainingQueue",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "saturationIsBoundedAndExplicitAndDisablingDiscardsQueuedOnly",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "fileLimitAndConfigurationCannotBecomeUnbounded",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "probesOnlyExposeInjectedTechnicalNumbersAndDiscardThrowableText",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "collectionIsOffByDefaultAndDoesNotInvokeProbes",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "corruptAndFutureDatabasesAreRefusedWithoutReset",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "nonFiniteNegativeAndUnknownMetricsAreNotPersisted",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "failedCommitRemainsUnknownAndIsNotAutomaticallyRetried",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "schemaVersionAndOnlySanitizedColumnsArePersisted",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "uncertainWriteBlocksRemainingQueueEvenAfterConsentToggle",
+          "skip": false,
+          "failure": false
+        },
+        {
+          "class": "fr.jarvis.evolution.TelemetryTest",
+          "name": "unrelatedDatabaseIsNotAdoptedOrModified",
+          "skip": false,
+          "failure": false
+        }
+      ]
+    }
+  ],
+  "android_instrumentation": "NOT_RUN",
+  "llm_generation": "NOT_RUN",
+  "physical_hardware": "NOT_RUN",
+  "real_voice_quality": "NOT_RUN",
+  "production_activation": false
+}

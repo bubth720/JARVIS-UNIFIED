@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "base": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+  "source_commit": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+  "historical_files_preserved": 329,
+  "additions": [
+    ".github/workflows/reuse-r1plus.yml",
+    "reuse-r1plus/README.md",
+    "reuse-r1plus/adapter/ReadOnlyConsultationAdapter.kt",
+    "reuse-r1plus/check.py",
+    "reuse-r1plus/init.gradle",
+    "reuse-r1plus/tests/ConsultationTest.kt"
+  ],
+  "canonical_contracts_changed": false,
+  "default_build_changed": false,
+  "application_sources_changed": false,
+  "database_migrated": false,
+  "android": "NOT_RUN",
+  "production_connected": false,
+  "core_authority": "NOT_PROVIDED"
+}

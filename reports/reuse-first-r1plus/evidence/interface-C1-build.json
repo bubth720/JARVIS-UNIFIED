@@ -1,0 +1,96 @@
+{
+  "source_commit": "7282fd769d4ab787467d08fd8059b2f1e18ca139",
+  "source_tree": "09091a0b2928fa976f47fb7035175c368c09aaa2",
+  "ui_base_commit": "0dfeef8ff09d60a68d18398ccb6b2530f3b87df4",
+  "apks": [
+    {
+      "variant": "baseline",
+      "package": "fr.jarvis.v1.lab.baseline",
+      "apk": "M51-baseline.apk",
+      "sha256": "96500bbc341b7532d78702c5072c129972adbb7991b3735baf3d09356794660e",
+      "test_apk": "M51-baseline-tests.apk",
+      "test_sha256": "dddcc14381885f9c54c0be4b08a0a0100eb5fa434ef79d514b71481a3cbb53f2",
+      "certificate_sha256": "cbc9bb9a05f3b81676610b4a367dee05c3ed8147cfb2d0900d74118ed298fd59",
+      "test_only": true,
+      "allow_backup": false,
+      "permissions": [
+        "fr.jarvis.v1.lab.baseline.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "native_libraries": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "lib/armeabi-v7a/libandroidx.graphics.path.so": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+        "lib/x86/libandroidx.graphics.path.so": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+        "lib/x86_64/libandroidx.graphics.path.so": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+      },
+      "abi": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "native_scope": "UI_GRAPHICS_PATH_ONLY_NO_LLM",
+      "page_16k_android": "NOT_RUN",
+      "min_sdk": 26,
+      "target_sdk": 35,
+      "version_code": 51,
+      "version_name": "0.51.0-m51-lab"
+    },
+    {
+      "variant": "candidate",
+      "package": "fr.jarvis.v1.lab",
+      "apk": "M51-candidate.apk",
+      "sha256": "bded5c56bac2f1f3e2a697727e7f18db54ea973dde08af0170909c1dd8d55bf1",
+      "test_apk": "M51-candidate-tests.apk",
+      "test_sha256": "981608f4def7581025b9b8f1509c89534a8382490db2bfee35c3d12fa15a22ec",
+      "certificate_sha256": "cbc9bb9a05f3b81676610b4a367dee05c3ed8147cfb2d0900d74118ed298fd59",
+      "test_only": true,
+      "allow_backup": false,
+      "permissions": [
+        "fr.jarvis.v1.lab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "native_libraries": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "lib/armeabi-v7a/libandroidx.graphics.path.so": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+        "lib/x86/libandroidx.graphics.path.so": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+        "lib/x86_64/libandroidx.graphics.path.so": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+      },
+      "abi": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "native_scope": "UI_GRAPHICS_PATH_ONLY_NO_LLM",
+      "page_16k_android": "NOT_RUN",
+      "min_sdk": 26,
+      "target_sdk": 35,
+      "version_code": 51,
+      "version_name": "0.51.0-m51-lab"
+    }
+  ],
+  "jvm_tests": {
+    "historical": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lab-baseline": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lab-candidate": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "runtime_connections": [
+    "INTERFACE_LOCAL_ONLY"
+  ],
+  "physical_android": "NOT_RUN",
+  "llm_generation": "NOT_RUN"
+}

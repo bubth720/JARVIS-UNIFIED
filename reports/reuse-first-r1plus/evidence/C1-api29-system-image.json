@@ -1,0 +1,62 @@
+[
+  {
+    "file": "NOTICE.txt",
+    "bytes": 2188361,
+    "sha256": "b527087e8eef5af6eff84f09e70db26146095d0a4e45d4cd18adde7139e5eb73"
+  },
+  {
+    "file": "VerifiedBootParams.textproto",
+    "bytes": 356,
+    "sha256": "bb1cf4861d7c26a633bcaae1bb934004835bdf87c478f5dfbdd99f984d9f0bc7"
+  },
+  {
+    "file": "advancedFeatures.ini",
+    "bytes": 212,
+    "sha256": "e6d6916743c66e07c0064b58be7d5c34ef6d0e3fc62221641eb688c640def7aa"
+  },
+  {
+    "file": "build.prop",
+    "bytes": 2921,
+    "sha256": "158e051bd50ce59b5149d6d0f2dc999f6823ba27eb66197a8a9772edfdae6469"
+  },
+  {
+    "file": "encryptionkey.img",
+    "bytes": 1048576,
+    "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+  },
+  {
+    "file": "kernel-ranchu",
+    "bytes": 7864304,
+    "sha256": "1cf9a37c3c2674b7046b100ff935ced90fa460e1d79fed13eaf4935be1b1b02a"
+  },
+  {
+    "file": "package.xml",
+    "bytes": 18734,
+    "sha256": "a1b345ed806a82eb8751c90083b0dbc80fa496ce3aefc42be25a5570f2b96e98"
+  },
+  {
+    "file": "ramdisk.img",
+    "bytes": 898444,
+    "sha256": "120eb59bfdc532f375edd3d1319c9610d6373fda1da13e41e969a025b3fdfab5"
+  },
+  {
+    "file": "source.properties",
+    "bytes": 256,
+    "sha256": "9db370b96467c9a94a68843aeb1a699bec44d4d05ef52a6774d8f6174418a847"
+  },
+  {
+    "file": "system.img",
+    "bytes": 3232759808,
+    "sha256": "1cec62e86c2cb2bf470bb0c530f2a2514af97eadc919667623ff6cac9034d1d6"
+  },
+  {
+    "file": "userdata.img",
+    "bytes": 1048576,
+    "sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+  },
+  {
+    "file": "vendor.img",
+    "bytes": 127926272,
+    "sha256": "66922b7fd9e5b9a5dc8bc22101c002f8143bb484291e350a5f11b6cfe676dad0"
+  }
+]

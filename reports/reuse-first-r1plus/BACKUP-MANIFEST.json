@@ -1,0 +1,74 @@
+[
+  {
+    "repository": "JARVIS-INTERFACE",
+    "head": "b9a9506785b8851f55789ed4329c9394a3937447",
+    "commits_all_refs": 102,
+    "bundle": "JARVIS-INTERFACE.bundle",
+    "bytes": 5892565,
+    "sha256": "479d50a63a5225d15c2bcd708fd518a9c2364ab69ef0844428ee72af8fb917f1",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-LLM",
+    "head": "08fbda527d187f324d94e0adafbca76fa955a343",
+    "commits_all_refs": 72,
+    "bundle": "JARVIS-LLM.bundle",
+    "bytes": 1117509,
+    "sha256": "3fc32fcb13fc62270e85eae168990d3d2eb226d03e7b8da9bfd0016cb0c2986a",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-NEXUS",
+    "head": "eae61fb62a9ccd4073b96d71454f89e5a943eae9",
+    "commits_all_refs": 36,
+    "bundle": "JARVIS-NEXUS.bundle",
+    "bytes": 503108,
+    "sha256": "b26e2d70c18d175755d896d482c8aeb6454d6c78c1412b4a14444eb6189faf07",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-SERVICES",
+    "head": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+    "commits_all_refs": 52,
+    "bundle": "JARVIS-SERVICES.bundle",
+    "bytes": 700809,
+    "sha256": "aeef90b7f66135fafada6ce6258a92ba445bfc018c4f3fe60613d87c20bd8f3f",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-UNIFIED",
+    "head": "a7625a31513be5c56fa36ed946fbdcd3c23c2a15",
+    "commits_all_refs": 91,
+    "bundle": "JARVIS-UNIFIED.bundle",
+    "bytes": 1001932,
+    "sha256": "cb03695e0cc1354f49e79aa632ac6f04028ad66545001f9f60ea7156356e6edb",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-VOICE",
+    "head": "642d9c19bcba35e5ffe686403d50c65aa9dc992a",
+    "commits_all_refs": 101,
+    "bundle": "JARVIS-VOICE.bundle",
+    "bytes": 66062964,
+    "sha256": "b72892de70017b81c34f1d4d79694a33488f57fba3104d23047e7cc55c8c1db8",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JARVIS-VOLUTION-",
+    "head": "84ebc2e2b55d48306247fc9045a712294abaf457",
+    "commits_all_refs": 17,
+    "bundle": "JARVIS-VOLUTION-.bundle",
+    "bytes": 145098,
+    "sha256": "f6e78ac22501dd56d4c4712deb38d7139657aaf32f4c1afe27a38fdcfc2859cc",
+    "integrity": "PASS"
+  },
+  {
+    "repository": "JAVIS-Local-v2",
+    "head": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+    "commits_all_refs": 122,
+    "bundle": "JAVIS-Local-v2.bundle",
+    "bytes": 1222524,
+    "sha256": "c7a08e92a372d0b02ff033379c042891bfa971b2ae7f38d37ed971cd05859bb7",
+    "integrity": "PASS"
+  }
+]

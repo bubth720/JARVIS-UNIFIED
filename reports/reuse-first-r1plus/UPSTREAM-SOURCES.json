@@ -1,0 +1,1110 @@
+{
+  "observed_utc": "2026-11-08",
+  "scope": "Official repository metadata and README at immutable SHA; upstream claims not JARVIS qualification",
+  "components": [
+    {
+      "name": "ggml-org/llama.cpp",
+      "branch": "master",
+      "description": "LLM inference in C/C++",
+      "license": "MIT",
+      "archived": false,
+      "updated_at": "2026-11-08T20:18:55Z",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "commit": "7d7f0287530bc8981690f361d8c1627dbae1c99a",
+      "commit_date": "2026-11-08T14:49:06Z",
+      "readme_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/7d7f0287530bc8981690f361d8c1627dbae1c99a/README.md",
+      "notes": [
+        {
+          "line": 9,
+          "text": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)"
+        },
+        {
+          "line": 16,
+          "text": "[ggml](https://github.com/ggml-org/ggml) / [ops](https://github.com/ggml-org/llama.cpp/blob/master/docs/ops.md) / [maintainer PRs](https://github.com/ggml-org/llama.cpp/pulls?q=is%3Apr%20is%3Aopen%20draft%3AFalse%20(author%3Asanmai%20OR%20author%3Argerganov%20OR%20author%3AKitaitiMakoto%20OR%20author%3Adanbev%20OR%20author%3Aaldehir%20OR%20author%3Amax-krasnyansky%20OR%20author%3ACISC%20OR%20author%3Aggerganov%20OR%20author%3Aam17an%20OR%20author%3Ajhen0409%20OR%20author%3Abartowski1182%20OR%20author%3Anikwen%20OR%20author%3Ahipudding%20OR%20author%3Aravi9%20OR%20author%3AServeurpersoCom%20OR%20author%3Athelittlefireman%20OR%20author%3Apwilkin%20OR%20author%3Areeselevine%20OR%20author%3Angxson%20OR%20author%3Ajeffbolznv%20OR%20author%3Amarty1885%20OR%20author%3A0cc4m%20OR%20author%3ATitaniumtown%20OR%20author%3Aangt%20OR%20author%3AIMbackK%20OR%20author%3Aarthw%20OR%20author%3AJohannesGaessler%20OR%20author%3AORippler%20OR%20author%3Aruixiang63%20OR%20author%3Axctan%20OR%20author%3AmasterFoad%20OR%20author%3Aallozaur%20OR%20author%3AAndreas-Krebbel%20OR%20author%3Ayomaytk%20OR%20author%3Aaendk%20OR%20author%3Awine99%20OR%20author%3Agaugarg-nv%20OR%20author%3Ataronaeo%20OR%20author%3Aforforever73%20OR%20author%3Achaxu01%20OR%20author%3Alhez%20OR%20author%3AAlekseiNikiforovIBM%20OR%20author%3Anetrunnereve%20OR%20author%3Afairydreaming%20OR%20author%3Aynankani)%20sort%3Aupdated-desc) / [dev stats](https://github.com/ggml-org/llama.cpp-dev) / [lib llama API](https://github.com/ggml-org/llama.cpp/issues/9289) / [llama-server REST API](https://github.com/ggml-org/llama.cpp/issues/9291)"
+        },
+        {
+          "line": 66,
+          "text": "- Apple silicon is a first-class citizen - optimized via ARM NEON, Accelerate and Metal frameworks"
+        },
+        {
+          "line": 69,
+          "text": "- 1.5-bit, 2-bit, 3-bit, 4-bit, 5-bit, 6-bit, and 8-bit integer quantization for faster inference and reduced memory use"
+        },
+        {
+          "line": 70,
+          "text": "- Custom CUDA kernels for running LLMs on NVIDIA GPUs (support for AMD GPUs via HIP and Moore Threads GPUs via MUSA)"
+        },
+        {
+          "line": 71,
+          "text": "- Vulkan and SYCL backend support"
+        },
+        {
+          "line": 72,
+          "text": "- CPU+GPU hybrid inference to partially accelerate models larger than the total VRAM capacity"
+        },
+        {
+          "line": 83,
+          "text": "| [CUDA](docs/build.md#cuda) | Nvidia GPU |"
+        },
+        {
+          "line": 84,
+          "text": "| [HIP](docs/build.md#hip) | AMD GPU |"
+        },
+        {
+          "line": 87,
+          "text": "| [MUSA](docs/build.md#musa) | Moore Threads GPU |"
+        },
+        {
+          "line": 89,
+          "text": "| [OpenCL](docs/backend/OPENCL.md) | Adreno GPU |"
+        },
+        {
+          "line": 90,
+          "text": "| [OpenVINO [In Progress]](docs/backend/OPENVINO.md) | Intel CPUs, GPUs, and NPUs |"
+        },
+        {
+          "line": 92,
+          "text": "| [SYCL](docs/backend/SYCL.md) | Intel GPU |"
+        },
+        {
+          "line": 93,
+          "text": "| [VirtGPU](docs/backend/VirtGPU.md) | VirtGPU APIR |"
+        },
+        {
+          "line": 94,
+          "text": "| [Vulkan](docs/build.md#vulkan) | GPU |"
+        },
+        {
+          "line": 95,
+          "text": "| [WebGPU](docs/build.md#webgpu) | All |"
+        },
+        {
+          "line": 105,
+          "text": "- [GBNF grammars](grammars/README.md)"
+        },
+        {
+          "line": 111,
+          "text": "- [Build on Android](docs/android.md)"
+        },
+        {
+          "line": 112,
+          "text": "- [Multi-GPU usage](docs/multi-gpu.md)"
+        },
+        {
+          "line": 115,
+          "text": "- [XCFramework](docs/xcframework.md)"
+        },
+        {
+          "line": 130,
+          "text": "- [yhirose/cpp-httplib](https://github.com/yhirose/cpp-httplib) - Single-header HTTP server, used by `llama-server` - MIT license"
+        },
+        {
+          "line": 132,
+          "text": "- [nlohmann/json](https://github.com/nlohmann/json) - Single-header JSON library, used by various tools/examples - MIT License"
+        }
+      ]
+    },
+    {
+      "name": "ggml-org/whisper.cpp",
+      "branch": "master",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "license": "MIT",
+      "archived": false,
+      "updated_at": "2026-11-08T04:01:46Z",
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "commit": "f92e1e4d1056700c39d4e86c1140f0a088fe1ab6",
+      "commit_date": "2026-11-08T04:01:46Z",
+      "readme_url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/f92e1e4d1056700c39d4e86c1140f0a088fe1ab6/README.md",
+      "notes": [
+        {
+          "line": 7,
+          "text": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)"
+        },
+        {
+          "line": 18,
+          "text": "- Apple Silicon first-class citizen - optimized via ARM NEON, Accelerate framework, Metal and [Core ML](#core-ml-support)"
+        },
+        {
+          "line": 23,
+          "text": "- Zero memory allocations at runtime"
+        },
+        {
+          "line": 24,
+          "text": "- [Vulkan support](#vulkan-gpu-support)"
+        },
+        {
+          "line": 26,
+          "text": "- [Efficient GPU support for NVIDIA](#nvidia-gpu-support)"
+        },
+        {
+          "line": 27,
+          "text": "- [AMD ROCm GPU support](#amd-rocm-gpu-support)"
+        },
+        {
+          "line": 31,
+          "text": "- [Moore Threads GPU Support](#moore-threads-gpu-support)"
+        },
+        {
+          "line": 39,
+          "text": "- [x] [Android](examples/whisper.android)"
+        },
+        {
+          "line": 51,
+          "text": "As an example, here is a video of running the model on an iPhone 13 device - fully offline, on-device: [whisper.objc](examples/whisper.objc)"
+        },
+        {
+          "line": 55,
+          "text": "You can also easily make your own offline voice assistant application: [command](examples/command)"
+        },
+        {
+          "line": 59,
+          "text": "On Apple Silicon, the inference runs fully on the GPU via Metal:"
+        },
+        {
+          "line": 136,
+          "text": "## Memory usage"
+        },
+        {
+          "line": 164,
+          "text": "Quantized models require less memory and disk space and depending on the hardware can be processed more efficiently."
+        },
+        {
+          "line": 263,
+          "text": "on OpenVINO-supported devices including x86 CPUs and Intel GPUs (integrated & discrete)."
+        },
+        {
+          "line": 332,
+          "text": "  whisper_openvino_init: path_model = models/ggml-base.en-encoder-openvino.xml, device = GPU, cache_dir = models/ggml-base.en-encoder-openvino-cache"
+        },
+        {
+          "line": 340,
+          "text": "  The first time run on an OpenVINO device is slow, since the OpenVINO framework will compile the IR (Intermediate Representation) model to a device-specific 'blob'. This device-specific blob will get"
+        },
+        {
+          "line": 426,
+          "text": "## NVIDIA GPU support"
+        },
+        {
+          "line": 428,
+          "text": "With NVIDIA cards the processing of the models is done efficiently on the GPU via cuBLAS and custom CUDA kernels."
+        },
+        {
+          "line": 438,
+          "text": "or for newer NVIDIA GPU's (RTX 5000 series):"
+        },
+        {
+          "line": 444,
+          "text": "## Vulkan GPU support"
+        },
+        {
+          "line": 445,
+          "text": "Cross-vendor solution which allows you to accelerate workload on your GPU."
+        },
+        {
+          "line": 446,
+          "text": "First, make sure your graphics card driver provides support for Vulkan API."
+        },
+        {
+          "line": 448,
+          "text": "Now build `whisper.cpp` with Vulkan support:"
+        },
+        {
+          "line": 450,
+          "text": "cmake -B build -DGGML_VULKAN=1"
+        },
+        {
+          "line": 454,
+          "text": "## AMD ROCm GPU support"
+        },
+        {
+          "line": 456,
+          "text": "With AMD GPUs the processing can be accelerated via HIP/ROCm."
+        },
+        {
+          "line": 462,
+          "text": "cmake -B build -DGGML_HIP=1 -DAMDGPU_TARGETS=\"gfx1201\""
+        },
+        {
+          "line": 466,
+          "text": "Replace `gfx1201` with your GPU architecture. You can find it with:"
+        },
+        {
+          "line": 473,
+          "text": "For multiple GPUs with different architectures: `-DAMDGPU_TARGETS=\"gfx1100;gfx1201\"`."
+        },
+        {
+          "line": 519,
+          "text": "## Moore Threads GPU support"
+        },
+        {
+          "line": 521,
+          "text": "With Moore Threads cards the processing of the models is done efficiently on the GPU via muBLAS and custom MUSA kernels."
+        },
+        {
+          "line": 531,
+          "text": "or specify the architecture for your Moore Threads GPU. For example, if you have a MTT S80 GPU, you can specify the architecture as follows:"
+        },
+        {
+          "line": 581,
+          "text": "1. `ghcr.io/ggml-org/whisper.cpp:main`: This image includes the main executable file as well as `curl` and `ffmpeg`. (platforms: `linux/amd64`, `linux/arm64`)"
+        },
+        {
+          "line": 584,
+          "text": "4. `ghcr.io/ggml-org/whisper.cpp:main-vulkan`: Same as `main` but compiled with Vulkan support. (platforms: `linux/amd64`)"
+        },
+        {
+          "line": 589,
+          "text": "# Use the main tag or: cublas, main-cuda, main-intel, main-musa, main-rocm, main-vulkan."
+        }
+      ]
+    },
+    {
+      "name": "google-ai-edge/LiteRT-LM",
+      "branch": "main",
+      "description": "LiteRT-LM is Google's production-ready, high-performance, open-source inference framework for deploying Large Language Models on edge devices.",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-11-08T04:32:04Z",
+      "url": "https://github.com/google-ai-edge/LiteRT-LM",
+      "commit": "02d7e8d80cb75cbb03d8cba4c63f51e2eb318ec5",
+      "commit_date": "2026-11-07T18:30:41Z",
+      "readme_url": "https://raw.githubusercontent.com/google-ai-edge/LiteRT-LM/02d7e8d80cb75cbb03d8cba4c63f51e2eb318ec5/README.md",
+      "notes": [
+        {
+          "line": 10,
+          "text": "-   * **🎯 Accelerated Logit Masking**: Enables faster constrained decoding on GPUs, with full support for MTP-enabled decoding."
+        },
+        {
+          "line": 11,
+          "text": "-   * **🌐 Web SDK**: @litert-lm/core now stream-loads all models, defaults to the GPU backend, and supports image and audio inputs."
+        },
+        {
+          "line": 13,
+          "text": "-   * **🧱 C API 1.0.0 (Breaking)**: Functions that can fail now return LiteRtLmStatusCode with results in out_* parameters, and only litert_lm_* symbols are exported."
+        },
+        {
+          "line": 14,
+          "text": "-   * **⚙️ Performance & Platform**: GPU sampling now matches CPU for the same seed, ModelInfo is faster and uses less memory."
+        },
+        {
+          "line": 23,
+          "text": "   --backend=gpu \\"
+        },
+        {
+          "line": 30,
+          "text": "-   📱 **Cross-Platform Support**: Android, iOS, Web, Desktop, and IoT (e.g."
+        },
+        {
+          "line": 32,
+          "text": "-   🚀 **Hardware Acceleration**: Peak performance via GPU and NPU accelerators."
+        },
+        {
+          "line": 101,
+          "text": "**Kotlin**           | ✅ Stable        | Android apps & JVM      | [Kotlin Guide](https://ai.google.dev/edge/litert-lm/android)"
+        },
+        {
+          "line": 110,
+          "text": "LiteRT-LM from source. If you want to build the program from source, you should"
+        }
+      ]
+    },
+    {
+      "name": "mlc-ai/mlc-llm",
+      "branch": "main",
+      "description": "Universal LLM Deployment Engine with ML Compilation",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-10-30T09:07:12Z",
+      "url": "https://github.com/mlc-ai/mlc-llm",
+      "commit": "44fd06d04f22c87820e205b0f2b2e5e6a1f6ca85",
+      "commit_date": "2026-10-30T08:57:42Z",
+      "readme_url": "https://raw.githubusercontent.com/mlc-ai/mlc-llm/44fd06d04f22c87820e205b0f2b2e5e6a1f6ca85/README.md",
+      "notes": [
+        {
+          "line": 6,
+          "text": "[![License](https://img.shields.io/badge/license-apache_2-blue)](https://github.com/mlc-ai/mlc-llm/blob/main/LICENSE)"
+        },
+        {
+          "line": 25,
+          "text": "      <th style=\"width:20%\">AMD GPU</th>"
+        },
+        {
+          "line": 26,
+          "text": "      <th style=\"width:20%\">NVIDIA GPU</th>"
+        },
+        {
+          "line": 27,
+          "text": "      <th style=\"width:20%\">Apple GPU</th>"
+        },
+        {
+          "line": 28,
+          "text": "      <th style=\"width:24%\">Intel GPU</th>"
+        },
+        {
+          "line": 34,
+          "text": "      <td>✅ Vulkan, ROCm</td>"
+        },
+        {
+          "line": 35,
+          "text": "      <td>✅ Vulkan, CUDA</td>"
+        },
+        {
+          "line": 37,
+          "text": "      <td>✅ Vulkan</td>"
+        },
+        {
+          "line": 41,
+          "text": "      <td>✅ Metal (dGPU)</td>"
+        },
+        {
+          "line": 44,
+          "text": "      <td>✅ Metal (iGPU)</td>"
+        },
+        {
+          "line": 48,
+          "text": "      <td colspan=4>✅ WebGPU and WASM </td>"
+        },
+        {
+          "line": 52,
+          "text": "      <td colspan=4>✅ Metal on Apple A-series GPU</td>"
+        },
+        {
+          "line": 55,
+          "text": "      <td>Android</td>"
+        },
+        {
+          "line": 56,
+          "text": "      <td colspan=2>✅ OpenCL on Adreno GPU</td>"
+        },
+        {
+          "line": 57,
+          "text": "      <td colspan=2>✅ OpenCL on Mali GPU</td>"
+        },
+        {
+          "line": 63,
+          "text": "MLC LLM compiles and runs code on MLCEngine -- a unified high-performance LLM inference engine across the above platforms. MLCEngine provides OpenAI-compatible API available through REST server, python, javascript, iOS, Android, all backed by the same engine and compiler that we keep improving with the community."
+        },
+        {
+          "line": 93,
+          "text": "      title = {TensorIR: An Abstraction for Automatic Tensorized Program Optimization},"
+        },
+        {
+          "line": 100,
+          "text": "      booktitle = {Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},"
+        },
+        {
+          "line": 114,
+          "text": "      title = {Tensor Program Optimization with Probabilistic Programs},"
+        }
+      ]
+    },
+    {
+      "name": "k2-fsa/sherpa-onnx",
+      "branch": "master",
+      "description": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Android, iOS, HarmonyOS, Raspberry Pi, RISC-V, RK NPU, Axera NPU, Ascend NPU, x86_64 servers, websocket server/client, support 12 programming languages",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-11-07T05:49:03Z",
+      "url": "https://github.com/k2-fsa/sherpa-onnx",
+      "commit": "347ec768a01ca53e766780f7759b14e145b643e6",
+      "commit_date": "2026-11-07T05:49:03Z",
+      "readme_url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/347ec768a01ca53e766780f7759b14e145b643e6/README.md",
+      "notes": [
+        {
+          "line": 28,
+          "text": "|Architecture| Android | iOS     | Windows    | macOS | linux | HarmonyOS |"
+        },
+        {
+          "line": 32,
+          "text": "|   arm64    |  ✔️      | ✔️      |   ✔️      | ✔️    |  ✔️    |   ✔️   |"
+        },
+        {
+          "line": 36,
+          "text": "### Supported programming languages"
+        },
+        {
+          "line": 53,
+          "text": "### Supported frameworks"
+        },
+        {
+          "line": 57,
+          "text": "|Architecture| Android | iOS     | Windows | macOS | Linux | Web |"
+        },
+        {
+          "line": 61,
+          "text": "|   arm64    |  ✔️      |  ✔️     |  ✔️     | ✔️    |  ✔️    |  ✔️  |"
+        },
+        {
+          "line": 68,
+          "text": "|Architecture| Android | iOS     | Windows | macOS | Linux |"
+        },
+        {
+          "line": 72,
+          "text": "|   arm64    |  ✔️      |  ✔️     |  ✔️     | ✔️    |  ✔️    |"
+        },
+        {
+          "line": 115,
+          "text": "  - x86, ``x86_64``, 32-bit ARM, 64-bit ARM (arm64, aarch64), RISC-V (riscv64), **RK NPU**, **Ascend NPU**"
+        },
+        {
+          "line": 117,
+          "text": "  - Android, WearOS"
+        },
+        {
+          "line": 122,
+          "text": "  - [NVIDIA Jetson Orin NX][NVIDIA Jetson Orin NX] (Support running on both CPU and GPU)"
+        },
+        {
+          "line": 123,
+          "text": "  - [NVIDIA Jetson Nano B01][NVIDIA Jetson Nano B01] (Support running on both CPU and GPU)"
+        },
+        {
+          "line": 168,
+          "text": "|VAD + speech recognition (Chinese) with [Zipformer CTC](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-ctc/icefall/zipformer.html#sherpa-onnx-zipformer-ctc-zh-int8-2025-07-03-chinese)|[Click me][wasm-hf-vad-asr-zh-zipformer-ctc-07-03]| [地址][wasm-ms-vad-asr-zh-zipformer-ctc-07-03]|"
+        },
+        {
+          "line": 191,
+          "text": "### Links for pre-built Android APKs"
+        },
+        {
+          "line": 195,
+          "text": "<summary>You can find pre-built Android APKs for this repository in the following table</summary>"
+        },
+        {
+          "line": 228,
+          "text": "| Android (arm64-v8a, armeabi-v7a, x86_64) | [Address][flutter-tts-android]     | [点此][flutter-tts-android-cn]     |"
+        },
+        {
+          "line": 231,
+          "text": "| macOS (arm64)                            | [Address][flutter-tts-macos-arm64] | [点此][flutter-tts-macos-arm64-cn]   |"
+        },
+        {
+          "line": 301,
+          "text": "  - <https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/index.html>"
+        },
+        {
+          "line": 302,
+          "text": "  - <https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-paraformer/index.html>"
+        },
+        {
+          "line": 303,
+          "text": "  - <https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-ctc/index.html>"
+        },
+        {
+          "line": 311,
+          "text": "|[sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/nemo-transducer-models.html#sherpa-onnx-nemo-parakeet-tdt-0-6b-v2-int8-english)| English | It is converted from <https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2>|"
+        },
+        {
+          "line": 314,
+          "text": "|[sherpa-onnx-zipformer-ctc-zh-int8-2025-07-03](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-ctc/icefall/zipformer.html#sherpa-onnx-zipformer-ctc-zh-int8-2025-07-03-chinese)|Chinese| A Zipformer CTC model|"
+        },
+        {
+          "line": 316,
+          "text": "|[sherpa-onnx-paraformer-zh-2024-03-09][sherpa-onnx-paraformer-zh-2024-03-09]|Chinese, English| 也支持多种中文方言. See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-paraformer/paraformer-models.html#csukuangfj-sherpa-onnx-paraformer-zh-2024-03-09-chinese-english)|"
+        },
+        {
+          "line": 317,
+          "text": "|[sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01][sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01]|Japanese|See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/zipformer-transducer-models.html#sherpa-onnx-zipformer-ja-reazonspeech-2024-08-01-japanese)|"
+        },
+        {
+          "line": 318,
+          "text": "|[sherpa-onnx-nemo-transducer-giga-am-russian-2024-10-24][sherpa-onnx-nemo-transducer-giga-am-russian-2024-10-24]|Russian|See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/nemo-transducer-models.html#sherpa-onnx-nemo-transducer-giga-am-russian-2024-10-24-russian)|"
+        },
+        {
+          "line": 319,
+          "text": "|[sherpa-onnx-nemo-ctc-giga-am-russian-2024-10-24][sherpa-onnx-nemo-ctc-giga-am-russian-2024-10-24]|Russian| See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-ctc/nemo/russian.html#sherpa-onnx-nemo-ctc-giga-am-russian-2024-10-24)|"
+        },
+        {
+          "line": 320,
+          "text": "|[sherpa-onnx-zipformer-ru-2024-09-18][sherpa-onnx-zipformer-ru-2024-09-18]|Russian|See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/zipformer-transducer-models.html#sherpa-onnx-zipformer-ru-2024-09-18-russian)|"
+        },
+        {
+          "line": 321,
+          "text": "|[sherpa-onnx-zipformer-korean-2024-06-24][sherpa-onnx-zipformer-korean-2024-06-24]|Korean|See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/zipformer-transducer-models.html#sherpa-onnx-zipformer-korean-2024-06-24-korean)|"
+        },
+        {
+          "line": 322,
+          "text": "|[sherpa-onnx-zipformer-thai-2024-06-20][sherpa-onnx-zipformer-thai-2024-06-20]|Thai| See [also](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/zipformer-transducer-models.html#sherpa-onnx-zipformer-thai-2024-06-20-thai)|"
+        },
+        {
+          "line": 348,
+          "text": "> Android, and Web, including ASR, TTS, VAD, KWS, speaker ID, diarization,"
+        },
+        {
+          "line": 361,
+          "text": "> It captures microphone audio, transcribes it offline using Sherpa ONNX ASR models,"
+        },
+        {
+          "line": 367,
+          "text": "> VoxSherpa TTS is a 100% offline Android Text-to-Speech app powered by Sherpa-ONNX."
+        },
+        {
+          "line": 372,
+          "text": "- Android 11+ · 100% offline · No telemetry"
+        },
+        {
+          "line": 378,
+          "text": "| <img src=\"https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg\" width=\"180\"/> | <img src=\"https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg\" width=\"180\"/> | <img src=\"https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg\" width=\"180\"/> | <img src=\"https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg\" width=\"180\"/> |"
+        },
+        {
+          "line": 385,
+          "text": "> BreezeAPP is a mobile AI application developed for both Android and iOS platforms."
+        }
+      ]
+    },
+    {
+      "name": "alphacep/vosk-api",
+      "branch": "master",
+      "description": "Offline speech recognition API for Android, iOS, Raspberry Pi and servers with Python, Java, C# and Node",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-10-15T08:36:44Z",
+      "url": "https://github.com/alphacep/vosk-api",
+      "commit": "4ab9821510b488efb7740094714a130bd3545e90",
+      "commit_date": "2026-10-15T08:36:44Z",
+      "readme_url": "https://raw.githubusercontent.com/alphacep/vosk-api/4ab9821510b488efb7740094714a130bd3545e90/README.md",
+      "notes": [
+        {
+          "line": 3,
+          "text": "Vosk is an offline open source speech recognition toolkit. It enables"
+        },
+        {
+          "line": 14,
+          "text": "Speech recognition bindings implemented for various programming languages"
+        },
+        {
+          "line": 21,
+          "text": "Vosk scales from small devices like Raspberry Pi or Android smartphone to"
+        }
+      ]
+    },
+    {
+      "name": "OHF-Voice/piper1-gpl",
+      "branch": "main",
+      "description": "Fast and local neural text-to-speech engine",
+      "license": "GPL-3.0",
+      "archived": false,
+      "updated_at": "2026-11-07T19:08:41Z",
+      "url": "https://github.com/OHF-Voice/piper1-gpl",
+      "commit": "304d5dac29c57a30d43fad09ef4b3a70a795b1bc",
+      "commit_date": "2026-11-07T19:08:41Z",
+      "readme_url": "https://raw.githubusercontent.com/OHF-Voice/piper1-gpl/304d5dac29c57a30d43fad09ef4b3a70a795b1bc/README.md",
+      "notes": [
+        {
+          "line": 46,
+          "text": "Bindings to use Piper in programming languages other than Python and C/C++:"
+        }
+      ]
+    },
+    {
+      "name": "kiwix/libkiwix",
+      "branch": "main",
+      "description": "Common code base for all Kiwix ports",
+      "license": "GPL-3.0",
+      "archived": false,
+      "updated_at": "2026-11-05T12:01:25Z",
+      "url": "https://github.com/kiwix/libkiwix",
+      "commit": "879771c07378d7f410c76a2dae126396b675abca",
+      "commit_date": "2026-11-04T14:40:58Z",
+      "readme_url": "https://raw.githubusercontent.com/kiwix/libkiwix/879771c07378d7f410c76a2dae126396b675abca/README.md",
+      "notes": [
+        {
+          "line": 1,
+          "text": "Libkiwix"
+        },
+        {
+          "line": 4,
+          "text": "The Libkiwix provides the [Kiwix](https://kiwix.org) software suite"
+        },
+        {
+          "line": 5,
+          "text": "core. It contains the code shared by all Kiwix ports (Windows,"
+        },
+        {
+          "line": 6,
+          "text": "GNU/Linux, macOS, Android, iOS, ...)."
+        },
+        {
+          "line": 8,
+          "text": "[![Release](https://img.shields.io/github/v/tag/kiwix/libkiwix?label=release&sort=semver)](https://download.kiwix.org/release/libkiwix/)"
+        },
+        {
+          "line": 9,
+          "text": "[![Repositories](https://img.shields.io/repology/repositories/libkiwix?label=repositories)](https://github.com/kiwix/libkiwix/wiki/Repology)"
+        },
+        {
+          "line": 10,
+          "text": "[![Build Status](https://github.com/kiwix/libkiwix/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kiwix/libkiwix/actions?query=branch%3Amain)"
+        },
+        {
+          "line": 11,
+          "text": "[![Doc](https://readthedocs.org/projects/libkiwix/badge/?style=flat)](https://libkiwix.readthedocs.org/en/latest/?badge=latest)"
+        },
+        {
+          "line": 12,
+          "text": "[![CodeFactor](https://www.codefactor.io/repository/github/kiwix/libkiwix/badge)](https://www.codefactor.io/repository/github/kiwix/libkiwix)"
+        },
+        {
+          "line": 13,
+          "text": "[![Codecov](https://codecov.io/gh/kiwix/libkiwix/branch/main/graph/badge.svg)](https://codecov.io/gh/kiwix/libkiwix)"
+        },
+        {
+          "line": 14,
+          "text": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        },
+        {
+          "line": 21,
+          "text": "with the Libkiwix compilation itself, we recommend to have a look to"
+        },
+        {
+          "line": 22,
+          "text": "[kiwix-build](https://github.com/kiwix/kiwix-build)."
+        },
+        {
+          "line": 27,
+          "text": "Although the Libkiwix can be (cross-)compiled on/for many systems, the"
+        },
+        {
+          "line": 35,
+          "text": "The Libkiwix relies on many third party software libraries. They are"
+        },
+        {
+          "line": 36,
+          "text": "prerequisites to the Libkiwix compilation. Following libraries need to"
+        },
+        {
+          "line": 61,
+          "text": "`libkiwix` directory as install prefix."
+        },
+        {
+          "line": 66,
+          "text": "The Libkiwix builds using [Meson](https://mesonbuild.com/) version"
+        },
+        {
+          "line": 82,
+          "text": "Once all dependencies are installed, you can compile the Libkiwix"
+        },
+        {
+          "line": 96,
+          "text": "The android wrapper uses deprecated methods of libkiwix so it cannot be compiled"
+        },
+        {
+          "line": 100,
+          "text": "meson . build -Dwrapper=android -Dwerror=false"
+        },
+        {
+          "line": 107,
+          "text": "Libkiwix has a few static files 'compiled' within the binary"
+        },
+        {
+          "line": 117,
+          "text": "appended with a `cacheid` parameter (this is called \"cache"
+        },
+        {
+          "line": 143,
+          "text": "If you want to install the Libkiwix and the headers you just have"
+        },
+        {
+          "line": 156,
+          "text": "If you want to uninstall the Kiwix library:"
+        },
+        {
+          "line": 167,
+          "text": "to use custom welcome page mention `customIndexPage` argument in `kiwix::internalServer()` or use `kiwix::server->setCustomIndexTemplate()`."
+        },
+        {
+          "line": 170,
+          "text": "to create a HTML template with custom JS you need to have a look at various OPDS based endpoints as mentioned [here](https://wiki.kiwix.org/wiki/OPDS) to load books."
+        },
+        {
+          "line": 172,
+          "text": "To use JS provided by kiwix-serve you can use the following template to start with ->"
+        },
+        {
+          "line": 191,
+          "text": "- To get number of books listed add - `<h3 class=\"kiwixHomeBody__results\"></h3>` under body tag."
+        },
+        {
+          "line": 196,
+          "text": "        <form id='kiwixSearchForm'>"
+        },
+        {
+          "line": 197,
+          "text": "        <input type=\"text\" name=\"q\" placeholder=\"Search\" id=\"searchFilter\" class='kiwixSearch filter'>"
+        },
+        {
+          "line": 198,
+          "text": "        <input type=\"submit\" class=\"kiwixButton\" value=\"Search\"/>"
+        },
+        {
+          "line": 235,
+          "text": "License"
+        },
+        {
+          "line": 238,
+          "text": "[GPLv3](https://www.gnu.org/licenses/gpl-3.0) or later, see"
+        }
+      ]
+    },
+    {
+      "name": "openzim/libzim",
+      "branch": "main",
+      "description": "Reference implementation of the ZIM specification",
+      "license": "GPL-2.0",
+      "archived": false,
+      "updated_at": "2026-10-19T15:38:22Z",
+      "url": "https://github.com/openzim/libzim",
+      "commit": "ad888b4cdc5c76d788e9e70b630842dc1b31871f",
+      "commit_date": "2026-10-19T15:38:22Z",
+      "readme_url": "https://raw.githubusercontent.com/openzim/libzim/ad888b4cdc5c76d788e9e70b630842dc1b31871f/README.md",
+      "notes": [
+        {
+          "line": 14,
+          "text": "[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)"
+        },
+        {
+          "line": 27,
+          "text": "[kiwix-build](https://github.com/kiwix/kiwix-build)."
+        },
+        {
+          "line": 52,
+          "text": "prerequisites to the Kiwix library compilation. Following libraries"
+        },
+        {
+          "line": 165,
+          "text": "tests need up to 16GB of memory. You can skip those specific tests with:"
+        },
+        {
+          "line": 167,
+          "text": "SKIP_BIG_MEMORY_TEST=1 meson test"
+        },
+        {
+          "line": 234,
+          "text": "License"
+        },
+        {
+          "line": 237,
+          "text": "[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) or"
+        }
+      ]
+    },
+    {
+      "name": "airbnb/lottie-android",
+      "branch": "master",
+      "description": "Render After Effects animations natively on Android and iOS, Web, and React Native",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-02-15T22:03:57Z",
+      "url": "https://github.com/airbnb/lottie-android",
+      "commit": "05ea92e90381eb8a8ae06855ea2b74f322bebbec",
+      "commit_date": "2026-02-15T22:03:57Z",
+      "readme_url": "https://raw.githubusercontent.com/airbnb/lottie-android/05ea92e90381eb8a8ae06855ea2b74f322bebbec/README.md",
+      "notes": [
+        {
+          "line": 1,
+          "text": "# Lottie for Android, [iOS](https://github.com/airbnb/lottie-ios), [React Native](https://github.com/airbnb/lottie-react-native), [Web](https://github.com/airbnb/lottie-web), and [Windows](https://aka.ms/lottie)"
+        },
+        {
+          "line": 3,
+          "text": "![Build Status](https://github.com/airbnb/lottie-android/workflows/Validate/badge.svg)"
+        },
+        {
+          "line": 7,
+          "text": "Lottie is a mobile library for Android and iOS that parses [Adobe After Effects](http://www.adobe.com/products/aftereffects.html) animations exported as json with [Bodymovin](https://github.com/airbnb/lottie-web) and renders them natively on mobile!"
+        },
+        {
+          "line": 50,
+          "text": "  implementation 'com.airbnb.android:lottie:$lottieVersion'"
+        },
+        {
+          "line": 55,
+          "text": "[![lottieVersion](https://maven-badges.herokuapp.com/maven-central/com.airbnb.android/lottie/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.airbnb.android/lottie)"
+        },
+        {
+          "line": 57,
+          "text": "The latest stable [Lottie-Compose](http://airbnb.io/lottie/#/android-compose) version is:"
+        },
+        {
+          "line": 58,
+          "text": "[![lottieVersion](https://maven-badges.herokuapp.com/maven-central/com.airbnb.android/lottie-compose/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.airbnb.android/lottie-compose)"
+        },
+        {
+          "line": 59,
+          "text": "Click [here](http://airbnb.io/lottie/#/android-compose) for more information on Lottie-Compose."
+        },
+        {
+          "line": 61,
+          "text": "Lottie 2.8.0 and above only supports projects that have been migrated to [androidx](https://developer.android.com/jetpack/androidx/). For more information, read Google's [migration guide](https://developer.android.com/jetpack/androidx/migrate)."
+        },
+        {
+          "line": 65,
+          "text": "Because development has started for Lottie Compose, Gradle, and the Android Gradle Plugin will be kept up to date with the latest canaries. This also requires you to use Android Studio Canary builds. [Preview builds](https://developer.android.com/studio/preview) can be installed side by side with stable versions."
+        }
+      ]
+    },
+    {
+      "name": "rive-app/rive-android",
+      "branch": "master",
+      "description": "Android runtime for Rive, the agent-native 2D and 3D engine for games, apps, and interactive UI.",
+      "license": "MIT",
+      "archived": false,
+      "updated_at": "2026-11-08T01:59:25Z",
+      "url": "https://github.com/rive-app/rive-android",
+      "commit": "149fc8c270e6dbcfc18271e5418ae5c5f8895253",
+      "commit_date": "2026-11-08T01:59:23Z",
+      "readme_url": "https://raw.githubusercontent.com/rive-app/rive-android/149fc8c270e6dbcfc18271e5418ae5c5f8895253/README.md",
+      "notes": [
+        {
+          "line": 1,
+          "text": "[![Build Status](https://github.com/rive-app/rive-android/actions/workflows/release.yml/badge.svg?style=flat-square)](https://github.com/rive-app/rive-android/releases)"
+        },
+        {
+          "line": 5,
+          "text": "# Rive Android"
+        },
+        {
+          "line": 9,
+          "text": "The [Rive](https://rive.app) runtime for Android."
+        },
+        {
+          "line": 11,
+          "text": "This library is distributed through [Maven](https://central.sonatype.com/artifact/app.rive/rive-android)."
+        },
+        {
+          "line": 35,
+          "text": "Install the Rive CLI from rive.app/cli. Build an animated onboarding screen as a Rive file and add it to my Android app with the Rive runtime."
+        },
+        {
+          "line": 42,
+          "text": "To get started with Rive Android, check the [Android section](https://rive.app/docs/runtimes/android/android) of the runtime docs."
+        },
+        {
+          "line": 55,
+          "text": "CJK variants. This behavior is shared by the legacy and new Android APIs. `Rive.init(context)` installs"
+        },
+        {
+          "line": 66,
+          "text": "change the device language or send an Android configuration notification. Rive does not poll for such"
+        },
+        {
+          "line": 78,
+          "text": "AppCompat configurations before Android 13, call invalidation after the default locale used by font"
+        },
+        {
+          "line": 86,
+          "text": "Currently, this runtime library supports a minimum SDK version of **21**, and the target SDK version is **35**."
+        },
+        {
+          "line": 92,
+          "text": "To build the Rive Android library from the Gradle CLI, use the following:"
+        },
+        {
+          "line": 96,
+          "text": "This will produce `kotlin/build/outputs/aar/kotlin-release.aar`, which is equivalent to the Android Archive (AAR) file published on Maven."
+        },
+        {
+          "line": 104,
+          "text": "You may want to produce an AAR with only particular application binary interfaces (ABIs) included. By default we produce for all four common variants: `armeabi-v7a`, `arm64-v8a`, `x86`, and `x86_64`. To choose one, use the following:"
+        },
+        {
+          "line": 106,
+          "text": "`./gradlew :kotlin:assembleRelease -PabiFilters=arm64-v8a`"
+        },
+        {
+          "line": 110,
+          "text": "`./gradlew :kotlin:assembleRelease -PabiFilters=\"arm64-v8a,armeabi-v7a\"`"
+        },
+        {
+          "line": 114,
+          "text": "Rive Android includes an audio engine by default by linking miniaudio. This allows for playback of audio assets from Rive files. If you do not need this functionality and your goal is to minimize binary size, you can exclude it and save 600kb with the following:"
+        },
+        {
+          "line": 120,
+          "text": "Check out the `app/` folder to see an example application using the Rive Android runtime."
+        },
+        {
+          "line": 122,
+          "text": "To run the example app set the `app` build variant to `preview`. In Android Studio, to select which build variant to build and run, go to **Build > Select Build Variant** and select a build variant from the menu."
+        },
+        {
+          "line": 146,
+          "text": "Have an issue with using the runtime, or want to suggest a feature or API to help make your development life better? Log an issue in our [issues](https://github.com/rive-app/rive-android/issues) tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems."
+        },
+        {
+          "line": 150,
+          "text": "Rive Android uses CMake to build the library. You might run into the following error when Rive Android is used alongside other native libraries:"
+        },
+        {
+          "line": 154,
+          "text": "> A failure occurred while executing com.android.build.gradle.internal.tasks.MergeNativeLibsTask$MergeNativeLibsTaskWorkAction"
+        },
+        {
+          "line": 155,
+          "text": "   > 2 files found with path 'lib/arm64-v8a/libc++_shared.so' from inputs:"
+        },
+        {
+          "line": 162,
+          "text": "android {"
+        },
+        {
+          "line": 168,
+          "text": "      pickFirst \"lib/arm64-v8a/libc++_shared.so\""
+        }
+      ]
+    },
+    {
+      "name": "google/filament",
+      "branch": "main",
+      "description": "Filament is a real-time physically based rendering engine for Android, iOS, Windows, Linux, macOS, WebGPU, and WebGL2",
+      "license": "Apache-2.0",
+      "archived": false,
+      "updated_at": "2026-11-08T16:50:19Z",
+      "url": "https://github.com/google/filament",
+      "commit": "51ac9b0f434e878e9a9a5c5397e6950e4c270be4",
+      "commit_date": "2026-11-08T16:50:15Z",
+      "readme_url": "https://raw.githubusercontent.com/google/filament/51ac9b0f434e878e9a9a5c5397e6950e4c270be4/README.md",
+      "notes": [
+        {
+          "line": 3,
+          "text": "[![Android Build Status](https://github.com/google/filament/actions/workflows/status-android.yml/badge.svg)](https://github.com/google/filament/actions/workflows/status-android.yml)"
+        },
+        {
+          "line": 10,
+          "text": "Filament is a real-time physically based rendering engine for Android, iOS, Linux, macOS, Windows,"
+        },
+        {
+          "line": 11,
+          "text": "and WASM. It is designed to be as small as possible and as efficient as possible on Android."
+        },
+        {
+          "line": 23,
+          "text": "### Android"
+        },
+        {
+          "line": 25,
+          "text": "Android projects can simply declare Filament libraries as Maven dependencies:"
+        },
+        {
+          "line": 34,
+          "text": "    implementation 'com.google.android.filament:filament-android:1.80.0'"
+        },
+        {
+          "line": 38,
+          "text": "Here are all the libraries available in the group `com.google.android.filament`:"
+        },
+        {
+          "line": 42,
+          "text": "| [![filament-android](https://img.shields.io/maven-central/v/com.google.android.filament/filament-android?label=filament-android&color=green)](https://mvnrepository.com/artifact/com.google.android.filament/filament-android)  | The Filament rendering engine itself. |"
+        },
+        {
+          "line": 43,
+          "text": "| [![filament-android-debug](https://img.shields.io/maven-central/v/com.google.android.filament/filament-android-debug?label=filament-android-debug&color=green)](https://mvnrepository.com/artifact/com.google.android.filament/filament-android-debug)  | Debug version of `filament-android`. |"
+        },
+        {
+          "line": 44,
+          "text": "| [![gltfio-android](https://img.shields.io/maven-central/v/com.google.android.filament/gltfio-android?label=gltfio-android&color=green)](https://mvnrepository.com/artifact/com.google.android.filament/gltfio-android) | A glTF 2.0 loader for Filament, depends on `filament-android`. |"
+        },
+        {
+          "line": 45,
+          "text": "| [![filament-utils-android](https://img.shields.io/maven-central/v/com.google.android.filament/filament-utils-android?label=filament-utils-android&color=green)](https://mvnrepository.com/artifact/com.google.android.filament/filament-utils-android) | KTX loading, Kotlin math, and camera utilities, depends on `gltfio-android`. |"
+        },
+        {
+          "line": 46,
+          "text": "| [![filamat-android](https://img.shields.io/maven-central/v/com.google.android.filament/filamat-android?label=filamat-android&color=green)](https://mvnrepository.com/artifact/com.google.android.filament/filamat-android) | A runtime material builder/compiler. This library is large but contains a full shader compiler/validator/optimizer and supports both OpenGL and Vulkan. |"
+        },
+        {
+          "line": 61,
+          "text": "  good introduction to PBR for graphics programmers."
+        },
+        {
+          "line": 81,
+          "text": "- Native C++ API for Android, iOS, Linux, macOS and Windows"
+        },
+        {
+          "line": 82,
+          "text": "- Java/JNI API for Android"
+        },
+        {
+          "line": 88,
+          "text": "- OpenGL ES 3.0+ for Android and iOS"
+        },
+        {
+          "line": 90,
+          "text": "- Vulkan 1.0 for Android, Linux, macOS, and Windows"
+        },
+        {
+          "line": 91,
+          "text": "- WebGPU for Android, Linux, macOS, and Windows"
+        },
+        {
+          "line": 196,
+          "text": "To render a frame you must then create a `View`, a `Scene` and a `Camera`:"
+        },
+        {
+          "line": 237,
+          "text": "// beginFrame() returns false if we need to skip a frame"
+        },
+        {
+          "line": 238,
+          "text": "if (renderer->beginFrame(swapChain)) {"
+        },
+        {
+          "line": 241,
+          "text": "    renderer->endFrame();"
+        },
+        {
+          "line": 252,
+          "text": "### Android"
+        },
+        {
+          "line": 254,
+          "text": "See `android/samples` for examples of how to use Filament on Android."
+        },
+        {
+          "line": 258,
+          "text": "Rendering with Filament on Android is similar to rendering from native code (the APIs are largely"
+        },
+        {
+          "line": 261,
+          "text": "a `SurfaceView`. To make things easier we provide an Android specific API called `UiHelper` in the"
+        },
+        {
+          "line": 262,
+          "text": "package `com.google.android.filament.android`. All you need to do is set a render callback on the"
+        },
+        {
+          "line": 278,
+          "text": "`third_party/textures` and `third_party/environments`. These assets are under CC0 license. Please"
+        },
+        {
+          "line": 296,
+          "text": "- `android`:                  Android libraries and projects"
+        },
+        {
+          "line": 297,
+          "text": "  - `filamat-android`:        Filament material generation library (AAR) for Android"
+        },
+        {
+          "line": 298,
+          "text": "  - `filament-android`:       Filament library (AAR) for Android"
+        },
+        {
+          "line": 299,
+          "text": "  - `filament-utils-android`: Extra utilities (KTX loader, math types, etc.)"
+        },
+        {
+          "line": 300,
+          "text": "  - `gltfio-android`:         Filament glTF loading library (AAR) for Android"
+        },
+        {
+          "line": 301,
+          "text": "  - `samples`:                Android-specific Filament samples"
+        },
+        {
+          "line": 308,
+          "text": "  - `backend`:                Rendering backends/drivers (Vulkan, Metal, OpenGL/ES)"
+        }
+      ]
+    }
+  ]
+}

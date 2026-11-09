@@ -1,0 +1,40 @@
+{
+  "campaign": "REUSE-R1PLUS-C1",
+  "source_commit": "7282fd769d4ab787467d08fd8059b2f1e18ca139",
+  "source_tree": "09091a0b2928fa976f47fb7035175c368c09aaa2",
+  "api": 29,
+  "status": "FAIL_INDIVIDUAL_ASSERTION",
+  "stage": "INDIVIDUAL_REGRESSIONS",
+  "individual": [
+    {
+      "started": 1,
+      "passed": 0,
+      "failed": 1,
+      "completed": false,
+      "critical": false,
+      "reported_total": null,
+      "scenario": "saf",
+      "attempts": 1
+    }
+  ],
+  "physical_android": "NOT_RUN",
+  "llm": "NOT_RUN",
+  "boot_attempts": 1,
+  "production_changes": false,
+  "created_packages": [
+    "fr.jarvis.v1.lab.baseline",
+    "fr.jarvis.v1.lab.baseline.test"
+  ],
+  "run_id": "42524234101",
+  "run_attempt": 1,
+  "boot_limit_per_api": 1,
+  "automatic_retry": false,
+  "environment": {
+    "status": "PASS",
+    "observed_seconds": 96.76904794400002,
+    "samples": 13,
+    "systemui_pid": "2086",
+    "jarvis_installed": false
+  },
+  "error": "INDIVIDUAL_REGRESSION_NOT_PASSED"
+}

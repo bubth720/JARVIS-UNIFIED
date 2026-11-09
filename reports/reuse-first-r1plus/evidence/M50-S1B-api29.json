@@ -1,0 +1,49 @@
+{
+  "api": 29,
+  "apk_sha256": "681fd6e521290717ca2f80599e9267434fff1596809d3e50ba34e7d173ed9686",
+  "platform": "Android emulator x86_64",
+  "instrumentation": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "unknownAfterCoreCompletionBlocksAllNewSubmissions"
+      ],
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "duplicateEventsDoNotDuplicateTheDisplayedResponse"
+      ],
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "actualUiSubmitsToSingleCoreAndRotationKeepsItsInstance"
+      ],
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "ownerErrorDoesNotInventAResponse"
+      ],
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "stopWaitsForRealCoreDrainAndRejectsStaleKey"
+      ],
+      [
+        "com.stark.jarvislocal.LabInstrumentedTest",
+        "manifestIsIsolatedAndHasNoPermissions"
+      ]
+    ]
+  },
+  "airplane_mode": true,
+  "wifi_enabled": false,
+  "external_force_stop_restart": "PASS",
+  "unknown_same_process_blocked": true,
+  "new_process_epoch": true,
+  "old_ram_restored": false,
+  "diagnostic_metrics": {
+    "cold_start_total_ms": 1715,
+    "unknown_synthetic_process_pss_kib": 36129,
+    "native_inference_latency": "NOT_RUN"
+  },
+  "physical_device": "NOT_RUN",
+  "native_generation": "NOT_RUN"
+}

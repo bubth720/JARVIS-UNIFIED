@@ -1,0 +1,183 @@
+﻿2026-11-08T21:10:39.3232715Z Current runner version: '2.338.2'
+2026-11-08T21:10:39.3258560Z ##[group]Runner Image Provisioner
+2026-11-08T21:10:39.3259538Z Hosted Compute Agent
+2026-11-08T21:10:39.3260242Z Version: 20261028.624
+2026-11-08T21:10:39.3260932Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-08T21:10:39.3261695Z Build Date: 2026-10-28T21:51:42Z
+2026-11-08T21:10:39.3262499Z Worker ID: {b98f389f-2561-42af-800b-dc2e20fe0e2a}
+2026-11-08T21:10:39.3263283Z Region: westus
+2026-11-08T21:10:39.3263929Z Cloud: Azure
+2026-11-08T21:10:39.3264836Z ##[endgroup]
+2026-11-08T21:10:39.3266798Z ##[group]Operating System
+2026-11-08T21:10:39.3267747Z Ubuntu
+2026-11-08T21:10:39.3268318Z 24.04.5
+2026-11-08T21:10:39.3268834Z LTS
+2026-11-08T21:10:39.3269437Z ##[endgroup]
+2026-11-08T21:10:39.3270004Z ##[group]Runner Image
+2026-11-08T21:10:39.3270685Z Image: ubuntu-24.04
+2026-11-08T21:10:39.3271289Z Version: 20261101.360.1
+2026-11-08T21:10:39.3272652Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-08T21:10:39.3274264Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-08T21:10:39.3275895Z ##[endgroup]
+2026-11-08T21:10:39.3277184Z ##[group]GITHUB_TOKEN Permissions
+2026-11-08T21:10:39.3279259Z Contents: read
+2026-11-08T21:10:39.3279962Z Metadata: read
+2026-11-08T21:10:39.3280554Z ##[endgroup]
+2026-11-08T21:10:39.3282796Z Secret source: Actions
+2026-11-08T21:10:39.3283818Z Cache mode: write
+2026-11-08T21:10:39.3285019Z Prepare workflow directory
+2026-11-08T21:10:39.3642832Z Prepare all required actions
+2026-11-08T21:10:39.3695111Z Getting action download info
+2026-11-08T21:10:39.7219572Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-11-08T21:10:39.9482922Z Complete job name: jvm
+2026-11-08T21:10:40.0436576Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-08T21:10:40.0437676Z with:
+2026-11-08T21:10:40.0438155Z   ref: refs/pull/14/merge
+2026-11-08T21:10:40.0438790Z   fetch-depth: 0
+2026-11-08T21:10:40.0439264Z   persist-credentials: false
+2026-11-08T21:10:40.0439821Z   repository: bubth720/JARVIS-NEXUS
+2026-11-08T21:10:40.0443881Z   token: ***
+2026-11-08T21:10:40.0444330Z   ssh-strict: true
+2026-11-08T21:10:40.0444979Z   ssh-user: git
+2026-11-08T21:10:40.0445415Z   clean: true
+2026-11-08T21:10:40.0445859Z   sparse-checkout-cone-mode: true
+2026-11-08T21:10:40.0446380Z   fetch-tags: false
+2026-11-08T21:10:40.0446823Z   show-progress: true
+2026-11-08T21:10:40.0447264Z   lfs: false
+2026-11-08T21:10:40.0447667Z   submodules: false
+2026-11-08T21:10:40.0448105Z   set-safe-directory: true
+2026-11-08T21:10:40.0448883Z ##[endgroup]
+2026-11-08T21:10:40.3251349Z Syncing repository: bubth720/JARVIS-NEXUS
+2026-11-08T21:10:40.3253819Z ##[group]Getting Git version info
+2026-11-08T21:10:40.3255186Z Working directory is '/home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS'
+2026-11-08T21:10:40.3257296Z [command]/usr/bin/git version
+2026-11-08T21:10:40.3336260Z git version 2.56.0
+2026-11-08T21:10:40.3360201Z ##[endgroup]
+2026-11-08T21:10:40.3383802Z Temporarily overriding HOME='/home/runner/work/_temp/d5b45dee-c573-4ce6-8a9f-7d8ed5acb466' before making global git config changes
+2026-11-08T21:10:40.3386172Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T21:10:40.3390596Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS
+2026-11-08T21:10:40.3450147Z Deleting the contents of '/home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS'
+2026-11-08T21:10:40.3454939Z ##[group]Initializing the repository
+2026-11-08T21:10:40.3461000Z [command]/usr/bin/git init /home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS
+2026-11-08T21:10:40.3580181Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-08T21:10:40.3581978Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-08T21:10:40.3583762Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-08T21:10:40.3585787Z hint: call:
+2026-11-08T21:10:40.3586432Z hint:
+2026-11-08T21:10:40.3587231Z hint: 	git config --global init.defaultBranch <name>
+2026-11-08T21:10:40.3588387Z hint:
+2026-11-08T21:10:40.3589395Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-08T21:10:40.3590912Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-08T21:10:40.3592146Z hint:
+2026-11-08T21:10:40.3592874Z hint: 	git branch -m <name>
+2026-11-08T21:10:40.3593667Z hint:
+2026-11-08T21:10:40.3594861Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-08T21:10:40.3596615Z Initialized empty Git repository in /home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS/.git/
+2026-11-08T21:10:40.3606190Z [command]/usr/bin/git remote add origin https://github.com/bubth720/JARVIS-NEXUS
+2026-11-08T21:10:40.3659827Z ##[endgroup]
+2026-11-08T21:10:40.3661131Z ##[group]Disabling automatic garbage collection
+2026-11-08T21:10:40.3665117Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-08T21:10:40.3707427Z ##[endgroup]
+2026-11-08T21:10:40.3709242Z ##[group]Setting up auth
+2026-11-08T21:10:40.3717114Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T21:10:40.3764994Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T21:10:40.4297063Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T21:10:40.4359607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T21:10:40.4659698Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-08T21:10:40.4715411Z ##[endgroup]
+2026-11-08T21:10:40.4716501Z ##[group]Fetching the repository
+2026-11-08T21:10:40.4730072Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +refs/pull/14/merge:refs/remotes/pull/14/merge
+2026-11-08T21:10:41.5778765Z From https://github.com/bubth720/JARVIS-NEXUS
+2026-11-08T21:10:41.5782156Z  * [new branch]      codex/m50-s1-nexus-ci-20261029 -> origin/codex/m50-s1-nexus-ci-20261029
+2026-11-08T21:10:41.5786245Z  * [new branch]      codex/m53-readonly-preparation -> origin/codex/m53-readonly-preparation
+2026-11-08T21:10:41.5789996Z  * [new branch]      codex/prefusion-20261026-lot1 -> origin/codex/prefusion-20261026-lot1
+2026-11-08T21:10:41.5793555Z  * [new branch]      codex/prefusion-lot3-nexus -> origin/codex/prefusion-lot3-nexus
+2026-11-08T21:10:41.5797948Z  * [new branch]      codex/reuse-first-r1plus-20261108 -> origin/codex/reuse-first-r1plus-20261108
+2026-11-08T21:10:41.5802079Z  * [new branch]      feat/fusion-01-nexus-integration -> origin/feat/fusion-01-nexus-integration
+2026-11-08T21:10:41.5805917Z  * [new branch]      feat/fusion-02-nexus-android -> origin/feat/fusion-02-nexus-android
+2026-11-08T21:10:41.5809982Z  * [new branch]      feat/nex-01-moteur-local-de-connaissances- -> origin/feat/nex-01-moteur-local-de-connaissances-
+2026-11-08T21:10:41.5814862Z  * [new branch]      feat/nex-02-chaine-d-import-local-extracti -> origin/feat/nex-02-chaine-d-import-local-extracti
+2026-11-08T21:10:41.5818579Z  * [new branch]      feat/nex-03-recherche-de-connaissances-cit -> origin/feat/nex-03-recherche-de-connaissances-cit
+2026-11-08T21:10:41.5821972Z  * [new branch]      feat/nex-05-sauvegarde-chiffrable-restaura -> origin/feat/nex-05-sauvegarde-chiffrable-restaura
+2026-11-08T21:10:41.5825233Z  * [new branch]      feat/nex-06a-android-api24 -> origin/feat/nex-06a-android-api24
+2026-11-08T21:10:41.5829121Z  * [new branch]      feat/nex-07-source-quota-preflight -> origin/feat/nex-07-source-quota-preflight
+2026-11-08T21:10:41.5832155Z  * [new branch]      feat/nexus-final-01 -> origin/feat/nexus-final-01
+2026-11-08T21:10:41.5833887Z  * [new branch]      main                -> origin/main
+2026-11-08T21:10:41.5836516Z  * [new branch]      mission/m50-integrated-beta-20261029 -> origin/mission/m50-integrated-beta-20261029
+2026-11-08T21:10:41.5839702Z  * [new branch]      mission/prefusion-gates-20261026 -> origin/mission/prefusion-gates-20261026
+2026-11-08T21:10:41.5842624Z  * [new branch]      mission/prefusion-lot3-20261027 -> origin/mission/prefusion-lot3-20261027
+2026-11-08T21:10:41.5846225Z  * [new branch]      plan/intensive-2026-10-22 -> origin/plan/intensive-2026-10-22
+2026-11-08T21:10:41.5848834Z  * [new branch]      work/nex-04-zim-readonly -> origin/work/nex-04-zim-readonly
+2026-11-08T21:10:41.5850929Z  * [new ref]         refs/pull/14/merge  -> pull/14/merge
+2026-11-08T21:10:41.5856253Z ##[endgroup]
+2026-11-08T21:10:41.5859621Z ##[group]Determining the checkout info
+2026-11-08T21:10:41.5863467Z ##[endgroup]
+2026-11-08T21:10:41.5865879Z [command]/usr/bin/git sparse-checkout disable
+2026-11-08T21:10:41.5872043Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-08T21:10:41.5913302Z ##[group]Checking out the ref
+2026-11-08T21:10:41.5917477Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/14/merge
+2026-11-08T21:10:41.6182666Z Note: switching to 'refs/remotes/pull/14/merge'.
+2026-11-08T21:10:41.6184361Z 
+2026-11-08T21:10:41.6185900Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-08T21:10:41.6188842Z changes and commit them, and you can discard any commits you make in this
+2026-11-08T21:10:41.6192297Z state without impacting any branches by switching back to a branch.
+2026-11-08T21:10:41.6195029Z 
+2026-11-08T21:10:41.6196853Z If you want to create a new branch to retain commits you create, you may
+2026-11-08T21:10:41.6200433Z do so (now or later) by using -c with the switch command. Example:
+2026-11-08T21:10:41.6202168Z 
+2026-11-08T21:10:41.6202825Z   git switch -c <new-branch-name>
+2026-11-08T21:10:41.6203809Z 
+2026-11-08T21:10:41.6204406Z Or undo this operation with:
+2026-11-08T21:10:41.6205761Z 
+2026-11-08T21:10:41.6206336Z   git switch -
+2026-11-08T21:10:41.6207010Z 
+2026-11-08T21:10:41.6208066Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-08T21:10:41.6209546Z 
+2026-11-08T21:10:41.6211259Z HEAD is now at b0ca3ac Merge b7d9d884ddd034e3580a2268fce69ca43030e8c5 into eae61fb62a9ccd4073b96d71454f89e5a943eae9
+2026-11-08T21:10:41.6217002Z ##[endgroup]
+2026-11-08T21:10:41.6251502Z [command]/usr/bin/git log -1 --format=%H
+2026-11-08T21:10:41.6286941Z b0ca3ac0132509b1dba2c87b5fcab09f852f0086
+2026-11-08T21:10:41.6298171Z ##[group]Removing auth
+2026-11-08T21:10:41.6301060Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T21:10:41.6344039Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T21:10:41.6599877Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T21:10:41.6638014Z http.https://github.com/.extraheader
+2026-11-08T21:10:41.6648406Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-08T21:10:41.6697562Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T21:10:41.6942618Z ##[endgroup]
+2026-11-08T21:10:41.7236218Z ##[group]Run if [ "$M50_REVIEW" = "true" ]; then
+2026-11-08T21:10:41.7237837Z [36;1mif [ "$M50_REVIEW" = "true" ]; then[0m
+2026-11-08T21:10:41.7239246Z [36;1m  python3 tools/check-m50-s1.py[0m
+2026-11-08T21:10:41.7240798Z [36;1m  python3 -m unittest discover -s tests/m50_s1 -v[0m
+2026-11-08T21:10:41.7242628Z [36;1melif [ "$LOT3_REVIEW" = "true" ]; then[0m
+2026-11-08T21:10:41.7244145Z [36;1m  python3 tools/check-prefusion-lot3.py[0m
+2026-11-08T21:10:41.7245902Z [36;1melse[0m
+2026-11-08T21:10:41.7246979Z [36;1m  python3 tools/check-prefusion.py[0m
+2026-11-08T21:10:41.7248302Z [36;1mfi[0m
+2026-11-08T21:10:41.7273503Z shell: /usr/bin/bash -e {0}
+2026-11-08T21:10:41.7274852Z env:
+2026-11-08T21:10:41.7275740Z   M50_REVIEW: false
+2026-11-08T21:10:41.7276735Z   LOT3_REVIEW: false
+2026-11-08T21:10:41.7277727Z ##[endgroup]
+2026-11-08T21:10:42.3219740Z Traceback (most recent call last):
+2026-11-08T21:10:42.3221339Z   File "/home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS/tools/check-prefusion.py", line 62, in <module>
+2026-11-08T21:10:42.3222713Z     main()
+2026-11-08T21:10:42.3310704Z   File "/home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS/tools/check-prefusion.py", line 50, in main
+2026-11-08T21:10:42.3312040Z     verify_files(ROOT, frozen, actual, ADDITIONS, {WORKFLOW: replacement.encode()})
+2026-11-08T21:10:42.3313138Z   File "/home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS/tools/check-prefusion.py", line 30, in verify_files
+2026-11-08T21:10:42.3314023Z     raise ValueError('Undeclared files: ' + ', '.join(sorted(extra)))
+2026-11-08T21:10:42.3321931Z ValueError: Undeclared files: .github/workflows/m53-readonly-review.yml, .github/workflows/prefusion-lot3.yml, .github/workflows/reuse-r1plus.yml, docs/m50/M50-S1-CI.md, docs/prefusion/lot3/BACKEND-DECISION.md, docs/prefusion/lot3/REPORT.md, labs/android-lab/build.gradle.kts, labs/android-lab/src/androidTest/java/fr/jarvis/nexus/prefusion/lab/Lot3QualificationTest.java, labs/android-lab/src/main/AndroidManifest.xml, labs/android-lab/src/main/java/fr/jarvis/nexus/prefusion/lab/SyntheticPickerActivity.java, labs/prefusion_lot3/matrix.py, labs/saf-provider/build.gradle.kts, labs/saf-provider/src/main/AndroidManifest.xml, labs/saf-provider/src/main/java/fr/jarvis/nexus/prefusion/provider/SyntheticDocumentsProvider.java, m53review/CI-REMEDIATION.md, m53review/CONTRACT-AND-ANDROID-PLAN.md, m53review/README.md, m53review/SERVICES-REVIEW.md, m53review/check.py, m53review/corpus.json, m53review/corpus/astronomy.txt, m53review/corpus/injection.txt, m53review/corpus/navigation.txt, m53review/init.gradle, m53review/src/test/kotlin/fr/jarvis/nexus/m53/M53ReadOnlyTest.kt, missions/M50-INTEGRATION-2026-10-29.md, reuse-r1plus/README.md, reuse-r1plus/adapter/ReadOnlyConsultationAdapter.kt, reuse-r1plus/check.py, reuse-r1plus/init.gradle, reuse-r1plus/tests/ConsultationTest.kt, tests/m50_s1/test_scope.py, tests/prefusion_lot3/test_evidence.py, tests/prefusion_lot3/test_matrix.py, tests/prefusion_lot3/test_scope.py, tools/check-m50-s1.py, tools/check-prefusion-lot3.py, tools/prefusion-lot3-evidence.py, tools/run-prefusion-lot3-emulator.sh
+2026-11-08T21:10:42.3415825Z ##[error]Process completed with exit code 1.
+2026-11-08T21:10:42.3600868Z Post job cleanup.
+2026-11-08T21:10:42.4501534Z [command]/usr/bin/git version
+2026-11-08T21:10:42.4585985Z git version 2.56.0
+2026-11-08T21:10:42.4632062Z Temporarily overriding HOME='/home/runner/work/_temp/98d181dd-061e-4a35-8915-435dedfc04ac' before making global git config changes
+2026-11-08T21:10:42.4633899Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T21:10:42.4638374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/JARVIS-NEXUS/JARVIS-NEXUS
+2026-11-08T21:10:42.4684891Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T21:10:42.4731437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T21:10:42.5019400Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T21:10:42.5069174Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T21:10:42.5576844Z Cleaning up orphan processes
+2026-11-08T21:10:42.6000898Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
