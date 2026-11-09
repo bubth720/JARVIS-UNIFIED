@@ -39,4 +39,9 @@ def acquire(row, root, offline=False):
     if not marker.is_file() or marker.is_symlink() or not (target/'.git').is_dir():raise ValueError('ISOLATED_LAB_CLONE_REQUIRED')
     identity=strict_json(marker.read_text())
     if identity!={'repository':row['repository'],'commit':row['commit'],'isolated_lab_clone':True}:raise ValueError('LAB_CLONE_IDENTITY_MISMATCH')
-    return target, verify(target, row)
+    proof=verify(target,row)
+    observed=subprocess.run(['git','-C',str(target),'show-ref','--hash','--verify','refs/remotes/origin/'+row['branch']],capture_output=True,text=True,timeout=15)
+    tip=observed.stdout.strip() if observed.returncode==0 else None
+    proof.update(branch_tip_at_clone=tip,branch_drift=None if tip is None else tip!=row['commit'],
+                 branch_observation='CACHED_REF_NOT_LIVE',pinned_commit_retained=True)
+    return target, proof

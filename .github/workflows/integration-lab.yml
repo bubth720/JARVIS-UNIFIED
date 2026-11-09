@@ -40,6 +40,7 @@ jobs:
       - run: python3 tooling/integration-lab/scripts/check_scope.py
       - run: python3 -m unittest discover -s tooling/integration-lab/tests -v
   campaign:
+    if: github.event_name != 'pull_request'
     needs: lab-tests
     runs-on: ubuntu-24.04
     timeout-minutes: 60
@@ -94,4 +95,5 @@ jobs:
             .audit-cache/integration-lab/REPORT.md
             .audit-cache/integration-lab/dashboard.html
           retention-days: 90
+          include-hidden-files: true
           if-no-files-found: error

@@ -47,9 +47,24 @@ def render(receipt, output):
 def compare(before,after):
     changed=[]
     a={r['module']:r for r in before.get('modules',[])};b={r['module']:r for r in after.get('modules',[])}
+    left={(r['module'],r['id']):r for r in before.get('commands',[])}
+    right={(r['module'],r['id']):r for r in after.get('commands',[])}
     for m in sorted(set(a)|set(b)):
         x,y=a.get(m,{}),b.get(m,{})
-        changed.append({'module':m,'before':x.get('commit'),'after':y.get('commit'),'before_status':x.get('status','UNKNOWN'),'after_status':y.get('status','UNKNOWN'),'recommendation':'OPTIMISER' if y.get('status')=='FAIL' else 'CONSERVER'})
+        ids={k for k in left if k[0]==m};later={k for k in right if k[0]==m}
+        common=ids&later;missing=ids-later
+        # An inventory/build-only PASS must never clear an unexecuted failing test.
+        before_state=x.get('status','UNKNOWN')
+        after_state='NOT_RUN' if ids and not later else y.get('status','UNKNOWN')
+        carried=[k[1] for k in missing if left[k]['status']=='FAIL']
+        if carried and later:after_state='PARTIAL'
+        changed.append({'module':m,'before':x.get('commit'),'after':y.get('commit'),
+            'before_status':before_state,'after_status':after_state,
+            'after_inventory_status':y.get('status','UNKNOWN'),
+            'same_command_results':[{'id':k[1],'before':left[k]['status'],'after':right[k]['status']} for k in sorted(common)],
+            'not_reexecuted':sorted(k[1] for k in missing),'prior_failures_not_reexecuted':sorted(carried),
+            'coverage_comparable':bool(ids) and ids==later,
+            'recommendation':'OPTIMISER' if y.get('status')=='FAIL' or carried else 'CONSERVER'})
     comparable=before.get('environment')==after.get('environment') and before.get('profile')==after.get('profile') and before.get('build_cache_state')==after.get('build_cache_state') and before.get('build_cache_state') not in (None,'UNKNOWN')
     return {'status':'PARTIAL' if not comparable else 'PASS','modules':changed,'performance_comparable':comparable,
             'performance_delta':None,'memory_delta':None,'note':'No replacement or connection recommended without runtime, quality, authority and resource evidence.'}

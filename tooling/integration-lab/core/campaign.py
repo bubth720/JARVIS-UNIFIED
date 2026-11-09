@@ -37,6 +37,12 @@ def run(args,phase='run'):
     if out.is_relative_to(ROOT) and integrity.git(ROOT,'ls-files','--',out.relative_to(ROOT).as_posix()).strip():raise ValueError('PROTECTED_OUTPUT_DIRECTORY')
     if out.exists() and any(out.iterdir()):raise ValueError('NONEMPTY_OUTPUT_DIRECTORY')
     lock=repository.read_lock(HERE/'config/modules.lock.json');out.mkdir(parents=True,exist_ok=True)
+    from tooling.contracts.manifest import strict_json
+    selected_profile=strict_json((HERE/'config/profiles'/(args.profile+'.json')).read_text())
+    policy.runtime_selection(selected_profile['runtime_modules'])
+    if any(selected_profile.get(k) is not False for k in ['model_acquisition','core_llm_admission','physical_devices','emulator_boot']):raise ValueError('UNAUTHORIZED_PROFILE')
+    capabilities=strict_json((HERE/'config/capabilities.json').read_text())
+    if capabilities['module_runtime_states']!={m:'DISABLED' for m in policy.MODULES} or capabilities['authority_roots'] or capabilities['scope']!='DEVELOPMENT_TOOL_ONLY':raise ValueError('UNAUTHORIZED_CAPABILITY_REGISTRY')
     sources_root=Path(args.source_root).resolve() if args.source_root else out/'workspace/sources'
     # Never build in the LAB itself or in its preserved parent checkout.
     if sources_root==ROOT or sources_root in ROOT.parents:raise ValueError('ORIGINAL_SOURCE_DIRECTORY_REFUSED')
@@ -50,6 +56,7 @@ def run(args,phase='run'):
        'lock_sha256':integrity.sha(HERE/'config/modules.lock.json'),'build_cache_state':'UNKNOWN',
        'android':{'status':'NOT_RUN','kind':'EMULATOR','reason':'SAFE_PROFILE' if args.profile=='safe' else 'PENDING'},
        'apks':{'status':'NOT_RUN','ready_to_install':False},'runtime_modules':['INTERFACE_LOCAL_ONLY'],
+       'capabilities':capabilities,'selected_profile':selected_profile,
        'sensitive_gates':'CLOSED','llm_generation':'NOT_RUN','physical':'NOT_RUN'}
     def save():evidence.write(out/'campaign.json',r)
     save();sources={};rows={m['module']:m for m in lock['modules']}

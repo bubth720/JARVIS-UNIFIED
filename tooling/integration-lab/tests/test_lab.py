@@ -180,6 +180,12 @@ class EvidenceTests(unittest.TestCase):
                 after=campaign.recover(d);run.assert_not_called();self.assertEqual('UNKNOWN',after['status'])
     def test_comparison_does_not_invent_speedup(self):
         a=self.receipt();b=self.receipt();r=reporting.compare(a,b);self.assertFalse(r['performance_comparable']);self.assertIsNone(r['performance_delta'])
+    def test_unexecuted_regression_is_not_cleared_by_inventory_pass(self):
+        a=self.receipt();a['modules']=[{'module':'NEXUS','commit':'a'*40,'status':'FAIL'}]
+        b=copy.deepcopy(a);b['commands']=[];b['modules'][0]['status']='PASS'
+        r=reporting.compare(a,b)['modules'][0]
+        self.assertEqual('NOT_RUN',r['after_status']);self.assertEqual(['fixture'],r['prior_failures_not_reexecuted'])
+        self.assertFalse(r['coverage_comparable']);self.assertEqual('OPTIMISER',r['recommendation'])
     def test_unknown_dependency_is_not_compatible(self):
         r=dependencies.compare({'facts':{}},{'facts':{}});self.assertEqual('UNKNOWN',r['status'])
     def test_incompatible_toolchain(self):
