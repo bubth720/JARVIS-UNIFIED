@@ -1,0 +1,364 @@
+{
+  "audit": "AUD-00",
+  "generated": "2026-11-11",
+  "method": "git ls-remote/fetch of all heads + GitHub API (PRs, workflow runs, job logs) read-only",
+  "outOfScope": [
+    "bubth720/STUDIO-IA (desktop video restoration, separate product)",
+    "bubth720/persona-ia (M1-M3.1 sources not on GitHub)",
+    "bubth720/Livre (README only)"
+  ],
+  "nameCorrections": {
+    "JARVIS-CORE": "bubth720/JAVIS-Local-v2 (SessionCoordinator.kt present on CORE branches)",
+    "JARVIS-EVOLUTION": "bubth720/JARVIS-VOLUTION- (README title 'JARVIS EVOLUTION')"
+  },
+  "repositories": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2",
+      "module": "CORE",
+      "remoteBranches": 42,
+      "reference": {
+        "branch": "main",
+        "sha": "226e2e8cc3eebd479805b89d035eb5c1cbcad540",
+        "date": "2026-10-14T12:13:50+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "codex/m50-s1-core-ci-20261029",
+          "sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+          "date": "2026-10-29T19:40:57+00:00"
+        }
+      ],
+      "mostRecentBranch": "codex/m50-s1-core-ci-20261029",
+      "pullRequests": {
+        "open_draft": 13,
+        "open_ready": 1,
+        "merged": 3,
+        "merged_numbers": [
+          1,
+          2,
+          3
+        ]
+      },
+      "observedWorkflows": []
+    },
+    {
+      "repository": "bubth720/JARVIS-LLM",
+      "url": "https://github.com/bubth720/JARVIS-LLM",
+      "module": "LLM",
+      "remoteBranches": 34,
+      "reference": {
+        "branch": "main",
+        "sha": "917e3351f9b525857b6aa019e98d07872d8f6e76",
+        "date": "2026-10-13T21:11:45+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "claude/repos-folders-analysis-sr65sg",
+          "sha": "59ce4d4762a06116ce779ccab83fc8bfb279acf7",
+          "date": "2026-11-11T17:52:22+00:00"
+        },
+        {
+          "branch": "mission/r02-watchers-isolation-20261111",
+          "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+          "date": "2026-11-11T15:11:01+01:00"
+        }
+      ],
+      "mostRecentBranch": "claude/repos-folders-analysis-sr65sg",
+      "pullRequests": {
+        "open_draft": 12,
+        "open_ready": 0,
+        "merged": 0,
+        "closed_unmerged": [
+          10
+        ]
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "Android prototype checks",
+          "branch": "claude/repos-folders-analysis-sr65sg",
+          "sha": "59ce4d4762a06116ce779ccab83fc8bfb279acf7",
+          "run": 43073699901,
+          "conclusion": "success"
+        },
+        {
+          "workflow": "Android prototype checks",
+          "branch": "mission/r02-watchers-isolation-20261111",
+          "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+          "run": 43036017981,
+          "conclusion": "failure",
+          "cause": "historical F3B verify.py run on HEAD; SENSITIVE.patch cannot apply after PERF-03B 29912e3 (fixed by 59ce4d4)"
+        },
+        {
+          "workflow": "V1 real GGUF Linux probe and A02 sealed snapshot",
+          "branch": "mission/r02-watchers-isolation-20261111",
+          "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+          "run": 43036018169,
+          "conclusion": "success"
+        },
+        {
+          "workflow": "V1 Android offline chat candidate",
+          "branch": "mission/r02-watchers-isolation-20261111",
+          "sha": "57aa5d6423b3bd678903d9b905e47c0191d835b5",
+          "run": 43036001751,
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE",
+      "module": "INTERFACE/AVATAR",
+      "remoteBranches": 34,
+      "reference": {
+        "branch": "development/mission-002",
+        "sha": "d1c0931c4507e9af8f1aa60951947c23f4394b56",
+        "date": "2026-10-14T14:39:48+00:00"
+      },
+      "candidates": [
+        {
+          "branch": "feature/interface-cockpit-v2-008",
+          "sha": "22c24935d902bac27e891ec736c9c5c647efc0c3",
+          "date": "2026-11-11T09:44:25+00:00"
+        },
+        {
+          "branch": "feature/avatar-png-001",
+          "sha": "3daffe7e5c0d9d76c53b10e1029782f4f3e25030",
+          "date": "2026-11-11T11:21:02+01:00"
+        },
+        {
+          "branch": "codex/m51-v1-foundation",
+          "sha": "9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a",
+          "date": "2026-11-08T07:50:07+01:00"
+        }
+      ],
+      "mostRecentBranch": "feature/avatar-png-001",
+      "pullRequests": {
+        "open_draft": 16,
+        "open_ready": 0,
+        "merged": 0
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "Android",
+          "branch": "feature/avatar-png-001",
+          "run": 43002880205,
+          "conclusion": "success",
+          "source": "mission PDF 2026-11-11, not re-fetched"
+        },
+        {
+          "workflow": "M51 Android qualification",
+          "branch": "codex/m51-v1-foundation",
+          "sha": "9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a",
+          "run": 42456346025,
+          "conclusion": "failure",
+          "cause": "API29 SnapshotStateObserver crash; API35 System UI ANR (UNIFIED MISSION-51/FINAL-ACCEPTANCE.md)"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-VOICE",
+      "url": "https://github.com/bubth720/JARVIS-VOICE",
+      "module": "VOICE",
+      "remoteBranches": 26,
+      "reference": {
+        "branch": "main",
+        "sha": "b80b1728c481200b3b0e11c0843f1a268a184fa1",
+        "date": "2026-10-13T16:27:50+00:00"
+      },
+      "candidates": [
+        {
+          "branch": "feat/voice-expressive-v3-android",
+          "sha": "92d07453260553466c92196454b56929b7494b2f",
+          "date": "2026-11-11T12:07:54+01:00"
+        }
+      ],
+      "mostRecentBranch": "feat/voice-expressive-v3-android",
+      "pullRequests": {
+        "open_draft": 19,
+        "open_ready": 1,
+        "merged": 0
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "Android",
+          "sha": "92d07453260553466c92196454b56929b7494b2f",
+          "run": 43009384822,
+          "conclusion": "success"
+        },
+        {
+          "workflow": "VOICE Expressive V3 Android laboratory",
+          "sha": "92d07453260553466c92196454b56929b7494b2f",
+          "run": 43009384722,
+          "conclusion": "success"
+        },
+        {
+          "workflow": "VOICE SDK and expression styles",
+          "sha": "92d07453260553466c92196454b56929b7494b2f",
+          "run": 43009384631,
+          "conclusion": "failure",
+          "cause": "scripts/voice_sdk/check_style_preservation.py pins VOICE-02 base 99d4073; workflow triggers on every pull_request; V3 legitimately modifies voiceStudio/build.gradle.kts"
+        },
+        {
+          "workflow": "Voice Studio 005J",
+          "sha": "92d07453260553466c92196454b56929b7494b2f",
+          "run": 43009384629,
+          "conclusion": "failure",
+          "cause": "same class (005J-scoped guard on all PRs); exact failing step NOT extracted"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS",
+      "module": "NEXUS",
+      "remoteBranches": 21,
+      "reference": {
+        "branch": "main",
+        "sha": "b27df0b84d8f0082d17ca6278549298aaaf97926",
+        "date": "2026-10-14T16:08:55+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "codex/reuse-first-r1plus-20261108",
+          "sha": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+          "date": "2026-11-08T21:08:48+00:00"
+        }
+      ],
+      "mostRecentBranch": "codex/reuse-first-r1plus-20261108",
+      "pullRequests": {
+        "open_draft": 11,
+        "open_ready": 0,
+        "merged": 0
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "REUSE R1plus real SQLite consultation laboratory",
+          "sha": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+          "run": 42523712059,
+          "conclusion": "success"
+        },
+        {
+          "workflow": "NEX-07 isolated quota preflight",
+          "sha": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+          "run": 42523863724,
+          "conclusion": "failure",
+          "cause": "nex-07.yml triggers on every pull_request; tools/check-prefusion.py rejects 39 undeclared successor files; not a quota defect"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES",
+      "module": "SERVICES",
+      "remoteBranches": 20,
+      "reference": {
+        "branch": "main",
+        "sha": "c9f94ad2fa219a5e09cda92fb451aca606ee1646",
+        "date": "2026-10-14T16:07:05+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "feat/services-final-01",
+          "sha": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+          "date": "2026-10-24T23:45:10+00:00"
+        },
+        {
+          "branch": "mission/m50-integrated-beta-20261029",
+          "sha": "8d80d09d6aabf6eac00a7bc6bb4930862bd72812",
+          "date": "2026-10-29T10:45:00+01:00"
+        }
+      ],
+      "mostRecentBranch": "mission/m50-integrated-beta-20261029",
+      "pullRequests": {
+        "open_draft": 9,
+        "open_ready": 0,
+        "merged": 0
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "Android foundation",
+          "branch": "mission/m50-integrated-beta-20261029",
+          "run": 40852606525,
+          "conclusion": "success",
+          "source": "mission PDF, not re-fetched"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "url": "https://github.com/bubth720/JARVIS-VOLUTION-",
+      "module": "EVOLUTION",
+      "remoteBranches": 11,
+      "reference": {
+        "branch": "main",
+        "sha": "a67d3b6d39aa7d30ad38e9b1c9230b4e07180eb0",
+        "date": "2026-10-14T16:06:33+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "feat/evolution-final-01",
+          "sha": "c4abfb035e3e99cc52840b04af06e3cea818c7a0",
+          "date": "2026-10-26T23:53:14+01:00"
+        }
+      ],
+      "mostRecentBranch": "mission/m50-integrated-beta-20261029",
+      "pullRequests": {
+        "open_draft": 4,
+        "open_ready": 0,
+        "merged": 0
+      },
+      "observedWorkflows": []
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED",
+      "module": "UNIFIED (coordination)",
+      "remoteBranches": 46,
+      "reference": {
+        "branch": "main",
+        "sha": "e4435f4bd60c5fdc5595c411cc8cab9da7ef020b",
+        "date": "2026-10-15T13:34:06+02:00"
+      },
+      "candidates": [
+        {
+          "branch": "mission/r02-security-v1-coordination-20261111",
+          "sha": "5861ace42613d9880a6dc9372d55b47ab1bbaf33",
+          "date": "2026-11-11T11:10:21+01:00"
+        }
+      ],
+      "mostRecentBranch": "mission/r02-security-v1-coordination-20261111",
+      "pullRequests": {
+        "open_draft": 21,
+        "open_ready": 0,
+        "merged": 0
+      },
+      "observedWorkflows": [
+        {
+          "workflow": "coordination workflows",
+          "run": 43001364896,
+          "conclusion": "success",
+          "source": "mission PDF, not re-fetched"
+        }
+      ]
+    },
+    {
+      "repository": "bubth720/JARVIS-INTERFACE-",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE-",
+      "module": "UNKNOWN (README only)",
+      "remoteBranches": 2,
+      "reference": {
+        "branch": "main",
+        "sha": "a857f5019354ea1c912e6f66bebdcc053c0cb700",
+        "date": "2026-10-14T16:07:35+02:00"
+      },
+      "candidates": [],
+      "mostRecentBranch": "claude/repos-folders-analysis-sr65sg",
+      "pullRequests": {
+        "open_draft": 0,
+        "merged": 0
+      },
+      "observedWorkflows": []
+    }
+  ]
+}

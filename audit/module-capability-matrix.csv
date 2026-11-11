@@ -1,0 +1,37 @@
+module,capability,state,evidence,blocker,owner_mission
+CORE,Text chat with local GGUF via third-party llama-android 0.1.1 (minSdk 24),COMPILED_ONLY,JAVIS-Local-v2 main LlamaLocalEngine.kt + app/build.gradle.kts; AGENTS.md: never validated on device,No on-device generation proof; engine distinct from JARVIS-LLM JNI,CORE-01
+CORE,SessionCoordinator (phases; cancel; timeouts; event bus),IMPLEMENTED_TESTED,codex/m50-s1-core-ci-20261029 SessionCoordinator.kt + SessionCoordinatorTest (JVM); M50-S1B lab API29/35 with LAB/SYNTHETIC replies,Only synthetic replies in lab; real LLM path BLOCKED (G3),CORE-01
+CORE,SQLite history and /remember memory with migration fixture,IMPLEMENTED_TESTED,main LocalDatabaseTest (Robolectric API24/25/35) merged PR #3,Device NOT_RUN,CORE-01
+CORE,Consented memory / identity profiles laboratories,PROTOTYPE,feat/mem-01..02-intensive; feat/id-01..02-intensive (opt-in; isolated SQLite),Not wired to production session,CORE-01
+CORE,PDF import + lexical RAG,COMPILED_ONLY,main PdfImporter.kt RagEngine.kt,Device NOT_RUN; NEXUS intended successor,NEXUS-01
+CORE,Whisper offline STT (whisper-android 1.0.0),COMPILED_ONLY,main WhisperLocalEngine.kt WavRecorder.kt,Model not bundled in audited APK; device NOT_RUN,VOICE-02
+CORE,Android TTS output,COMPILED_ONLY,main LocalTts.kt,Offline voice availability engine-dependent,VOICE-01
+LLM,Pinned llama.cpp JNI engine (minSdk 29; ARM64),IMPLEMENTED_TESTED,JARVIS-LLM r02 branch: native tests + 145 domain/40 app JVM tests PASS run 43073699901,Android device generation NOT_RUN,LLM-03
+LLM,Real Qwen3-0.6B Q4_K_M GGUF generation (Linux JNI; SHA-256 pinned),IMPLEMENTED_TESTED,v1-real-model-a02.yml run 43036018169 SUCCESS (Linux x86_64 only),Not Android; Unsloth fallback source needs license/provenance review,LLM-03
+LLM,V1 offline chat candidate APK (import GGUF via SAF + SHA),COMPILED_ONLY,v1-offline-chat.yml run 43036001751 SUCCESS; v1candidate/QUALIFICATION.md,No emulator/device inference; not CORE-integrated,LLM-03
+LLM,A02 sealed memfd snapshot,PROTOTYPE,perf03/candidate/native/a02_sealed_fd.h + tools/test-a02-sealed-snapshot.py (Linux adversarial PASS),FD not passed to Android loader; memory peak unmeasured; NO-GO Android,LLM-02
+LLM,A01 operator root / Keystore Ed25519 provisioning,PROTOTYPE,a01bdiagnostic/ isolated test APK,No independent trust root; M51.07 NO-GO,LLM-02
+LLM,Resource policies ECO/BALANCED/AUTO; thermal/battery/PSS guards,IMPLEMENTED_TESTED,mission-002c/003b branches + JVM tests,Thresholds unqualified on POCO,LLM-03
+LLM,Pre-recorded response catalogue (SQLite; JSON import/export),IMPLEMENTED_TESTED,mission-003-catalogue (8 demo entries),Target >1000 entries ABSENT,Post-V1
+INTERFACE,Historical dashboard + DataStore v1 layouts,IMPLEMENTED_TESTED,feature/interface-storage-005; dashboard-004,Physical multi-device NOT_RUN,INTERFACE-01
+INTERFACE,Cockpit V2 experimental (opt-in; RAM-only state),COMPILED_ONLY,feature/interface-cockpit-v2-008 PR #22; send/mic disabled,No CORE/LLM connected,INTERFACE-01
+INTERFACE,M51 testOnly cockpit + registry,COMPILED_ONLY,codex/m51-v1-foundation PR #18,API29 Compose crash + API35 ANR (run 42456346025),INTERFACE-01
+INTERFACE,CORE conversation client adapter (in-process lab),IMPLEMENTED_TESTED,codex/m50-s1b-android-20261104 labs/m50-s1 + CoreConversationClientTest; API29/35,Synthetic replies only,CORE-01
+AVATAR,36-pose PNG importer + gallery (private assets),PROTOTYPE,feature/avatar-png-001 (2026-11-11),Assets not in repo/APK; event-to-pose mapping ABSENT,AVATAR-01
+AVATAR,2.5D vector layered avatar + Athena premium renderer,PROTOTYPE,feature/interface-avatar-001; fix/athena-premium-default,ART_REVIEW_PENDING; no runtime sync with speech,AVATAR-01
+AVATAR,M54 avatar controller + private inventory,PROTOTYPE,codex/m54-avatar-preparation PR #19 (21 JVM + 20 Python PASS),Renderer/master not supplied,AVATAR-01
+VOICE,Android TTS app (SpeechEngine/SpeechRouter),IMPLEMENTED_TESTED,feat/android-tts-foundation PR #1,Router JVM-tested only,VOICE-01
+VOICE,PocketTTS on Android (Expressive V3 lab; timbre/profile),PROTOTYPE,feat/voice-expressive-v3-android PR #27; Android + V3 lab workflows SUCCESS,Real audio quality/latency on device NOT_RUN; weights/licence per profile to document,VOICE-01
+VOICE,Voice identities/profiles; encrypted archives; Studio 005J,PROTOTYPE,feat/voice-identity-005h; feat/voice-studio-005j,Independent APKs only,VOICE-01
+VOICE,CORE<->VOICE Binder bridge,PROTOTYPE,feat/voice-bridge-pilot PR #11 (generation blocked),Not activated,UNIFIED-01
+VOICE,Offline STT in VOICE,ABSENT,No STT engine in JARVIS-VOICE branches; Whisper exists only in CORE,Choose Whisper (CORE) per VOICE-02 reuse-first,VOICE-02
+NEXUS,Knowledge catalogue SQLite + FTS5 + provenance (JVM),IMPLEMENTED_TESTED,feat/nex-01..03; reuse-r1plus run 42523712059 SUCCESS,Android integration NOT_RUN,NEXUS-01
+NEXUS,API24 SQLite adapter with FTS capability refusals,IMPLEMENTED_TESTED,feat/nex-06a-android-api24; fusion-02-nexus-android,Not wired to CORE,NEXUS-01
+NEXUS,Read-only ZIM (Kiwix) adapter with cited context,PROTOTYPE,work/nex-04-zim-readonly,Real ~55 GB ZIM on device NOT_RUN,SERVICES-01
+NEXUS,Encrypted snapshots + verified restore,IMPLEMENTED_TESTED,feat/nex-05-sauvegarde-chiffrable-restaura,Device NOT_RUN,NEXUS-01
+SERVICES,17-tool catalogue; resumable workflows; SAF export; Android app,IMPLEMENTED_TESTED,feat/services-final-01 (desktop tests + Android build),Not wired to CORE permissions,SERVICES-01
+SERVICES,BRIDGE authenticated file protocol (no transport),PROTOTYPE,feat/services-final-01 CONTRACTS.md,No transport by design,UNIFIED-01
+EVOLUTION,Local sanitized telemetry + diagnostics + inert patch proposals (JVM),IMPLEMENTED_TESTED,JARVIS-VOLUTION- feat/evol-01..03; evolution-final-01,No Android adapter; no host wiring,EVOLUTION-01
+UNIFIED,Contracts v1 (schemas; generated Java/Kotlin) + registry + gates,IMPLEMENTED_TESTED,mission/r02-security-v1-coordination-20261111 tooling/v1 tests,Contracts not exercised by a real cross-module runtime,UNIFIED-01
+ALL,Single integrated Android APK (CORE + real LLM + INTERFACE) in airplane mode,ABSENT,UNIFIED M51 FINAL-ACCEPTANCE: 0/100 received,G1-G4 closed,UNIFIED-01
+ALL,Physical POCO X8 Pro qualification,NOT_VERIFIABLE,No device evidence in any repository,Requires user/operator with device,DEVICE-01

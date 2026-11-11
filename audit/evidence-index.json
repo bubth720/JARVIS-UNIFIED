@@ -1,0 +1,153 @@
+{
+  "audit": "AUD-00",
+  "generated": "2026-11-11",
+  "evidence": [
+    {
+      "module": "LLM",
+      "claim": "Android prototype checks = success",
+      "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/43073699901",
+      "sha": "59ce4d4762a06116ce779ccab83fc8bfb279acf7",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "LLM",
+      "claim": "Android prototype checks = failure",
+      "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/43036017981",
+      "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": "historical F3B verify.py run on HEAD; SENSITIVE.patch cannot apply after PERF-03B 29912e3 (fixed by 59ce4d4)"
+    },
+    {
+      "module": "LLM",
+      "claim": "V1 real GGUF Linux probe and A02 sealed snapshot = success",
+      "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/43036018169",
+      "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "LLM",
+      "claim": "V1 Android offline chat candidate = success",
+      "url": "https://github.com/bubth720/JARVIS-LLM/actions/runs/43036001751",
+      "sha": "57aa5d6423b3bd678903d9b905e47c0191d835b5",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "INTERFACE/AVATAR",
+      "claim": "Android = success",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/43002880205",
+      "sha": null,
+      "observedAt": "2026-11-11",
+      "verifiedBy": "mission PDF 2026-11-11, not re-fetched",
+      "cause": null
+    },
+    {
+      "module": "INTERFACE/AVATAR",
+      "claim": "M51 Android qualification = failure",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/actions/runs/42456346025",
+      "sha": "9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": "API29 SnapshotStateObserver crash; API35 System UI ANR (UNIFIED MISSION-51/FINAL-ACCEPTANCE.md)"
+    },
+    {
+      "module": "VOICE",
+      "claim": "Android = success",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/43009384822",
+      "sha": "92d07453260553466c92196454b56929b7494b2f",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "VOICE",
+      "claim": "VOICE Expressive V3 Android laboratory = success",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/43009384722",
+      "sha": "92d07453260553466c92196454b56929b7494b2f",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "VOICE",
+      "claim": "VOICE SDK and expression styles = failure",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/43009384631",
+      "sha": "92d07453260553466c92196454b56929b7494b2f",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": "scripts/voice_sdk/check_style_preservation.py pins VOICE-02 base 99d4073; workflow triggers on every pull_request; V3 legitimately modifies voiceStudio/build.gradle.kts"
+    },
+    {
+      "module": "VOICE",
+      "claim": "Voice Studio 005J = failure",
+      "url": "https://github.com/bubth720/JARVIS-VOICE/actions/runs/43009384629",
+      "sha": "92d07453260553466c92196454b56929b7494b2f",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": "same class (005J-scoped guard on all PRs); exact failing step NOT extracted"
+    },
+    {
+      "module": "NEXUS",
+      "claim": "REUSE R1plus real SQLite consultation laboratory = success",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/42523712059",
+      "sha": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": null
+    },
+    {
+      "module": "NEXUS",
+      "claim": "NEX-07 isolated quota preflight = failure",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/42523863724",
+      "sha": "b7d9d884ddd034e3580a2268fce69ca43030e8c5",
+      "observedAt": "2026-11-11",
+      "verifiedBy": "GitHub API in this audit",
+      "cause": "nex-07.yml triggers on every pull_request; tools/check-prefusion.py rejects 39 undeclared successor files; not a quota defect"
+    },
+    {
+      "module": "SERVICES",
+      "claim": "Android foundation = success",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/actions/runs/40852606525",
+      "sha": null,
+      "observedAt": "2026-11-11",
+      "verifiedBy": "mission PDF, not re-fetched",
+      "cause": null
+    },
+    {
+      "module": "UNIFIED (coordination)",
+      "claim": "coordination workflows = success",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/actions/runs/43001364896",
+      "sha": null,
+      "observedAt": "2026-11-11",
+      "verifiedBy": "mission PDF, not re-fetched",
+      "cause": null
+    },
+    {
+      "module": "UNIFIED",
+      "claim": "M51 final acceptance NOT ACCEPTED, 0/100",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/mission/r02-security-v1-coordination-20261111/reports/v1-acceleration/MISSION-51/FINAL-ACCEPTANCE.md",
+      "sha": "5861ace42613d9880a6dc9372d55b47ab1bbaf33",
+      "observedAt": "2026-11-11"
+    },
+    {
+      "module": "LLM",
+      "claim": "A02 Android NO-GO; Linux prototype only",
+      "url": "https://github.com/bubth720/JARVIS-LLM/blob/mission/r02-watchers-isolation-20261111/docs/r02/A02-SEALED-FD-CONTRACT.md",
+      "sha": "0ef36356e39bb0118c9ae42e9b910e3d91279ce7",
+      "observedAt": "2026-11-11"
+    }
+  ],
+  "deliverableSha256": {
+    "README.md": "e09a3e4d0274377fd1fa4f5e0ece41e2fa97a0e358d391eed482fdff7a167fef",
+    "critical-path.md": "828103da3c67c5e038bd929711a6e6d7e296c5cc92a237c99368618b1915b114",
+    "integration-contracts.md": "ce11bef4aad9e9793b9a2f8582cc36ca0aa76edecdab9a8a0d992a3ad09f9065",
+    "module-capability-matrix.csv": "5a63160bdc0a1b6cbf8497269d86e4581ec15d7163d1cc1c26634f023ee7c6a0",
+    "repository-inventory.json": "58d3d535459c96838bbe0a63ca50b8c3f15af45cc091bcb845f4ea545bac5977"
+  }
+}
