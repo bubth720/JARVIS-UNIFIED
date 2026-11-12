@@ -6,7 +6,7 @@
 
 | Élément | Valeur attendue | Vérification |
 |---|---|---|
-| APK | `app-debug.apk`, paquet `fr.jarvis.v1b.lab`, testOnly, aucune permission | SHA-256 indiqué dans `reports/v1b/REPORT.md` (artefact `JARVIS-V1B-LAB-APK-<commit>`) : `sha256sum app-debug.apk` doit lui être **identique** |
+| APK | `app-debug.apk`, paquet `fr.jarvis.v1b.lab`, testOnly, aucune permission ; artefact `JARVIS-V1B-LAB-APK-340ce8ae451ea1f70f74fa1ab0e89a2813d30379` (run 43186945601) | `sha256sum app-debug.apk` = `78a0ce7f8033c5ad62327a75d7bf0cdec1a568975624423bb58074e11d97eb51` |
 | Modèle | `unsloth/Qwen3-0.6B-GGUF` @ `50968a4468ef4233ed78cd7c3de230dd1d61a56b`, `Qwen3-0.6B-Q4_K_M.gguf`, 396 705 472 octets | `sha256sum` = `ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a`, taille exacte (`stat -c %s`) |
 | Outils PC | `adb` (platform-tools), câble USB, débogage USB activé **temporairement** | `adb devices` liste un seul appareil |
 
