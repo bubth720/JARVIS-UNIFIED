@@ -1,0 +1,50 @@
+{
+  "source": {
+    "repository": "bubth720/JAVIS-Local-v2",
+    "commit": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+    "blobs": {
+      "LocalLanguageModel.kt": "c54f469cfba53d0fe4f706329158d7cce6288bd8",
+      "InferenceContract.kt": "87df84dde2f4b23b8757e54da2282e6b0c3ba2f2"
+    }
+  },
+  "note": "Read-only snapshot of the CORE inference contract that ARCH-01 must preserve. Extracted by git show, never edited by hand.",
+  "LocalLanguageModel.methods": [
+    "generate",
+    "infer",
+    "isLoaded",
+    "openSession",
+    "prepare",
+    "requestStop",
+    "unload",
+    "warmUp"
+  ],
+  "enums": {
+    "StopResult": [
+      "REQUESTED",
+      "UNSUPPORTED",
+      "NOT_RUNNING"
+    ],
+    "UnloadResult": [
+      "CONFIRMED",
+      "UNKNOWN",
+      "FAILED"
+    ],
+    "InferenceRefusal": [
+      "BUSY",
+      "CONTRACT",
+      "SYSTEM_PROMPT",
+      "BUDGET",
+      "STALE_RESPONSE",
+      "STOP_REQUESTED",
+      "RELEASE_UNCONFIRMED",
+      "DELEGATE_DISABLED",
+      "PROCESS_ENGINE_HELD"
+    ]
+  },
+  "InferenceCapabilities.defaults": {
+    "contractVersion": "1",
+    "separateSystemPrompt": "true",
+    "maxContextSize": "2048",
+    "maxGenerationTokens": "256"
+  }
+}
