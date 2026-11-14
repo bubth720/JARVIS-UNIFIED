@@ -1,22 +1,22 @@
 # Registre central des anomalies — JARVIS (AUDIT-GLOBAL-01)
 
-Source : `registre.json` (ce fichier est généré depuis elle). Mise à jour : 2026-11-14.
+Source : `registre.json` (ce fichier est généré par `render_registre.py`). Mise à jour : 2026-11-14.
 
 Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **FONCTION_ABSENTE**, **LIMITATION_ENVIRONNEMENT**, **LIMITATION_MODELE**.
 
 | ID | Module | Nature | Gravité | Statut | Symptôme | Preuve | Correction proposée |
 |---|---|---|---|---|---|---|---|
-| A-001 | UNIFIED (CI) | DEFAUT_CONFIRME | majeure | à retester | Les portes historiques UNI-08 et FUSION-02 échouent sur la branche de développement. | Journaux des runs cités. | Épingler runs-on: ubuntu-24.04 dans ces workflows historiques (modification de fichiers historiques : validation requise). — Appliqué avec l'accord du propriétaire (14/11) : runs-on ubuntu-24.04 dans fusion-02, prefusion-lot3, uni-08-u00/u01/u02 ; Python 3.12.12 inchangé. |
-| A-002 | LLM (CI A02) | DEFAUT_CONFIRME | majeure | ouvert | La porte « A02 sealed GGUF native loader » est rouge en permanence. | Journal du run 43592731631. | Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. |
-| A-003 | VOICE | DEFAUT_CONFIRME | majeure | ouvert | Le commit VOICE utilisé par l'application échoue à ses propres gardes de préservation. | Journaux des runs. | Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. |
+| A-001 | UNIFIED (CI) | DEFAUT_CONFIRME | majeure | validé | Les portes historiques UNI-08 et FUSION-02 échouent sur la branche de développement. | Journaux des runs cités. | Épingler runs-on: ubuntu-24.04 dans ces workflows historiques (modification de fichiers historiques : validation requise). — Appliqué avec l'accord du propriétaire (14/11) : runs-on ubuntu-24.04 dans fusion-02, prefusion-lot3, uni-08-u00/u01/u02 ; Python 3.12.12 inchangé. Validé : 6 portes vertes sur b7c146a. |
+| A-002 | LLM (CI A02) | DEFAUT_CONFIRME | majeure | à retester | La porte « A02 sealed GGUF native loader » est rouge en permanence. | Journal du run 43592731631. | Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. Appliqué (LLM 9c3fc50) : workflow successeur a02-integrity.yml + dialogue_gate_split.py. |
+| A-003 | VOICE | DEFAUT_CONFIRME | majeure | à retester | Le commit VOICE utilisé par l'application échoue à ses propres gardes de préservation. | Journaux des runs. | Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. Appliqué (VOICE 5890735) : écarts exacts approuvés par empreinte ; contrôle négatif vérifié. |
 | A-004 | LLM (Qwen3-0.6B) | LIMITATION_MODELE | critique | ouvert | Affirmations factuelles fausses et assurées. | Études 43588723772, 43590133529, 43592731686 ; émulateur. | Atténuations en place : provenance « non vérifié », NEXUS cité, étude 1.7B. Remède structurel : modèle plus grand (mesure POCO requise). |
-| A-005 | LLM + NEXUS | DEFAUT_CONFIRME | majeure | à retester | Réponse documentaire inventée quand aucun document ne contient l'information. | api29/35-v3-knowledge.json. | Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. |
+| A-005 | LLM + NEXUS | DEFAUT_CONFIRME | majeure | validé | Réponse documentaire inventée quand aucun document ne contient l'information. | api29/35-v3-knowledge.json. | Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. Validé : note système exigée par le test g, verte API 29/35 (run 43620844372). |
 | A-006 | LLM + INTERFACE | DEFAUT_CONFIRME | critique | validé | JARVIS prétend avoir exécuté une action (« La lumière du salon est allumée »). | Runs 43590133529, 43592731686. | ActionGuard : consigne ciblée + note système si l'affirmation persiste. Test f : refus correct sur API 29 et 35. |
 | A-007 | INTERFACE conv (mémoire de travail) | DEFAUT_CONFIRME | majeure | validé | « Comment je m'appelle ? » → prénom du frère. | api29/35-v3-conv.json. | Phrase mesurée V1-B « Fait connu : l'utilisateur s'appelle… ». Run 43616811194 : 8/8. |
 | A-008 | INTERFACE (sphère) | DEFAUT_CONFIRME | majeure | à retester | La sphère se redessine pendant l'écoute (11–13 images). | Runs 43592693625, 43609210897. | Lecture différée dans le dock ; référence vsync mémorisée. |
 | A-009 | NEXUS sur Android | DEFAUT_CONFIRME | critique | validé | Recherche documentaire impossible. | Run 43609210897. | SQLite embarqué AndroidX 2.5.2 (3.46.0), adaptateur séparé. Test g vert API 29/35 (run 43616811194). |
 | A-010 | MEMORY VAULT | DEFAUT_CONFIRME | majeure | ouvert | Les souvenirs en statut NEEDS_CONFIRMATION (égalité ambiguë) sont injectés comme s'ils étaient READY. | Revue de code de ce commit (aucun test ne le couvre). | N'injecter que READY ; NEEDS_CONFIRMATION → proposer le choix à l'utilisateur ; test JVM/émulateur avec deux souvenirs à égalité. |
-| A-011 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | à retester | Échecs instables : StaleObjectException (h, API 35), carte encore présente après Retour, onglet erroné. | api35-results.txt. | tap() avec reprise, attente Until.gone, bon onglet. |
+| A-011 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | à retester | Échecs instables : StaleObjectException (h, API 35), carte encore présente après Retour, onglet erroné. | api35-results.txt. | tap() avec reprise, attente Until.gone, bon onglet. Run 43620844372 : h vert sur API 35 ; c échoue encore sur un onglet hors écran (barre défilante) → navigation par défilement. |
 | A-012 | LLM (étude Android) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | Le 1.7B est coupé par le délai protégé de 90 s sur émulateur (12 tours). | study-android-1.7b-ctx768-1t.json. | Mesure sur appareil (protocole prêt) ; délai protégé inchangé. |
 | A-013 | VOICE (émulateur) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | Lecture audio : « Délai de lecture audio dépassé » ; micro silencieux. | Captures run 43586308793. | Validation sur appareil uniquement. |
 | A-014 | INTERFACE conv (réaction rapide) | RISQUE_THEORIQUE | mineure | ouvert | La synthèse de la phrase d'attente s'exécute en parallèle de la génération. | Aucune (impossible sans audio réel). | Mesurer tokens/s avec et sans réaction sur le POCO. |
@@ -27,6 +27,8 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 | A-019 | MEMORY VAULT | FONCTION_ABSENTE | mineure | ouvert | Export chiffré des souvenirs non connecté. | Écran MEMORY VAULT. | Port Keystore + test. |
 | A-020 | NEXUS | FONCTION_ABSENTE | mineure | ouvert | PDF et Kiwix non pris en charge à l'import. | Code. | Lot NEXUS dédié. |
 | A-021 | LEARNING-L01 | FONCTION_ABSENTE | majeure | bloqué | Mission non démarrée ; PDF de référence absent de la session. | Recherche dans la session et les dépôts. | Plan préparé à partir du message ; vérification de couverture dès réception du PDF. |
+| A-022 | LLM (0.6B) — conversation longue | DEFAUT_CONFIRME | majeure | ouvert | Répétition de la réponse précédente. | api29/35-v3-long.json. | Garde de répétition (réponse identique à la précédente → nouvelle génération ou note) à évaluer en S2 ; mesure 1.7B. |
+| A-023 | LLM (0.6B) — personnalité | DEFAUT_CONFIRME | mineure | ouvert | Vouvoiement malgré le tutoiement Athéna. | api29/35-v3-long.json (answersWithVous=3). | Mesurer ; option : renfort dans l'instruction compacte (nouvelle mesure requise). |
 
 ## Détail
 
@@ -239,4 +241,24 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 - **Obtenu** : JARVIS_LEARNING_L01_Mission_Codex.pdf non transmis.
 - **Cause** : Fichier non fourni.
 - **Dépendances** : Dépôt du PDF par le propriétaire.
+
+### A-022 — LLM (0.6B) — conversation longue
+
+- **Fichiers** : —
+- **Branche / commit** : run 43620844372
+- **Reproduction** : Test i (16 tours) : « Au fait, quel sport j'aime ? » après « Allume la télévision. ».
+- **Attendu** : La randonnée (fait présent dans l'instruction).
+- **Obtenu** : Reprise mot pour mot de la réponse précédente (télévision), API 29 et 35.
+- **Cause** : Hypothèse : le 0.6B recopie le dernier tour assistant (3 échanges relus) au lieu de la question.
+- **Dépendances** : A-004.
+
+### A-023 — LLM (0.6B) — personnalité
+
+- **Fichiers** : conv/Persona.kt
+- **Branche / commit** : run 43620844372
+- **Reproduction** : Test i : 3 réponses sur 16 contiennent « vous ».
+- **Attendu** : Tutoiement constant.
+- **Obtenu** : 3/16 réponses au vouvoiement (API 29 et 35).
+- **Cause** : Consigne système fixe du moteur protégé en vouvoiement implicite + capacité du 0.6B.
+- **Dépendances** : Consigne protégée A02 (non modifiable sans décision).
 

@@ -21,8 +21,8 @@
    "preuve": "Journaux des runs cités.",
    "cause": "Image runner passée à Ubuntu 26.04 ; Python 3.12.12 épinglé indisponible. Pas lié au contenu des commits.",
    "dependances": "Aucune.",
-   "correction": "Épingler runs-on: ubuntu-24.04 dans ces workflows historiques (modification de fichiers historiques : validation requise). — Appliqué avec l'accord du propriétaire (14/11) : runs-on ubuntu-24.04 dans fusion-02, prefusion-lot3, uni-08-u00/u01/u02 ; Python 3.12.12 inchangé.",
-   "statut": "à retester"
+   "correction": "Épingler runs-on: ubuntu-24.04 dans ces workflows historiques (modification de fichiers historiques : validation requise). — Appliqué avec l'accord du propriétaire (14/11) : runs-on ubuntu-24.04 dans fusion-02, prefusion-lot3, uni-08-u00/u01/u02 ; Python 3.12.12 inchangé. Validé : 6 portes vertes sur b7c146a.",
+   "statut": "validé"
   },
   {
    "id": "A-002",
@@ -38,8 +38,8 @@
    "preuve": "Journal du run 43592731631.",
    "cause": "Assertion de qualité factuelle du 0.6B (non déterministe et souvent fausse) dans une porte d'intégrité moteur.",
    "dependances": "A-004.",
-   "correction": "Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique.",
-   "statut": "ouvert"
+   "correction": "Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. Appliqué (LLM 9c3fc50) : workflow successeur a02-integrity.yml + dialogue_gate_split.py.",
+   "statut": "à retester"
   },
   {
    "id": "A-003",
@@ -55,8 +55,8 @@
    "preuve": "Journaux des runs.",
    "cause": "Changement de visibilité dans un fichier protégé (observateur VOICE-04).",
    "dependances": "INTERFACE dépend de VOICE @ 92d0745.",
-   "correction": "Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord.",
-   "statut": "ouvert"
+   "correction": "Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. Appliqué (VOICE 5890735) : écarts exacts approuvés par empreinte ; contrôle négatif vérifié.",
+   "statut": "à retester"
   },
   {
    "id": "A-004",
@@ -89,8 +89,8 @@
    "preuve": "api29/35-v3-knowledge.json.",
    "cause": "Le 0.6B ignore la consigne d'absence.",
    "dependances": "A-004.",
-   "correction": "Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige.",
-   "statut": "à retester"
+   "correction": "Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. Validé : note système exigée par le test g, verte API 29/35 (run 43620844372).",
+   "statut": "validé"
   },
   {
    "id": "A-006",
@@ -191,7 +191,7 @@
    "preuve": "api35-results.txt.",
    "cause": "Recompositions et animations de sortie sur émulateur lent.",
    "dependances": "—",
-   "correction": "tap() avec reprise, attente Until.gone, bon onglet.",
+   "correction": "tap() avec reprise, attente Until.gone, bon onglet. Run 43620844372 : h vert sur API 35 ; c échoue encore sur un onglet hors écran (barre défilante) → navigation par défilement.",
    "statut": "à retester"
   },
   {
@@ -363,6 +363,40 @@
    "dependances": "Dépôt du PDF par le propriétaire.",
    "correction": "Plan préparé à partir du message ; vérification de couverture dès réception du PDF.",
    "statut": "bloqué"
+  },
+  {
+   "id": "A-022",
+   "module": "LLM (0.6B) — conversation longue",
+   "files": "—",
+   "ref": "run 43620844372",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "majeure",
+   "symptome": "Répétition de la réponse précédente.",
+   "reproduction": "Test i (16 tours) : « Au fait, quel sport j'aime ? » après « Allume la télévision. ».",
+   "attendu": "La randonnée (fait présent dans l'instruction).",
+   "obtenu": "Reprise mot pour mot de la réponse précédente (télévision), API 29 et 35.",
+   "preuve": "api29/35-v3-long.json.",
+   "cause": "Hypothèse : le 0.6B recopie le dernier tour assistant (3 échanges relus) au lieu de la question.",
+   "dependances": "A-004.",
+   "correction": "Garde de répétition (réponse identique à la précédente → nouvelle génération ou note) à évaluer en S2 ; mesure 1.7B.",
+   "statut": "ouvert"
+  },
+  {
+   "id": "A-023",
+   "module": "LLM (0.6B) — personnalité",
+   "files": "conv/Persona.kt",
+   "ref": "run 43620844372",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "mineure",
+   "symptome": "Vouvoiement malgré le tutoiement Athéna.",
+   "reproduction": "Test i : 3 réponses sur 16 contiennent « vous ».",
+   "attendu": "Tutoiement constant.",
+   "obtenu": "3/16 réponses au vouvoiement (API 29 et 35).",
+   "preuve": "api29/35-v3-long.json (answersWithVous=3).",
+   "cause": "Consigne système fixe du moteur protégé en vouvoiement implicite + capacité du 0.6B.",
+   "dependances": "Consigne protégée A02 (non modifiable sans décision).",
+   "correction": "Mesurer ; option : renfort dans l'instruction compacte (nouvelle mesure requise).",
+   "statut": "ouvert"
   }
  ]
 }
