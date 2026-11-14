@@ -1,0 +1,26 @@
+name: ARCH-01 contract tests (simulated backends only)
+on:
+  push:
+    branches: ['ccr-5cf17ed2-phgk00']
+    paths: ['.github/workflows/arch-01.yml', 'tooling/arch01/**', 'architecture/arch-01/**']
+  pull_request:
+    paths: ['.github/workflows/arch-01.yml', 'tooling/arch01/**', 'architecture/arch-01/**']
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {path: unified, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JAVIS-Local-v2, ref: 5da98383ed12cb5a54e896fbe57560bacc432fb5, path: core, fetch-depth: 0, persist-credentials: false}
+      - name: ARCH-01 contract tests, CORE contract blobs re-verified from git (no network use by the tests)
+        run: cd unified && ARCH01_CORE_REPO="$GITHUB_WORKSPACE/core" python3 -m unittest discover -s tooling/arch01/tests -v
+      - name: Existing UNIFIED validation and tests (non-regression)
+        run: |
+          cd unified
+          python3 scripts/validate_unified.py
+          python3 -m unittest discover -s tests -v
+          python3 -m unittest discover -s registry/tests -v
