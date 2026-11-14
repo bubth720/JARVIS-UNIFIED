@@ -38,8 +38,8 @@
    "preuve": "Journal du run 43592731631.",
    "cause": "Assertion de qualité factuelle du 0.6B (non déterministe et souvent fausse) dans une porte d'intégrité moteur.",
    "dependances": "A-004.",
-   "correction": "Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. Appliqué (LLM 9c3fc50) : workflow successeur a02-integrity.yml + dialogue_gate_split.py.",
-   "statut": "à retester"
+   "correction": "Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. Appliqué (LLM 9c3fc50) : workflow successeur a02-integrity.yml + dialogue_gate_split.py. Validé : workflow « A02 engine integrity » vert sur 9c3fc50.",
+   "statut": "validé"
   },
   {
    "id": "A-003",
@@ -55,8 +55,8 @@
    "preuve": "Journaux des runs.",
    "cause": "Changement de visibilité dans un fichier protégé (observateur VOICE-04).",
    "dependances": "INTERFACE dépend de VOICE @ 92d0745.",
-   "correction": "Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. Appliqué (VOICE 5890735) : écarts exacts approuvés par empreinte ; contrôle négatif vérifié.",
-   "statut": "à retester"
+   "correction": "Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. Appliqué (VOICE 5890735) : écarts exacts approuvés par empreinte ; contrôle négatif vérifié. Validé : gardes « Voice Studio 005J » et « VOICE SDK and expression styles » vertes sur 5890735 (lancement manuel).",
+   "statut": "validé"
   },
   {
    "id": "A-004",
