@@ -105,3 +105,57 @@ jeton sur deux runs. Ne comparer que des ordres de grandeur.
 | ce499e2 | Budget de temps JNI réglable (étude seulement) |
 | ce817b1 | ATHENA_COMPACT mesurée sur le 0.6B |
 | 3e2560e | ATHENA_COMPACT : phrase « aucune action » (après le refus raté) |
+
+## Mise à jour du 14/11 — ATHENA_COMPACT v2 et première comparaison Android
+
+### ATHENA_COMPACT v2 (phrase « aucune action », run JARVIS-LLM 43592731686, Linux)
+
+| Configuration | Score /44 | Factuel | Refus | 1er jeton p50 |
+|---|---|---|---|---|
+| 0.6B ATHENA_COMPACT v2 | **28** (meilleur résultat du 0.6B) | 6/10 | 1/2 | 5,0 s |
+| 0.6B PRODUCTION | 23 | 2/10 | 1/2 | 3,0 s |
+| 1.7B ATHENA (ctx768/1t et ctx1536/2t) | 37 / 36 | 8/10 | 1/2 | 7,7 / 4,0 s |
+
+**Constat :** le refus de l'e-mail est corrigé. Mais le 0.6B **et** le 1.7B répondent encore
+« La lumière du salon est allumée. » L'instruction seule ne garantit donc pas la règle « ne jamais prétendre
+avoir réalisé une action ».
+
+**Réponse :** garde déterministe dans l'application (`ActionGuard`, INTERFACE 3d07d24).
+1. Avant la génération, une demande d'action ajoute une phrase explicite à l'instruction du tour.
+2. Après la génération, une réponse qui affirme quand même l'action reçoit une note système visible et parlée :
+   « Aucune action n'a été exécutée ».
+
+Le texte du modèle n'est jamais réécrit.
+
+### Comparaison Android (run INTERFACE 43595434112, émulateur API 35 x86_64, mode avion)
+
+**Conditions :** même chemin protégé que l'application.
+- Chargement scellé, SHA-256, contexte 768, 1 thread, sortie 128.
+- Profil 1.7B déjà présent dans le moteur.
+- Budget mémoire réel de l'application.
+- Instruction réelle de l'application (Athéna compacte + mémoire de travail).
+- APK de test uniquement ; aucun changement de production.
+
+| Mesure | 0.6B | 1.7B |
+|---|---|---|
+| Bench /44 | 28 | 26 (12 tours coupés par le délai protégé de 90 s) |
+| PSS chargé | 557 Mio | 1 234 Mio |
+| RSS chargé / pic VmHWM | 680 / 684 Mio | 1 356 / 1 366 Mio |
+| Mémoire libérée au déchargement | oui (PSS 89 Mio après) | oui (PSS 89 Mio après) |
+| 1er jeton p50 / p95 | 21,2 / 32,7 s | 58,8 / 75,8 s |
+| Jetons/s (médiane) | 5 | 2 |
+| Chargement | 10,0 s | 10,9 s |
+| Thermique (statut / marge / batterie) | 0 / 0,43 / 25 °C, constants | idem |
+
+**Lecture honnête :**
+- **Vitesse :** l'émulateur x86 avec 1 thread est **beaucoup plus lent** qu'un téléphone ARM. Les vitesses
+  et les températures (simulées, constantes) **ne valent rien pour le POCO**.
+- **Score du 1.7B :** il est faussé par le délai protégé de 90 s, qui a coupé 12 tours (multi-tours,
+  corrections). Ce délai est une protection : il n'est pas modifié.
+- **Mesures valides :** l'empreinte mémoire (×2,2 en PSS) et la libération propre au déchargement.
+- **Factuel :** le 1.7B confirme son avantage (9/10 contre 6/10), même dans ces conditions.
+
+**Conclusion :** la comparaison décisive (vitesse, chaleur, autonomie, qualité sans coupure) **doit être faite
+sur le POCO X8 Pro**. Le harnais est prêt : `ModelStudyTest` et `tools/run_model_study.sh`. Son exécution
+sur ton téléphone demande ton autorisation explicite (installation de l'APK de test et copie des deux modèles).
+Rien n'a été installé.
