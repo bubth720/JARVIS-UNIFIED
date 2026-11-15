@@ -13,26 +13,29 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 | A-005 | LLM + NEXUS | DEFAUT_CONFIRME | majeure | validé | Réponse documentaire inventée quand aucun document ne contient l'information. | api29/35-v3-knowledge.json. | Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. Validé : note système exigée par le test g, verte API 29/35 (run 43620844372). |
 | A-006 | LLM + INTERFACE | DEFAUT_CONFIRME | critique | validé | JARVIS prétend avoir exécuté une action (« La lumière du salon est allumée »). | Runs 43590133529, 43592731686. | ActionGuard : consigne ciblée + note système si l'affirmation persiste. Test f : refus correct sur API 29 et 35. |
 | A-007 | INTERFACE conv (mémoire de travail) | DEFAUT_CONFIRME | majeure | validé | « Comment je m'appelle ? » → prénom du frère. | api29/35-v3-conv.json. | Phrase mesurée V1-B « Fait connu : l'utilisateur s'appelle… ». Run 43616811194 : 8/8. |
-| A-008 | INTERFACE (sphère) | DEFAUT_CONFIRME | majeure | à retester | La sphère se redessine pendant l'écoute (11–13 images). | Runs 43592693625, 43609210897. | Lecture différée dans le dock ; référence vsync mémorisée. Transitions instantanées hors réponse (snap). |
+| A-008 | INTERFACE (sphère) | DEFAUT_CONFIRME | majeure | à retester | La sphère se redessine pendant l'écoute (11–13 images). | Runs 43592693625, 43609210897. | Lecture différée dans le dock ; référence vsync mémorisée. Transitions instantanées hors réponse (snap). graphicsLayer sur la sphère et l'avatar (8f77a8d). |
 | A-009 | NEXUS sur Android | DEFAUT_CONFIRME | critique | validé | Recherche documentaire impossible. | Run 43609210897. | SQLite embarqué AndroidX 2.5.2 (3.46.0), adaptateur séparé. Test g vert API 29/35 (run 43616811194). |
 | A-010 | MEMORY VAULT | DEFAUT_CONFIRME | majeure | à retester | Les souvenirs en statut NEEDS_CONFIRMATION (égalité ambiguë) sont injectés comme s'ils étaient READY. | Revue de code de ce commit (aucun test ne le couvre). Reproduit par l'audit B3 (run 43627862972, API 29 et 35 : les deux souvenirs injectés). | N'injecter que READY ; NEEDS_CONFIRMATION → proposer le choix à l'utilisateur ; test JVM/émulateur avec deux souvenirs à égalité. Appliqué : INTERFACE 4ee4bc3. |
 | A-011 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | à retester | Échecs instables : StaleObjectException (h, API 35), carte encore présente après Retour, onglet erroné. | api35-results.txt. | tap() avec reprise, attente Until.gone, bon onglet. Run 43620844372 : h vert sur API 35 ; c échoue encore sur un onglet hors écran (barre défilante) → navigation par défilement. |
 | A-012 | LLM (étude Android) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | Le 1.7B est coupé par le délai protégé de 90 s sur émulateur (12 tours). | study-android-1.7b-ctx768-1t.json. | Mesure sur appareil (protocole prêt) ; délai protégé inchangé. |
 | A-013 | VOICE (émulateur) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | Lecture audio : « Délai de lecture audio dépassé » ; micro silencieux. | Captures run 43586308793. | Validation sur appareil uniquement. |
 | A-014 | INTERFACE conv (réaction rapide) | RISQUE_THEORIQUE | mineure | ouvert | La synthèse de la phrase d'attente s'exécute en parallèle de la génération. | Aucune (impossible sans audio réel). | Mesurer tokens/s avec et sans réaction sur le POCO. |
-| A-015 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | à retester | Injection d'instructions contenues dans un document importé. | api29/35-audit-f2f3f4.json (run 43627862972). | Les phrases adressées à l'assistant sont retirées des extraits avant le modèle + note système ; test F4 l'exige. |
+| A-015 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | à retester | Injection d'instructions contenues dans un document importé. | api29/35-audit-f2f3f4.json (run 43627862972). | Les phrases adressées à l'assistant sont retirées des extraits avant le modèle + note système ; test F4 l'exige. Durci (9c7d2c8) : normalisation (accents, invisibles, commentaires HTML, lettres espacées) ; corpus de 16 attaques indirectes/dissimulées : 10/16 manquées avant, 16/16 retirées après, 8 phrases bénignes conservées (JVM). |
 | A-016 | INTERFACE conv (historique) | RISQUE_THEORIQUE | mineure | ouvert | L'historique est stocké en clair dans l'espace privé de l'application. | Code. | Évaluer un chiffrement (Keystore) si exigé. |
 | A-017 | Processus de livraison | DEFAUT_CONFIRME | mineure | corrigé | Un commit « tests seulement » dépendait de classes non poussées → CI non compilable. | Journal du run. | Contrôle local de compilation avant découpage ; corrigé par e1c7e9c. |
 | A-018 | SERVICES / MISSIONS / AGENTS / AUTOMATIONS | FONCTION_ABSENTE | majeure | ouvert | Aucun moteur connecté. | Test c (MISSIONS · À CONNECTER). | Lots ultérieurs. |
 | A-019 | MEMORY VAULT | FONCTION_ABSENTE | mineure | ouvert | Export chiffré des souvenirs non connecté. | Écran MEMORY VAULT. | Port Keystore + test. |
 | A-020 | NEXUS | FONCTION_ABSENTE | mineure | ouvert | PDF et Kiwix non pris en charge à l'import. | Code. | Lot NEXUS dédié. |
 | A-021 | LEARNING-L01 | FONCTION_ABSENTE | majeure | bloqué | Mission non démarrée ; PDF de référence absent de la session. | Recherche dans la session et les dépôts. | Plan préparé à partir du message ; vérification de couverture dès réception du PDF. |
-| A-022 | LLM (0.6B) — conversation longue | DEFAUT_CONFIRME | majeure | ouvert | Répétition de la réponse précédente. | api29/35-v3-long.json. | Garde de répétition (réponse identique à la précédente → nouvelle génération ou note) à évaluer en S2 ; mesure 1.7B. |
+| A-022 | LLM (0.6B) — conversation longue | DEFAUT_CONFIRME | majeure | à retester | Répétition de la réponse précédente. | api29/35-v3-long.json. | Garde de répétition (réponse identique à la précédente → nouvelle génération ou note) à évaluer en S2 ; mesure 1.7B. RepetitionGuard (9c7d2c8) : note système ; cas mesuré reproduit en JVM ; test M (24 tours). |
 | A-023 | LLM (0.6B) — personnalité | DEFAUT_CONFIRME | mineure | ouvert | Vouvoiement malgré le tutoiement Athéna. | api29/35-v3-long.json (answersWithVous=3). | Mesurer ; option : renfort dans l'instruction compacte (nouvelle mesure requise). |
 | A-024 | VOICE + STT | DEFAUT_CONFIRME | majeure | à retester | Un enregistrement silencieux de 2 s produit un tour (transcription + réponse). | api29/35-audit-d2.json. | SpeechGuard : énergie RMS < 0,005 → rien entendu ; transcriptions typiques du silence ignorées. Tests JVM. |
 | A-025 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | à retester | Documents contradictoires : un seul cité dans la réponse, la contradiction est cachée. | api29/35-audit-f2f3f4.json. | Détection déterministe (jours, mois, nombres) entre sources différentes → note système nommant chaque version + consigne. Tests JVM. |
 | A-026 | INTERFACE conv (ConvApp) | DEFAUT_CONFIRME | critique | à retester | Fermer une session déjà fermée bloque tout démarrage ultérieur (« libération en cours » infinie). | api29/35-audit-results.txt. | closeSession ignore une session déjà fermée. |
 | A-027 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | à retester | Bouton « Démarrer » inaccessible au test sur petit écran + police 130 %. | api29/35-audit-results.txt. | Le test fait défiler. |
+| A-028 | INTERFACE conv (ConvSession) | DEFAUT_CONFIRME | majeure | à retester | L'échec d'enregistrement de l'historique est aussitôt effacé par « Prêt ». | Revue de code ; test O (à exécuter). | historyError affiché avec chaque statut jusqu'à un enregistrement réussi. |
+| A-029 | CI (script émulateur) | DEFAUT_CONFIRME | majeure | à retester | Le run attend indéfiniment un émulateur hors ligne ; le travail est tué sans résultats. | Journal du run 43643453245. | Limite par instrumentation (25 min), état du périphérique vérifié avant chaque test, lectures bornées. |
+| A-030 | NEXUS + LLM (fidélité documentaire) | DEFAUT_CONFIRME | majeure | à retester | Une réponse documentaire peut contenir des valeurs absentes des extraits cités. | Run 43616811194 (« 10 euros ») ; JVM. | unsupported() : valeurs (jours, mois, nombres, montants, heures) absentes de tout extrait et fichiers non consultés → note « à vérifier ». |
 
 ## Détail
 
@@ -113,7 +116,7 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 - **Reproduction** : Test c, tour vocal.
 - **Attendu** : ≤ 1 image (règle du propriétaire).
 - **Obtenu** : 11–13 images.
-- **Cause** : Lecture du niveau micro dans la portée de la scène → recomposition complète ; lambda vsync recréée. Cause réelle (run 43627862972, 11 images malgré 7ca95a4) : fondu de couleur et de surcouches de 320 ms au changement d'état.
+- **Cause** : Lecture du niveau micro dans la portée de la scène → recomposition complète ; lambda vsync recréée. Cause réelle (run 43627862972, 11 images malgré 7ca95a4) : fondu de couleur et de surcouches de 320 ms au changement d'état. Cause racine (run 43643453245, 12 images malgré snap) : sphère sans couche propre, ré-enregistrée à chaque redessin d'un voisin (vu-mètre du micro, ~10 Hz).
 - **Dépendances** : —
 
 ### A-009 — NEXUS sur Android
@@ -305,4 +308,34 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 - **Obtenu** : « Required value was null ».
 - **Cause** : Panneau défilant ; le test ne défilait pas.
 - **Dépendances** : —
+
+### A-028 — INTERFACE conv (ConvSession)
+
+- **Fichiers** : conv/ConvSession.kt
+- **Branche / commit** : f53fab8
+- **Reproduction** : Audit O : dossier d'historique en lecture seule (substitut du stockage plein).
+- **Attendu** : La réponse est livrée ET l'échec est signalé.
+- **Obtenu** : Message d'échec écrasé par finish() (revue de code, reproduit par O).
+- **Cause** : finish() réécrit status.
+- **Dépendances** : —
+
+### A-029 — CI (script émulateur)
+
+- **Fichiers** : labs/v3/tools/run_emulator.sh
+- **Branche / commit** : 8f77a8d
+- **Reproduction** : Run 43643453245 : « device offline » après le test c.
+- **Attendu** : Échec rapide et résultats conservés.
+- **Obtenu** : 2 h 40 d'attente, aucun résultat.
+- **Cause** : Appels adb sans limite de temps.
+- **Dépendances** : —
+
+### A-030 — NEXUS + LLM (fidélité documentaire)
+
+- **Fichiers** : conv/KnowledgePlanner.kt
+- **Branche / commit** : 9c7d2c8
+- **Reproduction** : Cas « 10 euros » ; JVM DocumentFidelityTest.
+- **Attendu** : Valeurs présentes dans les extraits, ou signalées.
+- **Obtenu** : Valeur inventée présentée comme documentaire.
+- **Cause** : Limite du modèle (M-02).
+- **Dépendances** : A-004.
 
