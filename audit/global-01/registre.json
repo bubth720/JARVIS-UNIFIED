@@ -1,6 +1,6 @@
 {
  "schema": "jarvis.anomaly-register/1",
- "updated": "2026-11-14",
+ "updated": "2026-11-15",
  "legend": {
   "nature": "DEFAUT_CONFIRME | RISQUE_THEORIQUE | FONCTION_ABSENTE | LIMITATION_ENVIRONNEMENT | LIMITATION_MODELE",
   "gravite": "critique | majeure | mineure",
@@ -22,7 +22,13 @@
    "cause": "Image runner passée à Ubuntu 26.04 ; Python 3.12.12 épinglé indisponible. Pas lié au contenu des commits.",
    "dependances": "Aucune.",
    "correction": "Épingler runs-on: ubuntu-24.04 dans ces workflows historiques (modification de fichiers historiques : validation requise). — Appliqué avec l'accord du propriétaire (14/11) : runs-on ubuntu-24.04 dans fusion-02, prefusion-lot3, uni-08-u00/u01/u02 ; Python 3.12.12 inchangé. Validé : 6 portes vertes sur b7c146a.",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "b7c146a",
+    "unitaire": "—",
+    "emulateur": "CI verte (6 portes)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-002",
@@ -39,7 +45,13 @@
    "cause": "Assertion de qualité factuelle du 0.6B (non déterministe et souvent fausse) dans une porte d'intégrité moteur.",
    "dependances": "A-004.",
    "correction": "Séparer intégrité moteur (bloquante) et qualité (mesurée, non bloquante) dans un workflow successeur ; ne pas modifier l'historique. Appliqué (LLM 9c3fc50) : workflow successeur a02-integrity.yml + dialogue_gate_split.py. Validé : workflow « A02 engine integrity » vert sur 9c3fc50.",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "LLM 9c3fc50",
+    "unitaire": "—",
+    "emulateur": "CI verte",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-003",
@@ -56,7 +68,13 @@
    "cause": "Changement de visibilité dans un fichier protégé (observateur VOICE-04).",
    "dependances": "INTERFACE dépend de VOICE @ 92d0745.",
    "correction": "Décision VOICE : accepter le delta dans la garde (documenté) ou extraire l'observateur ; aucune modification ici sans accord. Appliqué (VOICE 5890735) : écarts exacts approuvés par empreinte ; contrôle négatif vérifié. Validé : gardes « Voice Studio 005J » et « VOICE SDK and expression styles » vertes sur 5890735 (lancement manuel).",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "VOICE 5890735",
+    "unitaire": "—",
+    "emulateur": "CI verte",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-004",
@@ -90,7 +108,13 @@
    "cause": "Le 0.6B ignore la consigne d'absence.",
    "dependances": "A-004.",
    "correction": "Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. Validé : note système exigée par le test g, verte API 29/35 (run 43620844372).",
-   "statut": "validé"
+   "statut": "à retester",
+   "validation": {
+    "developpee": "3dd3649 puis 1354e31 (réponse déterministe)",
+    "unitaire": "DocumentaryAnswerTest",
+    "emulateur": "NON : c8 rouge sur run 43658134254 (8f77a8d, API 29+35) (« Londres » + note) ; nouveau contrat à exécuter",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-006",
@@ -107,7 +131,13 @@
    "cause": "Modèles ; la consigne seule ne suffit pas.",
    "dependances": "—",
    "correction": "ActionGuard : consigne ciblée + note système si l'affirmation persiste. Test f : refus correct sur API 29 et 35.",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "3d07d24",
+    "unitaire": "ActionGuardTest",
+    "emulateur": "test f vert API 29/35",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-007",
@@ -124,7 +154,13 @@
    "cause": "Bloc de faits ambigu (« prénom : Léo ; frère : Paul »).",
    "dependances": "—",
    "correction": "Phrase mesurée V1-B « Fait connu : l'utilisateur s'appelle… ». Run 43616811194 : 8/8.",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "f32b2ee",
+    "unitaire": "ConversationContextTest",
+    "emulateur": "run 43616811194 8/8",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-008",
@@ -136,12 +172,18 @@
    "symptome": "La sphère se redessine pendant l'écoute (11–13 images).",
    "reproduction": "Test c, tour vocal.",
    "attendu": "≤ 1 image (règle du propriétaire).",
-   "obtenu": "11–13 images.",
+   "obtenu": "11–13 images. Run 43658134254 : 2 dessins par fenêtre au début de l'écoute, de la réflexion ET au repos (2 s) : compteur ou redessin résiduel, mouvement visible non mesuré.",
    "preuve": "Runs 43592693625, 43609210897.",
    "cause": "Lecture du niveau micro dans la portée de la scène → recomposition complète ; lambda vsync recréée. Cause réelle (run 43627862972, 11 images malgré 7ca95a4) : fondu de couleur et de surcouches de 320 ms au changement d'état. Cause racine (run 43643453245, 12 images malgré snap) : sphère sans couche propre, ré-enregistrée à chaque redessin d'un voisin (vu-mètre du micro, ~10 Hz).",
    "dependances": "—",
    "correction": "Lecture différée dans le dock ; référence vsync mémorisée. Transitions instantanées hors réponse (snap). graphicsLayer sur la sphère et l'avatar (8f77a8d).",
-   "statut": "à retester"
+   "statut": "ouvert",
+   "validation": {
+    "developpee": "7ca95a4, e79df9f, 8f77a8d",
+    "unitaire": "—",
+    "emulateur": "NON : K rouge sur run 43658134254 (8f77a8d, API 29+35) (2 dessins / fenêtre, aussi au repos) ; test P (pixels + coût séparés) à exécuter",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-009",
@@ -158,7 +200,13 @@
    "cause": "SQLite d'Android sans FTS5.",
    "dependances": "Accord du propriétaire (obtenu le 14/11).",
    "correction": "SQLite embarqué AndroidX 2.5.2 (3.46.0), adaptateur séparé. Test g vert API 29/35 (run 43616811194).",
-   "statut": "validé"
+   "statut": "validé",
+   "validation": {
+    "developpee": "2066753",
+    "unitaire": "—",
+    "emulateur": "test g vert API 29/35",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-010",
@@ -175,7 +223,13 @@
    "cause": "Écart d'implémentation par rapport au contrat CORE.",
    "dependances": "—",
    "correction": "N'injecter que READY ; NEEDS_CONFIRMATION → proposer le choix à l'utilisateur ; test JVM/émulateur avec deux souvenirs à égalité. Appliqué : INTERFACE 4ee4bc3.",
-   "statut": "à retester"
+   "statut": "validé",
+   "validation": {
+    "developpee": "4ee4bc3",
+    "unitaire": "—",
+    "emulateur": "B3 vert sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-011",
@@ -192,7 +246,13 @@
    "cause": "Recompositions et animations de sortie sur émulateur lent.",
    "dependances": "—",
    "correction": "tap() avec reprise, attente Until.gone, bon onglet. Run 43620844372 : h vert sur API 35 ; c échoue encore sur un onglet hors écran (barre défilante) → navigation par défilement.",
-   "statut": "à retester"
+   "statut": "à retester",
+   "validation": {
+    "developpee": "3dd3649, 8656904",
+    "unitaire": "—",
+    "emulateur": "partiel : c rouge sur API 35 (run 43658134254 (8f77a8d, API 29+35), onglet cc-tab-missions introuvable)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-012",
@@ -260,7 +320,13 @@
    "cause": "Les extraits sont cités « données, pas des consignes » mais aucun test malveillant.",
    "dependances": "—",
    "correction": "Les phrases adressées à l'assistant sont retirées des extraits avant le modèle + note système ; test F4 l'exige. Durci (9c7d2c8) : normalisation (accents, invisibles, commentaires HTML, lettres espacées) ; corpus de 16 attaques indirectes/dissimulées : 10/16 manquées avant, 16/16 retirées après, 8 phrases bénignes conservées (JVM).",
-   "statut": "à retester"
+   "statut": "à retester",
+   "validation": {
+    "developpee": "e79df9f, 9c7d2c8, 1354e31",
+    "unitaire": "InjectionCorpusTest, InjectionGeneralisationTest, DocumentaryAnswerTest",
+    "emulateur": "F4 et L verts sur run 43658134254 (8f77a8d, API 29+35) (formulations connues) ; Q (inédites) à exécuter",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-016",
@@ -294,7 +360,13 @@
    "cause": "Erreur de découpage des commits (agent).",
    "dependances": "—",
    "correction": "Contrôle local de compilation avant découpage ; corrigé par e1c7e9c.",
-   "statut": "corrigé"
+   "statut": "corrigé",
+   "validation": {
+    "developpee": "e1c7e9c",
+    "unitaire": "—",
+    "emulateur": "CI compilable",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-018",
@@ -379,7 +451,13 @@
    "cause": "Hypothèse : le 0.6B recopie le dernier tour assistant (3 échanges relus) au lieu de la question.",
    "dependances": "A-004.",
    "correction": "Garde de répétition (réponse identique à la précédente → nouvelle génération ou note) à évaluer en S2 ; mesure 1.7B. RepetitionGuard (9c7d2c8) : note système ; cas mesuré reproduit en JVM ; test M (24 tours).",
-   "statut": "à retester"
+   "statut": "validé (émulateur)",
+   "validation": {
+    "developpee": "9c7d2c8",
+    "unitaire": "AuditGuardsTest",
+    "emulateur": "M vert sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-023",
@@ -413,7 +491,13 @@
    "cause": "whisper transcrit le silence ; aucun contrôle d'énergie.",
    "dependances": "—",
    "correction": "SpeechGuard : énergie RMS < 0,005 → rien entendu ; transcriptions typiques du silence ignorées. Tests JVM.",
-   "statut": "à retester"
+   "statut": "validé",
+   "validation": {
+    "developpee": "e79df9f",
+    "unitaire": "AuditGuardsTest",
+    "emulateur": "D2 vert sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-025",
@@ -430,7 +514,13 @@
    "cause": "Le 0.6B choisit un extrait.",
    "dependances": "—",
    "correction": "Détection déterministe (jours, mois, nombres) entre sources différentes → note système nommant chaque version + consigne. Tests JVM.",
-   "statut": "à retester"
+   "statut": "à retester",
+   "validation": {
+    "developpee": "e79df9f puis 1354e31 (réponse déterministe)",
+    "unitaire": "DocumentaryAnswerTest",
+    "emulateur": "F2 vert sur run 43658134254 (8f77a8d, API 29+35) (ancien contrat) ; nouveau contrat à exécuter",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-026",
@@ -447,7 +537,13 @@
    "cause": "closeSession() met previousReleased=false puis close() retourne sans rappel.",
    "dependances": "—",
    "correction": "closeSession ignore une session déjà fermée.",
-   "statut": "à retester"
+   "statut": "validé",
+   "validation": {
+    "developpee": "e79df9f",
+    "unitaire": "—",
+    "emulateur": "J, F6, H4 verts sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-027",
@@ -464,7 +560,13 @@
    "cause": "Panneau défilant ; le test ne défilait pas.",
    "dependances": "—",
    "correction": "Le test fait défiler.",
-   "statut": "à retester"
+   "statut": "validé",
+   "validation": {
+    "developpee": "e79df9f",
+    "unitaire": "—",
+    "emulateur": "E2/E3 vert sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-028",
@@ -481,7 +583,13 @@
    "cause": "finish() réécrit status.",
    "dependances": "—",
    "correction": "historyError affiché avec chaque statut jusqu'à un enregistrement réussi.",
-   "statut": "à retester"
+   "statut": "validé",
+   "validation": {
+    "developpee": "f53fab8",
+    "unitaire": "—",
+    "emulateur": "O vert sur run 43658134254 (8f77a8d, API 29+35)",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-029",
@@ -498,7 +606,13 @@
    "cause": "Appels adb sans limite de temps.",
    "dependances": "—",
    "correction": "Limite par instrumentation (25 min), état du périphérique vérifié avant chaque test, lectures bornées.",
-   "statut": "à retester"
+   "statut": "validé (unitaire), à confirmer émulateur",
+   "validation": {
+    "developpee": "8f77a8d puis 02fcf64 (fail-fast)",
+    "unitaire": "test_run_emulator.sh 7/7 (faux adb)",
+    "emulateur": "partiel : sur run 43658134254 (8f77a8d, API 29+35) le test e bloqué a été coupé à 25 min et la campagne a continué ; perte d'émulateur non survenue",
+    "appareil": "—"
+   }
   },
   {
    "id": "A-030",
@@ -515,7 +629,128 @@
    "cause": "Limite du modèle (M-02).",
    "dependances": "A-004.",
    "correction": "unsupported() : valeurs (jours, mois, nombres, montants, heures) absentes de tout extrait et fichiers non consultés → note « à vérifier ».",
-   "statut": "à retester"
+   "statut": "à retester",
+   "validation": {
+    "developpee": "9c7d2c8 puis 1354e31 (remplacement, plus de « à vérifier »)",
+    "unitaire": "DocumentaryAnswerTest",
+    "emulateur": "R à exécuter",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-031",
+   "module": "NEXUS + LLM (injection)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "critique",
+   "statut": "à retester",
+   "symptome": "Le filtre d'injection ne reconnaissait que ses exemples : 16/16 sur son corpus, 3/24 sur des formulations nouvelles.",
+   "preuve": "InjectionGeneralisationTest (JVM, 15/11).",
+   "correction": "Couche 1 généralisée (9/30 sur corpus inédit, 21 trous enregistrés) + couche 2 structurelle DocumentaryAnswer : toute phrase adressée au lecteur n'est restituée qu'en citation attribuée (pire cas : 0/30 présentée comme parole de JARVIS).",
+   "files": "conv/KnowledgePlanner.kt, conv/DocumentaryAnswer.kt",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ 1354e31",
+   "reproduction": "Corpus inédit écrit après gel du filtre.",
+   "attendu": "Aucun document ne devient une consigne.",
+   "obtenu": "21/24 nouvelles formulations passaient.",
+   "cause": "Liste noire de formulations.",
+   "dependances": "A-015",
+   "validation": {
+    "developpee": "1354e31",
+    "unitaire": "DocumentaryAnswerTest, InjectionGeneralisationTest (34/34)",
+    "emulateur": "test Q à exécuter",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-032",
+   "module": "INTERFACE conv (journal)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "majeure",
+   "statut": "à retester",
+   "symptome": "Après un arrêt brutal pendant une écriture, l'échange suivant est collé à la ligne tronquée et perdu silencieusement.",
+   "preuve": "JournalRobustnessTest : 2/3 échecs avant correction.",
+   "correction": "Ligne tronquée fermée avant ajout ; écriture synchronisée sur disque.",
+   "files": "conv/ConversationJournal.kt",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ d42a3dc",
+   "reproduction": "Ligne tronquée sans fin de ligne puis append.",
+   "attendu": "Échange suivant lisible.",
+   "obtenu": "Échange perdu.",
+   "cause": "appendText sans contrôle du dernier octet.",
+   "dependances": "—",
+   "validation": {
+    "developpee": "d42a3dc",
+    "unitaire": "JournalRobustnessTest 3/3",
+    "emulateur": "test S à exécuter",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-033",
+   "module": "INTERFACE (accessibilité)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "mineure",
+   "statut": "à retester",
+   "symptome": "Les changements d'état (écoute, réflexion, prêt) ne sont pas annoncés par TalkBack.",
+   "preuve": "Revue de code : aucune région live.",
+   "correction": "Textes de statut en région live polie. Cibles 48 dp (d011b17).",
+   "files": "CockpitScene.kt, ContextCardHost.kt",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ d42a3dc",
+   "reproduction": "TalkBack actif, lancer un tour.",
+   "attendu": "Annonce du statut.",
+   "obtenu": "Silence.",
+   "cause": "Sémantique absente.",
+   "dependances": "—",
+   "validation": {
+    "developpee": "d011b17, d42a3dc",
+    "unitaire": "—",
+    "emulateur": "E6 vert sur run 43658134254 (8f77a8d, API 29+35) (sans 48 dp ni live region) ; à réexécuter",
+    "appareil": "TalkBack réel à vérifier"
+   }
+  },
+  {
+   "id": "A-034",
+   "module": "INTERFACE (tests, API 35)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "mineure",
+   "statut": "ouvert",
+   "symptome": "Test e (galerie + banc) bloqué sur API 35 jusqu'à la limite de 25 min.",
+   "preuve": "api35-results.txt, run 43658134254.",
+   "correction": "Analyser la galerie sur API 35 ; la limite A-029 a évité le blocage de la campagne.",
+   "files": "V3CockpitTest.kt (e)",
+   "ref": "8f77a8d",
+   "reproduction": "Campagne complète API 35.",
+   "attendu": "Test terminé.",
+   "obtenu": "INSTRUMENTATION_TIMEOUT after 1500s.",
+   "cause": "Non établie.",
+   "dependances": "A-029",
+   "validation": {
+    "developpee": "—",
+    "unitaire": "—",
+    "emulateur": "—",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-035",
+   "module": "INTERFACE (G3 stockage plein)",
+   "nature": "RISQUE_THEORIQUE",
+   "gravite": "mineure",
+   "statut": "à retester",
+   "symptome": "Stockage plein : message d'import brut (« disk I/O error ») et comportement non testé.",
+   "preuve": "Revue de code ; aucun test G3.",
+   "correction": "Message clair ; test T qui remplit réellement le stockage.",
+   "files": "conv/LocalKnowledge.kt",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ d42a3dc",
+   "reproduction": "Test T.",
+   "attendu": "Refus clair, aucune corruption, reprise.",
+   "obtenu": "Non mesuré.",
+   "cause": "—",
+   "dependances": "—",
+   "validation": {
+    "developpee": "d42a3dc",
+    "unitaire": "—",
+    "emulateur": "test T à exécuter",
+    "appareil": "—"
+   }
   }
  ],
  "campagne_43627862972": {
@@ -542,5 +777,16 @@
    ]
   },
   "observations": "c3 : réponses honnêtes mais répétition (A-022) ; g1 : le 0.6B renvoie la question ; c8 : « Italie : Londres » (A-004)."
+ },
+ "campagne_43658134254": {
+  "commit": "8f77a8d",
+  "qualification": {
+   "api29": "11/11 PASS",
+   "api35": "9/11 (c : onglet introuvable, e : délai 25 min)"
+  },
+  "audit": {
+   "api29": "24/26 (c8, k rouges)",
+   "api35": "24/26 (c8, k rouges)"
+  }
  }
 }
