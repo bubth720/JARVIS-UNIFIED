@@ -5,7 +5,8 @@
 ## 0. Matériel et fichiers
 
 - PC avec `adb`, câble USB, débogage USB activé temporairement.
-- APK `fr.jarvis.v1` de l'artefact `JARVIS-V1-APK-<commit>` : vérifier `sha256sum app-debug.apk` contre le SHA-256 publié dans `reports/v1-delivery/RAPPORT.md`.
+- APK `fr.jarvis.v1` de l'artefact `JARVIS-V1-APK-9599d99…` (run 43313299256) : `sha256sum app-debug.apk` doit donner `a1c97119f24310969ff1e93a01acfe38008b1c4285fd6e8f7ab9a59f02acfc38` (voir `RAPPORT.md`).
+- Les trois ressources sont dans l'artefact `JARVIS-V1-RESSOURCES-9599d99…` (avec `SHA256SUMS.txt`).
 - Trois ressources, à vérifier avec `sha256sum` (voir `labs/v1/resources.json` / `INSTALL.md`) :
   - `Qwen3-0.6B-Q4_K_M.gguf`
   - `ggml-base-q5_1.bin`
@@ -14,7 +15,7 @@
 ## 1. Installation
 
 ```sh
-adb install -t app-debug.apk
+adb install app-debug.apk        # ou : ouvrir l'APK directement sur le téléphone (plus de testOnly)
 adb shell mkdir -p /sdcard/Android/data/fr.jarvis.v1/files/import
 adb push Qwen3-0.6B-Q4_K_M.gguf ggml-base-q5_1.bin pocket-fr-6l-alba.zip /sdcard/Android/data/fr.jarvis.v1/files/import/
 ```
