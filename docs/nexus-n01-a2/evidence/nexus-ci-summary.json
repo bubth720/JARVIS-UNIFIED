@@ -1,0 +1,28 @@
+{
+  "run_id": 44181266121,
+  "url": "https://github.com/bubth720/JARVIS-NEXUS/actions/runs/44181266121",
+  "source_commit": "2dd4447acb592e9e63123c0377b6310d4dae2bf1",
+  "conclusion": "success",
+  "junit": {
+    "tests": 108,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope_tests": 11,
+  "historical_python_tests": 10,
+  "frozen_m53_files": 329,
+  "scope": "JVM SQLite/Gateway/citations plus unchanged preservation guards; Android and LLM NOT_RUN",
+  "selected_log_lines": [
+    "2026-11-17T21:34:55.4507386Z {\"status\": \"PASS\", \"base\": \"eae61fb62a9ccd4073b96d71454f89e5a943eae9\", \"source_commit\": \"2dd4447acb592e9e63123c0377b6310d4dae2bf1\", \"historical_files_preserved\": 329, \"additions\": [\".github/workflows/reuse-r1plus.yml\", \"reuse-r1plus/README.md\", \"reuse-r1plus/adapter/ReadOnlyConsultationAdapter.kt\", \"reuse-r1plus/check.py\", \"reuse-r1plus/init.gradle\", \"reuse-r1plus/n01-a2/README.md\", \"reuse-r1plus/n01-a2/tests/test_scope_context.py\", \"reuse-r1plus/tests/ConsultationTest.kt\"], \"canonical_contracts_changed\": false, \"default_build_changed\": false, \"application_sources_changed\": false, \"database_migrated\": false, \"android\": \"NOT_RUN\", \"production_connected\": false, \"core_authority\": \"NOT_PROVIDED\"}",
+    "2026-11-17T21:34:58.5660131Z Ran 11 tests in 2.992s",
+    "2026-11-17T21:36:34.0158073Z BUILD SUCCESSFUL in 1m 33s",
+    "2026-11-17T21:36:34.3863675Z Ran 10 tests in 0.151s",
+    "2026-11-17T21:36:34.7771557Z {\"source_commit\": \"2dd4447acb592e9e63123c0377b6310d4dae2bf1\", \"tree\": \"56a674a2178dd52f5d8dc08c3c890e03ca8ca005\", \"junit\": {\"tests\": 108, \"failures\": 0, \"errors\": 0, \"skipped\": 0}, \"android\": \"NOT_RUN\", \"llm\": \"NOT_RUN\", \"production_connected\": false}"
+  ],
+  "cancelled_duplicate": {
+    "run_id": 44181373764,
+    "event": "workflow_dispatch",
+    "reason": "Redundant manual dispatch after successful push trigger; cancelled without replacing the push run"
+  }
+}

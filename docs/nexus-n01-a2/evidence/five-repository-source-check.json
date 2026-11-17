@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-11-17",
+  "method": "GitHub connector exact-SHA reads; source-level review, no new runtime adapter",
+  "records": [
+    {
+      "repository": "bubth720/JAVIS-Local-v2",
+      "checkout": "core",
+      "commit": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+      "path": "app/src/main/java/com/stark/jarvislocal/integrations/DocumentToolReadiness.kt",
+      "git_blob_sha": "c4f28b3e0a7085d73de5be47a23922fce5aedd02",
+      "url": "https://github.com/bubth720/JAVIS-Local-v2/blob/f6a3b2d0c280c69ef1570544fdbf5bcf5818810c/app/src/main/java/com/stark/jarvislocal/integrations/DocumentToolReadiness.kt"
+    },
+    {
+      "repository": "bubth720/JARVIS-SERVICES",
+      "checkout": "services",
+      "commit": "7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4",
+      "path": "services-portable-api/src/main/java/fr/jarvis/services/api/proposal/CommitAuthorization.java",
+      "git_blob_sha": "529732f79ea22025c18c8c1321526bd826480884",
+      "url": "https://github.com/bubth720/JARVIS-SERVICES/blob/7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4/services-portable-api/src/main/java/fr/jarvis/services/api/proposal/CommitAuthorization.java"
+    },
+    {
+      "repository": "bubth720/JARVIS-NEXUS",
+      "checkout": "nexus",
+      "commit": "2dd4447acb592e9e63123c0377b6310d4dae2bf1",
+      "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+      "git_blob_sha": "a4f1bc564ce3f86868f57dbe3df401b883abeabf",
+      "url": "https://github.com/bubth720/JARVIS-NEXUS/blob/2dd4447acb592e9e63123c0377b6310d4dae2bf1/nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt"
+    },
+    {
+      "repository": "bubth720/JARVIS-UNIFIED",
+      "checkout": "unified",
+      "commit": "6539b444b5d65154088b8a2722212c0c16bbf257",
+      "path": "contracts/v1/request-envelope.schema.json",
+      "git_blob_sha": "f2856d8ad5c01deed574978dd17ecd28cc25eb19",
+      "url": "https://github.com/bubth720/JARVIS-UNIFIED/blob/6539b444b5d65154088b8a2722212c0c16bbf257/contracts/v1/request-envelope.schema.json"
+    },
+    {
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "checkout": "interface",
+      "commit": "d2e737a99f36fea4f837d54c24be4c6ffe86e3b9",
+      "path": "labs/v3/app/src/main/java/fr/jarvis/v3/conv/LocalKnowledge.kt",
+      "git_blob_sha": "1f04a1064fae52011c602e8979eeccca9b48fdc2",
+      "url": "https://github.com/bubth720/JARVIS-INTERFACE/blob/d2e737a99f36fea4f837d54c24be4c6ffe86e3b9/labs/v3/app/src/main/java/fr/jarvis/v3/conv/LocalKnowledge.kt"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+name: N01-A2 offline contract and scope review
+on:
+  push:
+    branches: ['codex/nexus-n01-a2-preparation-*']
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {path: unified, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JAVIS-Local-v2, ref: f6a3b2d0c280c69ef1570544fdbf5bcf5818810c, path: core, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-SERVICES, ref: 7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4, path: services, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-NEXUS, ref: 2dd4447acb592e9e63123c0377b6310d4dae2bf1, path: nexus, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-INTERFACE, ref: d2e737a99f36fea4f837d54c24be4c6ffe86e3b9, path: interface, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - name: Existing backup test dependency only
+        run: python3 -m pip install --only-binary=:all: -r unified/backup_prototype/requirements.txt
+      - name: Preserve every historical UNIFIED byte and inspect the five pinned sources
+        working-directory: unified
+        run: python3 -m tooling.nexus_n01_a2.review --sources-root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/n01-a2/source-review.json"
+      - name: Actual validators and offline negative vectors, no network client
+        working-directory: unified
+        run: |
+          python3 scripts/validate_unified.py
+          python3 -m unittest discover -s tooling/nexus_n01_a2/tests -v
+          python3 -m unittest discover -s tooling/integration/uni08_u01_tests -v
+      - name: Existing coordination and synthetic backup regressions
+        working-directory: unified
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 -m unittest discover -s registry/tests -v
+          python3 -m unittest discover -s backup_prototype/tests -v
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: N01-A2-source-review-${{ github.sha }}
+          path: ${{ runner.temp }}/n01-a2/
+          if-no-files-found: warn
+          retention-days: 30
