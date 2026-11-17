@@ -1,0 +1,76 @@
+{
+  "schema": "jarvis.gpu-forge-preparation/1",
+  "mission": "GPU-FORGE-G03",
+  "launch_authorized": false,
+  "provisioning_enabled": false,
+  "dataset": {
+    "path": "datasets/gpu-forge/g03-calibration.jsonl",
+    "sha256": "d1d4c9aaacf8e57aa51b0055c0ad0fcd0c5e5038bc9b04113b0bae624043c165",
+    "kind": "synthetic_public_calibration",
+    "cases": 100
+  },
+  "models": [
+    {
+      "id": "qwen3-0.6b-q4km",
+      "parameters_billion": 0.6,
+      "repository": "unsloth/Qwen3-0.6B-GGUF",
+      "revision": "50968a4468ef4233ed78cd7c3de230dd1d61a56b",
+      "file": "Qwen3-0.6B-Q4_K_M.gguf",
+      "bytes": 396705472,
+      "sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+      "license_expected": "apache-2.0"
+    },
+    {
+      "id": "qwen3-1.7b-q4km",
+      "parameters_billion": 1.7,
+      "repository": "unsloth/Qwen3-1.7B-GGUF",
+      "revision": "d7f544eead698dbd1f15126ef60b45a1e1933222",
+      "file": "Qwen3-1.7B-Q4_K_M.gguf",
+      "bytes": 1107409472,
+      "sha256": "b139949c5bd74937ad8ed8c8cf3d9ffb1e99c866c823204dc42c0d91fa181897",
+      "license_expected": "apache-2.0"
+    }
+  ],
+  "model_metadata_source": "https://github.com/bubth720/JARVIS-LLM/tree/9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71/a02/models",
+  "baseline": {
+    "llm_source_commit": "2e011776d9e0f675bcae49b739f12a3a6dbf4de4",
+    "context_tokens": 768,
+    "max_output_tokens": 128,
+    "threads": 1,
+    "seed": 42,
+    "instruction": "frozen_production_fixture_to_hash_before_execution"
+  },
+  "gpu_variant": {
+    "runtime_revision": null,
+    "container_digest": null,
+    "vram_target_gb": 24,
+    "seed": 42,
+    "production_promotion": false
+  },
+  "budget": {
+    "currency": "EUR",
+    "monthly_cap_cents": 4900,
+    "compute_cap_cents": 4000,
+    "ancillary_cap_cents": 400,
+    "reserve_cents": 500,
+    "compute_alert_cents": 3000,
+    "taxes_and_fx_included": true
+  },
+  "provider": {
+    "selected": null,
+    "region": null,
+    "hourly_quote_verified_at": null,
+    "hard_lifetime_verified": false
+  },
+  "gates_before_execution": [
+    "explicit_provider_budget_model_dataset_approval",
+    "dated_all_in_quote_and_billing_quantum",
+    "remote_hard_lifetime_and_shutdown_verified",
+    "atomic_cost_reservations",
+    "runtime_and_container_hashes",
+    "model_license_and_local_weight_hashes",
+    "independent_oracle_review",
+    "blind_holdout_separate_from_public_calibration",
+    "checkpoint_and_unknown_reconciliation_test"
+  ]
+}
