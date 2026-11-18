@@ -1,0 +1,105 @@
+name: N01-B0 synthetic RESEARCH and frozen producer regressions
+on:
+  push:
+    branches: [codex/research-n01-b0-lab-20261118]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  synthetic-network:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {path: JARVIS-UNIFIED, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-NEXUS, ref: 5f10193440972ba25b30645d2811537418eface5, path: JARVIS-NEXUS, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-INTERFACE, ref: d2e737a99f36fea4f837d54c24be4c6ffe86e3b9, path: JARVIS-INTERFACE, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JAVIS-Local-v2, ref: f6a3b2d0c280c69ef1570544fdbf5bcf5818810c, path: JAVIS-Local-v2, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-SERVICES, ref: 7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4, path: JARVIS-SERVICES, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - name: Real HTTPS fixtures with only loopback in the OS network namespace
+        working-directory: JARVIS-UNIFIED
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/b0"
+          B0_PYTHON="$(command -v python3)"
+          B0_USER="$(id -un)"
+          sudo -n unshare --net -- bash -euc 'ip link set lo up; exec runuser -u "$3" -- env PYTHONDONTWRITEBYTECODE=1 "$2" -m tooling.research_b0.offline_runner --require-isolation --output "$1"' bash "$RUNNER_TEMP/b0/lab.json" "$B0_PYTHON" "$B0_USER" 2>&1 | tee "$RUNNER_TEMP/b0/lab.log"
+      - name: Preserve historical bytes, exact producer contracts and the full V1 guard chain
+        working-directory: JARVIS-UNIFIED
+        run: python3 -m tooling.research_b0.check_preservation --workspace "$GITHUB_WORKSPACE" --run-v1-chain --output "$RUNNER_TEMP/b0/preservation.json" --v1-log "$RUNNER_TEMP/b0/v1-chain.log"
+      - name: Prove default CLI starts no network
+        working-directory: JARVIS-UNIFIED
+        run: python3 -m tooling.research_b0.demo
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: N01-B0-synthetic-${{ github.sha }}
+          path: ${{ runner.temp }}/b0/
+          retention-days: 30
+  coordination-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - name: Existing backup dependency, no new laboratory dependency
+        run: 'python3 -m pip install --only-binary=:all: -r backup_prototype/requirements.txt'
+      - name: Unchanged v1 validators and all 171 applicable coordination regressions
+        run: |
+          python3 scripts/validate_unified.py
+          python3 -m unittest discover -s tests -v
+          python3 -m unittest discover -s registry/tests -v
+          python3 -m unittest discover -s backup_prototype/tests -v
+          python3 -m unittest discover -s tooling/integration/uni08_u01_tests -v
+          python3 -m unittest discover -s tooling/nexus_n01_a2/tests -v
+  reuse-pinned-nexus:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      REUSE_BENCHMARK_OUTPUT: ${{ github.workspace }}/build/b0-nexus/benchmark.json
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-NEXUS, ref: 5f10193440972ba25b30645d2811537418eface5, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with: {distribution: temurin, java-version: '17'}
+      - name: Unchanged NEXUS A3 guard and 40 negative regressions
+        run: |
+          python3 reuse-r1plus/n01-a3/check_routing_scope.py
+          python3 -m unittest discover -s reuse-r1plus/n01-a3/tests -v
+      - name: REUSE real SQLite, citations, Gateway and adapter tests at exact source
+        run: ./gradlew -I reuse-r1plus/init.gradle :nexus-jvm-store:test :nexus-core:test --no-daemon --console=plain --max-workers=2
+      - run: python3 -m unittest discover -s tests/final -v
+      - name: Record actual JUnit counts and source, never infer a pass from missing results
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,os,shutil,subprocess,xml.etree.ElementTree as ET
+          out=Path(os.environ['RUNNER_TEMP'])/'b0-nexus';out.mkdir(parents=True,exist_ok=True)
+          totals=dict(tests=0,failures=0,errors=0,skipped=0)
+          for module in ['nexus-core','nexus-jvm-store']:
+              for p in (Path(module)/'build/test-results/test').glob('TEST-*.xml'):
+                  shutil.copy2(p,out/(module+'-'+p.name));suite=ET.parse(p).getroot()
+                  for k in totals:totals[k]+=int(suite.attrib.get(k,0))
+          result=dict(source_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),junit=totals,production_connected=False)
+          benchmark=Path('build/b0-nexus/benchmark.json')
+          if benchmark.exists():shutil.copy2(benchmark,out/'benchmark.json')
+          (out/'junit.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
+          assert totals['tests']>0 and not any(totals[k] for k in ['failures','errors','skipped'])
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: N01-B0-REUSE-${{ github.sha }}
+          path: ${{ runner.temp }}/b0-nexus/
+          retention-days: 30
