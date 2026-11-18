@@ -108,11 +108,11 @@
    "cause": "Le 0.6B ignore la consigne d'absence.",
    "dependances": "A-004.",
    "correction": "Note système visible et parlée quand aucun document ne correspond (3dd3649) ; test g l'exige. Validé : note système exigée par le test g, verte API 29/35 (run 43620844372).",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "validation": {
     "developpee": "3dd3649 puis 1354e31 (réponse déterministe)",
     "unitaire": "DocumentaryAnswerTest",
-    "emulateur": "NON : c8 rouge sur run 43658134254 (8f77a8d, API 29+35) (« Londres » + note) ; nouveau contrat à exécuter",
+    "emulateur": "c8 et g verts API 29/35 — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -177,11 +177,11 @@
    "cause": "Lecture du niveau micro dans la portée de la scène → recomposition complète ; lambda vsync recréée. Cause réelle (run 43627862972, 11 images malgré 7ca95a4) : fondu de couleur et de surcouches de 320 ms au changement d'état. Cause racine (run 43643453245, 12 images malgré snap) : sphère sans couche propre, ré-enregistrée à chaque redessin d'un voisin (vu-mètre du micro, ~10 Hz).",
    "dependances": "—",
    "correction": "Lecture différée dans le dock ; référence vsync mémorisée. Transitions instantanées hors réponse (snap). graphicsLayer sur la sphère et l'avatar (8f77a8d).",
-   "statut": "ouvert",
+   "statut": "validé (émulateur) pour écoute et réflexion ; transition : 2 dessins",
    "validation": {
     "developpee": "7ca95a4, e79df9f, 8f77a8d",
     "unitaire": "—",
-    "emulateur": "NON : K rouge sur run 43658134254 (8f77a8d, API 29+35) (2 dessins / fenêtre, aussi au repos) ; test P (pixels + coût séparés) à exécuter",
+    "emulateur": "Écoute et réflexion : 0 dessin de la sphère, 0 % de pixels changés (test P, API 29/35, run 44391288619 (b1224ae)). K : 2 dessins au moment même de la transition (limite 1).",
     "appareil": "—"
    }
   },
@@ -246,11 +246,11 @@
    "cause": "Recompositions et animations de sortie sur émulateur lent.",
    "dependances": "—",
    "correction": "tap() avec reprise, attente Until.gone, bon onglet. Run 43620844372 : h vert sur API 35 ; c échoue encore sur un onglet hors écran (barre défilante) → navigation par défilement.",
-   "statut": "à retester",
+   "statut": "ouvert",
    "validation": {
     "developpee": "3dd3649, 8656904",
     "unitaire": "—",
-    "emulateur": "partiel : c rouge sur API 35 (run 43658134254 (8f77a8d, API 29+35), onglet cc-tab-missions introuvable)",
+    "emulateur": "c rouge sur API 35 (run 44391288619 (b1224ae))",
     "appareil": "—"
    }
   },
@@ -320,11 +320,11 @@
    "cause": "Les extraits sont cités « données, pas des consignes » mais aucun test malveillant.",
    "dependances": "—",
    "correction": "Les phrases adressées à l'assistant sont retirées des extraits avant le modèle + note système ; test F4 l'exige. Durci (9c7d2c8) : normalisation (accents, invisibles, commentaires HTML, lettres espacées) ; corpus de 16 attaques indirectes/dissimulées : 10/16 manquées avant, 16/16 retirées après, 8 phrases bénignes conservées (JVM).",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "validation": {
     "developpee": "e79df9f, 9c7d2c8, 1354e31",
     "unitaire": "InjectionCorpusTest, InjectionGeneralisationTest, DocumentaryAnswerTest",
-    "emulateur": "F4 et L verts sur run 43658134254 (8f77a8d, API 29+35) (formulations connues) ; Q (inédites) à exécuter",
+    "emulateur": "F4, L, Q verts API 29/35 — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -514,11 +514,11 @@
    "cause": "Le 0.6B choisit un extrait.",
    "dependances": "—",
    "correction": "Détection déterministe (jours, mois, nombres) entre sources différentes → note système nommant chaque version + consigne. Tests JVM.",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "validation": {
     "developpee": "e79df9f puis 1354e31 (réponse déterministe)",
     "unitaire": "DocumentaryAnswerTest",
-    "emulateur": "F2 vert sur run 43658134254 (8f77a8d, API 29+35) (ancien contrat) ; nouveau contrat à exécuter",
+    "emulateur": "F2 vert API 29/35 (nouveau contrat) — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -606,11 +606,11 @@
    "cause": "Appels adb sans limite de temps.",
    "dependances": "—",
    "correction": "Limite par instrumentation (25 min), état du périphérique vérifié avant chaque test, lectures bornées.",
-   "statut": "validé (unitaire), à confirmer émulateur",
+   "statut": "validé",
    "validation": {
     "developpee": "8f77a8d puis 02fcf64 (fail-fast)",
     "unitaire": "test_run_emulator.sh 7/7 (faux adb)",
-    "emulateur": "partiel : sur run 43658134254 (8f77a8d, API 29+35) le test e bloqué a été coupé à 25 min et la campagne a continué ; perte d'émulateur non survenue",
+    "emulateur": "Limite effective : e (API 35) coupé à 25 min, campagne poursuivie (run 44391288619 (b1224ae))",
     "appareil": "—"
    }
   },
@@ -629,11 +629,11 @@
    "cause": "Limite du modèle (M-02).",
    "dependances": "A-004.",
    "correction": "unsupported() : valeurs (jours, mois, nombres, montants, heures) absentes de tout extrait et fichiers non consultés → note « à vérifier ».",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "validation": {
     "developpee": "9c7d2c8 puis 1354e31 (remplacement, plus de « à vérifier »)",
     "unitaire": "DocumentaryAnswerTest",
-    "emulateur": "R à exécuter",
+    "emulateur": "R vert API 29/35 — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -642,7 +642,7 @@
    "module": "NEXUS + LLM (injection)",
    "nature": "DEFAUT_CONFIRME",
    "gravite": "critique",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "symptome": "Le filtre d'injection ne reconnaissait que ses exemples : 16/16 sur son corpus, 3/24 sur des formulations nouvelles.",
    "preuve": "InjectionGeneralisationTest (JVM, 15/11).",
    "correction": "Couche 1 généralisée (9/30 sur corpus inédit, 21 trous enregistrés) + couche 2 structurelle DocumentaryAnswer : toute phrase adressée au lecteur n'est restituée qu'en citation attribuée (pire cas : 0/30 présentée comme parole de JARVIS).",
@@ -656,7 +656,7 @@
    "validation": {
     "developpee": "1354e31",
     "unitaire": "DocumentaryAnswerTest, InjectionGeneralisationTest (34/34)",
-    "emulateur": "test Q à exécuter",
+    "emulateur": "Q vert API 29/35 (attaques inédites, vrai modèle) — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -665,7 +665,7 @@
    "module": "INTERFACE conv (journal)",
    "nature": "DEFAUT_CONFIRME",
    "gravite": "majeure",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "symptome": "Après un arrêt brutal pendant une écriture, l'échange suivant est collé à la ligne tronquée et perdu silencieusement.",
    "preuve": "JournalRobustnessTest : 2/3 échecs avant correction.",
    "correction": "Ligne tronquée fermée avant ajout ; écriture synchronisée sur disque.",
@@ -679,7 +679,7 @@
    "validation": {
     "developpee": "d42a3dc",
     "unitaire": "JournalRobustnessTest 3/3",
-    "emulateur": "test S à exécuter",
+    "emulateur": "S vert API 29/35 — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -688,7 +688,7 @@
    "module": "INTERFACE (accessibilité)",
    "nature": "DEFAUT_CONFIRME",
    "gravite": "mineure",
-   "statut": "à retester",
+   "statut": "validé (émulateur), TalkBack réel à vérifier",
    "symptome": "Les changements d'état (écoute, réflexion, prêt) ne sont pas annoncés par TalkBack.",
    "preuve": "Revue de code : aucune région live.",
    "correction": "Textes de statut en région live polie. Cibles 48 dp (d011b17).",
@@ -702,7 +702,7 @@
    "validation": {
     "developpee": "d011b17, d42a3dc",
     "unitaire": "—",
-    "emulateur": "E6 vert sur run 43658134254 (8f77a8d, API 29+35) (sans 48 dp ni live region) ; à réexécuter",
+    "emulateur": "E2/E3/E6/E7 verts API 29/35 (48 dp ; TalkBack réel non testé) — run 44391288619 (b1224ae)",
     "appareil": "TalkBack réel à vérifier"
    }
   },
@@ -725,7 +725,7 @@
    "validation": {
     "developpee": "—",
     "unitaire": "—",
-    "emulateur": "—",
+    "emulateur": "e de nouveau bloqué 25 min sur API 35 (run 44391288619 (b1224ae))",
     "appareil": "—"
    }
   },
@@ -734,7 +734,7 @@
    "module": "INTERFACE (G3 stockage plein)",
    "nature": "RISQUE_THEORIQUE",
    "gravite": "mineure",
-   "statut": "à retester",
+   "statut": "validé (émulateur)",
    "symptome": "Stockage plein : message d'import brut (« disk I/O error ») et comportement non testé.",
    "preuve": "Revue de code ; aucun test G3.",
    "correction": "Message clair ; test T qui remplit réellement le stockage.",
@@ -748,7 +748,7 @@
    "validation": {
     "developpee": "d42a3dc",
     "unitaire": "—",
-    "emulateur": "test T à exécuter",
+    "emulateur": "T vert API 29/35 (stockage réellement plein) — run 44391288619 (b1224ae)",
     "appareil": "—"
    }
   },
@@ -843,6 +843,29 @@
     "emulateur": "—",
     "appareil": "—"
    }
+  },
+  {
+   "id": "A-040",
+   "module": "INTERFACE (rendu)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "mineure",
+   "statut": "ouvert",
+   "symptome": "Après une réponse, la sphère est encore redessinée environ 4 fois/s sans changement visible ; pendant la réflexion, la fenêtre complète rend 9 à 12 images/s (sphère : 0).",
+   "preuve": "Test P, run 44391288619 (b1224ae) : restAfterAnswer 12–13 dessins en 3 s, visibleChange 0 ; thinking windowFrames 18–24 en 2 s.",
+   "correction": "À analyser : fin de la boucle d'animation après la réponse ; élément animé du dock pendant la réflexion. Aucune correction à l'aveugle.",
+   "files": "HologramSphere.kt, CockpitScene.kt, ConversationDock.kt",
+   "ref": "b1224ae",
+   "reproduction": "Test P.",
+   "attendu": "Aucun dessin hors réponse ; fenêtre ≤ 5 images/s en réflexion.",
+   "obtenu": "Voir preuve.",
+   "cause": "Non établie.",
+   "dependances": "A-008",
+   "validation": {
+    "developpee": "—",
+    "unitaire": "—",
+    "emulateur": "défaut mesuré",
+    "appareil": "—"
+   }
   }
  ],
  "campagne_43627862972": {
@@ -879,6 +902,17 @@
   "audit": {
    "api29": "24/26 (c8, k rouges)",
    "api35": "24/26 (c8, k rouges)"
+  }
+ },
+ "campagne_44391288619": {
+  "commit": "b1224ae",
+  "qualification": {
+   "api29": "11/11 PASS",
+   "api35": "9/11 (c : A-011, e : A-034)"
+  },
+  "audit": {
+   "api29": "28/30 (k, p)",
+   "api35": "28/30 (k, p)"
   }
  }
 }

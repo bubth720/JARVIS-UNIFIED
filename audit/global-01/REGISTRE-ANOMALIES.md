@@ -10,17 +10,17 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 | A-002 | LLM (CI A02) | DEFAUT_CONFIRME | majeure | validé | LLM 9c3fc50 | — | CI verte | — | La porte « A02 sealed GGUF native loader » est rouge en permanence. |
 | A-003 | VOICE | DEFAUT_CONFIRME | majeure | validé | VOICE 5890735 | — | CI verte | — | Le commit VOICE utilisé par l'application échoue à ses propres gardes de préservation. |
 | A-004 | LLM (Qwen3-0.6B) | LIMITATION_MODELE | critique | ouvert | — | — | — | — | Affirmations factuelles fausses et assurées. |
-| A-005 | LLM + NEXUS | DEFAUT_CONFIRME | majeure | à retester | 3dd3649 puis 1354e31 (réponse déterministe) | DocumentaryAnswerTest | NON : c8 rouge sur run 43658134254 (8f77a8d, API 29+35) (« Londres » + note) ; nouveau contrat à exécuter | — | Réponse documentaire inventée quand aucun document ne contient l'information. |
+| A-005 | LLM + NEXUS | DEFAUT_CONFIRME | majeure | validé (émulateur) | 3dd3649 puis 1354e31 (réponse déterministe) | DocumentaryAnswerTest | c8 et g verts API 29/35 — run 44391288619 (b1224ae) | — | Réponse documentaire inventée quand aucun document ne contient l'information. |
 | A-006 | LLM + INTERFACE | DEFAUT_CONFIRME | critique | validé | 3d07d24 | ActionGuardTest | test f vert API 29/35 | — | JARVIS prétend avoir exécuté une action (« La lumière du salon est allumée »). |
 | A-007 | INTERFACE conv (mémoire de travail) | DEFAUT_CONFIRME | majeure | validé | f32b2ee | ConversationContextTest | run 43616811194 8/8 | — | « Comment je m'appelle ? » → prénom du frère. |
-| A-008 | INTERFACE (sphère) | DEFAUT_CONFIRME | majeure | ouvert | 7ca95a4, e79df9f, 8f77a8d | — | NON : K rouge sur run 43658134254 (8f77a8d, API 29+35) (2 dessins / fenêtre, aussi au repos) ; test P (pixels + coût séparés) à exécuter | — | La sphère se redessine pendant l'écoute (11–13 images). |
+| A-008 | INTERFACE (sphère) | DEFAUT_CONFIRME | majeure | validé (émulateur) pour écoute et réflexion ; transition : 2 dessins | 7ca95a4, e79df9f, 8f77a8d | — | Écoute et réflexion : 0 dessin de la sphère, 0 % de pixels changés (test P, API 29/35, run 44391288619 (b1224ae)). K : 2 dessins au moment même de la transition (limite 1). | — | La sphère se redessine pendant l'écoute (11–13 images). |
 | A-009 | NEXUS sur Android | DEFAUT_CONFIRME | critique | validé | 2066753 | — | test g vert API 29/35 | — | Recherche documentaire impossible. |
 | A-010 | MEMORY VAULT | DEFAUT_CONFIRME | majeure | validé | 4ee4bc3 | — | B3 vert sur run 43658134254 (8f77a8d, API 29+35) | — | Les souvenirs en statut NEEDS_CONFIRMATION (égalité ambiguë) sont injectés comme s'ils étaient READY. |
-| A-011 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | à retester | 3dd3649, 8656904 | — | partiel : c rouge sur API 35 (run 43658134254 (8f77a8d, API 29+35), onglet cc-tab-missions introuvable) | — | Échecs instables : StaleObjectException (h, API 35), carte encore présente après Retour, onglet erroné. |
+| A-011 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | ouvert | 3dd3649, 8656904 | — | c rouge sur API 35 (run 44391288619 (b1224ae)) | — | Échecs instables : StaleObjectException (h, API 35), carte encore présente après Retour, onglet erroné. |
 | A-012 | LLM (étude Android) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | — | — | — | — | Le 1.7B est coupé par le délai protégé de 90 s sur émulateur (12 tours). |
 | A-013 | VOICE (émulateur) | LIMITATION_ENVIRONNEMENT | majeure | bloqué | — | — | — | — | Lecture audio : « Délai de lecture audio dépassé » ; micro silencieux. |
 | A-014 | INTERFACE conv (réaction rapide) | RISQUE_THEORIQUE | mineure | ouvert | — | — | — | — | La synthèse de la phrase d'attente s'exécute en parallèle de la génération. |
-| A-015 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | à retester | e79df9f, 9c7d2c8, 1354e31 | InjectionCorpusTest, InjectionGeneralisationTest, DocumentaryAnswerTest | F4 et L verts sur run 43658134254 (8f77a8d, API 29+35) (formulations connues) ; Q (inédites) à exécuter | — | Injection d'instructions contenues dans un document importé. |
+| A-015 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | validé (émulateur) | e79df9f, 9c7d2c8, 1354e31 | InjectionCorpusTest, InjectionGeneralisationTest, DocumentaryAnswerTest | F4, L, Q verts API 29/35 — run 44391288619 (b1224ae) | — | Injection d'instructions contenues dans un document importé. |
 | A-016 | INTERFACE conv (historique) | RISQUE_THEORIQUE | mineure | ouvert | — | — | — | — | L'historique est stocké en clair dans l'espace privé de l'application. |
 | A-017 | Processus de livraison | DEFAUT_CONFIRME | mineure | corrigé | e1c7e9c | — | CI compilable | — | Un commit « tests seulement » dépendait de classes non poussées → CI non compilable. |
 | A-018 | SERVICES / MISSIONS / AGENTS / AUTOMATIONS | FONCTION_ABSENTE | majeure | ouvert | — | — | — | — | Aucun moteur connecté. |
@@ -30,21 +30,22 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 | A-022 | LLM (0.6B) — conversation longue | DEFAUT_CONFIRME | majeure | validé (émulateur) | 9c7d2c8 | AuditGuardsTest | M vert sur run 43658134254 (8f77a8d, API 29+35) | — | Répétition de la réponse précédente. |
 | A-023 | LLM (0.6B) — personnalité | DEFAUT_CONFIRME | mineure | ouvert | — | — | — | — | Vouvoiement malgré le tutoiement Athéna. |
 | A-024 | VOICE + STT | DEFAUT_CONFIRME | majeure | validé | e79df9f | AuditGuardsTest | D2 vert sur run 43658134254 (8f77a8d, API 29+35) | — | Un enregistrement silencieux de 2 s produit un tour (transcription + réponse). |
-| A-025 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | à retester | e79df9f puis 1354e31 (réponse déterministe) | DocumentaryAnswerTest | F2 vert sur run 43658134254 (8f77a8d, API 29+35) (ancien contrat) ; nouveau contrat à exécuter | — | Documents contradictoires : un seul cité dans la réponse, la contradiction est cachée. |
+| A-025 | NEXUS + LLM | DEFAUT_CONFIRME | majeure | validé (émulateur) | e79df9f puis 1354e31 (réponse déterministe) | DocumentaryAnswerTest | F2 vert API 29/35 (nouveau contrat) — run 44391288619 (b1224ae) | — | Documents contradictoires : un seul cité dans la réponse, la contradiction est cachée. |
 | A-026 | INTERFACE conv (ConvApp) | DEFAUT_CONFIRME | critique | validé | e79df9f | — | J, F6, H4 verts sur run 43658134254 (8f77a8d, API 29+35) | — | Fermer une session déjà fermée bloque tout démarrage ultérieur (« libération en cours » infinie). |
 | A-027 | INTERFACE (tests) | DEFAUT_CONFIRME | mineure | validé | e79df9f | — | E2/E3 vert sur run 43658134254 (8f77a8d, API 29+35) | — | Bouton « Démarrer » inaccessible au test sur petit écran + police 130 %. |
 | A-028 | INTERFACE conv (ConvSession) | DEFAUT_CONFIRME | majeure | validé | f53fab8 | — | O vert sur run 43658134254 (8f77a8d, API 29+35) | — | L'échec d'enregistrement de l'historique est aussitôt effacé par « Prêt ». |
-| A-029 | CI (script émulateur) | DEFAUT_CONFIRME | majeure | validé (unitaire), à confirmer émulateur | 8f77a8d puis 02fcf64 (fail-fast) | test_run_emulator.sh 7/7 (faux adb) | partiel : sur run 43658134254 (8f77a8d, API 29+35) le test e bloqué a été coupé à 25 min et la campagne a continué ; perte d'émulateur non survenue | — | Le run attend indéfiniment un émulateur hors ligne ; le travail est tué sans résultats. |
-| A-030 | NEXUS + LLM (fidélité documentaire) | DEFAUT_CONFIRME | majeure | à retester | 9c7d2c8 puis 1354e31 (remplacement, plus de « à vérifier ») | DocumentaryAnswerTest | R à exécuter | — | Une réponse documentaire peut contenir des valeurs absentes des extraits cités. |
-| A-031 | NEXUS + LLM (injection) | DEFAUT_CONFIRME | critique | à retester | 1354e31 | DocumentaryAnswerTest, InjectionGeneralisationTest (34/34) | test Q à exécuter | — | Le filtre d'injection ne reconnaissait que ses exemples : 16/16 sur son corpus, 3/24 sur des formulations nouvelles. |
-| A-032 | INTERFACE conv (journal) | DEFAUT_CONFIRME | majeure | à retester | d42a3dc | JournalRobustnessTest 3/3 | test S à exécuter | — | Après un arrêt brutal pendant une écriture, l'échange suivant est collé à la ligne tronquée et perdu silencieusement. |
-| A-033 | INTERFACE (accessibilité) | DEFAUT_CONFIRME | mineure | à retester | d011b17, d42a3dc | — | E6 vert sur run 43658134254 (8f77a8d, API 29+35) (sans 48 dp ni live region) ; à réexécuter | TalkBack réel à vérifier | Les changements d'état (écoute, réflexion, prêt) ne sont pas annoncés par TalkBack. |
-| A-034 | INTERFACE (tests, API 35) | DEFAUT_CONFIRME | mineure | ouvert | — | — | — | — | Test e (galerie + banc) bloqué sur API 35 jusqu'à la limite de 25 min. |
-| A-035 | INTERFACE (G3 stockage plein) | RISQUE_THEORIQUE | mineure | à retester | d42a3dc | — | test T à exécuter | — | Stockage plein : message d'import brut (« disk I/O error ») et comportement non testé. |
+| A-029 | CI (script émulateur) | DEFAUT_CONFIRME | majeure | validé | 8f77a8d puis 02fcf64 (fail-fast) | test_run_emulator.sh 7/7 (faux adb) | Limite effective : e (API 35) coupé à 25 min, campagne poursuivie (run 44391288619 (b1224ae)) | — | Le run attend indéfiniment un émulateur hors ligne ; le travail est tué sans résultats. |
+| A-030 | NEXUS + LLM (fidélité documentaire) | DEFAUT_CONFIRME | majeure | validé (émulateur) | 9c7d2c8 puis 1354e31 (remplacement, plus de « à vérifier ») | DocumentaryAnswerTest | R vert API 29/35 — run 44391288619 (b1224ae) | — | Une réponse documentaire peut contenir des valeurs absentes des extraits cités. |
+| A-031 | NEXUS + LLM (injection) | DEFAUT_CONFIRME | critique | validé (émulateur) | 1354e31 | DocumentaryAnswerTest, InjectionGeneralisationTest (34/34) | Q vert API 29/35 (attaques inédites, vrai modèle) — run 44391288619 (b1224ae) | — | Le filtre d'injection ne reconnaissait que ses exemples : 16/16 sur son corpus, 3/24 sur des formulations nouvelles. |
+| A-032 | INTERFACE conv (journal) | DEFAUT_CONFIRME | majeure | validé (émulateur) | d42a3dc | JournalRobustnessTest 3/3 | S vert API 29/35 — run 44391288619 (b1224ae) | — | Après un arrêt brutal pendant une écriture, l'échange suivant est collé à la ligne tronquée et perdu silencieusement. |
+| A-033 | INTERFACE (accessibilité) | DEFAUT_CONFIRME | mineure | validé (émulateur), TalkBack réel à vérifier | d011b17, d42a3dc | — | E2/E3/E6/E7 verts API 29/35 (48 dp ; TalkBack réel non testé) — run 44391288619 (b1224ae) | TalkBack réel à vérifier | Les changements d'état (écoute, réflexion, prêt) ne sont pas annoncés par TalkBack. |
+| A-034 | INTERFACE (tests, API 35) | DEFAUT_CONFIRME | mineure | ouvert | — | — | e de nouveau bloqué 25 min sur API 35 (run 44391288619 (b1224ae)) | — | Test e (galerie + banc) bloqué sur API 35 jusqu'à la limite de 25 min. |
+| A-035 | INTERFACE (G3 stockage plein) | RISQUE_THEORIQUE | mineure | validé (émulateur) | d42a3dc | — | T vert API 29/35 (stockage réellement plein) — run 44391288619 (b1224ae) | — | Stockage plein : message d'import brut (« disk I/O error ») et comportement non testé. |
 | A-036 | INTERFACE (CI, mode captures) | DEFAUT_CONFIRME | majeure | validé | 4f1ac95, 3a9fc2f (Codex) | banc 19/19 localement le 18/11 | run 44034195561 : visite et 22 captures vérifiées API 29/35 | — | Le mode captures (variable CAPTURES_ONLY du job) faisait échouer le test du script émulateur : étape Guards rouge, aucun APK construit. |
 | A-037 | UNIFIED (laboratoire RESEARCH-B0) | DEFAUT_CONFIRME | majeure | à retester | 977e475 | 63/63 sous 3.12 et 3.13 (local) | sans objet (CI du lab : voir rapport) | — | Sous Python 3.13, 36 des 63 tests HTTPS du laboratoire échouent (TLS_REFUSED). |
 | A-038 | INTERFACE (sécurité des données) | DEFAUT_CONFIRME | majeure | à retester | aa344f3 | — | contrôle aapt à exécuter au prochain build | transfert réel à vérifier | Android 12+ : conversations (en clair), souvenirs et bibliothèque transférables vers un nouvel appareil malgré allowBackup=false. |
 | A-039 | INTERFACE (livraison) | RISQUE_THEORIQUE | critique | ouvert | — | — | — | — | L'APK de démonstration publié est une version debug (debuggable) : via USB-debug, run-as lit conversations et souvenirs. |
+| A-040 | INTERFACE (rendu) | DEFAUT_CONFIRME | mineure | ouvert | — | — | défaut mesuré | — | Après une réponse, la sphère est encore redessinée environ 4 fois/s sans changement visible ; pendant la réflexion, la fenêtre complète rend 9 à 12 images/s (sphère : 0). |
 
 ## Détail
 
@@ -515,4 +516,16 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 - **Dépendances** : Clé de signature du propriétaire
 - **Preuve** : v3-cockpit.yml : assembleDebug seul ; les tests utilisent run-as.
 - **Correction** : Avant toute installation sur le POCO : build release non debuggable, R8, signé avec la clé du propriétaire ; campagne émulateur gardée en debug.
+
+### A-040 — INTERFACE (rendu)
+
+- **Fichiers** : HologramSphere.kt, CockpitScene.kt, ConversationDock.kt
+- **Branche / commit** : b1224ae
+- **Reproduction** : Test P.
+- **Attendu** : Aucun dessin hors réponse ; fenêtre ≤ 5 images/s en réflexion.
+- **Obtenu** : Voir preuve.
+- **Cause** : Non établie.
+- **Dépendances** : A-008
+- **Preuve** : Test P, run 44391288619 (b1224ae) : restAfterAnswer 12–13 dessins en 3 s, visibleChange 0 ; thinking windowFrames 18–24 en 2 s.
+- **Correction** : À analyser : fin de la boucle d'animation après la réponse ; élément animé du dock pendant la réflexion. Aucune correction à l'aveugle.
 

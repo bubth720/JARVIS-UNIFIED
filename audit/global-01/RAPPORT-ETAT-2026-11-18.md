@@ -64,7 +64,7 @@ Par rapport aux spécifications initiales (ADR-001, feuille de route 001F) :
 | INTERFACE : compilation V3, tests unitaires, Lint, inspection de l'APK | Run 44391288619 sur `b1224ae` | **Vert** |
 | Workflow Android (application historique) | Runs 44390535177 et 44391511126 | **Verts** |
 | Captures réelles des écrans | Run Codex 44034195561 | 22 captures × 2 API, vérifiées |
-| Campagne émulateur complète (qualification + audits T1–T5) | Run 44391288619 | **En cours** au moment de la rédaction |
+| Campagne émulateur complète (qualification + audits T1–T5) | Run 44391288619 sur `b1224ae` | Qualification : **API 29 11/11**, API 35 9/11 (c : A-011, e : A-034). Audits : **28/30 sur chaque API** ; les 2 échecs concernent la sphère (K, P → A-040). |
 
 Non exécutable dans cet environnement :
 
@@ -95,6 +95,28 @@ Anomalies héritées encore ouvertes : A-008 (sphère), A-011 et A-034 (tests AP
 | Données sensibles | Journal de conversation en clair dans l'espace privé (A-016). Transfert d'appareil fermé (A-038). Debug à fermer (A-039). |
 | Sauvegarde, reprise, erreurs | Ligne de journal tronquée (A-032, JVM 3/3), stockage plein (A-035), perte d'émulateur (A-029, 19/19), session non bloquante (A-026, émulateur) : corrigés. Ceux qui étaient en attente d'émulateur sont dans la campagne en cours. |
 | Injections documentaires | Deux couches. Pire cas simulé : 0/30 attaque inédite présentée comme parole de JARVIS (JVM). La couche 1 seule ne détecte que 9/30 attaques inédites : limite documentée. Test Q sur émulateur en cours. |
+
+## 4 bis. Résultats de la campagne émulateur complète (run 44391288619)
+
+Validés pour la première fois sur émulateur, API 29 et 35 :
+
+- Réponses documentaires : absence (c8, g, R), contradiction (F2).
+- Attaques d'injection inédites, sur le vrai modèle (Q).
+- Ligne de journal tronquée (S).
+- Stockage réellement plein (T).
+- Accessibilité 48 dp (E6).
+
+Sphère, test P (deux mesures séparées) :
+
+| Phase | Dessins de la sphère | Pixels changés | Images de la fenêtre |
+|---|---|---|---|
+| Repos | 0 | 0 % | 0 |
+| Écoute | 0 | 0 % | 11–13/s (vu-mètre, ≤ 15 : OK) |
+| Réflexion | 0 | 0 % | **9–12/s (> 5 : A-040)** |
+| Réponse | 21–26 en 2 s | **21 %** (animée : OK) | ≈ 10/s |
+| Après la réponse | **12–13 en 3 s (A-040)** | 0 % | ≈ 4/s |
+
+Le point 3 du 15/11 est donc validé sur émulateur pour l'immobilité visible et pour le coût propre de la sphère pendant l'écoute et la réflexion. Restent ouverts : les redessins invisibles après la réponse et l'activité de la fenêtre pendant la réflexion (A-040).
 
 ## 5. Optimisations recommandées, par priorité
 
@@ -138,7 +160,7 @@ Chaque correction a son test de non-régression, exécuté avant le commit (sect
 
 | Étape | Contenu | Condition de sortie |
 |---|---|---|
-| **R0** (en cours) | Résultats de la campagne 44391288619 ; correction des échecs sans nouvelle fonctionnalité | API 29/35 verts, ou défauts enregistrés |
+| **R0** | A-040 (redessins après la réponse, images pendant la réflexion), A-011, A-034 ; sans nouvelle fonctionnalité | Campagne entièrement verte sur API 29/35 |
 | **R1** | APK release signé (A-039), chiffrement du journal (A-016), CI sur `aa344f3` | `aapt` : non debuggable, `dataExtractionRules` présentes |
 | **R2** | Validation POCO (protocole DEVICE-01 existant) : voix réelle, latence, mémoire, thermique, TalkBack | Mesures sur appareil, **avec ton autorisation d'installation** |
 | **R3** | Décision modèle 0.6B ou 1.7B à partir des mesures R2 | Ton accord |
