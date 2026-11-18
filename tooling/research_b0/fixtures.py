@@ -20,13 +20,16 @@ class TLSMaterial:
         commands = [
             ['req', '-x509', '-newkey', 'rsa:2048', '-nodes', '-keyout', 'ca.key',
              '-out', 'ca.pem', '-days', '1', '-subj', '/CN=B0 ephemeral laboratory CA',
-             '-addext', 'basicConstraints=critical,CA:TRUE'],
+             '-addext', 'basicConstraints=critical,CA:TRUE',
+             # A-037: Python >= 3.13 verifies with VERIFY_X509_STRICT by default; a CA needs keyUsage and a key identifier.
+             '-addext', 'keyUsage=critical,keyCertSign,cRLSign', '-addext', 'subjectKeyIdentifier=hash'],
             ['req', '-newkey', 'rsa:2048', '-nodes', '-keyout', 'server.key',
              '-out', 'server.csr', '-subj', '/CN=' + hostname],
             ['x509', '-req', '-in', 'server.csr', '-CA', 'ca.pem', '-CAkey', 'ca.key',
              '-CAcreateserial', '-out', 'server.pem', '-days', '1', '-extfile', 'extensions.txt'],
         ]
-        (root/'extensions.txt').write_text('subjectAltName=DNS:' + hostname + '\nbasicConstraints=critical,CA:FALSE\nextendedKeyUsage=serverAuth\n')
+        (root/'extensions.txt').write_text('subjectAltName=DNS:' + hostname + '\nbasicConstraints=critical,CA:FALSE\nextendedKeyUsage=serverAuth\n'
+                                     'keyUsage=critical,digitalSignature,keyEncipherment\nsubjectKeyIdentifier=hash\nauthorityKeyIdentifier=keyid,issuer\n')
         for command in commands:
             subprocess.run(['openssl', *command], cwd=root, check=True,
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=15)
