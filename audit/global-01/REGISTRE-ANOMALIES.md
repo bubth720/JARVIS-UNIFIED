@@ -1,6 +1,6 @@
 # Registre central des anomalies — JARVIS (AUDIT-GLOBAL-01)
 
-Source : `registre.json` (ce fichier est généré par `render_registre.py`). Mise à jour : 2026-11-15.
+Source : `registre.json` (ce fichier est généré par `render_registre.py`). Mise à jour : 2026-11-18.
 
 Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **FONCTION_ABSENTE**, **LIMITATION_ENVIRONNEMENT**, **LIMITATION_MODELE**.
 
@@ -41,6 +41,10 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 | A-033 | INTERFACE (accessibilité) | DEFAUT_CONFIRME | mineure | à retester | d011b17, d42a3dc | — | E6 vert sur run 43658134254 (8f77a8d, API 29+35) (sans 48 dp ni live region) ; à réexécuter | TalkBack réel à vérifier | Les changements d'état (écoute, réflexion, prêt) ne sont pas annoncés par TalkBack. |
 | A-034 | INTERFACE (tests, API 35) | DEFAUT_CONFIRME | mineure | ouvert | — | — | — | — | Test e (galerie + banc) bloqué sur API 35 jusqu'à la limite de 25 min. |
 | A-035 | INTERFACE (G3 stockage plein) | RISQUE_THEORIQUE | mineure | à retester | d42a3dc | — | test T à exécuter | — | Stockage plein : message d'import brut (« disk I/O error ») et comportement non testé. |
+| A-036 | INTERFACE (CI, mode captures) | DEFAUT_CONFIRME | majeure | validé | 4f1ac95, 3a9fc2f (Codex) | banc 19/19 localement le 18/11 | run 44034195561 : visite et 22 captures vérifiées API 29/35 | — | Le mode captures (variable CAPTURES_ONLY du job) faisait échouer le test du script émulateur : étape Guards rouge, aucun APK construit. |
+| A-037 | UNIFIED (laboratoire RESEARCH-B0) | DEFAUT_CONFIRME | majeure | à retester | 977e475 | 63/63 sous 3.12 et 3.13 (local) | sans objet (CI du lab : voir rapport) | — | Sous Python 3.13, 36 des 63 tests HTTPS du laboratoire échouent (TLS_REFUSED). |
+| A-038 | INTERFACE (sécurité des données) | DEFAUT_CONFIRME | majeure | à retester | aa344f3 | — | contrôle aapt à exécuter au prochain build | transfert réel à vérifier | Android 12+ : conversations (en clair), souvenirs et bibliothèque transférables vers un nouvel appareil malgré allowBackup=false. |
+| A-039 | INTERFACE (livraison) | RISQUE_THEORIQUE | critique | ouvert | — | — | — | — | L'APK de démonstration publié est une version debug (debuggable) : via USB-debug, run-as lit conversations et souvenirs. |
 
 ## Détail
 
@@ -463,4 +467,52 @@ Natures : **DEFAUT_CONFIRME** (prouvé), **RISQUE_THEORIQUE** (non observé), **
 - **Dépendances** : —
 - **Preuve** : Revue de code ; aucun test G3.
 - **Correction** : Message clair ; test T qui remplit réellement le stockage.
+
+### A-036 — INTERFACE (CI, mode captures)
+
+- **Fichiers** : labs/v3/tools/run_emulator.sh, tests/test_run_emulator.sh
+- **Branche / commit** : INTERFACE ccr-e05fe51e-ycqubx @ b1224ae (fusion de codex/gpu-forge-g02-captures)
+- **Reproduction** : CAPTURES_ONLY=1 bash tests/test_run_emulator.sh
+- **Attendu** : Banc vert dans les deux modes.
+- **Obtenu** : 4 scénarios rouges.
+- **Cause** : Variable d'environnement du job héritée par le banc (défaut introduit le 15/11 par f73d4f5).
+- **Dépendances** : A-029
+- **Preuve** : Run 43709555526.
+- **Correction** : Scénarios du banc isolés du mode du job (Codex 4f1ac95) ; transfert des images avec stdin isolé (3a9fc2f).
+
+### A-037 — UNIFIED (laboratoire RESEARCH-B0)
+
+- **Fichiers** : tooling/research_b0/fixtures.py
+- **Branche / commit** : UNIFIED ccr-e05fe51e-ycqubx @ 977e475
+- **Reproduction** : python3.13 -m tooling.research_b0.offline_runner
+- **Attendu** : 63/63 quelle que soit la version.
+- **Obtenu** : TLS_REFUSED.
+- **Cause** : VERIFY_X509_STRICT par défaut depuis Python 3.13.
+- **Dépendances** : —
+- **Preuve** : offline_runner local le 18/11 : 3.12 63/63, 3.13 21 échecs + 15 erreurs.
+- **Correction** : Certificats éphémères complétés (keyUsage, identifiants de clé) ; vérification non affaiblie.
+
+### A-038 — INTERFACE (sécurité des données)
+
+- **Fichiers** : AndroidManifest.xml, res/xml/data_extraction_rules.xml, v3-cockpit.yml
+- **Branche / commit** : INTERFACE ccr-e05fe51e-ycqubx @ aa344f3
+- **Reproduction** : Transfert d'appareil Android 12+.
+- **Attendu** : Aucune donnée transférée.
+- **Obtenu** : Non bloqué.
+- **Cause** : allowBackup ne couvre plus le transfert d'appareil à appareil.
+- **Dépendances** : A-016
+- **Preuve** : Manifeste V3 (targetSdk 35, aucune dataExtractionRules) ; comportement documenté d'Android 12+.
+- **Correction** : data_extraction_rules.xml excluant tout domaine (cloud et transfert) ; contrôle aapt dans la CI.
+
+### A-039 — INTERFACE (livraison)
+
+- **Fichiers** : .github/workflows/v3-cockpit.yml, app/build.gradle.kts
+- **Branche / commit** : —
+- **Reproduction** : adb shell run-as fr.jarvis.v3 ls files
+- **Attendu** : Refusé sur un APK livré.
+- **Obtenu** : Autorisé.
+- **Cause** : Seul le build debug existe.
+- **Dépendances** : Clé de signature du propriétaire
+- **Preuve** : v3-cockpit.yml : assembleDebug seul ; les tests utilisent run-as.
+- **Correction** : Avant toute installation sur le POCO : build release non debuggable, R8, signé avec la clé du propriétaire ; campagne émulateur gardée en debug.
 

@@ -1,6 +1,6 @@
 {
  "schema": "jarvis.anomaly-register/1",
- "updated": "2026-11-15",
+ "updated": "2026-11-18",
  "legend": {
   "nature": "DEFAUT_CONFIRME | RISQUE_THEORIQUE | FONCTION_ABSENTE | LIMITATION_ENVIRONNEMENT | LIMITATION_MODELE",
   "gravite": "critique | majeure | mineure",
@@ -749,6 +749,98 @@
     "developpee": "d42a3dc",
     "unitaire": "—",
     "emulateur": "test T à exécuter",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-036",
+   "module": "INTERFACE (CI, mode captures)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "majeure",
+   "statut": "validé",
+   "symptome": "Le mode captures (variable CAPTURES_ONLY du job) faisait échouer le test du script émulateur : étape Guards rouge, aucun APK construit.",
+   "preuve": "Run 43709555526.",
+   "correction": "Scénarios du banc isolés du mode du job (Codex 4f1ac95) ; transfert des images avec stdin isolé (3a9fc2f).",
+   "files": "labs/v3/tools/run_emulator.sh, tests/test_run_emulator.sh",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ b1224ae (fusion de codex/gpu-forge-g02-captures)",
+   "reproduction": "CAPTURES_ONLY=1 bash tests/test_run_emulator.sh",
+   "attendu": "Banc vert dans les deux modes.",
+   "obtenu": "4 scénarios rouges.",
+   "cause": "Variable d'environnement du job héritée par le banc (défaut introduit le 15/11 par f73d4f5).",
+   "dependances": "A-029",
+   "validation": {
+    "developpee": "4f1ac95, 3a9fc2f (Codex)",
+    "unitaire": "banc 19/19 localement le 18/11",
+    "emulateur": "run 44034195561 : visite et 22 captures vérifiées API 29/35",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-037",
+   "module": "UNIFIED (laboratoire RESEARCH-B0)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "majeure",
+   "statut": "à retester",
+   "symptome": "Sous Python 3.13, 36 des 63 tests HTTPS du laboratoire échouent (TLS_REFUSED).",
+   "preuve": "offline_runner local le 18/11 : 3.12 63/63, 3.13 21 échecs + 15 erreurs.",
+   "correction": "Certificats éphémères complétés (keyUsage, identifiants de clé) ; vérification non affaiblie.",
+   "files": "tooling/research_b0/fixtures.py",
+   "ref": "UNIFIED ccr-e05fe51e-ycqubx @ 977e475",
+   "reproduction": "python3.13 -m tooling.research_b0.offline_runner",
+   "attendu": "63/63 quelle que soit la version.",
+   "obtenu": "TLS_REFUSED.",
+   "cause": "VERIFY_X509_STRICT par défaut depuis Python 3.13.",
+   "dependances": "—",
+   "validation": {
+    "developpee": "977e475",
+    "unitaire": "63/63 sous 3.12 et 3.13 (local)",
+    "emulateur": "sans objet (CI du lab : voir rapport)",
+    "appareil": "—"
+   }
+  },
+  {
+   "id": "A-038",
+   "module": "INTERFACE (sécurité des données)",
+   "nature": "DEFAUT_CONFIRME",
+   "gravite": "majeure",
+   "statut": "à retester",
+   "symptome": "Android 12+ : conversations (en clair), souvenirs et bibliothèque transférables vers un nouvel appareil malgré allowBackup=false.",
+   "preuve": "Manifeste V3 (targetSdk 35, aucune dataExtractionRules) ; comportement documenté d'Android 12+.",
+   "correction": "data_extraction_rules.xml excluant tout domaine (cloud et transfert) ; contrôle aapt dans la CI.",
+   "files": "AndroidManifest.xml, res/xml/data_extraction_rules.xml, v3-cockpit.yml",
+   "ref": "INTERFACE ccr-e05fe51e-ycqubx @ aa344f3",
+   "reproduction": "Transfert d'appareil Android 12+.",
+   "attendu": "Aucune donnée transférée.",
+   "obtenu": "Non bloqué.",
+   "cause": "allowBackup ne couvre plus le transfert d'appareil à appareil.",
+   "dependances": "A-016",
+   "validation": {
+    "developpee": "aa344f3",
+    "unitaire": "—",
+    "emulateur": "contrôle aapt à exécuter au prochain build",
+    "appareil": "transfert réel à vérifier"
+   }
+  },
+  {
+   "id": "A-039",
+   "module": "INTERFACE (livraison)",
+   "nature": "RISQUE_THEORIQUE",
+   "gravite": "critique",
+   "statut": "ouvert",
+   "symptome": "L'APK de démonstration publié est une version debug (debuggable) : via USB-debug, run-as lit conversations et souvenirs.",
+   "preuve": "v3-cockpit.yml : assembleDebug seul ; les tests utilisent run-as.",
+   "correction": "Avant toute installation sur le POCO : build release non debuggable, R8, signé avec la clé du propriétaire ; campagne émulateur gardée en debug.",
+   "files": ".github/workflows/v3-cockpit.yml, app/build.gradle.kts",
+   "ref": "—",
+   "reproduction": "adb shell run-as fr.jarvis.v3 ls files",
+   "attendu": "Refusé sur un APK livré.",
+   "obtenu": "Autorisé.",
+   "cause": "Seul le build debug existe.",
+   "dependances": "Clé de signature du propriétaire",
+   "validation": {
+    "developpee": "—",
+    "unitaire": "—",
+    "emulateur": "—",
     "appareil": "—"
    }
   }
