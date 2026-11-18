@@ -1,0 +1,115 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_commit": "cfaa826079b8cf09c21ed1718b075578af63cb73",
+  "suites": [
+    {
+      "suite": "validator",
+      "command": "python3 scripts/validate_unified.py",
+      "exit_code": 0,
+      "tests": null,
+      "tail": [
+        "{\"contracts\": 5, \"invalid_examples_rejected\": 5, \"repositories\": 9, \"valid_examples\": 5}"
+      ]
+    },
+    {
+      "suite": "unified",
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 41,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 41 tests in 0.080s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "registry",
+      "command": "python3 -m unittest discover -s registry/tests -v",
+      "exit_code": 0,
+      "tests": 23,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 23 tests in 0.332s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "backup",
+      "command": "python3 -m unittest discover -s backup_prototype/tests -v",
+      "exit_code": 0,
+      "tests": 30,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 30 tests in 12.689s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "u01",
+      "command": "python3 -m unittest discover -s tooling/integration/uni08_u01_tests -v",
+      "exit_code": 0,
+      "tests": 23,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 23 tests in 0.001s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "a2",
+      "command": "python3 -m unittest discover -s tooling/nexus_n01_a2/tests -v",
+      "exit_code": 0,
+      "tests": 54,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 54 tests in 0.021s",
+        "",
+        "OK"
+      ]
+    }
+  ],
+  "total_python_tests": 171,
+  "source_contracts": {
+    "result": "PASS",
+    "source_level_only": true,
+    "repositories": [
+      {
+        "repository": "bubth720/JAVIS-Local-v2",
+        "commit": "f6a3b2d0c280c69ef1570544fdbf5bcf5818810c",
+        "path": "app/src/main/java/com/stark/jarvislocal/integrations/DocumentToolReadiness.kt",
+        "git_blob_sha": "c4f28b3e0a7085d73de5be47a23922fce5aedd02"
+      },
+      {
+        "repository": "bubth720/JARVIS-SERVICES",
+        "commit": "7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4",
+        "path": "services-portable-api/src/main/java/fr/jarvis/services/api/proposal/CommitAuthorization.java",
+        "git_blob_sha": "529732f79ea22025c18c8c1321526bd826480884"
+      },
+      {
+        "repository": "bubth720/JARVIS-NEXUS",
+        "commit": "2dd4447acb592e9e63123c0377b6310d4dae2bf1",
+        "path": "nexus-core/src/main/kotlin/fr/jarvis/nexus/rag/RagTypes.kt",
+        "git_blob_sha": "a4f1bc564ce3f86868f57dbe3df401b883abeabf"
+      },
+      {
+        "repository": "bubth720/JARVIS-UNIFIED",
+        "commit": "6539b444b5d65154088b8a2722212c0c16bbf257",
+        "path": "contracts/v1/request-envelope.schema.json",
+        "git_blob_sha": "f2856d8ad5c01deed574978dd17ecd28cc25eb19"
+      },
+      {
+        "repository": "bubth720/JARVIS-INTERFACE",
+        "commit": "d2e737a99f36fea4f837d54c24be4c6ffe86e3b9",
+        "path": "labs/v3/app/src/main/java/fr/jarvis/v3/conv/LocalKnowledge.kt",
+        "git_blob_sha": "1f04a1064fae52011c602e8979eeccca9b48fdc2"
+      }
+    ],
+    "production_integration": "NOT_RUN",
+    "network_transport": "NOT_IMPLEMENTED"
+  }
+}
