@@ -17,7 +17,7 @@
 | F05 | INTERFACE et avatar | INTERFACE | `e6489bf` | À démarrer |
 | F06 | NEXUS local | NEXUS + UNIFIED B0 | `5f101934` / pin `06ccf98` | À démarrer |
 | F07 | SERVICES permissionnés | SERVICES, CORE, UNIFIED M56 | `8d80d09d` + M56 `323a79b` | À démarrer |
-| F08 | EVOLUTION supervisée | JARVIS-VOLUTION- | `c4abfb03` | Diagnostic : à démarrer ; essai : BLOCKED |
+| F08 | EVOLUTION supervisée | JARVIS-VOLUTION- | `c4abfb03` → `ccr-e05fe51e-ycqubx` @ `009961a` | **PARTIAL** : adaptateur de campagne en lecture seule, comparaison avant/après et propositions (61/61 tests, essai sur données réelles) ; essai de correctif BLOCKED (`SANDBOX_NOT_QUALIFIED`) |
 | F09 | Mémoire et apprentissage avec accord | CORE, NEXUS, UNIFIED | CORE `5da9838` | Après F06/F07 |
 | F10 | PC + Android | UNIFIED ARCH-01 | — | Simulation seulement |
 | F11 | Réception | Tous | — | NO-GO tant que F02 n'est pas validé sur appareil |
