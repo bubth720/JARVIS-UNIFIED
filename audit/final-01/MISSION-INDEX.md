@@ -10,7 +10,7 @@
 | Lot | Objectif | Dépôt(s) | Base de travail (`BASELINE-LOCK.json`) | Statut |
 |---|---|---|---|---|
 | F00 | Inventaire vérifiable | UNIFIED | `0af322c` | **DONE_EVIDENCED** (voir les limites CORE R-05) |
-| F01 | Contrats et CI de reprise | UNIFIED + adaptateurs | Épinglages de l'APK et têtes du front | À démarrer |
+| F01 | Contrats et CI de reprise | UNIFIED + adaptateurs | Épinglages de l'APK et têtes du front | **DONE_EVIDENCED** (porte GO ; mises à niveau d'épinglage NO-GO : voir `f01/F01-REPORT.md`) |
 | F02 | Android de bout en bout hors ligne | CORE, INTERFACE, LLM, VOICE | INTERFACE `e6489bf` | PARTIAL (émulateur vert) / BLOCKED_DEVICE |
 | F03 | LLM mesuré | LLM | `9c3fc500` / pin `2e01177` | À démarrer (CPU et CI) |
 | F04 | VOICE sûre | VOICE | `58907351` / pin `92d0745` | À démarrer |

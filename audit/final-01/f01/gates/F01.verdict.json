@@ -1,0 +1,40 @@
+{
+ "lot": "F01-CONTRACTS-AND-INTEGRATION-GATES",
+ "verdict": "GO",
+ "reasons": [],
+ "checked": [
+  {
+   "id": "final01-tooling-tests",
+   "status": "PASS"
+  },
+  {
+   "id": "api-surface-LLM-candidate",
+   "status": "PASS"
+  },
+  {
+   "id": "api-surface-VOICE-candidate",
+   "status": "PASS"
+  },
+  {
+   "id": "api-surface-NEXUS-candidate",
+   "status": "PASS"
+  },
+  {
+   "id": "v1-guard-430-files",
+   "status": "PASS"
+  },
+  {
+   "id": "g02-campaign-preservation-guard",
+   "status": "PASS"
+  },
+  {
+   "id": "b0-guard-on-own-head",
+   "status": "PASS"
+  },
+  {
+   "id": "apk-build-local-pinned",
+   "status": "PASS"
+  }
+ ],
+ "note": "GO = every required test PASS at the exact SHA; never an authorisation to merge, install or activate."
+}

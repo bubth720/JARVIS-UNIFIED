@@ -5,7 +5,7 @@ Une valeur `UNKNOWN` ou `NOT_RUN` ne vaut jamais GO. Un GO ci-dessous signifie s
 | Lot | Verdict | Condition ou blocage |
 |---|---|---|
 | F00 inventaire | **DONE_EVIDENCED** | 119 PR (113 ouvertes, 111 brouillons) recensées sans doublon, 255 branches, CI au SHA. CORE : CI et bases `UNKNOWN` (R-05). |
-| F01 contrats et CI de reprise | GO (démarrage) | Base : `BASELINE-LOCK.json`. Décision ADR R-03 requise avant tout déplacement de code. |
+| F01 contrats et CI de reprise | **GO** (`f01/gates/F01.verdict.json`) | ADR-F01-01 acceptée ; épinglages NEXUS, LLM et VOICE NO-GO (`f01/gates/PIN-*.verdict.json`) |
 | F02 Android de bout en bout | PARTIAL / BLOCKED_DEVICE | Émulateur vert à `e6489bf` ; appareil requis (R-09). |
 | F03 LLM | GO (laboratoire CPU et CI) / BLOCKED_DEVICE (mesures) | Aucune valeur TTFT ou thermique sans appareil ; GPU payant désactivé. |
 | F04 VOICE | GO (CI) / BLOCKED_DEVICE (audio réel) | Écart d'épinglage `92d0745` → `5890735`. |
