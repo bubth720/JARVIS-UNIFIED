@@ -20,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import fr.jarvis.v1.Phase
 import fr.jarvis.v3.conv.ActionGuard
 import fr.jarvis.v3.conv.ConvApp
+import fr.jarvis.v3.conv.ModelId
+import fr.jarvis.v3.conv.Profile
 import fr.jarvis.v3.conv.LocalKnowledge
 import fr.jarvis.v3.model.Blueprint
 import fr.jarvis.v3.model.CommandModule
@@ -100,9 +102,13 @@ fun CommandCenter(app: ConvApp, gov: PerformanceGovernor, ui: V3UiState, actions
 
 @Composable private fun AiCore(app: ConvApp, s: fr.jarvis.v3.conv.ConvSession?, m: fr.jarvis.v3.model.SystemMeasure) {
     val entry = remember { app.assets.llm.current() }
-    Line("Modèle", entry?.let { "Qwen3-0.6B Q4_K_M · ${it.sizeBytes / (1 shl 20)} Mio" } ?: "non installé", "cc-model")
-    Line("Empreinte SHA-256", entry?.sha256?.take(16)?.let { "$it…" } ?: "—")
-    Line("Moteur", "A02 scellé · contexte 768 · 1 thread · sortie 128")
+    // NEXT-01: the profile really chosen by ModelPolicy (ÉCO unless the 1.7B is qualified and resources allow it).
+    val choice = app.lastChoice; val p = choice?.profile ?: Profile.ECO
+    Line("Modèle", if (p.model == ModelId.QWEN3_0_6B) entry?.let { "${p.model.label} · ${it.sizeBytes / (1 shl 20)} Mio" } ?: "non installé"
+        else "${p.model.label} · ${p.model.bytes / (1 shl 20)} Mio", "cc-model")
+    Line("Empreinte SHA-256", (if (p.model == ModelId.QWEN3_0_6B) entry?.sha256 else p.model.sha256)?.take(16)?.let { "$it…" } ?: "—")
+    Line("Moteur", "A02 scellé · contexte ${p.context} · ${p.threads} thread${if (p.threads > 1) "s" else ""} · sortie 128")
+    Line("Profil", p.label + (if (choice?.fellBack == true) " (repli : ${choice.reasons.firstOrNull().orEmpty()})" else ""), "cc-profile")
     Line("État", s?.phase?.name ?: "session arrêtée")
     Line("Personnalité", app.personas.load().let { "${it.profileName} · ${if (it.tutoiement) "tutoiement" else "vouvoiement"}" })
     val metrics = s?.transport?.lastMetrics?.collectAsState()?.value

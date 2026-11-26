@@ -82,7 +82,16 @@ class CockpitActivity : ComponentActivity(), SceneActions {
         app.scope.launch {
             ui.message = withContext(Dispatchers.IO) {
                 uris.map { u -> val name = displayName(u)
-                    if (app.isDocument(name)) runCatching {
+                    // NEXT-01: the 1.7B goes to the verified model store (never active until its GO; ÉCO stays the default).
+                    if (name == fr.jarvis.v3.conv.ModelId.QWEN3_1_7B.filename) runCatching {
+                        requireNotNull(contentResolver.openInputStream(u)) { "Document inaccessible" }.use { input ->
+                            when (val r = app.models.import(fr.jarvis.v3.conv.ModelId.QWEN3_1_7B, input, android.os.StatFs(filesDir.path).availableBytes)) {
+                                is fr.jarvis.v3.conv.ModelStore.Result.Ok -> "$name : vérifié (SHA-256), disponible en profil ÉQUILIBRÉ / PERFORMANCE après qualification"
+                                is fr.jarvis.v3.conv.ModelStore.Result.Refused -> "$name : refusé (${r.reason})"
+                            }
+                        }
+                    }.getOrElse { "$name : ${it.message}" }
+                    else if (app.isDocument(name)) runCatching {
                         // A document the user picked goes to the local knowledge base (≤ 2 Mio, read once, never re-opened by URI).
                         app.knowledge.open()
                         val bytes = requireNotNull(contentResolver.openInputStream(u)) { "Document inaccessible" }.use { it.readNBytesCompat(2 * 1024 * 1024 + 1) }

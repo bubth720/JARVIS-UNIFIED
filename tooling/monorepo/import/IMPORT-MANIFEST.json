@@ -1,54 +1,56 @@
 {
  "schema": "jarvis.monorepo.import-manifest/1",
+ "import_commit": "a40db854112026226a5d4eba2744147cf7af590d",
+ "digest": "sha256 over sorted path NUL sha256(git blob)",
  "modules": {
   "core": {
    "source_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
    "target": "modules/core",
    "files": 600,
    "bytes": 2992848,
-   "tree_sha256": "21b036cb23b24a07ac7cc80d5d6345688bc8b70cff0a7be7bdb87742164c3d90"
+   "tree_sha256": "3ded50542455aeacb66d266d886d766254ba30dcedb71196df64d5e3b4f5e60f"
   },
   "llm": {
    "source_sha": "2e011776d9e0f675bcae49b739f12a3a6dbf4de4",
    "target": "modules/llm",
    "files": 528,
    "bytes": 2876457,
-   "tree_sha256": "7f421ba475ae41a5daa15642e204c2ef6b77824bcb0b8df0927a536530b7ef22"
+   "tree_sha256": "e2019af38c952352c44bbf404c061eea3d43687d8fb41026cf6ca95d775eb483"
   },
   "voice": {
    "source_sha": "92d07453260553466c92196454b56929b7494b2f",
    "target": "modules/voice",
    "files": 582,
    "bytes": 3384576,
-   "tree_sha256": "47ba5344a47d23b41f4da79e6325fc7ebaa9756c542264ac4f22a275c4854fbe"
+   "tree_sha256": "27bf3736af9a968a2c20e89c46823394794fa8652e8015cf761f4c8161094d31"
   },
   "interface": {
    "source_sha": "e6489bf011c804fcbb699f41416e4b389e50d66a",
    "target": "modules/interface",
    "files": 509,
-   "bytes": 5427842,
-   "tree_sha256": "e1f746fa922e606aefe271354bf0c50996cfad1ba914ce5a9a97badd5bb2dfd9"
+   "bytes": 5427748,
+   "tree_sha256": "08527baf783543c8483dc6507f5cf69999c6821889b6e0747dc298cce8214490"
   },
   "nexus": {
    "source_sha": "06ccf98a7709364bf09cc1ecea1c35663d5787cf",
    "target": "modules/nexus",
    "files": 285,
-   "bytes": 1156003,
-   "tree_sha256": "90f582cb405fd9a43fce75cb9d0a17df1668bbe5570499f5e91becd2a214a3d4"
+   "bytes": 1155909,
+   "tree_sha256": "69b0fd43b9f2fb80d0e5a6568a69616326f2faafeb531b4a22cfd133536580eb"
   },
   "services": {
    "source_sha": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
    "target": "modules/services",
    "files": 285,
    "bytes": 1379759,
-   "tree_sha256": "62ccf1dea412d51b23b88dff3ce8c2a2ab418dee593cb33ca294e6184316d7a4"
+   "tree_sha256": "b6c86994de8967855899f7dcbb8ec5b9358b4e21855e432a9c9d5ff8ac6ac80b"
   },
   "evolution": {
    "source_sha": "009961af020bb8ed3b212f89a344c4d64e518e5d",
    "target": "modules/evolution",
    "files": 62,
-   "bytes": 277528,
-   "tree_sha256": "9ec9f5c9997c07891d44b5bdccec815408dfa804ebe5084489441e2f236453c7"
+   "bytes": 277434,
+   "tree_sha256": "7b863b7107762d7a45ff0e9ce48ad2d24799c7cbff72db855d022b54ac379aaf"
   }
  }
 }

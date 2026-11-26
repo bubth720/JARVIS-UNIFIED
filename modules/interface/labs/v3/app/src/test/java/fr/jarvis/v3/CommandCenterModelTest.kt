@@ -17,12 +17,17 @@ class CommandCenterModelTest {
     }
 
     @Test fun blueprintPinsAreTheCommitsTheWorkflowReallyBuilds() {
+        // Historical repository: the V3 workflow pins the producers. UNIFIED monorepo (NEXT-01): the workflows are not
+        // imported; labs/v3/sources.json is what prepare_monorepo_sources.py builds from (checked against the frozen V1 lock).
         var dir: File? = File("").absoluteFile
-        while (dir != null && !File(dir, ".github/workflows/v3-cockpit.yml").isFile) dir = dir.parentFile
-        val wf = File(requireNotNull(dir) { "workflow not found" }, ".github/workflows/v3-cockpit.yml").readText()
+        while (dir != null && !File(dir, ".github/workflows/v3-cockpit.yml").isFile && !File(dir, "labs/v3/sources.json").isFile) dir = dir.parentFile
+        requireNotNull(dir) { "neither the V3 workflow nor labs/v3/sources.json found" }
+        val wf = File(dir, ".github/workflows/v3-cockpit.yml").takeIf { it.isFile }?.readText()
+        val lock = File(dir, "labs/v3/sources.json").takeIf { it.isFile }?.readText()
         for ((name, repo) in listOf("CORE" to "JAVIS-Local-v2", "LLM A02" to "JARVIS-LLM", "VOICE" to "JARVIS-VOICE", "NEXUS" to "JARVIS-NEXUS")) {
             val pin = Blueprint.NODES.single { it.name == name }.commit
-            assertTrue("$name @ $pin must be the commit pinned for $repo", Regex("repository: bubth720/$repo, ref: $pin").containsMatchIn(wf))
+            if (wf != null) assertTrue("$name @ $pin must be the commit pinned for $repo", Regex("repository: bubth720/$repo, ref: $pin").containsMatchIn(wf))
+            if (lock != null) assertTrue("$name @ $pin must be the commit locked for $repo", Regex("\"repository\": \"bubth720/$repo\", \"sha\": \"$pin[0-9a-f]{${40 - pin.length}}\"").containsMatchIn(lock))
         }
         assertFalse(Blueprint.NODES.single { it.name == "SERVICES" }.connected)
         assertTrue(Blueprint.EDGES.all { (a, b) -> Blueprint.NODES.any { it.name == a } && Blueprint.NODES.any { it.name == b } })

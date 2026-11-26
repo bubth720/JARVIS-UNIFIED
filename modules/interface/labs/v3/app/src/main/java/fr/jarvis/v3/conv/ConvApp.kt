@@ -28,6 +28,18 @@ class ConvApp : Application() {
     val knowledge by lazy { LocalKnowledge(File(filesDir, "nexus")) }
     /** Durable memories, stored ONLY after explicit confirmation (CORE 5da9838 workflow, noBackupFilesDir). */
     val memory by lazy { ConsentedMemory(this) }
+    /** NEXT-01: catalog models beyond the V1-imported 0.6B (the 1.7B), verified on import. */
+    val models by lazy { ModelStore(File(filesDir, "models")) }
+    /** Requested profile (persisted); ÉCO by default. The policy may only lower it. */
+    var requestedProfile: Profile
+        get() = runCatching { Profile.valueOf(getSharedPreferences("model", Context.MODE_PRIVATE).getString("profile", "ECO")!!) }.getOrDefault(Profile.ECO)
+        set(v) { getSharedPreferences("model", Context.MODE_PRIVATE).edit().putString("profile", v.name).apply() }
+    /** The 1.7B stays OFF until its GO (memory, latency, thermal, quality). Only a qualification test may set it. */
+    @Volatile var allow1p7b = false
+    /** Last decision of the model policy (shown with its reasons; never a silent switch). */
+    @Volatile var lastChoice: Choice? = null; private set
+    fun modelChoice(): Choice = ModelPolicy.choose(requestedProfile, DeviceState(memoryBudgetBytes(), lowMemory(), thermal(),
+        buildSet { if (assets.llmReady()) add(ModelId.QWEN3_0_6B); if (models.verified(ModelId.QWEN3_1_7B)) add(ModelId.QWEN3_1_7B) }, allow1p7b))
     /** Extensions routed to the knowledge base on import (the model / voice files keep their verified importer). */
     fun isDocument(name: String) = name.substringAfterLast('.', "").lowercase() in setOf("txt", "md", "csv", "tsv", "docx", "xml")
     var session: ConvSession? = null; private set
@@ -56,12 +68,17 @@ class ConvApp : Application() {
         session?.let { if (!it.closed) return it }
         check(previousReleased) { "Libération de la session précédente en cours : réessaie dans un instant" }
         check(missing().isEmpty()) { "Ressources manquantes : " + missing().joinToString() }
-        val entry = checkNotNull(assets.llm.current())
+        val choice = modelChoice().also { lastChoice = it }
+        val profile = checkNotNull(choice.profile) { "Chargement refusé : " + choice.reasons.joinToString(" ; ") }
         val context = ConversationContext(personas.load(), confirmedMemories = { q -> runCatching { memory.recallBlock(q) }.getOrDefault("") })
+        // One model only: the previous engine is released before any start (previousReleased above).
+        val (file, size, sha) = if (profile.model == ModelId.QWEN3_0_6B) checkNotNull(assets.llm.current()).let { Triple(it.file, it.sizeBytes, it.sha256) }
+            else Triple(models.file(profile.model), profile.model.bytes, profile.model.sha256)
         val model = ConvLanguageModel(SealedNativeBridge.get(), VerifiedModel({
-            val pfd = ParcelFileDescriptor.open(entry.file, ParcelFileDescriptor.MODE_READ_ONLY)
+            val pfd = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
             object : SourceDescriptor { override val fd = pfd.fd; override fun close() = pfd.close() }
-        }, entry.sizeBytes, entry.sha256), ::memoryBudgetBytes, instruction = context::instructionFor)
+        }, size, sha), ::memoryBudgetBytes, instruction = context::instructionFor,
+            small = profile.model.small, threads = profile.threads, maxContext = profile.context, modelLabel = profile.model.label.substringBefore(" "))
         val resume = resumeId?.let { runCatching { journal.read(it) }.getOrNull() }
         return ConvSession(scope, model, context, journal, assets.sttFile(), assets.ttsDir().takeIf { assets.ttsPresent() }, ::thermal, ::lowMemory, resume,
             knowledge = knowledge, memory = memory).also { session = it; scope.launch(Dispatchers.IO) { runCatching { knowledge.open() } }; it.start() }

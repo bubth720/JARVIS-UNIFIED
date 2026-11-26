@@ -287,7 +287,7 @@ class ConvSession(
         if (notice != null) notices[exchanges.size] = notice
         record(text, answer, viaVoice, cited, notice)   // the system notice is kept with the exchange (resume keeps the warning)
         why[exchanges.size] = Provenance.explain(factsUsed, memoriesUsed, cited, ActionGuard.requestedAction(text) != null, ActionGuard.claimsDone(text, answer),
-            transport.lastMetrics.value?.historyPairsSent) + listOfNotNull(outcome?.takeIf { it.kind != DocumentaryAnswer.Kind.MODEL }?.let { "Réponse du modèle écartée (${it.reason}) : « ${it.rejectedDraft} »" })
+            transport.lastMetrics.value?.historyPairsSent, model.modelLabel) + listOfNotNull(outcome?.takeIf { it.kind != DocumentaryAnswer.Kind.MODEL }?.let { "Réponse du modèle écartée (${it.reason}) : « ${it.rejectedDraft} »" })
         val speech = tts?.takeIf { voiceOutputEnabled }
         if (speech == null) {
             exchanges += Exchange(text, answer, viaVoice, captureMs, sttMs, llmMs, firstText)

@@ -6,8 +6,8 @@ package fr.jarvis.v3.conv
  */
 object Provenance {
     fun explain(facts: List<WorkingMemory.Fact>, confirmedMemories: Int, sources: List<String>, actionRequested: Boolean,
-                actionNotice: Boolean, historyPairs: Int?): List<String> = buildList {
-        add("Texte généré localement par le modèle Qwen3-0.6B : non vérifié, il peut se tromper.")
+                actionNotice: Boolean, historyPairs: Int?, model: String = "Qwen3-0.6B"): List<String> = buildList {
+        add("Texte généré localement par le modèle $model : non vérifié, il peut se tromper.")
         historyPairs?.let { add("Contexte relu par le modèle : $it échange(s) précédent(s) de la conversation.") }
         if (facts.isNotEmpty()) add("Faits que tu as dits dans cette conversation : " + facts.joinToString(" ; ") { it.value } + ".")
         if (confirmedMemories > 0) add("Souvenirs confirmés par toi : $confirmedMemories.")

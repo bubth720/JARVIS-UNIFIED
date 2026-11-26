@@ -40,6 +40,12 @@ class ConvLanguageModel(
     private val instruction: (List<ConversationHistory.Turn>, String) -> String = V1bPolicy::systemFor,
     /** Protected engine profile: true = Qwen3 0.6B (production); false = the engine's own 1.7B profile (study test APK only). */
     private val small: Boolean = true,
+    /** NEXT-01 profile (ModelCatalog): threads and context passed to the protected loader, which refuses anything outside
+     * its own native policy (0.6B: 512/768 and 1 thread only). Defaults = the V1-B values, i.e. unchanged behaviour. */
+    private val threads: Int = V1bPolicy.THREADS,
+    private val maxContext: Int = V1bPolicy.CONTEXT,
+    /** Short name of the loaded model, for provenance and the Command Center (never inferred). */
+    val modelLabel: String = "Qwen3-0.6B",
 ) : ConversationalLanguageModel {
     init { require(outputCeiling in 1..V1bPolicy.HARD_CEILING) { "A02_OUTPUT_POLICY_REFUSED" } }
     private val executor = Executors.newSingleThreadExecutor { Thread(it, "jarvis-a02-engine") }
@@ -56,7 +62,7 @@ class ConvLanguageModel(
     @Volatile var lastInstruction: String? = null
         private set
 
-    override val capabilities = InferenceCapabilities(maxContextSize = V1bPolicy.CONTEXT, maxGenerationTokens = outputCeiling)
+    override val capabilities = InferenceCapabilities(maxContextSize = maxContext, maxGenerationTokens = outputCeiling)
 
     override suspend fun warmUp(settings: JarvisSettings) {
         check(!destroyed) { "ENGINE_DESTROYED" } // the worker is shut down after destroy()
@@ -65,10 +71,10 @@ class ConvLanguageModel(
     private fun load(settings: JarvisSettings) {
         if (loaded) return
         native.begin(handle)
-        val context = contextFor(settings)
+        val context = if (maxContext == V1bPolicy.CONTEXT) contextFor(settings) else maxContext
         model.sourceFd().use { source ->
             lastTrace = String(native.loadSealedFd(handle, source.fd, model.sizeBytes, model.sha256.toByteArray(Charsets.US_ASCII),
-                memoryBudgetBytes(), context, V1bPolicy.THREADS, small), Charsets.UTF_8)
+                memoryBudgetBytes(), context, threads, small), Charsets.UTF_8)
         }
         // Every protected load resets the ceiling to 96: opt in to the V1-B ceiling, or fail closed.
         val admitted = runCatching { native.setOutputCeiling(handle, outputCeiling) }
