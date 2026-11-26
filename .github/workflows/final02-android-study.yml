@@ -30,7 +30,7 @@ jobs:
           - {label: emu35-1.7b-ctx1536-2t-c96-PERFORMANCE, model: qwen3-1.7b-q4_k_m-unsloth, small: 'false', ctx: 1536, threads: 2}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        with: {persist-credentials: false}
+        with: {fetch-depth: 0, persist-credentials: false}   # import_manifest verifies the import commit's git blobs
       # Published French bench + scorer of the CONVERSATION-01 study (data only, never built).
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with: {repository: bubth720/JARVIS-LLM, ref: 3e2560e22c12483c35d6407e4327546ffe45abb1, path: study-data, persist-credentials: false}
