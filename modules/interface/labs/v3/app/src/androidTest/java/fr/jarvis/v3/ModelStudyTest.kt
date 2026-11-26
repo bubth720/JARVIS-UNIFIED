@@ -68,10 +68,16 @@ class ModelStudyTest {
         val path = args.getString("model"); assumeTrue(path != null)
         val file = File(path!!); val sha = args.getString("sha256")!!; val label = args.getString("label")!!
         val small = args.getString("small") != "false"
+        // FINAL-02: optional explicit configuration so both models run with IDENTICAL parameters. Defaults keep the
+        // CONVERSATION-01 behaviour (V1b context, threads, output). The native policy still refuses anything outside
+        // its limits (0.6B: context 512/768, 1 thread, output <= 96); nothing here raises a limit.
+        val threads = args.getString("threads")?.toInt() ?: V1bPolicy.THREADS
+        val contextSize = args.getString("context")?.toInt() ?: V1bPolicy.CONTEXT
+        val ceiling = args.getString("ceiling")?.toInt() ?: V1bPolicy.DEFAULT_OUTPUT
         val items = args.getString("benches")!!.split(',').flatMap { f ->
             JSONObject(File(f).readText()).getJSONArray("items").let { a -> (0 until a.length()).map { a.getJSONObject(it) } } }
         val out = JSONObject().put("label", label).put("platform", "Android ${Build.VERSION.SDK_INT} ${Build.SUPPORTED_ABIS.first()} ${Build.MODEL} (emulator figures are NOT phone figures)")
-            .put("config", JSONObject().put("small", small).put("context", V1bPolicy.CONTEXT).put("threads", V1bPolicy.THREADS).put("ceiling", V1bPolicy.DEFAULT_OUTPUT)
+            .put("config", JSONObject().put("small", small).put("context", contextSize).put("threads", threads).put("ceiling", ceiling)
                 .put("instruction", "app ConversationContext(ATHENA compact) = persona + working memory"))
         val bench = JSONArray(); out.put("bench", bench)
         val samples = JSONArray(); out.put("thermalSamples", samples)
@@ -80,20 +86,20 @@ class ModelStudyTest {
         val model = ConvLanguageModel(SealedNativeBridge.get(), VerifiedModel({
             val pfd = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
             object : SourceDescriptor { override val fd = pfd.fd; override fun close() = pfd.close() }
-        }, file.length(), sha), ::memoryBudgetBytes, instruction = context::instructionFor, small = small)
+        }, file.length(), sha), ::memoryBudgetBytes, instruction = context::instructionFor, small = small, threads = threads, maxContext = contextSize)
         // Thermal sampler every 10 s while the model works (status, headroom, battery temperature).
         val running = AtomicBoolean(true); val t0 = SystemClock.elapsedRealtime()
         val sampler = thread(name = "study-thermal") { while (running.get()) { synchronized(samples) { samples.put(thermal().put("tMs", SystemClock.elapsedRealtime() - t0)) }; Thread.sleep(10_000) } }
         try {
             memory.put("budgetBytesAtLoad", memoryBudgetBytes()).put("pssBeforeKb", Debug.getPss()).put("rssBeforeKb", proc("VmRSS"))
             val l0 = SystemClock.elapsedRealtime()
-            runBlocking { model.warmUp(JarvisSettings(systemPrompt = V1bPolicy.SYSTEM_PROMPT, contextSize = V1bPolicy.CONTEXT, maxTokens = V1bPolicy.DEFAULT_OUTPUT)) }
+            runBlocking { model.warmUp(JarvisSettings(systemPrompt = V1bPolicy.SYSTEM_PROMPT, contextSize = contextSize, maxTokens = ceiling)) }
             memory.put("loadMs", SystemClock.elapsedRealtime() - l0).put("pssLoadedKb", Debug.getPss()).put("rssLoadedKb", proc("VmRSS"))
             for (item in items) {
                 val turns = item.getJSONArray("turns"); val history = ArrayList<ConversationHistory.Turn>(); val res = JSONArray()
                 for (k in 0 until turns.length()) {
                     val q = turns.getString(k)
-                    val r = runCatching { runBlocking { model.generateTurns(history, q, V1bPolicy.DEFAULT_OUTPUT) { } } }
+                    val r = runCatching { runBlocking { model.generateTurns(history, q, ceiling) { } } }
                     r.onSuccess { t ->
                         res.put(JSONObject().put("question", q).put("answer", t.text).put("firstTokenMs", t.metrics.firstTokenMs).put("totalMs", t.metrics.totalMs)
                             .put("decodeTokensPerSecond", t.metrics.decodeTokensPerSecond).put("promptTokens", t.metrics.promptTokens).put("generatedTokens", t.metrics.generatedTokens))
@@ -105,6 +111,7 @@ class ModelStudyTest {
                 memory.put("vmHwmKb", proc("VmHWM")).put("pssPeakSampleKb", maxOf(memory.optLong("pssPeakSampleKb", 0), Debug.getPss()))
             }
             memory.put("pssAfterBenchKb", Debug.getPss()).put("rssAfterBenchKb", proc("VmRSS")).put("vmHwmKb", proc("VmHWM"))
+            out.put("cancellation", cancellation(model, ceiling))
         } finally {
             val unloaded = runBlocking { model.destroy() }
             memory.put("unload", unloaded.name).put("pssAfterUnloadKb", Debug.getPss()).put("rssAfterUnloadKb", proc("VmRSS"))
@@ -114,5 +121,19 @@ class ModelStudyTest {
         }
         assertEquals(UnloadResult.CONFIRMED.name, memory.getString("unload"))
         assertEquals(items.size, bench.length())
+    }
+
+    /** FINAL-02: Stop requested at the first streamed text; measures the time until the turn returns (3 trials). */
+    private fun cancellation(model: ConvLanguageModel, ceiling: Int): JSONArray {
+        val trials = JSONArray()
+        repeat(3) {
+            val stopAt = java.util.concurrent.atomic.AtomicLong(0); val t0 = SystemClock.elapsedRealtime()
+            val r = runCatching { runBlocking { model.generateTurns(emptyList(), "Raconte-moi une longue histoire sur la mer.", ceiling) {
+                if (stopAt.compareAndSet(0, SystemClock.elapsedRealtime())) model.requestStop() } } }
+            val end = SystemClock.elapsedRealtime(); val s = stopAt.get()
+            trials.put(JSONObject().put("stopRequested", s > 0).put("firstTextMs", if (s > 0) s - t0 else -1)
+                .put("stopToReturnMs", if (s > 0) end - s else -1).put("outcome", r.fold({ "RETURNED" }, { it.message ?: it.javaClass.simpleName })))
+        }
+        return trials
     }
 }

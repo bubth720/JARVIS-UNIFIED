@@ -1,0 +1,100 @@
+name: FINAL-02 Android model study (emulator only — NOT a phone; one LLM per run; built from the monorepo)
+# Same app, same protected A02 load, same app instruction and 44 French scenarios; ctx 768 / 1 thread / output 96
+# for both models (identical parameters), plus the PERFORMANCE profile of the 1.7B (1536 / 2 threads) for information.
+# The protected 90 s per-turn deadline and every native limit are unchanged. Nothing is committed; results go to the log.
+on:
+  push:
+    branches: [feat/next-01-android-1p7b-20261126]
+    paths: ['.github/workflows/final02-android-study.yml', 'modules/interface/labs/v3/tools/run_fair_study.sh',
+            'modules/interface/labs/v3/app/src/androidTest/java/fr/jarvis/v3/ModelStudyTest.kt']
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: final02-android-study-${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  study:
+    name: ${{ matrix.label }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {label: emu35-0.6b-ctx768-1t-c96, model: qwen3-0.6b-q4_k_m-unsloth, small: 'true', ctx: 768, threads: 1}
+          - {label: emu35-1.7b-ctx768-1t-c96, model: qwen3-1.7b-q4_k_m-unsloth, small: 'false', ctx: 768, threads: 1}
+          - {label: emu35-1.7b-ctx1536-2t-c96-PERFORMANCE, model: qwen3-1.7b-q4_k_m-unsloth, small: 'false', ctx: 1536, threads: 2}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {persist-credentials: false}
+      # Published French bench + scorer of the CONVERSATION-01 study (data only, never built).
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-LLM, ref: 3e2560e22c12483c35d6407e4327546ffe45abb1, path: study-data, persist-credentials: false}
+      - name: Monorepo guards and V3 inputs
+        run: |
+          python3 tooling/monorepo/import_manifest.py
+          python3 tooling/monorepo/validate_sources.py
+          python3 modules/interface/labs/v3/tools/prepare_monorepo_sources.py --monorepo . --output "$RUNNER_TEMP/inputs"
+          (cd modules/llm && tools/prepare-native.sh)
+          (cd modules && interface/labs/v1/tools/prepare_whisper.sh)
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with: {distribution: temurin, java-version: '17'}
+      - uses: gradle/actions/setup-gradle@v4
+        with: {gradle-version: '8.13'}
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '11076708'
+          log-accepted-android-sdk-licenses: false
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0 ndk;28.1.13356709 cmake;3.22.1'
+      - name: Build app + test APK (x86_64 for the emulator)
+        run: |
+          M="$GITHUB_WORKSPACE/modules"
+          gradle -p modules/interface/labs/v3 -PlabSources="$RUNNER_TEMP/inputs/kotlin" -Pa02Root="$M/llm" -PvoiceRoot="$M/voice" -PnexusRoot="$M/nexus" \
+            -PcoreMemorySources="$RUNNER_TEMP/inputs/core-memory" -PwhisperSource="$M/interface/labs/v1/.deps/whisper.cpp" -Pv1Abis=x86_64 \
+            :app:assembleDebug :app:assembleDebugAndroidTest --no-daemon --max-workers=2 --console=plain
+      - name: Model of this run from its pinned source (size + SHA-256 from the V3 lock), bench data
+        run: |
+          r="$RUNNER_TEMP/study-res"; mkdir -p "$r"
+          read -r repo rev file bytes sha < <(python3 -c "import json;m=next(x for x in json.load(open('modules/interface/labs/v3/sources.json'))['models'] if x['id']=='${{ matrix.model }}');print(m['repository'],m['revision'],m['filename'],m['bytes'],m['sha256'])")
+          curl --fail --location --retry 2 "https://huggingface.co/$repo/resolve/$rev/$file" -o "$r/model.gguf"
+          test "$(stat -c %s "$r/model.gguf")" = "$bytes"; echo "$sha  $r/model.gguf" | sha256sum -c -
+          echo "SHA=$sha" >> "$GITHUB_ENV"
+          cp study-data/a02/tests/bench/fr-bench-30.json study-data/a02/tests/bench/fr-conv-01.json "$r/"
+      - name: Enable emulator acceleration
+        run: test -e /dev/kvm && sudo chmod a+rw /dev/kvm
+      - name: API 35 emulator — ${{ matrix.label }} (airplane mode)
+        id: study
+        continue-on-error: true
+        timeout-minutes: 200
+        uses: reactivecircus/android-emulator-runner@4c44018e59b437e86cdfc41da381398f93ed8808
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          ram-size: 6144M
+          cores: 4
+          disable-animations: true
+          emulator-options: -no-window -no-snapshot -gpu swiftshader_indirect -no-boot-anim -noaudio
+          script: cd modules && bash interface/labs/v3/tools/run_fair_study.sh "$RUNNER_TEMP/study-res" "$RUNNER_TEMP/study" ${{ matrix.label }} "$SHA" ${{ matrix.small }} ${{ matrix.ctx }} ${{ matrix.threads }} 96
+      - name: Score and measurements (printed in the log)
+        if: always()
+        run: |
+          d="$RUNNER_TEMP/study"; cat "$d/results.txt" 2>/dev/null || echo NOT_RUN
+          f="$d/study-${{ matrix.label }}.json"
+          if [ -f "$f" ]; then
+            python3 study-data/a02/tests/bench_score.py "$f" | tee "$d/score.md"
+            python3 -c "import json;e=json.load(open('$f'));print('CONFIG',json.dumps(e.get('config')));print('MEMORY',json.dumps(e.get('memory')));print('CANCELLATION',json.dumps(e.get('cancellation')));print('THERMAL_END',json.dumps(e.get('thermalEnd')));print('WALL_MS',e.get('wallMs'));T=[t for b in e['bench'] for t in b['turns']];print('TURNS',len(T),'ERRORS',sum(1 for t in T if t.get('error')),sorted(set(t['error'] for t in T if t.get('error'))))"
+          else echo "NO_RESULT"; fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: final02-${{ matrix.label }}-${{ github.sha }}
+          retention-days: 14
+          path: ${{ runner.temp }}/study/
+      - name: Verdict
+        run: test "${{ steps.study.outcome }}" = success
