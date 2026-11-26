@@ -1,0 +1,29 @@
+name: JARVIS monorepo source guard
+on:
+  pull_request:
+    paths:
+      - 'tooling/monorepo/**'
+      - '.github/workflows/monorepo-source-guard.yml'
+      - 'docs/final-01/MONOREPO-MIGRATION-20261126.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-manifest-and-offline-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate source pins and safety invariants
+        run: python3 tooling/monorepo/validate_sources.py
+      - name: Synthetic local Git import regression tests
+        run: python3 -m unittest discover -s tooling/monorepo/tests -v
+      - name: Ensure no downloaded weights or secrets enter the monorepo
+        run: |
+          git diff --check
+          test ! -d modules || ! find modules -type f \( -name '*.gguf' -o -name '*.keystore' -o -name '*.jks' -o -name '*.apk' \) | grep -q .

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "type": "unified_source_snapshot_proposal",
+  "coordinator": {
+    "repository": "bubth720/JARVIS-UNIFIED",
+    "base_sha": "cb04988f71217a1ae486185d269aa9794dcc10ca"
+  },
+  "policy": {
+    "one_core": true,
+    "one_local_llm": true,
+    "android_offline": true,
+    "never_merge_main_without_owner_approval": true,
+    "model_weights_excluded": true,
+    "source_repos_remain_archived_only_after_verified_migration": true
+  },
+  "modules": [
+    {
+      "id": "core",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "source_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "target": "modules/core",
+      "embedded_in_s04": true,
+      "status": "BASELINE"
+    },
+    {
+      "id": "llm",
+      "repository": "bubth720/JARVIS-LLM",
+      "source_sha": "2e011776d9e0f675bcae49b739f12a3a6dbf4de4",
+      "candidate_sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+      "target": "modules/llm",
+      "embedded_in_s04": true,
+      "status": "BASELINE_CANDIDATE_NO_GO"
+    },
+    {
+      "id": "voice",
+      "repository": "bubth720/JARVIS-VOICE",
+      "source_sha": "92d07453260553466c92196454b56929b7494b2f",
+      "candidate_sha": "58907351324b5a86385b08a2b61595efedb28357",
+      "target": "modules/voice",
+      "embedded_in_s04": true,
+      "status": "BASELINE_CANDIDATE_NO_GO"
+    },
+    {
+      "id": "interface",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "source_sha": "e6489bf011c804fcbb699f41416e4b389e50d66a",
+      "target": "modules/interface",
+      "embedded_in_s04": true,
+      "status": "BASELINE_S04"
+    },
+    {
+      "id": "nexus",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "source_sha": "06ccf98a7709364bf09cc1ecea1c35663d5787cf",
+      "candidate_sha": "5f10193440972ba25b30645d2811537418eface5",
+      "target": "modules/nexus",
+      "embedded_in_s04": true,
+      "status": "BASELINE_CANDIDATE_NO_GO"
+    },
+    {
+      "id": "services",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "source_sha": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+      "target": "modules/services",
+      "embedded_in_s04": false,
+      "status": "ISOLATED_OFF"
+    },
+    {
+      "id": "evolution",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "source_sha": "009961af020bb8ed3b212f89a344c4d64e518e5d",
+      "target": "modules/evolution",
+      "embedded_in_s04": false,
+      "status": "DIAGNOSTIC_ONLY_SANDBOX_BLOCKED"
+    }
+  ]
+}
