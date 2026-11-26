@@ -1,0 +1,123 @@
+{
+ "format": "jarvis.final-01.baseline-lock/1",
+ "captured_utc": "2026-11-21",
+ "rule": "Full SHAs only; a branch name is never a baseline. Nothing here grants any authorization.",
+ "coordination": {
+  "repo": "JARVIS-UNIFIED",
+  "branch": "ccr-e05fe51e-ycqubx",
+  "base": "0af322c1e3531a5ebfb13c6f0a608900da6c7aee",
+  "note": "fast-forwarded to codex/global-01-s04-20261119; F00 adds audit/final-01 only"
+ },
+ "mission_references": {
+  "CORE": {
+   "repo": "JAVIS-Local-v2",
+   "shas": [
+    "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+    "49ad428e94edd75c2a1d115c8c2504f26609eace"
+   ]
+  },
+  "LLM": {
+   "repo": "JARVIS-LLM",
+   "shas": [
+    "61ae3a4b7e5ea57a28e2819bca16f3d78bc13851",
+    "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+   ]
+  },
+  "VOICE": {
+   "repo": "JARVIS-VOICE",
+   "shas": [
+    "cb32fbbd60c75791fb08a714f6fd030e4911bcd5",
+    "58907351324b5a86385b08a2b61595efedb28357"
+   ]
+  },
+  "INTERFACE": {
+   "repo": "JARVIS-INTERFACE",
+   "shas": [
+    "e6489bf011c804fcbb699f41416e4b389e50d66a"
+   ]
+  },
+  "NEXUS": {
+   "repo": "JARVIS-NEXUS",
+   "shas": [
+    "5f10193440972ba25b30645d2811537418eface5"
+   ]
+  },
+  "EVOLUTION": {
+   "repo": "JARVIS-VOLUTION-",
+   "shas": [
+    "c4abfb035e3e99cc52840b04af06e3cea818c7a0",
+    "84ebc2e2b55d48306247fc9045a712294abaf457",
+    "68e095660975cca9004d474d35ad3daad3eebd80"
+   ]
+  },
+  "SERVICES": {
+   "repo": "JARVIS-SERVICES",
+   "shas": [
+    "8d80d09d6aabf6eac00a7bc6bb4930862bd72812"
+   ]
+  },
+  "UNIFIED": {
+   "repo": "JARVIS-UNIFIED",
+   "shas": [
+    "f1f30dc3cef2043ccfc68347c2cdc9b4e732de88",
+    "0af322c1e3531a5ebfb13c6f0a608900da6c7aee"
+   ]
+  }
+ },
+ "apk_v3_pins_at_interface_s04": {
+  "source": "JARVIS-INTERFACE e6489bf .github/workflows/v3-cockpit.yml",
+  "CORE": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+  "LLM": "2e011776d9e0f675bcae49b739f12a3a6dbf4de4",
+  "NEXUS": "06ccf98a7709364bf09cc1ecea1c35663d5787cf",
+  "VOICE": "92d07453260553466c92196454b56929b7494b2f",
+  "drift": {
+   "LLM": "pin is 10 commits behind 9c3fc500 (A-002 successor CI)",
+   "NEXUS": "pin is 27 commits behind 5f101934 (N01-A3)",
+   "VOICE": "pin is 1-2 commits behind 58907351 / cb32fbbd (A-003 guards)",
+   "CORE": "pin includes feat/mem-02-intensive 49ad428e"
+  }
+ },
+ "frontier_heads_without_pr": {
+  "JARVIS-LLM": {
+   "ccr-5cf17ed2-phgk00": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+   "mission-003d-core-generation-contract": "c4e7611eebb64a96a796164bc3d4c961dbc7dcba",
+   "plan/intensive-2026-10-22": "fdb71605d91b69484a38fcf0df283365a2493f38"
+  },
+  "JARVIS-VOICE": {
+   "ccr-5cf17ed2-phgk00": "58907351324b5a86385b08a2b61595efedb28357",
+   "feat/voice-performance-core-contract-005k": "824ae2b1c083b8165ad02ef24ad1cda02cc2d68c",
+   "plan/intensive-2026-10-22": "31a0087381db14a9d2256e6e64373ef45b38b616"
+  },
+  "JARVIS-INTERFACE": {
+   "ccr-5cf17ed2-phgk00": "2c0bc2b5ae6f080019edc09162ca35319e651019",
+   "codex/global-01-s04-20261119": "e6489bf011c804fcbb699f41416e4b389e50d66a",
+   "codex/global-01-s04-cible-20261119": "391c6e2654df007755ff597b8a6fcadb41e2b7b5",
+   "codex/global-01-s04-diagnostic-20261119": "7b46e4624bcfd3c5f45c4acd8b4a85ad4c62e33b",
+   "codex/global-01-s04-preuves-20261119": "615bd31d335116a7d8eb3250a05d60a0510377cd",
+   "feature/avatar-png-001": "3daffe7e5c0d9d76c53b10e1029782f4f3e25030"
+  },
+  "JARVIS-NEXUS": {
+   "feat/nex-06a-android-api24": "374ea2e2fd640e78f2f5e12e60e75b493420e504"
+  },
+  "JARVIS-VOLUTION-": {
+   "feat/evolution-final-01": "c4abfb035e3e99cc52840b04af06e3cea818c7a0"
+  },
+  "JARVIS-SERVICES": {
+   "feat/services-final-01": "d16dd84f27881460ec9f02d2a54d9ddff23187dc"
+  },
+  "JARVIS-UNIFIED": {
+   "codex/global-01-s04-20261119": "0af322c1e3531a5ebfb13c6f0a608900da6c7aee",
+   "codex/m56-action-permission-core": "323a79b26b96486055ea9a9d2ed2fc273981dfe8",
+   "decision/identity-001b-d4-02e-approved-2026-10-17": "275eca892c20b6dae3bfa20b241099542fd4ced6",
+   "design/d4-02e-f1-f2-recovery-clarification": "49dd4027d2ccb54bf330f591d3ee17f5dc577132"
+  },
+  "JAVIS-Local-v2": {
+   "design/alpha1-003b1-r-corrections": "1539b332fba7e487fe85013cc41890c8a09052d6",
+   "plan/intensive-2026-10-22": "1b7ac9b35b5e6e133167fcaf1873e58b9db7288e"
+  }
+ },
+ "guards": {
+  "INTERFACE V1 guard": "labs/v1/tools/check_scope.py frozen at 9599d99147f9c9baaccdd07b4d5a6359d558b4c6 (430 files)",
+  "RESEARCH-B0 preservation": "525 UNIFIED files frozen at the B0 base 18344721 (see RISKS R-07)"
+ }
+}

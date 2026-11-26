@@ -1,0 +1,25 @@
+{
+ "lot": "APK pin VOICE 92d0745 -> 5890735",
+ "required": [
+  {
+   "id": "drop-in-VOICE",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  },
+  {
+   "id": "api-surface-VOICE-candidate",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  },
+  {
+   "id": "voice-ci",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  },
+  {
+   "id": "owner-exception-frozen-v1-lock",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  },
+  {
+   "id": "emulator-campaign-with-candidate-voice",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  }
+ ]
+}

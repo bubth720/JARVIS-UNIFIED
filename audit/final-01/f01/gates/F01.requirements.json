@@ -1,0 +1,37 @@
+{
+ "lot": "F01-CONTRACTS-AND-INTEGRATION-GATES",
+ "required": [
+  {
+   "id": "final01-tooling-tests",
+   "sha": "dce5a2a65177adf0f8ea62780f388121987bac02"
+  },
+  {
+   "id": "api-surface-LLM-candidate",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  },
+  {
+   "id": "api-surface-VOICE-candidate",
+   "sha": "58907351324b5a86385b08a2b61595efedb28357"
+  },
+  {
+   "id": "api-surface-NEXUS-candidate",
+   "sha": "5f10193440972ba25b30645d2811537418eface5"
+  },
+  {
+   "id": "v1-guard-430-files",
+   "sha": "e6489bf011c804fcbb699f41416e4b389e50d66a"
+  },
+  {
+   "id": "g02-campaign-preservation-guard",
+   "sha": "4e140c0379b5a2cc7df60a44193a86dd795cfa66"
+  },
+  {
+   "id": "b0-guard-on-own-head",
+   "sha": "f1f30dc3cef2043ccfc68347c2cdc9b4e732de88"
+  },
+  {
+   "id": "apk-build-local-pinned",
+   "sha": "e6489bf011c804fcbb699f41416e4b389e50d66a"
+  }
+ ]
+}

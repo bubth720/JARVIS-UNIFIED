@@ -1,0 +1,26 @@
+{
+ "lot": "APK pin NEXUS 06ccf98 -> 5f10193",
+ "verdict": "NO-GO",
+ "reasons": [
+  "emulator-campaign-with-candidate-nexus: NOT_RUN at 5f10193440972ba25b30645d2811537418eface5"
+ ],
+ "checked": [
+  {
+   "id": "api-surface-NEXUS-candidate",
+   "status": "PASS"
+  },
+  {
+   "id": "nexus-jvm-tests",
+   "status": "PASS"
+  },
+  {
+   "id": "apk-build-local-with-candidate-nexus",
+   "status": "PASS"
+  },
+  {
+   "id": "emulator-campaign-with-candidate-nexus",
+   "status": "NOT_RUN"
+  }
+ ],
+ "note": "GO = every required test PASS at the exact SHA; never an authorisation to merge, install or activate."
+}

@@ -1,0 +1,256 @@
+repo,branch,sha,status,date,subject
+JARVIS-INTERFACE,ccr-5cf17ed2-phgk00,2c0bc2b5ae6f080019edc09162ca35319e651019,FRONTIER_NO_PR,2026-11-15,ci(v3): review captures and reports of run 43658134254 [skip ci]
+JARVIS-INTERFACE,codex/global-01-s04-20261119,e6489bf011c804fcbb699f41416e4b389e50d66a,FRONTIER_NO_PR,2026-11-19,fix(v3): cap listening waveform updates below the window budget [skip ci]
+JARVIS-INTERFACE,codex/global-01-s04-cible-20261119,391c6e2654df007755ff597b8a6fcadb41e2b7b5,FRONTIER_NO_PR,2026-11-19,test(v3): verify the listening waveform budget on API 29 [skip ci]
+JARVIS-INTERFACE,codex/global-01-s04-diagnostic-20261119,7b46e4624bcfd3c5f45c4acd8b4a85ad4c62e33b,FRONTIER_NO_PR,2026-11-19,test(v3): collect valid pre-fix render and tab evidence after verified import [skip ci]
+JARVIS-INTERFACE,codex/global-01-s04-preuves-20261119,615bd31d335116a7d8eb3250a05d60a0510377cd,FRONTIER_NO_PR,2026-11-19,ci(v3): readback the final waveform-limited S04 candidate [skip ci]
+JARVIS-INTERFACE,feature/avatar-png-001,3daffe7e5c0d9d76c53b10e1029782f4f3e25030,FRONTIER_NO_PR,2026-11-11,feat(avatar): add private 36-PNG pose library importer and gallery [AVATAR-PNG-001]
+JARVIS-INTERFACE,codex/m50-s1b-android-20261104,b9a6c1997710c182dd481b23a47ff7120e3e98a0,in_open_pr,2026-11-04,fix(m50): use supported emulator airplane-mode API and preserve test diagnostics
+JARVIS-INTERFACE,codex/m51-r1-android-stability,b9a9506785b8851f55789ed4329c9394a3937447,in_open_pr,2026-11-08,docs(m51-r1): preserve Android failures and deliver blocked qualification [skip ci]
+JARVIS-INTERFACE,codex/m51-ui-performance-review,a7ced2e97a010aadb5827986ea90ec0ed1907aa0,in_open_pr,2026-11-07,"M51.05: isolate gfxinfo parser, comparison guards and UI performance audit"
+JARVIS-INTERFACE,codex/m51-v1-foundation,9c8960a7c9d3f572dff41fe18a5b002c9f66ac8a,in_open_pr,2026-11-08,fix(m51): qualify actual emulator geometry before Android tests
+JARVIS-INTERFACE,codex/m54-avatar-preparation,2397bf29526ba48ac881e67c8e07dde3e01cf489,in_open_pr,2026-11-08,feat(m54): prepare isolated avatar controller and private asset inventory
+JARVIS-INTERFACE,codex/m55-a-p4-r1plus-kvm-diagnostic,ecdebf861f77d87e83958ec3aae3fb8541dfaebd,in_open_pr,2026-11-12,ci(m55-a-p4): summary step must not fail on preflight-only API 35 (no picker file) [skip c
+JARVIS-INTERFACE,codex/prefusion-lot2-20261027,4bc1993d4b6525b248f2b12e95a18a279a3d9fdc,in_open_pr,2026-10-27,prefusion lot2: passive diagnostics and fail-closed regressions
+JARVIS-INTERFACE,codex/prefusion-lot2-interface-safe,a7dd2c37baa2568860557c3cf3f07c31374de1d2,in_open_pr,2026-10-27,test(interface): require explicit UNKNOWN on every malformed citation input
+JARVIS-INTERFACE,codex/prefusion-lot3-interface,9e60e4571fe21d112b2f5e425391b8bcdcc3299e,in_open_pr,2026-10-28,fix(ci): extract only public fixture PNG over binary ADB channel
+JARVIS-INTERFACE,codex/reuse-first-r1plus-20261108,d569ce816cf39191742769afef5b0711bc9a28cd,in_open_pr,2026-11-08,fix(reuse-r1plus): reject recorded system ANR reproduced from real C1 capture
+JARVIS-INTERFACE,codex/reuse-first-r1plus-c1-android,7282fd769d4ab787467d08fd8059b2f1e18ca139,in_open_pr,2026-11-08,test(reuse-r1plus): prepare bounded Android C1 diagnostics without application changes
+JARVIS-INTERFACE,development/mission-002,d1c0931c4507e9af8f1aa60951947c23f4394b56,in_open_pr,2026-10-14,Initialize standalone Android Compose application for mission 002
+JARVIS-INTERFACE,feat/ava-01-ui-avatar,0c6d8a1bdeabe8f23fe8f98263cfe88d8c3c216e,in_open_pr,2026-10-23,feat(avatar): add bounded local layered assets and preview
+JARVIS-INTERFACE,feat/ava-03-athena-premium,ab0a3f5a992a90ca53dc20c9c56d3bd8a0c2b3a0,in_open_pr,2026-10-24,Fetch pinned history for AVA-03 CI scope validation
+JARVIS-INTERFACE,feat/ava-04-delivery,283ed2f3cd361d5b0b6bc927432bf836af8db1f6,in_open_pr,2026-10-24,Record corrected private Athena captures and shared-base validation
+JARVIS-INTERFACE,feat/fusion-02-interface,3c6921e2e40dd8e7c0756e07e854ce0bc1d9c5ff,in_open_pr,2026-10-26,docs(fusion-02): record fresh Android qualification and synthetic evidence
+JARVIS-INTERFACE,feat/interface-final-01,db459ba388a3fea992d80320c3989be0edda8500,in_open_pr,2026-10-25,ci: preserve explicit FINAL-01 integration scope
+JARVIS-INTERFACE,feat/ui-01-native-cockpit,0dfeef8ff09d60a68d18398ccb6b2530f3b87df4,in_open_pr,2026-11-06,docs(ui-01c): publish verified interaction results and original captures [skip ci]
+JARVIS-INTERFACE,feat/ui-01-ui-avatar,48db1ecbb40dfa5b90a8e696fe6c2a62228f5ce9,in_open_pr,2026-10-23,feat(interface): add honest local chat screen and correlated event port
+JARVIS-INTERFACE,feat/ui-02-delivery,4842ef1f47ac2a1efc29e77408dbdb3ec42768bb,in_open_pr,2026-10-24,Add opt-in personality editor and consent-bound memory laboratory
+JARVIS-INTERFACE,feat/ui-03-delivery,0869b3959d3636deab3c938e6cb98b7e555f19af,in_open_pr,2026-10-24,feat(ui-03): qualify bounded content client proposal without activating CORE IPC
+JARVIS-INTERFACE,feature/interface-avatar-001,139bfdc4aac5d2fc9b841c5b804c3b89bfc57ec6,in_open_pr,2026-10-17,Add local layered avatar prototype with lifecycle-aware animations
+JARVIS-INTERFACE,feature/interface-cockpit-v2-008,22c24935d902bac27e891ec736c9c5c647efc0c3,in_open_pr,2026-11-11,"docs(interface-008): deliver verified APK evidence, screenshots and acceptance report"
+JARVIS-INTERFACE,feature/interface-dashboard-004,d2a0ca05723c205e4351d03a3eeb5f2ce898f3a8,in_open_pr,2026-10-16,Preserve scrollable settings and document verified dashboard interactions
+JARVIS-INTERFACE,feature/interface-storage-005,037e2cbe2e100eb06136e9899b815a4e8351fd72,in_open_pr,2026-10-16,Persist dashboard layouts with validated versioned DataStore storage
+JARVIS-INTERFACE,fix/athena-premium-default,1d0a89f3d92cba64122db08cc7b326239f85c08d,in_open_pr,2026-10-25,fix(avatar): make private premium Athena the real primary renderer
+JARVIS-INTERFACE,fix/interface-ci-003,4fe7b19ec7d637dda28cd517ec5f87a186407d0d,in_open_pr,2026-10-15,Document mission 003 CI evidence and proposed branch organization
+JARVIS-INTERFACE,mission/m50-integrated-beta-20261029,3a0841266fd691b74fae784004804429e6e2e219,in_open_pr,2026-10-29,"docs(m50): publish UI-M50-01 verifiable integration mission, runtime OFF"
+JARVIS-INTERFACE,mission/prefusion-gates-20261026,82675ade011e69eb3bccd99efbf46d0697a3276b,in_open_pr,2026-10-26,docs: publish Codex pre-fusion mission UI-PF-01
+JARVIS-INTERFACE,mission/prefusion-lot3-20261027,c14eebdbce8b2fda024043d6abd1e84bc719f113,in_open_pr,2026-10-27,docs(codex): publish UI-PF-02 narrow lot3 mission without runtime enablement
+JARVIS-INTERFACE,perf/m50-s1b-first-response-3s-20261104,13ab06e37a59baeee9b29d0b354cec71f2ea58e8,in_open_pr,2026-11-04,test(perf-ci): confirm bounded offline wait passes delayed Wi-Fi but rejects unsafe radios
+JARVIS-INTERFACE,plan/intensive-2026-10-22,50f5f61708d5ce6b141dec98fe0c73d89eaf00e3,in_open_pr,2026-10-22,docs(interface): publish 4 functional UI and 2.5D avatar mission dossiers
+JARVIS-INTERFACE,test/interface-device-006,ebd6c5fc873054d3f04bb2388d53e407dc73b7b7,in_open_pr,2026-10-16,Validate Android ergonomics and prepare physical-device test kit
+JARVIS-INTERFACE,ccr-e05fe51e-ycqubx,279410195933fad25ec64303fea60a7f77f50a4b,inside_other_branch,2026-11-18,ci(v3): review captures and reports of run 44391288619 [skip ci]
+JARVIS-INTERFACE,claude/repos-folders-analysis-sr65sg,4ed3f99c198fde3b559433bb6fc71c46851c0a3e,inside_other_branch,2026-11-11,ci(v1a): print the APK SHA-256 and both real-model reports in a final summary step
+JARVIS-INTERFACE,codex/gpu-forge-g02-captures-20261116,d2e737a99f36fea4f837d54c24be4c6ffe86e3b9,inside_other_branch,2026-11-17,ci(v3): review captures and reports of run 44034195561 [skip ci]
+JARVIS-INTERFACE,codex/jarvis-v1-delivery,de59e2b0c7b79fc604fb94f057809175e44219e4,inside_other_branch,2026-11-12,ci(v1): standard emulator audio (as VOICE pocket-probe); PulseAudio virtual mic dropped af
+JARVIS-INTERFACE,codex/jarvis-v1b-conversation-performance,d592505d03607d29c0b86dea0de5a2f0f375916b,inside_other_branch,2026-11-12,ci(v1b): judge the dialogue of every API level even when one fails [skip ci]
+JARVIS-INTERFACE,codex/m55-d-cockpit-sphere,b0181526c7b9fa74dff6c6822121c71eceff5827,inside_other_branch,2026-11-12,test(m55-d): swipe across the sphere's real on-screen bounds; record drag events received
+JARVIS-LLM,ccr-5cf17ed2-phgk00,9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71,FRONTIER_NO_PR,2026-11-14,"ci(a02): A-002 — successor integrity workflow: identity/safety blocking, model knowledge m"
+JARVIS-LLM,mission-003d-core-generation-contract,c4e7611eebb64a96a796164bc3d4c961dbc7dcba,FRONTIER_NO_PR,2026-10-16,Record successful Mission 003D validation and native P2 limitations [skip ci]
+JARVIS-LLM,plan/intensive-2026-10-22,fdb71605d91b69484a38fcf0df283365a2493f38,FRONTIER_NO_PR,2026-10-22,docs(llm): publish 3 substantive interchangeable-model/runtime missions
+JARVIS-LLM,codex/llm-lab-admission-review,69400fe26d61688262b94cc8a2d5efe20d1da4be,in_open_pr,2026-11-07,LAB-ADMISSION-01: exact unapplied LAB_CLOUD authority and broker review
+JARVIS-LLM,codex/llm-perf-03a-native-review,ca9d8f060856e134d793d0c23764fae45ce2cc53,in_open_pr,2026-11-05,PERF-03A: keep baseline worktree clean while sharing verified toolchain
+JARVIS-LLM,codex/llm-perf-03b-gateb-prequalification,95bad9cac56dd30cc67eacc7239cf48ffb9dcac3,in_open_pr,2026-11-07,GATE-B: retain HVF blockers and probe documented software emulator mode
+JARVIS-LLM,codex/llm-perf-03b-gateb-qualification,2500a123a69b059bf21ac6bec24be5a52b54a9c5,in_open_pr,2026-11-07,PERF-03B GATE-B: verify authorized GGUF and preserve closed admission
+JARVIS-LLM,codex/llm-perf-03b-native-stream,059cf9c3040d768e1074f62ec5d174c1a27a2590,in_open_pr,2026-11-06,PERF-03B: fence laboratory ownership across Activity restarts
+JARVIS-LLM,codex/llm-perf-ttft-3s,09e278b54b8be58a3d665d2d91de10f8869e40bb,in_open_pr,2026-11-04,PERF-02: let Stop discard unrendered fixture text after producer terminal
+JARVIS-LLM,codex/m50-s1-llm-ci-20261029,b670181987d39d27e2d0d9574fa448397a38fe42,in_open_pr,2026-10-29,ci(m50-s1): add frozen LLM qualification lane and strict scope tests
+JARVIS-LLM,codex/m51-lab-cloud-audit,08fbda527d187f324d94e0adafbca76fa955a343,in_open_pr,2026-11-07,"M51.07: independent LAB_CLOUD review and adversarial evidence, no application"
+JARVIS-LLM,codex/m55-a-p1-llm-f3b-successor,61ae3a4b7e5ea57a28e2819bca16f3d78bc13851,in_open_pr,2026-11-12,ci(r02): run historical F3B verifier on its frozen review commit
+JARVIS-LLM,codex/prefusion-20261026-lot1,6ae8a4f5c2490f6c9814e08957909a8e3a807180,in_open_pr,2026-10-27,ci: route pre-fusion to full frozen-runtime qualification
+JARVIS-LLM,design/003f-f3b-worker-connection,8f1c2f5a936d6c01874d7be6bb987f4459b83374,in_open_pr,2026-10-17,Record F3B preparation CI and pause before applying sensitive patch [skip ci]
+JARVIS-LLM,feat/003f-f3-native-observation,aa85ad4b506bb655dbe5b50ec4b125d19b48e81e,in_open_pr,2026-10-17,Record successful F3A CI and retain native instrumentation approval gate [skip ci]
+JARVIS-LLM,feat/fusion-01-llm-integration,e0b781442b21034a251f6af450396faabc5f667d,in_open_pr,2026-10-25,docs(llm): publish FUSION-01 evidence and successful CI qualification limits
+JARVIS-LLM,feat/fusion-02-llm-prequalification,f147236820e0633b0c88f6f1725e828f71167b27,in_open_pr,2026-10-26,"docs(llm): publish FUSION-02 CI success, raw tests and native qualification limits"
+JARVIS-LLM,feat/llm-01-runtime,062054edcbf47ba96408f751f25189d86b0b023d,in_open_pr,2026-10-23,docs(llm): add machine-verifiable catalogue validation receipt
+JARVIS-LLM,feat/llm-02-runtime,895a067ffc860d56a2dbb1ce22cb274096f8e3a2,in_open_pr,2026-10-23,feat(llm): add structured context planner and fail-closed token port
+JARVIS-LLM,feat/llm-03-runtime,2efb3f7aa6205062ab71f570212019fd1d9885b6,in_open_pr,2026-10-23,feat(llm): add legacy policy profiles and passive broker observations
+JARVIS-LLM,fix/003f-d4-02e1-commit,1ce24405b04a50f97cf30078b9716c7d00c593fc,in_open_pr,2026-10-17,Record successful D4-02E.1 CI and preserve F3/CORE004D gates [skip ci]
+JARVIS-LLM,fixture/003e-p2-secure-endpoint,030152a5f3d888017ad7a7fe8026f2e2c48e8fd5,in_open_pr,2026-10-17,Record successful 003E native and fixture CI with explicit cross-APK limits [skip ci]
+JARVIS-LLM,fixture/003f-bootstrap-attestation,111be993e970051686bd5c27b3115320513a4be7,in_open_pr,2026-10-17,Record successful 003F CI and unresolved bootstrap blockers [skip ci]
+JARVIS-LLM,mission-002-prototype,aa6b3d37c9109dc3da1296bc00214839bb218e39,in_open_pr,2026-10-13,docs: record successful CI artifact and passive diagnostic procedure [skip ci]
+JARVIS-LLM,mission-002b-memory,204c6c9a117501286aac54202c6e7dd1365c48b5,in_open_pr,2026-10-14,docs: record memory diagnostic CI evidence and download [skip ci]
+JARVIS-LLM,mission-002c-tablet,fbda51f3ed762d8e63d5397618daf052567002d6,in_open_pr,2026-10-14,Document measured tablet tradeoffs and verified APK download [skip ci]
+JARVIS-LLM,mission-003-catalogue,0b5eba7a37d9304e2a33e66ab6e84a0f70e02a2a,in_open_pr,2026-10-14,Record catalogue CI evidence and APK installation instructions [skip ci]
+JARVIS-LLM,mission-003b-resources,1756e29557287550b5cfdffdd911cada2a302db6,in_open_pr,2026-10-14,"Document successful Mission 003B CI, APK and tablet validation limits [skip ci]"
+JARVIS-LLM,mission-003c-device-qualification,43503f59f530f2bb48955bce9d7d71e2470fb668,in_open_pr,2026-10-16,Record successful Mission 003C CI and pending physical qualification [skip ci]
+JARVIS-LLM,mission-003d-p2-core-contract,daa46432e847ed9613dc403045498e27281eff42,in_open_pr,2026-10-16,Record successful P2 JNI and Android CI with physical and CORE session limits [skip ci]
+JARVIS-LLM,mission/llm-perf-ttft-3s-20261104,1b62a5c50eb979d82ef8eb0b488ab38c6fe462ce,in_open_pr,2026-11-04,docs(llm): define honest sub-3-second first-token measurement and safe streaming candidate
+JARVIS-LLM,mission/m50-integrated-beta-20261029,615a2f165d6479c0bbb7a7daf2281677884b494f,in_open_pr,2026-10-29,docs(m50): LLM-M50-01 local qualification and independently shippable adapter mission
+JARVIS-LLM,mission/prefusion-gates-20261026,12fc58a81ceee70eedbba2d0b187b1294bae6283,in_open_pr,2026-10-26,docs: publish Codex pre-fusion mission LLM-PF-01
+JARVIS-LLM,mission/r02-watchers-isolation-20261111,0ef36356e39bb0118c9ae42e9b910e3d91279ce7,in_open_pr,2026-11-11,ci(a02): attach immutable source hashes and explicit missing-proof ledger
+JARVIS-LLM,claude/repos-folders-analysis-sr65sg,c00035b6324a68165748b167e19802029764a52f,inside_other_branch,2026-11-11,fix(a02): map the sealed weights read-only private on pre-6.7 kernels
+JARVIS-LLM,codex/jarvis-v1b-conversation-performance,2e011776d9e0f675bcae49b739f12a3a6dbf4de4,inside_other_branch,2026-11-12,feat(a02/v1b): production instruction = intent-routed (general | name) + session memory; c
+JARVIS-LLM,codex/m55-b-local-intelligence,ec9cbc2275d1eba202a0c829ebf7a9f5ed8c67d6,inside_other_branch,2026-11-12,ci(v1): read-only metadata resolution of whisper.cpp ggml models (base/tiny/small q5_1)
+JARVIS-NEXUS,feat/nex-06a-android-api24,374ea2e2fd640e78f2f5e12e60e75b493420e504,FRONTIER_NO_PR,2026-10-24,feat(nexus): add API24 SQLite adapter with verified capability refusals
+JARVIS-NEXUS,claude/repos-folders-analysis-sr65sg,b9485d20031719833aadfcb570b2d62d89ac9e67,in_open_pr,2026-11-11,docs(nexus-00): record CI run 43082478740 results for d2b59e0
+JARVIS-NEXUS,codex/m50-s1-nexus-ci-20261029,be70faa41d202d77eb8cf0cc5c831e10cfb020b5,in_open_pr,2026-10-29,ci(m50-s1): freeze NEXUS LOT3 and route exact reviewed PR HEAD
+JARVIS-NEXUS,codex/m53-readonly-preparation,eae61fb62a9ccd4073b96d71454f89e5a943eae9,in_open_pr,2026-11-08,fix(ci): keep M53 evidence path independent of unavailable job context
+JARVIS-NEXUS,codex/m55-a-p3-nexus-successor-scope,b9485d20031719833aadfcb570b2d62d89ac9e67,in_open_pr,2026-11-11,docs(nexus-00): record CI run 43082478740 results for d2b59e0
+JARVIS-NEXUS,codex/nexus-n01-a2-ci-review-20261117,2dd4447acb592e9e63123c0377b6310d4dae2bf1,in_open_pr,2026-11-17,test(n01-a2): reproduce CI context mismatch and preserve historical scope guards
+JARVIS-NEXUS,codex/nexus-n01-a3-routing-20261118,5f10193440972ba25b30645d2811537418eface5,in_open_pr,2026-11-18,fix(ci): route reviewed REUSE PRs through approved N01-A3 scope guard
+JARVIS-NEXUS,codex/prefusion-20261026-lot1,201f0d2b03209de104157595a557143fe87eb94e,in_open_pr,2026-10-27,ci: restore pre-fusion qualification with exact historical preservation
+JARVIS-NEXUS,codex/prefusion-lot3-nexus,c5dee7ab0344a23bfd80b13cd52d09e8b26241dd,in_open_pr,2026-10-28,test(nexus): reacquire stale DocumentsUI root within a bounded navigation wait
+JARVIS-NEXUS,codex/reuse-first-r1plus-20261108,b7d9d884ddd034e3580a2268fce69ca43030e8c5,in_open_pr,2026-11-08,feat(reuse-r1plus): prepare test-only cited consultation using the existing M53 gateway
+JARVIS-NEXUS,feat/fusion-01-nexus-integration,9d6928cd8651f83fa5091bdb474b33761d366412,in_open_pr,2026-10-25,feat(fusion-01): reconcile portable API24 storage with v4 and qualify real JVM paths
+JARVIS-NEXUS,feat/fusion-02-nexus-android,06ccf98a7709364bf09cc1ecea1c35663d5787cf,in_open_pr,2026-10-26,feat(fusion-02): qualify API24/25 FTS refusals and preserve corrupt and active WAL databas
+JARVIS-NEXUS,feat/nex-01-moteur-local-de-connaissances-,c25d401dff6865657b75d320361ae81811363fa8,in_open_pr,2026-10-23,build: normalize generated Windows wrapper line endings
+JARVIS-NEXUS,feat/nex-02-chaine-d-import-local-extracti,bfa46e1fe08d4943fe864ac53d0c0ba56109ea9c,in_open_pr,2026-10-23,feat(nexus): add resumable local import and atomic FTS indexing
+JARVIS-NEXUS,feat/nex-03-recherche-de-connaissances-cit,777e6afa75ecb99b85e52d68837cb0fefcf161cd,in_open_pr,2026-10-23,feat(nexus): implement scoped cited retrieval and bounded context
+JARVIS-NEXUS,feat/nex-05-sauvegarde-chiffrable-restaura,3acec55616ff8e3b1666091780fca59261377e18,in_open_pr,2026-10-23,feat(nexus): add authenticated snapshots and isolated verified recovery
+JARVIS-NEXUS,feat/nex-07-source-quota-preflight,8c778be1b302d10c8dcbf8444f6e6e051477c825,in_open_pr,2026-10-26,docs(nexus): preserve and explain historical receipt hash failure
+JARVIS-NEXUS,feat/nexus-final-01,d903bf04f497ab0dc7f40e9708ed057e4f24c6ee,in_open_pr,2026-10-25,feat(nexus-final-01): extend local library and add bounded cited knowledge atlas
+JARVIS-NEXUS,mission/m50-integrated-beta-20261029,c02a00e8d6829de48a212cc03ac392e7ec73c82c,in_open_pr,2026-10-29,"docs(m50): publish NEX-M50-01 verifiable integration mission, runtime OFF"
+JARVIS-NEXUS,mission/prefusion-gates-20261026,bdb51f77a5fe105dbff43d43032882fe1474a4ee,in_open_pr,2026-10-26,docs: prepare Codex NEX-PF-01 safe Android qualification
+JARVIS-NEXUS,mission/prefusion-lot3-20261027,b2b899c8cce73ee0763bf6896fb9ceffe62c2bc6,in_open_pr,2026-10-27,fix(nexus-ci): allow only LOT3 mission document in exact frozen-source guard
+JARVIS-NEXUS,plan/intensive-2026-10-22,e4b2018383a35106cd326848fab597ef07a50157,in_open_pr,2026-10-22,docs(nexus): publish 5 substantial intensive development mission dossiers
+JARVIS-NEXUS,work/nex-04-zim-readonly,bbccac2ff2cc052f897c7f5015f234507e047b95,in_open_pr,2026-10-24,feat(nex-04): add read-only ZIM adapter and bounded cited context
+JARVIS-SERVICES,feat/services-final-01,d16dd84f27881460ec9f02d2a54d9ddff23187dc,FRONTIER_NO_PR,2026-10-24,"docs(services): deliver final qualification, reproducible files and APK evidence"
+JARVIS-SERVICES,codex/prefusion-20261026-lot1,ea541d20b08f7ad0949354829a977f6752cbffa3,in_open_pr,2026-10-27,docs: pin verified Java 11 compatibility of the SERVICES port
+JARVIS-SERVICES,codex/prefusion-lot3-services,cfb5f117edc72acd8d5967980d3dfc9dfbf2903f,in_open_pr,2026-10-28,test(services): qualify bounded receipt protocol in isolated lot3 bench
+JARVIS-SERVICES,feat/fusion-02-services,9dfbf60a908a7b44030ef060af4c164e349887be,in_open_pr,2026-10-26,docs(fusion-02): publish final Android qualification and green CI evidence
+JARVIS-SERVICES,feat/lot4-offline-recovery-20261028,7f2416dd73b8fb1d60ec87b09fd9d6749001281d,in_open_pr,2026-10-28,ci: fetch full history for read-only production preservation compare
+JARVIS-SERVICES,feat/serv-01-services,d300642a4f10b53bdc988a43e0d7abb05c0d2253,in_open_pr,2026-10-22,feat(services): add bounded tool dispatch and durable approvals
+JARVIS-SERVICES,feat/serv-02-services,f7681707e7308d4b967e642d2f807f3e354209cc,in_open_pr,2026-10-23,feat(services): add confirmed fresh-document SAF export and conservative rollback
+JARVIS-SERVICES,feat/serv-03-services,3decdc47d82f9b43713c48cab244762941770a81,in_open_pr,2026-10-23,feat(services): add resumable workflows and isolated process loopback
+JARVIS-SERVICES,feat/serv-04a-android-tool-port,f00091a639612b91eca1a301580c8f531249f1e3,in_open_pr,2026-10-24,feat(services): provide API24 in-process document and CSV adapter
+JARVIS-SERVICES,feat/serv-08-wire-preflight,f8976cda0c68449d63a015c89ab1829a852b5e97,in_open_pr,2026-10-26,docs: record isolated follow-up evidence and rollback gates
+JARVIS-SERVICES,feat/serv-09-saf-picker-resilience,7c7fc95ad19e10de877b14fb5d3fe7f53b27d3e4,in_open_pr,2026-10-26,fix(test): do not emit picker UI text on bounded retry
+JARVIS-SERVICES,mission-001-services-foundation,075158b755000f8c6d8e37747cec9de8221daa72,in_open_pr,2026-10-16,"docs(mission-001): record implementation, validation evidence and remaining qualification"
+JARVIS-SERVICES,mission-002a-android-qualification,0f462c8ad5529ba974cefa17fe6562c8d8461d26,in_open_pr,2026-10-16,docs(002a): record cold-cache qualification and successful GitHub Actions
+JARVIS-SERVICES,mission/adr002-principles-lot4-20261028,13242bca1761a5f71bd86e052db4bc7d1909df37,in_open_pr,2026-10-28,docs(services): publish lot4 deterministic two-journal and UNKNOWN lab mission
+JARVIS-SERVICES,mission/m50-integrated-beta-20261029,8d80d09d6aabf6eac00a7bc6bb4930862bd72812,in_open_pr,2026-10-29,"docs(m50): publish SERV-M50-01 verifiable integration mission, runtime OFF"
+JARVIS-SERVICES,mission/prefusion-gates-20261026,365da117ccb29b59ed990711b2c3f72472ce2d9d,in_open_pr,2026-10-26,docs: publish Codex SERV-PF-01 prefusion mission
+JARVIS-SERVICES,mission/prefusion-lot3-20261027,7c9b0efe10187edadbf8555fefe4c98702fa5e98,in_open_pr,2026-10-27,docs: publish SERV-PF-02 bounded receipt protocol test mission
+JARVIS-SERVICES,plan/intensive-2026-10-22,67e7f798b8bbcb8391e0d57ea5b886a2a9edf4db,in_open_pr,2026-10-22,docs(services): publish 3 implementation-heavy mission dossiers
+JARVIS-UNIFIED,codex/global-01-s04-20261119,0af322c1e3531a5ebfb13c6f0a608900da6c7aee,FRONTIER_NO_PR,2026-11-19,docs(audit): preserve the red API 29 verdict and waveform correction
+JARVIS-UNIFIED,codex/m56-action-permission-core,323a79b26b96486055ea9a9d2ed2fc273981dfe8,FRONTIER_NO_PR,2026-11-12,M56: add deterministic policy smoke checks
+JARVIS-UNIFIED,decision/identity-001b-d4-02e-approved-2026-10-17,275eca892c20b6dae3bfa20b241099542fd4ced6,FRONTIER_NO_PR,2026-10-17,docs: approve exact IDENTITY 001B bundle and D4-02E.1 correction design with gates
+JARVIS-UNIFIED,design/d4-02e-f1-f2-recovery-clarification,49dd4027d2ccb54bf330f591d3ee17f5dc577132,FRONTIER_NO_PR,2026-10-17,docs: extend recovery vectors across negotiation and prior-key variants
+JARVIS-UNIFIED,audit/d4-02c-core-llm-convergence,0dbb978994994fa3210124f1e150ca23426d410d,in_open_pr,2026-10-16,docs: audit D4-02C CORE LLM convergence and proposed O3
+JARVIS-UNIFIED,audit/mission-001,004b89d1f86135962e452fb644b489f69fc177d1,in_open_pr,2026-10-15,docs: preserve Mission 001 audit and architecture
+JARVIS-UNIFIED,ccr-5cf17ed2-phgk00,7dedbdb602beab3419c07f15ba5761748a523973,in_open_pr,2026-11-15,"docs(audit): A-008 root cause, A-015 hardening, A-022/A-028/A-029/A-030 recorded"
+JARVIS-UNIFIED,claude/repos-folders-analysis-sr65sg,c91367360b09b2789b12a6704c4e6f23f1fded39,in_open_pr,2026-11-11,"docs(p0-v1a): GO-LAB-ONLY reached on API 29/35 emulators, APK SHA-256 and remaining blocke"
+JARVIS-UNIFIED,codex/gpu-forge-g03-preparation-20261116,6539b444b5d65154088b8a2722212c0c16bbf257,in_open_pr,2026-11-17,"feat(gpu-forge): prepare G03 corpus, budget checks and reproducible benchmark plan"
+JARVIS-UNIFIED,codex/jarvis-v1-delivery,0b8f0fe9f8471a79930a008f8a1d65df911c70e8,in_open_pr,2026-11-12,"docs(v1): DEVICE-01 protocol for the voice V1 on the POCO (prepared, not executed)"
+JARVIS-UNIFIED,codex/jarvis-v1b-conversation-performance,1733386846a59c4cc0ce6250b7c48e8b2237fdbb,in_open_pr,2026-11-12,"docs(v1b): V1-B report — mechanics PASS on API 29/35, dialogue 3/4 (NO-GO on the final cri"
+JARVIS-UNIFIED,codex/lab-01-complete-integration,00949b72bd115a9ae6c46020993dd0a497fa582d,in_open_pr,2026-11-09,"docs(lab-01): deliver exact SAFE results, offline dashboard and verified APK evidence [ski"
+JARVIS-UNIFIED,codex/lab-02-safe-triage,e2fe5753abc884d601e6d2e0d94f39cfe25cab54,in_open_pr,2026-11-09,LAB-02: publish read-only triage artifacts for historical and current SAFE runs
+JARVIS-UNIFIED,codex/m50-s1-unified-evidence-20261029,a67116b44d828b435a7a1a662d3cd0200993e1c1,in_open_pr,2026-10-29,docs(m50): publish focused S1 recovery CI and first isolated Android shell Codex mission
+JARVIS-UNIFIED,codex/m50-s1-unified-evidence-recovered-20261031,34f2de4ef0bd74738ead9656c85bdf4d947f1e0d,in_open_pr,2026-11-02,fix(ci): repair M50-S1 YAML and recovered branch trigger
+JARVIS-UNIFIED,codex/m50-s1b-coordination-20261104,a73c1571f3e1dd0acd50e87b9742fbe2214a93d2,in_open_pr,2026-11-04,docs(m50): receive CORE INTERFACE lab qualified on API29 and API35
+JARVIS-UNIFIED,codex/m51-unified-gates,a7625a31513be5c56fa36ed946fbdcd3c23c2a15,in_open_pr,2026-11-08,docs(m51): close reception with verified Android failures and isolated preparation evidenc
+JARVIS-UNIFIED,codex/m55-mission-report,57e2ad96329bca1a41c1a8604fa17826d69a716c,in_open_pr,2026-11-12,"docs(m55): final execution report — GO-A/GO-B/GO-D (lab), NO-GO-C and NO-GO-V1 with reason"
+JARVIS-UNIFIED,codex/nexus-n01-a2-preparation-20261117,cfaa826079b8cf09c21ed1718b075578af63cb73,in_open_pr,2026-11-17,fix(ci): quote existing backup dependency option in N01-A2 workflow
+JARVIS-UNIFIED,codex/nexus-n01-a3-evidence-20261118,1834472161ff961b6c7a20a766d0e255d545ab44,in_open_pr,2026-11-18,"docs(nexus): record approved N01-A3 routing, PR qualification and preserved contracts"
+JARVIS-UNIFIED,codex/prefusion-20261026-lot1,b8f22bb7091c29b654f5e958e97da4f94434b164,in_open_pr,2026-10-27,docs: assess eight pre-fusion modules and preserve blocked runtime gates
+JARVIS-UNIFIED,codex/prefusion-lot3-unified,4fa55d468228a6f222f6177e807938660d735a8c,in_open_pr,2026-10-28,docs(prefusion): attach complete final owner file inventories
+JARVIS-UNIFIED,codex/prefusion-lot3-unified-20261029,d2c1dafd51339c185a758141e353f93f72ecb9fc,in_open_pr,2026-10-29,docs(prefusion): reconcile existing lot3 PRs and record fresh exact-tree verification
+JARVIS-UNIFIED,codex/research-n01-b0-lab-20261118,f1f30dc3cef2043ccfc68347c2cdc9b4e732de88,in_open_pr,2026-11-18,"feat(research-b0): add isolated loopback HTTPS laboratory with quotas, restart and negativ"
+JARVIS-UNIFIED,codex/reuse-first-r1plus-20261108,ec1d669357aeea2dad19decdb3516e92358c3544,in_open_pr,2026-11-09,docs(reuse-r1plus): close reception with verified CI and exact remaining blockers [skip ci
+JARVIS-UNIFIED,codex/v1-first-run-recovery-20261110,093c30637093ad829dbd3643747ec5cb52499695,in_open_pr,2026-11-10,docs: isolate Android V1 first-run recovery plan without touching modules
+JARVIS-UNIFIED,decision/d4-02d-v1-v5-approved-2026-10-17,8ddac8fe8a1861a27d3abeca81eb4ab8f110c3a9,in_open_pr,2026-10-17,docs: record limited V1-V5 approval for D4-02D bootstrap fixtures
+JARVIS-UNIFIED,design-004-sync-expressions,db1592a76ba6a10b9798f4803e4e4247bbf89c01,in_open_pr,2026-10-16,docs: design local multi-device sync and reusable expression catalogue
+JARVIS-UNIFIED,design/d4-02-ownership-mapping,52a44fb6cf01623a8c5d96edc5d2bbac76abd9a1,in_open_pr,2026-10-16,docs: define D4-02 ownership and gated CORE LLM integration plan
+JARVIS-UNIFIED,design/d4-02d-bootstrap-recovery,27e674057a348f8074a86851f4e2c11a933162e9,in_open_pr,2026-10-17,docs: propose D4-02D fixture bootstrap and recovery protocol
+JARVIS-UNIFIED,docs/adr-001-approved-2026-10-15,e0e6f69c4908a152da4e43864a08fef0c8f7a7af,in_open_pr,2026-10-15,docs: record user-approved ADR-001 with clarifications and open decisions
+JARVIS-UNIFIED,feat/fusion-01-integration-lock,3caa57d91ce0dba31043e7cb6373a5e2df8b9fa4,in_open_pr,2026-10-25,feat(unified): lock FUSION-01 candidates and validate integration evidence offline
+JARVIS-UNIFIED,feat/fusion-02-android-first-evidence,6de738633586743b3cf3f54e41ab4180c2cf0fee,in_open_pr,2026-10-26,docs(fusion-02): record observed CI recovery and final delivery evidence
+JARVIS-UNIFIED,feat/lot4-offline-recovery-20261028,deccfb709944f72a45f6a524001b1144b6c3b8dc,in_open_pr,2026-10-28,docs(prefusion): record lot4 direct GitHub recovery scope and unqualified runtime gates
+JARVIS-UNIFIED,feat/uni-01-tooling,bd283dad3a57effa276f7f4441901839d2834d5c,in_open_pr,2026-10-23,fix(contracts): declare portable UTC validation and reject unsupported schema bounds
+JARVIS-UNIFIED,feat/uni-02-tooling,329f304115c9bc5b6dd6ccc2d68d19bf455b5e6c,in_open_pr,2026-10-23,docs(campaign): record consented recall and actual JVM integration results
+JARVIS-UNIFIED,feat/uni-08-u00-audit-lock,21cdf72071f46987b7ac0c18df2eb70356901bc6,in_open_pr,2026-10-26,"docs(uni08): record audit scope, blockers, rollback and next gates"
+JARVIS-UNIFIED,feat/uni-08-u01-contract-review,25d7146b450a13965a2325582772288e9be18dc0,in_open_pr,2026-10-26,ci(unified): independently run U01 compatibility and U00 regressions
+JARVIS-UNIFIED,feat/uni-08-u02-modular-workspace,ade69697f55d425f871e4e3b90c7155bf7657d7a,in_open_pr,2026-10-26,ci(unified): test modular workspace plan and preserve U01/U00 guards without activation
+JARVIS-UNIFIED,feat/uni-08-u03-lot2-evidence,1ec9e6326cbee8d0ddf0a9eab77602699d6ebd06,in_open_pr,2026-10-27,ci(unified): run U03 evidence guard plus U02/U01/U00 regressions
+JARVIS-UNIFIED,mission-001-architecture-unified,d74730a4b5ed817de1cdd163a96c3bdf72a1e4d8,in_open_pr,2026-10-15,docs: record verified publication refusal and consolidation delivery
+JARVIS-UNIFIED,mission-001f-closure,4f06ef43ae98cf093dcc1601d0c95016d89e8ffd,in_open_pr,2026-10-15,docs: render intentional Markdown spaces explicitly in check log
+JARVIS-UNIFIED,mission-001g-maintenance,41f53501fb18fe727d5fd453dd715f0811d2e897,in_open_pr,2026-10-15,docs: record 001G publication proofs and remaining API restriction
+JARVIS-UNIFIED,mission-002-backup,55680bcfe1f793618c79eb1bdc7b2b8c847b369e,in_open_pr,2026-10-15,feat: add synthetic encrypted backup and recoverable restore prototype
+JARVIS-UNIFIED,mission-003-central-registry,f7b7a5ad96527bc43bd5349b97b7834667da9f03,in_open_pr,2026-10-15,feat: add read-only central registry for nine JARVIS modules
+JARVIS-UNIFIED,mission/adr002-principles-lot4-20261028,48a7314a7d14b6b73596a7eaef54da0d5024dca0,in_open_pr,2026-10-28,docs(unified): route Codex lot4 CORE/SERVICES contract labs under approved design-only ADR
+JARVIS-UNIFIED,mission/m50-integrated-beta-20261029,9b1c1c5880d8f0aae2e93e99e6d4d25d2d232e80,in_open_pr,2026-10-29,docs(m50): link actual blocked gate register and legacy CI diagnostics from Codex entrypoi
+JARVIS-UNIFIED,mission/m50-s1-bootstrap-20261029,c03c019c4c10543f6f27348cb83934319d84f25a,in_open_pr,2026-10-29,docs(m50): point S1 Codex entry to exact local patch recovery instructions
+JARVIS-UNIFIED,mission/prefusion-gates-20261026,6b0ae1a1ca1a257446931a69bdff15a4f77ac019,in_open_pr,2026-10-26,docs(unified): publish central Codex pre-fusion mission index across 8 repositories
+JARVIS-UNIFIED,mission/prefusion-lot3-20261027,e4c678faf630a0a98adfaecd7a87fc11dfd82486,in_open_pr,2026-10-27,docs(unified): publish third-wave Codex work orders and no-merge gates
+JARVIS-UNIFIED,mission/r02-security-v1-coordination-20261111,5861ace42613d9880a6dc9372d55b47ab1bbaf33,in_open_pr,2026-11-11,docs(r02): record verified M51 findings and gated V1 remediation plan
+JARVIS-UNIFIED,plan/intensive-2026-10-22,ef1592e9598e14d2245539e2453bf26d7f26969d,in_open_pr,2026-10-22,docs(unified): publish 31-module intensive development mission campaign
+JARVIS-UNIFIED,ccr-e05fe51e-ycqubx,00126b3b92af2b09087bd33b5ffc16c5bc07ae82,inside_other_branch,2026-11-18,"docs(audit): full emulator campaign 44391288619 on b1224ae — API29 11/11, audits 28/30 per"
+JARVIS-UNIFIED,decision/identity-001-approved-2026-10-17,1748cb0706fa4b0cfac2df963d82a14195b9d25a,inside_other_branch,2026-10-17,docs: approve IDENTITY ID-001 architecture with explicit implementation gates
+JARVIS-UNIFIED,design/identity-001-constitution,db63719c09435fd2e7863dd72e7bec0e055fa32e,inside_other_branch,2026-10-17,docs: propose ID-001 identity constitution and development contracts
+JARVIS-UNIFIED,design/identity-001b-contract-freeze,d7c90785ae4263892a6c96e140cfa88206cb4197,inside_other_branch,2026-10-17,test: bound identity validator file input before parsing
+JARVIS-VOICE,ccr-5cf17ed2-phgk00,58907351324b5a86385b08a2b61595efedb28357,FRONTIER_NO_PR,2026-11-14,"fix(ci): A-003 — historical VOICE guards accept only the exact, approved deltas of later m"
+JARVIS-VOICE,feat/voice-performance-core-contract-005k,824ae2b1c083b8165ad02ef24ad1cda02cc2d68c,FRONTIER_NO_PR,2026-10-17,docs(voice): scope 005K latency profiling and isolated CORE voice contract pilot
+JARVIS-VOICE,plan/intensive-2026-10-22,31a0087381db14a9d2256e6e64373ef45b38b616,FRONTIER_NO_PR,2026-10-22,"docs(voice): publish 3 code-intensive SDK, expression and bridge missions"
+JARVIS-VOICE,claude/repos-folders-analysis-sr65sg,cb32fbbd60c75791fb08a714f6fd030e4911bcd5,in_open_pr,2026-11-11,"docs(voice-00): record before/after CI runs for SDK, 005J, Android and V3 lab [skip ci]"
+JARVIS-VOICE,codex/m55-a-p2-voice-successor,cb32fbbd60c75791fb08a714f6fd030e4911bcd5,in_open_pr,2026-11-11,"docs(voice-00): record before/after CI runs for SDK, 005J, Android and V3 lab [skip ci]"
+JARVIS-VOICE,codex/prefusion-20261026-lot1,d10671119fa9a52bc130c28b21ca193edd99d604,in_open_pr,2026-10-27,ci: qualify full VOICE protocol on pre-fusion mission branches
+JARVIS-VOICE,feat/android-pocket-cloning,a5e2c056a3e98bee7132aa8e50dcf0d5ec18d387,in_open_pr,2026-10-14,Install FFmpeg explicitly for synthetic CI fixtures
+JARVIS-VOICE,feat/android-pocket-cloning-005d,9429a9ebf0f21909ac6c59a07491fa2bca027493,in_open_pr,2026-10-15,docs(voice): record verified 005G Android tests and signed APK download
+JARVIS-VOICE,feat/android-pocket-probe,de38598faf7a3a09c2d0f53d86a150725c953f01,in_open_pr,2026-10-14,Run Pocket validation once per pull request update
+JARVIS-VOICE,feat/android-tts-foundation,2aad62625121fa436e5af84bbd9d01f00aafceed,in_open_pr,2026-10-13,fix: avoid retired Android SDK tools package in CI
+JARVIS-VOICE,feat/fusion-02-voice-timeline,95f873226a6b80e2517266a943dfbead94432b86,in_open_pr,2026-10-26,docs(voice): publish verified FUSION-02 CI and current dependency gates
+JARVIS-VOICE,feat/pocket-tts-cpu-prototype,6d8a04bfb49f0d08ac948c8bb981fc6a92f2e7c4,in_open_pr,2026-10-13,Merge branch 'feat/android-tts-foundation' into feat/pocket-tts-cpu-prototype
+JARVIS-VOICE,feat/voice-01-intensive,99d4073426896c992141bc010a69bb2690e03e71,in_open_pr,2026-10-23,ci(voice): use explicit preinstalled Android SDK manager
+JARVIS-VOICE,feat/voice-02-intensive,3ffb28011506abcc94b5d4ee71d6c79fc278333b,in_open_pr,2026-10-23,feat(voice): add bounded software expression styles and PCM timelines
+JARVIS-VOICE,feat/voice-04-speed-longform-emotions,b1e9c9400072650443cc3c2ccd48bfa810d40a3e,in_open_pr,2026-10-24,docs(voice04): publish verified APK tests metrics and explicit partial status
+JARVIS-VOICE,feat/voice-05-voice-delivery,1a9f713dff28f6e4fb145728815e9ed118f5a929,in_open_pr,2026-10-24,docs(voice05): record successful API26 API35 delivery and measured limits
+JARVIS-VOICE,feat/voice-06-voice-delivery,0e9e31553e15cc24b64f9edc8196344cf2b2d5f6,in_open_pr,2026-10-24,docs(voice06): publish qualified independent APK and explicit perceptual limits
+JARVIS-VOICE,feat/voice-07-voice-delivery,40cb27b1e27567ae1841e4cfb3dd2c57a7b57820,in_open_pr,2026-10-24,docs(voice07): publish qualified V1 security proofs and blocked CORE integration guide
+JARVIS-VOICE,feat/voice-bridge-pilot,04c4ca1c050c16e097d27b08831544b66121128c,in_open_pr,2026-10-17,docs(voice-pilot): publish verified Binder evidence and native gate limits
+JARVIS-VOICE,feat/voice-core-bridge-005k,6a86d847ff57fd9f695ee87eb5bff21c0c8862ca,in_open_pr,2026-10-17,docs(005k): publish verified contract CI and unchanged Android regression results
+JARVIS-VOICE,feat/voice-expression-005i,f917ef15ce74a045564ddabdc407ccde4b595ba6,in_open_pr,2026-10-15,docs(005i): record successful coinstallation and Android-only B import protocol
+JARVIS-VOICE,feat/voice-expressive-v3-android,92d07453260553466c92196454b56929b7494b2f,in_open_pr,2026-11-11,fix(voice): never play waiting clip once complete Pocket PCM is ready
+JARVIS-VOICE,feat/voice-final-01,fe57452fcb33f5b6870070f30ba6c5f1d349c4ba,in_open_pr,2026-10-25,"docs(voice-final01): publish qualified APK, measured limits and private quantization study"
+JARVIS-VOICE,feat/voice-identity-005h,1d0285ea19fa84c052ab5ce3b2f08146bcf30976,in_open_pr,2026-10-15,docs(voice): verify downloaded 005H APK from repository and Actions artifact
+JARVIS-VOICE,feat/voice-studio-005j,cce9a4549c35e721ee37daff014d427ef3656b2a,in_open_pr,2026-10-16,"docs(005j): record green delivery CI, verified download and private-free UI captures"
+JARVIS-VOICE,mission/m50-integrated-beta-20261029,642d9c19bcba35e5ffe686403d50c65aa9dc992a,in_open_pr,2026-10-29,docs(m50): VOICE-M50-01 local qualification and independently shippable adapter mission
+JARVIS-VOICE,mission/prefusion-gates-20261026,697110fa5a8dc87c4ed2a7e8df81a2e644a9559b,in_open_pr,2026-10-26,docs: publish Codex pre-fusion mission VOICE-PF-01
+JARVIS-VOLUTION-,feat/evolution-final-01,c4abfb035e3e99cc52840b04af06e3cea818c7a0,FRONTIER_NO_PR,2026-10-26,docs(evolution): record final validation and blocked laboratory status [skip ci]
+JARVIS-VOLUTION-,codex/prefusion-lot2-20261027,2e10d6f5c4d41458d0e55cd6724cd93973db450e,in_open_pr,2026-10-27,prefusion lot2: passive diagnostics and fail-closed regressions
+JARVIS-VOLUTION-,codex/prefusion-lot2-evolution-review,8d1155fd23078d0a25dbe32edd498a95d60906ac,in_open_pr,2026-10-27,"docs(prefusion): exact scope, blockers, test plan and rollback for lot 2"
+JARVIS-VOLUTION-,feat/evol-01-telemetrie-locale-et-observate,9cc6288b537d71743fbb634a8d098ce304441464,in_open_pr,2026-10-23,build: normalize Windows wrapper line endings
+JARVIS-VOLUTION-,feat/evol-02-moteur-de-diagnostic-et-recomm,0abd5f96caa27ee1e73a623d538e48555a02ce76,in_open_pr,2026-10-23,feat(evolution): persist evidence-backed diagnostic cases and human decisions
+JARVIS-VOLUTION-,feat/evol-03-atelier-de-correctifs-isoles-e,c0180181804338d21f3bf9d4b537b709595902f7,in_open_pr,2026-10-23,feat(evolution): validate inert patch proposals and keep trials blocked
+JARVIS-VOLUTION-,mission/m50-integrated-beta-20261029,84ebc2e2b55d48306247fc9045a712294abaf457,in_open_pr,2026-10-29,docs(m50): EVOL-M50-01 local qualification and independently shippable adapter mission
+JARVIS-VOLUTION-,mission/prefusion-gates-20261026,4af477877c3ceb32e5805948ca42798970512d44,in_open_pr,2026-10-26,docs: publish Codex pre-fusion mission EVOL-PF-01
+JARVIS-VOLUTION-,plan/intensive-2026-10-22,36d09339aa93869c36c0981800918cde818637ac,in_open_pr,2026-10-22,docs(evolution): publish 4 substantial code-development missions
+JAVIS-Local-v2,design/alpha1-003b1-r-corrections,1539b332fba7e487fe85013cc41890c8a09052d6,FRONTIER_NO_PR,2026-10-18,docs(alpha1-003b1-r): propose ProGuard and descriptor ownership corrections
+JAVIS-Local-v2,plan/intensive-2026-10-22,1b7ac9b35b5e6e133167fcaf1873e58b9db7288e,FRONTIER_NO_PR,2026-10-22,"docs(core): publish 7 implementation-heavy CORE, IDENTITY and MEMORY missions"
+JAVIS-Local-v2,docs/mission-002-project-knowledge,e0417e1609b478073e7cd019a25f8146a25a0fb8,in_main,2026-10-13,docs: formalise JARVIS project knowledge and agent guidance
+JAVIS-Local-v2,fix/api-24-25-time-reply,d7e51b4ac55b0726e5289b7f062478903fb7aa67,in_main,2026-10-13,fix: preserve local time replies on Android API 24 and 25
+JAVIS-Local-v2,fix/sqlite-data-preservation,7a5b53e3247dc7132eb9e5648ecf4169a4054d62,in_main,2026-10-14,fix: preserve SQLite data during migrations and failed writes
+JAVIS-Local-v2,codex/m50-s1-core-ci-20261029,5da98383ed12cb5a54e896fbe57560bacc432fb5,in_open_pr,2026-10-29,ci(m50-s1): prepare exact-source CORE regression and strict preservation tests
+JAVIS-Local-v2,codex/prefusion-lot2-20261027,a3113797a3c481bc516c5ef1fd4d7a74b919de40,in_open_pr,2026-10-27,prefusion lot2: passive diagnostics and fail-closed regressions
+JAVIS-Local-v2,codex/prefusion-lot2-core-passive,95a2722dd7c4e67682eb7dc787431274968aa1fa,in_open_pr,2026-10-27,"docs(prefusion): exact scope, blockers, test plan and rollback for lot 2"
+JAVIS-Local-v2,codex/prefusion-lot3-core,aed84860f2ca85713140a687ba7d86efc0203dc8,in_open_pr,2026-10-28,feat(core): add fail-closed read-only prefusion lot3 lab
+JAVIS-Local-v2,feat/core-01-intensive,b98bd1c4722cd053021d4021717b73ff595d5fed,in_open_pr,2026-10-23,feat(core): add opt-in local intent orchestration
+JAVIS-Local-v2,feat/core-02-intensive,e86107b8213b0aeaf9d22025cf6bef91a8e544a5,in_open_pr,2026-10-23,feat(core): publish opt-in correlated local lifecycle events
+JAVIS-Local-v2,feat/core-03-intensive,aea5ac859ac551d54fe16187c1883a487dbee9d6,in_open_pr,2026-10-23,feat(core): add pinned JVM clients for Nexus and Services laboratory
+JAVIS-Local-v2,feat/core-voice-pilot,7426665f2794cba83646008fa0f342d102141201,in_open_pr,2026-10-17,docs(core-voice): record coordinated delivery and PR API blocker
+JAVIS-Local-v2,feat/fusion-01-core-integration,36761cea101b5f88b87cd4136dc075d28a1adb96,in_open_pr,2026-10-25,ci(core): reuse pinned Android tooling after independent JVM checks
+JAVIS-Local-v2,feat/fusion-02-core-readiness,f6a3b2d0c280c69ef1570544fdbf5bcf5818810c,in_open_pr,2026-10-26,feat(core): add fail-closed FUSION-02 readiness without producer activation
+JAVIS-Local-v2,feat/id-01-intensive,9b04ecd8794da54e571d95f28a1de02512e86b5d,in_open_pr,2026-10-23,feat(identity): add versioned local profile laboratory and previews
+JAVIS-Local-v2,feat/id-02-intensive,283423cb8b9d567539f33cf7f2f1fafa602cf974,in_open_pr,2026-10-23,fix(identity): expose inherited profile changes in approval preview
+JAVIS-Local-v2,feat/lot4-offline-recovery-20261028,3eafb4acd82255f4578d4a3bc113d418508add86,in_open_pr,2026-10-28,ci: fetch full history for read-only production preservation compare
+JAVIS-Local-v2,feat/mem-01-intensive,e46ba56163e54bc03d7a2321b0fcb51449e68973,in_open_pr,2026-10-23,feat(memory): require exact consent in isolated SQLite laboratory
+JAVIS-Local-v2,feat/mem-02-intensive,49ad428e94edd75c2a1d115c8c2504f26609eace,in_open_pr,2026-10-23,feat(memory): add consented recall and voluntary verified export
+JAVIS-Local-v2,feature/alpha1-001-text-lab,b2ec98238f70e89edc636c1c671f2ddf1b957d74,in_open_pr,2026-10-18,feat(alpha1): add opt-in volatile text lab and qualification audit
+JAVIS-Local-v2,feature/identity-002-core-runtime,8adec3e0e8dfdce685a33ef796fc3150facc7f0a,in_open_pr,2026-10-17,docs: record IDENTITY publication and concurrent pilot branch update
+JAVIS-Local-v2,feature/identity-002t-tokenizer-port,71831913a772bcc51b20885b52b965f5d3e9f61b,in_open_pr,2026-10-17,docs: finalize tokenizer audit publication and proposal formatting
+JAVIS-Local-v2,feature/mvp-001-local-conversation,7368f41bbcec389e4b76c99ea27819645d94a50d,in_open_pr,2026-10-19,docs(mvp-001): record clean-source APK kit evidence
+JAVIS-Local-v2,feature/mvp-002-unified-interaction,c7fec293791dc0b30c83d712e0fae0bbf59736a0,in_open_pr,2026-10-20,docs(mvp-002): record clean-source Android kit evidence
+JAVIS-Local-v2,fixture/004c-p2-client,da40ed7155409b85860a22c1dbbfe35029cea29a,in_open_pr,2026-10-17,docs: record CORE 004C publication and API refusal
+JAVIS-Local-v2,mission-004a-core-stability,306a89b7cc33803aba9b7af9c6a553f1bc40f08f,in_open_pr,2026-10-16,fix: harden core model installation and preserve context provenance
+JAVIS-Local-v2,mission-004b-core-backend-lifecycle,29646448c80568d868a702192df761fc9d7a896d,in_open_pr,2026-10-16,fix: correlate release acknowledgements with admission leases
+JAVIS-Local-v2,mission-004b-inference-contract,07cd282603205d57f3d2ded1b14d5d95e68989e2,in_open_pr,2026-10-16,feat: add exclusive inference lifecycle and structured core requests
+JAVIS-Local-v2,mission/adr002-principles-lot4-20261028,b51a3720fd7abd7adaf65983c5fa4363f5ead225,in_open_pr,2026-10-28,docs(core): publish Codex lot4 CORE authority laboratory mission with explicit OFF gates
+JAVIS-Local-v2,mission/m50-integrated-beta-20261029,d754a6c19e3c94e415e8506d0d37b8d943951d88,in_open_pr,2026-10-29,"docs(m50): publish CORE-M50-01 verifiable integration mission, runtime OFF"
+JAVIS-Local-v2,mission/prefusion-gates-20261026,cd2adea393287ea94eb3145e8463209f6fa37e9d,in_open_pr,2026-10-26,docs: publish Codex CORE-PF-01 prefusion mission
+JAVIS-Local-v2,mission/prefusion-lot3-20261027,af6fe97e2d3f1cded76a4c0e28754b2c21272692,in_open_pr,2026-10-27,docs(codex): publish CORE-PF-02 narrow lot3 mission without runtime enablement
+JAVIS-Local-v2,release/mvp-003-android-candidate,90215258ad3914cd6576971334ecb8ca48db74ff,in_open_pr,2026-10-21,docs(mvp-003): record signed APK and publication evidence
+JAVIS-Local-v2,release/preview-001-android,86ea8bfa94deea0bab94914cd7214bc395a83f9b,in_open_pr,2026-10-18,docs(preview): record successful Actions kit and exact download evidence
+JAVIS-Local-v2,test/mvp-004-native-qualification,a6f13dd101990c6b5e3992be506c9a5b99873621,in_open_pr,2026-10-22,docs(mvp-004c): verify pinned Qwen GGUF bytes and metadata without JNI
+JAVIS-Local-v2,design/alpha1-002-jni-review,d2a677bb35e63ee94db9dfa4edcaa97036b45dce,inside_other_branch,2026-10-18,docs(alpha1): prepare complete exact-token JNI proposal and provenance review
+JAVIS-Local-v2,design/alpha1-003a-library-patch-review,7f591f0e041159bb773011d69fdd2b1fe94b5b88,inside_other_branch,2026-10-18,docs(alpha1-003a): propose library-only ownership and cleanup revision
+JAVIS-Local-v2,feature/alpha1-003-native-validation,84571ae6058518e75d63077dfda15a0ef60a0e46,inside_other_branch,2026-10-18,docs(alpha1-003): record native baseline builds and phase B gate
+JAVIS-Local-v2,feature/alpha1-003b1-isolated-native-build,d63462bcaffca8d84e42ca9987a2ad22a27dd102,inside_other_branch,2026-10-18,docs(alpha1-003b1): qualify isolated JNI candidate build

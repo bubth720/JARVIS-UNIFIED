@@ -1,0 +1,116 @@
+[
+ {
+  "id": "final01-tooling-tests",
+  "sha": "dce5a2a65177adf0f8ea62780f388121987bac02",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): pytest tooling/final01/tests 17/17"
+ },
+ {
+  "id": "api-surface-LLM-candidate",
+  "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): api_surface IDENTICAL 302/302 vs 2e01177 (a02, app)"
+ },
+ {
+  "id": "api-surface-VOICE-candidate",
+  "sha": "58907351324b5a86385b08a2b61595efedb28357",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): api_surface IDENTICAL 445/445 vs 92d0745 (pocketRuntime)"
+ },
+ {
+  "id": "api-surface-NEXUS-candidate",
+  "sha": "5f10193440972ba25b30645d2811537418eface5",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): api_surface IDENTICAL 545/545 vs 06ccf98 (nexus-core, android-store, jvm-store)"
+ },
+ {
+  "id": "v1-guard-430-files",
+  "sha": "e6489bf011c804fcbb699f41416e4b389e50d66a",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): check_scope.py"
+ },
+ {
+  "id": "g02-campaign-preservation-guard",
+  "sha": "4e140c0379b5a2cc7df60a44193a86dd795cfa66",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): unittest labs/v3/tools/tests OK (after reverting 8ae1f87, refused by this guard in run 44896807860)"
+ },
+ {
+  "id": "b0-guard-on-own-head",
+  "sha": "f1f30dc3cef2043ccfc68347c2cdc9b4e732de88",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): offline_runner Python 3.12 63/63"
+ },
+ {
+  "id": "apk-build-local-pinned",
+  "sha": "e6489bf011c804fcbb699f41416e4b389e50d66a",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): gradle testDebugUnitTest assembleDebug assembleDebugAndroidTest lintDebug; 63/63 unit; inspection PASS"
+ },
+ {
+  "id": "nexus-jvm-tests",
+  "sha": "5f10193440972ba25b30645d2811537418eface5",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): gradle test 92/92"
+ },
+ {
+  "id": "emulator-campaign-with-candidate-nexus",
+  "sha": "5f10193440972ba25b30645d2811537418eface5",
+  "result": "NOT_RUN",
+  "source": "no KVM locally; CI pin override refused by G02 guard"
+ },
+ {
+  "id": "drop-in-LLM",
+  "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): candidate_check DROP_IN (8 locked native files)"
+ },
+ {
+  "id": "llm-ci",
+  "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+  "result": "PASS",
+  "source": "GitHub run 43625706542"
+ },
+ {
+  "id": "owner-exception-frozen-v1-lock",
+  "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+  "result": "NOT_RUN",
+  "source": "labs/v1/sources.json is frozen (430-file V1 guard): pin change needs owner exception"
+ },
+ {
+  "id": "emulator-campaign-with-candidate-llm",
+  "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71",
+  "result": "NOT_RUN",
+  "source": "blocked by the frozen V1 lock"
+ },
+ {
+  "id": "drop-in-VOICE",
+  "sha": "58907351324b5a86385b08a2b61595efedb28357",
+  "result": "PASS",
+  "source": "local replay 21/11/2026 (audit/final-01/f01/F01-REPORT.md): candidate_check DROP_IN (pocketRuntime tree)"
+ },
+ {
+  "id": "voice-ci",
+  "sha": "58907351324b5a86385b08a2b61595efedb28357",
+  "result": "PASS",
+  "source": "GitHub run 43625576432"
+ },
+ {
+  "id": "owner-exception-frozen-v1-lock",
+  "sha": "58907351324b5a86385b08a2b61595efedb28357",
+  "result": "NOT_RUN",
+  "source": "labs/v1/sources.json is frozen: pin change needs owner exception"
+ },
+ {
+  "id": "emulator-campaign-with-candidate-voice",
+  "sha": "58907351324b5a86385b08a2b61595efedb28357",
+  "result": "NOT_RUN",
+  "source": "blocked by the frozen V1 lock"
+ },
+ {
+  "id": "apk-build-local-with-candidate-nexus",
+  "sha": "5f10193440972ba25b30645d2811537418eface5",
+  "result": "PASS",
+  "source": "local replay 21/11/2026: INTERFACE e6489bf + NEXUS 5f10193, gradle testDebugUnitTest assembleDebug assembleDebugAndroidTest lintDebug --rerun-tasks; 63/63 unit; inspection PASS; APK diff vs pinned build: 1 entry (classes10.dex), identical class set (13846), changes only in fr.jarvis.nexus.android"
+ }
+]

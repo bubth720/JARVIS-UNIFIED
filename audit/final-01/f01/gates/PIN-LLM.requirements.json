@@ -1,0 +1,25 @@
+{
+ "lot": "APK pin LLM 2e01177 -> 9c3fc50",
+ "required": [
+  {
+   "id": "drop-in-LLM",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  },
+  {
+   "id": "api-surface-LLM-candidate",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  },
+  {
+   "id": "llm-ci",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  },
+  {
+   "id": "owner-exception-frozen-v1-lock",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  },
+  {
+   "id": "emulator-campaign-with-candidate-llm",
+   "sha": "9c3fc500ea74a40c4bfe9d3c3ffd66d09848fc71"
+  }
+ ]
+}

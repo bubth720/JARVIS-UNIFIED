@@ -1,0 +1,21 @@
+{
+ "lot": "APK pin NEXUS 06ccf98 -> 5f10193",
+ "required": [
+  {
+   "id": "api-surface-NEXUS-candidate",
+   "sha": "5f10193440972ba25b30645d2811537418eface5"
+  },
+  {
+   "id": "nexus-jvm-tests",
+   "sha": "5f10193440972ba25b30645d2811537418eface5"
+  },
+  {
+   "id": "apk-build-local-with-candidate-nexus",
+   "sha": "5f10193440972ba25b30645d2811537418eface5"
+  },
+  {
+   "id": "emulator-campaign-with-candidate-nexus",
+   "sha": "5f10193440972ba25b30645d2811537418eface5"
+  }
+ ]
+}

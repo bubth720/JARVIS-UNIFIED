@@ -1,0 +1,20 @@
+UNIFIED@0af322c tooling/arch01/tests : 24 passed, 1 skipped, 5 subtests passed in 0.08s
+UNIFIED@0af322c tooling/campaign/tests : 32 passed in 4.90s
+UNIFIED@0af322c tooling/gpu_forge/tests : 11 passed in 0.03s
+UNIFIED@0af322c tooling/integration/tests : 21 passed in 0.50s
+UNIFIED@0af322c tooling/nexus_n01_a2/tests : 54 passed, 53 subtests passed in 0.09s
+UNIFIED@0af322c tooling/reuse_r1plus/tests : 9 passed, 5 subtests passed in 0.11s
+UNIFIED@0af322c tooling/v1/tests : 51 passed in 0.13s
+UNIFIED@0af322c workspace/tests : 20 passed in 0.02s
+UNIFIED@0af322c research_b0 offline_runner (Python 3.12.3): 63 tests 0 fail 2 err FAIL production_connected=False  [2 errors = test_preservation: B0 freezes 525 files at its own base; REGISTRE-ANOMALIES.md legitimately changed later (R-07) + sibling-checkout layout]
+UNIFIED@0af322c research_b0 offline_runner (Python 3.13.18): 63 tests 0 fail 2 err FAIL production_connected=False
+INTERFACE@e6489bf runner harness: failures: 0 (19 scenarios PASS)
+INTERFACE@e6489bf python tools tests: 15 passed in 0.28s
+INTERFACE@e6489bf check_scope: PASS: V1 guard chain passes on 9599d99; 430 frozen files unchanged (labs/v1 included); add
+INTERFACE@e6489bf JVM conv: OK (37 tests)
+EVOLUTION@c4abfb035e3e gradle test (JDK17): 51 tests 0 failures 0 errors 0 skipped
+JARVIS-NEXUS@5f1019344097 gradle test: NOT_RUN — build refused: plugin com.android.library 8.7.3 needs dl.google.com, refused by this environment network policy (proxy 403)
+JARVIS-SERVICES@8d80d09d6aab gradle test: NOT_RUN — :desktop needs androidx.sqlite:sqlite-bundled-jvm:2.5.0 from dl.google.com, refused by this environment network policy (proxy 403)
+UNIFIED@f1f30dc (B0 own head) research_b0 offline_runner: Python 3.12 63/63 PASS; Python 3.13 21 failures + 15 errors (A-037, fixed by 977e475)
+EVOLUTION sandbox locks at c4abfb0: TrialPreparation(laboratoryState=SANDBOX_NOT_QUALIFIED, mayExecute=false, productionAuthorized=false); TrialRefusal(status=NOT_RUN)
+LLM, VOICE, CORE (Android/NDK): NOT_RUN locally (no Android SDK, no KVM, Google Maven refused) — CI evidence only, see TEST-EVIDENCE.md

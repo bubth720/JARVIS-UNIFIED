@@ -1,0 +1,16 @@
+# F00 — Risques et décisions requises
+
+| ID | Risque / conflit | Preuve | Traitement proposé | Décision du propriétaire requise |
+|---|---|---|---|---|
+| R-01 | Le code le plus avancé (INTERFACE S04 `e6489bf`, UNIFIED S04 `0af322c`, M56, A-002, A-003, EVOLUTION final) **n'a aucune PR**. Une revue ou une fusion future pourrait l'oublier au profit d'anciennes PR brouillons. | `BRANCH-STATUS.csv` (FRONTIER_NO_PR) | Ouvrir des PR **brouillons** de revue depuis ces têtes, sans fusion. | Oui : création de PR |
+| R-02 | 90 PR ouvertes sont des maillons contenus dans une PR terminale. Fusionner un maillon isolé ramènerait du code dépassé. | `DEPENDENCY-GRAPH.md` §1 | Ne relire que les PR terminales ; libellé proposé « contenue dans #N ». Aucune fermeture. | Oui : libellés et fermetures éventuelles |
+| R-03 | **Second orchestrateur de fait** : la conversation (ConvSession, gardes documentaires, mémoire de travail) vit dans INTERFACE `labs/v3/conv`, pas dans CORE. | `DEPENDENCY-GRAPH.md` §3 | ADR en F01 : laisser la couche dans INTERFACE comme adaptateur borné, ou la remonter dans CORE (version majeure). | Oui : ADR |
+| R-04 | Écarts d'épinglage de l'APK : NEXUS (27 commits de retard), LLM (10), VOICE (1 à 2). | `BASELINE-LOCK.json` | F01 : tests de contrat entre les SHA épinglés et les têtes, puis mise à jour une à une. | Non pour les tests ; oui pour changer un épinglage de production |
+| R-05 | API CORE inaccessible depuis cette session : CI, `mergeable_state` et bases des 13 PR CORE inconnus. | Refus du rattachement | Rattacher CORE à la session (paramètres d'accès) ; en attendant, statut `UNKNOWN`. | Oui : accès CORE |
+| R-06 | Maven Google (`dl.google.com`) refusé par l'environnement : aucune compilation NEXUS, SERVICES ou Android en local. | 403 du proxy | Ajouter l'hôte à l'environnement de session, ou s'en tenir à la CI GitHub. | Oui : réseau de l'environnement |
+| R-07 | Le garde de préservation B0 fige 525 fichiers UNIFIED à sa base. Il échoue sur tout descendant qui met à jour un fichier d'audit. | `local-replay-results.txt` | Garde lié à son SHA (comme les gardes V1) : le rejouer à `f1f30dc`, jamais sur un descendant. Ne pas le modifier sans exception. | Non (constat) |
+| R-08 | APK livrable : seul un release **non signé** est audité. | Journal S04 | Procédure de signature par le propriétaire (F11), sans signer à sa place. | Oui : signature |
+| R-09 | Aucune validation sur appareil, pour aucune capacité. | `CAPABILITY-MATRIX.md` | Protocole DEVICE-01 existant ; `BLOCKED_DEVICE`. | Oui : installation |
+| R-10 | EVOLUTION : sandbox non qualifiable ici (pas de `bwrap` ; aucune élévation tentée). | `TEST-EVIDENCE.md` | Laisser `SANDBOX_NOT_QUALIFIED` ; qualification uniquement sur un mini-PC ou un laboratoire autorisé. | Oui : matériel et essai |
+| R-11 | 56 branches UNIFIED et 45 INTERFACE : risque d'erreur de base (cause d'A-036). | `BRANCH-STATUS.csv` | Toujours partir de `BASELINE-LOCK.json` ; archivage (jamais de suppression) sur décision. | Oui : archivage |
+| R-12 | Un seul modèle 0.6B : erreurs factuelles (A-004). L'étude 1.7B est coupée par le délai sur émulateur (A-012). | Registre GLOBAL-01 | Mesure sur le POCO avant toute décision de modèle. | Oui : modèle |
