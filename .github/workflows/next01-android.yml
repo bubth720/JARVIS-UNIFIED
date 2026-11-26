@@ -162,6 +162,9 @@ jobs:
           d="$RUNNER_TEMP/v3/api${{ matrix.api }}"
           echo "### qualification"; cat "$d/results.txt" 2>/dev/null | grep -E "^(PASS|FAIL|DEVICE_LOST|BUDGET_EXCEEDED)" || echo NOT_RUN
           echo "### audits"; cat "$d/audit-results.txt" 2>/dev/null | grep -E "^(PASS|FAIL|DEVICE_LOST|BUDGET_EXCEEDED)" || echo NOT_RUN
+          # Failure details of the audits (assertion messages) and their measurement files, so a FAIL is explained in the log.
+          echo "### audit failure details"; grep -v "^PASS " "$d/audit-results.txt" 2>/dev/null || true
+          for f in "$d"/audit-h4.json "$d"/audit-m.json "$d"/audit-i.json; do [ -f "$f" ] && { echo "### $(basename "$f")"; head -c 4000 "$f"; echo; }; done
           for f in "$d"/audit-p.json "$d"/v3-bench.json; do [ -f "$f" ] && { echo "### $(basename "$f")"; cat "$f"; }; done
           cat "$RUNNER_TEMP/v3/apk-sha256.txt" 2>/dev/null || true
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
