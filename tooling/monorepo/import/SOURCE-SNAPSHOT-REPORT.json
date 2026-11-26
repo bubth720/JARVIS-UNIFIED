@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source_only": true,
+  "modules": [
+    {
+      "module": "core",
+      "repository": "bubth720/JAVIS-Local-v2",
+      "source_sha": "5da98383ed12cb5a54e896fbe57560bacc432fb5",
+      "archive_sha256": "997c0b9e115589cbf4701fba979d9ff3c17f9e3d895c9983e67fdd124ecf69b0",
+      "files": 600,
+      "bytes": 2992848,
+      "excluded_generated_or_sensitive_files": 18,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "llm",
+      "repository": "bubth720/JARVIS-LLM",
+      "source_sha": "2e011776d9e0f675bcae49b739f12a3a6dbf4de4",
+      "archive_sha256": "2f9ec4d52f1456be10cdeaf7c50c80fa5b0f622c136bd683e6b42622830baf5e",
+      "files": 528,
+      "bytes": 2876457,
+      "excluded_generated_or_sensitive_files": 18,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "voice",
+      "repository": "bubth720/JARVIS-VOICE",
+      "source_sha": "92d07453260553466c92196454b56929b7494b2f",
+      "archive_sha256": "58e9057f97797984c715cffbbfa7bfff730a870b9cdedd52832d515483af8dde",
+      "files": 582,
+      "bytes": 3384576,
+      "excluded_generated_or_sensitive_files": 25,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "interface",
+      "repository": "bubth720/JARVIS-INTERFACE",
+      "source_sha": "e6489bf011c804fcbb699f41416e4b389e50d66a",
+      "archive_sha256": "4f6bf260e9139e859fbe7b3f78678e8347a495da9513a77dae1a8790634e717f",
+      "files": 509,
+      "bytes": 5427842,
+      "excluded_generated_or_sensitive_files": 852,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "nexus",
+      "repository": "bubth720/JARVIS-NEXUS",
+      "source_sha": "06ccf98a7709364bf09cc1ecea1c35663d5787cf",
+      "archive_sha256": "640fcc4f208ac1b073142f537bc0abbb1f885799a5d16e5fb510fe196ec18956",
+      "files": 285,
+      "bytes": 1156003,
+      "excluded_generated_or_sensitive_files": 3,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "services",
+      "repository": "bubth720/JARVIS-SERVICES",
+      "source_sha": "d16dd84f27881460ec9f02d2a54d9ddff23187dc",
+      "archive_sha256": "f04e84324963b37be51caa397a799d20fe017f405d3f5035202f1962195305c1",
+      "files": 285,
+      "bytes": 1379759,
+      "excluded_generated_or_sensitive_files": 1,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    },
+    {
+      "module": "evolution",
+      "repository": "bubth720/JARVIS-VOLUTION-",
+      "source_sha": "009961af020bb8ed3b212f89a344c4d64e518e5d",
+      "archive_sha256": "cf2ede601c8455bae8afaade2ed1458218d5e6a87cded7c388a0298cb804fda0",
+      "files": 62,
+      "bytes": 277528,
+      "excluded_generated_or_sensitive_files": 1,
+      "integration_status": "SOURCE_STAGED_NOT_VALIDATED"
+    }
+  ]
+}

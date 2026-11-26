@@ -1,0 +1,92 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.stark.jarvislocal"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.stark.jarvislocal"
+        minSdk = 24
+        targetSdk = 35
+        versionCode = 4
+        versionName = "3.1.0"
+        ndk { abiFilters += listOf("arm64-v8a") }
+    }
+
+    buildTypes {
+        debug { isMinifyEnabled = false }
+        create("preview") {
+            initWith(getByName("debug"))
+            applicationIdSuffix = ".preview001"
+            versionNameSuffix = "-preview001"
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("debug")
+        }
+        create("mvp") {
+            initWith(getByName("debug"))
+            applicationIdSuffix = ".mvp001"
+            versionNameSuffix = "-mvp001"
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("debug")
+        }
+        create("mvp2") {
+            initWith(getByName("debug"))
+            applicationIdSuffix = ".mvp002"
+            versionNameSuffix = "-mvp002"
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("debug")
+        }
+        create("mvp3") {
+            initWith(getByName("debug"))
+            applicationIdSuffix = ".mvp003"
+            versionNameSuffix = "-mvp003-diagnostic"
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("debug")
+        }
+        release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+
+    sourceSets.getByName("mvp2").java.srcDir("src/mvp/java")
+    sourceSets.getByName("mvp2").res.srcDir("src/mvp/res")
+
+    sourceSets.getByName("mvp3").java.srcDirs("src/mvp/java", "src/mvp2/java")
+    sourceSets.getByName("mvp3").res.srcDirs("src/mvp/res", "src/mvp2/res")
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = "17" }
+
+    testOptions { unitTests.isIncludeAndroidResources = true }
+
+    androidResources { noCompress += listOf("gguf", "bin") }
+    packaging {
+        jniLibs.useLegacyPackaging = true
+        resources.excludes += setOf("META-INF/LICENSE*", "META-INF/NOTICE*")
+    }
+}
+
+dependencies {
+    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.10.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("dev.ffmpegkit-maintained:llama-android:0.1.1")
+    implementation("dev.ffmpegkit-maintained:whisper-android:1.0.0")
+    implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+}
