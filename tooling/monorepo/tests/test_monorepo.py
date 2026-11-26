@@ -37,6 +37,14 @@ class MonorepoTest(unittest.TestCase):
             (path / ".github" / "workflows" / "old.yml").write_text("disabled")
             (path / "models").mkdir()
             (path / "models" / "weights.gguf").write_bytes(b"synthetic")
+            if module["id"] == "voice":
+                archive = path / "deliveries" / "mission005j"
+                archive.mkdir(parents=True)
+                (archive / "005j-experimental-apk.zip").write_bytes(b"historic fixture")
+            if module["id"] == "interface":
+                captures = path / "labs" / "v3" / "captures"
+                captures.mkdir(parents=True)
+                (captures / "old-demo.jpg").write_bytes(b"historic capture")
             git(path, "add", ".")
             git(path, "commit", "-qm", "test fixture")
             module["source_sha"] = git(path, "rev-parse", "HEAD")
@@ -77,6 +85,10 @@ class MonorepoTest(unittest.TestCase):
             self.assertFalse((target / ".git").exists())
             self.assertFalse((target / ".github").exists())
             self.assertFalse((target / "models" / "weights.gguf").exists())
+            if module["id"] == "voice":
+                self.assertFalse((target / "deliveries").exists())
+            if module["id"] == "interface":
+                self.assertFalse((target / "labs" / "v3" / "captures").exists())
         report = json.loads((destination / "SOURCE-SNAPSHOT-REPORT.json").read_text())
         self.assertTrue(report["source_only"])
         self.assertEqual(len(report["modules"]), 7)
