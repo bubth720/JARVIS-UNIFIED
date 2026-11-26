@@ -15,8 +15,37 @@ concurrency:
   group: next01-android-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
+  historical-guards:
+    # FINAL-02 phase 1: the historical INTERFACE guards (G02 campaign preservation, S04 campaign, capture evidence,
+    # run_emulator) run UNCHANGED on their original commit with their own resources (git history, v3-cockpit.yml,
+    # committed captures). Nothing historical is copied into the monorepo; the guard first proves that the test files
+    # it runs are byte-identical (git blobs) to the copies imported under modules/interface.
+    name: Historical INTERFACE guards @ e6489bf
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      INTERFACE_SHA: e6489bf011c804fcbb699f41416e4b389e50d66a
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {path: unified, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-INTERFACE, ref: e6489bf011c804fcbb699f41416e4b389e50d66a, path: interface, fetch-depth: 0, persist-credentials: false}
+      - name: Same tests as the monorepo copy (git blob ids), and the pin of the V3 lock is this commit
+        run: |
+          test "$(git -C interface rev-parse HEAD)" = "$INTERFACE_SHA"
+          grep -q "\"sha\": \"$INTERFACE_SHA\"" unified/modules/interface/labs/v3/sources.json
+          diff <(git -C interface ls-tree -r HEAD labs/v3/tools/tests | awk '{print $3, $4}') \
+               <(git -C unified ls-tree -r HEAD modules/interface/labs/v3/tools/tests | awk '{print $3, $4}' | sed 's#modules/interface/##')
+          echo "PASS: historical guard files identical to modules/interface"
+      - name: Historical guards (unchanged, on their reference commit)
+        working-directory: interface
+        run: |
+          python3 -m unittest discover -s labs/v3/tools/tests -v
+          bash labs/v3/tools/tests/test_run_emulator.sh
   android:
     name: API ${{ matrix.api }}
+    needs: historical-guards
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
@@ -28,14 +57,17 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with: {fetch-depth: 0, persist-credentials: false}
-      - name: Monorepo guards (import integrity at the import commit, source lock, tests)
+      - name: Monorepo guards (import integrity at the import commit, source lock, new tests)
         run: |
           mkdir -p "$RUNNER_TEMP/v3"
           python3 tooling/monorepo/import_manifest.py | tee "$RUNNER_TEMP/v3/import-manifest.txt"
           python3 tooling/monorepo/validate_sources.py
           python3 -m unittest discover -s tooling/monorepo/tests -v
           python3 -m unittest discover -s tooling/final01/tests -t . -v
-          python3 -m unittest discover -s modules/interface/labs/v3/tools/tests -v
+          # New/monorepo tests run here; the historical INTERFACE guards that need INTERFACE history and committed
+          # captures run unchanged in the historical-guards job (required by this job). The layout-independent ones
+          # also run here on the imported copy:
+          (cd modules/interface/labs/v3/tools/tests && python3 -m unittest -v test_capture_evidence)
           bash modules/interface/labs/v3/tools/tests/test_run_emulator.sh
       - name: V3 build inputs from the monorepo (blob-verified against the frozen V1 and core-memory locks)
         run: python3 modules/interface/labs/v3/tools/prepare_monorepo_sources.py --monorepo . --output "$RUNNER_TEMP/inputs"
