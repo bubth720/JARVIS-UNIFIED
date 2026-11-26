@@ -33,6 +33,7 @@
 4. `validate_sources.py` vérifie hors ligne chemins, SHA, identités des dépôts, statut des candidats et règles de sécurité.
 5. `stage_local_sources.py` fabrique, à partir de sept dépôts Git **déjà présents localement**, un snapshot de code source unique dans un **nouveau dossier**. Il lit les blobs des commits épinglés par `git archive` ; il ne fait ni fetch, ni clone, ni commit, ni push, ni suppression.
 6. Exclure les workflows historiques internes, le build généré, les binaires de modèles, les APK, clés privées/keystores et bases locales. Conserver un rapport d'origine et les empreintes des archives.
+7. Mesure GitHub des sources aux SHA épinglés : les archives `JARVIS-VOICE/deliveries/` représentent environ **57,89 MiB**, et les captures de laboratoire `JARVIS-INTERFACE/labs/v3/captures/` environ **31,97 MiB**. Leur absence du futur monorepo réduit son encombrement de source d'environ **89,86 MiB**, sous réserve du nouveau rejeu CI. **Elles restent dans les anciens dépôts** ; cette exclusion d'import ne libère pas la taille historique de GitHub.
 
 ## Utilisation par Codex (dans un environnement avec les sept clones en lecture)
 
