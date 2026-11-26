@@ -1,0 +1,93 @@
+name: JARVIS M1 seven-source rehearsal (no artifacts)
+on:
+  pull_request:
+    paths:
+      - 'tooling/monorepo/**'
+      - '.github/workflows/monorepo-m1-cloud-rehearsal.yml'
+      - 'docs/final-01/MONOREPO-MIGRATION-20261126.md'
+permissions:
+  contents: read
+jobs:
+  stage-seven-exact-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout UNIFIED consolidation branch
+        uses: actions/checkout@v4
+        with:
+          path: unified
+          persist-credentials: false
+      - name: Checkout CORE pinned V3
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JAVIS-Local-v2
+          ref: 5da98383ed12cb5a54e896fbe57560bacc432fb5
+          path: sources/core
+          persist-credentials: false
+      - name: Checkout LLM pinned V3
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-LLM
+          ref: 2e011776d9e0f675bcae49b739f12a3a6dbf4de4
+          path: sources/llm
+          persist-credentials: false
+      - name: Checkout VOICE pinned V3
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-VOICE
+          ref: 92d07453260553466c92196454b56929b7494b2f
+          path: sources/voice
+          persist-credentials: false
+      - name: Checkout INTERFACE S04
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-INTERFACE
+          ref: e6489bf011c804fcbb699f41416e4b389e50d66a
+          path: sources/interface
+          persist-credentials: false
+      - name: Checkout NEXUS pinned V3
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-NEXUS
+          ref: 06ccf98a7709364bf09cc1ecea1c35663d5787cf
+          path: sources/nexus
+          persist-credentials: false
+      - name: Checkout SERVICES isolated source
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-SERVICES
+          ref: d16dd84f27881460ec9f02d2a54d9ddff23187dc
+          path: sources/services
+          persist-credentials: false
+      - name: Checkout EVOLUTION diagnostic-only source
+        uses: actions/checkout@v4
+        with:
+          repository: bubth720/JARVIS-VOLUTION-
+          ref: 009961af020bb8ed3b212f89a344c4d64e518e5d
+          path: sources/evolution
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate manifest and source snapshots
+        run: |
+          python3 unified/tooling/monorepo/validate_sources.py
+          python3 unified/tooling/monorepo/stage_local_sources.py --sources-dir sources --destination monorepo-staged
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('monorepo-staged/SOURCE-SNAPSHOT-REPORT.json').read_text())
+          assert report['source_only'] is True
+          assert len(report['modules']) == 7
+          for module in report['modules']:
+              assert module['files'] > 0, module
+              assert Path('monorepo-staged/modules', module['module']).is_dir()
+              print(module['module'], module['files'], module['bytes'])
+          PY
+      - name: Prove source trees and original Git repos were not modified
+        run: |
+          for name in core llm voice interface nexus services evolution; do
+            git -C sources/$name diff --exit-code
+          done
+      - name: No uploads, merges, push, signing, or runtime effects
+        run: echo 'PASS — disposable source-only rehearsal, no artifact retained'
