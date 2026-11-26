@@ -41,8 +41,14 @@ def git_read(repo, *args):
     return proc.stdout
 
 
-def excluded(name):
+def excluded(name, module_id):
     parts = PurePosixPath(name).parts
+    # Generated historic archives/captures are preserved at their original SHA,
+    # but must not be copied into the runtime-source monorepo.
+    if module_id == "voice" and parts[:1] == ("deliveries",):
+        return True
+    if module_id == "interface" and parts[:3] == ("labs", "v3", "captures"):
+        return True
     if any(part in SKIP_DIRS for part in parts):
         return True
     path = PurePosixPath(name)
@@ -78,7 +84,7 @@ def stage_module(source_dir, target_dir, module):
                 continue
             if not member.isfile() or member.issym() or member.islnk():
                 raise ValueError("Unsafe Git archive entry: " + module["id"])
-            if excluded(member.name):
+            if excluded(member.name, module["id"]):
                 skipped += 1
                 continue
             if member.size > MAX_FILE_BYTES:
