@@ -1,0 +1,177 @@
+name: NEXT-01 unified Android V3 (monorepo build, APK inspection, model provenance, API 29/35 campaign)
+# Built ONLY from modules/ of this repository (no checkout of the historical module repositories). Defaults keep the
+# qualified behaviour: ÉCO model (Qwen3-0.6B), the 1.7B stays OFF (allow1p7b=false). Emulator = NOT a phone.
+on:
+  push:
+    branches: [feat/next-01-android-1p7b-20261126]
+    paths: ['modules/**', 'tooling/monorepo/**', '.github/workflows/next01-android.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: next01-android-${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  historical-guards:
+    # FINAL-02 phase 1: the historical INTERFACE guards (G02 campaign preservation, S04 campaign, capture evidence,
+    # run_emulator) run UNCHANGED on their original commit with their own resources (git history, v3-cockpit.yml,
+    # committed captures). Nothing historical is copied into the monorepo; the guard first proves that the test files
+    # it runs are byte-identical (git blobs) to the copies imported under modules/interface.
+    name: Historical INTERFACE guards @ e6489bf
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      INTERFACE_SHA: e6489bf011c804fcbb699f41416e4b389e50d66a
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {path: unified, persist-credentials: false}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {repository: bubth720/JARVIS-INTERFACE, ref: e6489bf011c804fcbb699f41416e4b389e50d66a, path: interface, fetch-depth: 0, persist-credentials: false}
+      - name: Same tests as the monorepo copy (git blob ids), and the pin of the V3 lock is this commit
+        run: |
+          test "$(git -C interface rev-parse HEAD)" = "$INTERFACE_SHA"
+          grep -q "\"sha\": \"$INTERFACE_SHA\"" unified/modules/interface/labs/v3/sources.json
+          diff <(git -C interface ls-tree -r HEAD labs/v3/tools/tests | awk '{print $3, $4}') \
+               <(git -C unified ls-tree -r HEAD modules/interface/labs/v3/tools/tests | awk '{print $3, $4}' | sed 's#modules/interface/##')
+          echo "PASS: historical guard files identical to modules/interface"
+      - name: Historical guards (unchanged, on their reference commit)
+        working-directory: interface
+        run: |
+          python3 -m unittest discover -s labs/v3/tools/tests -v
+          bash labs/v3/tools/tests/test_run_emulator.sh
+  android:
+    name: API ${{ matrix.api }}
+    needs: historical-guards
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [29, 35]
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {fetch-depth: 0, persist-credentials: false}
+      - name: Monorepo guards (import integrity at the import commit, source lock, new tests)
+        run: |
+          mkdir -p "$RUNNER_TEMP/v3"
+          python3 tooling/monorepo/import_manifest.py | tee "$RUNNER_TEMP/v3/import-manifest.txt"
+          python3 tooling/monorepo/validate_sources.py
+          python3 -m unittest discover -s tooling/monorepo/tests -v
+          python3 -m unittest discover -s tooling/final01/tests -t . -v
+          # New/monorepo tests run here; the historical INTERFACE guards that need INTERFACE history and committed
+          # captures run unchanged in the historical-guards job (required by this job). The layout-independent ones
+          # also run here on the imported copy:
+          (cd modules/interface/labs/v3/tools/tests && python3 -m unittest -v test_capture_evidence)
+          bash modules/interface/labs/v3/tools/tests/test_run_emulator.sh
+      - name: V3 build inputs from the monorepo (blob-verified against the frozen V1 and core-memory locks)
+        run: python3 modules/interface/labs/v3/tools/prepare_monorepo_sources.py --monorepo . --output "$RUNNER_TEMP/inputs"
+      - name: Pinned native sources (llama.cpp for A02, whisper.cpp v1.8.4)
+        run: |
+          (cd modules/llm && tools/prepare-native.sh)
+          (cd modules && interface/labs/v1/tools/prepare_whisper.sh)
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with: {distribution: temurin, java-version: '17'}
+      - uses: gradle/actions/setup-gradle@v4
+        with: {gradle-version: '8.13'}
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '11076708'
+          log-accepted-android-sdk-licenses: false
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0 ndk;28.1.13356709 cmake;3.22.1'
+      - name: Build V3 (unit tests, debug, unsigned release, test APK, Lint)
+        run: |
+          M="$GITHUB_WORKSPACE/modules"
+          gradle -p modules/interface/labs/v3 -PlabSources="$RUNNER_TEMP/inputs/kotlin" -Pa02Root="$M/llm" -PvoiceRoot="$M/voice" -PnexusRoot="$M/nexus" \
+            -PcoreMemorySources="$RUNNER_TEMP/inputs/core-memory" -PwhisperSource="$M/interface/labs/v1/.deps/whisper.cpp" -Pv1Abis=arm64-v8a,x86_64 \
+            :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease :app:assembleDebugAndroidTest :app:lintDebug --no-daemon --max-workers=2 --console=plain
+      - name: Inspect the APKs (one Android permission, no INTERNET, engines present, no weights, backups off, release non-debuggable and unsigned)
+        run: |
+          bt="$ANDROID_HOME/build-tools/35.0.0"; out=modules/interface/labs/v3/app/build/outputs/apk
+          for apk in "$out/debug/app-debug.apk" "$out/release/app-release-unsigned.apk"; do
+            "$bt/aapt" dump permissions "$apk" > p.txt
+            test "$(grep -c "uses-permission: name='android.permission" p.txt)" = 1; grep -q RECORD_AUDIO p.txt; ! grep -q INTERNET p.txt
+            unzip -l "$apk" > c.txt; for lib in libjarvis_llm_a02.so libjarvis_stt.so libonnxruntime.so; do grep -q "lib/arm64-v8a/$lib" c.txt; done
+            ! grep -Ei "\.gguf|\.onnx|ggml-.*\.bin|voices\.bin" c.txt
+            "$bt/aapt" dump xmltree "$apk" AndroidManifest.xml > m.txt
+            grep -q "android:allowBackup.*=(type 0x12)0x0" m.txt; grep -q android:dataExtractionRules m.txt
+            echo "$(sha256sum "$apk")" | tee -a "$RUNNER_TEMP/v3/apk-sha256.txt"
+          done
+          ! grep -q "android:debuggable(0x0101000f)=(type 0x12)0xffffffff" <("$bt/aapt" dump xmltree "$out/release/app-release-unsigned.apk" AndroidManifest.xml)
+          ! "$bt/apksigner" verify "$out/release/app-release-unsigned.apk" 2>/dev/null   # never signed by the agent
+          echo "PASS: APK inspection (debug + unsigned release)"
+      - name: Model provenance (read-only Hugging Face metadata at the pinned revisions; nothing bundled)
+        run: |
+          python3 - <<'EOF'
+          import json, urllib.request
+          lock = json.load(open('modules/interface/labs/v3/sources.json'))
+          for m in lock['models']:
+              base = f"https://huggingface.co/api/models/{m['repository']}/revision/{m['revision']}"
+              meta = json.load(urllib.request.urlopen(base + '?blobs=true', timeout=60))
+              lic = (meta.get('cardData') or {}).get('license') or next((t.split(':', 1)[1] for t in meta.get('tags', []) if t.startswith('license:')), None)
+              f = next(s for s in meta['siblings'] if s['rfilename'] == m['filename'])
+              lfs = f.get('lfs') or {}
+              ok = lic == m['license'] and lfs.get('sha256') == m['sha256'] and int(lfs.get('size', f.get('size', -1))) == m['bytes']
+              print(f"{m['id']}: license={lic} sha256={lfs.get('sha256')} size={lfs.get('size')} -> {'PASS' if ok else 'FAIL'}")
+              assert ok, m['id']
+          EOF
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: matrix.api == 29
+        with:
+          name: next01-apk-candidate-${{ github.sha }}
+          retention-days: 14
+          path: |
+            modules/interface/labs/v3/app/build/outputs/apk/release/app-release-unsigned.apk
+            modules/interface/labs/v3/app/build/outputs/apk/debug/app-debug.apk
+            ${{ runner.temp }}/v3/apk-sha256.txt
+      - name: Local resources (exact revisions + SHA-256) and French test utterance
+        run: |
+          r="$RUNNER_TEMP/v3-res"; mkdir -p "$r"
+          get() { curl --fail --location --retry 2 "$1" -o "$2"; test "$(stat -c %s "$2")" = "$3"; echo "$4  $2" | sha256sum -c -; }
+          get https://huggingface.co/unsloth/Qwen3-0.6B-GGUF/resolve/50968a4468ef4233ed78cd7c3de230dd1d61a56b/Qwen3-0.6B-Q4_K_M.gguf "$r/llm.gguf" 396705472 ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a
+          get https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base-q5_1.bin "$r/stt.bin" 59707625 422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898
+          python3 modules/voice/scripts/pocket/prepare_model.py --work-dir "$RUNNER_TEMP/pocket-work" --output "$r/tts.zip"
+          sudo apt-get install -y -q espeak-ng sox >/dev/null
+          espeak-ng -v fr -s 135 -w "$r/u1.wav" "Bonjour, je m'appelle Thomas."
+          sox "$r/u1.wav" -r 16000 -c 1 -b 16 -e signed-integer "$r/utt1.wav" pad 0.3 1
+      - name: Enable emulator acceleration
+        run: test -e /dev/kvm && sudo chmod a+rw /dev/kvm
+      - name: API ${{ matrix.api }} — full V3 qualification + audits (airplane mode, pixel_6, emulator only)
+        id: campaign
+        continue-on-error: true
+        timeout-minutes: 145
+        uses: reactivecircus/android-emulator-runner@4c44018e59b437e86cdfc41da381398f93ed8808
+        with:
+          api-level: ${{ matrix.api }}
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          ram-size: 6144M
+          cores: 4
+          disable-animations: true
+          emulator-options: -no-window -no-snapshot -gpu swiftshader_indirect -no-boot-anim -noaudio
+          script: cd modules && bash interface/labs/v3/tools/run_emulator.sh ${{ matrix.api }} "$RUNNER_TEMP/v3-res" "$RUNNER_TEMP/v3/api${{ matrix.api }}"
+      - name: Results (printed in the log; nothing committed)
+        if: always()
+        run: |
+          d="$RUNNER_TEMP/v3/api${{ matrix.api }}"
+          echo "### qualification"; cat "$d/results.txt" 2>/dev/null | grep -E "^(PASS|FAIL|DEVICE_LOST|BUDGET_EXCEEDED)" || echo NOT_RUN
+          echo "### audits"; cat "$d/audit-results.txt" 2>/dev/null | grep -E "^(PASS|FAIL|DEVICE_LOST|BUDGET_EXCEEDED)" || echo NOT_RUN
+          # Failure details of the audits (assertion messages) and their measurement files, so a FAIL is explained in the log.
+          echo "### audit failure details"; grep -v "^PASS " "$d/audit-results.txt" 2>/dev/null || true
+          for f in "$d"/audit-h4.json "$d"/audit-m.json "$d"/audit-i.json; do [ -f "$f" ] && { echo "### $(basename "$f")"; head -c 4000 "$f"; echo; }; done
+          for f in "$d"/audit-p.json "$d"/v3-bench.json; do [ -f "$f" ] && { echo "### $(basename "$f")"; cat "$f"; }; done
+          cat "$RUNNER_TEMP/v3/apk-sha256.txt" 2>/dev/null || true
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: next01-evidence-api${{ matrix.api }}-${{ github.sha }}
+          retention-days: 14
+          path: ${{ runner.temp }}/v3/
+      - name: Verdict (every required test of this API level must pass)
+        run: test "${{ steps.campaign.outcome }}" = success

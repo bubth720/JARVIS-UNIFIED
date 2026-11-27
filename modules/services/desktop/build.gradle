@@ -1,0 +1,29 @@
+plugins { id 'java-library' }
+java { sourceCompatibility = JavaVersion.VERSION_11; targetCompatibility = JavaVersion.VERSION_11 }
+dependencies {
+ api project(':shared-runtime')
+ implementation 'org.xerial:sqlite-jdbc:3.46.1.0'
+ implementation 'org.apache.pdfbox:pdfbox:2.0.33'
+ testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+ testImplementation 'androidx.sqlite:sqlite-bundled-jvm:2.5.0'
+}
+// Compile and exercise the exact Android SQL adapter on the JVM bundled driver.
+sourceSets.test.java.srcDir '../android/src/main/java/fr/jarvis/services/android'
+sourceSets.test.java.exclude 'MainActivity.java', 'AndroidPdfText.java', 'DocumentAccess.java', 'SelectedTreeExportPort.java', 'WorkspaceActivity.java'
+test { useJUnitPlatform(); maxHeapSize = '512m'; jvmArgs '-Djava.security.manager=allow' }
+tasks.register('toolsDemo', JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'fr.jarvis.services.demo.ToolsDemo'
+}
+tasks.register('pipelineDemo', JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'fr.jarvis.services.demo.PipelineDemo'
+}
+tasks.register('workflowLabDemo', JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'fr.jarvis.services.demo.WorkflowLabDemo'
+}
+tasks.register('finalScenariosDemo', JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'fr.jarvis.services.demo.FinalScenariosDemo'
+}

@@ -15,3 +15,11 @@ backup-work/
 *.bin
 .backup-private/
 .audit-cache/
+
+# NEXT-01: third-party native sources fetched at pinned SHAs and Gradle outputs (never committed)
+modules/llm/.deps/
+modules/interface/labs/v1/.deps/
+modules/**/build/
+modules/**/.gradle/
+modules/**/.cxx/
+modules/**/local.properties
