@@ -4,7 +4,7 @@ Rien n'est installé à distance ; je ne signe rien. Durée : environ 1 h. Tél�
 
 ## Préparation
 
-1. Télécharge l'artefact `next01-apk-candidate-<SHA>` du run CI indiqué dans `TEST-REPORT.md`, puis vérifie le SHA-256 de `app-release-unsigned.apk`.
+1. Télécharge l'artefact `next01-apk-candidate-5db8f6b9c4f51d8054ce9bed0cfa727edcc6844a` (run 45908509940, disponible jusqu'au 10/12/2026), puis vérifie le SHA-256 de `app-release-unsigned.apk` : `da766bec0d74c928fe7b6557cb6c173c89637c2f97573a2064224958aa3ef79f`.
 2. Signe-le **toi-même** avec ta clé (`apksigner sign --ks ta-cle.jks app-release-unsigned.apk`). Je ne signe jamais à ta place.
 3. Prépare les fichiers de modèles et vérifie leur SHA-256 :
    - `Qwen3-0.6B-Q4_K_M.gguf` — ÉCO, par défaut. 396 705 472 octets, `ac2d9771…0d524a`.
